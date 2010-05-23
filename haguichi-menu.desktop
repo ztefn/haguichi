@@ -1,0 +1,11 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Haguichi
+Exec=haguichi
+Terminal=false
+Comment=Join and create local networks over the Internet
+Comment[nl]=Maak en treedt toe tot lokale netwerken via het internet
+Icon=haguichi
+Categories=Network;GTK;GNOME;

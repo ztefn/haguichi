@@ -1,0 +1,616 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Haguichi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-05-09 14:59:52+0200\n"
+"PO-Revision-Date: 2010-04-10 12:42:13+0200\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: MonoDevelop Gettext addin\n"
+
+#: ../src/TextStrings.cs:245
+msgid "Haguichi Website"
+msgstr "Haguichi-website"
+
+#: ../src/TextStrings.cs:246
+msgid "A graphical frontend for Hamachi."
+msgstr "Een grafische schil voor Hamachi."
+
+#: ../src/TextStrings.cs:248
+msgid "Address"
+msgstr "Adres"
+
+#: ../src/TextStrings.cs:249
+msgid "Status"
+msgstr "Status"
+
+#: ../src/TextStrings.cs:250
+msgid "Tunnel"
+msgstr "Tunnel"
+
+#: ../src/TextStrings.cs:251
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: ../src/TextStrings.cs:252
+msgid "Nickname"
+msgstr "Bijnaam"
+
+#: ../src/TextStrings.cs:253
+msgid "Version"
+msgstr "Versie"
+
+#: ../src/TextStrings.cs:255
+msgid "seconds"
+msgstr "seconden"
+
+#: ../src/TextStrings.cs:257
+msgid "Offline"
+msgstr "Offline"
+
+#: ../src/TextStrings.cs:258
+msgid "Online"
+msgstr "Online"
+
+#: ../src/TextStrings.cs:259
+msgid "Unreachable"
+msgstr "Onbereikbaar"
+
+#: ../src/TextStrings.cs:260
+msgid "Connected"
+msgstr "Verbonden"
+
+#: ../src/TextStrings.cs:261
+msgid "Disconnected"
+msgstr "Niet verbonden"
+
+#: ../src/TextStrings.cs:262
+msgid "Connecting..."
+msgstr "Verbinden..."
+
+#: ../src/TextStrings.cs:263
+msgid "Starting Hamachi..."
+msgstr "Starten van Hamachi..."
+
+#: ../src/TextStrings.cs:264
+msgid "Logging in..."
+msgstr "Inloggen..."
+
+#: ../src/TextStrings.cs:265
+msgid "Running tuncfg..."
+msgstr "Uitvoeren van tuncfg..."
+
+#: ../src/TextStrings.cs:266
+msgid "Getting nicknames..."
+msgstr "Bijnamen opvragen..."
+
+#: ../src/TextStrings.cs:268
+msgid "Connect a_utomatically"
+msgstr "A_utomatisch verbinden"
+
+#: ../src/TextStrings.cs:270
+msgid "_Download"
+msgstr "_Downloaden"
+
+#: ../src/TextStrings.cs:271
+msgid "C_onfigure"
+msgstr "_Configureren"
+
+#: ../src/TextStrings.cs:273
+msgid "Not configured"
+msgstr "Niet geconfigureerd"
+
+#: ../src/TextStrings.cs:274
+msgid "Hamachi is not configured"
+msgstr "Hamachi is niet geconfigureerd"
+
+#: ../src/TextStrings.cs:275
+msgid "You need to configure Hamachi before you can connect."
+msgstr "Hamachi moet eerst geconfigureerd worden om te kunnen verbinden."
+
+#: ../src/TextStrings.cs:277
+msgid "Not installed"
+msgstr "Niet geïnstalleerd"
+
+#: ../src/TextStrings.cs:278
+msgid "Hamachi is not installed"
+msgstr "Hamachi is niet geïnstalleerd"
+
+#: ../src/TextStrings.cs:279
+msgid "Please download Hamachi and follow the installation instructions."
+msgstr ""
+"U wordt aangeraden om Hamachi te downloaden en de installatieinstructies te "
+"volgen."
+
+#: ../src/TextStrings.cs:281
+msgid "Members"
+msgstr "Leden"
+
+#: ../src/TextStrings.cs:282
+msgid "{0} online, {1} total"
+msgstr "{0} online, {1} totaal"
+
+#: ../src/TextStrings.cs:283
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: ../src/TextStrings.cs:284
+msgid "You"
+msgstr "Uzelf"
+
+#: ../src/TextStrings.cs:285
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: ../src/TextStrings.cs:286
+msgid "Unavailable"
+msgstr "Niet beschikbaar"
+
+#: ../src/TextStrings.cs:288
+msgid "_Account"
+msgstr "_Account"
+
+#: ../src/TextStrings.cs:289
+msgid "_Edit"
+msgstr "Be_werken"
+
+#: ../src/TextStrings.cs:290
+msgid "_View"
+msgstr "Beel_d"
+
+#: ../src/TextStrings.cs:291
+msgid "_Help"
+msgstr "_Hulp"
+
+#: ../src/TextStrings.cs:293
+msgid "_Online Help"
+msgstr "_Online hulp"
+
+#: ../src/TextStrings.cs:294
+msgid "_Create Network..."
+msgstr "Netwerk _aanmaken..."
+
+#: ../src/TextStrings.cs:295
+msgid "_Join Network..."
+msgstr "Netwerk _toetreden..."
+
+#: ../src/TextStrings.cs:297
+msgid "_Leave"
+msgstr "_Verlaten"
+
+#: ../src/TextStrings.cs:298
+msgid "Go O_nline"
+msgstr "O_nline gaan"
+
+#: ../src/TextStrings.cs:299
+msgid "Go O_ffline"
+msgstr "O_ffline gaan"
+
+#: ../src/TextStrings.cs:301
+msgid "_Browse Shares"
+msgstr "_Gedeelde mappen bladeren"
+
+#: ../src/TextStrings.cs:302
+msgid "_Ping"
+msgstr "_Pingen"
+
+#: ../src/TextStrings.cs:303
+msgid "_View Remote Desktop"
+msgstr "_Werkplek op afstand bekijken"
+
+#: ../src/TextStrings.cs:304
+msgid "_Copy Address"
+msgstr "Adres _kopiëren"
+
+#: ../src/TextStrings.cs:305
+msgid "_Evict"
+msgstr "_Uitsmijten"
+
+#: ../src/TextStrings.cs:307
+msgid "_Nickname"
+msgstr "_Bijnaam"
+
+#: ../src/TextStrings.cs:308
+msgid "_Name"
+msgstr "_Naam"
+
+#: ../src/TextStrings.cs:309
+msgid "_Password"
+msgstr "_Wachtwoord"
+
+#: ../src/TextStrings.cs:311
+msgid "Click to change your nickname"
+msgstr "Klik om uw bijnaam te wijzigen"
+
+#: ../src/TextStrings.cs:313
+msgid "C_hange"
+msgstr "_Wijzigen"
+
+#: ../src/TextStrings.cs:314
+msgid "Changing..."
+msgstr "Wijzigen..."
+
+#: ../src/TextStrings.cs:315
+msgid "Change Nickname..."
+msgstr "Bijnaam wijzigen..."
+
+#: ../src/TextStrings.cs:316
+msgid "Change Nickname"
+msgstr "Bijnaam wijzigen"
+
+#: ../src/TextStrings.cs:317
+msgid "Please enter the nickname you want to use."
+msgstr "Vul de bijnaam in die u wilt gebruiken."
+
+#: ../src/TextStrings.cs:319
+msgid "_Join "
+msgstr "_Toetreden"
+
+#: ../src/TextStrings.cs:320
+msgid "Joining..."
+msgstr "Toetreden..."
+
+#: ../src/TextStrings.cs:321
+msgid "Join Network"
+msgstr "Netwerk toetreden"
+
+#: ../src/TextStrings.cs:322
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to join."
+msgstr ""
+"Vul de naam en wachtwoord in van het netwerk\n"
+"waarin u wilt toetreden."
+
+#: ../src/TextStrings.cs:324
+msgid "C_reate"
+msgstr "Aan_maken"
+
+#: ../src/TextStrings.cs:325
+msgid "Creating..."
+msgstr "Aanmaken..."
+
+#: ../src/TextStrings.cs:326
+msgid "Create Network"
+msgstr "Netwerk aanmaken"
+
+#: ../src/TextStrings.cs:327
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to create."
+msgstr ""
+"Vul de naam en wachtwoord in van het netwerk\n"
+"dat u wilt aanmaken."
+
+#: ../src/TextStrings.cs:329
+msgid "_Go directly online in the network"
+msgstr "_Ga direct online in het netwerk"
+
+#: ../src/TextStrings.cs:331
+msgid "Network not found"
+msgstr "Netwerk niet gevonden"
+
+#: ../src/TextStrings.cs:332
+msgid "Invalid password"
+msgstr "Ongeldig wachtwoord"
+
+#: ../src/TextStrings.cs:333
+msgid "Network is full"
+msgstr "Netwerk is vol"
+
+#: ../src/TextStrings.cs:334
+msgid "Network already joined"
+msgstr "Netwerk reeds toegetreden"
+
+#: ../src/TextStrings.cs:335
+msgid "Unknown error"
+msgstr "Onbekende fout"
+
+#: ../src/TextStrings.cs:336
+msgid "Network name too short"
+msgstr "Netwerknaam te kort"
+
+#: ../src/TextStrings.cs:337
+msgid "Network name is already taken"
+msgstr "Netwerknaam reeds in gebruik"
+
+#: ../src/TextStrings.cs:339
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: ../src/TextStrings.cs:340
+msgid "Information"
+msgstr "Informatie"
+
+#: ../src/TextStrings.cs:342
+msgid "Delete network '{0}'?"
+msgstr "Netwerk '{0}' verwijderen?"
+
+#: ../src/TextStrings.cs:343
+msgid "Are you sure you want to delete network '{0}'?"
+msgstr "Weet u zeker dat u het netwerk '{0}' wilt verwijderen?"
+
+#: ../src/TextStrings.cs:345
+msgid "Leave network '{0}'?"
+msgstr "Netwerk '{0}' verlaten?"
+
+#: ../src/TextStrings.cs:346
+msgid "Are you sure you want to leave network '{0}'?"
+msgstr "Weet u zeker dat u het netwerk '{0}' wilt verlaten?"
+
+#: ../src/TextStrings.cs:348
+msgid "Evict member '{0}'?"
+msgstr "Lid '{0}' uitsmijten?"
+
+#: ../src/TextStrings.cs:349
+msgid ""
+"Are you sure you want to evict member '{0}'\n"
+"from network '{1}'?"
+msgstr ""
+"Weet u zeker dat u lid '{0}'\n"
+"uit netwerk '{1}' wilt verwijderen?"
+
+#: ../src/TextStrings.cs:351
+msgid "Failed deleting network '{0}'"
+msgstr "Het verwijderen van netwerk '{0}' is mislukt"
+
+#: ../src/TextStrings.cs:352
+msgid "You are not the owner of this network."
+msgstr "U bent niet de eigenaar van dit netwerk."
+
+#: ../src/TextStrings.cs:354
+msgid "Failed leaving network '{0}'"
+msgstr "Het verlaten van netwerk '{0}' is mislukt"
+
+#: ../src/TextStrings.cs:355
+msgid "You are the owner of this network."
+msgstr "U bent de eigenaar van dit netwerk."
+
+#: ../src/TextStrings.cs:357
+msgid "Failed evicting member '{0}'"
+msgstr "Het uitsmijten van lid '{0}' is mislukt"
+
+#: ../src/TextStrings.cs:358
+msgid "You are not the owner of network '{0}'."
+msgstr "U bent niet de eigenaar van netwerk '{0}'."
+
+#: ../src/TextStrings.cs:360
+msgid "General"
+msgstr "Algemeen"
+
+#: ../src/TextStrings.cs:361
+msgid "Desktop"
+msgstr "Werkplek"
+
+#: ../src/TextStrings.cs:362
+msgid "Commands"
+msgstr "Opdrachten"
+
+#: ../src/TextStrings.cs:364
+msgid "Notification Area"
+msgstr "Mededelingengebied"
+
+#: ../src/TextStrings.cs:365
+msgid "Behavior"
+msgstr "Gedrag"
+
+#: ../src/TextStrings.cs:367
+msgid "_Account data folder"
+msgstr "_Accountgegevensmap"
+
+#: ../src/TextStrings.cs:368
+msgid "Choose Folder"
+msgstr "Map kiezen"
+
+#: ../src/TextStrings.cs:369
+msgid "_Update interval (seconds)"
+msgstr "_Bijwerkinterval (seconden)"
+
+#: ../src/TextStrings.cs:370
+msgid "_Command timeout (seconds)"
+msgstr "_Opdrachttijdslimiet (seconden)"
+
+#: ../src/TextStrings.cs:372
+msgid "_Offline Members"
+msgstr "_Offline leden tonen"
+
+#: ../src/TextStrings.cs:373
+msgid "Sort by _Name"
+msgstr "Op _naam sorteren"
+
+#: ../src/TextStrings.cs:374
+msgid "Sort by _Status"
+msgstr "Op _status sorteren"
+
+#: ../src/TextStrings.cs:375
+msgid "S_tatusbar"
+msgstr "S_tatusbalk tonen"
+
+#: ../src/TextStrings.cs:377
+msgid "_Show Haguichi in the notification area"
+msgstr "Haguichi in het _mededelingengebied tonen"
+
+#: ../src/TextStrings.cs:378
+msgid "Start Haguichi _minimized in the notification area"
+msgstr "Haguichi _geminimaliseerd opstarten in het mededelingengebied"
+
+#: ../src/TextStrings.cs:380
+msgid "C_onnect automatically on startup"
+msgstr "A_utomatisch verbinden bij opstarten"
+
+#: ../src/TextStrings.cs:381
+msgid "_Disconnect on quit"
+msgstr "_Verbinding verbreken bij afsluiten"
+
+#: ../src/TextStrings.cs:383
+msgid "Display notification when a member _joins"
+msgstr "Melding weergeven als een lid tot een netwerk _toetreed"
+
+#: ../src/TextStrings.cs:384
+msgid "Display notification when a member _leaves"
+msgstr "Melding weergeven als een lid een netwerk _verlaat"
+
+#: ../src/TextStrings.cs:385
+msgid "Display notification when a member comes o_nline"
+msgstr "Melding weergeven als een lid o_nline komt"
+
+#: ../src/TextStrings.cs:386
+msgid "Display notification when a member goes o_ffline"
+msgstr "Melding weergeven als een lid o_ffline gaat"
+
+#: ../src/TextStrings.cs:388
+msgid "Do you want to run tuncfg?"
+msgstr "Wilt u tuncfg uitvoeren?"
+
+#: ../src/TextStrings.cs:389
+msgid ""
+"Hamachi needs to run tuncfg to be able to connect.\n"
+"Running tuncfg requires administrative privileges."
+msgstr ""
+"Hamachi moet tuncfg uitvoeren om verbinding te kunnen maken.\n"
+"Om tuncfg uit te voeren zijn administratieve rechten nodig."
+
+#: ../src/TextStrings.cs:390
+msgid "_Run"
+msgstr "_Uitvoeren"
+
+#: ../src/TextStrings.cs:391
+msgid "_Always ask before running tuncfg"
+msgstr "A_ltijd vragen voordat tuncfg wordt uitgevoerd"
+
+#: ../src/TextStrings.cs:392
+msgid "A_sk confirmation before running tuncfg"
+msgstr "V_raag om bevestiging voordat tuncfg wordt uitgevoerd"
+
+#: ../src/TextStrings.cs:394
+msgid "Error connecting"
+msgstr "Fout bij verbinden"
+
+#: ../src/TextStrings.cs:395
+msgid "Hamachi login failed."
+msgstr "Hamachi login is mislukt."
+
+#: ../src/TextStrings.cs:396
+msgid "Connection refused."
+msgstr "Verbinding geweigerd."
+
+#: ../src/TextStrings.cs:398
+msgid "Loading configuration failed"
+msgstr "Configuratie inladen is mislukt"
+
+#: ../src/TextStrings.cs:399
+msgid "Hamachi could not launch due to a configuration load failure."
+msgstr ""
+"Hamachi kon niet worden gestart omdat het inladen van de configuratie is "
+"mislukt."
+
+#: ../src/TextStrings.cs:401
+msgid "Member online"
+msgstr "Lid online"
+
+#: ../src/TextStrings.cs:402
+msgid "{0} came online in the network {1}"
+msgstr "{0} is online gekomen in het netwerk {1}"
+
+#: ../src/TextStrings.cs:403
+msgid "Member offline"
+msgstr "Lid offline"
+
+#: ../src/TextStrings.cs:404
+msgid "{0} went offline in the network {1}"
+msgstr "{0} is offline gegaan in het netwerk {1}"
+
+#: ../src/TextStrings.cs:405
+msgid "Member joined"
+msgstr "Lid toegetreden"
+
+#: ../src/TextStrings.cs:406
+msgid "{0} joined the network {1}"
+msgstr "{0} is tot het netwerk {1} toegetreden"
+
+#: ../src/TextStrings.cs:407
+msgid "Member left"
+msgstr "Lid uitgetreden"
+
+#: ../src/TextStrings.cs:408
+msgid "{0} left the network {1}"
+msgstr "{0} heeft het netwerk {1} verlaten"
+
+#: ../src/TextStrings.cs:410
+msgid "_Available commands"
+msgstr "_Beschikbare opdrachten"
+
+#: ../src/TextStrings.cs:411
+msgid "Command"
+msgstr "Opdracht"
+
+#: ../src/TextStrings.cs:412
+msgid "Available"
+msgstr "Beschikbaar"
+
+#: ../src/TextStrings.cs:414
+msgid "Add Command"
+msgstr "Opdracht toevoegen"
+
+#: ../src/TextStrings.cs:415
+msgid "Edit Command"
+msgstr "Opdracht bewerken"
+
+#: ../src/TextStrings.cs:416
+msgid "_Command"
+msgstr "_Opdracht"
+
+#: ../src/TextStrings.cs:417
+msgid "_Label"
+msgstr "_Label"
+
+#: ../src/TextStrings.cs:418
+msgid "Use %A for address and %N for nickname"
+msgstr "Gebruik %A voor adres en %N voor bijnaam"
+
+#: ../src/TextStrings.cs:420
+msgid "Click to choose an icon"
+msgstr "Klik om een pictogram te kiezen"
+
+#: ../src/TextStrings.cs:421
+msgid "Choose Icon"
+msgstr "Pictogram kiezen"
+
+#: ../src/TextStrings.cs:422
+msgid "_No icon"
+msgstr "_Geen pictogram"
+
+#: ../src/TextStrings.cs:424
+msgid "Default"
+msgstr "Standaard"
+
+#: ../src/TextStrings.cs:425
+msgid "_Default"
+msgstr "_Standaard"
+
+#: ../src/TextStrings.cs:427
+msgid "Restore the default commands"
+msgstr "De standaard opdrachten herstellen"
+
+#: ../src/TextStrings.cs:428
+msgid "Revert changes?"
+msgstr "Veranderingen terugdraaien?"
+
+#: ../src/TextStrings.cs:429
+msgid ""
+"Are you sure you wish to revert all changes\n"
+"and thereby restore the default commands?"
+msgstr ""
+"Weet u zeker dat u alle veranderingen wilt terugdraaien\n"
+"en daarmee de standaard opdrachten herstellen?"
+
+#: ../src/TextStrings.cs:431
+msgid "Move Up"
+msgstr "Naar boven"
+
+#: ../src/TextStrings.cs:432
+msgid "Move Down"
+msgstr "Naar beneden"

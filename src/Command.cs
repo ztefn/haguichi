@@ -1,0 +1,151 @@
+/*
+ * Haguichi, a graphical frontend for Hamachi.
+ * Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>
+ * 
+ * Haguichi is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published
+ * by the Free Software Foundation; either version 2 of the License,
+ * or (at your option) any later version.
+ * 
+ * Haguichi is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with Haguichi; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ */
+
+using System;
+using System.Diagnostics;
+
+    
+public class Command
+{
+    
+    public static bool inProgress = false;
+    
+    
+    public Command()
+    {
+    }
+    
+    
+    public static void Execute ( string command )
+    {
+        string[] commands = command.Split ( new char[] { ' ' }, 2 );
+        
+        if ( commands.GetLength ( 0 ) == 1 )
+        {
+            Execute ( commands[0], "" );
+        }
+        if ( commands.GetLength ( 0 ) == 2 )
+        {
+            Execute ( commands[0], commands[1] );
+        }
+    }
+    
+    
+    public static void Execute ( string filename, string args )
+    {
+        try
+        {
+            ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
+            ps.UseShellExecute = false;
+            ps.RedirectStandardOutput = true;
+            
+            using ( Process p = Process.Start ( ps ) )
+            {
+                p.Close ();
+                p.Dispose ();
+            }
+        }
+        catch ( Exception e )
+        {
+            // Nothing
+        }    
+    }
+    
+    
+    public static string ReturnOutput ( string filename, string args )
+    {
+        string val = "error";
+        
+        while ( inProgress )
+        {
+            // Wait
+        }
+        
+        inProgress = true;
+        
+        try
+        {
+            ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
+            ps.UseShellExecute = false;
+            ps.RedirectStandardOutput = true;
+
+            using ( Process p = Process.Start ( ps ) )
+            {
+                int seconds = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.CommandTimeout ) );
+        
+                if ( p.WaitForExit ( 1000 * seconds ) )
+                {
+                    val = p.StandardOutput.ReadToEnd ();
+                }
+                else
+                {
+                    val = "timeout";
+                }
+                p.Close ();
+                p.Dispose ();
+            }
+        }
+        catch ( Exception e )
+        {
+            // Nothing
+        }
+        
+        inProgress = false;
+        
+        return val;
+    }
+    
+    
+    public static string ReturnDefault ()
+    {
+        
+        string command = "";
+        string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
+        
+        foreach ( string c in commands )
+        {
+            
+            string[] cArray = c.Split ( new char[] { ';' }, 5 );
+            
+            if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [ 1 ] == "true" ) )
+            {
+                command = cArray [ 4 ];
+            }
+
+        }
+        
+        return command;
+    }
+    
+    
+    public static void OpenURL ( string url )
+    {
+        
+        try
+        {
+            Process.Start ( url );
+        }
+        catch
+        {
+            Debug.Log ( Debug.Domain.Error, "Command.OpenURL", "Failed opening URL '" + url + "'" );
+        }
+        
+    }
+    
+}

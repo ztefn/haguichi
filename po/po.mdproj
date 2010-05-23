@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>TranslationProject</ItemType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA2D80B0-9E75-4FEB-A07D-842FAA3CAC5D}</ProjectGuid>
+    <translations>
+      <translations>
+        <Translation isoCode="nl" />
+      </translations>
+    </translations>
+    <packageName>haguichi</packageName>
+    <outputType>RelativeToOutput</outputType>
+    <relPath>../../locale</relPath>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
+  </PropertyGroup>
+</Project>

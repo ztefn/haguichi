@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C3A331EA-C111-4E07-8DEF-8DAF4D5FC799}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Haguichi</AssemblyName>
+    <RootNamespace>Haguichi</RootNamespace>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gdk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gtk-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="Mono.Posix" />
+    <Reference Include="notify-sharp, Version=0.4.0.0, Culture=neutral, PublicKeyToken=2df29c54e245917a">
+      <Package>notify-sharp</Package>
+    </Reference>
+    <Reference Include="gconf-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gconf-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="gnome-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <SpecificVersion>False</SpecificVersion>
+      <Package>gnome-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
+      <Package>glib-sharp-2.0</Package>
+    </Reference>
+    <Reference Include="NDesk.DBus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099">
+      <Package>ndesk-dbus-1.0</Package>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="data\pixmaps\logo-mainwindow.png">
+      <LogicalName>logo-mainwindow</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/logo-mainwindow.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\panel-disconnected.png">
+      <LogicalName>panel-disconnected</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/panel-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\panel-connecting-1.png">
+      <LogicalName>panel-connecting-1</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/panel-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\panel-connecting-2.png">
+      <LogicalName>panel-connecting-2</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/panel-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\panel-connecting-3.png">
+      <LogicalName>panel-connecting-3</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/panel-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\panel-connected.png">
+      <LogicalName>panel-connected</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/panel-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\status-offline.png">
+      <LogicalName>status-offline</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/status-offline.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\status-online.png">
+      <LogicalName>status-online</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/status-online.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\status-unreachable.png">
+      <LogicalName>status-unreachable</LogicalName>
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/status-unreachable.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\haguichi-16x16.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/16x16/apps/haguichi.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>haguichi-16x16</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\haguichi-22x22.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/22x22/apps/haguichi.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>haguichi-22x22</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\haguichi-24x24.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/24x24/apps/haguichi.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>haguichi-24x24</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\haguichi-32x32.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/32x32/apps/haguichi.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>haguichi-32x32</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\haguichi-48x48.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/48x48/apps/haguichi.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>haguichi-48x48</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Command.cs" />
+    <Compile Include="src\CommandsEditor.cs" />
+    <Compile Include="src\Connection.cs" />
+    <Compile Include="src\Controller.cs" />
+    <Compile Include="src\Debug.cs" />
+    <Compile Include="src\GlobalEvents.cs" />
+    <Compile Include="src\Hamachi.cs" />
+    <Compile Include="src\Main.cs">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
+      <DeployService-TargetDirectoryId>Linux.PkgConfig</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </Compile>
+    <Compile Include="src\Member.cs" />
+    <Compile Include="src\Network.cs" />
+    <Compile Include="src\NetworkView.cs" />
+    <Compile Include="src\Notify.cs" />
+    <Compile Include="src\PanelIcon.cs" />
+    <Compile Include="src\Status.cs" />
+    <Compile Include="src\TextStrings.cs" />
+    <Compile Include="src\Config\Client.cs" />
+    <Compile Include="src\Config\Key.cs" />
+    <Compile Include="src\Config\Settings.cs" />
+    <Compile Include="src\Dialogs\About.cs" />
+    <Compile Include="src\Dialogs\Base.cs" />
+    <Compile Include="src\Dialogs\ChangeNick.cs" />
+    <Compile Include="src\Dialogs\Confirm.cs" />
+    <Compile Include="src\Dialogs\JoinCreate.cs" />
+    <Compile Include="src\Dialogs\Message.cs" />
+    <Compile Include="src\Dialogs\RunTunCfg.cs" />
+    <Compile Include="src\Menus\CommandMenuItem.cs" />
+    <Compile Include="src\Menus\MemberMenu.cs" />
+    <Compile Include="src\Menus\Menubar.cs" />
+    <Compile Include="src\Menus\NetworkMenu.cs" />
+    <Compile Include="src\Menus\Quick.cs" />
+    <Compile Include="src\Widgets\GroupBox.cs" />
+    <Compile Include="src\Widgets\IndentHBox.cs" />
+    <Compile Include="src\Windows\Preferences.cs" />
+    <Compile Include="src\MainWindow.cs" />
+    <Compile Include="src\Dialogs\AddEditCommand.cs" />
+    <Compile Include="src\Dialogs\ChooseIcon.cs" />
+    <Compile Include="src\Dialogs\Information.cs" />
+    <Compile Include="src\Dialogs\NotInstalled.cs" />
+    <Compile Include="src\Dialogs\NotConfigured.cs" />
+    <Compile Include="src\Platform.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <None Include="COPYING" />
+    <None Include="locale\nl\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
+    <None Include="AUTHORS" />
+    <None Include="INSTALL" />
+    <None Include="data\icons\haguichi-scalable.svg">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/scalable/apps/haguichi.svg</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="description-pak" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <MonoDevelop>
+      <Properties>
+        <Policies>
+          <TextStylePolicy FileWidth="120" inheritsSet="VisualStudio" inheritsScope="text/plain" />
+        </Policies>
+        <MonoDevelop.Autotools.MakefileInfo RelativeMakefileName="Makefile">
+          <BuildFilesVar />
+          <DeployFilesVar />
+          <ResourcesVar />
+          <OthersVar />
+          <GacRefVar />
+          <AsmRefVar />
+          <ProjectRefVar />
+        </MonoDevelop.Autotools.MakefileInfo>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <ItemGroup>
+    <Content Include="haguichi-autostart.desktop">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>../etc/xdg/autostart/haguichi.desktop</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </Content>
+    <Content Include="haguichi-menu.desktop">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>applications/haguichi.desktop</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="data\icons\" />
+  </ItemGroup>
+</Project>

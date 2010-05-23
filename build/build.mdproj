@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ItemType>PackagingProject</ItemType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BDDF6294-6E6A-41C0-A8ED-F5E99FA61EBF}</ProjectGuid>
+    <Packages>
+      <Packages>
+        <Package name="Source">
+          <Builder TargetDirectory=".." DefaultConfiguration="Release" ctype="TarballDeployTarget">
+            <ChildEntries>
+              <SolutionItemReference path="..\Haguichi.csproj" />
+              <SolutionItemReference path="..\po\po.mdproj" />
+            </ChildEntries>
+            <ExcludedFiles>
+              <File>po,CommonApplicationDataRoot,locale/nl/LC_MESSAGES/haguichi.mo</File>
+            </ExcludedFiles>
+            <RootEntry path="..\Haguichi.sln" id=":root:" />
+          </Builder>
+        </Package>
+      </Packages>
+    </Packages>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
+  </PropertyGroup>
+</Project>
