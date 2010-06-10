@@ -3,3 +3,4 @@
 *.pidb
 *.tar.gz
 bin
+po/messages.po

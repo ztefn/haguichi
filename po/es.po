@@ -155,7 +155,7 @@ msgstr "No disponible"
 
 #: ../src/TextStrings.cs:288
 msgid "_Account"
-msgstr "_Cuenta"
+msgstr "Cue_nta"
 
 #: ../src/TextStrings.cs:289
 msgid "_Edit"
@@ -238,8 +238,8 @@ msgid "Changing..."
 msgstr "Cambiando..."
 
 #: ../src/TextStrings.cs:315
-msgid "Change Nickname..."
-msgstr "Cambiar apodo..."
+msgid "Change _Nickname..."
+msgstr "Cambiar _apodo..."
 
 #: ../src/TextStrings.cs:316
 msgid "Change Nickname"

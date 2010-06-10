@@ -313,7 +313,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
         
         changeLabel                         = Catalog.GetString ( "C_hange" );
         changingLabel                       = Catalog.GetString ( "Changing..." );
-        changeNickLabel                     = Catalog.GetString ( "Change Nickname..." );
+        changeNickLabel                     = Catalog.GetString ( "Change _Nickname..." );
         changeNickTitle                     = Catalog.GetString ( "Change Nickname" );
         changeNickMessage                   = Catalog.GetString ( "Please enter the nickname you want to use." );
         

@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-05-22 21:26+0200\n"
-"PO-Revision-Date: 2010-06-08 22:07+0000\n"
+"PO-Revision-Date: 2010-06-10 20:54+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-06-08 22:16+0000\n"
+"X-Launchpad-Export-Date: 2010-06-10 21:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:245
@@ -239,8 +239,8 @@ msgid "Changing..."
 msgstr "Changement..."
 
 #: ../src/TextStrings.cs:315
-msgid "Change Nickname..."
-msgstr "Changer le pseudonyme..."
+msgid "Change _Nickname..."
+msgstr "Changer le _pseudonyme..."
 
 #: ../src/TextStrings.cs:316
 msgid "Change Nickname"
@@ -452,11 +452,11 @@ msgstr "_Deconnecter en quittant"
 
 #: ../src/TextStrings.cs:383
 msgid "Display notification when a member _joins"
-msgstr "Afficher une alerte lorsqu'un membre se _connecte"
+msgstr "Afficher une alerte lorsqu'un membre se _joint au réseau"
 
 #: ../src/TextStrings.cs:384
 msgid "Display notification when a member _leaves"
-msgstr "Afficher une alerte lorsqu'un membre se _déconnecte"
+msgstr "Afficher une alerte lorsqu'un membre _part du réseau"
 
 #: ../src/TextStrings.cs:385
 msgid "Display notification when a member comes o_nline"
@@ -464,7 +464,7 @@ msgstr "Afficher une alerte lorsqu'un membre est en _ligne"
 
 #: ../src/TextStrings.cs:386
 msgid "Display notification when a member goes o_ffline"
-msgstr "Afficher une alerte lorsqu'un membre n'est _plus en ligne"
+msgstr "Afficher une alerte lorsqu'un membre n'est pl_us en ligne"
 
 #: ../src/TextStrings.cs:388
 msgid "Do you want to run tuncfg?"

@@ -7,6 +7,9 @@
     <ProjectGuid>{DA2D80B0-9E75-4FEB-A07D-842FAA3CAC5D}</ProjectGuid>
     <translations>
       <translations>
+        <Translation isoCode="es" />
+        <Translation isoCode="de" />
+        <Translation isoCode="fr" />
         <Translation isoCode="nl" />
       </translations>
     </translations>

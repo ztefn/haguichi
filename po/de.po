@@ -239,8 +239,8 @@ msgid "Changing..."
 msgstr "Ändere..."
 
 #: ../src/TextStrings.cs:315
-msgid "Change Nickname..."
-msgstr "Benutzernamen ändern..."
+msgid "Change _Nickname..."
+msgstr "_Benutzernamen ändern..."
 
 #: ../src/TextStrings.cs:316
 msgid "Change Nickname"
