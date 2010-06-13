@@ -29,6 +29,7 @@ public class TextStrings
     public static string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
+    public static string appDescription;
     public static string appCopyright           = "Copyright © 2007-2010 Stephen Brandt";
     public static string appLicense             =
 @"Haguichi is free software; you can redistribute it and/or modify
@@ -259,6 +260,7 @@ Nederlands (nl)
 
         appWebsiteLabel                     = Catalog.GetString ( "Haguichi Website" );
         appComments                         = Catalog.GetString ( "A graphical frontend for Hamachi." );
+        appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
         
         address                             = Catalog.GetString ( "Address" );
         status                              = Catalog.GetString ( "Status" );
