@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections;
+using System.Net.Sockets;
 using Gtk;
 
 
@@ -42,10 +43,15 @@ public class Controller
             MainWindow.SetMode ( "Connecting" );
             GetNicksAndNetworkList ();
         }
-        else if ( ( status >= 2 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        else if ( ( status >= 3 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Connecting" );
             GLib.Timeout.Add ( 500, new GLib.TimeoutHandler ( ConnectAfterTimeout ) );
+        }
+        else if ( ( status >= 2 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        {
+            MainWindow.SetMode ( "Disconnected" );
+            GlobalEvents.WaitForInternetCycle ();
         }
         else if ( status >= 2 )
         {
@@ -80,7 +86,7 @@ public class Controller
     
     public static int StatusCheck ()
     {
-    
+        
         string output = Hamachi.GetInfo ();
         
         if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
@@ -93,25 +99,30 @@ public class Controller
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not configured." );
             return 1;
         }
+        else if ( !HasInternetConnection () )
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet." );
+            return 2;
+        }
         else if ( output.IndexOf ( "Hamachi does not seem to be running." ) == 0 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not started." );
-            return 2;
+            return 3;
         }
         else if ( output.IndexOf ( "status   : offline" ) != -1 )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Offline." );
-            return 3;
+            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not logged in." );
+            return 4;
         }
         else if ( output.IndexOf ( "status   : logging in" ) != -1 )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Loggin in." );
-            return 4;
+            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Logging in." );
+            return 5;
         }
         else if ( output.IndexOf ( "status   : logged in" ) != -1 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Logged in." );
-            return 5;
+            return 6;
         }
         else
         {
@@ -122,16 +133,53 @@ public class Controller
     }
     
     
+    public static bool HasInternetConnection ()
+    {
+        
+        try
+        {
+            TcpClient client = new TcpClient ( "www.google.com", 80 );
+            client.Close ();
+            
+            return true;
+        }
+        catch ( System.Exception ex )
+        {
+            return false;
+        }
+        
+    }
+    
+    
+    public static bool WaitForInternet ()
+    {
+        
+        if ( HasInternetConnection () )
+        {
+            GlobalEvents.StartHamachi ();
+            return false;
+        }
+        else
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.WaitForInternet", "Waiting for internet connection" );
+            return true;   
+        }
+        
+    }
+    
+    
     public static void HamachiGoStart ()
     {
         
         int status = StatusCheck ();
         
-        if ( status >= 2 )
+        if ( status >= 3 )
         {
             string output = Hamachi.Start ();         
             
-            if ( ( output.IndexOf ( ".. ok" ) != -1 ) || ( output == "" ) || ( output.IndexOf ( "Hamachi is already started" ) == 0 ) ) // Ok, started.
+            if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
+                 ( output == "" ) ||
+                 ( output.IndexOf ( "Hamachi is already started" ) == 0 ) ) // Ok, started.
             {
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Started!" );
             }
@@ -168,7 +216,7 @@ public class Controller
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Trying to start again." );
                 string output2 = Hamachi.Start ();
                 
-                if ( status >= 3 )
+                if ( status >= 4 )
                 {
                     Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Yes, started now!" );
                 }
@@ -203,7 +251,7 @@ public class Controller
 
         int status = StatusCheck ();
         
-        if ( status >= 3 )
+        if ( status >= 4 )
         {
             MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
             GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( TimedGoLogin ) );
@@ -218,7 +266,7 @@ public class Controller
     }
     
     
-    private static bool ConnectAfterTimeout ()
+    public static bool ConnectAfterTimeout ()
     {
         
         HamachiGoConnect ();
@@ -232,7 +280,8 @@ public class Controller
         
         string output = Hamachi.Login ();
         
-        if ( ( output.IndexOf ( ".. ok" ) != -1 ) || ( output.IndexOf ( "Already logged in" ) == 0 ) ) // Ok, logged in.
+        if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
+             ( output.IndexOf ( "Already logged in" ) == 0 ) ) // Ok, logged in.
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Connected!" );
             
@@ -256,7 +305,7 @@ public class Controller
         
         int status = StatusCheck ();
         
-        if ( status >= 3 )
+        if ( status >= 4 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoStart", "Started, now go connect." );
             MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
@@ -297,7 +346,9 @@ public class Controller
         
         int status = StatusCheck ();
         
-        if ( ( Haguichi.connection.Status.statusInt == 1 ) && ( status >= 5 ) ) // We're connected allright
+        if ( HasInternetConnection () &&
+             ( Haguichi.connection.Status.statusInt == 1 ) &&
+             ( status >= 6 ) ) // We're connected allright
         {
         
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Still connected, updating list..." );
@@ -446,7 +497,8 @@ public class Controller
             return true;
             
         }
-        else if ( ( Haguichi.connection.Status.statusInt == 1 ) && ( status < 5 ) ) // We're not connected, but should be
+        else if ( ( Haguichi.connection.Status.statusInt == 1 ) &&
+                  ( ( status < 6 ) || !HasInternetConnection () ) ) // We're not connected, but should be
         {
             
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Connection lost." );

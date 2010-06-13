@@ -64,7 +64,7 @@ public class PanelIcon : StatusIcon
     public void SetMode ( string mode )
     {
     
-        string tipTail = "";
+        string tipTail = " - ";
         
         this.lastMode = mode;
         
@@ -73,36 +73,36 @@ public class PanelIcon : StatusIcon
             
             case "Connecting":
             
-                tipTail     = " - " + TextStrings.connecting;
+                tipTail     += TextStrings.connecting;
                 GLib.Timeout.Add ( 400, new GLib.TimeoutHandler ( update_status ) );
             
                 break;
                 
             case "Connected":
             
-                tipTail     = " - " + TextStrings.connected;
-                this.Pixbuf = connected;
+                tipTail     += TextStrings.connected;
+                this.Pixbuf  = connected;
             
                 break;
                 
             case "Disconnected":
             
-                tipTail     = " - " + TextStrings.disconnected;
-                this.Pixbuf = disconnected;
+                tipTail     += TextStrings.disconnected;
+                this.Pixbuf  = disconnected;
             
                 break;
             
             case "Not configured":
             
-                tipTail     = " - " + TextStrings.notConfigured;
-                this.Pixbuf = disconnected;
+                tipTail     += TextStrings.notConfigured;
+                this.Pixbuf  = disconnected;
             
                 break;
             
             case "Not installed":
             
-                tipTail     = " - " + TextStrings.notInstalled;
-                this.Pixbuf = disconnected;
+                tipTail     += TextStrings.notInstalled;
+                this.Pixbuf  = disconnected;
             
                 break;
             

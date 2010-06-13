@@ -202,6 +202,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     public static string connectErrorHeading;
     public static string connectErrorLoginFailed;
     public static string connectErrorConnectionRefused;
+    public static string connectErrorNoInternetConnection;
 
     public static string configErrorHeading;
     public static string configErrorMessage;
@@ -281,8 +282,8 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
         
         members                             = Catalog.GetString ( "Members" );
         memberCount                         = Catalog.GetString ( "{0} online, {1} total" );
-        owner                                 = Catalog.GetString ( "Owner" );
-        you                                    = Catalog.GetString ( "You" );
+        owner                               = Catalog.GetString ( "Owner" );
+        you                                 = Catalog.GetString ( "You" );
         unknown                             = Catalog.GetString ( "Unknown" );
         unavailable                         = Catalog.GetString ( "Unavailable" );
         
@@ -395,6 +396,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
         connectErrorHeading                 = Catalog.GetString ( "Error connecting" );
         connectErrorLoginFailed             = Catalog.GetString ( "Hamachi login failed." );
         connectErrorConnectionRefused       = Catalog.GetString ( "Connection refused." );
+        connectErrorNoInternetConnection    = Catalog.GetString ( "No internet connection." );
         
         configErrorHeading                  = Catalog.GetString ( "Loading configuration failed" );
         configErrorMessage                  = Catalog.GetString ( "Hamachi could not launch due to a configuration load failure." );

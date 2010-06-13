@@ -410,7 +410,7 @@ public class Hamachi
         string filePath;
         string output;
         
-        if ( Controller.StatusCheck () < 3 )
+        if ( Controller.StatusCheck () < 4 )
         {
             filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
             output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );

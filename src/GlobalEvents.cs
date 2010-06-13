@@ -38,15 +38,19 @@ public class GlobalEvents
     
     public static void StartHamachi ()
     {
-        MainWindow.SetMode ( "Connecting" );
-        GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( update_status ) );
-    }
-    
-    
-    private static bool update_status ()
-    {
-        Controller.HamachiGoConnect ();
-        return false;
+        
+        int status = Controller.StatusCheck ();
+        
+        if ( status == 2 )
+        {
+            Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
+        }
+        else
+        {
+            MainWindow.SetMode ( "Connecting" );
+            GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( Controller.ConnectAfterTimeout ) );
+        }
+        
     }
     
     
@@ -83,9 +87,20 @@ public class GlobalEvents
     }
     
     
+    
+    public static void WaitForInternetCycle ()
+    {
+        uint interval = ( uint ) ( 1000 );
+        
+        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.WaitForInternet ) );
+    }
+    
+    
     public static void ConnectionLost ()
     {
         ConnectionStopped ();
+        
+        WaitForInternetCycle ();
     }
     
     
