@@ -33,21 +33,22 @@ namespace Dialogs
             AboutDialog.SetUrlHook   ( new AboutDialogActivateLinkFunc ( OpenUrl   ) );
             AboutDialog.SetEmailHook ( new AboutDialogActivateLinkFunc ( OpenEmail ) );
             
-            this.IconList      = MainWindow.appIcons;
+            this.IconList            = MainWindow.appIcons;
             
-            this.ProgramName   = TextStrings.appName;
-            this.Comments      = TextStrings.appComments;
-            this.Version       = TextStrings.appVersion;
-            this.License       = TextStrings.appLicense;
-            this.Copyright     = TextStrings.appCopyright;
-            this.Website       = TextStrings.appWebsite;
-            this.WebsiteLabel  = TextStrings.appWebsiteLabel;
-            this.Authors       = TextStrings.appAuthors;
+            this.ProgramName         = TextStrings.appName;
+            this.Comments            = TextStrings.appComments;
+            this.Version             = TextStrings.appVersion;
+            this.License             = TextStrings.appLicense;
+            this.Copyright           = TextStrings.appCopyright;
+            this.Website             = TextStrings.appWebsite;
+            this.WebsiteLabel        = TextStrings.appWebsiteLabel;
+            this.Authors             = TextStrings.appAuthors;
+            this.TranslatorCredits   = TextStrings.appTranslatorCredits;
             
-            this.Logo          = MainWindow.appIcons[4];
+            this.Logo                = MainWindow.appIcons[4];
             
-            this.DeleteEvent  += OnDeleteEvent;
-            this.Response     += ResponseHandler;
+            this.DeleteEvent        += OnDeleteEvent;
+            this.Response           += ResponseHandler;
             
         }
         
