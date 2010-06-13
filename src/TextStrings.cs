@@ -25,7 +25,7 @@ public class TextStrings
 {
     
     public static string appName                = "Haguichi";
-    public static string appVersion             = "0.9.0";
+    public static string appVersion             = "0.9.1";
     public static string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
@@ -48,7 +48,20 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     public static string[] appAuthors           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>" };
     public static string[] appArtists           = new string [] { "" };
     public static string[] appDocumenters       = new string [] { "" };
-    public static string   appTranslatorCredits = "";
+    public static string   appTranslatorCredits =
+@"Deutsch (de)
+    Jannik Heller
+
+Español (es)
+    Eduardo Parra
+    David Fernández
+
+Français (fr)
+    Gabriel U.
+
+Nederlands (nl)
+    Stephen Brandt
+";
     
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
     public static string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
