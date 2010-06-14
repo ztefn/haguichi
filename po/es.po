@@ -27,7 +27,7 @@ msgstr "Un interfaz gráfico para Hamachi."
 
 #: ../src/TextStrings.cs:263
 msgid "Join and create local networks over the Internet"
-msgstr ""
+msgstr "Únete y crea redes locales a través de Internet"
 
 #: ../src/TextStrings.cs:265
 msgid "Address"
@@ -510,9 +510,8 @@ msgid "Connection refused."
 msgstr "Conexión rechazada."
 
 #: ../src/TextStrings.cs:415
-#, fuzzy
 msgid "No internet connection."
-msgstr "Error al conectar"
+msgstr "No hay conexión a Internet."
 
 #: ../src/TextStrings.cs:417
 msgid "Loading configuration failed"
