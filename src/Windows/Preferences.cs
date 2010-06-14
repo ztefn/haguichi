@@ -36,6 +36,7 @@ namespace Windows
         public  CheckButton startInTray;
         
         public  CheckButton connectOnStartup;
+        public  CheckButton reconnectOnConnectionLoss;
         public  CheckButton disconnectOnQuit;
         public  CheckButton askTunCfg;
         
@@ -214,6 +215,13 @@ namespace Windows
                 Config.Client.Set ( Config.Settings.ConnectOnStartup, connectOnStartup.Active );       
             };
             
+            reconnectOnConnectionLoss = new CheckButton ( TextStrings.reconnectOnConnectionLoss );
+            reconnectOnConnectionLoss.Active = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+            reconnectOnConnectionLoss.Toggled += delegate
+            {
+                Config.Client.Set ( Config.Settings.ReconnectOnConnectionLoss, reconnectOnConnectionLoss.Active );       
+            };
+            
             disconnectOnQuit = new CheckButton ( TextStrings.disconnectOnQuit );
             disconnectOnQuit.Active = ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit );
             disconnectOnQuit.Toggled += delegate
@@ -230,6 +238,7 @@ namespace Windows
             
             GroupBox connectBox = new GroupBox ( TextStrings.behaviorGroup );
             connectBox.AddWidget ( connectOnStartup );
+            connectBox.AddWidget ( reconnectOnConnectionLoss );
             connectBox.AddWidget ( disconnectOnQuit );
             connectBox.AddWidget ( askTunCfg );
             

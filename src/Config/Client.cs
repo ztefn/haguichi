@@ -81,6 +81,11 @@ namespace Config
                     MainWindow.autoconnectCheckbox.Active = ( bool ) val;
                 }
                 
+                if ( key.Contains ( Config.Settings.ReconnectOnConnectionLoss.KeyName ) )
+                {
+                    Haguichi.preferencesWindow.reconnectOnConnectionLoss.Active = ( bool ) val;
+                }
+                
                 if ( key.Contains ( Config.Settings.DisconnectOnQuit.KeyName ) )
                 {
                     Haguichi.preferencesWindow.disconnectOnQuit.Active = ( bool ) val;

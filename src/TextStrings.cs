@@ -200,6 +200,7 @@ Nederlands (nl)
     public static string checkboxStartInTray;
     
     public static string connectOnStartup;
+    public static string reconnectOnConnectionLoss;
     public static string disconnectOnQuit;
     
     public static string checkboxNotifyMemberJoin;
@@ -395,6 +396,7 @@ Nederlands (nl)
         checkboxStartInTray                 = Catalog.GetString ( "Start Haguichi _minimized in the notification area" );
         
         connectOnStartup                    = Catalog.GetString ( "C_onnect automatically on startup" );
+        reconnectOnConnectionLoss           = Catalog.GetString ( "_Reconnect automatically when connection is lost" );
         disconnectOnQuit                    = Catalog.GetString ( "_Disconnect on quit" );
         
         checkboxNotifyMemberJoin            = Catalog.GetString ( "Display notification when a member _joins" );

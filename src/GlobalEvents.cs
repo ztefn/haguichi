@@ -100,7 +100,10 @@ public class GlobalEvents
     {
         ConnectionStopped ();
         
-        WaitForInternetCycle ();
+        if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+        {
+            WaitForInternetCycle ();
+        }
     }
     
     
