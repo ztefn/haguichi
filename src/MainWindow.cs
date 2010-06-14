@@ -419,9 +419,6 @@ public class MainWindow
                 
             case "Disconnected":
             
-                window.Show ();
-                panelIcon.Visible = ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon );
-            
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
