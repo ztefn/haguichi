@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-06-14 23:15:15+0200\n"
-"PO-Revision-Date: 2010-06-08 22:12+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2010-06-14 23:30+0200\n"
+"PO-Revision-Date: 2010-06-15 22:01+0000\n"
+"Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-06-08 22:16+0000\n"
+"X-Launchpad-Export-Date: 2010-06-19 16:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:261
@@ -451,7 +451,7 @@ msgstr "Conectar _automáticamente al arrancar"
 
 #: ../src/TextStrings.cs:398
 msgid "_Reconnect automatically when connection is lost"
-msgstr ""
+msgstr "_Reconectar cuando se pierda la conexión"
 
 #: ../src/TextStrings.cs:399
 msgid "_Disconnect on quit"

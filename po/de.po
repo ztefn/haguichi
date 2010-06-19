@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-06-14 23:15:15+0200\n"
-"PO-Revision-Date: 2010-06-08 21:52+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2010-06-14 23:30+0200\n"
+"PO-Revision-Date: 2010-06-16 13:16+0000\n"
+"Last-Translator: scrawl <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-06-08 22:16+0000\n"
+"X-Launchpad-Export-Date: 2010-06-19 16:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:261
@@ -27,7 +27,7 @@ msgstr "Eine grafische Oberfläche für Hamachi."
 
 #: ../src/TextStrings.cs:263
 msgid "Join and create local networks over the Internet"
-msgstr ""
+msgstr "Lokale Netzwerke im Internet erstellen und diesen beitreten"
 
 #: ../src/TextStrings.cs:265
 msgid "Address"
@@ -452,7 +452,7 @@ msgstr "_Beim Start automatisch verbinden"
 
 #: ../src/TextStrings.cs:398
 msgid "_Reconnect automatically when connection is lost"
-msgstr ""
+msgstr "Beim Verlust der Ve_rbindung automatisch neu verbinden"
 
 #: ../src/TextStrings.cs:399
 msgid "_Disconnect on quit"
@@ -512,7 +512,7 @@ msgstr "Verbindung abgelehnt."
 
 #: ../src/TextStrings.cs:415
 msgid "No internet connection."
-msgstr ""
+msgstr "Keine Internetverbindung."
 
 #: ../src/TextStrings.cs:417
 msgid "Loading configuration failed"

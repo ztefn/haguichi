@@ -94,7 +94,7 @@ namespace Dialogs
             
             
             labelEntry = new Entry ();
-            labelEntry.WidthChars = 32;
+            labelEntry.WidthChars = 39;
             labelEntry.Text = label;
             labelEntry.Changed += CheckEntryLengths;
             
@@ -112,7 +112,7 @@ namespace Dialogs
             
             commandEntry = new Entry ();
             commandEntry.ActivatesDefault = true;
-            commandEntry.WidthChars = 32;
+            commandEntry.WidthChars = 39;
             commandEntry.Text = command;
             commandEntry.Changed += CheckEntryLengths;
             
@@ -137,7 +137,7 @@ namespace Dialogs
             Label infoLabel = new Label ();
             infoLabel.Markup = String.Format ( "<span size='smaller'>{0}</span>", info );
             infoLabel.Xalign = 0;
-            infoLabel.WidthChars = 33;
+            infoLabel.WidthChars = 40;
             
             HBox infoBox = new HBox ();
             infoBox.Add ( empty );
