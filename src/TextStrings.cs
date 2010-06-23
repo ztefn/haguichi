@@ -25,7 +25,7 @@ public class TextStrings
 {
     
     public static string appName                = "Haguichi";
-    public static string appVersion             = "0.9.1";
+    public static string appVersion             = "0.9.2";
     public static string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
@@ -427,7 +427,7 @@ Nederlands (nl)
         notifyMemberLeftHeading             = Catalog.GetString ( "Member left" );
         notifyMemberLeftMessage             = Catalog.GetString ( "{0} left the network {1}" );
         
-        customizeCommands                   = Catalog.GetString ( "_Available commands" );
+        customizeCommands                   = Catalog.GetString ( "A_vailable commands" );
         command                             = Catalog.GetString ( "Command" );
         available                           = Catalog.GetString ( "Available" );
         

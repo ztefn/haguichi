@@ -213,8 +213,8 @@ namespace Dialogs
 
             
             this.VBox.Add ( hbox );
-
-            hbox.ShowAll ();
+            this.VBox.ShowAll ();
+            
             SetMode ( mode );
             
             HideFailure ();

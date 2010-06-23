@@ -557,7 +557,7 @@ msgid "{0} left the network {1}"
 msgstr "{0} hat das Netzwerk {1} verlassen"
 
 #: ../src/TextStrings.cs:429
-msgid "_Available commands"
+msgid "A_vailable commands"
 msgstr "_Verfügbare Befehle"
 
 #: ../src/TextStrings.cs:430

@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>Haguichi</AssemblyName>
     <RootNamespace>Haguichi</RootNamespace>
-    <ReleaseVersion>0.9.1</ReleaseVersion>
+    <ReleaseVersion>0.9.2</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -154,12 +154,7 @@
     <Compile Include="src\Debug.cs" />
     <Compile Include="src\GlobalEvents.cs" />
     <Compile Include="src\Hamachi.cs" />
-    <Compile Include="src\Main.cs">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-HasPathReferences>true</DeployService-HasPathReferences>
-      <DeployService-TargetDirectoryId>Linux.PkgConfig</DeployService-TargetDirectoryId>
-      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
-    </Compile>
+    <Compile Include="src\Main.cs" />
     <Compile Include="src\Member.cs" />
     <Compile Include="src\Network.cs" />
     <Compile Include="src\NetworkView.cs" />

@@ -279,9 +279,7 @@ namespace Windows
 
             
             this.Add ( vbox );
-            
-            this.ShowAll ();
-            this.Hide ();
+            vbox.ShowAll ();
             
         }
         

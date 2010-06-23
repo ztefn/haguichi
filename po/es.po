@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-06-14 23:30+0200\n"
-"PO-Revision-Date: 2010-06-15 22:01+0000\n"
+"PO-Revision-Date: 2010-06-21 19:36+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-06-19 16:20+0000\n"
+"X-Launchpad-Export-Date: 2010-06-23 21:08+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:261
@@ -23,7 +23,7 @@ msgstr "Página web de Haguichi"
 
 #: ../src/TextStrings.cs:262
 msgid "A graphical frontend for Hamachi."
-msgstr "Un interfaz gráfico para Hamachi."
+msgstr "Una interfaz gráfica para Hamachi."
 
 #: ../src/TextStrings.cs:263
 msgid "Join and create local networks over the Internet"
@@ -555,7 +555,7 @@ msgid "{0} left the network {1}"
 msgstr "{o} han abandonado la red {1}"
 
 #: ../src/TextStrings.cs:429
-msgid "_Available commands"
+msgid "A_vailable commands"
 msgstr "Comandos _disponibles"
 
 #: ../src/TextStrings.cs:430

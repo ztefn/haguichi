@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2010-06-14 23:30:53+0200\n"
-"PO-Revision-Date: 2010-06-14 23:30:53+0200\n"
+"POT-Creation-Date: 2010-06-23 23:17:17+0200\n"
+"PO-Revision-Date: 2010-06-23 23:17:17+0200\n"
 "Last-Translator: stephen\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -539,7 +539,7 @@ msgid "{0} left the network {1}"
 msgstr ""
 
 #: ../src/TextStrings.cs:429
-msgid "_Available commands"
+msgid "A_vailable commands"
 msgstr ""
 
 #: ../src/TextStrings.cs:430

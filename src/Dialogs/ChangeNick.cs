@@ -120,8 +120,7 @@ namespace Dialogs
             
             
             this.VBox.Add ( hbox );
-            this.ShowAll ();
-            this.Hide ();
+            this.VBox.ShowAll ();
             
             changeBut.GrabDefault ();
             
