@@ -55,7 +55,7 @@ namespace Dialogs
             nickEntry.WidthChars = 20;
             nickEntry.Selectable = true;
             
-            nickLabel = new Label ( TextStrings.nick + ":  " );
+            nickLabel = new Label ( TextStrings.nick + "  " );
             nickLabel.Xalign = 0;
             
             nickBox = new HBox ();
@@ -71,7 +71,7 @@ namespace Dialogs
             idEntry.WidthChars = 20;
             idEntry.Selectable = true;
             
-            idLabel = new Label ( TextStrings.address + ":  " );
+            idLabel = new Label ( TextStrings.address + "  " );
             idLabel.Xalign = 0;
             
             idBox = new HBox ();
@@ -87,7 +87,7 @@ namespace Dialogs
             versionEntry.WidthChars = 20;
             versionEntry.Selectable = true;
             
-            versionLabel = new Label ( TextStrings.hamachiVersion + ":  " );
+            versionLabel = new Label ( TextStrings.version + "  " );
             versionLabel.Xalign = 0;
             
             versionBox = new HBox ();

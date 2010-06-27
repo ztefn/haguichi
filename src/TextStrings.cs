@@ -62,6 +62,13 @@ Français (fr)
 
 Nederlands (nl)
     Stephen Brandt
+
+Русский (ru)
+    Sergey Sedov
+
+Svenska (sv)
+    Daniel Holm
+    Daniel Nylander
 ";
     
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
@@ -72,7 +79,7 @@ Nederlands (nl)
     public static string tunnel;
     public static string anonymous;
     public static string nick;
-    public static string hamachiVersion;
+    public static string version;
     
     public static string seconds;
     
@@ -263,12 +270,12 @@ Nederlands (nl)
         appComments                         = Catalog.GetString ( "A graphical frontend for Hamachi." );
         appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
         
-        address                             = Catalog.GetString ( "Address" );
-        status                              = Catalog.GetString ( "Status" );
-        tunnel                              = Catalog.GetString ( "Tunnel" );
+        address                             = Catalog.GetString ( "Address:" );
+        status                              = Catalog.GetString ( "Status:" );
+        tunnel                              = Catalog.GetString ( "Tunnel:" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
-        nick                                = Catalog.GetString ( "Nickname" );
-        hamachiVersion                      = Catalog.GetString ( "Version" );
+        nick                                = Catalog.GetString ( "Nickname:" );
+        version                             = Catalog.GetString ( "Version:" );
         
         seconds                             = Catalog.GetString ( "seconds" );
         
@@ -296,9 +303,9 @@ Nederlands (nl)
         notInstalledHeading                 = Catalog.GetString ( "Hamachi is not installed" );
         notInstalledMessage                 = Catalog.GetString ( "Please download Hamachi and follow the installation instructions." );
         
-        members                             = Catalog.GetString ( "Members" );
+        members                             = Catalog.GetString ( "Members:" );
         memberCount                         = Catalog.GetString ( "{0} online, {1} total" );
-        owner                               = Catalog.GetString ( "Owner" );
+        owner                               = Catalog.GetString ( "Owner:" );
         you                                 = Catalog.GetString ( "You" );
         unknown                             = Catalog.GetString ( "Unknown" );
         unavailable                         = Catalog.GetString ( "Unavailable" );
@@ -322,9 +329,9 @@ Nederlands (nl)
         copyLabel                           = Catalog.GetString ( "_Copy Address" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
         
-        nickLabel                           = Catalog.GetString ( "_Nickname" );
-        nameLabel                           = Catalog.GetString ( "_Name" );
-        passwordLabel                       = Catalog.GetString ( "_Password" );
+        nickLabel                           = Catalog.GetString ( "_Nickname:" );
+        nameLabel                           = Catalog.GetString ( "_Name:" );
+        passwordLabel                       = Catalog.GetString ( "_Password:" );
         
         changeNicknameTooltip               = Catalog.GetString ( "Click to change your nickname" );
         
@@ -334,7 +341,7 @@ Nederlands (nl)
         changeNickTitle                     = Catalog.GetString ( "Change Nickname" );
         changeNickMessage                   = Catalog.GetString ( "Please enter the nickname you want to use." );
         
-        joinLabel                           = Catalog.GetString ( "_Join " );
+        joinLabel                           = Catalog.GetString ( "_Join" );
         joiningLabel                        = Catalog.GetString ( "Joining..." );
         joinNetworkTitle                    = Catalog.GetString ( "Join Network" );
         joinNetworkMessage                  = Catalog.GetString ( "Please enter the name and password for the\nnetwork you want to join." );
@@ -382,10 +389,10 @@ Nederlands (nl)
         notifyGroup                         = Catalog.GetString ( "Notification Area" );
         behaviorGroup                       = Catalog.GetString ( "Behavior" );
 
-        dataPathLabel                       = Catalog.GetString ( "_Account data folder" );
+        dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
-        intervalLabel                       = Catalog.GetString ( "_Update interval (seconds)" );
-        timeoutLabel                        = Catalog.GetString ( "_Command timeout (seconds)" );
+        intervalLabel                       = Catalog.GetString ( "_Update interval (seconds):" );
+        timeoutLabel                        = Catalog.GetString ( "_Command timeout (seconds):" );
         
         checkboxShowOfflineMembers          = Catalog.GetString ( "_Offline Members" );
         sortByName                          = Catalog.GetString ( "Sort by _Name" );
@@ -427,14 +434,14 @@ Nederlands (nl)
         notifyMemberLeftHeading             = Catalog.GetString ( "Member left" );
         notifyMemberLeftMessage             = Catalog.GetString ( "{0} left the network {1}" );
         
-        customizeCommands                   = Catalog.GetString ( "A_vailable commands" );
+        customizeCommands                   = Catalog.GetString ( "A_vailable commands:" );
         command                             = Catalog.GetString ( "Command" );
         available                           = Catalog.GetString ( "Available" );
         
         addCommandTitle                     = Catalog.GetString ( "Add Command" );
         editCommandTitle                    = Catalog.GetString ( "Edit Command" );
-        commandLabel                        = Catalog.GetString ( "_Command" );
-        labelLabel                          = Catalog.GetString ( "_Label" );
+        commandLabel                        = Catalog.GetString ( "_Command:" );
+        labelLabel                          = Catalog.GetString ( "_Label:" );
         commandInfo                         = Catalog.GetString ( "Use %A for address and %N for nickname" );
         
         chooseIconTip                       = Catalog.GetString ( "Click to choose an icon" );
@@ -448,8 +455,8 @@ Nederlands (nl)
         revertHeading                       = Catalog.GetString ( "Revert changes?" );
         revertMessage                       = Catalog.GetString ( "Are you sure you wish to revert all changes\nand thereby restore the default commands?" );
         
-        moveUpTip                           = Catalog.GetString ( "Move Up");
-        moveDownTip                         = Catalog.GetString ( "Move Down" );
+        moveUpTip                           = Catalog.GetString ( "Move up");
+        moveDownTip                         = Catalog.GetString ( "Move down" );
         
     }
 

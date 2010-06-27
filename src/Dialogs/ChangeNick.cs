@@ -77,7 +77,7 @@ namespace Dialogs
             nickEntry.ActivatesDefault = true;
             nickEntry.WidthChars = 30;
             nickEntry.MaxLength = 64;
-            nickLabel = new Label ( TextStrings.nickLabel + ":  " );
+            nickLabel = new Label ( TextStrings.nickLabel + "  " );
             nickLabel.Xalign = 0;
             nickLabel.MnemonicWidget = nickEntry;
 

@@ -147,7 +147,7 @@ namespace Windows
             pathButton.WidthRequest = 150;
             
             Label pathLabel = new Label ();
-            pathLabel.TextWithMnemonic = TextStrings.dataPathLabel + ":  ";
+            pathLabel.TextWithMnemonic = TextStrings.dataPathLabel + "  ";
             pathLabel.MnemonicWidget = pathButton;
             
             HBox pathBox = new HBox ();
@@ -171,7 +171,7 @@ namespace Windows
             intervalSpin.WidthRequest = 150;
 
             Label intervalLabel = new Label ();
-            intervalLabel.TextWithMnemonic = TextStrings.intervalLabel + ":  ";
+            intervalLabel.TextWithMnemonic = TextStrings.intervalLabel + "  ";
             intervalLabel.MnemonicWidget = intervalSpin;
             intervalLabel.Xalign = 0;
             
@@ -192,7 +192,7 @@ namespace Windows
             timeoutSpin.WidthRequest = 150;
 
             Label timeoutLabel = new Label ();
-            timeoutLabel.TextWithMnemonic = TextStrings.timeoutLabel + ":  ";
+            timeoutLabel.TextWithMnemonic = TextStrings.timeoutLabel + "  ";
             timeoutLabel.MnemonicWidget = timeoutSpin;
             timeoutLabel.Xalign = 0;
             

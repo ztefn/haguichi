@@ -94,11 +94,12 @@ namespace Dialogs
             
             
             labelEntry = new Entry ();
+            labelEntry.ActivatesDefault = true;
             labelEntry.WidthChars = 39;
             labelEntry.Text = label;
             labelEntry.Changed += CheckEntryLengths;
             
-            labelLabel = new Label ( TextStrings.labelLabel + ":  " );
+            labelLabel = new Label ( TextStrings.labelLabel + "  " );
             labelLabel.Xalign = 0;
             labelLabel.MnemonicWidget = labelEntry;
             
@@ -116,7 +117,7 @@ namespace Dialogs
             commandEntry.Text = command;
             commandEntry.Changed += CheckEntryLengths;
             
-            commandLabel = new Label ( TextStrings.commandLabel + ":  " );
+            commandLabel = new Label ( TextStrings.commandLabel + "  " );
             commandLabel.Xalign = 0;
             commandLabel.MnemonicWidget = commandEntry;
             

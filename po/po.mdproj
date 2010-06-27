@@ -11,6 +11,8 @@
         <Translation isoCode="de" />
         <Translation isoCode="fr" />
         <Translation isoCode="nl" />
+        <Translation isoCode="ru" />
+        <Translation isoCode="sv" />
       </translations>
     </translations>
     <packageName>haguichi</packageName>

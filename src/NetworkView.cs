@@ -201,18 +201,18 @@ public class NetworkView : TreeView
 
                 network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
         
-                string statusString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.status, network.Status.statusString );
+                string statusString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
                 string countString  = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
-                string memberString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.members, countString );
+                string memberString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
                 string ownerString;
                 
                 if ( network.IsOwner == 1 )
                 {
-                    ownerString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.owner, TextStrings.you );
+                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.you );
                 }
                 else
                 {
-                    ownerString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
+                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
                 }
                 
                 tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}</span>", network.Name, statusString, memberString, ownerString );
@@ -239,13 +239,13 @@ public class NetworkView : TreeView
             {
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
-                string statusString  = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.status, member.Status.statusString );
-                string addressString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.address, member.Address );
+                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
+                string addressString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.Address );
                 string tunnelString  = "";
                 
                 if ( member.Tunnel != "")
                 {
-                    tunnelString = String.Format ( "\n{0}: <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
+                    tunnelString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
                 }
                 
                 tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}</span>", member.Nick, statusString, addressString, tunnelString );

@@ -123,7 +123,7 @@ namespace Dialogs
             nameEntry.WidthChars = 30;
             nameEntry.MaxLength = 64;
             nameEntry.Changed += CheckNameLength;
-            nameLabel = new Label ( TextStrings.nameLabel + ":  " );
+            nameLabel = new Label ( TextStrings.nameLabel + "  " );
             nameLabel.Xalign = 0;
             nameLabel.MnemonicWidget = nameEntry;
 
@@ -141,7 +141,7 @@ namespace Dialogs
             passwordEntry.Visibility = false;
             passwordEntry.WidthChars = 30;
             passwordEntry.MaxLength = 64;
-            passwordLabel = new Label ( TextStrings.passwordLabel + ":  " );
+            passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
             passwordLabel.Xalign = 0;
             passwordLabel.MnemonicWidget = passwordEntry;
             
