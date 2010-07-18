@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>Haguichi</AssemblyName>
     <RootNamespace>Haguichi</RootNamespace>
-    <ReleaseVersion>0.9.2</ReleaseVersion>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -144,6 +144,12 @@
       <DeployService-RelativeDeployPath>icons/hicolor/48x48/apps/haguichi.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <LogicalName>haguichi-48x48</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\pixmaps\status-unapproved.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>pixmaps/haguichi/status-unapproved.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>status-unapproved</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

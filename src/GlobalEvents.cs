@@ -24,12 +24,7 @@ using Gtk;
     
 public class GlobalEvents
 {
-    
-    public GlobalEvents ()
-    {
-    }
-    
-    
+
     public static void StartHamachi ( object obj, EventArgs args )
     {
         StartHamachi ();
@@ -56,9 +51,18 @@ public class GlobalEvents
     
     public static void StopHamachi ( object obj, EventArgs args )
     {
-        string output = Hamachi.Stop ();
+        
+        if ( Hamachi.apiVersion > 1 )
+        {
+            Hamachi.Logout ();
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            Hamachi.Stop ();
+        }
         
         ConnectionStopped ();
+        
     }
 
     

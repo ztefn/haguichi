@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 
 public class Hamachi
@@ -26,6 +27,77 @@ public class Hamachi
     
     public Hamachi ()
     {
+    }
+    
+    public static int apiVersion;
+    
+    
+    public static int DetermineApiVersion ()
+    {
+        
+        /*
+         *  <= 0.9.9.9-20 : 1
+         *  >= 2.0.0.11   : 2
+         * 
+         *  Returns version string for all Hamachi versions if started 1 2
+         * 
+         *  1. Not installed                                                                                    0
+         * 
+         *  2. Not configured:
+         *     a. Cannot find configuration directory /home/stephen/.hamachi. Have you run 'hamachi-init' ?     1
+         * 
+         *  3. Not started:
+         *     a. Hamachi does not seem to be running. Have you run 'hamachi start' ?                           1
+         * 
+         *     b. Hamachi does not seem to be running.                                                          2
+         *        Run '/etc/init.d/logmein-hamachi start' to start daemon.
+         * 
+         * 
+         */
+        
+        string output = Command.ReturnOutput ( "hamachi", "" );
+        
+        
+        if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "0" );
+            return 0;
+        }
+        
+        if ( output.IndexOf ( "Have you run 'hamachi-init' ?" ) != -1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+            return 1;
+        }
+        
+        if ( output.IndexOf ( "Have you run 'hamachi start' ?" ) != -1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+            return 1;
+        }
+        
+        if ( output.IndexOf ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) != -1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
+            return 2;
+        }
+        
+        Regex regex = new Regex ( "version([ ]+):([ ]+)(.+)" );
+        Version version = new Version ( regex.Match ( output ).Groups[3].ToString () );
+        if ( version.Major == 0 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+            return 1;
+        }
+        if ( version.Major >= 2 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
+            return 2;
+        }
+        
+        Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "Version: " + version.ToString () );
+        return -1;
+        
     }
     
 
@@ -43,7 +115,27 @@ public class Hamachi
         
     }
     
-
+    
+    public static string Retrieve ( string filename, string args, string nfo )
+    {
+        
+        string output = Command.ReturnOutput ( filename, args );
+        
+        return Retrieve ( output, nfo );
+        
+    }
+    
+    
+    public static string Retrieve ( string output, string nfo )
+    {
+        
+        Regex regex = new Regex ( nfo + "([ ]+):([ ]+)(.+)" );
+            
+        return regex.Match ( output ).Groups[3].ToString ();
+        
+    }
+    
+    
     public static string Init ()
     {
         
@@ -106,7 +198,7 @@ public class Hamachi
     }
     
     
-    public static string GetState ()
+    /*public static string GetState ()
     {
         
         string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
@@ -115,22 +207,55 @@ public class Hamachi
         
         return output;
         
-    }
+    }*/
     
     
-    public static string GetIdentity ()
+    public static string GetClient ()
     {
         
-        string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
-        string output = "";
+        string output;
         
         try
         {
-            output = Retrieve ( "cat", filePath, "Identity", 11 );
+            output = Retrieve ( "hamachi", "", "client id" );
         }
-        catch {}
+        catch
+        {
+            output = "";
+        }
         
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetIdentity", output );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetClient", output );
+        
+        return output;
+        
+    }
+    
+    
+    public static string GetAddress ()
+    {
+        
+        string output = "";
+        
+        if ( Hamachi.apiVersion > 1 )
+        {
+            try
+            {
+                output = Retrieve ( "hamachi", "", "address" );
+            }
+            catch {}
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
+            
+            try
+            {
+                output = Retrieve ( "cat", filePath, "Identity", 11 );
+            }
+            catch {}
+        }
+        
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAddress", output );
         
         return output;
         
@@ -171,7 +296,7 @@ public class Hamachi
     public static void GoOnline ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-online '" + network.Name + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "go-online '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
         
     }
@@ -189,7 +314,7 @@ public class Hamachi
     public static void GoOffline ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-offline '" + network.Name + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "go-offline '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
         
     }
@@ -198,7 +323,7 @@ public class Hamachi
     public static void Delete ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "delete '" + network.Name + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "delete '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Delete", output );
 
         if ( output.IndexOf ( ".. failed, you are not an owner" ) != -1 )
@@ -215,7 +340,7 @@ public class Hamachi
     public static void Leave ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "leave '" + network.Name + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "leave '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Leave", output );
 
         if ( output.IndexOf ( ".. failed, you are an owner" ) != -1 )
@@ -229,10 +354,29 @@ public class Hamachi
     }
     
     
+    public static void Approve ( Member member )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "approve '" + member.Network + "' " + member.ClientId );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Approve", output );
+        
+    }
+    
+    
+    public static void Reject ( Member member )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "reject '" + member.Network + "' " + member.ClientId );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Reject", output );
+        
+    }
+    
+    
     public static void Evict ( Member member )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "evict '" + member.Network + "' " + member.Address );
+        string output = Command.ReturnOutput ( "hamachi", "evict '" + member.Network + "' " + member.ClientId );
+        
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Evict", output );
 
         if ( output.IndexOf ( ".. failed, denied" ) != -1 )
@@ -249,26 +393,32 @@ public class Hamachi
     public static string GetNick ()
     {
         
-        //return Retrieve ( "hamachi", "", "nickname :", 11 );
+        string nick = "";
         
-        string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
-        string output = "";
-        
-        try
+        if ( Hamachi.apiVersion > 1 )
         {
-            output = Retrieve ( "cat", filePath, "Nickname", 11 );
+            nick = Retrieve ( "hamachi", "", "nickname" );
         }
-        catch {}
-        
-        try
+        else if ( Hamachi.apiVersion == 1 )
         {
-            output = Retrieve ( "cat", filePath, "RenameTo", 11 );
+            string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
+            
+            try
+            {
+                nick = Retrieve ( "cat", filePath, "Nickname", 11 );
+            }
+            catch {}
+            
+            try
+            {
+                nick = Retrieve ( "cat", filePath, "RenameTo", 11 );
+            }
+            catch {}
         }
-        catch {}
         
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetNick", output );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetNick", nick );
         
-        return output; 
+        return nick;
         
     }
     
@@ -280,7 +430,7 @@ public class Hamachi
         
         try
         {
-            output = Retrieve ( "hamachi", "", "version  :", 23 );
+            output = Retrieve ( "hamachi", "", "version" );
         }
         catch
         {
@@ -301,7 +451,7 @@ public class Hamachi
         
         try
         {
-            output = Retrieve ( "hamachi", "", "pid      :", 11 );
+            output = Retrieve ( "hamachi", "", "pid" );
         }
         catch
         {
@@ -318,7 +468,7 @@ public class Hamachi
     public static string GetStatus ()
     {
         
-        return Retrieve ( "hamachi", "", "status   :", 11 );
+        return Retrieve ( "hamachi", "", "status" );
         
     }
     
@@ -344,6 +494,41 @@ public class Hamachi
         string[] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetName = "";
         
+        int peerMinLength  = 0;
+        
+        int clientStart    = 0;
+        int clientLength   = 0;
+        int addressStart   = 0;
+        int addressLength  = 0;
+        int nickStart      = 0;
+        int nickLength     = 0;
+        int tunnelStart    = 0;
+        
+        if ( Hamachi.apiVersion > 1 )
+        {
+            peerMinLength  = 61;
+        
+            clientStart    = 7;
+            clientLength   = 12;
+            addressStart   = 48;
+            addressLength  = 13;
+            nickStart      = 21;
+            nickLength     = 25;
+            tunnelStart    = 80;
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            peerMinLength  = 49;
+            
+            clientStart    = 7;
+            clientLength   = 17;
+            addressStart   = 7;
+            addressLength  = 17;
+            nickStart      = 24;
+            nickLength     = 25;
+            tunnelStart    = 51;
+        }
+        
         foreach ( string s in split )
         {
            
@@ -352,21 +537,56 @@ public class Hamachi
             
                 if ( s.IndexOf ( "[" ) == 3 ) // String contains network
                 {
+                    
                     Status status = new Status ( s.Substring ( 1, 1 ) );
-                    string name = s.Substring ( 4, s.IndexOf ( "]" ) - 4 );
-                    //bool isOwner = CheckNetworkOwner ( name );
-            
-                    Network network = new Network ( status, name );
+                    string id     = s.Substring ( 4, s.IndexOf ( "]" ) - 4 );
+                    string name   = id;
+                    
+                    try
+                    {
+                        name = s.Substring ( s.IndexOf ( "]" ) + 3, 27 ).TrimEnd ();
+                        
+                        if ( name.Length == 0 )
+                        {
+                            name = id;
+                        }
+                    }
+                    catch ( Exception e )
+                    {
+                        // No name
+                    }
+
+                    Network network = new Network ( status, id, name );
                     networks.Add ( network );
                     
                     curNetName = name;
+                    
                 }
-                
-                if ( s.Length >= 49 )
+                else if ( s.IndexOf ( "?" ) == 5 ) // Unapproved peer
                 {
+                    
                     Status status = new Status ( s.Substring ( 5, 1 ) );
-                    string address = s.Substring ( 7, 17 ).TrimEnd ();
-                    string nick = s.Substring ( 24, 25 ).TrimEnd ();
+                    string client = s.Substring ( clientStart, clientLength ).TrimEnd ();
+                    string nick   = TextStrings.anonymous;
+                    
+                    Member member = new Member ( status, curNetName, "", nick, client, "" );
+                    
+                    foreach (Network network in networks)
+                    {
+                        if ( network.Id == curNetName )
+                        {
+                            network.AddMember ( member );
+                        }
+                    }
+                    
+                }
+                else if ( s.Length >= peerMinLength )
+                {
+                    
+                    Status status = new Status ( s.Substring ( 5, 1 ) );
+                    string client = s.Substring ( clientStart, clientLength ).TrimEnd ();
+                    string address = s.Substring ( addressStart, addressLength ).TrimEnd ();
+                    string nick = s.Substring ( nickStart, nickLength ).TrimEnd ();
                     
                     if ( ( nick == "" ) || ( nick == "anonymous" ) )
                     {
@@ -377,18 +597,18 @@ public class Hamachi
                     
                     try
                     {
-                        tunnel = s.Substring ( 51, 17 ).TrimEnd ();
+                        tunnel = s.Substring ( tunnelStart ).TrimEnd ();
                     }
                     catch ( Exception e )
                     {
                         // No tunnel
                     }
 
-                    Member member = new Member ( status, curNetName, address, nick, tunnel );
+                    Member member = new Member ( status, curNetName, address, nick, client, tunnel );
                     
                     foreach (Network network in networks)
                     {
-                        if ( network.Name == curNetName )
+                        if ( network.Id == curNetName )
                         {
                             network.AddMember ( member );
                         }
@@ -404,25 +624,30 @@ public class Hamachi
     }
     
     
-    public static string SetNick ( string nick )
+    public static void SetNick ( string nick )
     {
         
-        string filePath;
-        string output;
+        string output = "";
+        int status = Controller.StatusCheck ();
         
-        if ( Controller.StatusCheck () < 4 )
+        if ( ( Hamachi.apiVersion == 1 ) &&
+             ( status < 4 ) )
         {
-            filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
+            string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
             output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );
         }
-        else
+        else if ( ( Hamachi.apiVersion == 1 ) &&
+                  ( status >= 4 ) )
+        {
+            output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+        }
+        else if ( ( Hamachi.apiVersion > 1 ) &&
+                  ( status >= 6 ) )
         {
             output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
         }
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
-        
-        return output;
         
     }
     

@@ -26,34 +26,44 @@ public class Network
 {
 
     public Status Status;
+    public string Id;
     public string Name;
     public ArrayList Members;
     public int IsOwner;
+    public string OwnerId;
+    public string Lock;
+    public string Approve;
     
     public string NameSortString;
     public string StatusSortString;
     
     
-    public Network ( Status status, string name )
+    public Network ( Status status, string id, string name )
     {
         
         this.Status  = status;
+        this.Id      = id;
         this.Name    = name;
         this.Members = new ArrayList();
         this.IsOwner = -1;
+        this.OwnerId = "";
+        this.Lock    = "";
+        this.Approve = "";
         
         SetSortStrings ();
         
     }
     
     
-    public Network ( Status status, string name, ArrayList members )
+    public Network ( Status status, string id, string name, ArrayList members )
     {
         
         this.Status  = status;
+        this.Id      = id;
         this.Name    = name;
         this.Members = members;
         this.IsOwner = -1;
+        this.OwnerId = "";
         
         SetSortStrings ();
         
@@ -69,10 +79,11 @@ public class Network
     }
     
     
-    public void Update ( Status status, string name )
+    public void Update ( Status status, string id, string name )
     {
         
         this.Status = status;
+        this.Id     = id;
         this.Name   = name;
         
         SetSortStrings ();
@@ -102,16 +113,43 @@ public class Network
     public void DetermineOwnership ()
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "evict '" + this.Name + "' 0.0.0.0" );
-        Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
-
-        if ( output.IndexOf ( ".. ok" ) != -1 )
+        string output = "";
+        
+        if ( Hamachi.apiVersion > 1 )
         {
-            this.IsOwner = 1;
+            try
+            {
+                output = Command.ReturnOutput ( "hamachi", "network " + this.Id );
+                Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
+                
+                this.OwnerId = Hamachi.Retrieve ( output, "owner" );
+                this.Lock = Hamachi.Retrieve ( output, "status" );
+                this.Approve = Hamachi.Retrieve ( output, "approve" );
+                
+                if ( this.OwnerId == "This computer" )
+                {
+                    this.IsOwner = 1;
+                }
+                else
+                {
+                    this.IsOwner = 0;
+                }
+            }
+            catch {}
         }
-        else
+        else if ( Hamachi.apiVersion == 1 )
         {
-            this.IsOwner = 0;
+            output = Command.ReturnOutput ( "hamachi", "evict '" + this.Id + "' 0.0.0.0" );
+            Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
+    
+            if ( output.IndexOf ( ".. ok" ) != -1 )
+            {
+                this.IsOwner = 1;
+            }
+            else
+            {
+                this.IsOwner = 0;
+            }
         }
         
     }

@@ -27,11 +27,6 @@ public class Command
     public static bool inProgress = false;
     
     
-    public Command()
-    {
-    }
-    
-    
     public static void Execute ( string command )
     {
         string[] commands = command.Split ( new char[] { ' ' }, 2 );

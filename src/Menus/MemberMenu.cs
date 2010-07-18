@@ -18,6 +18,7 @@
  */
 
 using System;
+using System.Collections;
 using Gtk;
 
 
@@ -31,8 +32,12 @@ namespace Menus
         private Network network;
         
         private ImageMenuItem copy;
+        private ImageMenuItem approve;
+        private ImageMenuItem reject;
         private ImageMenuItem evict;
         private SeparatorMenuItem separator;
+        
+        private ArrayList customItems;
         
         
         public MemberMenu ()
@@ -43,12 +48,18 @@ namespace Menus
             
             separator = new SeparatorMenuItem ();
             
-            evict = new ImageMenuItem ( TextStrings.evictLabel );
+            approve = new ImageMenuItem ( TextStrings.approveLabel );
+            reject  = new ImageMenuItem ( TextStrings.rejectLabel );
+            evict   = new ImageMenuItem ( TextStrings.evictLabel );
+            
+            customItems = new ArrayList ();
             
             AddCustomCommands ();
             
             this.Append ( copy );
             this.Add ( separator );
+            this.Append ( approve );
+            this.Append ( reject );
             this.Append ( evict );
             
             this.ShowAll ();
@@ -64,7 +75,7 @@ namespace Menus
             foreach ( string c in commands )
             {
                 
-                string[] cArray = c.Split ( new char[] { ';' }, 5 );
+                string[] cArray = c.Split ( new char [] { ';' }, 5 );
                 
                 if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [ 0 ] == "true" ) )
                 {
@@ -72,11 +83,35 @@ namespace Menus
                     string label   = cArray [ 3 ];
                     string command = cArray [ 4 ];
                     
-                    Menus.CommandMenuItem custom = new Menus.CommandMenuItem ( icon, label, command );
+                    CommandMenuItem custom = new Menus.CommandMenuItem ( icon, label, command );
+                    
+                    customItems.Add ( custom );
                     
                     this.Append ( custom );
                 }
-
+                
+            }
+            
+        }
+        
+        
+        private void HideCustomCommands ()
+        {
+         
+            foreach ( CommandMenuItem item in customItems )
+            {
+                item.Visible = false;
+            }
+            
+        }
+        
+        
+        private void ShowCustomCommands ()
+        {
+         
+            foreach ( CommandMenuItem item in customItems )
+            {
+                item.Visible = true;
             }
             
         }
@@ -88,8 +123,10 @@ namespace Menus
             /*
              * Remove event handlers from the previous member
              */
-            copy.Activated   -= new EventHandler ( member.CopyAddressToClipboard );
-            evict.Activated  -= new EventHandler ( member.Evict );
+            copy.Activated    -= new EventHandler ( member.CopyAddressToClipboard );
+            approve.Activated -= new EventHandler ( member.Approve );
+            reject.Activated  -= new EventHandler ( member.Reject );
+            evict.Activated   -= new EventHandler ( member.Evict );
 
             /*
              * Set the new member
@@ -97,10 +134,12 @@ namespace Menus
             this.member = memb;
             this.network = netw;
             
-            copy.Activated   += new EventHandler ( member.CopyAddressToClipboard );
-            evict.Activated  += new EventHandler ( member.Evict );
+            copy.Activated    += new EventHandler ( member.CopyAddressToClipboard );
+            approve.Activated += new EventHandler ( member.Approve );
+            reject.Activated  += new EventHandler ( member.Reject );
+            evict.Activated   += new EventHandler ( member.Evict );
             
-            if ( network.IsOwner == 1 )
+            if ( ( network.IsOwner == 1 ) && ( member.Status.statusString != "Unapproved" ) )
             {
                 separator.Visible = true;
                 evict.Visible = true;
@@ -109,6 +148,21 @@ namespace Menus
             {
                 separator.Visible = false;
                 evict.Visible = false;
+            }
+            
+            if ( member.Status.statusString != "Unapproved" )
+            {
+                ShowCustomCommands ();
+                copy.Visible    = true;
+                approve.Visible = false;
+                reject.Visible  = false;
+            }
+            else
+            {
+                HideCustomCommands ();
+                copy.Visible    = false;
+                approve.Visible = true;
+                reject.Visible  = true;
             }
             
         }

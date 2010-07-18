@@ -34,7 +34,7 @@ public class Status
         {
             statusInt = 0;
             statusString = TextStrings.offline;
-            statusSortable = "c";
+            statusSortable = "d";
         }
         if ( status == "*" )
         {
@@ -47,6 +47,12 @@ public class Status
             statusInt = 2;
             statusString = TextStrings.unreachable;
             statusSortable = "b";
+        }
+        if ( status == "?" )
+        {
+            statusInt = 3;
+            statusString = TextStrings.unapproved;
+            statusSortable = "c";
         }
     }
     
@@ -63,6 +69,10 @@ public class Status
         if ( status.statusInt == 2 )
         {
             statusPix = GetPixbufUnreachable ();
+        }
+        if ( status.statusInt == 3 )
+        {
+            statusPix = GetPixbufUnapproved ();
         }
         
         return statusPix;
@@ -120,6 +130,25 @@ public class Status
         catch
         {
             statusPix = Gdk.Pixbuf.LoadFromResource ( "status-unreachable" );
+        }
+        
+        return statusPix;
+        
+    }
+    
+    
+    public static Gdk.Pixbuf GetPixbufUnapproved ()
+    {
+        
+        Gdk.Pixbuf statusPix;
+        
+        try
+        {
+            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-approved.png" );
+        }
+        catch
+        {
+            statusPix = Gdk.Pixbuf.LoadFromResource ( "status-unapproved" );
         }
         
         return statusPix;

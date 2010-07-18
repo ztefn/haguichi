@@ -28,34 +28,37 @@ public class Member
     public string Network;
     public string Address;
     public string Nick;
+    public string ClientId;
     public string Tunnel;
     
     public string NameSortString;
     public string StatusSortString;
     
     
-    public Member ( Status status, string network, string address, string nick, string tunnel )
+    public Member ( Status status, string network, string address, string nick, string client, string tunnel )
     {
         
-        this.Status  = status;
-        this.Network = network;
-        this.Address = address;
-        this.Nick    = nick;
-        this.Tunnel  = tunnel;
+        this.Status   = status;
+        this.Network  = network;
+        this.Address  = address;
+        this.Nick     = nick;
+        this.ClientId = client;
+        this.Tunnel   = tunnel;
         
         SetSortStrings ();
         
     }
     
     
-    public void Update ( Status status, string network, string address, string nick, string tunnel )
+    public void Update ( Status status, string network, string address, string nick, string client, string tunnel )
     {
     
-        this.Status  = status;
-        this.Network = network;
-        this.Address = address;
-        this.Nick    = nick;
-        this.Tunnel  = tunnel;
+        this.Status   = status;
+        this.Network  = network;
+        this.Address  = address;
+        this.Nick     = nick;
+        this.ClientId = client;
+        this.Tunnel   = tunnel;
         
         SetSortStrings ();
     
@@ -65,8 +68,8 @@ public class Member
     private void SetSortStrings ()
     {
     
-        NameSortString = this.Nick + this.Address;
-        StatusSortString = this.Status.statusSortable + this.Nick + this.Address;
+        NameSortString = this.Nick + this.ClientId;
+        StatusSortString = this.Status.statusSortable + this.Nick + this.ClientId;
     
     }
     
@@ -76,6 +79,24 @@ public class Member
     
         Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
         clip.Text = this.Address;
+    
+    }
+    
+    
+    public void Approve ( object o, EventArgs args )
+    {
+        
+        Hamachi.Approve ( this );
+        Controller.UpdateConnection (); // Update list
+    
+    }
+    
+    
+    public void Reject ( object o, EventArgs args )
+    {
+        
+        Hamachi.Reject ( this );
+        Controller.UpdateConnection (); // Update list
     
     }
     

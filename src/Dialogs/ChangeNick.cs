@@ -143,7 +143,7 @@ namespace Dialogs
             
             this.Name = nickEntry.GetChars ( 0, -1 );
             
-            string output = Hamachi.SetNick ( this.Name );
+            Hamachi.SetNick ( this.Name );
             
             Dismiss ();
             GlobalEvents.UpdateNick ( this.Name );

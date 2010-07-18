@@ -13,9 +13,9 @@ namespace Dialogs
         private Label nickEntry;
         private HBox  nickBox;
         
-        private Label idLabel;
-        private Label idEntry;
-        private HBox  idBox;
+        private Label addressLabel;
+        private Label addressEntry;
+        private HBox  addressBox;
         
         private Label versionLabel;
         private Label versionEntry;
@@ -66,19 +66,19 @@ namespace Dialogs
             bc8.Expand = false;
             
             
-            idEntry = new Label ();
-            idEntry.Xalign = 0;
-            idEntry.WidthChars = 20;
-            idEntry.Selectable = true;
+            addressEntry = new Label ();
+            addressEntry.Xalign = 0;
+            addressEntry.WidthChars = 20;
+            addressEntry.Selectable = true;
             
-            idLabel = new Label ( TextStrings.address + "  " );
-            idLabel.Xalign = 0;
+            addressLabel = new Label ( TextStrings.address + "  " );
+            addressLabel.Xalign = 0;
             
-            idBox = new HBox ();
-            idBox.Add ( idLabel );
-            idBox.Add ( idEntry );
+            addressBox = new HBox ();
+            addressBox.Add ( addressLabel );
+            addressBox.Add ( addressEntry );
             
-            Box.BoxChild bc9 = ( ( Box.BoxChild ) ( idBox [ idEntry ] ) );
+            Box.BoxChild bc9 = ( ( Box.BoxChild ) ( addressBox [ addressEntry ] ) );
             bc9.Expand = false;
             
             
@@ -100,7 +100,7 @@ namespace Dialogs
             
             VBox vbox = new VBox ();
             vbox.Add ( versionBox );
-            vbox.Add ( idBox );
+            vbox.Add ( addressBox );
             vbox.Add ( nickBox );
             vbox.Add ( buttonBox );
             
@@ -109,7 +109,7 @@ namespace Dialogs
             bc4.Padding = 6;
             bc4.Expand = false;
             
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ idBox ] ) );
+            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ addressBox ] ) );
             bc6.Padding = 6;
             bc6.Expand = false;
             
@@ -141,7 +141,7 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.VBox.ShowAll ();
             
-            SetIdentity ();
+            SetAddress ();
             SetVersion ();
             
         }
@@ -194,17 +194,17 @@ namespace Dialogs
         }
         
         
-        public void SetIdentity ()
+        public void SetAddress ()
         {
             
-            string id = Hamachi.GetIdentity ();
+            string address = Hamachi.GetAddress ();
             
-            if ( id == "" )
+            if ( address == "" )
             {
-                id = "<i>" + TextStrings.unavailable + "</i>";
+                address = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            idEntry.Markup = id;
+            addressEntry.Markup = address;
             
         }
         

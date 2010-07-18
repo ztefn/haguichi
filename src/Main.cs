@@ -66,6 +66,8 @@ class Haguichi
         TextStrings.Init ();
         Config.Client.Init ();
         
+        Hamachi.apiVersion  = Hamachi.DetermineApiVersion ();
+        
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();
         nickWindow          = new Dialogs.ChangeNick ( TextStrings.changeNickTitle );

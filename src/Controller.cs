@@ -20,6 +20,7 @@
 using System;
 using System.Collections;
 using System.Net.Sockets;
+using System.Text.RegularExpressions;
 using Gtk;
 
 
@@ -41,7 +42,15 @@ public class Controller
         if ( status >= 5 )
         {
             MainWindow.SetMode ( "Connecting" );
-            GetNicksAndNetworkList ();
+            
+            if ( Hamachi.apiVersion > 1 )
+            {
+                GetNetworkList ();
+            }
+            else if ( Hamachi.apiVersion == 1 )
+            {
+                GetNicksAndNetworkList ();
+            }
         }
         else if ( ( status >= 3 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
@@ -89,46 +98,55 @@ public class Controller
         
         string output = Hamachi.GetInfo ();
         
+        Regex regex;
+        
         if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not installed." );
             return 0;
         }
-        else if ( output.IndexOf ( "Cannot find configuration directory" ) == 0 )
+        
+        if ( output.IndexOf ( "Cannot find configuration directory" ) == 0 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not configured." );
             return 1;
         }
-        else if ( !HasInternetConnection () )
+        
+        if ( !HasInternetConnection () )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet." );
             return 2;
         }
-        else if ( output.IndexOf ( "Hamachi does not seem to be running." ) == 0 )
+        
+        if ( output.IndexOf ( "Hamachi does not seem to be running." ) == 0 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not started." );
             return 3;
         }
-        else if ( output.IndexOf ( "status   : offline" ) != -1 )
+        
+        regex = new Regex ( "status([ ]+):([ ]+)offline" );
+        if ( regex.IsMatch ( output ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not logged in." );
             return 4;
         }
-        else if ( output.IndexOf ( "status   : logging in" ) != -1 )
+        
+        regex = new Regex ( "status([ ]+):([ ]+)logging in" );
+        if ( regex.IsMatch ( output ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Logging in." );
             return 5;
         }
-        else if ( output.IndexOf ( "status   : logged in" ) != -1 )
+        
+        regex = new Regex ( "status([ ]+):([ ]+)logged in" );
+        if ( regex.IsMatch ( output ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Logged in." );
             return 6;
         }
-        else
-        {
-            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Unknown." );
-            return -1;
-        }
+        
+        Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Unknown." );
+        return -1;
     
     }
     
@@ -285,7 +303,14 @@ public class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Connected!" );
             
-            GetNicksAndNetworkList ();
+            if ( Hamachi.apiVersion > 1 )
+            {
+                GetNetworkList ();
+            }
+            else if ( Hamachi.apiVersion == 1 )
+            {
+                GetNicksAndNetworkList ();
+            }
         }
         else
         {
@@ -324,6 +349,16 @@ public class Controller
     private static bool TimedGetNetworkList ()
     {
         
+        GetNetworkList ();
+        
+        return false;
+        
+    }
+    
+    
+    private static void GetNetworkList ()
+    {
+        
         Haguichi.connection.ClearNetworks ();
         Haguichi.connection.Status = new Status ( "*" );
         
@@ -333,8 +368,6 @@ public class Controller
         
         MainWindow.networkView.FillTree ();
         GlobalEvents.ConnectionEstablished ();
-        
-        return false;
         
     }
     
@@ -353,7 +386,10 @@ public class Controller
         
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Still connected, updating list..." );
             
-            Hamachi.GetNicks (); // Update nicks
+            if ( Hamachi.apiVersion == 1 )
+            {
+                Hamachi.GetNicks (); // Update nicks
+            }
             
             ArrayList oNetworksList = ( ArrayList ) Haguichi.connection.Networks.Clone (); // Cloning to prevent exception (InvalidOperationException: List has changed)
             ArrayList nNetworksList = Hamachi.ReturnList ();
@@ -363,20 +399,20 @@ public class Controller
             
             foreach ( Network oNetwork in oNetworksList )
             {
-                oNetworksHash.Add ( oNetwork.Name, oNetwork );
+                oNetworksHash.Add ( oNetwork.Id, oNetwork );
             }
             
             Hashtable nNetworksHash = new Hashtable ();
             
             foreach ( Network nNetwork in nNetworksList )
             {
-                nNetworksHash.Add ( nNetwork.Name, nNetwork );
+                nNetworksHash.Add ( nNetwork.Id, nNetwork );
             }
             
             
             foreach ( Network oNetwork in oNetworksList )
             {
-                if ( !nNetworksHash.ContainsKey ( oNetwork.Name ) )
+                if ( !nNetworksHash.ContainsKey ( oNetwork.Id ) )
                 {
                     /* Network not in new list, removing... */
                     
@@ -388,13 +424,13 @@ public class Controller
             
             foreach ( Network nNetwork in nNetworksList )
             {
-                if ( oNetworksHash.ContainsKey ( nNetwork.Name ) )
+                if ( oNetworksHash.ContainsKey ( nNetwork.Id ) )
                 {
                     /* Network in new and old list, updating... */
                     
-                    Network oNetwork = ( Network ) oNetworksHash [ nNetwork.Name ];
+                    Network oNetwork = ( Network ) oNetworksHash [ nNetwork.Id ];
                     
-                    oNetwork.Update ( nNetwork.Status, nNetwork.Name );
+                    oNetwork.Update ( nNetwork.Status, nNetwork.Id, nNetwork.Name );
                     
                     MainWindow.networkView.UpdateNetwork ( oNetwork );
                     
@@ -409,7 +445,7 @@ public class Controller
                     
                     foreach ( Member oMember in oMembersList )
                     {
-                        oMembersHash.Add ( oMember.Address, oMember );
+                        oMembersHash.Add ( oMember.ClientId, oMember );
                     }
                     
                     
@@ -417,13 +453,13 @@ public class Controller
                     
                     foreach ( Member nMember in nMembersList )
                     {
-                        nMembersHash.Add ( nMember.Address, nMember );
+                        nMembersHash.Add ( nMember.ClientId, nMember );
                     }
                     
                     
                     foreach ( Member oMember in oMembersList )
                     {
-                        if ( !nMembersHash.ContainsKey ( oMember.Address ) )
+                        if ( !nMembersHash.ContainsKey ( oMember.ClientId ) )
                         {
                             /* Member not in new list, removing... */
                             
@@ -441,11 +477,11 @@ public class Controller
                     
                     foreach ( Member nMember in nMembersList )
                     {
-                        if ( oMembersHash.ContainsKey ( nMember.Address ) )
+                        if ( oMembersHash.ContainsKey ( nMember.ClientId ) )
                         {
                             /* Member in old and new list, updating... */
                             
-                            Member oMember = ( Member ) oMembersHash [ nMember.Address ];
+                            Member oMember = ( Member ) oMembersHash [ nMember.ClientId ];
                             
                             if ( ( oMember.Status.statusInt == 0 ) &&
                                  ( nMember.Status.statusInt == 1 ) &&
@@ -462,7 +498,7 @@ public class Controller
                                 Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
                             }
                             
-                            oMember.Update ( nMember.Status, nMember.Network, nMember.Address, nMember.Nick, nMember.Tunnel );
+                            oMember.Update ( nMember.Status, nMember.Network, nMember.Address, nMember.Nick, nMember.ClientId, nMember.Tunnel );
                             
                             MainWindow.networkView.UpdateMember ( oNetwork, oMember );
                         }

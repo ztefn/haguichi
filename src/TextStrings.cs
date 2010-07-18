@@ -25,7 +25,7 @@ public class TextStrings
 {
     
     public static string appName                = "Haguichi";
-    public static string appVersion             = "0.9.2";
+    public static string appVersion             = "1.0.0";
     public static string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
@@ -64,6 +64,7 @@ Nederlands (nl)
     Stephen Brandt
 
 Русский (ru)
+    Sergey Korolev
     Sergey Sedov
 
 Svenska (sv)
@@ -74,7 +75,9 @@ Svenska (sv)
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
     public static string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
     
+    public static string id;
     public static string address;
+    public static string client;
     public static string status;
     public static string tunnel;
     public static string anonymous;
@@ -113,6 +116,7 @@ Svenska (sv)
     public static string you;
     public static string unknown;
     public static string unavailable;
+    public static string unapproved;
     
     public static string accountLabel;
     public static string editLabel;
@@ -131,6 +135,8 @@ Svenska (sv)
     public static string pingLabel;
     public static string vncLabel;
     public static string copyLabel;
+    public static string approveLabel;
+    public static string rejectLabel;
     public static string evictLabel;
 
     public static string nickLabel;
@@ -271,6 +277,8 @@ Svenska (sv)
         appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
         
         address                             = Catalog.GetString ( "Address:" );
+        id                                  = Catalog.GetString ( "ID:" );
+        client                              = Catalog.GetString ( "Client ID:" );
         status                              = Catalog.GetString ( "Status:" );
         tunnel                              = Catalog.GetString ( "Tunnel:" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
@@ -309,6 +317,7 @@ Svenska (sv)
         you                                 = Catalog.GetString ( "You" );
         unknown                             = Catalog.GetString ( "Unknown" );
         unavailable                         = Catalog.GetString ( "Unavailable" );
+        unapproved                          = Catalog.GetString ( "Unapproved" );
         
         accountLabel                        = Catalog.GetString ( "_Account" );
         editLabel                           = Catalog.GetString ( "_Edit" );
@@ -327,6 +336,8 @@ Svenska (sv)
         pingLabel                           = Catalog.GetString ( "_Ping" );
         vncLabel                            = Catalog.GetString ( "_View Remote Desktop" );
         copyLabel                           = Catalog.GetString ( "_Copy Address" );
+        approveLabel                        = Catalog.GetString ( "_Approve" );
+        rejectLabel                         = Catalog.GetString ( "_Reject" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
         
         nickLabel                           = Catalog.GetString ( "_Nickname:" );

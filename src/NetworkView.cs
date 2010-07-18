@@ -205,17 +205,33 @@ public class NetworkView : TreeView
                 string countString  = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
                 string memberString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
                 string ownerString;
+                string accessString = "";
+                string idString     = "";
                 
                 if ( network.IsOwner == 1 )
                 {
                     ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.you );
+                }
+                else if ( network.OwnerId != "" )
+                {
+                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, network.OwnerId );
                 }
                 else
                 {
                     ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}</span>", network.Name, statusString, memberString, ownerString );
+                if ( ( network.Lock != "" ) && ( network.Approve != "" ) )
+                {
+                    accessString = String.Format ( "\n{0} <i>{1} {2}</i>", "Access:", network.Lock, network.Approve );
+                }
+                
+                if ( network.Id != network.Name )
+                {
+                    idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.id, network.Id );
+                }
+                
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}</span>", network.Name, statusString, memberString, ownerString, accessString, idString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -240,15 +256,26 @@ public class NetworkView : TreeView
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
                 string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
-                string addressString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.Address );
+                string addressString = "";
+                string clientString  = "";
                 string tunnelString  = "";
                 
-                if ( member.Tunnel != "")
+                if ( member.Address != "" )
+                {
+                    addressString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.Address );
+                }
+                
+                if ( member.ClientId != member.Address )
+                {
+                    clientString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.client, member.ClientId );
+                }
+                
+                if ( member.Tunnel != "" )
                 {
                     tunnelString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}</span>", member.Nick, statusString, addressString, tunnelString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", member.Nick, statusString, addressString, clientString, tunnelString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -308,7 +335,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
 
-        iter = store.AppendValues ( network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        iter = store.AppendValues ( network.Id, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
         foreach ( Member member in network.Members )
         {
@@ -333,7 +360,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
         
-        store.SetValues ( iter, network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        store.SetValues ( iter, network.Id, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
     }
     
@@ -341,7 +368,7 @@ public class NetworkView : TreeView
     private TreeIter ReturnNetworkIter ( Network network )
     {
         
-        return ReturnNetworkIter ( network.Name );
+        return ReturnNetworkIter ( network.Id );
         
     }
     
@@ -355,7 +382,7 @@ public class NetworkView : TreeView
         if ( store.GetIterFirst ( out networkIter ) )                         // First network
         {
             Network netw = ( Network ) store.GetValue ( networkIter, networkColumn );
-            if ( netw.Name == network )
+            if ( netw.Id == network )
             {
                 returnIter = networkIter;
             }
@@ -363,7 +390,7 @@ public class NetworkView : TreeView
             {
                 netw = ( Network ) store.GetValue ( networkIter, networkColumn );
                 
-                if ( netw.Name == network )
+                if ( netw.Id == network )
                 {
                     returnIter = networkIter;
                 }
@@ -528,13 +555,14 @@ public class NetworkView : TreeView
             statusInt  = network.Status.statusInt;
             
             string template = networkTemplate;
-            template = template.Replace ( "%N", "{0}" );
-            template = template.Replace ( "%S", "{1}" );
-            template = template.Replace ( "%T", "{2}" );
-            template = template.Replace ( "%O", "{3}" );
-            template = template.Replace ( "<br>", "{4}" );
+            template = template.Replace ( "%ID", "{0}" );
+            template = template.Replace ( "%N", "{1}" );
+            template = template.Replace ( "%S", "{2}" );
+            template = template.Replace ( "%T", "{3}" );
+            template = template.Replace ( "%O", "{4}" );
+            template = template.Replace ( "<br>", "{5}" );
             
-            textCell.Markup = String.Format ( template, name, statusText, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
+            textCell.Markup = String.Format ( template, network.Id, name, statusText, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
             
             if ( statusInt == 0 )
             {
@@ -632,14 +660,17 @@ public class NetworkView : TreeView
         }
         else
         {
-            string command = Command.ReturnDefault();
-            
-            if ( command != "" )
+            if ( lastMember.Status.statusString != "Unapproved" )
             {
-                command = command.Replace ( "%N", lastMember.Nick );
-                command = command.Replace ( "%A", lastMember.Address );
+                string command = Command.ReturnDefault();
                 
-                Command.Execute ( command );
+                if ( command != "" )
+                {
+                    command = command.Replace ( "%N", lastMember.Nick );
+                    command = command.Replace ( "%A", lastMember.Address );
+                    
+                    Command.Execute ( command );
+                }
             }
 
         }
@@ -685,9 +716,9 @@ public class NetworkView : TreeView
             if ( mode == "Collapsed" )
             {
                 
-                if ( !arrayList.Contains ( network.Name ) )
+                if ( !arrayList.Contains ( network.Id ) )
                 {
-                    arrayList.Add ( network.Name );
+                    arrayList.Add ( network.Id );
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                     
@@ -699,9 +730,9 @@ public class NetworkView : TreeView
             if ( mode == "Expanded" )
             {
                 
-                if ( arrayList.Contains ( network.Name ) )
+                if ( arrayList.Contains ( network.Id ) )
                 {
-                    arrayList.Remove ( network.Name );
+                    arrayList.Remove ( network.Id );
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                                                      
@@ -780,7 +811,7 @@ public class NetworkView : TreeView
         foreach ( string s in collapsed )
         {
             
-            if ( s == network.Name )
+            if ( s == network.Id )
             {
                 return true;
             }
