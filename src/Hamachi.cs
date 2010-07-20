@@ -198,19 +198,7 @@ public class Hamachi
     }
     
     
-    /*public static string GetState ()
-    {
-        
-        string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
-        string output =  Command.ReturnOutput ( "cat", filePath );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetState", output );
-        
-        return output;
-        
-    }*/
-    
-    
-    public static string GetClient ()
+    public static string GetClientId ()
     {
         
         string output;
@@ -346,7 +334,14 @@ public class Hamachi
         if ( output.IndexOf ( ".. failed, you are an owner" ) != -1 )
         {
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
-            string message = TextStrings.failedLeaveNetworkMessage;
+            string message = TextStrings.failedLeaveNetworkMessageIsOwner;
+            
+            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
+        }
+        else if ( output.IndexOf ( ".. failed, denied" ) != -1 )
+        {
+            string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
+            string message = TextStrings.failedLeaveNetworkMessageDenied;
             
             Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
         }
@@ -492,7 +487,7 @@ public class Hamachi
         string output = GetList ();
         
         string[] split = output.Split ( Environment.NewLine.ToCharArray () );
-        string curNetName = "";
+        string curNetworkId = "";
         
         int peerMinLength  = 0;
         
@@ -559,7 +554,7 @@ public class Hamachi
                     Network network = new Network ( status, id, name );
                     networks.Add ( network );
                     
-                    curNetName = name;
+                    curNetworkId = id;
                     
                 }
                 else if ( s.IndexOf ( "?" ) == 5 ) // Unapproved peer
@@ -567,13 +562,13 @@ public class Hamachi
                     
                     Status status = new Status ( s.Substring ( 5, 1 ) );
                     string client = s.Substring ( clientStart, clientLength ).TrimEnd ();
-                    string nick   = TextStrings.anonymous;
+                    string nick   = TextStrings.unknown;
                     
-                    Member member = new Member ( status, curNetName, "", nick, client, "" );
+                    Member member = new Member ( status, curNetworkId, "", nick, client, "" );
                     
                     foreach (Network network in networks)
                     {
-                        if ( network.Id == curNetName )
+                        if ( network.Id == curNetworkId )
                         {
                             network.AddMember ( member );
                         }
@@ -604,11 +599,11 @@ public class Hamachi
                         // No tunnel
                     }
 
-                    Member member = new Member ( status, curNetName, address, nick, client, tunnel );
+                    Member member = new Member ( status, curNetworkId, address, nick, client, tunnel );
                     
                     foreach (Network network in networks)
                     {
-                        if ( network.Id == curNetName )
+                        if ( network.Id == curNetworkId )
                         {
                             network.AddMember ( member );
                         }

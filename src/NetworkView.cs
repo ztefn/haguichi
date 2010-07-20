@@ -198,19 +198,31 @@ public class NetworkView : TreeView
                 
                 int memberCount;
                 int memberOnlineCount;
-
+                
                 network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
-        
-                string statusString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
-                string countString  = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
-                string memberString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
+                
+                string idString      = "";
                 string ownerString;
-                string accessString = "";
-                string idString     = "";
+                string countString   = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
+                string memberString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
+                string lockString    = "";
+                string approveString = "";
+                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
+                
+                if ( Hamachi.apiVersion > 1 )
+                {
+                    idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
+                }
+                
+                string ownerNick = network.ReturnOwnerNick ();
                 
                 if ( network.IsOwner == 1 )
                 {
                     ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.you );
+                }
+                else if ( ( network.OwnerId != "" ) && ( ownerNick != "" ) )
+                {
+                    ownerString = String.Format ( "\n{0} <i>{1} ({2})</i>", TextStrings.owner, network.OwnerId, ownerNick );
                 }
                 else if ( network.OwnerId != "" )
                 {
@@ -221,17 +233,27 @@ public class NetworkView : TreeView
                     ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
                 }
                 
-                if ( ( network.Lock != "" ) && ( network.Approve != "" ) )
+                if ( network.Lock == "locked" )
                 {
-                    accessString = String.Format ( "\n{0} <i>{1} {2}</i>", "Access:", network.Lock, network.Approve );
+                    lockString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.locked, TextStrings.yes );
                 }
                 
-                if ( network.Id != network.Name )
+                if ( network.Lock == "unlocked" )
                 {
-                    idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.id, network.Id );
+                    lockString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.locked, TextStrings.no );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}</span>", network.Name, statusString, memberString, ownerString, accessString, idString );
+                if ( network.Approve == "manual" )
+                {
+                    approveString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.approval, TextStrings.manually );
+                }
+                
+                if ( network.Approve == "auto" )
+                {
+                    approveString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.approval, TextStrings.automatically );
+                }
+                
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}</span>", network.Name, idString, memberString, ownerString, approveString, lockString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -255,19 +277,19 @@ public class NetworkView : TreeView
             {
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
-                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
-                string addressString = "";
                 string clientString  = "";
+                string addressString = "";
                 string tunnelString  = "";
+                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
+                
+                if ( member.ClientId != member.Address )
+                {
+                    clientString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.clientId, member.ClientId );
+                }
                 
                 if ( member.Address != "" )
                 {
                     addressString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.Address );
-                }
-                
-                if ( member.ClientId != member.Address )
-                {
-                    clientString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.client, member.ClientId );
                 }
                 
                 if ( member.Tunnel != "" )
@@ -275,7 +297,7 @@ public class NetworkView : TreeView
                     tunnelString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", member.Nick, statusString, addressString, clientString, tunnelString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", member.Nick, clientString, addressString, tunnelString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -335,7 +357,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
 
-        iter = store.AppendValues ( network.Id, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        iter = store.AppendValues ( network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
         foreach ( Member member in network.Members )
         {
@@ -360,7 +382,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
         
-        store.SetValues ( iter, network.Id, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        store.SetValues ( iter, network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
     }
     
@@ -562,6 +584,11 @@ public class NetworkView : TreeView
             template = template.Replace ( "%O", "{4}" );
             template = template.Replace ( "<br>", "{5}" );
             
+            if ( network.IsOwner == 1 )
+            {
+                template += " ✩";   
+            }
+            
             textCell.Markup = String.Format ( template, network.Id, name, statusText, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
             
             if ( statusInt == 0 )
@@ -592,6 +619,11 @@ public class NetworkView : TreeView
             template = template.Replace ( "%A", "{1}" );
             template = template.Replace ( "%S", "{2}" );
             template = template.Replace ( "<br>", "{3}" );
+            
+            if ( network.OwnerId == member.ClientId )
+            {
+                template += " ✩";   
+            }
             
             textCell.Markup = String.Format ( template, name, address, statusText, "\n" );
 

@@ -27,13 +27,13 @@ namespace Menus
     public class Menubar : MenuBar
     {
         
-        private Menu accountMenu;
+        private Menu clientMenu;
         private Menu editMenu;
         private Menu viewMenu;
         private Menu helpMenu;
         
         
-        private MenuItem accountMenuItem;
+        private MenuItem clientMenuItem;
         private MenuItem editMenuItem;
         private MenuItem viewMenuItem;
         private MenuItem helpMenuItem;
@@ -83,18 +83,18 @@ namespace Menus
             quit = new ImageMenuItem ( Stock.Quit, MainWindow.accelGroup );
             quit.Activated += GlobalEvents.QuitApp;
             
-            accountMenu = new Menu ();
-            accountMenu.Append ( connect );
-            accountMenu.Append ( disconnect );
-            accountMenu.Append ( change );
-            accountMenu.Append ( join );
-            accountMenu.Append ( create );
-            accountMenu.Append ( info );
-            accountMenu.Add    ( new SeparatorMenuItem() );
-            accountMenu.Append ( quit );
+            clientMenu = new Menu ();
+            clientMenu.Append ( connect );
+            clientMenu.Append ( disconnect );
+            clientMenu.Append ( change );
+            clientMenu.Append ( join );
+            clientMenu.Append ( create );
+            clientMenu.Append ( info );
+            clientMenu.Add    ( new SeparatorMenuItem() );
+            clientMenu.Append ( quit );
             
-            accountMenuItem = new MenuItem ( TextStrings.accountLabel );
-            accountMenuItem.Submenu = accountMenu;
+            clientMenuItem = new MenuItem ( TextStrings.clientLabel );
+            clientMenuItem.Submenu = clientMenu;
             
             
             preferences = new ImageMenuItem ( Stock.Preferences, MainWindow.accelGroup );
@@ -163,7 +163,7 @@ namespace Menus
             helpMenuItem.Submenu = helpMenu;
             
             
-            this.Append ( accountMenuItem );
+            this.Append ( clientMenuItem );
             this.Append ( editMenuItem );
             this.Append ( viewMenuItem );
             this.Append ( helpMenuItem );

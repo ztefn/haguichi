@@ -83,6 +83,15 @@ public class Member
     }
     
     
+    public void CopyClientIdToClipboard ( object o, EventArgs args )
+    {
+    
+        Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
+        clip.Text = this.ClientId;
+    
+    }
+    
+    
     public void Approve ( object o, EventArgs args )
     {
         

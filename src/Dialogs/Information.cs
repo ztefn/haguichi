@@ -17,6 +17,10 @@ namespace Dialogs
         private Label addressEntry;
         private HBox  addressBox;
         
+        private Label idLabel;
+        private Label idEntry;
+        private HBox  idBox;
+        
         private Label versionLabel;
         private Label versionEntry;
         private HBox  versionBox;
@@ -82,6 +86,22 @@ namespace Dialogs
             bc9.Expand = false;
             
             
+            idEntry = new Label ();
+            idEntry.Xalign = 0;
+            idEntry.WidthChars = 20;
+            idEntry.Selectable = true;
+            
+            idLabel = new Label ( TextStrings.id + "  " );
+            idLabel.Xalign = 0;
+            
+            idBox = new HBox ();
+            idBox.Add ( idLabel );
+            idBox.Add ( idEntry );
+            
+            Box.BoxChild bc15 = ( ( Box.BoxChild ) ( idBox [ idEntry ] ) );
+            bc15.Expand = false;
+            
+            
             versionEntry = new Label ();
             versionEntry.Xalign = 0;
             versionEntry.WidthChars = 20;
@@ -101,6 +121,7 @@ namespace Dialogs
             VBox vbox = new VBox ();
             vbox.Add ( versionBox );
             vbox.Add ( addressBox );
+            vbox.Add ( idBox );
             vbox.Add ( nickBox );
             vbox.Add ( buttonBox );
             
@@ -112,6 +133,10 @@ namespace Dialogs
             Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ addressBox ] ) );
             bc6.Padding = 6;
             bc6.Expand = false;
+            
+            Box.BoxChild bc14 = ( ( Box.BoxChild ) ( vbox [ idBox ] ) );
+            bc14.Padding = 6;
+            bc14.Expand = false;
             
             Box.BoxChild bc12 = ( ( Box.BoxChild ) ( vbox [ nickBox ] ) );
             bc12.Padding = 6;
@@ -142,6 +167,7 @@ namespace Dialogs
             this.VBox.ShowAll ();
             
             SetAddress ();
+            SetClientId ();
             SetVersion ();
             
         }
@@ -181,15 +207,17 @@ namespace Dialogs
         }
         
         
-        public void SetNick ( string nick )
+        public void SetVersion ()
         {
             
-            if ( nick == "" )
+            string version = Hamachi.GetVersion ();
+            
+            if ( version == "" )
             {
-                nick = "<i>" + TextStrings.unavailable + "</i>";
+                version = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            nickEntry.Markup = nick;
+            versionEntry.Markup = version;
             
         }
         
@@ -209,17 +237,37 @@ namespace Dialogs
         }
         
         
-        public void SetVersion ()
+        public void SetClientId ()
         {
             
-            string version = Hamachi.GetVersion ();
-            
-            if ( version == "" )
+            if ( Hamachi.apiVersion > 1 )
             {
-                version = "<i>" + TextStrings.unavailable + "</i>";
+                string id = Hamachi.GetClientId ();
+                
+                if ( id == "" )
+                {
+                    id = "<i>" + TextStrings.unavailable + "</i>";
+                }
+                
+                idEntry.Markup = id;
+            }
+            else if ( Hamachi.apiVersion == 1 )
+            {
+                idBox.Hide ();
             }
             
-            versionEntry.Markup = version;
+        }
+        
+        
+        public void SetNick ( string nick )
+        {
+            
+            if ( nick == "" )
+            {
+                nick = "<i>" + TextStrings.unavailable + "</i>";
+            }
+            
+            nickEntry.Markup = nick;
             
         }
         

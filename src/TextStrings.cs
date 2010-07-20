@@ -75,9 +75,13 @@ Svenska (sv)
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
     public static string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
     
-    public static string id;
+    public static string yes;
+    public static string no;
+    
     public static string address;
-    public static string client;
+    public static string id;
+    public static string clientId;
+    public static string networkId;
     public static string status;
     public static string tunnel;
     public static string anonymous;
@@ -117,8 +121,12 @@ Svenska (sv)
     public static string unknown;
     public static string unavailable;
     public static string unapproved;
+    public static string locked;
+    public static string approval;
+    public static string manually;
+    public static string automatically;
     
-    public static string accountLabel;
+    public static string clientLabel;
     public static string editLabel;
     public static string viewLabel;
     public static string helpLabel;
@@ -134,7 +142,9 @@ Svenska (sv)
     public static string browseLabel;
     public static string pingLabel;
     public static string vncLabel;
-    public static string copyLabel;
+    public static string copyAddressLabel;
+    public static string copyClientIdLabel;
+    public static string copyNetworkIdLabel;
     public static string approveLabel;
     public static string rejectLabel;
     public static string evictLabel;
@@ -166,6 +176,7 @@ Svenska (sv)
     public static string errorNetworkNotFound;
     public static string errorInvalidPassword;
     public static string errorNetworkFull;
+    public static string errorNetworkLocked;
     public static string errorNetworkAlreadyJoined;
     public static string errorUnknown;
     public static string errorNetworkNameTooShort;
@@ -187,7 +198,8 @@ Svenska (sv)
     public static string failedDeleteNetworkMessage;
     
     public static string failedLeaveNetworkHeading;
-    public static string failedLeaveNetworkMessage;
+    public static string failedLeaveNetworkMessageIsOwner;
+    public static string failedLeaveNetworkMessageDenied;
     
     public static string failedEvictMemberHeading;
     public static string failedEvictMemberMessage;
@@ -276,9 +288,13 @@ Svenska (sv)
         appComments                         = Catalog.GetString ( "A graphical frontend for Hamachi." );
         appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
         
+        yes                                 = Catalog.GetString ( "Yes" );
+        no                                  = Catalog.GetString ( "No" );
+        
         address                             = Catalog.GetString ( "Address:" );
         id                                  = Catalog.GetString ( "ID:" );
-        client                              = Catalog.GetString ( "Client ID:" );
+        clientId                            = Catalog.GetString ( "Client ID:" );
+        networkId                           = Catalog.GetString ( "Network ID:" );
         status                              = Catalog.GetString ( "Status:" );
         tunnel                              = Catalog.GetString ( "Tunnel:" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
@@ -318,8 +334,12 @@ Svenska (sv)
         unknown                             = Catalog.GetString ( "Unknown" );
         unavailable                         = Catalog.GetString ( "Unavailable" );
         unapproved                          = Catalog.GetString ( "Unapproved" );
+        locked                              = Catalog.GetString ( "Locked:" );
+        approval                            = Catalog.GetString ( "Approval:" );
+        manually                            = Catalog.GetString ( "Manually" );
+        automatically                       = Catalog.GetString ( "Automatically" );
         
-        accountLabel                        = Catalog.GetString ( "_Account" );
+        clientLabel                         = Catalog.GetString ( "_Client" );
         editLabel                           = Catalog.GetString ( "_Edit" );
         viewLabel                           = Catalog.GetString ( "_View" );
         helpLabel                           = Catalog.GetString ( "_Help" );
@@ -335,7 +355,9 @@ Svenska (sv)
         browseLabel                         = Catalog.GetString ( "_Browse Shares" );
         pingLabel                           = Catalog.GetString ( "_Ping" );
         vncLabel                            = Catalog.GetString ( "_View Remote Desktop" );
-        copyLabel                           = Catalog.GetString ( "_Copy Address" );
+        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );
+        copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
+        copyNetworkIdLabel                  = Catalog.GetString ( "_Copy Network ID" );
         approveLabel                        = Catalog.GetString ( "_Approve" );
         rejectLabel                         = Catalog.GetString ( "_Reject" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
@@ -367,6 +389,7 @@ Svenska (sv)
         errorNetworkNotFound                = Catalog.GetString ( "Network not found" );
         errorInvalidPassword                = Catalog.GetString ( "Invalid password" );
         errorNetworkFull                    = Catalog.GetString ( "Network is full" );
+        errorNetworkLocked                  = Catalog.GetString ( "Network is locked" );
         errorNetworkAlreadyJoined           = Catalog.GetString ( "Network already joined" );
         errorUnknown                        = Catalog.GetString ( "Unknown error" );
         errorNetworkNameTooShort            = Catalog.GetString ( "Network name too short" );
@@ -388,7 +411,8 @@ Svenska (sv)
         failedDeleteNetworkMessage          = Catalog.GetString ( "You are not the owner of this network." );
         
         failedLeaveNetworkHeading           = Catalog.GetString ( "Failed leaving network '{0}'" );
-        failedLeaveNetworkMessage           = Catalog.GetString ( "You are the owner of this network." );
+        failedLeaveNetworkMessageIsOwner    = Catalog.GetString ( "You are the owner of this network." );
+        failedLeaveNetworkMessageDenied     = Catalog.GetString ( "You don't have permission to leave this network." );
         
         failedEvictMemberHeading            = Catalog.GetString ( "Failed evicting member '{0}'" );
         failedEvictMemberMessage            = Catalog.GetString ( "You are not the owner of network '{0}'." );

@@ -110,6 +110,25 @@ public class Network
     }
     
     
+    public string ReturnOwnerNick ()
+    {
+
+        string nick = "";
+        
+        foreach ( Member member in Members )
+        {
+            
+            if ( member.ClientId == this.OwnerId )
+            {
+                nick = member.Nick;
+            }
+        }
+        
+        return nick;
+        
+    }
+    
+    
     public void DetermineOwnership ()
     {
         
@@ -186,6 +205,15 @@ public class Network
         Hamachi.GoOffline ( this );
         Controller.UpdateConnection (); // Update list
         
+    }
+    
+    
+    public void CopyIdToClipboard ( object o, EventArgs args )
+    {
+    
+        Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
+        clip.Text = this.Id;
+    
     }
     
     

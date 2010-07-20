@@ -292,6 +292,11 @@ namespace Dialogs
                 ShowFailure ( TextStrings.errorNetworkFull );
                 SetMode ( "Normal" );
             }
+            else if ( output.IndexOf ( ".. failed, network is locked" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkLocked );
+                SetMode ( "Normal" );
+            }
             else if ( output.IndexOf ( ".. failed, you are already a member" ) != -1 )
             {
                 ShowFailure ( TextStrings.errorNetworkAlreadyJoined );

@@ -30,10 +30,14 @@ namespace Menus
         private Network network;
         
         private AccelGroup ag;
+        
+        private ImageMenuItem copy;
         private ImageMenuItem goOnline;
         private ImageMenuItem goOffline;
         private ImageMenuItem leave;
         private ImageMenuItem delete;
+        
+        private SeparatorMenuItem separator;
         
         
         public NetworkMenu ()
@@ -41,17 +45,31 @@ namespace Menus
             
             ag = new AccelGroup ();
             
-            goOnline  = new ImageMenuItem ( TextStrings.goOnlineLabel );
+            goOnline = new ImageMenuItem ( TextStrings.goOnlineLabel );
             goOffline = new ImageMenuItem ( TextStrings.goOfflineLabel );
-            leave     = new ImageMenuItem ( TextStrings.leaveLabel );
-            delete    = new ImageMenuItem ( Stock.Delete, ag );
             
-            this.Append ( goOnline );
-            this.Append ( goOffline );
-            this.Append ( leave );
-            this.Append ( delete );
+            copy = new ImageMenuItem ( TextStrings.copyNetworkIdLabel );
+            copy.Image = new Image ( Stock.Copy, IconSize.Menu );
+            
+            separator = new SeparatorMenuItem ();
+            
+            leave = new ImageMenuItem ( TextStrings.leaveLabel );
+            delete = new ImageMenuItem ( Stock.Delete, ag );
+            
+            this.Add ( goOnline );
+            this.Add ( goOffline );
+            this.Add ( leave );
+            this.Add ( delete );
+            this.Add ( separator );
+            this.Add ( copy );
             
             this.ShowAll ();
+            
+            if ( Hamachi.apiVersion == 1 )
+            {
+                separator.Visible = false;
+                copy.Visible = false;
+            }
             
         }
         
@@ -62,20 +80,22 @@ namespace Menus
             /*
              * Remove event handlers from the previous network
              */
-            goOnline.Activated  -= new EventHandler ( network.GoOnline );
-            goOffline.Activated -= new EventHandler ( network.GoOffline );
-            leave.Activated     -= new EventHandler ( network.Leave );
-            delete.Activated    -= new EventHandler ( network.Delete );
+            goOnline.Activated   -= new EventHandler ( network.GoOnline );
+            goOffline.Activated  -= new EventHandler ( network.GoOffline );
+            copy.Activated       -= new EventHandler ( network.CopyIdToClipboard );
+            leave.Activated      -= new EventHandler ( network.Leave );
+            delete.Activated     -= new EventHandler ( network.Delete );
 
             /*
              * Set the new network
              */
             this.network = netw;
             
-            goOnline.Activated  += new EventHandler ( network.GoOnline );
-            goOffline.Activated += new EventHandler ( network.GoOffline );
-            leave.Activated     += new EventHandler ( network.Leave );
-            delete.Activated    += new EventHandler ( network.Delete );
+            goOnline.Activated   += new EventHandler ( network.GoOnline );
+            goOffline.Activated  += new EventHandler ( network.GoOffline );
+            copy.Activated       += new EventHandler ( network.CopyIdToClipboard );
+            leave.Activated      += new EventHandler ( network.Leave );
+            delete.Activated     += new EventHandler ( network.Delete );
             
             if ( network.Status.statusInt == 0 )
             {
@@ -90,18 +110,18 @@ namespace Menus
             
             if ( network.IsOwner == -1 )
             {
-                leave.Visible   = false;
-                delete.Visible = false;
+                leave.Visible     = false;
+                delete.Visible    = false;
             }
-            if ( network.IsOwner == 1 )
+            else if ( network.IsOwner == 1 )
             {
-                leave.Visible   = false;
-                delete.Visible = true;
+                leave.Visible     = false;
+                delete.Visible    = true;
             }
-            if ( network.IsOwner == 0 )
+            else if ( network.IsOwner == 0 )
             {
-                leave.Visible   = true;
-                delete.Visible = false;
+                leave.Visible     = true;
+                delete.Visible    = false;
             }
             
         }

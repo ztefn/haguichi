@@ -31,11 +31,14 @@ namespace Menus
         private Member member;
         private Network network;
         
-        private ImageMenuItem copy;
+        private ImageMenuItem copyId;
+        private ImageMenuItem copyAddress;
         private ImageMenuItem approve;
         private ImageMenuItem reject;
         private ImageMenuItem evict;
-        private SeparatorMenuItem separator;
+        
+        private SeparatorMenuItem separator1;
+        private SeparatorMenuItem separator2;
         
         private ArrayList customItems;
         
@@ -43,26 +46,39 @@ namespace Menus
         public MemberMenu ()
         {
             
-            copy = new ImageMenuItem ( TextStrings.copyLabel );
-            copy.Image = new Image ( Stock.Copy, IconSize.Menu );
+            separator1 = new SeparatorMenuItem ();
+            separator2 = new SeparatorMenuItem ();
             
-            separator = new SeparatorMenuItem ();
             
             approve = new ImageMenuItem ( TextStrings.approveLabel );
-            reject  = new ImageMenuItem ( TextStrings.rejectLabel );
-            evict   = new ImageMenuItem ( TextStrings.evictLabel );
+            reject = new ImageMenuItem ( TextStrings.rejectLabel );
+            
+            copyId = new ImageMenuItem ( TextStrings.copyClientIdLabel );
+            copyId.Image = new Image ( Stock.Copy, IconSize.Menu );
+            
+            copyAddress = new ImageMenuItem ( TextStrings.copyAddressLabel );
+            copyAddress.Image = new Image ( Stock.Copy, IconSize.Menu );
+            
+            evict = new ImageMenuItem ( TextStrings.evictLabel );
             
             customItems = new ArrayList ();
             
             AddCustomCommands ();
             
-            this.Append ( copy );
-            this.Add ( separator );
-            this.Append ( approve );
-            this.Append ( reject );
-            this.Append ( evict );
+            this.Add ( approve );
+            this.Add ( reject );
+            this.Add ( separator1 );
+            this.Add ( copyAddress );
+            this.Add ( copyId );
+            this.Add ( separator2 );
+            this.Add ( evict );
             
             this.ShowAll ();
+            
+            if ( Hamachi.apiVersion == 1 )
+            {
+                copyId.Visible = false;
+            }
             
         }
         
@@ -123,10 +139,11 @@ namespace Menus
             /*
              * Remove event handlers from the previous member
              */
-            copy.Activated    -= new EventHandler ( member.CopyAddressToClipboard );
-            approve.Activated -= new EventHandler ( member.Approve );
-            reject.Activated  -= new EventHandler ( member.Reject );
-            evict.Activated   -= new EventHandler ( member.Evict );
+            copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
+            copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
+            approve.Activated     -= new EventHandler ( member.Approve );
+            reject.Activated      -= new EventHandler ( member.Reject );
+            evict.Activated       -= new EventHandler ( member.Evict );
 
             /*
              * Set the new member
@@ -134,35 +151,38 @@ namespace Menus
             this.member = memb;
             this.network = netw;
             
-            copy.Activated    += new EventHandler ( member.CopyAddressToClipboard );
-            approve.Activated += new EventHandler ( member.Approve );
-            reject.Activated  += new EventHandler ( member.Reject );
-            evict.Activated   += new EventHandler ( member.Evict );
+            copyId.Activated      += new EventHandler ( member.CopyClientIdToClipboard );
+            copyAddress.Activated += new EventHandler ( member.CopyAddressToClipboard );
+            approve.Activated     += new EventHandler ( member.Approve );
+            reject.Activated      += new EventHandler ( member.Reject );
+            evict.Activated       += new EventHandler ( member.Evict );
             
             if ( ( network.IsOwner == 1 ) && ( member.Status.statusString != "Unapproved" ) )
             {
-                separator.Visible = true;
-                evict.Visible = true;
+                separator2.Visible = true;
+                evict.Visible      = true;
             }
             else
             {
-                separator.Visible = false;
-                evict.Visible = false;
+                separator2.Visible = false;
+                evict.Visible      = false;
             }
             
             if ( member.Status.statusString != "Unapproved" )
             {
                 ShowCustomCommands ();
-                copy.Visible    = true;
-                approve.Visible = false;
-                reject.Visible  = false;
+                
+                copyAddress.Visible = true;
+                approve.Visible     = false;
+                reject.Visible      = false;
             }
             else
             {
                 HideCustomCommands ();
-                copy.Visible    = false;
-                approve.Visible = true;
-                reject.Visible  = true;
+                
+                copyAddress.Visible = false;
+                approve.Visible     = true;
+                reject.Visible      = true;
             }
             
         }
