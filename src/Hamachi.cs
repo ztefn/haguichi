@@ -76,6 +76,12 @@ public class Hamachi
             return 1;
         }
         
+        if ( output.IndexOf ( "hamachi-lnx-0.9.9.9" ) != -1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+            return 1;
+        }
+        
         if ( output.IndexOf ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) != -1 )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
@@ -426,6 +432,7 @@ public class Hamachi
         try
         {
             output = Retrieve ( "hamachi", "", "version" );
+            output = output.Replace ( "hamachi-lnx-", "" );
         }
         catch
         {
