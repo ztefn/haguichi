@@ -180,7 +180,11 @@ Svenska (sv)
     public static string errorNetworkAlreadyJoined;
     public static string errorUnknown;
     public static string errorNetworkNameTooShort;
-    public static string errorNetworkNameTaken;    
+    public static string errorNetworkNameTaken;
+    
+    public static string sendRequestLabel;
+    public static string sendRequestTitle;
+    public static string sendRequestMessage;
     
     public static string preferencesTitle;
     public static string informationTitle;
@@ -395,6 +399,10 @@ Svenska (sv)
         errorNetworkNameTooShort            = Catalog.GetString ( "Network name too short" );
         errorNetworkNameTaken               = Catalog.GetString ( "Network name is already taken" );
         
+        sendRequestLabel                    = Catalog.GetString ( "_Send Request" );
+        sendRequestTitle                    = Catalog.GetString ( "Send join request?" );
+        sendRequestMessage                  = Catalog.GetString ( "The network requires manual approval of new members by its owner.\nWould you like to send a join request?" );
+        
         preferencesTitle                    = Catalog.GetString ( "Preferences" );
         informationTitle                    = Catalog.GetString ( "Information" );
         
@@ -481,7 +489,7 @@ Svenska (sv)
         
         chooseIconTip                       = Catalog.GetString ( "Click to choose an icon" );
         chooseIconTitle                     = Catalog.GetString ( "Choose Icon" );
-        noIconLabel                         = Catalog.GetString ( "_No icon" );
+        noIconLabel                         = Catalog.GetString ( "_No Icon" );
         
         isDefault                           = Catalog.GetString ( "Default" );
         defaultLabel                        = Catalog.GetString ( "_Default" );

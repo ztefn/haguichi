@@ -654,6 +654,17 @@ public class Hamachi
     }
     
     
+    public static string SendJoinRequest ( string name, string password )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "do-join '" + name + "' '" + password + "'" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SendJoinRequest", output );
+        
+        return output;
+        
+    }
+    
+    
     public static string JoinNetwork ( string name, string password )
     {
         

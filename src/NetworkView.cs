@@ -222,7 +222,7 @@ public class NetworkView : TreeView
                 }
                 else if ( ( network.OwnerId != "" ) && ( ownerNick != "" ) )
                 {
-                    ownerString = String.Format ( "\n{0} <i>{1} ({2})</i>", TextStrings.owner, network.OwnerId, ownerNick );
+                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, ownerNick );
                 }
                 else if ( network.OwnerId != "" )
                 {
@@ -554,27 +554,19 @@ public class NetworkView : TreeView
         
         Network network = ( Network ) model.GetValue ( iter, networkColumn );
         Member member = ( Member ) model.GetValue ( iter, memberColumn );
-        
-        int memberCount;
-        int memberOnlineCount;
-        network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
-        
-        string name;
-        string address = string.Empty;
-        string statusText;
-        int    statusInt;
 
         if ( IsNetwork ( model, iter ) )
         {
         
-            name = GLib.Markup.EscapeText ( network.Name );
+            string name = GLib.Markup.EscapeText ( network.Name );
             name = name.Replace ( "\n", "" );
             name = name.Replace ( "\r", "" );
             name = name.Replace ( "\t", "" );
             name = name.Replace ( "\b", "" );
             
-            statusText = network.Status.statusString;
-            statusInt  = network.Status.statusInt;
+            int memberCount;
+            int memberOnlineCount;
+            network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
             
             string template = networkTemplate;
             template = template.Replace ( "%ID", "{0}" );
@@ -589,9 +581,9 @@ public class NetworkView : TreeView
                 template += " ✩";   
             }
             
-            textCell.Markup = String.Format ( template, network.Id, name, statusText, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
+            textCell.Markup = String.Format ( template, network.Id, name, network.Status.statusString, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
             
-            if ( statusInt == 0 )
+            if ( network.Status.statusInt == 0 )
             {
                 textCell.ForegroundGdk = lightTxtColor;
             }
@@ -603,31 +595,28 @@ public class NetworkView : TreeView
         }
         else
         {
-        
-            name = GLib.Markup.EscapeText ( member.Nick );
+            
+            string name = GLib.Markup.EscapeText ( member.Nick );
             name = name.Replace ( "\n", "" );
             name = name.Replace ( "\r", "" );
             name = name.Replace ( "\t", "" );
             name = name.Replace ( "\b", "" );
             
-            address    = member.Address;
-            statusText = member.Status.statusString;
-            statusInt  = member.Status.statusInt;
-            
             string template = memberTemplate;
-            template = template.Replace ( "%N", "{0}" );
-            template = template.Replace ( "%A", "{1}" );
-            template = template.Replace ( "%S", "{2}" );
-            template = template.Replace ( "<br>", "{3}" );
+            template = template.Replace ( "%ID", "{0}" );
+            template = template.Replace ( "%N", "{1}" );
+            template = template.Replace ( "%A", "{2}" );
+            template = template.Replace ( "%S", "{3}" );
+            template = template.Replace ( "<br>", "{4}" );
             
             if ( network.OwnerId == member.ClientId )
             {
                 template += " ✩";   
             }
             
-            textCell.Markup = String.Format ( template, name, address, statusText, "\n" );
-
-            if ( statusInt == 0 )
+            textCell.Markup = String.Format ( template, member.ClientId, name, member.Address, member.Status.statusString, "\n" );
+            
+            if ( member.Status.statusInt == 0 )
             {
                 textCell.ForegroundGdk = lightTxtColor;
             }

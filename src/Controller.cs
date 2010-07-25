@@ -216,14 +216,14 @@ public class Controller
                     Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Asking before running tuncfg." );
                     Dialogs.RunTunCfg dlg = new Dialogs.RunTunCfg ();
                     
-                    if ( dlg.response == "Ok" ) {
+                    if ( dlg.ResponseText == "Ok" )
+                    {
                         Hamachi.TunCfg ();
                     }
                     else
                     {
                         return;
                     }
-                    
                 }
                 else
                 {

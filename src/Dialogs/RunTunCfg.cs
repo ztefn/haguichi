@@ -27,9 +27,6 @@ namespace Dialogs
     public class RunTunCfg : Dialogs.Base
     {
         
-        public string response;
-        
-        
         public RunTunCfg () : base ( "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
         {
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
@@ -49,16 +46,9 @@ namespace Dialogs
             bc.Padding = 6;
             
             this.SkipTaskbarHint = true;
-            this.Response += ResponseHandler;
            
             this.Run ();
             this.Destroy ();
-        }
-        
-        
-        public void ResponseHandler ( object o, ResponseArgs args )
-        {
-            response = args.ResponseId.ToString ();
         }
         
         

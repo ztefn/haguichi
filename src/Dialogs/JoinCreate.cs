@@ -302,6 +302,17 @@ namespace Dialogs
                 ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
                 SetMode ( "Normal" );
             }
+            else if ( output.IndexOf ( ".. failed, manual approval required" ) != -1 )
+            {
+                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
+                
+                SetMode ( "Normal" );
+                
+                if ( dlg.ResponseText == "Ok" )
+                {
+                    Dismiss ();
+                }
+            }
             else if ( output.IndexOf ( ".. failed" ) != -1 )
             {
                 ShowFailure ( TextStrings.errorUnknown );

@@ -24,14 +24,21 @@ using Gtk;
 namespace Dialogs
 {
 
-    public class NotConfigured : Dialogs.Base
+    public class SendRequest : Dialogs.Base
     {
 
-        public NotConfigured ( string header, string message, string icon ) : base ( "", header, message, icon )
+        private string Name;
+        private string Password;
+        
+        
+        public SendRequest ( string header, string message, string icon, string name, string password ) : base ( "", header, message, icon )
         {
             
+            this.Name      = name;
+            this.Password  = password;
+            
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
-            this.AddButton ( TextStrings.configureLabel, ResponseType.Ok );
+            this.AddButton ( TextStrings.sendRequestLabel, ResponseType.Ok );
             
             this.SkipTaskbarHint = true;
             
@@ -47,14 +54,7 @@ namespace Dialogs
             
             if ( args.ResponseId == ResponseType.Ok )
             {
-                string output = Hamachi.Init ();
-                
-                if ( output.IndexOf ( "Authentication information has been created." ) != -1 )
-                {
-                    Config.Client.Set ( Config.Settings.HamachiDataPath, Config.Settings.DefaultHamachiDataPath );   
-                    Controller.Init ();
-                }
-                
+                string output = Hamachi.SendJoinRequest ( this.Name, this.Password );
             }
             
         }

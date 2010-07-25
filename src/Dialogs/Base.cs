@@ -27,6 +27,7 @@ namespace Dialogs
     public class Base : Dialog
     {
         
+        public string ResponseText;
         public VBox Contents;
         
         
@@ -38,8 +39,8 @@ namespace Dialogs
             this.HasSeparator = false;
             this.Resizable = false;
             this.BorderWidth = 6;
-
-
+            this.Response += SetResponseText;
+            
             Image img = new Image ( "", IconSize.Dialog );
             img.Yalign = 0;
             img.Xpad = 3;
@@ -108,6 +109,12 @@ namespace Dialogs
         {
             this.Contents.Add ( widget );   
             widget.Show ();
+        }
+        
+        
+        public void SetResponseText ( object o, ResponseArgs args )
+        {
+            this.ResponseText = args.ResponseId.ToString ();
         }
 
     }
