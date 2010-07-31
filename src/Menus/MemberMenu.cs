@@ -136,27 +136,18 @@ namespace Menus
         public void SetMember ( Member memb, Network netw )
         {
             
-            /*
-             * Remove event handlers from the previous member
-             */
+            /* Remove event handlers from the previous member */
             copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
             copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
             approve.Activated     -= new EventHandler ( member.Approve );
             reject.Activated      -= new EventHandler ( member.Reject );
             evict.Activated       -= new EventHandler ( member.Evict );
 
-            /*
-             * Set the new member
-             */
+            /* Set the new member */
             this.member = memb;
             this.network = netw;
             
-            copyId.Activated      += new EventHandler ( member.CopyClientIdToClipboard );
-            copyAddress.Activated += new EventHandler ( member.CopyAddressToClipboard );
-            approve.Activated     += new EventHandler ( member.Approve );
-            reject.Activated      += new EventHandler ( member.Reject );
-            evict.Activated       += new EventHandler ( member.Evict );
-            
+            /* Set menu items to show */
             if ( ( network.IsOwner == 1 ) && ( member.Status.statusString != "Unapproved" ) )
             {
                 separator2.Visible = true;
@@ -184,6 +175,13 @@ namespace Menus
                 approve.Visible     = true;
                 reject.Visible      = true;
             }
+            
+            /* Add event handlers for the new member */
+            copyId.Activated      += new EventHandler ( member.CopyClientIdToClipboard );
+            copyAddress.Activated += new EventHandler ( member.CopyAddressToClipboard );
+            approve.Activated     += new EventHandler ( member.Approve );
+            reject.Activated      += new EventHandler ( member.Reject );
+            evict.Activated       += new EventHandler ( member.Evict );
             
         }
         

@@ -135,19 +135,23 @@ Svenska (sv)
     public static string createNetworkLabel;
     public static string joinNetworkLabel;
     
-    public static string leaveLabel;
     public static string goOnlineLabel;
     public static string goOfflineLabel;
+    public static string leaveLabel;
+    public static string lockedLabel;
+    public static string approvalLabel;
+    public static string autoLabel;
+    public static string manualLabel;
+    public static string copyNetworkIdLabel;
     
     public static string browseLabel;
     public static string pingLabel;
     public static string vncLabel;
-    public static string copyAddressLabel;
-    public static string copyClientIdLabel;
-    public static string copyNetworkIdLabel;
     public static string approveLabel;
     public static string rejectLabel;
     public static string evictLabel;
+    public static string copyAddressLabel;
+    public static string copyClientIdLabel;
 
     public static string nickLabel;
     public static string nameLabel;
@@ -352,19 +356,23 @@ Svenska (sv)
         createNetworkLabel                  = Catalog.GetString ( "_Create Network..." );
         joinNetworkLabel                    = Catalog.GetString ( "_Join Network..." );
         
+        goOnlineLabel                       = Catalog.GetString ( "_Go Online" );
+        goOfflineLabel                      = Catalog.GetString ( "_Go Offline" );
         leaveLabel                          = Catalog.GetString ( "_Leave" );
-        goOnlineLabel                       = Catalog.GetString ( "Go O_nline" );
-        goOfflineLabel                      = Catalog.GetString ( "Go O_ffline" );
+        lockedLabel                         = Catalog.GetString ( "_Locked" );
+        approvalLabel                       = Catalog.GetString ( "_New Member Approval" );
+        autoLabel                           = Catalog.GetString ( "_Automatically" );
+        manualLabel                         = Catalog.GetString ( "_Manually" );
+        copyNetworkIdLabel                  = Catalog.GetString ( "_Copy Network ID" );
         
         browseLabel                         = Catalog.GetString ( "_Browse Shares" );
         pingLabel                           = Catalog.GetString ( "_Ping" );
         vncLabel                            = Catalog.GetString ( "_View Remote Desktop" );
-        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );
-        copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
-        copyNetworkIdLabel                  = Catalog.GetString ( "_Copy Network ID" );
         approveLabel                        = Catalog.GetString ( "_Approve" );
         rejectLabel                         = Catalog.GetString ( "_Reject" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
+        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );
+        copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
         
         nickLabel                           = Catalog.GetString ( "_Nickname:" );
         nameLabel                           = Catalog.GetString ( "_Name:" );
@@ -401,7 +409,7 @@ Svenska (sv)
         
         sendRequestLabel                    = Catalog.GetString ( "_Send Request" );
         sendRequestTitle                    = Catalog.GetString ( "Send join request?" );
-        sendRequestMessage                  = Catalog.GetString ( "The network requires manual approval of new members by its owner.\nWould you like to send a join request?" );
+        sendRequestMessage                  = Catalog.GetString ( "This network requires manual approval of new members by the owner.\nWould you like to send a join request?" );
         
         preferencesTitle                    = Catalog.GetString ( "Preferences" );
         informationTitle                    = Catalog.GetString ( "Information" );

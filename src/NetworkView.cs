@@ -19,7 +19,6 @@
 
 using System;
 using System.Collections;
-using System.Threading;
 using Gtk;
 
 
@@ -364,8 +363,7 @@ public class NetworkView : TreeView
             AddMember ( network, member );
         }
         
-        Thread updateThread = new Thread ( network.DetermineOwnership );
-        updateThread.Start();
+        network.DetermineOwnership ();
         
         CollapseOrExpandNetwork ( network );
         
@@ -642,9 +640,8 @@ public class NetworkView : TreeView
     {
     
         TreeIter iter;
-        TreeModel model;
         
-        if ( this.Selection.GetSelected ( out model, out iter ) )
+        if ( this.Selection.GetSelected ( out iter ) )
         {
             
             lastPath = sortedStore.GetPath ( iter );

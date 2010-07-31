@@ -68,7 +68,9 @@ public class GlobalEvents
     
     public static void RunTunCfg ( object obj, EventArgs args )
     {
+        
         Hamachi.TunCfg ();
+        
     }
     
     
@@ -80,44 +82,56 @@ public class GlobalEvents
         Haguichi.informationWindow.SetVersion ();
         
         UpdateCycle ();
+        
     }
     
     
     private static void UpdateCycle ()
     {
+        
         uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
         
+        Controller.continueUpdate = true;
+        
         GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.UpdateConnection ) );
+        
     }
     
     
     
     public static void WaitForInternetCycle ()
     {
+        
         uint interval = ( uint ) ( 1000 );
         
         GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.WaitForInternet ) );
+        
     }
     
     
     public static void ConnectionLost ()
     {
+        
         ConnectionStopped ();
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
         {
             WaitForInternetCycle ();
         }
+        
     }
     
     
     public static void ConnectionStopped ()
     {
         
+        /* Stop update interval */
+        Controller.continueUpdate = false;
+        
         Haguichi.connection.ClearNetworks ();
         Haguichi.connection.Status = new Status ( " " );
         
-        int status = Controller.StatusCheck ();
+        int status = Controller.lastStatus;
         
         if ( status >= 2 )
         {

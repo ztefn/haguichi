@@ -31,13 +31,26 @@ namespace Menus
         
         private AccelGroup ag;
         
-        private ImageMenuItem copy;
         private ImageMenuItem goOnline;
         private ImageMenuItem goOffline;
         private ImageMenuItem leave;
         private ImageMenuItem delete;
         
-        private SeparatorMenuItem separator;
+        private SeparatorMenuItem separator1;
+        
+        private CheckMenuItem locked;
+        
+        private ImageMenuItem approve;
+        
+        private Menu approveMenu;
+        
+        private RadioMenuItem approveGroup;
+        private RadioMenuItem auto;
+        private RadioMenuItem manual;
+        
+        private SeparatorMenuItem separator2;
+        
+        private ImageMenuItem copy;
         
         
         public NetworkMenu ()
@@ -51,24 +64,73 @@ namespace Menus
             copy = new ImageMenuItem ( TextStrings.copyNetworkIdLabel );
             copy.Image = new Image ( Stock.Copy, IconSize.Menu );
             
-            separator = new SeparatorMenuItem ();
-            
             leave = new ImageMenuItem ( TextStrings.leaveLabel );
             delete = new ImageMenuItem ( Stock.Delete, ag );
+            
+            separator1 = new SeparatorMenuItem ();
+            
+            locked = new CheckMenuItem ( TextStrings.lockedLabel );
+            
+            approveGroup = new RadioMenuItem ( "approve" );
+            
+            auto = new RadioMenuItem ( approveGroup, TextStrings.autoLabel );
+            manual = new RadioMenuItem ( approveGroup, TextStrings.manualLabel );
+            
+            approveMenu = new Menu ();
+            approveMenu.Add ( auto );
+            approveMenu.Add ( manual );
+            
+            approve = new ImageMenuItem ( TextStrings.approvalLabel );
+            approve.Submenu = approveMenu;
+            
+            separator2 = new SeparatorMenuItem ();
             
             this.Add ( goOnline );
             this.Add ( goOffline );
             this.Add ( leave );
             this.Add ( delete );
-            this.Add ( separator );
+            this.Add ( separator1 );
+            this.Add ( locked );
+            this.Add ( approve );
+            this.Add ( separator2 );
             this.Add ( copy );
             
             this.ShowAll ();
             
             if ( Hamachi.apiVersion == 1 )
             {
-                separator.Visible = false;
+                separator1.Visible = false;
                 copy.Visible = false;
+            }
+            
+        }
+        
+        
+        private void ChangeLock ( object o, EventArgs args )
+        {
+            
+            if ( locked.Active )
+            {
+                this.network.SetLock ( "locked" );
+            }
+            else
+            {
+                this.network.SetLock ( "unlocked" );
+            }
+            
+        }
+        
+        
+        private void ChangeApproval ( object o, EventArgs args )
+        {
+            
+            if ( manual.Active )
+            {
+                this.network.SetApproval ( "manual" );
+            }
+            else
+            {
+                this.network.SetApproval ( "auto" );
             }
             
         }
@@ -77,26 +139,21 @@ namespace Menus
         public void SetNetwork ( Network netw )
         {
             
-            /*
-             * Remove event handlers from the previous network
-             */
+            /* Remove event handlers from the previous network */
             goOnline.Activated   -= new EventHandler ( network.GoOnline );
             goOffline.Activated  -= new EventHandler ( network.GoOffline );
             copy.Activated       -= new EventHandler ( network.CopyIdToClipboard );
             leave.Activated      -= new EventHandler ( network.Leave );
             delete.Activated     -= new EventHandler ( network.Delete );
+            locked.Toggled       -= new EventHandler ( ChangeLock );
+            auto.Toggled         -= new EventHandler ( ChangeApproval );
 
-            /*
-             * Set the new network
-             */
+            
+            /* Set the new network */
             this.network = netw;
             
-            goOnline.Activated   += new EventHandler ( network.GoOnline );
-            goOffline.Activated  += new EventHandler ( network.GoOffline );
-            copy.Activated       += new EventHandler ( network.CopyIdToClipboard );
-            leave.Activated      += new EventHandler ( network.Leave );
-            delete.Activated     += new EventHandler ( network.Delete );
             
+            /* Set menu items to show */
             if ( network.Status.statusInt == 0 )
             {
                 goOnline.Visible  = true;
@@ -123,6 +180,60 @@ namespace Menus
                 leave.Visible     = true;
                 delete.Visible    = false;
             }
+            
+            if ( ( network.Lock != "" ) || ( network.Approve != "" ) )
+            {
+                separator2.Visible = true;
+            }
+            else
+            {
+                separator2.Visible = false;
+            }
+            
+            if ( network.Lock != "" )
+            {
+                locked.Visible    = true;
+                
+                if ( network.Lock == "locked" )
+                {
+                    locked.Active = true;
+                }
+                else
+                {
+                    locked.Active = false;
+                }
+            }
+            else
+            {
+                locked.Visible    = false;
+            }
+            
+            if ( network.Approve != "" )
+            {
+                approve.Visible   = true;
+                
+                if ( network.Approve == "manual" )
+                {
+                    manual.Active = true;
+                }
+                else
+                {
+                    auto.Active   = true;
+                }
+            }
+            else
+            {
+                approve.Visible   = false;
+            }
+            
+            /* Add event handlers for the new network */
+            goOnline.Activated   += new EventHandler ( network.GoOnline );
+            goOffline.Activated  += new EventHandler ( network.GoOffline );
+            copy.Activated       += new EventHandler ( network.CopyIdToClipboard );
+            leave.Activated      += new EventHandler ( network.Leave );
+            delete.Activated     += new EventHandler ( network.Delete );
+            locked.Toggled       += new EventHandler ( ChangeLock );
+            auto.Toggled         += new EventHandler ( ChangeApproval );
             
         }
         

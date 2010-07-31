@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections;
+using System.ComponentModel;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
 using Gtk;
@@ -27,6 +28,12 @@ using Gtk;
 public class Controller
 {
     
+    public static bool continueUpdate;
+    public static int lastStatus;
+    
+    private static ArrayList oNetworksList;
+    private static ArrayList nNetworksList;
+    
     private static Gdk.Pixbuf notifyIcon;
     
     
@@ -34,6 +41,9 @@ public class Controller
     {
         
         notifyIcon = MainWindow.appIcons[4];
+        
+        oNetworksList = new ArrayList ();
+        nNetworksList = new ArrayList ();
         
         GlobalEvents.UpdateNick ();
         
@@ -375,26 +385,62 @@ public class Controller
     public static bool UpdateConnection ()
     {
         
+        if ( !continueUpdate )
+        {
+            return false;
+        }
+        
         Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Retrieving connection status..." );
         
-        int status = StatusCheck ();
+        BackgroundWorker worker = new BackgroundWorker {};
+        worker.DoWork += UpdateConnectionThread;
+        worker.RunWorkerAsync ();
         
-        if ( HasInternetConnection () &&
-             ( Haguichi.connection.Status.statusInt == 1 ) &&
-             ( status >= 6 ) ) // We're connected allright
+        /*
+         * Wait a second for the thread to finish then continue in the main thread,
+         * because GtkTreeView doesn't get updated when the GtkTreeModel is changed async... :(
+         */
+        GLib.Timeout.Add ( 1000, new GLib.TimeoutHandler ( UpdateList ) );
+        
+        return true;
+        
+    }
+    
+    
+    private static void UpdateConnectionThread ( object o, DoWorkEventArgs args )
+    {
+     
+        lastStatus = StatusCheck ();
+    
+        if ( ( HasInternetConnection () ) &&
+             ( lastStatus >= 6 ) )
         {
-        
-            Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Still connected, updating list..." );
             
             if ( Hamachi.apiVersion == 1 )
             {
-                Hamachi.GetNicks (); // Update nicks
+                 // Update nicks
+                Hamachi.GetNicks ();
             }
             
-            ArrayList oNetworksList = ( ArrayList ) Haguichi.connection.Networks.Clone (); // Cloning to prevent exception (InvalidOperationException: List has changed)
-            ArrayList nNetworksList = Hamachi.ReturnList ();
+            nNetworksList = Hamachi.ReturnList ();
+        }
+        
+    }
+    
+    
+    private static bool UpdateList ()
+    {
+        
+        if ( ( HasInternetConnection () ) &&
+             ( Haguichi.connection.Status.statusInt == 1 ) &&
+             ( lastStatus >= 6 ) ) // We're connected allright
+        {
+        
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Connected, updating list." );
             
-
+            oNetworksList = ( ArrayList ) Haguichi.connection.Networks.Clone (); // Cloning to prevent exception (InvalidOperationException: List has changed)
+            
+            
             Hashtable oNetworksHash = new Hashtable ();
             
             foreach ( Network oNetwork in oNetworksList )
@@ -440,7 +486,7 @@ public class Controller
                     ArrayList oMembersList = ( ArrayList ) oNetwork.Members.Clone (); // Cloning to prevent exception (InvalidOperationException: List has changed)
                     ArrayList nMembersList = nNetwork.Members;
                     
-
+    
                     Hashtable oMembersHash = new Hashtable ();
                     
                     foreach ( Member oMember in oMembersList )
@@ -528,32 +574,28 @@ public class Controller
                     MainWindow.networkView.AddNetwork ( nNetwork );
                 }
             }
-            
-             /* Continue update interval */
-            return true;
+
+            /* Continue update interval */
+            continueUpdate = true;
             
         }
         else if ( ( Haguichi.connection.Status.statusInt == 1 ) &&
-                  ( ( status < 6 ) || !HasInternetConnection () ) ) // We're not connected, but should be
+                  ( ( lastStatus < 6 ) || !HasInternetConnection () ) ) // We're not connected, but should be
         {
             
-            Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Connection lost." );
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Connection lost." );
             
             GlobalEvents.ConnectionLost ();
-            
-            /* Stop update interval */
-            return false;
             
         }
         else // Connection already stopped
         {
             
-            Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Disconnected, shall not update list." );
-            
-            /* Stop update interval */
-            return false;
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Disconnected, shall not update list." );
             
         }
+        
+        return false; // Stop calling timeout handler
         
     }
     

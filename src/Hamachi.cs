@@ -278,38 +278,46 @@ public class Hamachi
     }
     
     
-    public static void GoOnline ( string name )
+    public static string GoOnline ( string name )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "go-online '" + name + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
         
+        return output;
+        
     }
     
     
-    public static void GoOnline ( Network network )
+    public static string GoOnline ( Network network )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "go-online '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
         
+        return output;
+        
     }
     
     
-    public static void GoOffline ( string name )
+    public static string GoOffline ( string name )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "go-offline '" + name + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
         
+        return output;
+        
     }
     
     
-    public static void GoOffline ( Network network )
+    public static string GoOffline ( Network network )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "go-offline '" + network.Id + "'" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
+        
+        return output;
         
     }
     
@@ -675,6 +683,27 @@ public class Hamachi
         
     }
     
+    
+    public static string SetAccess ( string networkId, string locking, string approve )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "set-access '" + networkId + "' '" + locking + "' '" + approve + "'" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetAccess", output );
+        
+        return output;
+        
+    }
+    
+    
+    public static string SetPassword ( string networkId, string password )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "set-pass '" + networkId + "' '" + password + "'" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetPassword", output );
+        
+        return output;
+        
+    }
     
     
     public static string CreateNetwork ( string name, string password )

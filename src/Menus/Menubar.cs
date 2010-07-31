@@ -133,15 +133,14 @@ namespace Menus
             {
                 sortByName.Active = true;
             }
-            sortByName.Activated += ChangeSortBy;
-            sortByStatus.Activated += ChangeSortBy;
+            sortByName.Toggled += ChangeSortBy;
             
             viewMenu = new Menu ();
             viewMenu.Append ( showOfflineMembers );
-            viewMenu.Add    ( new SeparatorMenuItem() );
+            viewMenu.Add    ( new SeparatorMenuItem () );
             viewMenu.Append ( sortByName );
             viewMenu.Append ( sortByStatus );
-            viewMenu.Add    ( new SeparatorMenuItem() );
+            viewMenu.Add    ( new SeparatorMenuItem () );
             viewMenu.Append ( showStatusbar );
             
             viewMenuItem = new MenuItem ( TextStrings.viewLabel );

@@ -19,6 +19,7 @@
 
 using System;
 using System.Collections;
+using System.ComponentModel;
 using Gtk;
 
 
@@ -36,6 +37,8 @@ public class Network
     
     public string NameSortString;
     public string StatusSortString;
+    
+    private BackgroundWorker worker;
     
     
     public Network ( Status status, string id, string name )
@@ -101,7 +104,8 @@ public class Network
         {
             totalCount ++;
                 
-            if ( member.Status.statusInt != 0 )
+            if ( ( member.Status.statusInt > 0 ) &&
+                 ( member.Status.statusInt < 3 ) )
             {
                 onlineCount ++;
             }
@@ -130,6 +134,17 @@ public class Network
     
     
     public void DetermineOwnership ()
+    {
+        
+        worker = new BackgroundWorker {};
+
+        worker.DoWork += DetermineOwnershipThread;
+        worker.RunWorkerAsync ();
+        
+    }
+    
+    
+    private void DetermineOwnershipThread ( object sender, DoWorkEventArgs e )
     {
         
         string output = "";
@@ -193,8 +208,20 @@ public class Network
     public void GoOnline ( object o, EventArgs args )
     {
         
+        worker = new BackgroundWorker {};
+        worker.DoWork += GoOnlineThread;
+        worker.RunWorkerAsync ();
+        
+        this.Status = new Status ( "*" );
+        MainWindow.networkView.UpdateNetwork ( this );
+        
+    }
+    
+    
+    private void GoOnlineThread ( object o, DoWorkEventArgs args )
+    {
+        
         Hamachi.GoOnline ( this );
-        Controller.UpdateConnection (); // Update list
         
     }
     
@@ -202,8 +229,74 @@ public class Network
     public void GoOffline ( object o, EventArgs args )
     {
         
+        worker = new BackgroundWorker {};
+        worker.DoWork += GoOfflineThread;
+        worker.RunWorkerAsync ();
+        
+        this.Status = new Status ( " " );
+        MainWindow.networkView.UpdateNetwork ( this );
+        
+    }
+    
+    
+    private void GoOfflineThread ( object o, DoWorkEventArgs args )
+    {
+        
         Hamachi.GoOffline ( this );
-        Controller.UpdateConnection (); // Update list
+        
+    }
+    
+        
+    public void SetLock ( string locked )
+    {
+        
+        this.Lock = locked;
+        
+        worker = new BackgroundWorker {};
+        worker.DoWork += SetLockThread;
+        worker.RunWorkerAsync ();
+        
+    }
+    
+    
+    private void SetLockThread ( object o, DoWorkEventArgs args )
+    {
+        
+        string locked = "unlock";
+        
+        if ( this.Lock == "locked" )
+        {
+            locked = "lock";
+        }
+        
+        Hamachi.SetAccess ( this.Id, locked, this.Approve );
+        
+    }
+    
+    
+    public void SetApproval ( string approval )
+    {
+        
+        this.Approve = approval;
+        
+        worker = new BackgroundWorker {};
+        worker.DoWork += SetApprovalThread;
+        worker.RunWorkerAsync ();
+        
+    }
+    
+    
+    private void SetApprovalThread ( object o, DoWorkEventArgs args )
+    {
+        
+        string locked = "unlock";
+        
+        if ( this.Lock == "locked" )
+        {
+            locked = "lock";
+        }
+        
+        Hamachi.SetAccess ( this.Id, locked, this.Approve );
         
     }
     
