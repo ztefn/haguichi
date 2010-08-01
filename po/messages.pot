@@ -14,10 +14,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr ""
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:299
 msgid "A graphical frontend for Hamachi."
 msgstr ""
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:300
 msgid "Join and create local networks over the Internet"
 msgstr ""
@@ -482,6 +484,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:444
 msgid "Desktop"
 msgstr ""
