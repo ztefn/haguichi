@@ -39,11 +39,10 @@ namespace Menus
         private SeparatorMenuItem separator1;
         
         private CheckMenuItem locked;
-        
         private ImageMenuItem approve;
+        private ImageMenuItem password;
         
         private Menu approveMenu;
-        
         private RadioMenuItem approveGroup;
         private RadioMenuItem auto;
         private RadioMenuItem manual;
@@ -83,6 +82,8 @@ namespace Menus
             approve = new ImageMenuItem ( TextStrings.approvalLabel );
             approve.Submenu = approveMenu;
             
+            password = new ImageMenuItem ( TextStrings.changePasswordLabel );
+            
             separator2 = new SeparatorMenuItem ();
             
             this.Add ( goOnline );
@@ -92,6 +93,7 @@ namespace Menus
             this.Add ( separator1 );
             this.Add ( locked );
             this.Add ( approve );
+            this.Add ( password );
             this.Add ( separator2 );
             this.Add ( copy );
             
@@ -147,6 +149,7 @@ namespace Menus
             delete.Activated     -= new EventHandler ( network.Delete );
             locked.Toggled       -= new EventHandler ( ChangeLock );
             auto.Toggled         -= new EventHandler ( ChangeApproval );
+            password.Activated   -= new EventHandler ( network.ChangePassword );
 
             
             /* Set the new network */
@@ -169,16 +172,19 @@ namespace Menus
             {
                 leave.Visible     = false;
                 delete.Visible    = false;
+                password.Visible  = false;
             }
             else if ( network.IsOwner == 1 )
             {
                 leave.Visible     = false;
                 delete.Visible    = true;
+                password.Visible  = true;
             }
             else if ( network.IsOwner == 0 )
             {
                 leave.Visible     = true;
                 delete.Visible    = false;
+                password.Visible  = false;
             }
             
             if ( ( network.Lock != "" ) || ( network.Approve != "" ) )
@@ -234,6 +240,7 @@ namespace Menus
             delete.Activated     += new EventHandler ( network.Delete );
             locked.Toggled       += new EventHandler ( ChangeLock );
             auto.Toggled         += new EventHandler ( ChangeApproval );
+            password.Activated   += new EventHandler ( network.ChangePassword );
             
         }
         

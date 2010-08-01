@@ -24,23 +24,28 @@ using Gtk;
 namespace Dialogs
 {
 
-    public class ChangeNick : Dialog
+    public class ChangePassword : Dialog
     {
+        
+        private Network Network;
         
         private Label heading;
         
-        private Label nickLabel;
-        private Entry nickEntry;
-        private HBox  nickBox;
+        private Label passwordLabel;
+        private Entry passwordEntry;
+        private HBox  passwordBox;
         
         private Button cancelBut;
         private Button changeBut;
         
         
-        public ChangeNick ( string title ) : base ()
+        public ChangePassword ( Network network ) : base ()
         {
             
-            this.Title = title;
+            this.Network = network;
+            
+            this.Title = TextStrings.changePasswordTitle;
+            this.Modal = true;
             this.HasSeparator = false;
             this.Resizable = false;
             this.SkipTaskbarHint = true;
@@ -51,7 +56,7 @@ namespace Dialogs
             
             
             heading = new Label ();
-            heading.Markup = String.Format ( TextStrings.changeNickMessage );
+            heading.Markup = String.Format ( TextStrings.changePasswordMessage );
             heading.Xalign = 0;
             heading.Ypad = 6;
 
@@ -65,7 +70,7 @@ namespace Dialogs
             changeBut = new Button ( Stock.Edit ); // Using an stock button to trigger underscore interpretation within the label text, seems a GTK bug or misdesign
             changeBut.CanDefault = true;
             changeBut.Label = TextStrings.changeLabel;
-            changeBut.Clicked += GoChangeNick;
+            changeBut.Clicked += GoChangePassword;
             
             HButtonBox buttonBox = new HButtonBox ();
             buttonBox.Add ( cancelBut );
@@ -73,26 +78,27 @@ namespace Dialogs
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
-            nickEntry = new Entry ();
-            nickEntry.ActivatesDefault = true;
-            nickEntry.WidthChars = 30;
-            nickEntry.MaxLength = 64;
-            nickLabel = new Label ( TextStrings.nickLabel + "  " );
-            nickLabel.Xalign = 0;
-            nickLabel.MnemonicWidget = nickEntry;
+            passwordEntry = new Entry ();
+            passwordEntry.ActivatesDefault = true;
+            passwordEntry.WidthChars = 35;
+            passwordEntry.MaxLength = 40;
+            passwordEntry.Visibility = false;
+            passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
+            passwordLabel.Xalign = 0;
+            passwordLabel.MnemonicWidget = passwordEntry;
 
             
-            nickBox = new HBox ();
-            nickBox.Add ( nickLabel );
-            nickBox.Add ( nickEntry );
+            passwordBox = new HBox ();
+            passwordBox.Add ( passwordLabel );
+            passwordBox.Add ( passwordEntry );
             
-            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( nickBox [ nickEntry ] ) );
+            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( passwordBox [ passwordEntry ] ) );
             bc5.Expand = false;
             
             
             VBox vbox = new VBox ();
             vbox.Add ( headBox );
-            vbox.Add ( nickBox );
+            vbox.Add ( passwordBox );
             vbox.Add ( buttonBox );
             
             
@@ -103,7 +109,7 @@ namespace Dialogs
             bc4.Padding = 6;
             bc4.Expand = false;
             
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ nickBox ] ) );
+            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ passwordBox ] ) );
             bc6.Padding = 6;
             bc6.Expand = false;
             
@@ -120,8 +126,9 @@ namespace Dialogs
             
             
             this.VBox.Add ( hbox );
-            this.VBox.ShowAll ();
+            this.ShowAll ();
             
+            passwordEntry.GrabFocus ();
             changeBut.GrabDefault ();
             
         }
@@ -136,34 +143,14 @@ namespace Dialogs
         }
         
         
-        private void GoChangeNick ( object obj, EventArgs args )
+        private void GoChangePassword ( object obj, EventArgs args )
         {
             
-            SetMode ( "Changing" );
+            this.Name = passwordEntry.GetChars ( 0, -1 );
             
-            this.Name = nickEntry.GetChars ( 0, -1 );
-            
-            Hamachi.SetNick ( this.Name );
+            Hamachi.SetPassword ( this.Network.Id, this.Name );
             
             Dismiss ();
-            GlobalEvents.UpdateNick ( this.Name );
-            
-        }
-        
-        
-        public void Open ()
-        {
-            
-            if ( this.Visible )
-            {
-                this.Present ();
-            }
-            else
-            {
-                this.Visible = true;
-                this.Show ();
-                nickEntry.GrabFocus ();
-            }
             
         }
 
@@ -171,10 +158,7 @@ namespace Dialogs
         private void Dismiss ()
         {
             
-            this.Visible = false;
-            this.Hide ();
-            GlobalEvents.UpdateNick ();
-            SetMode ( "Reset" );
+            this.Destroy ();
             
         }
         
@@ -183,45 +167,6 @@ namespace Dialogs
         {
             
             Dismiss ();
-            
-        }
-        
-        
-        public void SetNick ( string nick )
-        {
-            
-            nickEntry.Text = nick;
-            
-        }
-        
-        
-        private void SetMode ( string mode )
-        {
-            
-            switch ( mode )
-            {
-                
-                case "Changing":
-                    cancelBut.Sensitive = false;
-                    
-                    changeBut.Sensitive = false;
-                    changeBut.Label = TextStrings.changingLabel;
-                    
-                    nickEntry.Sensitive = false;
-                    
-                    break;
-                    
-                case "Reset":
-                    cancelBut.Sensitive = true;
-                    
-                    changeBut.Sensitive = true;
-                    changeBut.Label = TextStrings.changeLabel;
-                    
-                    nickEntry.Sensitive = true;
-                    
-                    break;
-                
-            }
             
         }
         

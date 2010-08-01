@@ -616,6 +616,12 @@ public class Hamachi
 
                     Member member = new Member ( status, curNetworkId, address, nick, client, tunnel );
                     
+                    if ( ( nick.Length == 25 ) &&
+                         ( Hamachi.apiVersion > 1 ) )
+                    {
+                        member.GetLongNick ();
+                    }
+                    
                     foreach (Network network in networks)
                     {
                         if ( network.Id == curNetworkId )

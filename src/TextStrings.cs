@@ -159,11 +159,15 @@ Svenska (sv)
 
     public static string changeLabel;
     public static string changingLabel;
+    
     public static string changeNickLabel;
     public static string changeNickTitle;
     public static string changeNickMessage;
-
     public static string changeNicknameTooltip;
+    
+    public static string changePasswordLabel;
+    public static string changePasswordTitle;
+    public static string changePasswordMessage;
     
     public static string joinLabel;
     public static string joiningLabel;
@@ -341,7 +345,7 @@ Svenska (sv)
         you                                 = Catalog.GetString ( "You" );
         unknown                             = Catalog.GetString ( "Unknown" );
         unavailable                         = Catalog.GetString ( "Unavailable" );
-        unapproved                          = Catalog.GetString ( "Unapproved" );
+        unapproved                          = Catalog.GetString ( "Awaiting approval" );
         locked                              = Catalog.GetString ( "Locked:" );
         approval                            = Catalog.GetString ( "Approval:" );
         manually                            = Catalog.GetString ( "Manually" );
@@ -378,13 +382,17 @@ Svenska (sv)
         nameLabel                           = Catalog.GetString ( "_Name:" );
         passwordLabel                       = Catalog.GetString ( "_Password:" );
         
-        changeNicknameTooltip               = Catalog.GetString ( "Click to change your nickname" );
-        
         changeLabel                         = Catalog.GetString ( "C_hange" );
         changingLabel                       = Catalog.GetString ( "Changing..." );
+        
         changeNickLabel                     = Catalog.GetString ( "Change _Nickname..." );
         changeNickTitle                     = Catalog.GetString ( "Change Nickname" );
         changeNickMessage                   = Catalog.GetString ( "Please enter the nickname you want to use." );
+        changeNicknameTooltip               = Catalog.GetString ( "Click to change your nickname" );
+        
+        changePasswordLabel                 = Catalog.GetString ( "Change _Password..." );
+        changePasswordTitle                 = Catalog.GetString ( "Change Password" );
+        changePasswordMessage               = Catalog.GetString ( "Please enter the new password for this network." );
         
         joinLabel                           = Catalog.GetString ( "_Join" );
         joiningLabel                        = Catalog.GetString ( "Joining..." );

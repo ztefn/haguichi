@@ -148,7 +148,8 @@ namespace Menus
             this.network = netw;
             
             /* Set menu items to show */
-            if ( ( network.IsOwner == 1 ) && ( member.Status.statusString != "Unapproved" ) )
+            if ( ( network.IsOwner == 1 ) &&
+                 ( member.Status.statusInt != 3 ) )
             {
                 separator2.Visible = true;
                 evict.Visible      = true;
@@ -159,7 +160,7 @@ namespace Menus
                 evict.Visible      = false;
             }
             
-            if ( member.Status.statusString != "Unapproved" )
+            if ( member.Status.statusInt != 3 )
             {
                 ShowCustomCommands ();
                 

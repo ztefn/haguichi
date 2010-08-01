@@ -239,6 +239,14 @@ public class Network
     }
     
     
+    public void ChangePassword ( object o, EventArgs args )
+    {
+        
+        Dialogs.ChangePassword passwordWindow = new Dialogs.ChangePassword ( this );
+        
+    }
+    
+    
     private void GoOfflineThread ( object o, DoWorkEventArgs args )
     {
         

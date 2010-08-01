@@ -100,12 +100,12 @@ namespace Dialogs
             cancelBut = new Button ( Stock.Cancel );
             cancelBut.Clicked += Dismiss;
             
-            createBut = new Button ( Stock.New ); // Using an stock button to trigger underscore interpretation within the label text (_Create), seems a GTK bug or misdesign
+            createBut = new Button ( Stock.New ); // Using an stock button to trigger underscore interpretation within the label text, seems a GTK bug or misdesign
             createBut.CanDefault = true;
             createBut.Label = TextStrings.createLabel;
             createBut.Clicked += GoCreate;
             
-            joinBut = new Button ( Stock.Add ); // Using an stock button to trigger underscore interpretation within the label text (_Join), seems a GTK bug or misdesign
+            joinBut = new Button ( Stock.Add ); // Using an stock button to trigger underscore interpretation within the label text, seems a GTK bug or misdesign
             joinBut.CanDefault = true;
             joinBut.Label = TextStrings.joinLabel;
             joinBut.Clicked += GoJoin;
@@ -121,7 +121,7 @@ namespace Dialogs
             nameEntry.ActivatesDefault = true;
             nameEntry.FocusGrabbed += HideFailure;
             nameEntry.WidthChars = 30;
-            nameEntry.MaxLength = 64;
+            nameEntry.MaxLength = 40;
             nameEntry.Changed += CheckNameLength;
             nameLabel = new Label ( TextStrings.nameLabel + "  " );
             nameLabel.Xalign = 0;
@@ -140,7 +140,7 @@ namespace Dialogs
             passwordEntry.FocusGrabbed += HideFailure;
             passwordEntry.Visibility = false;
             passwordEntry.WidthChars = 30;
-            passwordEntry.MaxLength = 64;
+            passwordEntry.MaxLength = 40;
             passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
             passwordLabel.Xalign = 0;
             passwordLabel.MnemonicWidget = passwordEntry;

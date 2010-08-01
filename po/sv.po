@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-07-31 20:51:35+0200\n"
+"POT-Creation-Date: 2010-08-01 22:47:07+0200\n"
 "PO-Revision-Date: 2010-06-27 19:14+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -17,331 +17,348 @@ msgstr ""
 "X-Launchpad-Export-Date: 2010-06-27 21:00+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
-#: ../src/TextStrings.cs:294
+#: ../src/TextStrings.cs:298
 msgid "Haguichi Website"
 msgstr "Haguichis webbplats"
 
-#: ../src/TextStrings.cs:295
+#: ../src/TextStrings.cs:299
 msgid "A graphical frontend for Hamachi."
 msgstr "En grafisk hanterare för Hamachi."
 
-#: ../src/TextStrings.cs:296
+#: ../src/TextStrings.cs:300
 msgid "Join and create local networks over the Internet"
 msgstr "Anslut och skapa lokala nätverk över internet"
 
-#: ../src/TextStrings.cs:298
+#: ../src/TextStrings.cs:302
 msgid "Yes"
 msgstr ""
 
-#: ../src/TextStrings.cs:299
+#: ../src/TextStrings.cs:303
 msgid "No"
 msgstr ""
 
-#: ../src/TextStrings.cs:301
+#: ../src/TextStrings.cs:305
 msgid "Address:"
 msgstr "Adress:"
 
-#: ../src/TextStrings.cs:302
+#: ../src/TextStrings.cs:306
 msgid "ID:"
 msgstr ""
 
-#: ../src/TextStrings.cs:303
+#: ../src/TextStrings.cs:307
 msgid "Client ID:"
 msgstr ""
 
-#: ../src/TextStrings.cs:304
+#: ../src/TextStrings.cs:308
 #, fuzzy
 msgid "Network ID:"
 msgstr "Nätverket är fullt"
 
-#: ../src/TextStrings.cs:305
+#: ../src/TextStrings.cs:309
 msgid "Status:"
 msgstr "Status:"
 
-#: ../src/TextStrings.cs:306
+#: ../src/TextStrings.cs:310
 msgid "Tunnel:"
 msgstr "Tunnel:"
 
-#: ../src/TextStrings.cs:307
+#: ../src/TextStrings.cs:311
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: ../src/TextStrings.cs:308
+#: ../src/TextStrings.cs:312
 msgid "Nickname:"
 msgstr "Smeknamn:"
 
-#: ../src/TextStrings.cs:309
+#: ../src/TextStrings.cs:313
 msgid "Version:"
 msgstr "Version:"
 
-#: ../src/TextStrings.cs:311
+#: ../src/TextStrings.cs:315
 msgid "seconds"
 msgstr "sekunder"
 
-#: ../src/TextStrings.cs:313
+#: ../src/TextStrings.cs:317
 msgid "Offline"
 msgstr "Frånkopplad"
 
-#: ../src/TextStrings.cs:314
+#: ../src/TextStrings.cs:318
 msgid "Online"
 msgstr "Ansluten"
 
-#: ../src/TextStrings.cs:315
+#: ../src/TextStrings.cs:319
 msgid "Unreachable"
 msgstr "Kan inte nås"
 
-#: ../src/TextStrings.cs:316
+#: ../src/TextStrings.cs:320
 msgid "Connected"
 msgstr "Ansluten"
 
-#: ../src/TextStrings.cs:317
+#: ../src/TextStrings.cs:321
 msgid "Disconnected"
 msgstr "Frånkopplad"
 
-#: ../src/TextStrings.cs:318
+#: ../src/TextStrings.cs:322
 msgid "Connecting..."
 msgstr "Ansluter..."
 
-#: ../src/TextStrings.cs:319
+#: ../src/TextStrings.cs:323
 msgid "Starting Hamachi..."
 msgstr "Startar Hamachi..."
 
-#: ../src/TextStrings.cs:320
+#: ../src/TextStrings.cs:324
 msgid "Logging in..."
 msgstr "Loggar in..."
 
-#: ../src/TextStrings.cs:321
+#: ../src/TextStrings.cs:325
 msgid "Running tuncfg..."
 msgstr "Kör tuncfg..."
 
-#: ../src/TextStrings.cs:322
+#: ../src/TextStrings.cs:326
 msgid "Getting nicknames..."
 msgstr "Hämtar smeknamn..."
 
-#: ../src/TextStrings.cs:324
+#: ../src/TextStrings.cs:328
 msgid "Connect a_utomatically"
 msgstr "Anslut a_utomatiskt"
 
-#: ../src/TextStrings.cs:326
+#: ../src/TextStrings.cs:330
 msgid "_Download"
 msgstr "_Ladda ned"
 
-#: ../src/TextStrings.cs:327
+#: ../src/TextStrings.cs:331
 msgid "C_onfigure"
 msgstr "K_onfigurera"
 
-#: ../src/TextStrings.cs:329
+#: ../src/TextStrings.cs:333
 msgid "Not configured"
 msgstr "Inte konfiguerad"
 
-#: ../src/TextStrings.cs:330
+#: ../src/TextStrings.cs:334
 msgid "Hamachi is not configured"
 msgstr "Hamachi är inte konfiguerat"
 
-#: ../src/TextStrings.cs:331
+#: ../src/TextStrings.cs:335
 msgid "You need to configure Hamachi before you can connect."
 msgstr "Du behöver konfiguera Hamachi innan du kan ansluta."
 
-#: ../src/TextStrings.cs:333
+#: ../src/TextStrings.cs:337
 msgid "Not installed"
 msgstr "Inte installerad"
 
-#: ../src/TextStrings.cs:334
+#: ../src/TextStrings.cs:338
 msgid "Hamachi is not installed"
 msgstr "Hamachi är inte installerat"
 
-#: ../src/TextStrings.cs:335
+#: ../src/TextStrings.cs:339
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Ladda ned Hamachi och följ installationsinstruktionerna."
 
-#: ../src/TextStrings.cs:337
+#: ../src/TextStrings.cs:341
 msgid "Members:"
 msgstr "Medlemmar:"
 
-#: ../src/TextStrings.cs:338
+#: ../src/TextStrings.cs:342
 msgid "{0} online, {1} total"
 msgstr "{0} anslutna, {1} totalt"
 
-#: ../src/TextStrings.cs:339
+#: ../src/TextStrings.cs:343
 msgid "Owner:"
 msgstr "Ägare:"
 
-#: ../src/TextStrings.cs:340
+#: ../src/TextStrings.cs:344
 msgid "You"
 msgstr "Du"
 
-#: ../src/TextStrings.cs:341
+#: ../src/TextStrings.cs:345
 msgid "Unknown"
 msgstr "Okänt"
 
-#: ../src/TextStrings.cs:342
+#: ../src/TextStrings.cs:346
 msgid "Unavailable"
 msgstr "Ej tillgänglig"
 
-#: ../src/TextStrings.cs:343
-msgid "Unapproved"
+#: ../src/TextStrings.cs:347
+msgid "Awaiting approval"
 msgstr ""
 
-#: ../src/TextStrings.cs:344
+#: ../src/TextStrings.cs:348
 msgid "Locked:"
 msgstr ""
 
-#: ../src/TextStrings.cs:345
+#: ../src/TextStrings.cs:349
 msgid "Approval:"
 msgstr ""
 
-#: ../src/TextStrings.cs:346
+#: ../src/TextStrings.cs:350
 msgid "Manually"
 msgstr ""
 
-#: ../src/TextStrings.cs:347
+#: ../src/TextStrings.cs:351
 #, fuzzy
 msgid "Automatically"
 msgstr "Anslut a_utomatiskt"
 
-#: ../src/TextStrings.cs:349
+#: ../src/TextStrings.cs:353
 msgid "_Client"
 msgstr ""
 
-#: ../src/TextStrings.cs:350
+#: ../src/TextStrings.cs:354
 msgid "_Edit"
 msgstr "R_edigera"
 
-#: ../src/TextStrings.cs:351
+#: ../src/TextStrings.cs:355
 msgid "_View"
 msgstr "_Visa"
 
-#: ../src/TextStrings.cs:352
+#: ../src/TextStrings.cs:356
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: ../src/TextStrings.cs:354
+#: ../src/TextStrings.cs:358
 msgid "_Online Help"
 msgstr "Online_hjälp"
 
-#: ../src/TextStrings.cs:355
+#: ../src/TextStrings.cs:359
 msgid "_Create Network..."
 msgstr "_Skapa nätverk..."
 
-#: ../src/TextStrings.cs:356
+#: ../src/TextStrings.cs:360
 msgid "_Join Network..."
 msgstr "_Gå med i nätverk..."
 
-#: ../src/TextStrings.cs:358
+#: ../src/TextStrings.cs:362
 msgid "_Go Online"
 msgstr "Koppla _upp"
 
-#: ../src/TextStrings.cs:359
+#: ../src/TextStrings.cs:363
 msgid "_Go Offline"
 msgstr "Koppla _ner"
 
-#: ../src/TextStrings.cs:360
+#: ../src/TextStrings.cs:364
 msgid "_Leave"
 msgstr "_Lämna"
 
-#: ../src/TextStrings.cs:361
+#: ../src/TextStrings.cs:365
 msgid "_Locked"
 msgstr ""
 
-#: ../src/TextStrings.cs:362
+#: ../src/TextStrings.cs:366
 msgid "_New Member Approval"
 msgstr ""
 
-#: ../src/TextStrings.cs:363
+#: ../src/TextStrings.cs:367
 #, fuzzy
 msgid "_Automatically"
 msgstr "Anslut a_utomatiskt"
 
-#: ../src/TextStrings.cs:364
+#: ../src/TextStrings.cs:368
 msgid "_Manually"
 msgstr ""
 
-#: ../src/TextStrings.cs:365
+#: ../src/TextStrings.cs:369
 #, fuzzy
 msgid "_Copy Network ID"
 msgstr "Gå med i nätverk"
 
-#: ../src/TextStrings.cs:367
+#: ../src/TextStrings.cs:371
 msgid "_Browse Shares"
 msgstr "_Bläddra i utdelade mappar"
 
-#: ../src/TextStrings.cs:368
+#: ../src/TextStrings.cs:372
 msgid "_Ping"
 msgstr "_Pinga"
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:373
 msgid "_View Remote Desktop"
 msgstr "_Visa fjärrskrivbord"
 
-#: ../src/TextStrings.cs:370
+#: ../src/TextStrings.cs:374
 msgid "_Approve"
 msgstr ""
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:375
 msgid "_Reject"
 msgstr ""
 
-#: ../src/TextStrings.cs:372
+#: ../src/TextStrings.cs:376
 msgid "_Evict"
 msgstr "_Kasta ut"
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:377
 msgid "_Copy Address"
 msgstr "K_opiera adress"
 
-#: ../src/TextStrings.cs:374
+#: ../src/TextStrings.cs:378
 msgid "_Copy Client ID"
 msgstr ""
 
-#: ../src/TextStrings.cs:376
+#: ../src/TextStrings.cs:380
 msgid "_Nickname:"
 msgstr "_Smeknamn:"
 
-#: ../src/TextStrings.cs:377
+#: ../src/TextStrings.cs:381
 msgid "_Name:"
 msgstr "_Namn:"
 
-#: ../src/TextStrings.cs:378
+#: ../src/TextStrings.cs:382
 msgid "_Password:"
 msgstr "_Lösenord:"
 
-#: ../src/TextStrings.cs:380
-msgid "Click to change your nickname"
-msgstr "Klicka för att ändra smeknamn"
-
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:384
 msgid "C_hange"
 msgstr "Ä_ndra"
 
-#: ../src/TextStrings.cs:383
+#: ../src/TextStrings.cs:385
 msgid "Changing..."
 msgstr "Ändrar..."
 
-#: ../src/TextStrings.cs:384
+#: ../src/TextStrings.cs:387
 msgid "Change _Nickname..."
 msgstr "_Byt smeknamn..."
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:388
 msgid "Change Nickname"
 msgstr "Byt smeknamn"
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:389
 msgid "Please enter the nickname you want to use."
 msgstr "Ange det smeknamn som du vill använda."
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:390
+msgid "Click to change your nickname"
+msgstr "Klicka för att ändra smeknamn"
+
+#: ../src/TextStrings.cs:392
+#, fuzzy
+msgid "Change _Password..."
+msgstr "_Byt smeknamn..."
+
+#: ../src/TextStrings.cs:393
+#, fuzzy
+msgid "Change Password"
+msgstr "_Lösenord:"
+
+#: ../src/TextStrings.cs:394
+#, fuzzy
+msgid "Please enter the new password for this network."
+msgstr ""
+"Fyll i det namn och lösenord för\n"
+"det nätverk du vill gå med i."
+
+#: ../src/TextStrings.cs:396
 msgid "_Join"
 msgstr "_Gå med i"
 
-#: ../src/TextStrings.cs:389
+#: ../src/TextStrings.cs:397
 msgid "Joining..."
 msgstr "Går med..."
 
-#: ../src/TextStrings.cs:390
+#: ../src/TextStrings.cs:398
 msgid "Join Network"
 msgstr "Gå med i nätverk"
 
-#: ../src/TextStrings.cs:391
+#: ../src/TextStrings.cs:399
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
@@ -349,19 +366,19 @@ msgstr ""
 "Fyll i det namn och lösenord för\n"
 "det nätverk du vill gå med i."
 
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:401
 msgid "C_reate"
 msgstr "S_kapa"
 
-#: ../src/TextStrings.cs:394
+#: ../src/TextStrings.cs:402
 msgid "Creating..."
 msgstr "Skapar..."
 
-#: ../src/TextStrings.cs:395
+#: ../src/TextStrings.cs:403
 msgid "Create Network"
 msgstr "Skapa nätverk"
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:404
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
@@ -369,86 +386,86 @@ msgstr ""
 "Fyll i det namn och lösenord för\n"
 "det nätverk du vill skapa."
 
-#: ../src/TextStrings.cs:398
+#: ../src/TextStrings.cs:406
 msgid "_Go directly online in the network"
 msgstr "_Gå online direkt i detta nätverk"
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:408
 msgid "Network not found"
 msgstr "Nätverket hittades inte"
 
-#: ../src/TextStrings.cs:401
+#: ../src/TextStrings.cs:409
 msgid "Invalid password"
 msgstr "Ogiltigt lösenord"
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:410
 msgid "Network is full"
 msgstr "Nätverket är fullt"
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:411
 #, fuzzy
 msgid "Network is locked"
 msgstr "Nätverket är fullt"
 
-#: ../src/TextStrings.cs:404
+#: ../src/TextStrings.cs:412
 msgid "Network already joined"
 msgstr "Har redan gått med i nätverket"
 
-#: ../src/TextStrings.cs:405
+#: ../src/TextStrings.cs:413
 msgid "Unknown error"
 msgstr "Okänt fel"
 
-#: ../src/TextStrings.cs:406
+#: ../src/TextStrings.cs:414
 msgid "Network name too short"
 msgstr "Nätverksnamnet är för kort"
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:415
 msgid "Network name is already taken"
 msgstr "Nätverksnamnet används redan"
 
-#: ../src/TextStrings.cs:409
+#: ../src/TextStrings.cs:417
 msgid "_Send Request"
 msgstr ""
 
-#: ../src/TextStrings.cs:410
+#: ../src/TextStrings.cs:418
 msgid "Send join request?"
 msgstr ""
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:419
 msgid ""
 "This network requires manual approval of new members by the owner.\n"
 "Would you like to send a join request?"
 msgstr ""
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:421
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:422
 msgid "Information"
 msgstr "Information"
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:424
 msgid "Delete network '{0}'?"
 msgstr "Ta bort nätverket \"{0}\"?"
 
-#: ../src/TextStrings.cs:417
+#: ../src/TextStrings.cs:425
 msgid "Are you sure you want to delete network '{0}'?"
 msgstr "Vill du verkligen ta bort nätverket \"{0}\"?"
 
-#: ../src/TextStrings.cs:419
+#: ../src/TextStrings.cs:427
 msgid "Leave network '{0}'?"
 msgstr "Lämna nätverket \"{0}\"?"
 
-#: ../src/TextStrings.cs:420
+#: ../src/TextStrings.cs:428
 msgid "Are you sure you want to leave network '{0}'?"
 msgstr "Vill du verkligen lämna nätverket \"{0}\"?"
 
-#: ../src/TextStrings.cs:422
+#: ../src/TextStrings.cs:430
 msgid "Evict member '{0}'?"
 msgstr "Kasta ut medlemmen \"{0}\"?"
 
-#: ../src/TextStrings.cs:423
+#: ../src/TextStrings.cs:431
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
@@ -456,128 +473,128 @@ msgstr ""
 "Vill du verkligen kasta ut medlemmen \"{0}\"\n"
 "från nätverket \"{1}\"?"
 
-#: ../src/TextStrings.cs:425
+#: ../src/TextStrings.cs:433
 msgid "Failed deleting network '{0}'"
 msgstr "Det gick inte att ta bort nätverket \"{0}\""
 
-#: ../src/TextStrings.cs:426
+#: ../src/TextStrings.cs:434
 msgid "You are not the owner of this network."
 msgstr "Du är inte ägare av detta nätverk."
 
-#: ../src/TextStrings.cs:428
+#: ../src/TextStrings.cs:436
 msgid "Failed leaving network '{0}'"
 msgstr "Det gick inte att lämna nätverket \"{0}\""
 
-#: ../src/TextStrings.cs:429
+#: ../src/TextStrings.cs:437
 msgid "You are the owner of this network."
 msgstr "Du är ägaren av detta nätverk."
 
-#: ../src/TextStrings.cs:430
+#: ../src/TextStrings.cs:438
 #, fuzzy
 msgid "You don't have permission to leave this network."
 msgstr "Du är inte ägare av detta nätverk."
 
-#: ../src/TextStrings.cs:432
+#: ../src/TextStrings.cs:440
 msgid "Failed evicting member '{0}'"
 msgstr "Det gick inte att vräka medlemen \"{0}\""
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:441
 msgid "You are not the owner of network '{0}'."
 msgstr "Du är inte ägare av nätverket \"{0}\""
 
-#: ../src/TextStrings.cs:435
+#: ../src/TextStrings.cs:443
 msgid "General"
 msgstr "Allmänt"
 
-#: ../src/TextStrings.cs:436
+#: ../src/TextStrings.cs:444
 msgid "Desktop"
 msgstr "Skrivbord"
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:445
 msgid "Commands"
 msgstr "Kommandon"
 
-#: ../src/TextStrings.cs:439
+#: ../src/TextStrings.cs:447
 msgid "Notification Area"
 msgstr "Notifieringsyta"
 
-#: ../src/TextStrings.cs:440
+#: ../src/TextStrings.cs:448
 msgid "Behavior"
 msgstr "Beteende"
 
-#: ../src/TextStrings.cs:442
+#: ../src/TextStrings.cs:450
 msgid "_Account data folder:"
 msgstr "_Datamapp för konto:"
 
-#: ../src/TextStrings.cs:443
+#: ../src/TextStrings.cs:451
 msgid "Choose Folder"
 msgstr "Välj mapp"
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:452
 msgid "_Update interval (seconds):"
 msgstr "_Uppdateringsintervall (sekunder):"
 
-#: ../src/TextStrings.cs:445
+#: ../src/TextStrings.cs:453
 msgid "_Command timeout (seconds):"
 msgstr "_Tidsgräns för kommando (sekunder):"
 
-#: ../src/TextStrings.cs:447
+#: ../src/TextStrings.cs:455
 msgid "_Offline Members"
 msgstr "_Frånkopplade användare"
 
-#: ../src/TextStrings.cs:448
+#: ../src/TextStrings.cs:456
 msgid "Sort by _Name"
 msgstr "Sortera efter _namn"
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:457
 msgid "Sort by _Status"
 msgstr "Sortera efter _status"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:458
 msgid "S_tatusbar"
 msgstr "S_tatusrad"
 
-#: ../src/TextStrings.cs:452
+#: ../src/TextStrings.cs:460
 msgid "_Show Haguichi in the notification area"
 msgstr "_Visa Haguichi i notifieringsytan"
 
-#: ../src/TextStrings.cs:453
+#: ../src/TextStrings.cs:461
 msgid "Start Haguichi _minimized in the notification area"
 msgstr "Starta Haguichi _minimerat i notifieringsytan"
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:463
 msgid "C_onnect automatically on startup"
 msgstr "_Anslut automatiskt vid uppstart"
 
-#: ../src/TextStrings.cs:456
+#: ../src/TextStrings.cs:464
 msgid "_Reconnect automatically when connection is lost"
 msgstr "_Återanslut automatiskt när anslutningen avbrutits"
 
-#: ../src/TextStrings.cs:457
+#: ../src/TextStrings.cs:465
 msgid "_Disconnect on quit"
 msgstr "_Koppla från vid stängning"
 
-#: ../src/TextStrings.cs:459
+#: ../src/TextStrings.cs:467
 msgid "Display notification when a member _joins"
 msgstr "Visa notifiering när en användare _går in"
 
-#: ../src/TextStrings.cs:460
+#: ../src/TextStrings.cs:468
 msgid "Display notification when a member _leaves"
 msgstr "Visa notifiering när en användare _lämnar"
 
-#: ../src/TextStrings.cs:461
+#: ../src/TextStrings.cs:469
 msgid "Display notification when a member comes o_nline"
 msgstr "Visa notifiering när en användare _ansluter"
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:470
 msgid "Display notification when a member goes o_ffline"
 msgstr "Visa notifiering när en användare kopplar _från"
 
-#: ../src/TextStrings.cs:464
+#: ../src/TextStrings.cs:472
 msgid "Do you want to run tuncfg?"
 msgstr "Vill du köra tuncfg?"
 
-#: ../src/TextStrings.cs:465
+#: ../src/TextStrings.cs:473
 msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
@@ -585,137 +602,137 @@ msgstr ""
 "Hamachi måste köra tuncfg för att kunna koppla upp sig.\n"
 "För att köra tuncfg behövs administrativa rättigheter."
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:474
 msgid "_Run"
 msgstr "_Kör"
 
-#: ../src/TextStrings.cs:467
+#: ../src/TextStrings.cs:475
 msgid "_Always ask before running tuncfg"
 msgstr "Fråga alltid _innan tuncfg ska köras"
 
-#: ../src/TextStrings.cs:468
+#: ../src/TextStrings.cs:476
 msgid "A_sk confirmation before running tuncfg"
 msgstr "_Fråga efter bekräftelse innan tuncfg körs"
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:478
 msgid "Error connecting"
 msgstr "Fel vid uppkoppling"
 
-#: ../src/TextStrings.cs:471
+#: ../src/TextStrings.cs:479
 msgid "Hamachi login failed."
 msgstr "Fel vid Hamachi-inloggning."
 
-#: ../src/TextStrings.cs:472
+#: ../src/TextStrings.cs:480
 msgid "Connection refused."
 msgstr "Anslutningen nekades."
 
-#: ../src/TextStrings.cs:473
+#: ../src/TextStrings.cs:481
 msgid "No internet connection."
 msgstr "Ingen internetanslutning."
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:483
 msgid "Loading configuration failed"
 msgstr "Misslyckades med att läsa in konfigurationen"
 
-#: ../src/TextStrings.cs:476
+#: ../src/TextStrings.cs:484
 msgid "Hamachi could not launch due to a configuration load failure."
 msgstr ""
 "Hamachi kunde inte öppnas på grund av att det inte gick att läsa in "
 "konfigurationen."
 
-#: ../src/TextStrings.cs:478
+#: ../src/TextStrings.cs:486
 msgid "Member online"
 msgstr "Medlem ansluten"
 
-#: ../src/TextStrings.cs:479
+#: ../src/TextStrings.cs:487
 msgid "{0} came online in the network {1}"
 msgstr "{0} är anslöt till nätverket {1}"
 
-#: ../src/TextStrings.cs:480
+#: ../src/TextStrings.cs:488
 msgid "Member offline"
 msgstr "Medlem frånkopplad"
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:489
 msgid "{0} went offline in the network {1}"
 msgstr "{0} kopplade från nätverket {1}"
 
-#: ../src/TextStrings.cs:482
+#: ../src/TextStrings.cs:490
 msgid "Member joined"
 msgstr "Medlem gick in"
 
-#: ../src/TextStrings.cs:483
+#: ../src/TextStrings.cs:491
 msgid "{0} joined the network {1}"
 msgstr "{0} har gick in i nätverket {1}"
 
-#: ../src/TextStrings.cs:484
+#: ../src/TextStrings.cs:492
 msgid "Member left"
 msgstr "Medlem lämnade"
 
-#: ../src/TextStrings.cs:485
+#: ../src/TextStrings.cs:493
 msgid "{0} left the network {1}"
 msgstr "{0} lämnade nätverket {1}"
 
-#: ../src/TextStrings.cs:487
+#: ../src/TextStrings.cs:495
 msgid "A_vailable commands:"
 msgstr "Tillgängliga _kommandon:"
 
-#: ../src/TextStrings.cs:488
+#: ../src/TextStrings.cs:496
 msgid "Command"
 msgstr "Kommando"
 
-#: ../src/TextStrings.cs:489
+#: ../src/TextStrings.cs:497
 msgid "Available"
 msgstr "Tillgängliga"
 
-#: ../src/TextStrings.cs:491
+#: ../src/TextStrings.cs:499
 msgid "Add Command"
 msgstr "Lägg till kommando"
 
-#: ../src/TextStrings.cs:492
+#: ../src/TextStrings.cs:500
 msgid "Edit Command"
 msgstr "Redigera kommando"
 
-#: ../src/TextStrings.cs:493
+#: ../src/TextStrings.cs:501
 msgid "_Command:"
 msgstr "_Kommando:"
 
-#: ../src/TextStrings.cs:494
+#: ../src/TextStrings.cs:502
 msgid "_Label:"
 msgstr "_Etikett:"
 
-#: ../src/TextStrings.cs:495
+#: ../src/TextStrings.cs:503
 msgid "Use %A for address and %N for nickname"
 msgstr "Använd %A för adress och %N för smeknamn"
 
-#: ../src/TextStrings.cs:497
+#: ../src/TextStrings.cs:505
 msgid "Click to choose an icon"
 msgstr "Klicka för att välja ikon"
 
-#: ../src/TextStrings.cs:498
+#: ../src/TextStrings.cs:506
 msgid "Choose Icon"
 msgstr "Välj ikon"
 
-#: ../src/TextStrings.cs:499
+#: ../src/TextStrings.cs:507
 msgid "_No Icon"
 msgstr "_Ingen ikon"
 
-#: ../src/TextStrings.cs:501
+#: ../src/TextStrings.cs:509
 msgid "Default"
 msgstr "Standard"
 
-#: ../src/TextStrings.cs:502
+#: ../src/TextStrings.cs:510
 msgid "_Default"
 msgstr "_Standard"
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:512
 msgid "Restore the default commands"
 msgstr "Återställ standardkommandon"
 
-#: ../src/TextStrings.cs:505
+#: ../src/TextStrings.cs:513
 msgid "Revert changes?"
 msgstr "Återställ ändringar?"
 
-#: ../src/TextStrings.cs:506
+#: ../src/TextStrings.cs:514
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
@@ -723,10 +740,10 @@ msgstr ""
 "Är du säker på att du vill återställa alla ändringar\n"
 "och därmed återställa standardkommandona?"
 
-#: ../src/TextStrings.cs:508
+#: ../src/TextStrings.cs:516
 msgid "Move up"
 msgstr "Flytta uppåt"
 
-#: ../src/TextStrings.cs:509
+#: ../src/TextStrings.cs:517
 msgid "Move down"
 msgstr "Flytta nedåt"

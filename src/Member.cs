@@ -18,6 +18,7 @@
  */
 
 using System;
+using System.ComponentModel;
 using Gtk;
 
     
@@ -33,6 +34,8 @@ public class Member
     
     public string NameSortString;
     public string StatusSortString;
+    
+    private BackgroundWorker worker;
     
     
     public Member ( Status status, string network, string address, string nick, string client, string tunnel )
@@ -71,6 +74,28 @@ public class Member
         NameSortString = this.Nick + this.ClientId;
         StatusSortString = this.Status.statusSortable + this.Nick + this.ClientId;
     
+    }
+    
+    
+    public void GetLongNick ()
+    {
+        
+        worker = new BackgroundWorker {};
+
+        worker.DoWork += GetLongNickThread;
+        worker.RunWorkerAsync ();
+        
+    }
+    
+    
+    private void GetLongNickThread ( object sender, DoWorkEventArgs e )
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
+        Debug.Log ( Debug.Domain.Hamachi, "Network.GetLongNickThread", output );
+                
+        this.Nick = Hamachi.Retrieve ( output, "nickname" );
+        
     }
     
     

@@ -678,7 +678,7 @@ public class NetworkView : TreeView
         }
         else
         {
-            if ( lastMember.Status.statusString != "Unapproved" )
+            if ( lastMember.Status.statusInt != 3 )
             {
                 string command = Command.ReturnDefault();
                 
