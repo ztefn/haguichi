@@ -178,7 +178,15 @@ namespace Menus
             {
                 leave.Visible     = false;
                 delete.Visible    = true;
-                password.Visible  = true;
+                
+                if ( Hamachi.apiVersion > 1 )
+                {
+                    password.Visible  = true;
+                }
+                else
+                {
+                    password.Visible  = false;
+                }
             }
             else if ( network.IsOwner == 0 )
             {
@@ -187,7 +195,8 @@ namespace Menus
                 password.Visible  = false;
             }
             
-            if ( ( network.Lock != "" ) || ( network.Approve != "" ) )
+            if ( ( network.Lock != "" ) ||
+                 ( network.Approve != "" ) )
             {
                 separator2.Visible = true;
             }
