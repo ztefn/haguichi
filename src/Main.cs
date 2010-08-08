@@ -76,8 +76,6 @@ class Haguichi
         informationWindow   = new Dialogs.Information ( TextStrings.informationTitle );
         preferencesWindow   = new Windows.Preferences ( TextStrings.preferencesTitle );
         
-        GlobalEvents.UpdateNick ();
-        
         connection          = new Connection ( new Status ( " " ) );
         
         Controller.Init ();  

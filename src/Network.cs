@@ -213,6 +213,8 @@ public class Network
         worker.RunWorkerAsync ();
         
         this.Status = new Status ( "*" );
+        SetSortStrings ();
+        
         MainWindow.networkView.UpdateNetwork ( this );
         
     }
@@ -234,6 +236,8 @@ public class Network
         worker.RunWorkerAsync ();
         
         this.Status = new Status ( " " );
+        SetSortStrings ();
+        
         MainWindow.networkView.UpdateNetwork ( this );
         
     }

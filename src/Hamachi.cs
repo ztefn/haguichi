@@ -643,6 +643,8 @@ public class Hamachi
     public static void SetNick ( string nick )
     {
         
+        Config.Settings.SetNickAfterLogin = false;
+        
         string output = "";
         int status = Controller.StatusCheck ();
         
@@ -661,6 +663,10 @@ public class Hamachi
                   ( status >= 6 ) )
         {
             output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+        }
+        else if ( Hamachi.apiVersion > 1 )
+        {
+            Config.Settings.SetNickAfterLogin = true;   
         }
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );

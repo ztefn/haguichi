@@ -81,7 +81,23 @@ public class GlobalEvents
         
         Haguichi.informationWindow.SetVersion ();
         
+        if ( Config.Settings.SetNickAfterLogin == true )
+        {
+            GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
+        }
+        
         UpdateCycle ();
+        
+    }
+    
+    
+    private static bool SetNickAfterLogin ()
+    {
+        
+        Hamachi.SetNick ( Config.Settings.LastNick );
+        UpdateNick ( Config.Settings.LastNick );
+        
+        return false;
         
     }
     

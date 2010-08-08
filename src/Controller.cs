@@ -47,9 +47,9 @@ public class Controller
         
         GlobalEvents.UpdateNick ();
         
-        int status = StatusCheck ();
+        lastStatus = StatusCheck ();
         
-        if ( status >= 5 )
+        if ( lastStatus >= 5 )
         {
             MainWindow.SetMode ( "Connecting" );
             
@@ -62,21 +62,21 @@ public class Controller
                 GetNicksAndNetworkList ();
             }
         }
-        else if ( ( status >= 3 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        else if ( ( lastStatus >= 3 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Connecting" );
             GLib.Timeout.Add ( 500, new GLib.TimeoutHandler ( ConnectAfterTimeout ) );
         }
-        else if ( ( status >= 2 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        else if ( ( lastStatus >= 2 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Disconnected" );
             GlobalEvents.WaitForInternetCycle ();
         }
-        else if ( status >= 2 )
+        else if ( lastStatus >= 2 )
         {
             MainWindow.SetMode ( "Disconnected" );
         }
-        else if ( status >= 1 )
+        else if ( lastStatus >= 1 )
         {
             MainWindow.SetMode ( "Not configured" );
             Dialogs.NotConfigured dlgNotConfigured = new Dialogs.NotConfigured ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, "Info" );
@@ -199,9 +199,9 @@ public class Controller
     public static void HamachiGoStart ()
     {
         
-        int status = StatusCheck ();
+        lastStatus = StatusCheck ();
         
-        if ( status >= 3 )
+        if ( lastStatus >= 3 )
         {
             string output = Hamachi.Start ();         
             
@@ -244,7 +244,7 @@ public class Controller
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Trying to start again." );
                 string output2 = Hamachi.Start ();
                 
-                if ( status >= 4 )
+                if ( lastStatus >= 4 )
                 {
                     Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Yes, started now!" );
                 }
@@ -276,10 +276,10 @@ public class Controller
     
     public static void HamachiGoConnect ()
     {
-
-        int status = StatusCheck ();
         
-        if ( status >= 4 )
+        lastStatus = StatusCheck ();
+        
+        if ( lastStatus >= 4 )
         {
             MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
             GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( TimedGoLogin ) );
@@ -290,7 +290,7 @@ public class Controller
             MainWindow.statusBar.Push ( 0, TextStrings.starting );
             GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( TimedGoStart ) );
         }
-
+        
     }
     
     
@@ -338,9 +338,9 @@ public class Controller
         
         HamachiGoStart ();
         
-        int status = StatusCheck ();
+        lastStatus = StatusCheck ();
         
-        if ( status >= 4 )
+        if ( lastStatus >= 4 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoStart", "Started, now go connect." );
             MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
@@ -392,15 +392,17 @@ public class Controller
         
         Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Retrieving connection status..." );
         
+        MainWindow.statusBar.Push ( 0, TextStrings.updating );
+        
         BackgroundWorker worker = new BackgroundWorker {};
         worker.DoWork += UpdateConnectionThread;
         worker.RunWorkerAsync ();
         
         /*
-         * Wait a second for the thread to finish then continue in the main thread,
+         * Wait a moment for the thread to finish then continue in the main thread,
          * because GtkTreeView doesn't get updated when the GtkTreeModel is changed async... :(
          */
-        GLib.Timeout.Add ( 1000, new GLib.TimeoutHandler ( UpdateList ) );
+        GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( UpdateList ) );
         
         return true;
         
@@ -409,7 +411,7 @@ public class Controller
     
     private static void UpdateConnectionThread ( object o, DoWorkEventArgs args )
     {
-     
+        
         lastStatus = StatusCheck ();
     
         if ( ( HasInternetConnection () ) &&
@@ -515,7 +517,7 @@ public class Controller
                             
                             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberLeftMessage, oMember.Nick, oMember.Network );
+                                string body = String.Format ( TextStrings.notifyMemberLeftMessage, oMember.Nick, oNetwork.Name );
                                 Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
                             }
                         }
@@ -533,14 +535,14 @@ public class Controller
                                  ( nMember.Status.statusInt == 1 ) &&
                                  ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline ) ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberOnlineMessage, nMember.Nick, nMember.Network );
+                                string body = String.Format ( TextStrings.notifyMemberOnlineMessage, nMember.Nick, oNetwork.Name );
                                 Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
                             }
                             if ( ( oMember.Status.statusInt == 1 ) &&
                                  ( nMember.Status.statusInt == 0 ) &&
                                  ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline ) ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberOfflineMessage, nMember.Nick, nMember.Network );
+                                string body = String.Format ( TextStrings.notifyMemberOfflineMessage, nMember.Nick, oNetwork.Name );
                                 Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
                             }
                             
@@ -558,7 +560,7 @@ public class Controller
                             
                             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberJoinedMessage, nMember.Nick, nMember.Network );
+                                string body = String.Format ( TextStrings.notifyMemberJoinedMessage, nMember.Nick, oNetwork.Name );
                                 Notify n = new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
                             }
                         }
@@ -577,6 +579,8 @@ public class Controller
 
             /* Continue update interval */
             continueUpdate = true;
+            
+            MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
         }
         else if ( ( Haguichi.connection.Status.statusInt == 1 ) &&

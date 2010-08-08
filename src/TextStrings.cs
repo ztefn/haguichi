@@ -100,6 +100,7 @@ Svenska (sv)
     public static string loggingIn;
     public static string runningTuncfg;
     public static string gettingNicks;
+    public static string updating;
     
     public static string connectAutomatically;
     
@@ -325,6 +326,7 @@ Svenska (sv)
         loggingIn                           = Catalog.GetString ( "Logging in..." );
         runningTuncfg                       = Catalog.GetString ( "Running tuncfg..." );
         gettingNicks                        = Catalog.GetString ( "Getting nicknames..." );
+        updating                            = Catalog.GetString ( "Updating..." );
         
         connectAutomatically                = Catalog.GetString ( "Connect a_utomatically" );
         

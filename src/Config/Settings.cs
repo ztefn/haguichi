@@ -37,6 +37,7 @@ namespace Config
         public static bool ShowMainWindow                   = true;
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
+        public static bool SetNickAfterLogin                = false;
         
         public static string[] DefaultCommands = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
                                                    "true;false;gnome-remote-desktop;_View Remote Desktop;vinagre %A",
