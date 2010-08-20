@@ -60,6 +60,9 @@ Español (es)
 Français (fr)
     Gabriel U.
 
+Italiano (it)
+    Enrico G.
+
 Nederlands (nl)
     Stephen Brandt
 
@@ -70,6 +73,7 @@ Nederlands (nl)
 Svenska (sv)
     Daniel Holm
     Daniel Nylander
+    David Bengtsson
 ";
     
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";

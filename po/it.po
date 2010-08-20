@@ -1,4 +1,4 @@
-# Russian translation for haguichi
+# Italian translation for haguichi
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
 # This file is distributed under the same license as the haguichi package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
@@ -8,38 +8,38 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-08-20 23:58:55+0200\n"
-"PO-Revision-Date: 2010-08-07 11:18+0000\n"
-"Last-Translator: Sergey Sedov <sedov@webmail.perm.ru>\n"
-"Language-Team: Russian <ru@li.org>\n"
+"PO-Revision-Date: 2010-08-19 13:36+0000\n"
+"Last-Translator: Enrico G <Unknown>\n"
+"Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-08 12:12+0000\n"
+"X-Launchpad-Export-Date: 2010-08-20 21:44+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:303
 msgid "Haguichi Website"
-msgstr "Сайт Haguichi"
+msgstr "Sito di Haguichi"
 
 #: ../src/TextStrings.cs:304
 msgid "A graphical frontend for Hamachi."
-msgstr "Графическая оболочка к Hamachi"
+msgstr "Un frontend grafico per Hamachi"
 
 #: ../src/TextStrings.cs:305
 msgid "Join and create local networks over the Internet"
-msgstr "Создавайте и подключайтесь к локальным сетям в интернете"
+msgstr "Crea ed unisciti a reti locali attraverso Internet"
 
 #: ../src/TextStrings.cs:307
 msgid "Yes"
-msgstr "Да"
+msgstr "Si"
 
 #: ../src/TextStrings.cs:308
 msgid "No"
-msgstr "Нет"
+msgstr "No"
 
 #: ../src/TextStrings.cs:310
 msgid "Address:"
-msgstr "Адрес:"
+msgstr "Indirizzo:"
 
 #: ../src/TextStrings.cs:311
 msgid "ID:"
@@ -47,700 +47,699 @@ msgstr "ID:"
 
 #: ../src/TextStrings.cs:312
 msgid "Client ID:"
-msgstr "Идентификатор клиента:"
+msgstr "ID Client:"
 
 #: ../src/TextStrings.cs:313
 msgid "Network ID:"
-msgstr "Идентификатор сети:"
+msgstr "ID Rete:"
 
 #: ../src/TextStrings.cs:314
 msgid "Status:"
-msgstr "Статус:"
+msgstr "Stato:"
 
 #: ../src/TextStrings.cs:315
 msgid "Tunnel:"
-msgstr "Тоннель:"
+msgstr "Tunnel:"
 
 #: ../src/TextStrings.cs:316
 msgid "Anonymous"
-msgstr "Аноним"
+msgstr "Anonimo"
 
 #: ../src/TextStrings.cs:317
 msgid "Nickname:"
-msgstr "Псевдоним:"
+msgstr "Nickname:"
 
 #: ../src/TextStrings.cs:318
 msgid "Version:"
-msgstr "Версия:"
+msgstr "Versione:"
 
 #: ../src/TextStrings.cs:320
 msgid "seconds"
-msgstr "секунда;секунды;секунд"
+msgstr "secondi"
 
 #: ../src/TextStrings.cs:322
 msgid "Offline"
-msgstr "Не в сети"
+msgstr "Non in linea"
 
 #: ../src/TextStrings.cs:323
 msgid "Online"
-msgstr "В сети"
+msgstr "In linea"
 
 #: ../src/TextStrings.cs:324
 msgid "Unreachable"
-msgstr "Недоступен"
+msgstr "Irraggiungibile"
 
 #: ../src/TextStrings.cs:325
 msgid "Connected"
-msgstr "Подключен"
+msgstr "Connesso"
 
 #: ../src/TextStrings.cs:326
 msgid "Disconnected"
-msgstr "Отключен"
+msgstr "Disconnesso"
 
 #: ../src/TextStrings.cs:327
 msgid "Connecting..."
-msgstr "Подключение..."
+msgstr "Connessione in corso..."
 
 #: ../src/TextStrings.cs:328
 msgid "Starting Hamachi..."
-msgstr "Запуск Hamachi..."
+msgstr "Avvio Hamachi..."
 
 #: ../src/TextStrings.cs:329
 msgid "Logging in..."
-msgstr "Авторизация..."
+msgstr "Login in corso..."
 
 #: ../src/TextStrings.cs:330
 msgid "Running tuncfg..."
-msgstr "Запуск tuncfg..."
+msgstr "Avvio tuncfg..."
 
 #: ../src/TextStrings.cs:331
 msgid "Getting nicknames..."
-msgstr "Загрузка псевдонимов..."
+msgstr "Richiesta nickname in corso..."
 
 #: ../src/TextStrings.cs:332
-#, fuzzy
 msgid "Updating..."
-msgstr "Создание..."
+msgstr "Aggiornamento..."
 
 #: ../src/TextStrings.cs:334
 msgid "Connect a_utomatically"
-msgstr "Подключаться _автоматически"
+msgstr "Connetti a_utomaticamente"
 
 #: ../src/TextStrings.cs:336
 msgid "_Download"
-msgstr "_Загрузить"
+msgstr "_Scarica"
 
 #: ../src/TextStrings.cs:337
 msgid "C_onfigure"
-msgstr "_Настроить"
+msgstr "C_onfigura"
 
 #: ../src/TextStrings.cs:339
 msgid "Not configured"
-msgstr "Не настроен"
+msgstr "Non configurato"
 
 #: ../src/TextStrings.cs:340
 msgid "Hamachi is not configured"
-msgstr "Hamachi не настроен"
+msgstr "Hamachi non è configurato"
 
 #: ../src/TextStrings.cs:341
 msgid "You need to configure Hamachi before you can connect."
-msgstr "Для подключения вам необходимо настроить Hamachi."
+msgstr "Devi configurare Hamachi prima di poterti connettere"
 
 #: ../src/TextStrings.cs:343
 msgid "Not installed"
-msgstr "Не установлено"
+msgstr "Non installato"
 
 #: ../src/TextStrings.cs:344
 msgid "Hamachi is not installed"
-msgstr "Hamachi не установлен"
+msgstr "Hamachi non è installato"
 
 #: ../src/TextStrings.cs:345
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Пожалуйста, скачайте Hamachi и следуйте инструкциям установки."
+msgstr "Per favore, scarica Hamachi e segui le istruzioni di installazione."
 
 #: ../src/TextStrings.cs:347
 msgid "Members:"
-msgstr "Члены:"
+msgstr "Membri:"
 
 #: ../src/TextStrings.cs:348
 msgid "{0} online, {1} total"
-msgstr "{0} в сети, {1} всего"
+msgstr "{0} in linea, {1} totali"
 
 #: ../src/TextStrings.cs:349
 msgid "Owner:"
-msgstr "Владелец:"
+msgstr "Proprietario:"
 
 #: ../src/TextStrings.cs:350
 msgid "You"
-msgstr "Вы"
+msgstr "Tu"
 
 #: ../src/TextStrings.cs:351
 msgid "Unknown"
-msgstr "Неизвестный"
+msgstr "Sconosciuto"
 
 #: ../src/TextStrings.cs:352
 msgid "Unavailable"
-msgstr "Недоступно"
+msgstr "Non disponibile"
 
 #: ../src/TextStrings.cs:353
 msgid "Awaiting approval"
-msgstr ""
+msgstr "In attesa di approvazione"
 
 #: ../src/TextStrings.cs:354
 msgid "Locked:"
-msgstr "Заблокирован:"
+msgstr "Bloccato:"
 
 #: ../src/TextStrings.cs:355
 msgid "Approval:"
-msgstr "Одобрен:"
+msgstr "Approvato:"
 
 #: ../src/TextStrings.cs:356
 msgid "Manually"
-msgstr "Вручную"
+msgstr "Manualmente"
 
 #: ../src/TextStrings.cs:357
 msgid "Automatically"
-msgstr "Автоматически"
+msgstr "Automaticamente"
 
 #: ../src/TextStrings.cs:359
 msgid "_Client"
-msgstr "_Клиент"
+msgstr "_Client"
 
 #: ../src/TextStrings.cs:360
 msgid "_Edit"
-msgstr "_Правка"
+msgstr "_Modifica"
 
 #: ../src/TextStrings.cs:361
 msgid "_View"
-msgstr "_Вид"
+msgstr "_Visualizza"
 
 #: ../src/TextStrings.cs:362
 msgid "_Help"
-msgstr "П_омощь"
+msgstr "_Aiuto"
 
 #: ../src/TextStrings.cs:364
 msgid "_Online Help"
-msgstr "_Помощь в интернете"
+msgstr "_Guida in linea"
 
 #: ../src/TextStrings.cs:365
 msgid "_Create Network..."
-msgstr "_Создать сеть..."
+msgstr "_Crea una rete..."
 
 #: ../src/TextStrings.cs:366
 msgid "_Join Network..."
-msgstr "_Подключиться к сети..."
+msgstr "_Entra in una rete..."
 
 #: ../src/TextStrings.cs:368
 msgid "_Go Online"
-msgstr "_Статус \"в сети\""
+msgstr "_Vai in linea"
 
 #: ../src/TextStrings.cs:369
 msgid "_Go Offline"
-msgstr "_Статус \"не в сети\""
+msgstr "_Vai non in linea"
 
 #: ../src/TextStrings.cs:370
 msgid "_Leave"
-msgstr "_Выйти"
+msgstr "_Lascia"
 
 #: ../src/TextStrings.cs:371
 msgid "_Locked"
-msgstr ""
+msgstr "_Bloccato"
 
 #: ../src/TextStrings.cs:372
 msgid "_New Member Approval"
-msgstr ""
+msgstr "_Approvazione nuovo membro"
 
 #: ../src/TextStrings.cs:373
 msgid "_Automatically"
-msgstr ""
+msgstr "_Automaticamente"
 
 #: ../src/TextStrings.cs:374
 msgid "_Manually"
-msgstr ""
+msgstr "_Manualmente"
 
 #: ../src/TextStrings.cs:375
 msgid "_Copy Network ID"
-msgstr "Ск_опировать идентификационный номер сети"
+msgstr "_Copia ID Rete"
 
 #: ../src/TextStrings.cs:377
 msgid "_Browse Shares"
-msgstr "_Просмотр открытых каталогов"
+msgstr "_Esplora le risorse condivise"
 
 #: ../src/TextStrings.cs:378
 msgid "_Ping"
-msgstr "_Пинг"
+msgstr "_Ping"
 
 #: ../src/TextStrings.cs:379
 msgid "_View Remote Desktop"
-msgstr "П_росмотр удалённого рабочего стола"
+msgstr "_Visualizza Desktop Remoto"
 
 #: ../src/TextStrings.cs:380
 msgid "_Approve"
-msgstr "_Одобрить"
+msgstr "_Approva"
 
 #: ../src/TextStrings.cs:381
 msgid "_Reject"
-msgstr "_Отклонить"
+msgstr "_Rifiuta"
 
 #: ../src/TextStrings.cs:382
 msgid "_Evict"
-msgstr "_Выгнать"
+msgstr "_Espelli"
 
 #: ../src/TextStrings.cs:383
 msgid "_Copy Address"
-msgstr "_Копировать адрес"
+msgstr "_Copia indirizzo"
 
 #: ../src/TextStrings.cs:384
 msgid "_Copy Client ID"
-msgstr "_Скопировать идентификационный номер клиента"
+msgstr "_Copia ID Client"
 
 #: ../src/TextStrings.cs:386
 msgid "_Nickname:"
-msgstr "П_севдоним:"
+msgstr "_Nickname:"
 
 #: ../src/TextStrings.cs:387
 msgid "_Name:"
-msgstr "_Имя:"
+msgstr "_Nome:"
 
 #: ../src/TextStrings.cs:388
 msgid "_Password:"
-msgstr "_Пароль:"
+msgstr "_Password:"
 
 #: ../src/TextStrings.cs:390
 msgid "C_hange"
-msgstr "_Изменить"
+msgstr "M_odifica"
 
 #: ../src/TextStrings.cs:391
 msgid "Changing..."
-msgstr "Изменение..."
+msgstr "Sto modificando..."
 
 #: ../src/TextStrings.cs:393
 msgid "Change _Nickname..."
-msgstr "Измени_ть псевдоним"
+msgstr "Modifica _nickname..."
 
 #: ../src/TextStrings.cs:394
 msgid "Change Nickname"
-msgstr "Изменить псевдоним"
+msgstr "Modifica Nickname"
 
 #: ../src/TextStrings.cs:395
 msgid "Please enter the nickname you want to use."
-msgstr "Пожалуйста, придумайте и введите псевдоним."
+msgstr "Per favore, inserisci il nickname che vuoi usare."
 
 #: ../src/TextStrings.cs:396
 msgid "Click to change your nickname"
-msgstr "Нажмите для изменения псевдонима"
+msgstr "Clicca per modificare il tuo nickname"
 
 #: ../src/TextStrings.cs:398
 msgid "Change _Password..."
-msgstr ""
+msgstr "Modifica _password..."
 
 #: ../src/TextStrings.cs:399
 msgid "Change Password"
-msgstr ""
+msgstr "Modifica password"
 
 #: ../src/TextStrings.cs:400
 msgid "Please enter the new password for this network."
-msgstr ""
+msgstr "Per favore, inserisci la nuova password per questa rete."
 
 #: ../src/TextStrings.cs:402
 msgid "_Join"
-msgstr "_Подключиться"
+msgstr "_Entra"
 
 #: ../src/TextStrings.cs:403
 msgid "Joining..."
-msgstr "Подключение..."
+msgstr "Sto entrando..."
 
 #: ../src/TextStrings.cs:404
 msgid "Join Network"
-msgstr "Подключиться к сети"
+msgstr "Entra in una rete"
 
 #: ../src/TextStrings.cs:405
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
 msgstr ""
-"Пожалуйста, введите название и пароль сети,\n"
-"к которой вы хотите подключиться."
+"Per favore, inserisci il nome e la password per la\n"
+"rete in cui vuoi entrare."
 
 #: ../src/TextStrings.cs:407
 msgid "C_reate"
-msgstr "_Создать"
+msgstr "C_rea"
 
 #: ../src/TextStrings.cs:408
 msgid "Creating..."
-msgstr "Создание..."
+msgstr "Creazione in corso..."
 
 #: ../src/TextStrings.cs:409
 msgid "Create Network"
-msgstr "Создать сеть"
+msgstr "Crea una rete"
 
 #: ../src/TextStrings.cs:410
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
 msgstr ""
-"Пожалуйста, введите название и пароль сети,\n"
-"которую вы хотите создать."
+"Per favore, inserisci il nome e la password per la\n"
+"rete che vuoi creare."
 
 #: ../src/TextStrings.cs:412
 msgid "_Go directly online in the network"
-msgstr "С_разу установить статус \"в сети\""
+msgstr "_Accedi direttamente in linea alla rete"
 
 #: ../src/TextStrings.cs:414
 msgid "Network not found"
-msgstr "Сеть не найдена"
+msgstr "Rete non trovata"
 
 #: ../src/TextStrings.cs:415
 msgid "Invalid password"
-msgstr "Неправильный пароль"
+msgstr "Password non valida"
 
 #: ../src/TextStrings.cs:416
 msgid "Network is full"
-msgstr "Сеть переполнена"
+msgstr "La rete è piena"
 
 #: ../src/TextStrings.cs:417
 msgid "Network is locked"
-msgstr "Сеть заблокирована"
+msgstr "La rete è bloccata"
 
 #: ../src/TextStrings.cs:418
 msgid "Network already joined"
-msgstr "Вы уже подключены к этой сети"
+msgstr "Sei già entrato nella rete"
 
 #: ../src/TextStrings.cs:419
 msgid "Unknown error"
-msgstr "Неизвестная ошибка"
+msgstr "Errore sconosciuto"
 
 #: ../src/TextStrings.cs:420
 msgid "Network name too short"
-msgstr "Название сети слишком короткое"
+msgstr "Il nome della rete è troppo corto"
 
 #: ../src/TextStrings.cs:421
 msgid "Network name is already taken"
-msgstr "Сеть с таким названием уже существует"
+msgstr "Il nome della rete è già utilizzato"
 
 #: ../src/TextStrings.cs:423
 msgid "_Send Request"
-msgstr "_Послать запрос"
+msgstr "_Richiesta inviata"
 
 #: ../src/TextStrings.cs:424
 msgid "Send join request?"
-msgstr "Послать запрос на подключение?"
+msgstr "Inviare una richiesta per entrare nella rete?"
 
 #: ../src/TextStrings.cs:425
 msgid ""
 "This network requires manual approval of new members by the owner.\n"
 "Would you like to send a join request?"
 msgstr ""
-"Сеть требует ручного одобрения новых участников собственником сети.\n"
-"Хотите послать ему запрос?"
+"La rete richiede l'approvazione manuale dei nuovi membri da parte del "
+"proprietario.\n"
+"Vuoi inviare una richiesta per poter entrare nella rete?"
 
 #: ../src/TextStrings.cs:427
 msgid "Preferences"
-msgstr "Параметры"
+msgstr "Preferenze"
 
 #: ../src/TextStrings.cs:428
 msgid "Information"
-msgstr "Сведения"
+msgstr "Informazioni"
 
 #: ../src/TextStrings.cs:430
 msgid "Delete network '{0}'?"
-msgstr "Удалить сеть '{0}'?"
+msgstr "Cancella la rete '{0}'?"
 
 #: ../src/TextStrings.cs:431
 msgid "Are you sure you want to delete network '{0}'?"
-msgstr "Вы уверены, что хотите удалить сеть '{0}'?"
+msgstr "Sei sicuro di volere cancellare la rete '{0}'?"
 
 #: ../src/TextStrings.cs:433
 msgid "Leave network '{0}'?"
-msgstr "Покинуть сеть '{0}'?"
+msgstr "Lasciare la rete '{0}'?"
 
 #: ../src/TextStrings.cs:434
 msgid "Are you sure you want to leave network '{0}'?"
-msgstr "Вы уверены, что хотите покинуть сеть '{0}'?"
+msgstr "Sei sicuro di volere lasciare la rete '{0}'?"
 
 #: ../src/TextStrings.cs:436
 msgid "Evict member '{0}'?"
-msgstr "Выгнать '{0}'?"
+msgstr "Espellere il membro '{0}'?"
 
 #: ../src/TextStrings.cs:437
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
 msgstr ""
-"Вы уверены, что хотите выгнать '{0}'\n"
-"из сети '{1}'?"
+"Sei sicuro di volere espellere il membro '{0}'\n"
+"dalla rete '{1}'?"
 
 #: ../src/TextStrings.cs:439
 msgid "Failed deleting network '{0}'"
-msgstr "Ошибка при удалении сети '{0}'"
+msgstr "Cancellazione della rete '{0}' non riuscita"
 
 #: ../src/TextStrings.cs:440
 msgid "You are not the owner of this network."
-msgstr "Вы не владелец этой сети."
+msgstr "Tu non sei il proprietario di questa rete."
 
 #: ../src/TextStrings.cs:442
 msgid "Failed leaving network '{0}'"
-msgstr "Ошибка при попытке покинуть сеть '{0}'"
+msgstr "Abbandono della rete '{0}' non riuscito"
 
 #: ../src/TextStrings.cs:443
 msgid "You are the owner of this network."
-msgstr "Вы владелец этой сети."
+msgstr "Tu sei il proprietario di questa rete."
 
 #: ../src/TextStrings.cs:444
 msgid "You don't have permission to leave this network."
-msgstr "У вас нет прав для того, чтобы покинуть эту сеть."
+msgstr "Non hai il permesso di lasciare questa rete."
 
 #: ../src/TextStrings.cs:446
 msgid "Failed evicting member '{0}'"
-msgstr "Ошибка при попытке выгнать '{0}'"
+msgstr "Espulsione del membro '{0}' non riuscita"
 
 #: ../src/TextStrings.cs:447
 msgid "You are not the owner of network '{0}'."
-msgstr "Вы не владелец сети '{0}'."
+msgstr "Tu non sei il proprietario della rete '{0}'"
 
 #: ../src/TextStrings.cs:449
 msgid "General"
-msgstr "Общие"
+msgstr "Generale"
 
 #: ../src/TextStrings.cs:450
 msgid "Desktop"
-msgstr "Рабочий стол"
+msgstr "Desktop"
 
 #: ../src/TextStrings.cs:451
 msgid "Commands"
-msgstr "Команды"
+msgstr "Comandi"
 
 #: ../src/TextStrings.cs:453
 msgid "Notification Area"
-msgstr "Область уведомлений"
+msgstr "Area di notifica"
 
 #: ../src/TextStrings.cs:454
 msgid "Behavior"
-msgstr "Поведение"
+msgstr "Comportamento"
 
 #: ../src/TextStrings.cs:456
 msgid "_Account data folder:"
-msgstr "_Каталог учётной записи:"
+msgstr "_Cartella dei dati dell'account:"
 
 #: ../src/TextStrings.cs:457
 msgid "Choose Folder"
-msgstr "Выберите каталог"
+msgstr "Scegli cartella"
 
 #: ../src/TextStrings.cs:458
 msgid "_Update interval (seconds):"
-msgstr "_Частота обновления (в секундах):"
+msgstr "_Intervallo di aggiornamento (secondi):"
 
 #: ../src/TextStrings.cs:459
 msgid "_Command timeout (seconds):"
-msgstr "_Таймаут команды (в секундах):"
+msgstr "_Timeout dei comandi (secondi):"
 
 #: ../src/TextStrings.cs:461
 msgid "_Offline Members"
-msgstr "_Показывать тех, кто \"не в сети\""
+msgstr "_Membri non in linea"
 
 #: ../src/TextStrings.cs:462
 msgid "Sort by _Name"
-msgstr "Упорядочить по _имени"
+msgstr "Ordina per _Nome"
 
 #: ../src/TextStrings.cs:463
 msgid "Sort by _Status"
-msgstr "Упорядочить по _статусу"
+msgstr "Ordina per _Stato"
 
 #: ../src/TextStrings.cs:464
 msgid "S_tatusbar"
-msgstr "_Строка состояния"
+msgstr "Barra di s_tato"
 
 #: ../src/TextStrings.cs:466
 msgid "_Show Haguichi in the notification area"
-msgstr "_Показывать Haguichi в области уведомлений"
+msgstr "_Mostra Haguichi nell'area di notifica"
 
 #: ../src/TextStrings.cs:467
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "_Запускать Haguichi свёрнутым в область уведомлений"
+msgstr "Avvia Haguichi _minimizzato nell'area di notifica"
 
 #: ../src/TextStrings.cs:469
 msgid "C_onnect automatically on startup"
-msgstr "_Автоматически подключаться при запуске"
+msgstr "C_onnetti automaticamente all'avvio"
 
 #: ../src/TextStrings.cs:470
 msgid "_Reconnect automatically when connection is lost"
-msgstr "А_втоматически подключаться при потере соединения"
+msgstr "_Riconnetti automaticamente quando viene persa la connessione"
 
 #: ../src/TextStrings.cs:471
 msgid "_Disconnect on quit"
-msgstr "_Отключаться при выходе"
+msgstr "_Disconnetti all'uscita"
 
 #: ../src/TextStrings.cs:473
 msgid "Display notification when a member _joins"
-msgstr "П_оказывать уведомление, когда к сети подключается пользователь"
+msgstr "Mostra una notifica quando un membro _entra nella rete"
 
 #: ../src/TextStrings.cs:474
 msgid "Display notification when a member _leaves"
-msgstr "По_казывать уведомление, когда пользователь отключается от сети"
+msgstr "Mostra una notifica quando un membro _esce dalla rete"
 
 #: ../src/TextStrings.cs:475
 msgid "Display notification when a member comes o_nline"
-msgstr "Пок_азывать уведомление, когда пользователь выходит в онлайн"
+msgstr "Mostra una notifica quando un membro si connette"
 
 #: ../src/TextStrings.cs:476
 msgid "Display notification when a member goes o_ffline"
-msgstr "Пока_зывать уведомление, когда пользователь уходит из сети"
+msgstr "Mostra una notifica quando un membro si disconnette"
 
 #: ../src/TextStrings.cs:478
 msgid "Do you want to run tuncfg?"
-msgstr "Вы хотите запустить tuncfg?"
+msgstr "Vuoi avviare tuncfg?"
 
 #: ../src/TextStrings.cs:479
 msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
 msgstr ""
-"Hamachi требуется запустить tuncfg, чтобы иметь возможность подключиться.\n"
-"Запуск tuncfg требует прав администратора."
+"Hamachi ha bisogno di avviare tuncfg per potersi collegare.\n"
+"Avviare tuncfg richiede privilegi di amministrazione."
 
 #: ../src/TextStrings.cs:480
 msgid "_Run"
-msgstr "_Запустить"
+msgstr "_Esegui"
 
 #: ../src/TextStrings.cs:481
 msgid "_Always ask before running tuncfg"
-msgstr "_Всегда спрашивать перед запуском tuncfg"
+msgstr "_Chiedi sempre prima di eseguire tuncfg"
 
 #: ../src/TextStrings.cs:482
 msgid "A_sk confirmation before running tuncfg"
-msgstr "З_апрашивать подтверждение перед запуском tuncfg"
+msgstr "C_hiedi conferma prima di eseguire tuncfg"
 
 #: ../src/TextStrings.cs:484
 msgid "Error connecting"
-msgstr "Ошибка при подключении"
+msgstr "Errore di connessione"
 
 #: ../src/TextStrings.cs:485
 msgid "Hamachi login failed."
-msgstr "Ошибка при подключении Hamachi."
+msgstr "Hamachi ha fallito il login."
 
 #: ../src/TextStrings.cs:486
 msgid "Connection refused."
-msgstr "Подключение отклонено."
+msgstr "Connessione rifiutata."
 
 #: ../src/TextStrings.cs:487
 msgid "No internet connection."
-msgstr "Отсутствует соединение с интернет."
+msgstr "Connessione ad internet non presente."
 
 #: ../src/TextStrings.cs:489
 msgid "Loading configuration failed"
-msgstr "Ошибка при загрузке конфигурации"
+msgstr "Caricamento della configurazione non riuscito"
 
 #: ../src/TextStrings.cs:490
 msgid "Hamachi could not launch due to a configuration load failure."
-msgstr "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
+msgstr ""
+"Hamachi non può essere avviato a causa di un errore nel caricamento della "
+"configurazione"
 
 #: ../src/TextStrings.cs:492
 msgid "Member online"
-msgstr "Пользователь в сети"
+msgstr "Membro in linea"
 
 #: ../src/TextStrings.cs:493
 msgid "{0} came online in the network {1}"
-msgstr "{0} вошел в сеть {1}"
+msgstr "{0} si è connesso alla rete {1}"
 
 #: ../src/TextStrings.cs:494
 msgid "Member offline"
-msgstr "Пользователь отключился"
+msgstr "Membro non in linea"
 
 #: ../src/TextStrings.cs:495
 msgid "{0} went offline in the network {1}"
-msgstr "{0} отключился от сети {1}"
+msgstr "{0} si è disconnesso dalla rete {1}"
 
 #: ../src/TextStrings.cs:496
 msgid "Member joined"
-msgstr "Пользователь подключился"
+msgstr "Membro entrato"
 
 #: ../src/TextStrings.cs:497
 msgid "{0} joined the network {1}"
-msgstr "{0} подключился к сети {1}"
+msgstr "{0} è entrato nella rete {1}"
 
 #: ../src/TextStrings.cs:498
 msgid "Member left"
-msgstr "Пользователь покинул сеть"
+msgstr "Membro uscito"
 
 #: ../src/TextStrings.cs:499
 msgid "{0} left the network {1}"
-msgstr "{0} покинул сеть {1}"
+msgstr "{0} ha lasciato la rete {1}"
 
 #: ../src/TextStrings.cs:501
 msgid "A_vailable commands:"
-msgstr "Д_оступные команды:"
+msgstr "C_omandi disponibili:"
 
 #: ../src/TextStrings.cs:502
 msgid "Command"
-msgstr "Команда"
+msgstr "Comando"
 
 #: ../src/TextStrings.cs:503
 msgid "Available"
-msgstr "Доступен"
+msgstr "Disponibile"
 
 #: ../src/TextStrings.cs:505
 msgid "Add Command"
-msgstr "Добавить команду"
+msgstr "Aggiungi comando"
 
 #: ../src/TextStrings.cs:506
 msgid "Edit Command"
-msgstr "Изменить команду"
+msgstr "Modifica comando"
 
 #: ../src/TextStrings.cs:507
 msgid "_Command:"
-msgstr "_Команда:"
+msgstr "_Comando:"
 
 #: ../src/TextStrings.cs:508
 msgid "_Label:"
-msgstr "_Метка:"
+msgstr "_Etichetta:"
 
 #: ../src/TextStrings.cs:509
 msgid "Use %A for address and %N for nickname"
-msgstr "Использовать %A для адреса и %N для псевдонима"
+msgstr "Usa %A per l'indirizzo e %N per il nickname"
 
 #: ../src/TextStrings.cs:511
 msgid "Click to choose an icon"
-msgstr "Нажмите, чтобы выбрать иконку"
+msgstr "Clicca per scegliere un icona"
 
 #: ../src/TextStrings.cs:512
 msgid "Choose Icon"
-msgstr "Выбрать иконку"
+msgstr "Scegli icona"
 
 #: ../src/TextStrings.cs:513
 msgid "_No Icon"
-msgstr "_Без иконки"
+msgstr "_Nessuna icona"
 
 #: ../src/TextStrings.cs:515
 msgid "Default"
-msgstr "По умолчанию"
+msgstr "Default"
 
 #: ../src/TextStrings.cs:516
 msgid "_Default"
-msgstr "По у_молчанию"
+msgstr "_Default"
 
 #: ../src/TextStrings.cs:518
 msgid "Restore the default commands"
-msgstr "Восстановить исходные команды"
+msgstr "Ripristina i comandi di default"
 
 #: ../src/TextStrings.cs:519
 msgid "Revert changes?"
-msgstr "Отменить изменения?"
+msgstr "Annulla le modifiche?"
 
 #: ../src/TextStrings.cs:520
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
 msgstr ""
-"Вы уверены, что хотите отменить все изменения\n"
-"и восстановить исходные команды?"
+"Sei sicuro di volere annullare tutte le modifiche\n"
+"e ripristinare i comandi di default?"
 
 #: ../src/TextStrings.cs:522
 msgid "Move up"
-msgstr "Вверх"
+msgstr "Sposta in alto"
 
 #: ../src/TextStrings.cs:523
 msgid "Move down"
-msgstr "Вниз"
-
-#~ msgid "Unapproved"
-#~ msgstr "Не одобрен"
+msgstr "Sposta in basso"
