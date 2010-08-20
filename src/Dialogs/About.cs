@@ -44,6 +44,7 @@ namespace Dialogs
             this.WebsiteLabel        = TextStrings.appWebsiteLabel;
             this.Authors             = TextStrings.appAuthors;
             this.TranslatorCredits   = TextStrings.appTranslatorCredits;
+            this.Artists             = TextStrings.appArtists;
             
             this.Logo                = MainWindow.appIcons[4];
             

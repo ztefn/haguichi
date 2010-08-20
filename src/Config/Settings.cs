@@ -55,6 +55,7 @@ namespace Config
         public static Key PixmapsPath                       = new Key ( "config/pixmaps_path", DefaultPixmapsPath );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 15.0 );
+        public static Key GetListWaitTime                   = new Key ( "config/get_list_wait_time", 2.0 );
         public static Key GetNicksWaitTime                  = new Key ( "config/get_nicks_wait_time", 0.5 );
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );
         public static Key CollapsedNetworks                 = new Key ( "main_window/collapsed_networks", new string [] {} );

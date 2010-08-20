@@ -38,6 +38,8 @@ public class Network
     public string NameSortString;
     public string StatusSortString;
     
+    public DateTime lastUpdate;
+    
     private BackgroundWorker worker;
     
     
@@ -53,6 +55,7 @@ public class Network
         this.Lock    = "";
         this.Approve = "";
         
+        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
     }
@@ -68,6 +71,7 @@ public class Network
         this.IsOwner = -1;
         this.OwnerId = "";
         
+        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
     }
@@ -85,11 +89,22 @@ public class Network
     public void Update ( Status status, string id, string name )
     {
         
-        this.Status = status;
-        this.Id     = id;
-        this.Name   = name;
+        /* 
+         * Make sure the last update wasn't in the GetListWaitTime timespan to prevent the background
+         * update process from overriding a more recent update triggered by some other event
+         */
+        int seconds = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.GetListWaitTime ) );
+        DateTime offset = DateTime.Now.Subtract ( new System.TimeSpan ( 0, 0, seconds ) );
         
-        SetSortStrings ();
+        if ( offset > this.lastUpdate)
+        {
+            this.Status = status;
+            this.Id     = id;
+            this.Name   = name;
+            
+            this.lastUpdate = DateTime.Now;
+            SetSortStrings ();
+        }
         
     }
     
@@ -213,6 +228,8 @@ public class Network
         worker.RunWorkerAsync ();
         
         this.Status = new Status ( "*" );
+        
+        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
         MainWindow.networkView.UpdateNetwork ( this );
@@ -236,6 +253,8 @@ public class Network
         worker.RunWorkerAsync ();
         
         this.Status = new Status ( " " );
+        
+        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
         MainWindow.networkView.UpdateNetwork ( this );

@@ -47,7 +47,7 @@ along with Haguichi; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     
     public static string[] appAuthors           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>" };
-    public static string[] appArtists           = new string [] { "" };
+    public static string[] appArtists           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>", "Lapo Calamandrei <calamandrei@gmail.com>" };
     public static string[] appDocumenters       = new string [] { "" };
     public static string   appTranslatorCredits =
 @"Deutsch (de)

@@ -402,7 +402,8 @@ public class Controller
          * Wait a moment for the thread to finish then continue in the main thread,
          * because GtkTreeView doesn't get updated when the GtkTreeModel is changed async... :(
          */
-        GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( UpdateList ) );
+        uint wait = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetListWaitTime ) );
+        GLib.Timeout.Add ( wait, new GLib.TimeoutHandler ( UpdateList ) );
         
         return true;
         
