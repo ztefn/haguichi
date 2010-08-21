@@ -61,7 +61,7 @@ Français (fr)
     Gabriel U.
 
 Italiano (it)
-    Enrico G.
+    Enrico Grassi
 
 Nederlands (nl)
     Stephen Brandt
