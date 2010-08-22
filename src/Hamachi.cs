@@ -55,6 +55,11 @@ public class Hamachi
          * 
          */
         
+        if ( Config.Settings.DemoMode )
+        {
+            return 2;
+        }
+        
         string output = Command.ReturnOutput ( "hamachi", "" );
         
         
@@ -92,7 +97,6 @@ public class Hamachi
             return 2;
         }
         
-        Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "Version: " + version.ToString () );
         return -1;
         
     }
@@ -529,8 +533,27 @@ public class Hamachi
     {
         
         ArrayList networks = new ArrayList ();
-    
-        string output = GetList ();
+        string output = "";
+        
+        if ( Config.Settings.DemoMode )
+        {
+            output =
+@" * [040-000-001]  Contributors                
+     x 090-000-001   Enrico                     5.123.456.789
+       090-000-002   Holmen                     5.123.456.789
+     * 090-000-003   scrawl                     5.123.456.789
+     ? 090-000-004 
+       090-000-005   worthmate                  5.123.456.789
+ * [040-000-002]  Portal Ubuntu                 
+     x 090-001-001   Soker                      5.123.456.789
+   [040-000-003]  WebUp8                        
+     * 090-002-001   Andrew                     5.123.456.789
+       090-002-002   MastroPino                 5.123.456.789";
+        }
+        else
+        {
+            output = GetList ();
+        }
         
         string[] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetworkId = "";

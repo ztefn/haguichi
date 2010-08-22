@@ -136,7 +136,6 @@ public class Network
         
         foreach ( Member member in Members )
         {
-            
             if ( member.ClientId == this.OwnerId )
             {
                 nick = member.Nick;
@@ -168,7 +167,37 @@ public class Network
         {
             try
             {
-                output = Command.ReturnOutput ( "hamachi", "network " + this.Id );
+                if ( Config.Settings.DemoMode )
+                {
+                    output = "hamachi network " + this.Id + @"
+    id       : " + this.Id + @"
+    name     : " + this.Name;
+                    
+                    if ( this.Id == "040-000-001" )
+                    {
+                        output += @"
+    type     : Mesh
+    owner    : This computer
+    status   : unlocked
+    approve  : manual";
+                    }
+                    else if ( this.Id == "040-000-002" )
+                    {
+                        output += @"
+    type     : Mesh
+    owner    : 090-001-001";
+                    }
+                    else if ( this.Id == "040-000-003" )
+                    {
+                        output += @"
+    type     : Mesh
+    owner    : 090-002-001";
+                    }
+                }
+                else
+                {
+                    output = Command.ReturnOutput ( "hamachi", "network " + this.Id );
+                }
                 Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
                 
                 this.OwnerId = Hamachi.Retrieve ( output, "owner" );

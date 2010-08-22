@@ -109,6 +109,11 @@ public class Controller
     public static int StatusCheck ()
     {
         
+        if ( Config.Settings.DemoMode )
+        {
+            return 6;   
+        }
+        
         string output = Hamachi.GetInfo ();
         
         Regex regex;

@@ -46,6 +46,10 @@ class Haguichi
             {
                 Config.Settings.Debugging = true;
             }
+            if ( s.Contains ( "demo" ) )
+            {
+                Config.Settings.DemoMode = true;
+            }
         }
         
         if ( Platform.ActiveProcess () )
