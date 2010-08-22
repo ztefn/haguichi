@@ -35,6 +35,8 @@ public class Member
     public string NameSortString;
     public string StatusSortString;
     
+    public bool IsEvicted;
+    
     private BackgroundWorker worker;
     
     
@@ -49,6 +51,8 @@ public class Member
         this.Tunnel   = tunnel;
         
         SetSortStrings ();
+        
+        this.IsEvicted = false;
         
     }
     
@@ -146,6 +150,8 @@ public class Member
         
         if ( dlg.response == "Ok" )
         {
+            this.IsEvicted = true;
+            
             Hamachi.Evict ( this );
             Controller.UpdateConnection (); // Update list
         }

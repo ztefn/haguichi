@@ -543,7 +543,9 @@ public class Controller
                             
                             MainWindow.networkView.RemoveMember ( oNetwork, oMember );
                             
-                            if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) )
+                            if ( ( oMember.Status.statusInt < 3 ) &&
+                                 ( !oMember.IsEvicted ) &&
+                                 ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) ) )
                             {
                                 string body = String.Format ( TextStrings.notifyMemberLeftMessage, oMember.Nick, oNetwork.Name );
                                 Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
