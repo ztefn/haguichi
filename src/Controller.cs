@@ -29,6 +29,7 @@ public class Controller
 {
     
     public static bool continueUpdate;
+    public static int numUpdateCycles;
     public static int lastStatus;
     
     private static ArrayList oNetworksList;
@@ -40,7 +41,7 @@ public class Controller
     public static void Init ()
     {
         
-        notifyIcon = MainWindow.appIcons[4];
+        notifyIcon = MainWindow.appIcons [4];
         
         oNetworksList = new ArrayList ();
         nNetworksList = new ArrayList ();
@@ -62,12 +63,14 @@ public class Controller
                 GetNicksAndNetworkList ();
             }
         }
-        else if ( ( lastStatus >= 3 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        else if ( ( lastStatus >= 3 ) &&
+                  ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Connecting" );
             GLib.Timeout.Add ( 500, new GLib.TimeoutHandler ( ConnectAfterTimeout ) );
         }
-        else if ( ( lastStatus >= 2 ) && ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+        else if ( ( lastStatus >= 2 ) &&
+                  ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Disconnected" );
             GlobalEvents.WaitForInternetCycle ();
@@ -116,7 +119,8 @@ public class Controller
             return 0;
         }
         
-        if ( output.IndexOf ( "Cannot find configuration directory" ) == 0 )
+        if ( ( output.IndexOf ( "Cannot find configuration directory" ) == 0 ) ||
+             ( output.IndexOf ( "You do not have permission to control the hamachid daemon." ) == 0 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not configured." );
             return 1;
@@ -207,17 +211,37 @@ public class Controller
             
             if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
                  ( output == "" ) ||
-                 ( output.IndexOf ( "Hamachi is already started" ) == 0 ) ) // Ok, started.
+                 ( output.IndexOf ( "Hamachi is already started" ) == 0 ) )
             {
+                /* Ok, started */
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Started!" );
+            }
+            else if ( output.IndexOf ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) == 0 )
+            {
+                /* Hamachi is starting */
+                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Hamachi is starting." );
+                
+                string output2 = Hamachi.GetInfo ();
+                Regex regex = new Regex ( "status([ ]+):([ ]+)logging in" );
+                
+                if ( output2.IndexOf ( "You do not have permission to control the hamachid daemon." ) == 0 )
+                {
+                    Dialogs.NotConfigured dlgNotConfigured = new Dialogs.NotConfigured ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, "Info" );
+                }
+                else if ( regex.IsMatch ( output2 ) )
+                {
+                    /* Wait a moment hoping Hamachi will be fully started by then */
+                    System.Threading.Thread.Sleep ( 2000 );
+                }
             }
             else if ( output.IndexOf ( "cfg: failed to load" ) != -1 )
             {
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Not properly configured, showing dialog." );
                 Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error" );
             }
-            else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 ) // Not able to start, running tuncfg required
+            else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 )
             {
+                /* Not able to start, running tuncfg required */
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "TunCfg required." );
                 MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
                 
@@ -253,8 +277,9 @@ public class Controller
                     Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Not yet started, go start?" );
                 }
             }
-            else if ( output.IndexOf ( "tap: connect() failed 111 (Connection refused)" ) != -1 ) // Not able to start, connection refused
+            else if ( output.IndexOf ( "tap: connect() failed 111 (Connection refused)" ) != -1 )
             {
+                /* Not able to start, connection refused */
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Connection refused, showing dialog" );
                 Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error" );
                 GlobalEvents.ConnectionStopped ();
@@ -385,8 +410,10 @@ public class Controller
     public static bool UpdateConnection ()
     {
         
-        if ( !continueUpdate )
+        if ( ( !continueUpdate ) ||
+             ( numUpdateCycles > 1 ) )
         {
+            numUpdateCycles -= 1;
             return false;
         }
         
@@ -577,7 +604,7 @@ public class Controller
                     MainWindow.networkView.AddNetwork ( nNetwork );
                 }
             }
-
+               
             /* Continue update interval */
             continueUpdate = true;
             

@@ -29,6 +29,7 @@ namespace Menus
     
         AccelGroup accelGroup;
         
+        ImageMenuItem configure;
         ImageMenuItem connect;
         ImageMenuItem disconnect;
         ImageMenuItem change;
@@ -41,6 +42,9 @@ namespace Menus
         
         public Quick()
         {
+            
+            configure = new ImageMenuItem ( TextStrings.configureLabel );
+            configure.Activated += GlobalEvents.ConfigureHamachi;
             
             connect = new ImageMenuItem ( Stock.Connect, accelGroup );
             connect.Activated += GlobalEvents.StartHamachi;
@@ -67,6 +71,7 @@ namespace Menus
             quit.Activated += GlobalEvents.QuitApp;
             
             
+            this.Add ( configure );
             this.Add ( connect );
             this.Add ( disconnect );
             this.Add ( change );
@@ -88,24 +93,15 @@ namespace Menus
             
             switch ( mode )
             {
-                case "Initiate":
-                    connect.Sensitive = false;
-                    disconnect.Visible = false;
-                    change.Sensitive = false;
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    info.Sensitive = false;
-                
-                    break;
-                    
                 case "Connecting":
                     // Nothing todo
                 
                     break;
                     
                 case "Connected":
-                    connect.Visible = false;
-                    disconnect.Visible = true;
+                    configure.Hide ();
+                    connect.Hide ();
+                    disconnect.Show ();
                     change.Sensitive = true;
                     join.Sensitive = true;
                     create.Sensitive = true;
@@ -114,9 +110,10 @@ namespace Menus
                     break;
                     
                 case "Disconnected":
-                    connect.Visible = true;
+                    configure.Hide ();
+                    connect.Show ();
                     connect.Sensitive = true;
-                    disconnect.Visible = false;
+                    disconnect.Hide ();
                     change.Sensitive = true;
                     join.Sensitive = false;
                     create.Sensitive = false;
@@ -125,8 +122,9 @@ namespace Menus
                     break;
                 
                 case "Not configured":
+                    configure.Show ();
                     connect.Sensitive = false;
-                    disconnect.Visible = false;
+                    disconnect.Hide ();
                     change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;
@@ -136,7 +134,7 @@ namespace Menus
                 
                 case "Not installed":
                     connect.Sensitive = false;
-                    disconnect.Visible = false;
+                    disconnect.Hide ();
                     change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;

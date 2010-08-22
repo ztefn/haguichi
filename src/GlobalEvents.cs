@@ -24,10 +24,20 @@ using Gtk;
     
 public class GlobalEvents
 {
-
+    
+    public static void ConfigureHamachi ( object obj, EventArgs args )
+    {
+        
+        Hamachi.Configure ();
+        
+    }
+    
+    
     public static void StartHamachi ( object obj, EventArgs args )
     {
+        
         StartHamachi ();
+        
     }
     
     
@@ -107,6 +117,7 @@ public class GlobalEvents
         
         uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
         
+        Controller.numUpdateCycles += 1;
         Controller.continueUpdate = true;
         
         GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.UpdateConnection ) );

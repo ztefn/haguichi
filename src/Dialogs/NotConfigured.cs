@@ -42,19 +42,12 @@ namespace Dialogs
         }
         
         
-        public void ResponseHandler ( object o, ResponseArgs args )
+        public void ResponseHandler ( object obj, ResponseArgs args )
         {
             
             if ( args.ResponseId == ResponseType.Ok )
             {
-                string output = Hamachi.Init ();
-                
-                if ( output.IndexOf ( "Authentication information has been created." ) != -1 )
-                {
-                    Config.Client.Set ( Config.Settings.HamachiDataPath, Config.Settings.DefaultHamachiDataPath );   
-                    Controller.Init ();
-                }
-                
+                GlobalEvents.ConfigureHamachi ( obj, args );
             }
             
         }

@@ -39,6 +39,7 @@ namespace Menus
         private MenuItem helpMenuItem;
         
         
+        private ImageMenuItem configure;
         private ImageMenuItem connect;
         private ImageMenuItem disconnect;
         private ImageMenuItem change;
@@ -62,6 +63,9 @@ namespace Menus
         public Menubar()
         {
             
+            configure = new ImageMenuItem ( TextStrings.configureLabel );
+            configure.Activated += GlobalEvents.ConfigureHamachi;
+            
             connect = new ImageMenuItem ( Stock.Connect, MainWindow.accelGroup );
             connect.Activated += GlobalEvents.StartHamachi;
             
@@ -84,6 +88,7 @@ namespace Menus
             quit.Activated += GlobalEvents.QuitApp;
             
             clientMenu = new Menu ();
+            clientMenu.Append ( configure );
             clientMenu.Append ( connect );
             clientMenu.Append ( disconnect );
             clientMenu.Append ( change );
@@ -183,6 +188,7 @@ namespace Menus
                     break;
                     
                 case "Connected":
+                    configure.Hide ();
                     connect.Hide ();
                     disconnect.Show ();
                     change.Sensitive = true;
@@ -193,6 +199,7 @@ namespace Menus
                     break;
                     
                 case "Disconnected":
+                    configure.Hide ();
                     connect.Show ();
                     connect.Sensitive = true;
                     disconnect.Hide ();
@@ -204,6 +211,7 @@ namespace Menus
                     break;
                 
                 case "Not configured":
+                    configure.Show ();
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
@@ -215,6 +223,7 @@ namespace Menus
                     break;
                 
                 case "Not installed":
+                    configure.Hide ();
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();

@@ -64,25 +64,16 @@ public class Hamachi
             return 0;
         }
         
-        if ( output.IndexOf ( "Have you run 'hamachi-init' ?" ) != -1 )
+        if ( ( output.IndexOf ( "Have you run 'hamachi-init' ?" ) != -1 ) ||
+             ( output.IndexOf ( "Have you run 'hamachi start' ?" ) != -1 ) ||
+             ( output.IndexOf ( "hamachi-lnx-0.9.9.9" ) != -1 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
             return 1;
         }
         
-        if ( output.IndexOf ( "Have you run 'hamachi start' ?" ) != -1 )
-        {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
-            return 1;
-        }
-        
-        if ( output.IndexOf ( "hamachi-lnx-0.9.9.9" ) != -1 )
-        {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
-            return 1;
-        }
-        
-        if ( output.IndexOf ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) != -1 )
+        if ( ( output.IndexOf ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) != -1 ) ||
+             ( output.IndexOf ( "You do not have permission to control the hamachid daemon." ) != -1 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
             return 2;
@@ -142,13 +133,32 @@ public class Hamachi
     }
     
     
-    public static string Init ()
+    public static void Configure ()
     {
         
-        string output = Command.ReturnOutput ( "hamachi-init", "" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Init", output );
+        string output = "";
         
-        return output;
+        if ( Hamachi.apiVersion > 1 )
+        {
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
+            
+            if ( output.IndexOf ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) != -1 )
+            {
+                Controller.Init ();
+            }
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            output = Command.ReturnOutput ( "hamachi-init", "" );
+            
+            if ( output.IndexOf ( "Authentication information has been created." ) != -1 )
+            {
+                Config.Client.Set ( Config.Settings.HamachiDataPath, Config.Settings.DefaultHamachiDataPath );
+                Controller.Init ();
+            }
+        }
+        
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
         
     }
     
@@ -165,7 +175,17 @@ public class Hamachi
     public static string Start ()
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "start" );
+        string output = "";
+        
+        if ( Hamachi.apiVersion > 1 )
+        {
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi start" );
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            output = Command.ReturnOutput ( "hamachi", "start" );
+        }
+        
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );
         
         return output;
@@ -176,10 +196,21 @@ public class Hamachi
     public static string Stop ()
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "stop" );
+        string output = "";
+        
+        if ( Hamachi.apiVersion > 1 )
+        {
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi stop" );
+        }
+        else if ( Hamachi.apiVersion == 1 )
+        {
+            output = Command.ReturnOutput ( "hamachi", "stop" );
+        }
+        
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Stop", output );
         
         return output;
+        
     }
     
     
