@@ -30,6 +30,7 @@ public class Hamachi
     }
     
     public static int apiVersion;
+    private static Random random;
     
     
     public static int DetermineApiVersion ()
@@ -242,6 +243,11 @@ public class Hamachi
     public static string GetClientId ()
     {
         
+        if ( Config.Settings.DemoMode )
+        {
+            return "090-123-456";
+        }
+        
         string output;
         
         try
@@ -262,6 +268,11 @@ public class Hamachi
     
     public static string GetAddress ()
     {
+        
+        if ( Config.Settings.DemoMode )
+        {
+            return "5.123.456.789";
+        }
         
         string output = "";
         
@@ -313,11 +324,16 @@ public class Hamachi
     }
     
     
-    public static string GoOnline ( string name )
+    public static string GoOnline ( string id )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-online '" + name + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "go-online '" + id + "'" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
+        }
         
         return output;
         
@@ -327,19 +343,21 @@ public class Hamachi
     public static string GoOnline ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-online '" + network.Id + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
-        
-        return output;
+        return GoOnline ( network.Id );
         
     }
     
     
-    public static string GoOffline ( string name )
+    public static string GoOffline ( string id )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-offline '" + name + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "go-offline '" + id + "'" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
+        }
         
         return output;
         
@@ -349,10 +367,7 @@ public class Hamachi
     public static string GoOffline ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "go-offline '" + network.Id + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
-        
-        return output;
+        return GoOffline ( network.Id );
         
     }
     
@@ -437,6 +452,11 @@ public class Hamachi
     public static string GetNick ()
     {
         
+        if ( Config.Settings.DemoMode )
+        {
+            return "Joe Demo";
+        }
+        
         string nick = "";
         
         if ( Hamachi.apiVersion > 1 )
@@ -470,6 +490,11 @@ public class Hamachi
     public static string GetVersion ()
     {
         
+        if ( Config.Settings.DemoMode )
+        {
+            return "2.0.0.11";
+        }
+        
         string output;
         
         try
@@ -483,27 +508,6 @@ public class Hamachi
         }
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", output );
-        
-        return output;
-        
-    }
-    
-    
-    public static string GetPID ()
-    {
-        
-        string output;
-        
-        try
-        {
-            output = Retrieve ( "hamachi", "", "pid" );
-        }
-        catch
-        {
-            output = "";
-        }
-        
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetPID", output );
         
         return output;
         
@@ -528,7 +532,52 @@ public class Hamachi
         
     }
     
-     
+    
+    public static string RandomAddress ()
+    {
+        
+        string address  = "5.";
+               address += random.Next ( 100, 255 );
+               address += ".";
+               address += random.Next ( 100, 255 );
+               address += ".";
+               address += random.Next ( 100, 255 );
+        
+        return address;
+        
+    }
+    
+    
+    public static string RandomClientId ()
+    {
+        
+        string id  = "0";
+               id += random.Next ( 90, 95 );
+               id += "-";
+               id += random.Next ( 100, 999 );
+               id += "-";
+               id += random.Next ( 100, 999 );
+        
+        return id;
+        
+    }
+    
+    
+    public static string RandomNetworkId ()
+    {
+        
+        string id  = "0";
+               id += random.Next ( 40, 45 );
+               id += "-";
+               id += random.Next ( 100, 999 );
+               id += "-";
+               id += random.Next ( 100, 999 );
+        
+        return id;
+        
+    }
+    
+    
     public static ArrayList ReturnList ()
     {
         
@@ -537,18 +586,19 @@ public class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            output =
-@" * [040-000-001]  Contributors                
-     x 090-000-001   Enrico                     5.123.456.789
-       090-000-002   Holmen                     5.123.456.789
-     * 090-000-003   scrawl                     5.123.456.789
-     ? 090-000-004 
-       090-000-005   worthmate                  5.123.456.789
- * [040-000-002]  Portal Ubuntu                 
-     x 090-001-001   Soker                      5.123.456.789
-   [040-000-003]  WebUp8                        
-     * 090-002-001   Andrew                     5.123.456.789
-       090-002-002   MastroPino                 5.123.456.789";
+            random = new Random ();
+            
+            output  = " * [" + RandomNetworkId () + "]  Contributors               \n";
+            output += "     x " + RandomClientId () + "   Enrico                     " + RandomAddress () + "\n";
+            output += "       " + RandomClientId () + "   Holmen                     " + RandomAddress () + "\n";
+            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + "\n";
+            output += "     ? " + RandomClientId () + " \n";
+            output += "       " + RandomClientId () + "   worthmate                  " + RandomAddress () + "\n";
+            output += " * [" + RandomNetworkId () + "]  Portal Ubuntu              \n";
+            output += "     x 092-466-858   Soker                      " + RandomAddress () + "\n";
+            output += "   [" + RandomNetworkId () + "]  WebUpd8                    \n";
+            output += "     * 094-409-761   Andrew                     " + RandomAddress () + "\n";
+            output += "       " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
         }
         else
         {
@@ -697,33 +747,36 @@ public class Hamachi
     public static void SetNick ( string nick )
     {
         
-        Config.Settings.SetNickAfterLogin = false;
-        
-        string output = "";
-        int status = Controller.StatusCheck ();
-        
-        if ( ( Hamachi.apiVersion == 1 ) &&
-             ( status < 4 ) )
+        if ( !Config.Settings.DemoMode )
         {
-            string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
-            output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );
+            Config.Settings.SetNickAfterLogin = false;
+            
+            string output = "";
+            int status = Controller.StatusCheck ();
+            
+            if ( ( Hamachi.apiVersion == 1 ) &&
+                 ( status < 4 ) )
+            {
+                string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
+                output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );
+            }
+            else if ( ( Hamachi.apiVersion == 1 ) &&
+                      ( status >= 4 ) )
+            {
+                output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+            }
+            else if ( ( Hamachi.apiVersion > 1 ) &&
+                      ( status >= 6 ) )
+            {
+                output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+            }
+            else if ( Hamachi.apiVersion > 1 )
+            {
+                Config.Settings.SetNickAfterLogin = true;   
+            }
+            
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
         }
-        else if ( ( Hamachi.apiVersion == 1 ) &&
-                  ( status >= 4 ) )
-        {
-            output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
-        }
-        else if ( ( Hamachi.apiVersion > 1 ) &&
-                  ( status >= 6 ) )
-        {
-            output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
-        }
-        else if ( Hamachi.apiVersion > 1 )
-        {
-            Config.Settings.SetNickAfterLogin = true;   
-        }
-        
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
         
     }
     
@@ -731,8 +784,13 @@ public class Hamachi
     public static string SendJoinRequest ( string name, string password )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "do-join '" + name + "' '" + password + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SendJoinRequest", output );
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "do-join '" + name + "' '" + password + "'" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SendJoinRequest", output );
+        }
         
         return output;
         
@@ -753,8 +811,13 @@ public class Hamachi
     public static string SetAccess ( string networkId, string locking, string approve )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "set-access '" + networkId + "' '" + locking + "' '" + approve + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetAccess", output );
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "set-access '" + networkId + "' '" + locking + "' '" + approve + "'" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetAccess", output );
+        }
         
         return output;
         
@@ -764,8 +827,13 @@ public class Hamachi
     public static string SetPassword ( string networkId, string password )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "set-pass '" + networkId + "' '" + password + "'" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetPassword", output );
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "set-pass '" + networkId + "' '" + password + "'" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetPassword", output );
+        }
         
         return output;
         

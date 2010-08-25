@@ -46,7 +46,11 @@ public class GlobalEvents
         
         int status = Controller.StatusCheck ();
         
-        if ( status == 2 )
+        if ( Config.Settings.DemoMode )
+        {
+            ConnectionEstablished ();
+        }
+        else if ( status == 2 )
         {
             Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
         }
@@ -62,7 +66,11 @@ public class GlobalEvents
     public static void StopHamachi ( object obj, EventArgs args )
     {
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Config.Settings.DemoMode )
+        {
+            // Do nothing
+        }
+        else if ( Hamachi.apiVersion > 1 )
         {
             Hamachi.Logout ();
         }

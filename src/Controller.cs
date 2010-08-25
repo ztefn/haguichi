@@ -466,9 +466,26 @@ public class Controller
     private static bool UpdateList ()
     {
         
-        if ( ( HasInternetConnection () ) &&
-             ( Haguichi.connection.Status.statusInt == 1 ) &&
-             ( lastStatus >= 6 ) ) // We're connected allright
+        if ( !continueUpdate )
+        {
+            /* Check again if we should update because this function is called after timeout */
+            return false;
+        }
+        
+        if ( Config.Settings.DemoMode )
+        {
+            
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Demo mode, not really updating list." );
+            
+            /* Continue update interval */
+            continueUpdate = true;
+            
+            MainWindow.statusBar.Push ( 0, TextStrings.connected );
+            
+        }
+        else if ( ( HasInternetConnection () ) &&
+                  ( Haguichi.connection.Status.statusInt == 1 ) &&
+                  ( lastStatus >= 6 ) ) // We're connected allright
         {
         
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Connected, updating list." );
@@ -611,7 +628,7 @@ public class Controller
                     MainWindow.networkView.AddNetwork ( nNetwork );
                 }
             }
-               
+            
             /* Continue update interval */
             continueUpdate = true;
             

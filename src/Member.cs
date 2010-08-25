@@ -123,18 +123,36 @@ public class Member
     
     public void Approve ( object o, EventArgs args )
     {
+        if ( Config.Settings.DemoMode )
+        {
+            this.Nick    = "Nick";
+            this.Address = "5.092.112.049";
+            this.Status  = new Status ( "*" );
         
-        Hamachi.Approve ( this );
-        Controller.UpdateConnection (); // Update list
+            SetSortStrings ();
+            
+            MainWindow.networkView.UpdateMember ( MainWindow.networkView.ReturnNetworkById ( this.Network ), this );
+        }
+        else
+        {
+            Hamachi.Approve ( this );
+            Controller.UpdateConnection (); // Update list
+        }
     
     }
     
     
     public void Reject ( object o, EventArgs args )
     {
-        
-        Hamachi.Reject ( this );
-        Controller.UpdateConnection (); // Update list
+        if ( Config.Settings.DemoMode )
+        {
+            MainWindow.networkView.RemoveMember ( MainWindow.networkView.ReturnNetworkById ( this.Network ), this );
+        }
+        else
+        {
+            Hamachi.Reject ( this );
+            Controller.UpdateConnection (); // Update list
+        }
     
     }
     
@@ -142,18 +160,27 @@ public class Member
     public void Evict ( object o, EventArgs args )
     {
         
+        Network network = MainWindow.networkView.ReturnNetworkById ( this.Network );
+        
         string label   = TextStrings.evictLabel;
         string heading = String.Format ( TextStrings.confirmEvictMemberHeading, this.Nick );
-        string message = String.Format ( TextStrings.confirmEvictMemberMessage, this.Nick, this.Network );
+        string message = String.Format ( TextStrings.confirmEvictMemberMessage, this.Nick, network.Name );
             
         Dialogs.Confirm dlg = new Dialogs.Confirm ( heading, message, "Warning", label, null );
         
         if ( dlg.response == "Ok" )
         {
-            this.IsEvicted = true;
-            
-            Hamachi.Evict ( this );
-            Controller.UpdateConnection (); // Update list
+            if ( Config.Settings.DemoMode )
+            {
+                MainWindow.networkView.RemoveMember ( network, this );
+            }
+            else
+            {
+                this.IsEvicted = true;
+                
+                Hamachi.Evict ( this );
+                Controller.UpdateConnection (); // Update list
+            }
         }
     
     }

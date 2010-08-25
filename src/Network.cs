@@ -43,6 +43,12 @@ public class Network
     private BackgroundWorker worker;
     
     
+    public Network ()
+    {
+        // Just for creating unassigned instances
+    }
+    
+    
     public Network ( Status status, string id, string name )
     {
         
@@ -173,25 +179,25 @@ public class Network
     id       : " + this.Id + @"
     name     : " + this.Name;
                     
-                    if ( this.Id == "040-000-001" )
+                    if ( this.Name == "Portal Ubuntu" )
+                    {
+                        output += @"
+    type     : Mesh
+    owner    : 092-466-858";
+                    }
+                    else if ( this.Name == "WebUpd8" )
+                    {
+                        output += @"
+    type     : Mesh
+    owner    : 094-409-761";
+                    }
+                    else
                     {
                         output += @"
     type     : Mesh
     owner    : This computer
     status   : unlocked
     approve  : manual";
-                    }
-                    else if ( this.Id == "040-000-002" )
-                    {
-                        output += @"
-    type     : Mesh
-    owner    : 090-001-001";
-                    }
-                    else if ( this.Id == "040-000-003" )
-                    {
-                        output += @"
-    type     : Mesh
-    owner    : 090-002-001";
                     }
                 }
                 else
@@ -372,7 +378,7 @@ public class Network
     
     public void Leave ( object o, EventArgs args )
     {
-    
+        
         string label   = TextStrings.leaveLabel;
         string heading = String.Format ( TextStrings.confirmLeaveNetworkHeading, this.Name );
         string message = String.Format ( TextStrings.confirmLeaveNetworkMessage, this.Name );
@@ -381,8 +387,15 @@ public class Network
         
         if ( dlg.response == "Ok" )
         {
-            Hamachi.Leave ( this );
-            Controller.UpdateConnection (); // Update list
+            if ( Config.Settings.DemoMode )
+            {
+                MainWindow.networkView.RemoveNetwork ( this );
+            }
+            else
+            {
+                Hamachi.Leave ( this );
+                Controller.UpdateConnection (); // Update list
+            }
         }
         
     }
@@ -390,7 +403,7 @@ public class Network
     
     public void Delete ( object o, EventArgs args )
     {
-    
+        
         string label   = Stock.Delete;
         string heading = String.Format ( TextStrings.confirmDeleteNetworkHeading, this.Name );
         string message = String.Format ( TextStrings.confirmDeleteNetworkMessage, this.Name );
@@ -399,8 +412,15 @@ public class Network
         
         if ( dlg.response == "Ok" )
         {
-            Hamachi.Delete ( this );
-            Controller.UpdateConnection (); // Update list
+            if ( Config.Settings.DemoMode )
+            {
+                MainWindow.networkView.RemoveNetwork ( this );
+            }
+            else
+            {
+                Hamachi.Delete ( this );
+                Controller.UpdateConnection (); // Update list
+            }
         }
         
     }

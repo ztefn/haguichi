@@ -385,11 +385,39 @@ public class NetworkView : TreeView
     }
     
     
-    private TreeIter ReturnNetworkIter ( Network network )
+    public TreeIter ReturnNetworkIter ( Network network )
     {
         
         return ReturnNetworkIter ( network.Id );
         
+    }
+    
+    
+    public Network ReturnNetworkById ( string id )
+    {
+        
+        Network returnNetwork = new Network ();
+        TreeIter networkIter = new TreeIter ();
+        
+        if ( store.GetIterFirst ( out networkIter ) )                         // First network
+        {
+            Network netw = ( Network ) store.GetValue ( networkIter, networkColumn );
+            if ( netw.Id == id )
+            {
+                returnNetwork = netw;
+            }
+            while ( store.IterNext ( ref networkIter ) )                      // All other networks
+            {
+                netw = ( Network ) store.GetValue ( networkIter, networkColumn );
+                
+                if ( netw.Id == id )
+                {
+                    returnNetwork = netw;
+                }
+            }
+        }
+        
+        return returnNetwork;
     }
     
     
@@ -430,16 +458,16 @@ public class NetworkView : TreeView
         TreeIter memberIter = new TreeIter ();
         store.IterChildren ( out memberIter, networkIter );             // First member
         
-        Member pr = ( Member ) store.GetValue ( memberIter, memberColumn );
-        if ( pr.Address == member.Address )
+        Member memb = ( Member ) store.GetValue ( memberIter, memberColumn );
+        if ( memb.ClientId == member.ClientId )
         {
             returnIter = memberIter;
         }      
         while ( store.IterNext ( ref memberIter ) )                     // All other members
         {
-            pr = ( Member ) store.GetValue ( memberIter, memberColumn );
+            memb = ( Member ) store.GetValue ( memberIter, memberColumn );
             
-            if ( pr.Address == member.Address )
+            if ( memb.ClientId == member.ClientId )
             {
                 returnIter = memberIter;
             }

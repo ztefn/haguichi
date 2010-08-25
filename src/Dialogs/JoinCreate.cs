@@ -275,7 +275,16 @@ namespace Dialogs
             this.NetworkName     = nameEntry.GetChars ( 0, -1 );
             this.NetworkPassword = passwordEntry.GetChars ( 0, -1 );
             
-            string output = Hamachi.JoinNetwork ( this.NetworkName, this.NetworkPassword );
+            string output = "";
+            
+            if ( Config.Settings.DemoMode )
+            {
+                output = ".. failed, manual approval required";
+            }
+            else
+            {
+                output = Hamachi.JoinNetwork ( this.NetworkName, this.NetworkPassword );
+            }
             
             if ( output.IndexOf ( ".. failed, network not found" ) != -1 )
             {
@@ -346,6 +355,14 @@ namespace Dialogs
             
             this.NetworkName     = nameEntry.GetChars ( 0, -1 );
             this.NetworkPassword = passwordEntry.GetChars ( 0, -1 );
+            
+            if ( Config.Settings.DemoMode )
+            {
+                Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName );
+                MainWindow.networkView.AddNetwork ( network );
+                Dismiss ();
+                return;
+            }
             
             string output = Hamachi.CreateNetwork ( this.NetworkName, this.NetworkPassword );
             
