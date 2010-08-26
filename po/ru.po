@@ -7,24 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-08-20 23:58:55+0200\n"
-"PO-Revision-Date: 2010-08-07 11:18+0000\n"
+"POT-Creation-Date: 2010-08-20 23:59+0200\n"
+"PO-Revision-Date: 2010-08-26 14:12+0000\n"
 "Last-Translator: Sergey Sedov <sedov@webmail.perm.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-08 12:12+0000\n"
+"X-Launchpad-Export-Date: 2010-08-26 20:04+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:303
 msgid "Haguichi Website"
 msgstr "Сайт Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:304
 msgid "A graphical frontend for Hamachi."
 msgstr "Графическая оболочка к Hamachi"
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:305
 msgid "Join and create local networks over the Internet"
 msgstr "Создавайте и подключайтесь к локальным сетям в интернете"
@@ -118,9 +120,8 @@ msgid "Getting nicknames..."
 msgstr "Загрузка псевдонимов..."
 
 #: ../src/TextStrings.cs:332
-#, fuzzy
 msgid "Updating..."
-msgstr "Создание..."
+msgstr "Обновление..."
 
 #: ../src/TextStrings.cs:334
 msgid "Connect a_utomatically"
@@ -148,7 +149,7 @@ msgstr "Для подключения вам необходимо настрои
 
 #: ../src/TextStrings.cs:343
 msgid "Not installed"
-msgstr "Не установлено"
+msgstr "Не установлен"
 
 #: ../src/TextStrings.cs:344
 msgid "Hamachi is not installed"
@@ -184,7 +185,7 @@ msgstr "Недоступно"
 
 #: ../src/TextStrings.cs:353
 msgid "Awaiting approval"
-msgstr ""
+msgstr "Ожидание одобрения"
 
 #: ../src/TextStrings.cs:354
 msgid "Locked:"
@@ -244,19 +245,19 @@ msgstr "_Выйти"
 
 #: ../src/TextStrings.cs:371
 msgid "_Locked"
-msgstr ""
+msgstr "_Заблокировано"
 
 #: ../src/TextStrings.cs:372
 msgid "_New Member Approval"
-msgstr ""
+msgstr "_Одобрение нового члена"
 
 #: ../src/TextStrings.cs:373
 msgid "_Automatically"
-msgstr ""
+msgstr "_Автоматически"
 
 #: ../src/TextStrings.cs:374
 msgid "_Manually"
-msgstr ""
+msgstr "_Вручную"
 
 #: ../src/TextStrings.cs:375
 msgid "_Copy Network ID"
@@ -332,15 +333,15 @@ msgstr "Нажмите для изменения псевдонима"
 
 #: ../src/TextStrings.cs:398
 msgid "Change _Password..."
-msgstr ""
+msgstr "Изменить _пароль..."
 
 #: ../src/TextStrings.cs:399
 msgid "Change Password"
-msgstr ""
+msgstr "Смена пароля"
 
 #: ../src/TextStrings.cs:400
 msgid "Please enter the new password for this network."
-msgstr ""
+msgstr "Пожалуйста, введите новый пароль для этой сети"
 
 #: ../src/TextStrings.cs:402
 msgid "_Join"
@@ -502,6 +503,7 @@ msgstr "Вы не владелец сети '{0}'."
 msgid "General"
 msgstr "Общие"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:450
 msgid "Desktop"
 msgstr "Рабочий стол"
