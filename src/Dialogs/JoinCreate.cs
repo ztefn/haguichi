@@ -215,6 +215,11 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.VBox.ShowAll ();
             
+            if ( Hamachi.apiVersion > 1 )
+            {
+                goOnline.Hide ();
+            }
+            
             SetMode ( mode );
             
             HideFailure ();

@@ -589,16 +589,16 @@ public class Hamachi
             random = new Random ();
             
             output  = " * [" + RandomNetworkId () + "]  Contributors               \n";
-            output += "     x " + RandomClientId () + "   Enrico                     " + RandomAddress () + "\n";
-            output += "       " + RandomClientId () + "   Holmen                     " + RandomAddress () + "\n";
+            output += "       " + RandomClientId () + "   Enrico                     " + RandomAddress () + "\n";
+            output += "     x " + RandomClientId () + "   Holmen                     " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + "\n";
+            output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
             output += "     ? " + RandomClientId () + " \n";
-            output += "       " + RandomClientId () + "   worthmate                  " + RandomAddress () + "\n";
             output += " * [" + RandomNetworkId () + "]  Portal Ubuntu              \n";
             output += "     x 092-466-858   Soker                      " + RandomAddress () + "\n";
             output += "   [" + RandomNetworkId () + "]  WebUpd8                    \n";
-            output += "     * 094-409-761   Andrew                     " + RandomAddress () + "\n";
-            output += "       " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
+            output += "       094-409-761   Andrew                     " + RandomAddress () + "\n";
+            output += "     * " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
         }
         else
         {
