@@ -7,35 +7,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-08-20 23:58:55+0200\n"
-"PO-Revision-Date: 2010-06-19 16:16+0000\n"
+"POT-Creation-Date: 2010-08-20 23:59+0200\n"
+"PO-Revision-Date: 2010-08-27 22:25+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-06-19 16:20+0000\n"
+"X-Launchpad-Export-Date: 2010-08-27 22:28+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:303
 msgid "Haguichi Website"
 msgstr "Site internet d'Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:304
 msgid "A graphical frontend for Hamachi."
 msgstr "Une interface graphique pour Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:305
 msgid "Join and create local networks over the Internet"
 msgstr "Joindre ou créer des réseaux locaux à travers l'Internet"
 
 #: ../src/TextStrings.cs:307
 msgid "Yes"
-msgstr ""
+msgstr "Oui"
 
 #: ../src/TextStrings.cs:308
 msgid "No"
-msgstr ""
+msgstr "Non"
 
 #: ../src/TextStrings.cs:310
 msgid "Address:"
@@ -43,16 +45,15 @@ msgstr "Adresse :"
 
 #: ../src/TextStrings.cs:311
 msgid "ID:"
-msgstr ""
+msgstr "Identifiant :"
 
 #: ../src/TextStrings.cs:312
 msgid "Client ID:"
 msgstr ""
 
 #: ../src/TextStrings.cs:313
-#, fuzzy
 msgid "Network ID:"
-msgstr "Le réseau est saturé"
+msgstr ""
 
 #: ../src/TextStrings.cs:314
 msgid "Status:"
@@ -119,9 +120,8 @@ msgid "Getting nicknames..."
 msgstr "Obtention des pseudonymes..."
 
 #: ../src/TextStrings.cs:332
-#, fuzzy
 msgid "Updating..."
-msgstr "Création en cours..."
+msgstr "Mise à jour…"
 
 #: ../src/TextStrings.cs:334
 msgid "Connect a_utomatically"
@@ -198,12 +198,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:356
 msgid "Manually"
-msgstr ""
+msgstr "Manuellement"
 
 #: ../src/TextStrings.cs:357
-#, fuzzy
 msgid "Automatically"
-msgstr "Connecter a_utomatiquement"
+msgstr "Automatiquement"
 
 #: ../src/TextStrings.cs:359
 msgid "_Client"
@@ -254,18 +253,16 @@ msgid "_New Member Approval"
 msgstr ""
 
 #: ../src/TextStrings.cs:373
-#, fuzzy
 msgid "_Automatically"
-msgstr "Connecter a_utomatiquement"
+msgstr "_Automatiquement"
 
 #: ../src/TextStrings.cs:374
 msgid "_Manually"
-msgstr ""
+msgstr "_Manuellement"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "_Copy Network ID"
-msgstr "Joindre le réseau"
+msgstr ""
 
 #: ../src/TextStrings.cs:377
 msgid "_Browse Shares"
@@ -336,21 +333,16 @@ msgid "Click to change your nickname"
 msgstr "Clickez pour changer votre pseudonyme"
 
 #: ../src/TextStrings.cs:398
-#, fuzzy
 msgid "Change _Password..."
-msgstr "Changer le _pseudonyme..."
+msgstr ""
 
 #: ../src/TextStrings.cs:399
-#, fuzzy
 msgid "Change Password"
-msgstr "Mot de _passe :"
+msgstr "Changer de mot de passe"
 
 #: ../src/TextStrings.cs:400
-#, fuzzy
 msgid "Please enter the new password for this network."
 msgstr ""
-"Merci d'entrer le nom et le mot de passe pour le\n"
-"réseau que vous voulez joindre."
 
 #: ../src/TextStrings.cs:402
 msgid "_Join"
@@ -409,9 +401,8 @@ msgid "Network is full"
 msgstr "Le réseau est saturé"
 
 #: ../src/TextStrings.cs:417
-#, fuzzy
 msgid "Network is locked"
-msgstr "Le réseau est saturé"
+msgstr ""
 
 #: ../src/TextStrings.cs:418
 msgid "Network already joined"
@@ -496,9 +487,8 @@ msgid "You are the owner of this network."
 msgstr "Vous êtes le propriétaire de ce réseau"
 
 #: ../src/TextStrings.cs:444
-#, fuzzy
 msgid "You don't have permission to leave this network."
-msgstr "Vous n'êtes pas le propriétaire de ce réseau"
+msgstr ""
 
 #: ../src/TextStrings.cs:446
 msgid "Failed evicting member '{0}'"
@@ -512,6 +502,7 @@ msgstr "Vous n'êtes pas le propriétaire du réseau '{0}'."
 msgid "General"
 msgstr "Général"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:450
 msgid "Desktop"
 msgstr "Espace de travail"

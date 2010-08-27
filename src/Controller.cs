@@ -89,6 +89,12 @@ public class Controller
             MainWindow.SetMode ( "Not installed" );
             Dialogs.NotInstalled dlgNotInstalled = new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
         }
+        
+        if ( Config.Settings.DemoMode )
+        {
+            string body = String.Format ( TextStrings.notifyMemberOnlineMessage, "T-800", "Skynet" );
+            Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );   
+        }
    
     }
     

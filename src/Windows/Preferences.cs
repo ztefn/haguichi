@@ -54,9 +54,11 @@ namespace Windows
         {
             
             this.WindowPosition = Gtk.WindowPosition.Center;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 12;
-            this.DeleteEvent += OnWinDelete;
+            this.DefaultWidth   = 440;
+            this.DefaultHeight  = 360;
+            this.IconList       = MainWindow.appIcons;
+            this.BorderWidth    = 12;
+            this.DeleteEvent   += OnWinDelete;
             
             
             closeBut = new Button ( Stock.Close );
