@@ -99,21 +99,41 @@ namespace Config
                 if ( key.Contains ( Config.Settings.NotifyOnMemberJoin.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnMemberJoin.Active = ( bool ) val;
+                    
+                    if ( Config.Settings.DemoMode )
+                    {
+                        Controller.NotifyMemberJoined ( "T-800", "Skynet" ); 
+                    }
                 }
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberLeave.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnMemberLeave.Active = ( bool ) val;
+                    
+                    if ( Config.Settings.DemoMode )
+                    {
+                        Controller.NotifyMemberLeft ( "T-800", "Skynet" );
+                    }
                 }
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberOnline.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnMemberOnline.Active = ( bool ) val;
+                    
+                    if ( Config.Settings.DemoMode )
+                    {
+                        Controller.NotifyMemberOnline ( "T-800", "Skynet" );
+                    }
                 }
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberOffline.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnMemberOffline.Active = ( bool ) val;
+                    
+                    if ( Config.Settings.DemoMode )
+                    {
+                        Controller.NotifyMemberOffline ( "T-800", "Skynet" );   
+                    }
                 }
                 
                 if ( key.Contains ( Config.Settings.ShowTrayIcon.KeyName ) )

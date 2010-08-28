@@ -90,12 +90,6 @@ public class Controller
             Dialogs.NotInstalled dlgNotInstalled = new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
         }
         
-        if ( Config.Settings.DemoMode )
-        {
-            string body = String.Format ( TextStrings.notifyMemberOnlineMessage, "T-800", "Skynet" );
-            Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );   
-        }
-   
     }
     
     
@@ -572,11 +566,9 @@ public class Controller
                             MainWindow.networkView.RemoveMember ( oNetwork, oMember );
                             
                             if ( ( oMember.Status.statusInt < 3 ) &&
-                                 ( !oMember.IsEvicted ) &&
-                                 ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) ) )
+                                 ( !oMember.IsEvicted ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberLeftMessage, oMember.Nick, oNetwork.Name );
-                                Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
+                                NotifyMemberLeft ( oMember.Nick, oNetwork.Name );
                             }
                         }
                     }
@@ -590,18 +582,14 @@ public class Controller
                             Member oMember = ( Member ) oMembersHash [ nMember.ClientId ];
                             
                             if ( ( oMember.Status.statusInt == 0 ) &&
-                                 ( nMember.Status.statusInt == 1 ) &&
-                                 ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline ) ) )
+                                 ( nMember.Status.statusInt == 1 ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberOnlineMessage, nMember.Nick, oNetwork.Name );
-                                Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
+                                NotifyMemberOnline ( nMember.Nick, oNetwork.Name );
                             }
                             if ( ( oMember.Status.statusInt == 1 ) &&
-                                 ( nMember.Status.statusInt == 0 ) &&
-                                 ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline ) ) )
+                                 ( nMember.Status.statusInt == 0 ) )
                             {
-                                string body = String.Format ( TextStrings.notifyMemberOfflineMessage, nMember.Nick, oNetwork.Name );
-                                Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
+                                NotifyMemberOffline ( nMember.Nick, oNetwork.Name );
                             }
                             
                             oMember.Update ( nMember.Status, nMember.Network, nMember.Address, nMember.Nick, nMember.ClientId, nMember.Tunnel );
@@ -616,11 +604,7 @@ public class Controller
                             
                             MainWindow.networkView.AddMember ( oNetwork, nMember );
                             
-                            if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin ) )
-                            {
-                                string body = String.Format ( TextStrings.notifyMemberJoinedMessage, nMember.Nick, oNetwork.Name );
-                                Notify n = new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
-                            }
+                            NotifyMemberJoined ( nMember.Nick, oNetwork.Name );
                         }
                     }
                     
@@ -658,6 +642,54 @@ public class Controller
         }
         
         return false; // Stop calling timeout handler
+        
+    }
+    
+    
+    public static void NotifyMemberJoined ( string nick, string network )
+    {
+        
+        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin ) )
+        {
+            string body = String.Format ( TextStrings.notifyMemberJoinedMessage, nick, network );
+            Notify n = new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberLeft ( string nick, string network )
+    {
+        
+        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) )
+        {
+            string body = String.Format ( TextStrings.notifyMemberLeftMessage, nick, network );
+            Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberOnline ( string nick, string network )
+    {
+        
+        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline ) )
+        {
+            string body = String.Format ( TextStrings.notifyMemberOnlineMessage, nick, network );
+            Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberOffline ( string nick, string network )
+    {
+        
+        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline ) )
+        {
+            string body = String.Format ( TextStrings.notifyMemberOfflineMessage, nick, network );
+            Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
+        }
         
     }
     
