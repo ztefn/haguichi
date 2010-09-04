@@ -59,6 +59,7 @@ Español (es)
 
 Français (fr)
     Gabriel U.
+    Emilien Klein
 
 Italiano (it)
     Enrico Grassi
