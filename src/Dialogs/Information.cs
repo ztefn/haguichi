@@ -251,7 +251,7 @@ namespace Dialogs
                 
                 idEntry.Markup = id;
             }
-            else if ( Hamachi.apiVersion == 1 )
+            else
             {
                 idBox.Hide ();
             }
