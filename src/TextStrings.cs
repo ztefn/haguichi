@@ -64,6 +64,9 @@ Français (fr)
 Italiano (it)
     Enrico Grassi
 
+日本語 (ja)
+    Satoru Matsumoto
+
 Nederlands (nl)
     Stephen Brandt
 
