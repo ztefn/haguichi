@@ -240,7 +240,7 @@ namespace Dialogs
         public void SetClientId ()
         {
             
-            if ( Hamachi.apiVersion > 1 )
+            if ( Hamachi.ApiVersion > 1 )
             {
                 string id = Hamachi.GetClientId ();
                 

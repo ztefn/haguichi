@@ -283,7 +283,7 @@ namespace Windows
             this.Add ( vbox );
             vbox.ShowAll ();
             
-            if ( Hamachi.apiVersion > 1 )
+            if ( Hamachi.ApiVersion != 1 )
             {
                 pathBox.Hide ();
                 askTunCfg.Hide ();

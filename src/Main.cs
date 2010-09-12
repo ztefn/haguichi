@@ -70,7 +70,7 @@ class Haguichi
         TextStrings.Init ();
         Config.Client.Init ();
         
-        Hamachi.apiVersion  = Hamachi.DetermineApiVersion ();
+        Hamachi.ApiVersion  = Hamachi.DetermineApiVersion ();
         
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();

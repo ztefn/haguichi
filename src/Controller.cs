@@ -54,11 +54,11 @@ public class Controller
         {
             MainWindow.SetMode ( "Connecting" );
             
-            if ( Hamachi.apiVersion > 1 )
+            if ( Hamachi.ApiVersion > 1 )
             {
                 GetNetworkList ();
             }
-            else if ( Hamachi.apiVersion == 1 )
+            else if ( Hamachi.ApiVersion == 1 )
             {
                 GetNicksAndNetworkList ();
             }
@@ -343,11 +343,11 @@ public class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Connected!" );
             
-            if ( Hamachi.apiVersion > 1 )
+            if ( Hamachi.ApiVersion > 1 )
             {
                 GetNetworkList ();
             }
-            else if ( Hamachi.apiVersion == 1 )
+            else if ( Hamachi.ApiVersion == 1 )
             {
                 GetNicksAndNetworkList ();
             }
@@ -451,7 +451,7 @@ public class Controller
              ( lastStatus >= 6 ) )
         {
             
-            if ( Hamachi.apiVersion == 1 )
+            if ( Hamachi.ApiVersion == 1 )
             {
                  // Update nicks
                 Hamachi.GetNicks ();

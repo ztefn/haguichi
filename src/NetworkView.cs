@@ -208,7 +208,7 @@ public class NetworkView : TreeView
                 string approveString = "";
                 string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
                 
-                if ( Hamachi.apiVersion > 1 )
+                if ( Hamachi.ApiVersion > 1 )
                 {
                     idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
                 }

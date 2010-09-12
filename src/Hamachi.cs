@@ -29,7 +29,7 @@ public class Hamachi
     {
     }
     
-    public static int apiVersion;
+    public  static int ApiVersion;
     private static Random random;
     
     
@@ -143,16 +143,16 @@ public class Hamachi
         
         string output = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
+            output = Command.ReturnOutput ( Command.Sudo, "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
             
             if ( output.IndexOf ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) != -1 )
             {
                 Controller.Init ();
             }
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             output = Command.ReturnOutput ( "hamachi-init", "" );
             
@@ -171,7 +171,7 @@ public class Hamachi
     public static void TunCfg ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
+        string output = Command.ReturnOutput ( Command.Sudo, ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.TunCfg", output );
         
     }
@@ -182,11 +182,11 @@ public class Hamachi
         
         string output = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi start" );
+            output = Command.ReturnOutput ( Command.Sudo, "/etc/init.d/logmein-hamachi start" );
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             output = Command.ReturnOutput ( "hamachi", "start" );
         }
@@ -203,11 +203,11 @@ public class Hamachi
         
         string output = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi stop" );
+            output = Command.ReturnOutput ( Command.Sudo, "/etc/init.d/logmein-hamachi stop" );
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             output = Command.ReturnOutput ( "hamachi", "stop" );
         }
@@ -276,7 +276,7 @@ public class Hamachi
         
         string output = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
             try
             {
@@ -284,7 +284,7 @@ public class Hamachi
             }
             catch {}
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
             
@@ -459,11 +459,11 @@ public class Hamachi
         
         string nick = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
             nick = Retrieve ( "hamachi", "", "nickname" );
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
             
@@ -618,7 +618,7 @@ public class Hamachi
         int nickLength     = 0;
         int tunnelStart    = 0;
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
             peerMinLength  = 61;
         
@@ -630,7 +630,7 @@ public class Hamachi
             nickLength     = 25;
             tunnelStart    = 80;
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             peerMinLength  = 49;
             
@@ -721,7 +721,7 @@ public class Hamachi
                     Member member = new Member ( status, curNetworkId, address, nick, client, tunnel );
                     
                     if ( ( nick.Length == 25 ) &&
-                         ( Hamachi.apiVersion > 1 ) )
+                         ( Hamachi.ApiVersion > 1 ) )
                     {
                         member.GetLongNick ();
                     }
@@ -754,23 +754,23 @@ public class Hamachi
             string output = "";
             int status = Controller.StatusCheck ();
             
-            if ( ( Hamachi.apiVersion == 1 ) &&
+            if ( ( Hamachi.ApiVersion == 1 ) &&
                  ( status < 4 ) )
             {
                 string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
                 output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );
             }
-            else if ( ( Hamachi.apiVersion == 1 ) &&
+            else if ( ( Hamachi.ApiVersion == 1 ) &&
                       ( status >= 4 ) )
             {
                 output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
             }
-            else if ( ( Hamachi.apiVersion > 1 ) &&
+            else if ( ( Hamachi.ApiVersion > 1 ) &&
                       ( status >= 6 ) )
             {
                 output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
             }
-            else if ( Hamachi.apiVersion > 1 )
+            else if ( Hamachi.ApiVersion > 1 )
             {
                 Config.Settings.SetNickAfterLogin = true;   
             }

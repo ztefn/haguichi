@@ -169,7 +169,7 @@ public class Network
         
         string output = "";
         
-        if ( Hamachi.apiVersion > 1 )
+        if ( Hamachi.ApiVersion > 1 )
         {
             try
             {
@@ -221,7 +221,7 @@ public class Network
             }
             catch {}
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             output = Command.ReturnOutput ( "hamachi", "evict '" + this.Id + "' 0.0.0.0" );
             Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );

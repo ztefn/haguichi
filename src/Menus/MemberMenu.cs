@@ -75,7 +75,7 @@ namespace Menus
             
             this.ShowAll ();
             
-            if ( Hamachi.apiVersion == 1 )
+            if ( Hamachi.ApiVersion == 1 )
             {
                 copyId.Visible = false;
             }

@@ -215,7 +215,7 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.VBox.ShowAll ();
             
-            if ( Hamachi.apiVersion > 1 )
+            if ( Hamachi.ApiVersion > 1 )
             {
                 goOnline.Hide ();
             }

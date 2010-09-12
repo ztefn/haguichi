@@ -70,11 +70,11 @@ public class GlobalEvents
         {
             // Do nothing
         }
-        else if ( Hamachi.apiVersion > 1 )
+        else if ( Hamachi.ApiVersion > 1 )
         {
             Hamachi.Logout ();
         }
-        else if ( Hamachi.apiVersion == 1 )
+        else if ( Hamachi.ApiVersion == 1 )
         {
             Hamachi.Stop ();
         }

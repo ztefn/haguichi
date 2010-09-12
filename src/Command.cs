@@ -24,7 +24,43 @@ using System.Diagnostics;
 public class Command
 {
     
-    public static bool inProgress = false;
+    public static string Sudo = DetermineSudo ();
+    private static bool inProgress = false;
+    
+    
+    public static string DetermineSudo ()
+    {
+        
+        string sudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
+            
+        if ( ReturnOutput ( sudo, "-h" ) != "error" )
+        {
+            return sudo;
+        }   
+        if ( ReturnOutput ( "gksudo", "-h" ) != "error" )
+        {
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, "gksudo" );
+            return "gksudo";
+        }
+        if ( ReturnOutput ( "gnomesu", "-h" ) != "error" )
+        {
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, "gnomesu" );
+            return "gnomesu";
+        }
+        if ( ReturnOutput ( "kdesudo", "-h" ) != "error" )
+        {
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesudo" );
+            return "kdesudo";
+        }
+        if ( ReturnOutput ( "kdesu", "-h" ) != "error" )
+        {
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesu" );
+            return "kdesu";
+        }
+        
+        return "sudo";
+        
+    }
     
     
     public static void Execute ( string command )
