@@ -27,17 +27,18 @@ namespace Menus
     public class Quick : Menu
     {
     
-        AccelGroup accelGroup;
+        private AccelGroup accelGroup;
         
-        ImageMenuItem configure;
-        ImageMenuItem connect;
-        ImageMenuItem disconnect;
-        ImageMenuItem change;
-        ImageMenuItem join;
-        ImageMenuItem create;
-        ImageMenuItem info;
-        ImageMenuItem preferences;
-        ImageMenuItem quit;
+        private ImageMenuItem configure;
+        private ImageMenuItem connect;
+        private ImageMenuItem disconnect;
+        private ImageMenuItem change;
+        private ImageMenuItem join;
+        private ImageMenuItem create;
+        private ImageMenuItem attach;
+        private ImageMenuItem info;
+        private ImageMenuItem preferences;
+        private ImageMenuItem quit;
         
         
         public Quick()
@@ -61,6 +62,9 @@ namespace Menus
             create = new ImageMenuItem ( TextStrings.createNetworkLabel );
             create.Activated += GlobalEvents.CreateNetwork;
             
+            attach = new ImageMenuItem ( TextStrings.attachMenuLabel );
+            attach.Activated += GlobalEvents.Attach;
+            
             info = new ImageMenuItem ( Stock.Info, accelGroup );
             info.Activated += GlobalEvents.Information;
             
@@ -77,6 +81,7 @@ namespace Menus
             this.Add ( change );
             this.Add ( join );
             this.Add ( create );
+            this.Add ( attach );
             this.Add ( info );
             this.Add ( new SeparatorMenuItem () );
             this.Add ( preferences );
@@ -85,6 +90,13 @@ namespace Menus
             
             this.ShowAll ();
 
+        }
+        
+        
+        public void SetAttach ( bool visible, bool sensitive )
+        {
+            attach.Visible   = visible;
+            attach.Sensitive = sensitive;
         }
         
         

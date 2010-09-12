@@ -13,6 +13,10 @@ namespace Dialogs
         private Label nickEntry;
         private HBox  nickBox;
         
+        private Label accountLabel;
+        private Label accountEntry;
+        private HBox  accountBox;
+        
         private Label addressLabel;
         private Label addressEntry;
         private HBox  addressBox;
@@ -56,7 +60,7 @@ namespace Dialogs
             
             nickEntry = new Label ();
             nickEntry.Xalign = 0;
-            nickEntry.WidthChars = 20;
+            nickEntry.WidthChars = 25;
             nickEntry.Selectable = true;
             
             nickLabel = new Label ( TextStrings.nick + "  " );
@@ -70,9 +74,25 @@ namespace Dialogs
             bc8.Expand = false;
             
             
+            accountEntry = new Label ();
+            accountEntry.Xalign = 0;
+            accountEntry.WidthChars = 25;
+            accountEntry.Selectable = true;
+            
+            accountLabel = new Label ( TextStrings.account + "  " );
+            accountLabel.Xalign = 0;
+            
+            accountBox = new HBox ();
+            accountBox.Add ( accountLabel );
+            accountBox.Add ( accountEntry );
+            
+            Box.BoxChild bc17 = ( ( Box.BoxChild ) ( accountBox [ accountEntry ] ) );
+            bc17.Expand = false;
+            
+            
             addressEntry = new Label ();
             addressEntry.Xalign = 0;
-            addressEntry.WidthChars = 20;
+            addressEntry.WidthChars = 25;
             addressEntry.Selectable = true;
             
             addressLabel = new Label ( TextStrings.address + "  " );
@@ -88,7 +108,7 @@ namespace Dialogs
             
             idEntry = new Label ();
             idEntry.Xalign = 0;
-            idEntry.WidthChars = 20;
+            idEntry.WidthChars = 25;
             idEntry.Selectable = true;
             
             idLabel = new Label ( TextStrings.id + "  " );
@@ -104,7 +124,7 @@ namespace Dialogs
             
             versionEntry = new Label ();
             versionEntry.Xalign = 0;
-            versionEntry.WidthChars = 20;
+            versionEntry.WidthChars = 25;
             versionEntry.Selectable = true;
             
             versionLabel = new Label ( TextStrings.version + "  " );
@@ -122,6 +142,7 @@ namespace Dialogs
             vbox.Add ( versionBox );
             vbox.Add ( addressBox );
             vbox.Add ( idBox );
+            vbox.Add ( accountBox );
             vbox.Add ( nickBox );
             vbox.Add ( buttonBox );
             
@@ -141,6 +162,10 @@ namespace Dialogs
             Box.BoxChild bc12 = ( ( Box.BoxChild ) ( vbox [ nickBox ] ) );
             bc12.Padding = 6;
             bc12.Expand = false;
+            
+            Box.BoxChild bc16 = ( ( Box.BoxChild ) ( vbox [ accountBox ] ) );
+            bc16.Padding = 6;
+            bc16.Expand = false;
             
             Box.BoxChild bc13 = ( ( Box.BoxChild ) ( vbox [ versionBox ] ) );
             bc13.Padding = 6;
@@ -169,6 +194,7 @@ namespace Dialogs
             SetAddress ();
             SetClientId ();
             SetVersion ();
+            SetAccount ( "" );
             
         }
         
@@ -254,6 +280,26 @@ namespace Dialogs
             else
             {
                 idBox.Hide ();
+            }
+            
+        }
+        
+        
+        public void SetAccount ( string account )
+        {
+            
+            if ( Hamachi.ApiVersion > 1 )
+            {
+                if ( account == "" )
+                {
+                    account = "<i>" + TextStrings.unavailable + "</i>";
+                }
+                
+                accountEntry.Markup = account;
+            }
+            else
+            {
+                accountBox.Hide ();
             }
             
         }

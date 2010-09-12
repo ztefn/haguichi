@@ -131,7 +131,7 @@ public class Hamachi
     public static string Retrieve ( string output, string nfo )
     {
         
-        Regex regex = new Regex ( nfo + "([ ]+):([ ]+)(.+)" );
+        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(.+)" );
             
         return regex.Match ( output ).Groups[3].ToString ();
         
@@ -234,6 +234,32 @@ public class Hamachi
         
         string output = Command.ReturnOutput ( "hamachi", "logout" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Logout", output );
+        
+        return output;
+        
+    }
+    
+    
+    public static string GetAccount ()
+    {
+        
+        if ( Config.Settings.DemoMode )
+        {
+            return "-";
+        }
+        
+        string output;
+        
+        try
+        {
+            output = Retrieve ( "hamachi", "", "lmi account" );
+        }
+        catch
+        {
+            output = "";
+        }
+        
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAccount", output );
         
         return output;
         
@@ -752,7 +778,7 @@ public class Hamachi
             Config.Settings.SetNickAfterLogin = false;
             
             string output = "";
-            int status = Controller.StatusCheck ();
+            int status = Controller.lastStatus;
             
             if ( ( Hamachi.ApiVersion == 1 ) &&
                  ( status < 4 ) )
@@ -777,6 +803,26 @@ public class Hamachi
             
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
         }
+        
+    }
+    
+    
+    public static string Attach ( string accountId, bool withNetworks )
+    {
+        
+        string output  = "";
+        string command = "attach";
+        
+        if ( withNetworks )
+        {
+            command += "-net";
+        }
+        
+        output = Command.ReturnOutput ( "hamachi", command + " '" + accountId + "'" );
+        
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Attach", output );
+        
+        return output;
         
     }
     

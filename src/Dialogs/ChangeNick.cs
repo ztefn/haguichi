@@ -75,8 +75,8 @@ namespace Dialogs
             
             nickEntry = new Entry ();
             nickEntry.ActivatesDefault = true;
-            nickEntry.WidthChars = 30;
             nickEntry.MaxLength = 64;
+            
             nickLabel = new Label ( TextStrings.nickLabel + "  " );
             nickLabel.Xalign = 0;
             nickLabel.MnemonicWidget = nickEntry;
@@ -86,7 +86,7 @@ namespace Dialogs
             nickBox.Add ( nickLabel );
             nickBox.Add ( nickEntry );
             
-            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( nickBox [ nickEntry ] ) );
+            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( nickBox [ nickLabel ] ) );
             bc5.Expand = false;
             
             
@@ -144,9 +144,9 @@ namespace Dialogs
             this.Name = nickEntry.GetChars ( 0, -1 );
             
             Hamachi.SetNick ( this.Name );
+            GlobalEvents.UpdateNick ( this.Name );
             
             Dismiss ();
-            GlobalEvents.UpdateNick ( this.Name );
             
         }
         

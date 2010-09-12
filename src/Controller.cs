@@ -47,8 +47,9 @@ public class Controller
         nNetworksList = new ArrayList ();
         
         GlobalEvents.UpdateNick ();
+        GlobalEvents.SetAttach ();
         
-        lastStatus = StatusCheck ();
+        StatusCheck ();
         
         if ( lastStatus >= 5 )
         {
@@ -106,7 +107,13 @@ public class Controller
     }
     
     
-    public static int StatusCheck ()
+    public static void StatusCheck ()
+    {
+        lastStatus = StatusInt ();
+    }
+    
+    
+    private static int StatusInt ()
     {
         
         if ( Config.Settings.DemoMode )
@@ -208,7 +215,7 @@ public class Controller
     public static void HamachiGoStart ()
     {
         
-        lastStatus = StatusCheck ();
+        StatusCheck ();
         
         if ( lastStatus >= 3 )
         {
@@ -307,7 +314,7 @@ public class Controller
     public static void HamachiGoConnect ()
     {
         
-        lastStatus = StatusCheck ();
+        StatusCheck ();
         
         if ( lastStatus >= 4 )
         {
@@ -343,6 +350,8 @@ public class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Connected!" );
             
+            lastStatus = 6;
+            
             if ( Hamachi.ApiVersion > 1 )
             {
                 GetNetworkList ();
@@ -368,7 +377,7 @@ public class Controller
         
         HamachiGoStart ();
         
-        lastStatus = StatusCheck ();
+        StatusCheck ();
         
         if ( lastStatus >= 4 )
         {
@@ -445,7 +454,7 @@ public class Controller
     private static void UpdateConnectionThread ( object o, DoWorkEventArgs args )
     {
         
-        lastStatus = StatusCheck ();
+        StatusCheck ();
     
         if ( ( HasInternetConnection () ) &&
              ( lastStatus >= 6 ) )

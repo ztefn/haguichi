@@ -93,7 +93,10 @@ Svenska (sv)
     public static string status;
     public static string tunnel;
     public static string anonymous;
+    public static string nickLabel;
     public static string nick;
+    public static string nameLabel;
+    public static string passwordLabel;
     public static string version;
     
     public static string seconds;
@@ -161,11 +164,7 @@ Svenska (sv)
     public static string evictLabel;
     public static string copyAddressLabel;
     public static string copyClientIdLabel;
-
-    public static string nickLabel;
-    public static string nameLabel;
-    public static string passwordLabel;
-
+    
     public static string changeLabel;
     public static string changingLabel;
     
@@ -177,6 +176,17 @@ Svenska (sv)
     public static string changePasswordLabel;
     public static string changePasswordTitle;
     public static string changePasswordMessage;
+    
+    public static string accountLabel;
+    public static string account;
+    
+    public static string attachButtonLabel;
+    public static string attachMenuLabel;
+    public static string attachTitle;
+    public static string attachMessage;
+    public static string attachWithNetworksCheckbox;
+    public static string attachErrorHeading;
+    public static string attachErrorAccountNotFound;
     
     public static string joinLabel;
     public static string joiningLabel;
@@ -319,7 +329,10 @@ Svenska (sv)
         status                              = Catalog.GetString ( "Status:" );
         tunnel                              = Catalog.GetString ( "Tunnel:" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
-        nick                                = Catalog.GetString ( "Nickname:" );
+        nickLabel                           = Catalog.GetString ( "_Nickname:" );
+        nick                                = nickLabel.Replace ( "_", "" ); // "Nickname:"
+        nameLabel                           = Catalog.GetString ( "_Name:" );
+        passwordLabel                       = Catalog.GetString ( "_Password:" );
         version                             = Catalog.GetString ( "Version:" );
         
         seconds                             = Catalog.GetString ( "seconds" );
@@ -388,10 +401,6 @@ Svenska (sv)
         copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );
         copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
         
-        nickLabel                           = Catalog.GetString ( "_Nickname:" );
-        nameLabel                           = Catalog.GetString ( "_Name:" );
-        passwordLabel                       = Catalog.GetString ( "_Password:" );
-        
         changeLabel                         = Catalog.GetString ( "C_hange" );
         changingLabel                       = Catalog.GetString ( "Changing..." );
         
@@ -403,6 +412,17 @@ Svenska (sv)
         changePasswordLabel                 = Catalog.GetString ( "Change _Password..." );
         changePasswordTitle                 = Catalog.GetString ( "Change Password" );
         changePasswordMessage               = Catalog.GetString ( "Please enter the new password for this network." );
+        
+        accountLabel                        = Catalog.GetString ( "_Account:" );
+        account                             = accountLabel.Replace ( "_", "" ); // "Account:"
+        
+        attachButtonLabel                   = Catalog.GetString ( "_Attach" );
+        attachMenuLabel                     = Catalog.GetString ( "_Attach to Account..." );
+        attachTitle                         = Catalog.GetString ( "Attach to Account" );
+        attachMessage                       = Catalog.GetString ( "Please enter the account you want to attach this client to." );
+        attachWithNetworksCheckbox          = Catalog.GetString ( "_Include all networks created by this client" );
+        attachErrorHeading                  = Catalog.GetString ( "Error attaching" );
+        attachErrorAccountNotFound          = Catalog.GetString ( "Account not found." );
         
         joinLabel                           = Catalog.GetString ( "_Join" );
         joiningLabel                        = Catalog.GetString ( "Joining..." );

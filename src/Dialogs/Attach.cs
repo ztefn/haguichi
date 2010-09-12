@@ -24,27 +24,25 @@ using Gtk;
 namespace Dialogs
 {
 
-    public class ChangePassword : Dialog
+    public class Attach : Dialog
     {
-        
-        private Network Network;
         
         private Label heading;
         
-        private Label passwordLabel;
-        private Entry passwordEntry;
-        private HBox  passwordBox;
+        private Label idLabel;
+        private Entry idEntry;
+        private HBox  idBox;
+        
+        private CheckButton withNetworks;
         
         private Button cancelBut;
-        private Button changeBut;
+        private Button attachBut;
         
         
-        public ChangePassword ( Network network ) : base ()
+        public Attach () : base ()
         {
             
-            this.Network = network;
-            
-            this.Title = TextStrings.changePasswordTitle;
+            this.Title = TextStrings.attachTitle;
             this.Modal = true;
             this.HasSeparator = false;
             this.Resizable = false;
@@ -56,7 +54,7 @@ namespace Dialogs
             
             
             heading = new Label ();
-            heading.Markup = String.Format ( TextStrings.changePasswordMessage );
+            heading.Markup = String.Format ( TextStrings.attachMessage );
             heading.Xalign = 0;
             heading.Ypad = 6;
 
@@ -67,38 +65,42 @@ namespace Dialogs
             cancelBut = new Button ( Stock.Cancel );
             cancelBut.Clicked += Dismiss;
             
-            changeBut = new Button ( Stock.Edit ); // Using an stock button to trigger underscore interpretation within the label text, seems a GTK bug or misdesign
-            changeBut.CanDefault = true;
-            changeBut.Label = TextStrings.changeLabel;
-            changeBut.Clicked += GoChangePassword;
+            attachBut = new Button ( Stock.Edit ); // Using an stock button to trigger underscore interpretation within the label text, seems a GTK bug or misdesign
+            attachBut.CanDefault = true;
+            attachBut.Label = TextStrings.attachButtonLabel;
+            attachBut.Clicked += GoAttach;
+            attachBut.Sensitive = false;
             
             HButtonBox buttonBox = new HButtonBox ();
             buttonBox.Add ( cancelBut );
-            buttonBox.Add ( changeBut );
+            buttonBox.Add ( attachBut );
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
-            passwordEntry = new Entry ();
-            passwordEntry.ActivatesDefault = true;
-            passwordEntry.MaxLength = 40;
-            passwordEntry.Visibility = false;
+            idEntry = new Entry ();
+            idEntry.ActivatesDefault = true;
+            idEntry.MaxLength = 100;
+            idEntry.Changed += CheckEntryLength;
             
-            passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
-            passwordLabel.Xalign = 0;
-            passwordLabel.MnemonicWidget = passwordEntry;
+            idLabel = new Label ( TextStrings.accountLabel + "  " );
+            idLabel.Xalign = 0;
+            idLabel.MnemonicWidget = idEntry;
 
             
-            passwordBox = new HBox ();
-            passwordBox.Add ( passwordLabel );
-            passwordBox.Add ( passwordEntry );
+            idBox = new HBox ();
+            idBox.Add ( idLabel );
+            idBox.Add ( idEntry );
             
-            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( passwordBox [ passwordLabel ] ) );
-            bc5.Expand = false;
+            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( idBox [ idLabel ] ) );
+            bc1.Expand = false;
+            
+            withNetworks = new CheckButton ( TextStrings.attachWithNetworksCheckbox );
             
             
             VBox vbox = new VBox ();
             vbox.Add ( headBox );
-            vbox.Add ( passwordBox );
+            vbox.Add ( idBox );
+            vbox.Add ( withNetworks );
             vbox.Add ( buttonBox );
             
             
@@ -109,9 +111,13 @@ namespace Dialogs
             bc4.Padding = 6;
             bc4.Expand = false;
             
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ passwordBox ] ) );
+            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ idBox ] ) );
             bc6.Padding = 6;
             bc6.Expand = false;
+            
+            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( vbox [ withNetworks ] ) );
+            bc3.Padding = 3;
+            bc3.Expand = false;
             
             
             HBox hbox = new HBox ();
@@ -128,8 +134,7 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.ShowAll ();
             
-            passwordEntry.GrabFocus ();
-            changeBut.GrabDefault ();
+            idEntry.GrabFocus ();
             
         }
         
@@ -143,18 +148,63 @@ namespace Dialogs
         }
         
         
-        private void GoChangePassword ( object obj, EventArgs args )
+        private void GoAttach ( object obj, EventArgs args )
         {
             
-            this.Name = passwordEntry.GetChars ( 0, -1 );
+            string output;
             
-            Hamachi.SetPassword ( this.Network.Id, this.Name );
+            if ( Config.Settings.DemoMode )
+            {
+                output = ".. failed, not found";
+            }
+            else
+            {
+                output = Hamachi.Attach ( idEntry.GetChars ( 0, -1 ), withNetworks.Active );
+            }
             
-            Dismiss ();
+            if ( output.IndexOf ( ".. ok" ) != -1 )
+            {
+                GlobalEvents.SetAttach ();
+                
+                Dismiss ();
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, not found" ) != -1 )
+            {
+                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed" ) != -1 )
+            {
+                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error" );
+                return;
+            }
+            else
+            {
+                // Unknown output
+            }
             
         }
-
-
+        
+        
+        private void CheckEntryLength ( object obj, EventArgs args )
+        {
+            
+            string id = idEntry.GetChars ( 0, -1 );
+            
+            if ( id.Length > 0 )
+            {
+                attachBut.Sensitive = true;
+                attachBut.GrabDefault ();
+            }
+            else
+            {
+                attachBut.Sensitive = false;
+            }
+            
+        }
+        
+        
         private void Dismiss ()
         {
             

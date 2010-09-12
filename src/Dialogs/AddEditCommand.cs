@@ -209,21 +209,26 @@ namespace Dialogs
         
         private void ChooseIcon ( object o, EventArgs args )
         {
+            
             Dialogs.ChooseIcon iconDialog = new Dialogs.ChooseIcon ( this, this.CommandIcon );
+            
         }
         
         
         public void SetIcon ( string icon )
         {
+            
             this.CommandIcon = icon;
             
             iconImg.SetFromIconName ( this.CommandIcon, IconSize.Dialog );
-            iconBut.Image = iconImg;   
+            iconBut.Image = iconImg;
+            
         }
         
         
         private void CheckEntryLengths ( object obj, EventArgs args )
         {
+            
             string label   = labelEntry.GetChars ( 0, -1 );
             string command = commandEntry.GetChars ( 0, -1 );
             
@@ -236,41 +241,50 @@ namespace Dialogs
             {
                 okBut.Sensitive = false;
             }
+            
         }
         
         
         private void OnDeleteEvent (object obj, DeleteEventArgs args )
         {
+            
             Dismiss ();
             args.RetVal = true;
+            
         }
         
 
         private void Dismiss ()
         {
+            
             this.Destroy ();
+            
         }
         
         
         private void Dismiss ( object obj, EventArgs args )
         {
+            
             Dismiss ();
+            
         }
         
         
         private void AddCommand ( object obj, EventArgs args )
         {
-            Editor.InsertCommand ( this.CommandIcon, labelEntry.Text, commandEntry.Text );
             
+            Editor.InsertCommand ( this.CommandIcon, labelEntry.Text, commandEntry.Text );
             Dismiss ();
+            
         }
         
         
         private void SaveCommand ( object obj, EventArgs args )
         {
-            Editor.UpdateSelectedCommand ( this.CommandIcon, labelEntry.Text, commandEntry.Text );
             
+            Editor.UpdateSelectedCommand ( this.CommandIcon, labelEntry.Text, commandEntry.Text );
             Dismiss ();
+            
         }
         
     }

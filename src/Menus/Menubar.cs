@@ -45,6 +45,7 @@ namespace Menus
         private ImageMenuItem change;
         private ImageMenuItem join;
         private ImageMenuItem create;
+        private ImageMenuItem attach;
         private ImageMenuItem info;
         private ImageMenuItem quit;
         
@@ -81,6 +82,9 @@ namespace Menus
             create = new ImageMenuItem ( TextStrings.createNetworkLabel );
             create.Activated += GlobalEvents.CreateNetwork;
             
+            attach = new ImageMenuItem ( TextStrings.attachMenuLabel );
+            attach.Activated += GlobalEvents.Attach;
+            
             info = new ImageMenuItem ( Stock.Info, MainWindow.accelGroup );
             info.Activated += GlobalEvents.Information;
             
@@ -94,6 +98,7 @@ namespace Menus
             clientMenu.Append ( change );
             clientMenu.Append ( join );
             clientMenu.Append ( create );
+            clientMenu.Append ( attach );
             clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem() );
             clientMenu.Append ( quit );
@@ -174,6 +179,13 @@ namespace Menus
             
             this.ShowAll();
             
+        }
+        
+        
+        public void SetAttach ( bool visible, bool sensitive )
+        {
+            attach.Visible   = visible;
+            attach.Sensitive = sensitive;
         }
         
         

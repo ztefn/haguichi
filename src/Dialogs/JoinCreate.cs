@@ -291,48 +291,7 @@ namespace Dialogs
                 output = Hamachi.JoinNetwork ( this.NetworkName, this.NetworkPassword );
             }
             
-            if ( output.IndexOf ( ".. failed, network not found" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkNotFound );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, invalid password" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorInvalidPassword );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, the network is full" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkFull );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, network is locked" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkLocked );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, you are already a member" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, manual approval required" ) != -1 )
-            {
-                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
-                
-                SetMode ( "Normal" );
-                
-                if ( dlg.ResponseText == "Ok" )
-                {
-                    Dismiss ();
-                }
-            }
-            else if ( output.IndexOf ( ".. failed" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorUnknown );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. ok" ) != -1 )
+            if ( output.IndexOf ( ".. ok" ) != -1 )
             {
                 Dismiss ();
                 
@@ -342,13 +301,65 @@ namespace Dialogs
                 }
                 
                 Controller.UpdateConnection (); // Update list
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, network not found" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkNotFound );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, invalid password" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorInvalidPassword );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, the network is full" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkFull );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, network is locked" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkLocked );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, you are already a member" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, manual approval required" ) != -1 )
+            {
+                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
+                
+                SetMode ( "Normal" );
+                if ( dlg.ResponseText == "Ok" )
+                {
+                    Dismiss ();
+                }
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorUnknown );
+                
+                SetMode ( "Normal" );
+                return;
             }
             else
             {
                 // Unknown output
             }
-            
-            CheckNameLength ( obj, args );
             
         }
         
@@ -365,28 +376,14 @@ namespace Dialogs
             {
                 Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName );
                 MainWindow.networkView.AddNetwork ( network );
+                
                 Dismiss ();
                 return;
             }
             
             string output = Hamachi.CreateNetwork ( this.NetworkName, this.NetworkPassword );
             
-            if ( output.IndexOf ( "Network name must be between 4 and 64 characters long" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkNameTooShort );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed, network name is already taken" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorNetworkNameTaken );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. failed" ) != -1 )
-            {
-                ShowFailure ( TextStrings.errorUnknown );
-                SetMode ( "Normal" );
-            }
-            else if ( output.IndexOf ( ".. ok" ) != -1 )
+            if ( output.IndexOf ( ".. ok" ) != -1 )
             {
                 Dismiss ();
                 
@@ -396,13 +393,33 @@ namespace Dialogs
                 }
                 
                 Controller.UpdateConnection (); // Update list
+                return;
+            }
+            else if ( output.IndexOf ( "Network name must be between 4 and 64 characters long" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkNameTooShort );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed, network name is already taken" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorNetworkNameTaken );
+                
+                SetMode ( "Normal" );
+                return;
+            }
+            else if ( output.IndexOf ( ".. failed" ) != -1 )
+            {
+                ShowFailure ( TextStrings.errorUnknown );
+                
+                SetMode ( "Normal" );
+                return;
             }
             else
             {
                 // Unknown output
             }
-            
-            CheckNameLength ( obj, args );
             
         }
         
@@ -433,6 +450,12 @@ namespace Dialogs
         
         
         private void CheckNameLength ( object obj, EventArgs args )
+        {
+            CheckNameLength ();
+        }
+        
+        
+        private void CheckNameLength ()
         {
             
             string chars = nameEntry.GetChars ( 0, -1 );
@@ -533,6 +556,8 @@ namespace Dialogs
                 
                     nameEntry.Sensitive = true;
                     passwordEntry.Sensitive = true;
+                
+                    CheckNameLength ();
                     
                     break;
                 

@@ -44,15 +44,15 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
-        int status = Controller.StatusCheck ();
+        Controller.StatusCheck ();
         
         if ( Config.Settings.DemoMode )
         {
             ConnectionEstablished ();
         }
-        else if ( status == 2 )
+        else if ( Controller.lastStatus == 2 )
         {
-            Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
+            Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
         }
         else
         {
@@ -96,6 +96,8 @@ public class GlobalEvents
     {
         
         MainWindow.SetMode ( "Connected" );
+        
+        SetAttach ();
         
         Haguichi.informationWindow.SetVersion ();
         
@@ -166,13 +168,14 @@ public class GlobalEvents
         Haguichi.connection.ClearNetworks ();
         Haguichi.connection.Status = new Status ( " " );
         
-        int status = Controller.lastStatus;
+                
+        Controller.StatusCheck ();
         
-        if ( status >= 2 )
+        if ( Controller.lastStatus >= 2 )
         {
             MainWindow.SetMode ( "Disconnected" );
         }
-        else if ( status >= 1 )
+        else if ( Controller.lastStatus >= 1 )
         {
             MainWindow.SetMode ( "Not configured" );
         }
@@ -180,6 +183,8 @@ public class GlobalEvents
         {
             MainWindow.SetMode ( "Not installed" );
         }
+        
+        SetAttach ();
         
     }
     
@@ -265,6 +270,51 @@ public class GlobalEvents
     {
         
         Haguichi.createWindow.Open ();
+        
+    }
+    
+    
+    public static void Attach ( object obj, EventArgs args )
+    {
+        
+        Dialogs.Attach attachDlg = new Dialogs.Attach ();
+        
+    }
+    
+    
+    public static void SetAttach ()
+    {
+          
+        if ( Hamachi.ApiVersion > 1 )
+        {
+            string account = Hamachi.GetAccount ();
+            
+            Haguichi.informationWindow.SetAccount ( account );
+            
+            if ( ( account == "-" ) &&
+                 ( Controller.lastStatus >= 6 ) )
+            {
+                MainWindow.menuBar.SetAttach ( true, true );
+                MainWindow.quickMenu.SetAttach ( true, true );
+            }
+            else if ( ( account == "" ) ||
+                      ( account == "-" ) )
+            {
+                MainWindow.menuBar.SetAttach ( true, false );
+                MainWindow.quickMenu.SetAttach ( true, false );
+            }
+            else
+            {
+                MainWindow.menuBar.SetAttach ( false, false );
+                MainWindow.quickMenu.SetAttach ( false, false );
+            }
+        }
+        else
+        {
+            MainWindow.menuBar.SetAttach ( false, false );
+            MainWindow.quickMenu.SetAttach ( false, false );
+        }
+        
         
     }
     

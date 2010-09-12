@@ -195,6 +195,7 @@
     <Compile Include="src\Platform.cs" />
     <Compile Include="src\Dialogs\SendRequest.cs" />
     <Compile Include="src\Dialogs\ChangePassword.cs" />
+    <Compile Include="src\Dialogs\Attach.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

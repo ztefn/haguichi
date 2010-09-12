@@ -104,7 +104,7 @@ public class CommandsEditor : VBox
         column2.AddAttribute ( iconCell, "pixbuf", iconPixColumn );
         column2.AddAttribute ( textCell, "text", labelColumn );
  
-        Label label = new Label ( TextStrings.customizeCommands +"  " );
+        Label label = new Label ( TextStrings.customizeCommands + "  " );
         label.Xalign = 0;
         label.Xpad = 3;
         label.Ypad = 6;
