@@ -168,8 +168,14 @@ public class GlobalEvents
         Haguichi.connection.ClearNetworks ();
         Haguichi.connection.Status = new Status ( " " );
         
-                
-        Controller.StatusCheck ();
+        if ( Config.Settings.DemoMode )
+        {
+            Controller.lastStatus = 4;
+        }
+        else
+        {
+            Controller.StatusCheck ();
+        }
         
         if ( Controller.lastStatus >= 2 )
         {

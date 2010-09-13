@@ -344,7 +344,7 @@ msgstr "_Koppel"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr "_Koppelen aan account"
+msgstr "_Koppelen aan account..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
