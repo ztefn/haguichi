@@ -95,6 +95,7 @@ namespace Dialogs
             bc1.Expand = false;
             
             withNetworks = new CheckButton ( TextStrings.attachWithNetworksCheckbox );
+            withNetworks.Active = true;
             
             
             VBox vbox = new VBox ();

@@ -33,26 +33,26 @@ public class Command
         
         string sudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
             
-        if ( ReturnOutput ( sudo, "-h" ) != "error" )
+        if ( ReturnOutput ( sudo, "--help" ) != "error" )
         {
             return sudo;
         }   
-        if ( ReturnOutput ( "gksudo", "-h" ) != "error" )
+        if ( ReturnOutput ( "gksudo", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "gksudo" );
             return "gksudo";
         }
-        if ( ReturnOutput ( "gnomesu", "-h" ) != "error" )
+        if ( ReturnOutput ( "gnomesu", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "gnomesu" );
             return "gnomesu";
         }
-        if ( ReturnOutput ( "kdesudo", "-h" ) != "error" )
+        if ( ReturnOutput ( "kdesudo", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesudo" );
             return "kdesudo";
         }
-        if ( ReturnOutput ( "kdesu", "-h" ) != "error" )
+        if ( ReturnOutput ( "kdesu", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesu" );
             return "kdesu";

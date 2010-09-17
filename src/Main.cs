@@ -68,6 +68,7 @@ class Haguichi
         Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );
         
         TextStrings.Init ();
+        Config.Settings.Init ();
         Config.Client.Init ();
         
         Hamachi.ApiVersion  = Hamachi.DetermineApiVersion ();
@@ -82,7 +83,7 @@ class Haguichi
         
         connection          = new Connection ( new Status ( " " ) );
         
-        Controller.Init ();  
+        Controller.Init ();
         
         Application.Run ();
         
