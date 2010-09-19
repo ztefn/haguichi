@@ -347,7 +347,7 @@ Svenska (sv)
         tunnel                              = Catalog.GetString ( "Tunnel:" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
         nickLabel                           = Catalog.GetString ( "_Nickname:" );
-        nick                                = nickLabel.Replace ( "_", "" ); // "Nickname:"
+        nick                                = Utilities.RemoveMnemonics ( nickLabel ); // "Nickname:"
         nameLabel                           = Catalog.GetString ( "_Name:" );
         passwordLabel                       = Catalog.GetString ( "_Password:" );
         version                             = Catalog.GetString ( "Version:" );
@@ -431,7 +431,7 @@ Svenska (sv)
         changePasswordMessage               = Catalog.GetString ( "Please enter the new password for this network." );
         
         accountLabel                        = Catalog.GetString ( "_Account:" );
-        account                             = accountLabel.Replace ( "_", "" ); // "Account:"
+        account                             = Utilities.RemoveMnemonics ( accountLabel ); // "Account:"
         
         attachButtonLabel                   = Catalog.GetString ( "_Attach" );
         attachMenuLabel                     = Catalog.GetString ( "_Attach to Account..." );
