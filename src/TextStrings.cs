@@ -46,6 +46,23 @@ You should have received a copy of the GNU General Public License
 along with Haguichi; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     
+    public static string appInfo                =
+@"Haguichi, a graphical frontend for Hamachi.
+Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>";
+            
+    public static string appHelp                =
+@"Usage:
+  haguichi [options]
+
+Options:
+  -h, --help              Show this help
+  -d, --debug             Show debug information
+  -v, --version           Show version information
+  --license               Show license information
+  --demo                  Run in demo mode
+
+" + appInfo + "\n";
+    
     public static string[] appAuthors           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>" };
     public static string[] appArtists           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>", "Lapo Calamandrei <calamandrei@gmail.com>" };
     public static string[] appDocumenters       = new string [] { "" };

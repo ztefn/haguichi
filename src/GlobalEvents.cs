@@ -341,7 +341,7 @@ public class GlobalEvents
             StopHamachi ( obj, args );
         }
         
-        Debug.Log ( Debug.Domain.Enviroment, "GlobalEvents.QuitApp", "Unregistering process" );
+        Debug.Log ( Debug.Domain.Environment, "GlobalEvents.QuitApp", "Unregistering process" );
         Platform.UnregisterProcess ();
         
         Application.Quit ();

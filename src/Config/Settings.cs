@@ -40,7 +40,11 @@ namespace Config
         public static bool WinMaximized                     = false;
         public static bool SetNickAfterLogin                = false;
         
-        public static string [] DefaultCommands;
+        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
+                                                                "true;false;gnome-remote-desktop;_View Remote Desktop;vinagre %A",
+                                                                "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A" };
+        
+        public static string [] SessionDefaultCommands;
         
         public static Key AskBeforeRunningTunCfg            = new Key ( "behavior/ask_before_running_tuncfg", true );
         public static Key ConnectOnStartup                  = new Key ( "behavior/connect_on_startup", false );
@@ -48,7 +52,7 @@ namespace Config
         public static Key DisconnectOnQuit                  = new Key ( "behavior/disconnect_on_quit", true );
         public static Key GoOnlineInNewNetwork              = new Key ( "behavior/go_online_in_new_network", true );
         public static Key StartInTray                       = new Key ( "behavior/start_in_tray", false );
-        public static Key CustomCommands;
+        public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
         public static Key PixmapsPath                       = new Key ( "config/pixmaps_path", DefaultPixmapsPath );
@@ -77,20 +81,22 @@ namespace Config
         public static void Init()
         {
             
+            string session;
+            
             if ( System.Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {
-                DefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/",
-                                                  "true;false;gnome-remote-desktop;_View Remote Desktop;krdc %A",
-                                                  "true;false;utilities-terminal;_Ping;konsole -e ping %A" };
+                SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/",
+                                                         "true;false;gnome-remote-desktop;_View Remote Desktop;krdc %A",
+                                                         "true;false;utilities-terminal;_Ping;konsole -e ping %A" };
+                
+                Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: KDE" );
             }
             else
             {
-                DefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
-                                                  "true;false;gnome-remote-desktop;_View Remote Desktop;vinagre %A",
-                                                  "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A" };
+                SessionDefaultCommands = DefaultCommands;
+                
+                Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: GNOME" );
             }
-            
-            CustomCommands = new Key ( "commands/customizable", DefaultCommands );
             
         }
         

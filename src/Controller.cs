@@ -1,3 +1,4 @@
+
 /*
  * Haguichi, a graphical frontend for Hamachi.
  * Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>
@@ -444,6 +445,12 @@ public class Controller
          * because GtkTreeView doesn't get updated when the GtkTreeModel is changed async... :(
          */
         uint wait = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetListWaitTime ) );
+        
+        if ( Hamachi.ApiVersion == 1 )
+        {
+            wait += ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetNicksWaitTime ) );
+        }
+        
         GLib.Timeout.Add ( wait, new GLib.TimeoutHandler ( UpdateList ) );
         
         return true;

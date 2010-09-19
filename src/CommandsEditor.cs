@@ -442,10 +442,15 @@ public class CommandsEditor : VBox
         
         string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
         
+        if ( Utilities.AsString ( commands ) == Utilities.AsString ( Config.Settings.DefaultCommands ) )
+        {
+            commands = Config.Settings.SessionDefaultCommands;
+        }
+        
         foreach ( string c in commands )
         {
             
-            string[] cArray = c.Split ( new char[] { ';' }, 5 );
+            string [] cArray = c.Split ( new char [] { ';' }, 5 );
             
             if ( cArray.GetLength ( 0 ) == 5 )
             {
@@ -492,7 +497,14 @@ public class CommandsEditor : VBox
         
         SetButtonSensitivity ();
         
-        Config.Client.Set ( Config.Settings.CustomCommands, ComposeCommandsString () );
+        string [] commands = ComposeCommandsString ();
+        
+        if ( Utilities.AsString ( commands ) == Utilities.AsString ( Config.Settings.SessionDefaultCommands ) )
+        {
+            commands = Config.Settings.DefaultCommands;
+        }
+        
+        Config.Client.Set ( Config.Settings.CustomCommands, commands );
         
         /*
          * Giving GConf some time to update before we change the menu
@@ -616,7 +628,7 @@ public class CommandsEditor : VBox
     private void SetButtonSensitivity ()
     {
         
-        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", Config.Settings.DefaultCommands ) )
+        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", Config.Settings.SessionDefaultCommands ) )
         {
             revertBut.Sensitive = false;
         }

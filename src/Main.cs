@@ -42,29 +42,51 @@ class Haguichi
         
         foreach ( string s in args )
         {
-            if ( s.Contains ( "debug" ) )
+            if ( ( s == "-h" ) || ( s == "--help" ) )
+            {
+                Console.WriteLine ( TextStrings.appHelp );
+                return;
+            }
+            if ( ( s == "-v" ) || ( s == "--version" ) )
+            {
+                Console.WriteLine ( TextStrings.appName + " " + TextStrings.appVersion );
+                return;
+            }
+            if ( s == "--license" )
+            {
+                Console.WriteLine ( "\n" + TextStrings.appInfo + "\n\n" + TextStrings.appLicense + "\n" );
+                return;
+            }
+            
+            if ( ( s == "-d" ) || ( s == "--debug" ) )
             {
                 Config.Settings.Debugging = true;
             }
-            if ( s.Contains ( "demo" ) )
+            else if ( s == "--demo" )
             {
                 Config.Settings.DemoMode = true;
+            }
+            else
+            {
+                Console.WriteLine ( "Unknown option " + s + "\n" );
+                Console.WriteLine ( TextStrings.appHelp );
+                return;
             }
         }
         
         if ( Platform.ActiveProcess () )
         {
-            Debug.Log ( Debug.Domain.Enviroment, "Main", "There is already an active process" );
+            Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active process" );
             return;
         }
         else
         {
-            Debug.Log ( Debug.Domain.Enviroment, "Main", "Registering process" );
+            Debug.Log ( Debug.Domain.Environment, "Main", "Registering process" );
             Platform.RegisterProcess ();
             Platform.SetProcessName (); 
         }
         
-        Debug.Log ( Debug.Domain.Enviroment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );
+        Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );
         Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );
         
         TextStrings.Init ();
