@@ -33,7 +33,9 @@ namespace Config
         public static void Init ()
         {
             
-            client = new GConf.Client();
+            Command.ReturnOutput ( "gconftool-2", "--spawn" ); // Preventing segfault from gconf-sharp on a virgin GConf install
+            
+            client = new GConf.Client ();
             client.AddNotify ( Config.Settings.ConfPath, new NotifyEventHandler ( ValueChanged ) );
             
         }
