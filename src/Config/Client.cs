@@ -24,7 +24,7 @@ using GConf;
 namespace Config
 {
 
-    public class Client
+    public static class Client
     {
 
         private static GConf.Client client;
@@ -33,7 +33,8 @@ namespace Config
         public static void Init ()
         {
             
-            Command.ReturnOutput ( "gconftool-2", "--spawn" ); // Preventing segfault from gconf-sharp on a virgin GConf install
+            /* Preventing segfault when configuration server is not started, fix from https://bugzilla.gnome.org/show_bug.cgi?id=593561 */
+            GLib.GType.Init ();
             
             client = new GConf.Client ();
             client.AddNotify ( Config.Settings.ConfPath, new NotifyEventHandler ( ValueChanged ) );

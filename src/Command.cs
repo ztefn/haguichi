@@ -18,68 +18,83 @@
  */
 
 using System;
+using System.ComponentModel;
 using System.Diagnostics;
 
     
-public class Command
+public static class Command
 {
     
-    public static string Sudo = DetermineSudo ();
     private static bool inProgress = false;
     
     
-    public static string DetermineSudo ()
+    public static void DetermineSudo ()
     {
         
-        string sudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
-            
-        if ( ReturnOutput ( sudo, "--help" ) != "error" )
+        BackgroundWorker worker = new BackgroundWorker {};
+        
+        worker.DoWork += DetermineSudoThread;
+        worker.RunWorkerAsync ();
+        
+    }
+    
+    
+    private static void DetermineSudoThread ( object sender, DoWorkEventArgs e )
+    {
+        
+        string sudo    = "sudo";
+        string curSudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
+        
+        if ( ReturnOutput ( curSudo, "--help" ) != "error" )
         {
-            return sudo;
+            sudo = curSudo;
         }   
         if ( ReturnOutput ( "gksudo", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "gksudo" );
-            return "gksudo";
+            sudo = "gksudo";
         }
         if ( ReturnOutput ( "gnomesu", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "gnomesu" );
-            return "gnomesu";
+            sudo = "gnomesu";
         }
         if ( ReturnOutput ( "kdesudo", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesudo" );
-            return "kdesudo";
+            sudo = "kdesudo";
         }
         if ( ReturnOutput ( "kdesu", "--help" ) != "error" )
         {
             Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesu" );
-            return "kdesu";
+            sudo = "kdesu";
         }
         
-        return "sudo";
+        Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );
         
     }
     
     
     public static void Execute ( string command )
     {
-        string[] commands = command.Split ( new char[] { ' ' }, 2 );
+        
+        string [] commands = command.Split ( new char [] { ' ' }, 2 );
         
         if ( commands.GetLength ( 0 ) == 1 )
         {
-            Execute ( commands[0], "" );
+            Execute ( commands [0], "" );
         }
         if ( commands.GetLength ( 0 ) == 2 )
         {
-            Execute ( commands[0], commands[1] );
+            Execute ( commands [0], commands [1] );
         }
+        
     }
     
     
     public static void Execute ( string filename, string args )
     {
+        
         try
         {
             ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
@@ -95,12 +110,14 @@ public class Command
         catch ( Exception e )
         {
             // Nothing
-        }    
+        }
+        
     }
     
     
     public static string ReturnOutput ( string filename, string args )
     {
+        
         string val = "error";
         
         while ( inProgress )
@@ -115,12 +132,12 @@ public class Command
             ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
             ps.UseShellExecute = false;
             ps.RedirectStandardOutput = true;
-
+            
             using ( Process p = Process.Start ( ps ) )
             {
-                int seconds = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.CommandTimeout ) );
-        
-                if ( p.WaitForExit ( 1000 * seconds ) )
+                int timeout = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.CommandTimeout ) );
+                
+                if ( p.WaitForExit ( 1000 * timeout ) )
                 {
                     val = p.StandardOutput.ReadToEnd ();
                 }
@@ -140,6 +157,7 @@ public class Command
         inProgress = false;
         
         return val;
+        
     }
     
     

@@ -22,15 +22,21 @@ using System.Collections;
 using System.Text.RegularExpressions;
 
 
-public class Hamachi
+public static class Hamachi
 {
     
-    public Hamachi ()
-    {
-    }
-    
     public  static int ApiVersion;
+    private static string lastInfo;
     private static Random random;
+    
+    
+    public static void Init ()
+    {
+        
+        GetInfo ();
+        ApiVersion = DetermineApiVersion ();
+        
+    }
     
     
     public static int DetermineApiVersion ()
@@ -61,8 +67,7 @@ public class Hamachi
             return 2;
         }
         
-        string output = Command.ReturnOutput ( "hamachi", "" );
-        
+        string output = lastInfo;
         
         if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
         {
@@ -145,7 +150,7 @@ public class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( Command.Sudo, "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
             
             if ( output.IndexOf ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) != -1 )
             {
@@ -171,7 +176,7 @@ public class Hamachi
     public static void TunCfg ()
     {
         
-        string output = Command.ReturnOutput ( Command.Sudo, ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.TunCfg", output );
         
     }
@@ -184,7 +189,7 @@ public class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( Command.Sudo, "/etc/init.d/logmein-hamachi start" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi start" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
@@ -205,7 +210,7 @@ public class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( Command.Sudo, "/etc/init.d/logmein-hamachi stop" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi stop" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
@@ -252,7 +257,7 @@ public class Hamachi
         
         try
         {
-            output = Retrieve ( "hamachi", "", "lmi account" );
+            output = Retrieve ( lastInfo, "lmi account" );
         }
         catch
         {
@@ -278,7 +283,7 @@ public class Hamachi
         
         try
         {
-            output = Retrieve ( "hamachi", "", "client id" );
+            output = Retrieve ( lastInfo, "client id" );
         }
         catch
         {
@@ -306,7 +311,7 @@ public class Hamachi
         {
             try
             {
-                output = Retrieve ( "hamachi", "", "address" );
+                output = Retrieve ( lastInfo, "address" );
             }
             catch {}
         }
@@ -331,10 +336,10 @@ public class Hamachi
     public static string GetInfo ()
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetInfo", output );
+        lastInfo = Command.ReturnOutput ( "hamachi", "" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetInfo", lastInfo );
         
-        return output;
+        return lastInfo;
         
     }
     
@@ -525,7 +530,7 @@ public class Hamachi
         
         try
         {
-            output = Retrieve ( "hamachi", "", "version" );
+            output = Retrieve ( lastInfo, "version" );
             output = output.Replace ( "hamachi-lnx-", "" );
         }
         catch

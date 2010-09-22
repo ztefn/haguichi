@@ -21,7 +21,7 @@ using System;
 using Mono.Unix;
 
 
-public class TextStrings
+public static class TextStrings
 {
     
     public static string appName                = "Haguichi";

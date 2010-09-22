@@ -24,7 +24,7 @@ using System.Collections;
 namespace Config
 {
     
-    public class Settings
+    public static class Settings
     {
         
         public static string LocalePath                     = System.AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
@@ -81,7 +81,7 @@ namespace Config
         public static void Init()
         {
             
-            string session;
+            Command.DetermineSudo ();
             
             if ( System.Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {

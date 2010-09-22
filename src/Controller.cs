@@ -26,7 +26,7 @@ using System.Text.RegularExpressions;
 using Gtk;
 
 
-public class Controller
+public static class Controller
 {
     
     public static bool continueUpdate;

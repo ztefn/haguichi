@@ -90,10 +90,9 @@ class Haguichi
         Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );
         
         TextStrings.Init ();
-        Config.Settings.Init ();
         Config.Client.Init ();
-        
-        Hamachi.ApiVersion  = Hamachi.DetermineApiVersion ();
+        Config.Settings.Init ();
+        Hamachi.Init ();
         
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();
