@@ -144,7 +144,7 @@ public class Status
         
         try
         {
-            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-approved.png" );
+            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-unapproved.png" );
         }
         catch
         {
