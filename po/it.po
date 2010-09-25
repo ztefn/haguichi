@@ -7,24 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-12 22:05:47+0200\n"
-"PO-Revision-Date: 2010-08-27 21:10+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2010-09-12 22:05+0200\n"
+"PO-Revision-Date: 2010-09-23 06:30+0000\n"
+"Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-27 22:16+0000\n"
+"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
 msgid "Haguichi Website"
 msgstr "Sito di Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:318
 msgid "A graphical frontend for Hamachi."
 msgstr "Un frontend grafico per Hamachi"
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
 msgstr "Crea ed unisciti a reti locali attraverso Internet"
@@ -338,40 +340,36 @@ msgid "Please enter the new password for this network."
 msgstr "Per favore, inserisci la nuova password per questa rete."
 
 #: ../src/TextStrings.cs:415
-#, fuzzy
 msgid "_Account:"
-msgstr "_Cartella dei dati dell'account:"
+msgstr "_Account:"
 
 #: ../src/TextStrings.cs:418
 msgid "_Attach"
-msgstr ""
+msgstr "_Associa"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr ""
+msgstr "_Associa all'account..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
-msgstr ""
+msgstr "Associa all'account"
 
 #: ../src/TextStrings.cs:421
-#, fuzzy
 msgid "Please enter the account you want to attach this client to."
-msgstr "Per favore, inserisci il nickname che vuoi usare."
+msgstr "Per favore, inserisci l'account che vuoi associare a questo client."
 
 #: ../src/TextStrings.cs:422
 msgid "_Include all networks created by this client"
-msgstr ""
+msgstr "_Includi tutte le reti create da questo client"
 
 #: ../src/TextStrings.cs:423
-#, fuzzy
 msgid "Error attaching"
-msgstr "Errore di connessione"
+msgstr "Errore nell'associazione"
 
 #: ../src/TextStrings.cs:424
-#, fuzzy
 msgid "Account not found."
-msgstr "_Cartella dei dati dell'account:"
+msgstr "Account non trovato."
 
 #: ../src/TextStrings.cs:426
 msgid "_Join"
@@ -534,6 +532,7 @@ msgstr "Tu non sei il proprietario della rete '{0}'"
 msgid "General"
 msgstr "Generale"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:474
 msgid "Desktop"
 msgstr "Desktop"

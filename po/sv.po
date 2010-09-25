@@ -7,24 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-12 22:05:47+0200\n"
-"PO-Revision-Date: 2010-08-20 21:16+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2010-09-12 22:05+0200\n"
+"PO-Revision-Date: 2010-09-24 04:04+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-20 21:44+0000\n"
+"X-Launchpad-Export-Date: 2010-09-25 16:24+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
 msgid "Haguichi Website"
 msgstr "Webbplats för Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:318
 msgid "A graphical frontend for Hamachi."
 msgstr "Ett grafiskt gränsnitt för Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
 msgstr "Anslut och skapa lokala nätverk över internet"
@@ -338,40 +340,36 @@ msgid "Please enter the new password for this network."
 msgstr "Ange det nya lösenordet för det här nätverket."
 
 #: ../src/TextStrings.cs:415
-#, fuzzy
 msgid "_Account:"
-msgstr "_Datamapp för konto:"
+msgstr "_Konto:"
 
 #: ../src/TextStrings.cs:418
 msgid "_Attach"
-msgstr ""
+msgstr "K_oppla"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr ""
+msgstr "K_oppla till konto..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
-msgstr ""
+msgstr "Koppla till konto"
 
 #: ../src/TextStrings.cs:421
-#, fuzzy
 msgid "Please enter the account you want to attach this client to."
-msgstr "Ange det smeknamn som du vill använda."
+msgstr "Ange kontot som du vill koppla denna klient till."
 
 #: ../src/TextStrings.cs:422
 msgid "_Include all networks created by this client"
-msgstr ""
+msgstr "_Inkludera alla nätverk som skapats av denna klient"
 
 #: ../src/TextStrings.cs:423
-#, fuzzy
 msgid "Error attaching"
-msgstr "Fel vid uppkoppling"
+msgstr "Fel vid koppling till"
 
 #: ../src/TextStrings.cs:424
-#, fuzzy
 msgid "Account not found."
-msgstr "_Datamapp för konto:"
+msgstr "Kontot hittades inte."
 
 #: ../src/TextStrings.cs:426
 msgid "_Join"
@@ -533,6 +531,7 @@ msgstr "Du är inte ägare av nätverket \"{0}\""
 msgid "General"
 msgstr "Allmänt"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:474
 msgid "Desktop"
 msgstr "Skrivbord"

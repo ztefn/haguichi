@@ -297,6 +297,14 @@ public class Network
     }
     
     
+    private void GoOfflineThread ( object o, DoWorkEventArgs args )
+    {
+        
+        Hamachi.GoOffline ( this );
+        
+    }
+    
+    
     public void ChangePassword ( object o, EventArgs args )
     {
         
@@ -305,14 +313,6 @@ public class Network
     }
     
     
-    private void GoOfflineThread ( object o, DoWorkEventArgs args )
-    {
-        
-        Hamachi.GoOffline ( this );
-        
-    }
-    
-        
     public void SetLock ( string locked )
     {
         

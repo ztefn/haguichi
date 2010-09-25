@@ -7,24 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-12 22:05:47+0200\n"
-"PO-Revision-Date: 2010-08-26 14:12+0000\n"
-"Last-Translator: Sergey Sedov <sedov@webmail.perm.ru>\n"
+"POT-Creation-Date: 2010-09-12 22:05+0200\n"
+"PO-Revision-Date: 2010-09-24 11:05+0000\n"
+"Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-26 20:04+0000\n"
+"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
 msgid "Haguichi Website"
 msgstr "Сайт Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:318
 msgid "A graphical frontend for Hamachi."
 msgstr "Графическая оболочка к Hamachi"
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
 msgstr "Создавайте и подключайтесь к локальным сетям в интернете"
@@ -338,40 +340,37 @@ msgid "Please enter the new password for this network."
 msgstr "Пожалуйста, введите новый пароль для этой сети"
 
 #: ../src/TextStrings.cs:415
-#, fuzzy
 msgid "_Account:"
-msgstr "_Каталог учётной записи:"
+msgstr "_Учётная запись:"
 
 #: ../src/TextStrings.cs:418
 msgid "_Attach"
-msgstr ""
+msgstr "_Прикрепить"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr ""
+msgstr "П_рикрепить к учётной записи..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
-msgstr ""
+msgstr "Прикрепить к учётной записи"
 
 #: ../src/TextStrings.cs:421
-#, fuzzy
 msgid "Please enter the account you want to attach this client to."
-msgstr "Пожалуйста, придумайте и введите псевдоним."
+msgstr ""
+"Пожалуйста, введите учётную запись к которой вы хотите прикрепить клиента."
 
 #: ../src/TextStrings.cs:422
 msgid "_Include all networks created by this client"
-msgstr ""
+msgstr "_Включить все сети, созданные этим клиентом"
 
 #: ../src/TextStrings.cs:423
-#, fuzzy
 msgid "Error attaching"
-msgstr "Ошибка при подключении"
+msgstr "Ошибка прикрепления"
 
 #: ../src/TextStrings.cs:424
-#, fuzzy
 msgid "Account not found."
-msgstr "_Каталог учётной записи:"
+msgstr "Учётная запись не найдена."
 
 #: ../src/TextStrings.cs:426
 msgid "_Join"
@@ -533,6 +532,7 @@ msgstr "Вы не владелец сети '{0}'."
 msgid "General"
 msgstr "Общие"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:474
 msgid "Desktop"
 msgstr "Рабочий стол"

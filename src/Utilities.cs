@@ -27,7 +27,7 @@ public static class Utilities
     public static string RemoveMnemonics ( string label )
     {
         
-        label = Regex.Replace ( label, @" \(_[a-zA-Z]\)", "" );   // For Japanse translations
+        label = Regex.Replace ( label, @" ?\(_[a-zA-Z]\)", "" );  // For Japanse translations
         label = label.Replace ( "_", "" );                        // For all other translations
         
         return label;

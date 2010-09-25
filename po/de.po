@@ -7,24 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-09-12 22:05:47+0200\n"
-"PO-Revision-Date: 2010-08-23 21:43+0000\n"
+"POT-Creation-Date: 2010-09-12 22:05+0200\n"
+"PO-Revision-Date: 2010-09-22 20:16+0000\n"
 "Last-Translator: scrawl <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-08-26 20:04+0000\n"
+"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
 msgid "Haguichi Website"
 msgstr "Haguichi-Webseite"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:318
 msgid "A graphical frontend for Hamachi."
 msgstr "Eine grafische Oberfläche für Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
 msgstr "Lokale Netzwerke im Internet erstellen und diesen beitreten"
@@ -339,40 +341,38 @@ msgid "Please enter the new password for this network."
 msgstr "Bitte geben Sie das neue Passwort für das Netzwerk ein."
 
 #: ../src/TextStrings.cs:415
-#, fuzzy
 msgid "_Account:"
-msgstr "_Datenordner des Kontos:"
+msgstr "_Konto:"
 
 #: ../src/TextStrings.cs:418
 msgid "_Attach"
-msgstr ""
+msgstr "_Zuweisen"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr ""
+msgstr "_Einem Konto zuweisen..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
-msgstr ""
+msgstr "Einem Konto zuweisen"
 
 #: ../src/TextStrings.cs:421
-#, fuzzy
 msgid "Please enter the account you want to attach this client to."
-msgstr "Bitte geben Sie ihren Benutzernamen ein."
+msgstr ""
+"Bitte geben Sie den Namen des Kontos ein, mit dem Sie diesen Client "
+"verbinden möchten."
 
 #: ../src/TextStrings.cs:422
 msgid "_Include all networks created by this client"
-msgstr ""
+msgstr "Alle Netzwerke dieses Cl_ients einbinden"
 
 #: ../src/TextStrings.cs:423
-#, fuzzy
 msgid "Error attaching"
-msgstr "Fehler beim Verbinden"
+msgstr "Zuweisungsfehler"
 
 #: ../src/TextStrings.cs:424
-#, fuzzy
 msgid "Account not found."
-msgstr "_Datenordner des Kontos:"
+msgstr "Konto wurde nicht gefunden."
 
 #: ../src/TextStrings.cs:426
 msgid "_Join"
@@ -535,6 +535,7 @@ msgstr "Sie sind nicht der Eigentümer des Netzwerks '{0}'"
 msgid "General"
 msgstr "Allgemein"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:474
 msgid "Desktop"
 msgstr "Arbeitsumgebung"
