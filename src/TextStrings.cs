@@ -84,6 +84,9 @@ Italiano (it)
 日本語 (ja)
     Satoru Matsumoto
 
+Қазақша (kk)
+    jmb_kz
+
 Nederlands (nl)
     Stephen Brandt
 
