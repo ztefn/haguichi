@@ -84,7 +84,7 @@ Italiano (it)
 日本語 (ja)
     Satoru Matsumoto
 
-Қазақша (kk)
+Қазақ (kk)
     jmb_kz
 
 Nederlands (nl)

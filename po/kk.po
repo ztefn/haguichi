@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-09-12 22:05+0200\n"
-"PO-Revision-Date: 2010-09-27 14:47+0000\n"
+"PO-Revision-Date: 2010-10-02 11:35+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-27 17:52+0000\n"
+"X-Launchpad-Export-Date: 2010-10-02 12:20+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
@@ -29,7 +29,7 @@ msgstr "Hamachi бағдарламасы үшін графикалық қабы�
 #. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
-msgstr "Интернет арқыл локальды желілерге кіріңіз, оларды құрыңыз"
+msgstr "Интернет арқылы локальды желілерге кіріңіз, әрі оларды құрыңыз"
 
 #: ../src/TextStrings.cs:321
 msgid "Yes"
@@ -65,7 +65,7 @@ msgstr "Тоннель:"
 
 #: ../src/TextStrings.cs:330
 msgid "Anonymous"
-msgstr "Анонимді"
+msgstr "Анонимды"
 
 #: ../src/TextStrings.cs:331
 msgid "_Nickname:"
@@ -141,7 +141,7 @@ msgstr "_Жүктеп алу"
 
 #: ../src/TextStrings.cs:354
 msgid "C_onfigure"
-msgstr "Қалыпқа келтіру"
+msgstr "Қалыпқа _келтіру"
 
 #: ../src/TextStrings.cs:356
 msgid "Not configured"
@@ -157,7 +157,7 @@ msgstr "Қосылу үшін сіз Hamachi қалыпқа келтіруіңі
 
 #: ../src/TextStrings.cs:360
 msgid "Not installed"
-msgstr "Орнатылмаған"
+msgstr "Hamachi орнатылмаған"
 
 #: ../src/TextStrings.cs:361
 msgid "Hamachi is not installed"
@@ -189,7 +189,7 @@ msgstr "Белгісіз"
 
 #: ../src/TextStrings.cs:369
 msgid "Unavailable"
-msgstr ""
+msgstr "Жетімсіз"
 
 #: ../src/TextStrings.cs:370
 msgid "Awaiting approval"
@@ -221,7 +221,7 @@ msgstr "_Өзгерту"
 
 #: ../src/TextStrings.cs:378
 msgid "_View"
-msgstr "_Қарап шығу"
+msgstr "Сырт _көрініс"
 
 #: ../src/TextStrings.cs:379
 msgid "_Help"
@@ -325,7 +325,7 @@ msgstr "Өзіңізге ник ойластырып қойыңыз."
 
 #: ../src/TextStrings.cs:409
 msgid "Click to change your nickname"
-msgstr "Никті өзгерту үшін басыңыз"
+msgstr "Никты өзгерту үшін басыңыз"
 
 #: ../src/TextStrings.cs:411
 msgid "Change _Password..."
@@ -337,7 +337,7 @@ msgstr "Құпия сөзді өзгерту"
 
 #: ../src/TextStrings.cs:413
 msgid "Please enter the new password for this network."
-msgstr "Осы желі үшін жаңа құпия сөзді енгізіңіз."
+msgstr "Осы желі үшін жаңа құпия сөзін енгізіңіз."
 
 #: ../src/TextStrings.cs:415
 msgid "_Account:"
@@ -345,19 +345,19 @@ msgstr "_Пайдаланушы аты (логин):"
 
 #: ../src/TextStrings.cs:418
 msgid "_Attach"
-msgstr "_Тиеу"
+msgstr "_Бекіту"
 
 #: ../src/TextStrings.cs:419
 msgid "_Attach to Account..."
-msgstr "Пайдаланушы атына _тиеу..."
+msgstr "Пайдаланушы атына _бекіту..."
 
 #: ../src/TextStrings.cs:420
 msgid "Attach to Account"
-msgstr "Пайдаланушы атына _тиеу"
+msgstr "Пайдаланушы атына бекіту"
 
 #: ../src/TextStrings.cs:421
 msgid "Please enter the account you want to attach this client to."
-msgstr ""
+msgstr "Осы клиентке бекітемін деген тіркемені көрсетіңіз."
 
 #: ../src/TextStrings.cs:422
 msgid "_Include all networks created by this client"
@@ -365,7 +365,7 @@ msgstr "Осы клиентпен құрылған барлық желілерд
 
 #: ../src/TextStrings.cs:423
 msgid "Error attaching"
-msgstr "Тиеу қатесі"
+msgstr "Бекіту қатесі"
 
 #: ../src/TextStrings.cs:424
 msgid "Account not found."
@@ -409,7 +409,7 @@ msgstr "Құрамын деген желінің атын және құпия с
 
 #: ../src/TextStrings.cs:436
 msgid "_Go directly online in the network"
-msgstr "Желіге сол мезетте _қосылу"
+msgstr "Бірден желіге _қосылу"
 
 #: ../src/TextStrings.cs:438
 msgid "Network not found"
@@ -456,7 +456,7 @@ msgid ""
 "This network requires manual approval of new members by the owner.\n"
 "Would you like to send a join request?"
 msgstr ""
-"Желі әрбір жаңа мүшелерді жекешелей мақұлдауын талап етеді.\n"
+"Желі әрбір жаңа мүшелердің жекешелей мақұлдауын талап етеді.\n"
 "Сұраныс жібергіңіз келеді ме?"
 
 #: ../src/TextStrings.cs:451
@@ -493,7 +493,7 @@ msgid ""
 "from network '{1}'?"
 msgstr ""
 "\"{1}\" желісінен \"{0}\" мүшені шығарып\n"
-" тастауға сенімдісіз бе?"
+"тастауға сенімдісіз бе?"
 
 #: ../src/TextStrings.cs:463
 msgid "Failed deleting network '{0}'"
@@ -501,7 +501,7 @@ msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
 
 #: ../src/TextStrings.cs:464
 msgid "You are not the owner of this network."
-msgstr "Сіз осы желінің иесі емес боласыз."
+msgstr "Осы желінің иесі сіз емес боласыз."
 
 #: ../src/TextStrings.cs:466
 msgid "Failed leaving network '{0}'"
@@ -521,7 +521,7 @@ msgstr "\"{0}\" желісінен мүшені шығарып тастау сә
 
 #: ../src/TextStrings.cs:471
 msgid "You are not the owner of network '{0}'."
-msgstr "Сіз \"{0}\" желінің иеcі емес боласыз."
+msgstr "\"{0}\" желінің иеcі сіз емес боласыз."
 
 #: ../src/TextStrings.cs:473
 msgid "General"
@@ -542,7 +542,7 @@ msgstr "Мәлімдеме аумағы"
 
 #: ../src/TextStrings.cs:478
 msgid "Behavior"
-msgstr ""
+msgstr "Қасиеттері"
 
 #: ../src/TextStrings.cs:480
 msgid "_Account data folder:"
@@ -586,7 +586,7 @@ msgstr "Haguichi бағдарламасын ашу кезінде, мәлімд�
 
 #: ../src/TextStrings.cs:493
 msgid "C_onnect automatically on startup"
-msgstr "Компьютер қосылғанда бағдарлама автоматты түрде _ашу"
+msgstr "Бағдарлама ашылатын кезде автоматты түрде _қосылу"
 
 #: ../src/TextStrings.cs:494
 msgid "_Reconnect automatically when connection is lost"
@@ -598,19 +598,19 @@ msgstr "Бағдарлама жабу кезінде желіден _ажыра�
 
 #: ../src/TextStrings.cs:497
 msgid "Display notification when a member _joins"
-msgstr ""
+msgstr "Мүше желіге _кірген кезде (join) мәлімдеу"
 
 #: ../src/TextStrings.cs:498
 msgid "Display notification when a member _leaves"
-msgstr ""
+msgstr "Мүше желіден _шығып кететін кезде (leave) мәлімдеу"
 
 #: ../src/TextStrings.cs:499
 msgid "Display notification when a member comes o_nline"
-msgstr ""
+msgstr "Мүше желіге _қосылған кезде (online) мәлімдеу"
 
 #: ../src/TextStrings.cs:500
 msgid "Display notification when a member goes o_ffline"
-msgstr ""
+msgstr "Мүше желіден _ажыратылатын кезде (offline) мәлімдеу"
 
 #: ../src/TextStrings.cs:502
 msgid "Do you want to run tuncfg?"
@@ -621,7 +621,7 @@ msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
 msgstr ""
-"Қосылу үшін, Hamachi tuncfg орындауды талап етеді.\n"
+"Қосылу үшін, Hamachi tuncfg орындауын талап етеді.\n"
 "tuncfg ашылуы әкімшілік құқықтарды қажет етеді."
 
 #: ../src/TextStrings.cs:504
@@ -654,43 +654,45 @@ msgstr "Интернетпен қосылыс жоқ."
 
 #: ../src/TextStrings.cs:513
 msgid "Loading configuration failed"
-msgstr ""
+msgstr "Баптаулама (конфигурация) ашу қатесі"
 
 #: ../src/TextStrings.cs:514
 msgid "Hamachi could not launch due to a configuration load failure."
 msgstr ""
+"Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу мүмкін "
+"емес."
 
 #: ../src/TextStrings.cs:516
 msgid "Member online"
-msgstr ""
+msgstr "Мүше желіге қосылды"
 
 #: ../src/TextStrings.cs:517
 msgid "{0} came online in the network {1}"
-msgstr ""
+msgstr "{0} {1} желісіне қосылды"
 
 #: ../src/TextStrings.cs:518
 msgid "Member offline"
-msgstr ""
+msgstr "Мүше желіден ажыратылды"
 
 #: ../src/TextStrings.cs:519
 msgid "{0} went offline in the network {1}"
-msgstr ""
+msgstr "{0} {1} желісінен ажыратылды"
 
 #: ../src/TextStrings.cs:520
 msgid "Member joined"
-msgstr ""
+msgstr "Мүше желіге кірді"
 
 #: ../src/TextStrings.cs:521
 msgid "{0} joined the network {1}"
-msgstr ""
+msgstr "{0} {1} желісіне кірді"
 
 #: ../src/TextStrings.cs:522
 msgid "Member left"
-msgstr ""
+msgstr "Мүше желіден шығып кетті"
 
 #: ../src/TextStrings.cs:523
 msgid "{0} left the network {1}"
-msgstr ""
+msgstr "{0} {1} желісінен шығып кетті"
 
 #: ../src/TextStrings.cs:525
 msgid "A_vailable commands:"
@@ -718,15 +720,15 @@ msgstr "_Команда:"
 
 #: ../src/TextStrings.cs:532
 msgid "_Label:"
-msgstr ""
+msgstr "Көрсетілетін _жазу:"
 
 #: ../src/TextStrings.cs:533
 msgid "Use %A for address and %N for nickname"
-msgstr ""
+msgstr "%A адрес үшін және %N ник үшін қолданыңыз"
 
 #: ../src/TextStrings.cs:535
 msgid "Click to choose an icon"
-msgstr "Суретте таңдау үшін басыңыз"
+msgstr "Суреттеме таңдау үшін басыңыз"
 
 #: ../src/TextStrings.cs:536
 msgid "Choose Icon"
@@ -734,11 +736,11 @@ msgstr "Суреттемені таңдаңыз"
 
 #: ../src/TextStrings.cs:537
 msgid "_No Icon"
-msgstr "Суреттеме_сіз"
+msgstr "Суреттеме қажет _ емес"
 
 #: ../src/TextStrings.cs:539
 msgid "Default"
-msgstr ""
+msgstr "Қалыпты"
 
 #: ../src/TextStrings.cs:540
 msgid "_Default"
@@ -746,17 +748,19 @@ msgstr "_Қалыпты"
 
 #: ../src/TextStrings.cs:542
 msgid "Restore the default commands"
-msgstr ""
+msgstr "Командаларды бастапқы, қалыпты қалпына келтіру"
 
 #: ../src/TextStrings.cs:543
 msgid "Revert changes?"
-msgstr ""
+msgstr "Өзгертулерді кері қайтару қажет пе?"
 
 #: ../src/TextStrings.cs:544
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
 msgstr ""
+"Командаларды бастапқы, қалыпты қалпына келтіріп,\n"
+"өзгертулерді кері қайтару қажет пе?"
 
 #: ../src/TextStrings.cs:546
 msgid "Move up"
