@@ -3,6 +3,7 @@
 Encoding=UTF-8
 Type=Application
 Name=Haguichi
+GenericName=Zero Configuration VPN
 Exec=haguichi
 Terminal=false
 Comment=Join and create local networks over the Internet
@@ -16,5 +17,5 @@ Comment[nl]=Maak en treedt toe tot lokale netwerken via het internet
 Comment[ru]=Создавайте и подключайтесь к локальным сетям в интернете
 Comment[sv]=Anslut och skapa lokala nätverk över internet
 Icon=haguichi
-Categories=Network;GTK;GNOME;
+Categories=Network;P2P;GTK;GNOME;
 X-GNOME-Autostart-enabled=false
