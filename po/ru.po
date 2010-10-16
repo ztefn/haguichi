@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-09-12 22:05+0200\n"
-"PO-Revision-Date: 2010-09-24 11:05+0000\n"
+"PO-Revision-Date: 2010-10-02 16:36+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
+"X-Launchpad-Export-Date: 2010-10-16 18:00+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
@@ -201,7 +201,7 @@ msgstr "Заблокирован:"
 
 #: ../src/TextStrings.cs:372
 msgid "Approval:"
-msgstr "Одобрен:"
+msgstr "Одобрение:"
 
 #: ../src/TextStrings.cs:373
 msgid "Manually"

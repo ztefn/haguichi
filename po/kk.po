@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-09-12 22:05+0200\n"
-"PO-Revision-Date: 2010-10-02 11:35+0000\n"
+"PO-Revision-Date: 2010-10-03 06:58+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-10-02 12:20+0000\n"
+"X-Launchpad-Export-Date: 2010-10-16 18:00+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
@@ -81,7 +81,7 @@ msgstr "_Құпия сөз:"
 
 #: ../src/TextStrings.cs:335
 msgid "Version:"
-msgstr "Нұсқасы:"
+msgstr "Нұсқа:"
 
 #: ../src/TextStrings.cs:337
 msgid "seconds"
@@ -133,7 +133,7 @@ msgstr "Жаңарту..."
 
 #: ../src/TextStrings.cs:351
 msgid "Connect a_utomatically"
-msgstr "Автоматты түрде қосылу"
+msgstr "_Автоматты түрде қосылу"
 
 #: ../src/TextStrings.cs:353
 msgid "_Download"
@@ -201,7 +201,7 @@ msgstr "Жабық:"
 
 #: ../src/TextStrings.cs:372
 msgid "Approval:"
-msgstr "Мақұлданған:"
+msgstr "Мақұлдау:"
 
 #: ../src/TextStrings.cs:373
 msgid "Manually"
@@ -530,7 +530,7 @@ msgstr "Негізгі"
 #. In this context meaning "work environment"
 #: ../src/TextStrings.cs:474
 msgid "Desktop"
-msgstr "Жұмыс үстелі"
+msgstr "Жұмыс ортасы"
 
 #: ../src/TextStrings.cs:475
 msgid "Commands"
@@ -566,11 +566,11 @@ msgstr "Желіге _қосылмаған мүшелерді көрсету"
 
 #: ../src/TextStrings.cs:486
 msgid "Sort by _Name"
-msgstr "Аты бойы_нша реттеу"
+msgstr "_Аты бойынша реттеу"
 
 #: ../src/TextStrings.cs:487
 msgid "Sort by _Status"
-msgstr "Күйі бо_йынша реттеу"
+msgstr "_Күйі бойынша реттеу"
 
 #: ../src/TextStrings.cs:488
 msgid "S_tatusbar"
@@ -582,7 +582,8 @@ msgstr "Haguichi бағдарламасын мәлімдеу аумағында 
 
 #: ../src/TextStrings.cs:491
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "Haguichi бағдарламасын ашу кезінде, мәлімдеу аумағынан ғана к_өрсету"
+msgstr ""
+"Haguichi бағдарламасын ашу кезінде, тек мәлімдеу аумағында ғана к_өрсету"
 
 #: ../src/TextStrings.cs:493
 msgid "C_onnect automatically on startup"
@@ -736,7 +737,7 @@ msgstr "Суреттемені таңдаңыз"
 
 #: ../src/TextStrings.cs:537
 msgid "_No Icon"
-msgstr "Суреттеме қажет _ емес"
+msgstr "Суреттеме қажет _емес"
 
 #: ../src/TextStrings.cs:539
 msgid "Default"
