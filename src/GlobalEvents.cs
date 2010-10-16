@@ -297,7 +297,8 @@ public class GlobalEvents
             
             Haguichi.informationWindow.SetAccount ( account );
             
-            if ( ( account == "-" ) &&
+            if ( ( ( account == "" ) ||
+                   ( account == "-" ) ) &&
                  ( Controller.lastStatus >= 6 ) )
             {
                 MainWindow.menuBar.SetAttach ( true, true );
