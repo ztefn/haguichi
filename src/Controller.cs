@@ -20,9 +20,9 @@
 
 using System;
 using System.Collections;
-using System.ComponentModel;
 using System.Net.Sockets;
 using System.Text.RegularExpressions;
+using System.Threading;
 using Gtk;
 
 
@@ -110,7 +110,9 @@ public static class Controller
     
     public static void StatusCheck ()
     {
+        
         lastStatus = StatusInt ();
+        
     }
     
     
@@ -436,29 +438,15 @@ public static class Controller
         
         MainWindow.statusBar.Push ( 0, TextStrings.updating );
         
-        BackgroundWorker worker = new BackgroundWorker {};
-        worker.DoWork += UpdateConnectionThread;
-        worker.RunWorkerAsync ();
-        
-        /*
-         * Wait a moment for the thread to finish then continue in the main thread,
-         * because GtkTreeView doesn't get updated when the GtkTreeModel is changed async... :(
-         */
-        uint wait = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetListWaitTime ) );
-        
-        if ( Hamachi.ApiVersion == 1 )
-        {
-            wait += ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetNicksWaitTime ) );
-        }
-        
-        GLib.Timeout.Add ( wait, new GLib.TimeoutHandler ( UpdateList ) );
+        Thread thread = new Thread ( UpdateConnectionThread );
+        thread.Start();
         
         return true;
         
     }
     
     
-    private static void UpdateConnectionThread ( object o, DoWorkEventArgs args )
+    private static void UpdateConnectionThread ()
     {
         
         StatusCheck ();
@@ -475,6 +463,10 @@ public static class Controller
             
             nNetworksList = Hamachi.ReturnList ();
         }
+        
+        Gtk.Application.Invoke ( delegate {
+            UpdateList ();
+        });
         
     }
     
