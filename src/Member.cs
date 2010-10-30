@@ -18,7 +18,7 @@
  */
 
 using System;
-using System.ComponentModel;
+using System.Threading;
 using Gtk;
 
     
@@ -36,8 +36,6 @@ public class Member
     public string StatusSortString;
     
     public bool IsEvicted;
-    
-    private BackgroundWorker worker;
     
     
     public Member ( Status status, string network, string address, string nick, string client, string tunnel )
@@ -84,15 +82,13 @@ public class Member
     public void GetLongNick ()
     {
         
-        worker = new BackgroundWorker {};
-
-        worker.DoWork += GetLongNickThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( GetLongNickThread );
+        thread.Start ();
         
     }
     
     
-    private void GetLongNickThread ( object sender, DoWorkEventArgs e )
+    private void GetLongNickThread ()
     {
         
         string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );

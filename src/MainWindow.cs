@@ -402,6 +402,9 @@ public class MainWindow
                 panelIcon.SetMode ( mode );
                 statusBar.Push ( 0, TextStrings.connecting );
                 
+                menuBar.SetMode ( mode );
+                quickMenu.SetMode ( mode );
+                
                 break;
                 
             case "Connected":

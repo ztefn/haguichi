@@ -66,6 +66,17 @@ public class GlobalEvents
     public static void StopHamachi ( object obj, EventArgs args )
     {
         
+        Thread thread = new Thread ( StopHamachiThread );
+        thread.Start ();
+        
+        ConnectionStopped ();
+        
+    }
+    
+    
+    private static void StopHamachiThread ()
+    {
+
         if ( Config.Settings.DemoMode )
         {
             // Do nothing
@@ -78,8 +89,6 @@ public class GlobalEvents
         {
             Hamachi.Stop ();
         }
-        
-        ConnectionStopped ();
         
     }
 
@@ -232,8 +241,8 @@ public class GlobalEvents
         }
         else
         {
-            Thread updateThread = new Thread ( UpdateNickThread );
-            updateThread.Start();
+            Thread thread = new Thread ( UpdateNickThread );
+            thread.Start ();
         }
         
     }

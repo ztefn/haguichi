@@ -215,7 +215,7 @@ public static class Controller
     }
     
     
-    public static void HamachiGoStart ()
+    public static void HamachiGoStartThread ()
     {
         
         StatusCheck ();
@@ -229,12 +229,12 @@ public static class Controller
                  ( output.IndexOf ( "Hamachi is already started" ) == 0 ) )
             {
                 /* Ok, started */
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Started!" );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Started!" );
             }
             else if ( output.IndexOf ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) == 0 )
             {
                 /* Hamachi is starting */
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Hamachi is starting." );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Hamachi is starting." );
                 
                 string output2 = Hamachi.GetInfo ();
                 Regex regex = new Regex ( "status([ ]+):([ ]+)logging in" );
@@ -246,23 +246,25 @@ public static class Controller
                 else if ( regex.IsMatch ( output2 ) )
                 {
                     /* Wait a moment hoping Hamachi will be fully started by then */
-                    System.Threading.Thread.Sleep ( 2000 );
+                    Thread.Sleep ( 2000 );
                 }
             }
             else if ( output.IndexOf ( "cfg: failed to load" ) != -1 )
             {
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Not properly configured, showing dialog." );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Not properly configured, showing dialog." );
                 Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error" );
             }
             else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 )
             {
                 /* Not able to start, running tuncfg required */
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "TunCfg required." );
-                MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "TunCfg required." );
+                Application.Invoke ( delegate {
+                    MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
+                });
                 
                 if ( ( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg ) )
                 {
-                    Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Asking before running tuncfg." );
+                    Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Asking before running tuncfg." );
                     Dialogs.RunTunCfg dlg = new Dialogs.RunTunCfg ();
                     
                     if ( dlg.ResponseText == "Ok" )
@@ -276,59 +278,70 @@ public static class Controller
                 }
                 else
                 {
-                    Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Running tuncfg." );
+                    Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Running tuncfg." );
                     Hamachi.TunCfg ();
                 }
                 
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Trying to start again." );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Trying to start again." );
                 string output2 = Hamachi.Start ();
                 
                 if ( lastStatus >= 4 )
                 {
-                    Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Yes, started now!" );
+                    Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Yes, started now!" );
                 }
                 else
                 {
-                    Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Not yet started, go start?" );
+                    Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Not yet started, go start?" );
                 }
             }
             else if ( output.IndexOf ( "tap: connect() failed 111 (Connection refused)" ) != -1 )
             {
                 /* Not able to start, connection refused */
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Connection refused, showing dialog" );
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Connection refused, showing dialog" );
                 Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error" );
-                GlobalEvents.ConnectionStopped ();
+                Application.Invoke ( delegate {
+                    GlobalEvents.ConnectionStopped ();
+                });
             }
             else
             {
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Failed to start for unknown reason." );
-                GlobalEvents.ConnectionStopped ();
+                Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Failed to start for unknown reason." );
+                Application.Invoke ( delegate {
+                    GlobalEvents.ConnectionStopped ();
+                });
             }
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStart", "Not yet installed or configured." );
-            GlobalEvents.ConnectionStopped ();
+            Debug.Log ( Debug.Domain.Info, "Controller.HamachiGoStartThread", "Not yet installed or configured." );
+            Application.Invoke ( delegate {
+                GlobalEvents.ConnectionStopped ();
+            });
         }
         
     }
     
     
-    public static void HamachiGoConnect ()
+    public static void GoConnectThread ()
     {
         
         StatusCheck ();
         
         if ( lastStatus >= 4 )
         {
-            MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
-            GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( TimedGoLogin ) );
+            Application.Invoke ( delegate {
+                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
+            });
+            GoLoginThread ();
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoConnect", "Not yet started, go start." );
-            MainWindow.statusBar.Push ( 0, TextStrings.starting );
-            GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( TimedGoStart ) );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoConnectThread", "Not yet started, go start." );
+            
+            Application.Invoke ( delegate {
+                MainWindow.statusBar.Push ( 0, TextStrings.starting );
+            });
+            GoStartThread ();
         }
         
     }
@@ -337,13 +350,15 @@ public static class Controller
     public static bool ConnectAfterTimeout ()
     {
         
-        HamachiGoConnect ();
+        Thread thread = new Thread ( GoConnectThread );
+        thread.Start ();
+        
         return false;
         
     }
     
     
-    private static bool TimedGoLogin ()
+    private static void GoLoginThread ()
     {
         
         string output = Hamachi.Login ();
@@ -351,49 +366,60 @@ public static class Controller
         if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
              ( output.IndexOf ( "Already logged in" ) == 0 ) ) // Ok, logged in.
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Connected!" );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Connected!" );
             
             lastStatus = 6;
             
             if ( Hamachi.ApiVersion > 1 )
             {
-                GetNetworkList ();
+                Application.Invoke ( delegate {
+                   GetNetworkList ();
+                });
             }
             else if ( Hamachi.ApiVersion == 1 )
             {
-                GetNicksAndNetworkList ();
+                Application.Invoke ( delegate {
+                   GetNicksAndNetworkList ();
+                });
             }
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.TimedGoLogin", "Error connecting, showing dialog." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Error connecting, showing dialog." );
+            
             Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error" );
-            GlobalEvents.ConnectionStopped ();
+            Application.Invoke ( delegate {
+                GlobalEvents.ConnectionStopped ();
+            });
         }
-        return false;
         
     }
     
     
-    private static bool TimedGoStart ()
+    private static void GoStartThread ()
     {
         
-        HamachiGoStart ();
+        HamachiGoStartThread ();
         
         StatusCheck ();
         
         if ( lastStatus >= 4 )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.TimedGoStart", "Started, now go connect." );
-            MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
-            HamachiGoConnect ();
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
+            
+            Application.Invoke ( delegate {
+                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
+            });
+            GoLoginThread ();
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.TimedGoStart", "Unable to start, giving up." );
-            GlobalEvents.ConnectionStopped ();
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Unable to start, giving up." );
+            
+            Application.Invoke ( delegate {
+                GlobalEvents.ConnectionStopped ();
+            });
         }
-        return false;
         
     }
     
@@ -439,7 +465,7 @@ public static class Controller
         MainWindow.statusBar.Push ( 0, TextStrings.updating );
         
         Thread thread = new Thread ( UpdateConnectionThread );
-        thread.Start();
+        thread.Start ();
         
         return true;
         
@@ -464,7 +490,7 @@ public static class Controller
             nNetworksList = Hamachi.ReturnList ();
         }
         
-        Gtk.Application.Invoke ( delegate {
+        Application.Invoke ( delegate {
             UpdateList ();
         });
         

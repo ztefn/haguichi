@@ -18,8 +18,8 @@
  */
 
 using System;
-using System.ComponentModel;
 using System.Diagnostics;
+using System.Threading;
 
     
 public static class Command
@@ -31,15 +31,13 @@ public static class Command
     public static void DetermineSudo ()
     {
         
-        BackgroundWorker worker = new BackgroundWorker {};
-        
-        worker.DoWork += DetermineSudoThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( DetermineSudoThread );
+        thread.Start ();
         
     }
     
     
-    private static void DetermineSudoThread ( object sender, DoWorkEventArgs e )
+    private static void DetermineSudoThread ()
     {
         
         string sudo    = "sudo";

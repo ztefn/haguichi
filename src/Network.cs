@@ -19,7 +19,7 @@
 
 using System;
 using System.Collections;
-using System.ComponentModel;
+using System.Threading;
 using Gtk;
 
 
@@ -39,8 +39,6 @@ public class Network
     public string StatusSortString;
     
     public DateTime lastUpdate;
-    
-    private BackgroundWorker worker;
     
     
     public Network ()
@@ -156,15 +154,13 @@ public class Network
     public void DetermineOwnership ()
     {
         
-        worker = new BackgroundWorker {};
-
-        worker.DoWork += DetermineOwnershipThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( DetermineOwnershipThread );
+        thread.Start ();
         
     }
     
     
-    private void DetermineOwnershipThread ( object sender, DoWorkEventArgs e )
+    private void DetermineOwnershipThread ()
     {
         
         string output = "";
@@ -258,9 +254,8 @@ public class Network
     public void GoOnline ( object o, EventArgs args )
     {
         
-        worker = new BackgroundWorker {};
-        worker.DoWork += GoOnlineThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( GoOnlineThread );
+        thread.Start ();
         
         this.Status = new Status ( "*" );
         
@@ -272,7 +267,7 @@ public class Network
     }
     
     
-    private void GoOnlineThread ( object o, DoWorkEventArgs args )
+    private void GoOnlineThread ()
     {
         
         Hamachi.GoOnline ( this );
@@ -283,9 +278,8 @@ public class Network
     public void GoOffline ( object o, EventArgs args )
     {
         
-        worker = new BackgroundWorker {};
-        worker.DoWork += GoOfflineThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( GoOfflineThread );
+        thread.Start ();
         
         this.Status = new Status ( " " );
         
@@ -297,7 +291,7 @@ public class Network
     }
     
     
-    private void GoOfflineThread ( object o, DoWorkEventArgs args )
+    private void GoOfflineThread ()
     {
         
         Hamachi.GoOffline ( this );
@@ -318,14 +312,13 @@ public class Network
         
         this.Lock = locked;
         
-        worker = new BackgroundWorker {};
-        worker.DoWork += SetLockThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( SetLockThread );
+        thread.Start ();
         
     }
     
     
-    private void SetLockThread ( object o, DoWorkEventArgs args )
+    private void SetLockThread ()
     {
         
         string locked = "unlock";
@@ -345,14 +338,13 @@ public class Network
         
         this.Approve = approval;
         
-        worker = new BackgroundWorker {};
-        worker.DoWork += SetApprovalThread;
-        worker.RunWorkerAsync ();
+        Thread thread = new Thread ( SetApprovalThread );
+        thread.Start ();
         
     }
     
     
-    private void SetApprovalThread ( object o, DoWorkEventArgs args )
+    private void SetApprovalThread ()
     {
         
         string locked = "unlock";

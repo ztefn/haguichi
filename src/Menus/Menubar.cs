@@ -195,7 +195,7 @@ namespace Menus
             switch ( mode )
             {
                 case "Connecting":
-                    // Nothing todo
+                    connect.Sensitive = false;
                 
                     break;
                     
