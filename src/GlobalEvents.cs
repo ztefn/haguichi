@@ -57,7 +57,7 @@ public class GlobalEvents
         else
         {
             MainWindow.SetMode ( "Connecting" );
-            GLib.Timeout.Add ( 10, new GLib.TimeoutHandler ( Controller.ConnectAfterTimeout ) );
+            Controller.GoConnect ();
         }
         
     }
@@ -177,27 +177,16 @@ public class GlobalEvents
         Haguichi.connection.ClearNetworks ();
         Haguichi.connection.Status = new Status ( " " );
         
-        if ( Config.Settings.DemoMode )
+        if ( Hamachi.ApiVersion > 1 )
         {
             Controller.lastStatus = 4;
         }
-        else
+        else if ( Hamachi.ApiVersion == 1 )
         {
-            Controller.StatusCheck ();
+            Controller.lastStatus = 3;
         }
         
-        if ( Controller.lastStatus >= 2 )
-        {
-            MainWindow.SetMode ( "Disconnected" );
-        }
-        else if ( Controller.lastStatus >= 1 )
-        {
-            MainWindow.SetMode ( "Not configured" );
-        }
-        else
-        {
-            MainWindow.SetMode ( "Not installed" );
-        }
+        MainWindow.SetMode ( "Disconnected" );
         
         SetAttach ();
         

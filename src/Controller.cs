@@ -69,7 +69,7 @@ public static class Controller
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
             MainWindow.SetMode ( "Connecting" );
-            GLib.Timeout.Add ( 500, new GLib.TimeoutHandler ( ConnectAfterTimeout ) );
+            GoConnect ();
         }
         else if ( ( lastStatus >= 2 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
@@ -347,13 +347,11 @@ public static class Controller
     }
     
     
-    public static bool ConnectAfterTimeout ()
+    public static void GoConnect ()
     {
         
         Thread thread = new Thread ( GoConnectThread );
         thread.Start ();
-        
-        return false;
         
     }
     
