@@ -25,7 +25,7 @@ public static class TextStrings
 {
     
     public static string appName                = "Haguichi";
-    public static string appVersion             = "1.0.1";
+    public static string appVersion             = "1.0.2";
     public static string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
