@@ -155,7 +155,7 @@ public class MainWindow
         disconnectedBox.Add ( vbRight );
         
         
-        Gtk.Box.BoxChild bc5 = ( ( Gtk.Box.BoxChild ) ( disconnectedBox [ vbDisonnected ] ) );
+        Box.BoxChild bc5 = ( ( Box.BoxChild ) ( disconnectedBox [ vbDisonnected ] ) );
         bc5.Expand = false;
 
         
@@ -168,19 +168,19 @@ public class MainWindow
         mainBox.Add ( statusBar );
         
         
-        Gtk.Box.BoxChild bc1 = ( ( Gtk.Box.BoxChild ) ( mainBox [ menuBar ] ) );
+        Box.BoxChild bc1 = ( ( Box.BoxChild ) ( mainBox [ menuBar ] ) );
         bc1.Expand = false;
         
-        Gtk.Box.BoxChild bc4 = ( ( Gtk.Box.BoxChild ) ( vbDisonnected [ connectButton ] ) );
+        Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbDisonnected [ connectButton ] ) );
         bc4.Expand = false;
         
-        Gtk.Box.BoxChild bc6 = ( ( Gtk.Box.BoxChild ) ( vbDisonnected [ autoconnectCheckbox ] ) );
+        Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbDisonnected [ autoconnectCheckbox ] ) );
         bc6.Expand = false;
         
-        Gtk.Box.BoxChild bc7 = ( ( Gtk.Box.BoxChild ) ( vbDisonnected [ nameButton ] ) );
+        Box.BoxChild bc7 = ( ( Box.BoxChild ) ( vbDisonnected [ nameButton ] ) );
         //bc7.Expand = false;
         
-        Gtk.Box.BoxChild bc3 = ( ( Gtk.Box.BoxChild ) ( mainBox [ statusBar ] ) );
+        Box.BoxChild bc3 = ( ( Box.BoxChild ) ( mainBox [ statusBar ] ) );
         bc3.Expand = false;
 
 

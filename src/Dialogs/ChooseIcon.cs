@@ -43,7 +43,7 @@ namespace Dialogs
             this.Opener = opener;
             this.CurrentIcon = currentIcon;
             
-            this.Rows   = 10;
+            this.Rows = 10;
             this.Columns = 6;
             
             this.Modal = true;
@@ -185,7 +185,7 @@ namespace Dialogs
         }
         
         
-        private void OnDeleteEvent (object obj, DeleteEventArgs args )
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
             Dismiss ();
             args.RetVal = true;

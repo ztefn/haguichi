@@ -44,21 +44,7 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
-        Controller.StatusCheck ();
-        
-        if ( Config.Settings.DemoMode )
-        {
-            ConnectionEstablished ();
-        }
-        else if ( Controller.lastStatus == 2 )
-        {
-            Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
-        }
-        else
-        {
-            MainWindow.SetMode ( "Connecting" );
-            Controller.GoConnect ();
-        }
+        Controller.GoConnect ();
         
     }
     

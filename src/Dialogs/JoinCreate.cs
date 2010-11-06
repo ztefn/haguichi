@@ -227,7 +227,7 @@ namespace Dialogs
         }
         
         
-        private void OnDeleteEvent (object obj, DeleteEventArgs args )
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
             
             Dismiss ();
@@ -239,7 +239,7 @@ namespace Dialogs
         public void Open ()
         {
             
-            goOnline.Active = (bool) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork );
+            goOnline.Active = ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork );
             
             if ( this.Visible )
             {

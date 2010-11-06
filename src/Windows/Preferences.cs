@@ -53,7 +53,7 @@ namespace Windows
         public Preferences ( string title ) : base ( title )
         {
             
-            this.WindowPosition = Gtk.WindowPosition.Center;
+            this.WindowPosition = WindowPosition.Center;
             this.DefaultWidth   = 440;
             this.DefaultHeight  = 360;
             this.IconList       = MainWindow.appIcons;
@@ -140,7 +140,7 @@ namespace Windows
             
             commandsEditor = new CommandsEditor ();
             
-            pathButton = new Gtk.FileChooserButton ( TextStrings.chooseFolderTitle, FileChooserAction.SelectFolder );
+            pathButton = new FileChooserButton ( TextStrings.chooseFolderTitle, FileChooserAction.SelectFolder );
             pathButton.SelectionChanged += delegate
             {
                 Config.Client.Set ( Config.Settings.HamachiDataPath, pathButton.Filename );            

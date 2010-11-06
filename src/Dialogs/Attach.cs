@@ -140,7 +140,7 @@ namespace Dialogs
         }
         
         
-        private void OnDeleteEvent (object obj, DeleteEventArgs args )
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
             
             Dismiss ();

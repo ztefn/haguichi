@@ -35,13 +35,13 @@ namespace Dialogs
             runBut.Image = new Image ( Stock.DialogAuthentication, IconSize.Button );
             runBut.GrabFocus ();
             
-            Gtk.CheckButton check =  new CheckButton ( TextStrings.checkboxAskBeforeRunningTuncfg );
+            CheckButton check =  new CheckButton ( TextStrings.checkboxAskBeforeRunningTuncfg );
             check.Active = ( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg );
             check.Toggled += ToggleAsk;
             
             this.AddContent ( check );
             
-            Gtk.Box.BoxChild bc = ( ( Gtk.Box.BoxChild ) ( this.Contents [ check ] ) );
+            Box.BoxChild bc = ( ( Box.BoxChild ) ( this.Contents [ check ] ) );
             bc.Expand = false;
             bc.Padding = 6;
             
