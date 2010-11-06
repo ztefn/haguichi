@@ -301,13 +301,21 @@ public class NetworkView : TreeView
                 tipLabel.Ypad   = 3;
                 
                 tipIcon = new Image ();
-                if ( Gnome.IconTheme.Default.HasIcon ( "stock_person" ) )
+                if ( Gnome.IconTheme.Default.HasIcon ( "avatar-default" ) )
+                {
+                    tipIcon.SetFromIconName ( "avatar-default", IconSize.Dialog );
+                }
+                else if ( Gnome.IconTheme.Default.HasIcon ( "stock_person" ) )
                 {
                     tipIcon.SetFromIconName ( "stock_person", IconSize.Dialog );
                 }
                 else if ( Gnome.IconTheme.Default.HasIcon ( "user-identity" ) )
                 {
                     tipIcon.SetFromIconName ( "user-identity", IconSize.Dialog );
+                }
+                else if ( Gnome.IconTheme.Default.HasIcon ( "computer" ) )
+                {
+                    tipIcon.SetFromIconName ( "computer", IconSize.Dialog );
                 }
                 tipIcon.Yalign  = 0;
                 tipIcon.Xpad    = 3;

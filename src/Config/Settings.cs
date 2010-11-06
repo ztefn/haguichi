@@ -41,7 +41,7 @@ namespace Config
         public static bool SetNickAfterLogin                = false;
         
         public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
-                                                                "true;false;gnome-remote-desktop;_View Remote Desktop;vinagre %A",
+                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A",
                                                                 "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A" };
         
         public static string [] SessionDefaultCommands;
@@ -86,7 +86,7 @@ namespace Config
             if ( System.Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {
                 SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/",
-                                                         "true;false;gnome-remote-desktop;_View Remote Desktop;krdc %A",
+                                                         "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;krdc %A",
                                                          "true;false;utilities-terminal;_Ping;konsole -e ping %A" };
                 
                 Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: KDE" );

@@ -194,6 +194,10 @@ public static class Hamachi
         else if ( Hamachi.ApiVersion == 1 )
         {
             output = Command.ReturnOutput ( "hamachi", "start" );
+            if ( output == "" )
+            {
+                output = "empty";
+            }
         }
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );

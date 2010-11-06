@@ -222,6 +222,7 @@ public static class Controller
         string output = startOutput;
         
         if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
+             ( output == "empty" ) ||
              ( output.IndexOf ( "Hamachi is already started" ) == 0 ) )
         {
             /* Ok, started */
@@ -334,8 +335,18 @@ public static class Controller
             
             Application.Invoke ( delegate {
                 MainWindow.statusBar.Push ( 0, TextStrings.starting );
-                GoStart ();
+                
+                if ( Hamachi.ApiVersion > 1 )
+                {
+                    GoStart ();
+                }
             });
+            
+            if ( Hamachi.ApiVersion == 1 )
+            {
+                startOutput = Hamachi.Start ();
+                GoStartThread ();
+            }
         }
         
     }
