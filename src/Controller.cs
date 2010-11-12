@@ -122,7 +122,7 @@ public static class Controller
         
         if ( Config.Settings.DemoMode )
         {
-            return 6;   
+            return 6;
         }
         
         string output = Hamachi.GetInfo ();
@@ -313,7 +313,9 @@ public static class Controller
         
         if ( Config.Settings.DemoMode )
         {
-            GlobalEvents.ConnectionEstablished ();
+            Application.Invoke ( delegate {
+                GlobalEvents.ConnectionEstablished ();
+            });
         }
         else if ( lastStatus == 2 )
         {
