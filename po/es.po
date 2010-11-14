@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2010-09-12 22:05+0200\n"
-"PO-Revision-Date: 2010-09-23 08:18+0000\n"
+"PO-Revision-Date: 2010-11-14 12:35+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-25 16:24+0000\n"
+"X-Launchpad-Export-Date: 2010-11-14 13:25+0000\n"
 "X-Generator: Launchpad (build Unknown)\n"
 
 #: ../src/TextStrings.cs:317
@@ -29,7 +29,7 @@ msgstr "Una interfaz gráfica para Hamachi."
 #. Description used in application launchers
 #: ../src/TextStrings.cs:319
 msgid "Join and create local networks over the Internet"
-msgstr "Únete y crea redes locales a través de Internet"
+msgstr "Únase y cree redes locales a través de Internet"
 
 #: ../src/TextStrings.cs:321
 msgid "Yes"
@@ -165,7 +165,7 @@ msgstr "Hamachi no está instalado"
 
 #: ../src/TextStrings.cs:362
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Descargue hamachi y siga las instrucciones de instalación."
+msgstr "Descargue Hamachi y siga las instrucciones de instalación."
 
 #: ../src/TextStrings.cs:364
 msgid "Members:"
@@ -181,7 +181,7 @@ msgstr "Propietario:"
 
 #: ../src/TextStrings.cs:367
 msgid "You"
-msgstr "Tú"
+msgstr "Usted"
 
 #: ../src/TextStrings.cs:368
 msgid "Unknown"
@@ -229,7 +229,7 @@ msgstr "Ay_uda"
 
 #: ../src/TextStrings.cs:381
 msgid "_Online Help"
-msgstr "Ayuda en _linea"
+msgstr "Ayuda en _línea"
 
 #: ../src/TextStrings.cs:382
 msgid "_Create Network..."
@@ -474,35 +474,35 @@ msgstr "Información"
 
 #: ../src/TextStrings.cs:454
 msgid "Delete network '{0}'?"
-msgstr "¿Borrar red '{0}'?"
+msgstr "¿Borrar red «{0}»?"
 
 #: ../src/TextStrings.cs:455
 msgid "Are you sure you want to delete network '{0}'?"
-msgstr "¿Está seguro de que desea borrar la red '{0}'?"
+msgstr "¿Está seguro de que desea borrar la red «{0}»?"
 
 #: ../src/TextStrings.cs:457
 msgid "Leave network '{0}'?"
-msgstr "¿Abandonar la red '{0}'?"
+msgstr "¿Abandonar la red «{0}»?"
 
 #: ../src/TextStrings.cs:458
 msgid "Are you sure you want to leave network '{0}'?"
-msgstr "¿Está seguro de que desea dejar la red '{0}'?"
+msgstr "¿Está seguro de que desea dejar la red «{0}»?"
 
 #: ../src/TextStrings.cs:460
 msgid "Evict member '{0}'?"
-msgstr "¿Expulsar al miembro '{0}'?"
+msgstr "¿Expulsar al miembro «{0}»?"
 
 #: ../src/TextStrings.cs:461
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
 msgstr ""
-"¿Está seguro de querer expulsar al miembro '{0}'\n"
-"de la red '{1}'?"
+"¿Está seguro de querer expulsar al miembro «{0}»\n"
+"de la red «{1}»?"
 
 #: ../src/TextStrings.cs:463
 msgid "Failed deleting network '{0}'"
-msgstr "No se ha podido eliminar la red '{0}'"
+msgstr "No se ha podido eliminar la red «{0}»"
 
 #: ../src/TextStrings.cs:464
 msgid "You are not the owner of this network."
@@ -510,7 +510,7 @@ msgstr "No es el propietario de esta red."
 
 #: ../src/TextStrings.cs:466
 msgid "Failed leaving network '{0}'"
-msgstr "No se ha podido abandonar la red '{0}'"
+msgstr "No se ha podido abandonar la red «{0}»"
 
 #: ../src/TextStrings.cs:467
 msgid "You are the owner of this network."
@@ -522,11 +522,11 @@ msgstr "No tiene permiso para dejar esta red."
 
 #: ../src/TextStrings.cs:470
 msgid "Failed evicting member '{0}'"
-msgstr "No se ha podido expulsar al miembro '{0}'"
+msgstr "No se ha podido expulsar al miembro «{0}»"
 
 #: ../src/TextStrings.cs:471
 msgid "You are not the owner of network '{0}'."
-msgstr "No es el dueño de la red '{0}'."
+msgstr "No es el dueño de la red «{0}»."
 
 #: ../src/TextStrings.cs:473
 msgid "General"
@@ -583,11 +583,11 @@ msgstr "_Barra de estado"
 
 #: ../src/TextStrings.cs:490
 msgid "_Show Haguichi in the notification area"
-msgstr "Muestra Haguichi en el área de _notificación"
+msgstr "Mostrar Haguichi en el área de _notificación"
 
 #: ../src/TextStrings.cs:491
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "Inicia Haguichi _minimizado en el área de notificación."
+msgstr "Iniciar Haguichi _minimizado en el área de notificación."
 
 #: ../src/TextStrings.cs:493
 msgid "C_onnect automatically on startup"
@@ -619,7 +619,7 @@ msgstr "Mostrar notificación cuando se _desconecte un miembro"
 
 #: ../src/TextStrings.cs:502
 msgid "Do you want to run tuncfg?"
-msgstr "¿Quiere ejecutar tuncfg?"
+msgstr "¿Desea ejecutar tuncfg?"
 
 #: ../src/TextStrings.cs:503
 msgid ""
@@ -647,7 +647,7 @@ msgstr "Error al conectar"
 
 #: ../src/TextStrings.cs:509
 msgid "Hamachi login failed."
-msgstr "Ha fallado en inicio de sesión de Hamachi."
+msgstr "Ha fallado el inicio de sesión de Hamachi."
 
 #: ../src/TextStrings.cs:510
 msgid "Connection refused."
