@@ -73,9 +73,11 @@ class Haguichi
             }
         }
         
+        Debug.Log ( Debug.Domain.Info, "Main", "Greetings, I am " + TextStrings.appName + " " + TextStrings.appVersion );
+        
         if ( Platform.ActiveProcess () )
         {
-            Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active process" );
+            Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active process, will exit now" );
             return;
         }
         else
