@@ -140,7 +140,6 @@ namespace Dialogs
             passwordEntry.FocusGrabbed += HideFailure;
             passwordEntry.Visibility = false;
             passwordEntry.WidthChars = 30;
-            passwordEntry.MaxLength = 40;
             passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
             passwordLabel.Xalign = 0;
             passwordLabel.MnemonicWidget = passwordEntry;

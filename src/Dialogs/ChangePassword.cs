@@ -80,7 +80,6 @@ namespace Dialogs
             
             passwordEntry = new Entry ();
             passwordEntry.ActivatesDefault = true;
-            passwordEntry.MaxLength = 40;
             passwordEntry.Visibility = false;
             
             passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
