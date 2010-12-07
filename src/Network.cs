@@ -219,10 +219,11 @@ public class Network
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
-            output = Command.ReturnOutput ( "hamachi", "evict '" + this.Id + "' 0.0.0.0" );
+            output = Command.ReturnOutput ( "hamachi", "evict '" + this.Id + "' 5.5.5.5" );
             Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
     
-            if ( output.IndexOf ( ".. ok" ) != -1 )
+            if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
+                 ( output.IndexOf ( ".. failed, [16]" ) != -1 ) )
             {
                 this.IsOwner = 1;
             }
