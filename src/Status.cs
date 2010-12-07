@@ -18,6 +18,7 @@
  */
 
 using System;
+using Gtk;
 
 
 public class Status
@@ -30,6 +31,7 @@ public class Status
     
     public Status ( string status )
     {
+        
         if ( status == " " )
         {
             statusInt = 0;
@@ -54,6 +56,7 @@ public class Status
             statusString = TextStrings.unapproved;
             statusSortable = "c";
         }
+        
     }
     
     
@@ -83,18 +86,9 @@ public class Status
     public static Gdk.Pixbuf GetPixbufOnline ()
     {
         
-        Gdk.Pixbuf statusPix;
+        IconTheme.AddBuiltinIcon ( "haguichi-node-online", 10, Gdk.Pixbuf.LoadFromResource ( "node-online" ) );
         
-        try
-        {
-            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-online.png" );
-        }
-        catch
-        {
-            statusPix = Gdk.Pixbuf.LoadFromResource ( "status-online" );
-        }
-        
-        return statusPix;
+        return IconTheme.Default.LoadIcon ( "haguichi-node-online", 10, IconLookupFlags.UseBuiltin );
         
     }
     
@@ -102,18 +96,9 @@ public class Status
     public static Gdk.Pixbuf GetPixbufOffline ()
     {
         
-        Gdk.Pixbuf statusPix;
+        IconTheme.AddBuiltinIcon ( "haguichi-node-offline", 10, Gdk.Pixbuf.LoadFromResource ( "node-offline" ) );
         
-        try
-        {
-            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-offline.png" );
-        }
-        catch
-        {
-            statusPix = Gdk.Pixbuf.LoadFromResource ( "status-offline" );
-        }
-        
-        return statusPix;
+        return IconTheme.Default.LoadIcon ( "haguichi-node-offline", 10, IconLookupFlags.UseBuiltin );
         
     }
     
@@ -121,18 +106,9 @@ public class Status
     public static Gdk.Pixbuf GetPixbufUnreachable ()
     {
         
-        Gdk.Pixbuf statusPix;
+        IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable", 10, Gdk.Pixbuf.LoadFromResource ( "node-unreachable" ) );
         
-        try
-        {
-            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-unreachable.png" );
-        }
-        catch
-        {
-            statusPix = Gdk.Pixbuf.LoadFromResource ( "status-unreachable" );
-        }
-        
-        return statusPix;
+        return IconTheme.Default.LoadIcon ( "haguichi-node-unreachable", 10, IconLookupFlags.UseBuiltin );
         
     }
     
@@ -140,18 +116,9 @@ public class Status
     public static Gdk.Pixbuf GetPixbufUnapproved ()
     {
         
-        Gdk.Pixbuf statusPix;
+        IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved", 10, Gdk.Pixbuf.LoadFromResource ( "node-unapproved" ) );
         
-        try
-        {
-            statusPix = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/status-unapproved.png" );
-        }
-        catch
-        {
-            statusPix = Gdk.Pixbuf.LoadFromResource ( "status-unapproved" );
-        }
-        
-        return statusPix;
+        return IconTheme.Default.LoadIcon ( "haguichi-node-unapproved", 10, IconLookupFlags.UseBuiltin );
         
     }
     

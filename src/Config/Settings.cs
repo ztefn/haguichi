@@ -28,7 +28,6 @@ namespace Config
     {
         
         public static string LocalePath                     = System.AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
-        public static string DefaultPixmapsPath             = System.AppDomain.CurrentDomain.BaseDirectory + "../../share/pixmaps/" + TextStrings.appName.ToLower ();
         public static string DefaultHamachiDataPath         = Environment.GetFolderPath ( Environment.SpecialFolder.Personal ) + "/.hamachi";
         public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower ();
         public static string LastNick                       = "";
@@ -55,7 +54,6 @@ namespace Config
         public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
-        public static Key PixmapsPath                       = new Key ( "config/pixmaps_path", DefaultPixmapsPath );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 15.0 );
         public static Key GetListWaitTime                   = new Key ( "config/get_list_wait_time", 2.0 );

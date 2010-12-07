@@ -28,35 +28,24 @@ public class PanelIcon : StatusIcon
     private int    animIcon = 0;    
     private string lastMode;
     
-    private Pixbuf connected;
-    private Pixbuf connecting1;
-    private Pixbuf connecting2;
-    private Pixbuf connecting3;
-    private Pixbuf disconnected;
+    private string connected    = "haguichi-connected";
+    private string connecting1  = "haguichi-connecting-1";
+    private string connecting2  = "haguichi-connecting-2";
+    private string connecting3  = "haguichi-connecting-3";
+    private string disconnected = "haguichi-disconnected";
     
     
     public PanelIcon ()
     {
         
-        try
-        {
-            connected    = new Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/panel-connected.png" );
-            connecting1  = new Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/panel-connecting-1.png" );
-            connecting2  = new Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/panel-connecting-2.png" );
-            connecting3  = new Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/panel-connecting-3.png" );
-            disconnected = new Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/panel-disconnected.png" );
-        }
-        catch
-        {
-            connected    = Pixbuf.LoadFromResource ( "panel-connected" );
-            connecting1  = Pixbuf.LoadFromResource ( "panel-connecting-1" );
-            connecting2  = Pixbuf.LoadFromResource ( "panel-connecting-2" );
-            connecting3  = Pixbuf.LoadFromResource ( "panel-connecting-3" );
-            disconnected = Pixbuf.LoadFromResource ( "panel-disconnected" );
-        }
+        IconTheme.AddBuiltinIcon ( "haguichi-connected",    22, Gdk.Pixbuf.LoadFromResource ( "connected"    ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 22, Gdk.Pixbuf.LoadFromResource ( "connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 22, Gdk.Pixbuf.LoadFromResource ( "connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 22, Gdk.Pixbuf.LoadFromResource ( "connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 22, Gdk.Pixbuf.LoadFromResource ( "disconnected" ) );
         
-        this.Pixbuf = disconnected;
-        this.Tooltip = TextStrings.appName;
+        this.IconName = disconnected;
+        this.Tooltip  = TextStrings.appName;
         
     }
     
@@ -73,36 +62,36 @@ public class PanelIcon : StatusIcon
             
             case "Connecting":
             
-                tipTail     += TextStrings.connecting;
-                GLib.Timeout.Add ( 400, new GLib.TimeoutHandler ( update_status ) );
+                tipTail      += TextStrings.connecting;
+                GLib.Timeout.Add ( 400, new GLib.TimeoutHandler ( updateStatus ) );
             
                 break;
                 
             case "Connected":
             
-                tipTail     += TextStrings.connected;
-                this.Pixbuf  = connected;
+                tipTail      += TextStrings.connected;
+                this.IconName = connected;
             
                 break;
                 
             case "Disconnected":
             
-                tipTail     += TextStrings.disconnected;
-                this.Pixbuf  = disconnected;
+                tipTail      += TextStrings.disconnected;
+                this.IconName = disconnected;
             
                 break;
             
             case "Not configured":
             
-                tipTail     += TextStrings.notConfigured;
-                this.Pixbuf  = disconnected;
+                tipTail      += TextStrings.notConfigured;
+                this.IconName = disconnected;
             
                 break;
             
             case "Not installed":
             
-                tipTail     += TextStrings.notInstalled;
-                this.Pixbuf  = disconnected;
+                tipTail      += TextStrings.notInstalled;
+                this.IconName = disconnected;
             
                 break;
             
@@ -113,25 +102,25 @@ public class PanelIcon : StatusIcon
     }
 
 
-    private bool update_status ()
+    private bool updateStatus ()
     {
         
         if ( lastMode == "Connecting" )
         {
             if ( animIcon == 0 )
             {
-                this.Pixbuf = connecting1;
-                animIcon    = 1;
+                this.IconName = connecting1;
+                animIcon      = 1;
             }
             else if ( animIcon == 1 )
             {
-                this.Pixbuf = connecting2;
-                animIcon    = 2;
+                this.IconName = connecting2;
+                animIcon      = 2;
             }
             else
             {
-                this.Pixbuf = connecting3;
-                animIcon    = 0;
+                this.IconName = connecting3;
+                animIcon      = 0;
             }
             
             return true;

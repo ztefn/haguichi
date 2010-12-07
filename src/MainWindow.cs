@@ -24,7 +24,7 @@ using Gtk;
 public class MainWindow
 {
     
-    public  static Gdk.Pixbuf[] appIcons = new Gdk.Pixbuf[5];
+    public  static Gdk.Pixbuf [] appIcons = new Gdk.Pixbuf [6];
     
     public  static AccelGroup accelGroup;
     public  static PanelIcon panelIcon;
@@ -51,24 +51,21 @@ public class MainWindow
     
         Application.Init ();
         
-        try
-        {
-            appIcons[0] = Gnome.IconTheme.Default.LoadIcon ( "haguichi", 16, IconLookupFlags.GenericFallback );
-            appIcons[1] = Gnome.IconTheme.Default.LoadIcon ( "haguichi", 22, IconLookupFlags.GenericFallback );
-            appIcons[2] = Gnome.IconTheme.Default.LoadIcon ( "haguichi", 24, IconLookupFlags.GenericFallback );
-            appIcons[3] = Gnome.IconTheme.Default.LoadIcon ( "haguichi", 32, IconLookupFlags.GenericFallback );
-            appIcons[4] = Gnome.IconTheme.Default.LoadIcon ( "haguichi", 48, IconLookupFlags.GenericFallback );
-        }
-        catch
-        {
-            appIcons[0] = Gdk.Pixbuf.LoadFromResource ( "haguichi-16x16" );
-            appIcons[1] = Gdk.Pixbuf.LoadFromResource ( "haguichi-22x22" );
-            appIcons[2] = Gdk.Pixbuf.LoadFromResource ( "haguichi-24x24" );
-            appIcons[3] = Gdk.Pixbuf.LoadFromResource ( "haguichi-32x32" );
-            appIcons[4] = Gdk.Pixbuf.LoadFromResource ( "haguichi-48x48" );
-        }
+        IconTheme.AddBuiltinIcon ( "haguichi", 16,  Gdk.Pixbuf.LoadFromResource ( "haguichi-16x16" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 22,  Gdk.Pixbuf.LoadFromResource ( "haguichi-22x22" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 24,  Gdk.Pixbuf.LoadFromResource ( "haguichi-24x24" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 32,  Gdk.Pixbuf.LoadFromResource ( "haguichi-32x32" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 48,  Gdk.Pixbuf.LoadFromResource ( "haguichi-48x48" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 64,  Gdk.Pixbuf.LoadFromResource ( "haguichi-64x64" ) );
         
-        panelIcon = new PanelIcon ();    
+        appIcons [0] = IconTheme.Default.LoadIcon ( "haguichi", 16, IconLookupFlags.UseBuiltin );
+        appIcons [1] = IconTheme.Default.LoadIcon ( "haguichi", 22, IconLookupFlags.UseBuiltin );
+        appIcons [2] = IconTheme.Default.LoadIcon ( "haguichi", 24, IconLookupFlags.UseBuiltin );
+        appIcons [3] = IconTheme.Default.LoadIcon ( "haguichi", 32, IconLookupFlags.UseBuiltin );
+        appIcons [4] = IconTheme.Default.LoadIcon ( "haguichi", 48, IconLookupFlags.UseBuiltin );
+        appIcons [5] = IconTheme.Default.LoadIcon ( "haguichi", 64, IconLookupFlags.UseBuiltin );
+        
+        panelIcon = new PanelIcon ();
         panelIcon.Activate += ToggleMainWindow; 
         panelIcon.PopupMenu += StatusIconPopupHandler;
         
@@ -79,21 +76,9 @@ public class MainWindow
         
         quickMenu = new Menus.Quick ();
         menuBar = new Menus.Menubar ();
-
-
-        Gdk.Pixbuf pixLogo;
-        try
-        {
-            pixLogo = new Gdk.Pixbuf ( ( string ) Config.Client.Get ( Config.Settings.PixmapsPath ) + "/logo-mainwindow.png" );
-        }
-        catch
-        {
-            pixLogo = Gdk.Pixbuf.LoadFromResource ( "logo-mainwindow" );
-        }
-        Image logoImg = new Image ( pixLogo );
         
         
-    
+        
         /* Connected Box */
         
         networkView = new NetworkView ();
@@ -108,6 +93,8 @@ public class MainWindow
 
         
         /* Disconnected Box */
+        
+        Image logoImg = new Image ( appIcons [5] );
         
         nameLabel = new Label ();
         
