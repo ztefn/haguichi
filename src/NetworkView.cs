@@ -257,7 +257,7 @@ public class NetworkView : TreeView
                 tipLabel.Ypad   = 3;
                 
                 tipIcon = new Image ();
-                if ( Gnome.IconTheme.Default.HasIcon ( "network-workgroup" ) )
+                if ( IconTheme.Default.HasIcon ( "network-workgroup" ) )
                 {
                     tipIcon.SetFromIconName ( "network-workgroup", IconSize.Dialog );
                 }
@@ -301,19 +301,19 @@ public class NetworkView : TreeView
                 tipLabel.Ypad   = 3;
                 
                 tipIcon = new Image ();
-                if ( Gnome.IconTheme.Default.HasIcon ( "stock_person" ) )
+                if ( IconTheme.Default.HasIcon ( "stock_person" ) )
                 {
                     tipIcon.SetFromIconName ( "stock_person", IconSize.Dialog );
                 }
-                else if ( Gnome.IconTheme.Default.HasIcon ( "avatar-default" ) )
+                else if ( IconTheme.Default.HasIcon ( "avatar-default" ) )
                 {
                     tipIcon.SetFromIconName ( "avatar-default", IconSize.Dialog );
                 }
-                else if ( Gnome.IconTheme.Default.HasIcon ( "user-info" ) )
+                else if ( IconTheme.Default.HasIcon ( "user-info" ) )
                 {
                     tipIcon.SetFromIconName ( "user-info", IconSize.Dialog );
                 }
-                else if ( Gnome.IconTheme.Default.HasIcon ( "user-identity" ) )
+                else if ( IconTheme.Default.HasIcon ( "user-identity" ) )
                 {
                     tipIcon.SetFromIconName ( "user-identity", IconSize.Dialog );
                 }

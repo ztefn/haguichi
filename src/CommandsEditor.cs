@@ -383,12 +383,12 @@ public class CommandsEditor : VBox
     private Gdk.Pixbuf GetIconPixbuf ( string iconName )
     {
      
-        Gdk.Pixbuf iconPix = Gnome.IconTheme.Default.LoadIcon ( "system-run", 24, IconLookupFlags.GenericFallback );
+        Gdk.Pixbuf iconPix = IconTheme.Default.LoadIcon ( "system-run", 24, IconLookupFlags.GenericFallback );
         
-        try { iconPix = Gnome.IconTheme.Default.LoadIcon ( "gnome-run", 24, IconLookupFlags.GenericFallback ); }
+        try { iconPix = IconTheme.Default.LoadIcon ( "gnome-run", 24, IconLookupFlags.GenericFallback ); }
         catch {}
         
-        try { iconPix = Gnome.IconTheme.Default.LoadIcon ( iconName, 24, IconLookupFlags.GenericFallback ); }
+        try { iconPix = IconTheme.Default.LoadIcon ( iconName, 24, IconLookupFlags.GenericFallback ); }
         catch {}
            
         return iconPix;

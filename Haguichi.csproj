@@ -54,10 +54,6 @@
       <SpecificVersion>False</SpecificVersion>
       <Package>gconf-sharp-2.0</Package>
     </Reference>
-    <Reference Include="gnome-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
-      <SpecificVersion>False</SpecificVersion>
-      <Package>gnome-sharp-2.0</Package>
-    </Reference>
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <Package>glib-sharp-2.0</Package>
       <SpecificVersion>False</SpecificVersion>
