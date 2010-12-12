@@ -51,12 +51,12 @@ public class MainWindow
     
         Application.Init ();
         
-        IconTheme.AddBuiltinIcon ( "haguichi", 16,  Gdk.Pixbuf.LoadFromResource ( "haguichi-16x16" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 22,  Gdk.Pixbuf.LoadFromResource ( "haguichi-22x22" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 24,  Gdk.Pixbuf.LoadFromResource ( "haguichi-24x24" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 32,  Gdk.Pixbuf.LoadFromResource ( "haguichi-32x32" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 48,  Gdk.Pixbuf.LoadFromResource ( "haguichi-48x48" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 64,  Gdk.Pixbuf.LoadFromResource ( "haguichi-64x64" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 16,  Gdk.Pixbuf.LoadFromResource ( "16x16.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 22,  Gdk.Pixbuf.LoadFromResource ( "22x22.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 24,  Gdk.Pixbuf.LoadFromResource ( "24x24.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 32,  Gdk.Pixbuf.LoadFromResource ( "32x32.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 48,  Gdk.Pixbuf.LoadFromResource ( "48x48.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 64,  Gdk.Pixbuf.LoadFromResource ( "64x64.haguichi" ) );
         
         appIcons [0] = IconTheme.Default.LoadIcon ( "haguichi", 16, IconLookupFlags.UseBuiltin );
         appIcons [1] = IconTheme.Default.LoadIcon ( "haguichi", 22, IconLookupFlags.UseBuiltin );
