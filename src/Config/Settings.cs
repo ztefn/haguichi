@@ -55,7 +55,6 @@ namespace Config
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
-        public static Key CommandTimeout                    = new Key ( "config/command_timeout", 15.0 );
         public static Key GetListWaitTime                   = new Key ( "config/get_list_wait_time", 2.0 );
         public static Key GetNicksWaitTime                  = new Key ( "config/get_nicks_wait_time", 0.5 );
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );

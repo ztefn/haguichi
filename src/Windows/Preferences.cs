@@ -47,7 +47,6 @@ namespace Windows
         
         public  FileChooserButton pathButton;
         public  SpinButton intervalSpin;
-        public  SpinButton timeoutSpin;
         
         
         public Preferences ( string title ) : base ( title )
@@ -163,52 +162,8 @@ namespace Windows
             bc6.Expand = false;
             bc6.PackType = PackType.End;
             
-            intervalSpin = new SpinButton ( 5, 600, 1 );
-            intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
-            intervalSpin.ValueChanged += delegate
-            {
-                Config.Client.Set ( Config.Settings.UpdateInterval, ( double ) intervalSpin.Value );
-            };
-            intervalSpin.MaxLength = 3;
-            intervalSpin.WidthRequest = 150;
-
-            Label intervalLabel = new Label ();
-            intervalLabel.TextWithMnemonic = TextStrings.intervalLabel + "  ";
-            intervalLabel.MnemonicWidget = intervalSpin;
-            intervalLabel.Xalign = 0;
-            
-            HBox intervalBox = new HBox ();
-            intervalBox.Add ( intervalLabel );
-            intervalBox.Add ( intervalSpin );
-            
-            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( intervalBox [ intervalSpin ] ) );
-            bc8.Expand = false;
-            
-            timeoutSpin = new SpinButton ( 5, 60, 1 );
-            timeoutSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.CommandTimeout ) );
-            timeoutSpin.ValueChanged += delegate
-            {
-                Config.Client.Set ( Config.Settings.CommandTimeout, ( double ) timeoutSpin.Value );    
-            };
-            timeoutSpin.MaxLength = 2;
-            timeoutSpin.WidthRequest = 150;
-
-            Label timeoutLabel = new Label ();
-            timeoutLabel.TextWithMnemonic = TextStrings.timeoutLabel + "  ";
-            timeoutLabel.MnemonicWidget = timeoutSpin;
-            timeoutLabel.Xalign = 0;
-            
-            HBox timeoutBox = new HBox ();
-            timeoutBox.Add ( timeoutLabel );
-            timeoutBox.Add ( timeoutSpin );
-            
-            Box.BoxChild bc10 = ( ( Box.BoxChild ) ( timeoutBox [ timeoutSpin ] ) );
-            bc10.Expand = false;
-            
             GroupBox hamachiBox = new GroupBox ( "Hamachi" );
             hamachiBox.AddWidget ( pathBox );
-            hamachiBox.AddWidget ( intervalBox );
-            hamachiBox.AddWidget ( timeoutBox );
             
             connectOnStartup = new CheckButton ( TextStrings.connectOnStartup );
             connectOnStartup.Active = ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup );
@@ -238,24 +193,55 @@ namespace Windows
                 Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, askTunCfg.Active );
             };
             
-            GroupBox connectBox = new GroupBox ( TextStrings.behaviorGroup );
-            connectBox.AddWidget ( connectOnStartup );
-            connectBox.AddWidget ( reconnectOnConnectionLoss );
-            connectBox.AddWidget ( disconnectOnQuit );
-            connectBox.AddWidget ( askTunCfg );
+            intervalSpin = new SpinButton ( 5, 600, 1 );
+            intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
+            intervalSpin.ValueChanged += delegate
+            {
+                Config.Client.Set ( Config.Settings.UpdateInterval, ( double ) intervalSpin.Value );
+            };
+            intervalSpin.MaxLength = 3;
+            
+            string [] intervalString = TextStrings.intervalLabel.Split ( new string [] { "%S" }, StringSplitOptions.None );
+            
+            Label intervalLabel = new Label ();
+            intervalLabel.TextWithMnemonic = intervalString [0];
+            intervalLabel.MnemonicWidget = intervalSpin;
+            intervalLabel.Xalign = 0;
+            
+            Label intervalLabel2 = new Label ();
+            intervalLabel2.Text = intervalString [1];
+            intervalLabel2.Xalign = 0;
+            
+            HBox intervalBox = new HBox ();
+            intervalBox.Add ( intervalLabel );
+            intervalBox.Add ( intervalSpin );
+            intervalBox.Add ( intervalLabel2 );
+            
+            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( intervalBox [ intervalLabel ] ) );
+            bc7.Expand = false;
+            
+            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( intervalBox [ intervalSpin ] ) );
+            bc8.Expand = false;
+            
+            GroupBox behaviorBox = new GroupBox ( TextStrings.behaviorGroup );
+            behaviorBox.AddWidget ( connectOnStartup );
+            behaviorBox.AddWidget ( reconnectOnConnectionLoss );
+            behaviorBox.AddWidget ( disconnectOnQuit );
+            behaviorBox.AddWidget ( askTunCfg );
+            behaviorBox.AddWidget ( intervalBox );
             
             GroupBox spaceBox = new GroupBox ( "" );
             
             VBox systemBox = new VBox ();
             systemBox.Add ( hamachiBox );
-            systemBox.Add ( connectBox );
+            systemBox.Add ( behaviorBox );
             systemBox.Add ( spaceBox );
             
             Box.BoxChild hamachiBoxC = ( ( Box.BoxChild ) ( systemBox [ hamachiBox ] ) );
             hamachiBoxC.Expand = false; 
                         
-            Box.BoxChild connectBoxC = ( ( Box.BoxChild ) ( systemBox [ connectBox ] ) );
-            connectBoxC.Expand = false;
+            Box.BoxChild behaviorBoxC = ( ( Box.BoxChild ) ( systemBox [ behaviorBox ] ) );
+            behaviorBoxC.Expand = false;
             
             Notebook notebook = new Notebook ();
             notebook.AppendPage ( systemBox, new Label ( TextStrings.generalTab ) );
@@ -285,7 +271,7 @@ namespace Windows
             
             if ( Hamachi.ApiVersion != 1 )
             {
-                pathBox.Hide ();
+                hamachiBox.Hide ();
                 askTunCfg.Hide ();
             }
             

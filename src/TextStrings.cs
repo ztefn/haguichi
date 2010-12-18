@@ -119,8 +119,6 @@ Svenska (sv)
     public static string passwordLabel;
     public static string version;
     
-    public static string seconds;
-    
     public static string offline;
     public static string online;
     public static string unreachable;
@@ -265,7 +263,6 @@ Svenska (sv)
     public static string dataPathLabel;
     public static string chooseFolderTitle;
     public static string intervalLabel;
-    public static string timeoutLabel;
     
     public static string checkboxShowOfflineMembers;
     public static string sortByName;
@@ -354,8 +351,6 @@ Svenska (sv)
         nameLabel                           = Catalog.GetString ( "_Name:" );
         passwordLabel                       = Catalog.GetString ( "_Password:" );
         version                             = Catalog.GetString ( "Version:" );
-        
-        seconds                             = Catalog.GetString ( "seconds" );
         
         offline                             = Catalog.GetString ( "Offline" );
         online                              = Catalog.GetString ( "Online" );
@@ -500,8 +495,7 @@ Svenska (sv)
 
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
-        intervalLabel                       = Catalog.GetString ( "_Update interval (seconds):" );
-        timeoutLabel                        = Catalog.GetString ( "_Command timeout (seconds):" );
+        intervalLabel                       = Catalog.GetString ( "_Update the network list every %S seconds" );
         
         checkboxShowOfflineMembers          = Catalog.GetString ( "_Offline Members" );
         sortByName                          = Catalog.GetString ( "Sort by _Name" );

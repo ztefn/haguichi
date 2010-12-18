@@ -73,11 +73,6 @@ namespace Config
                     Haguichi.preferencesWindow.intervalSpin.Value = ( int ) ( ( double ) val );
                 }
                 
-                if ( key.Contains ( Config.Settings.CommandTimeout.KeyName ) )
-                {
-                    Haguichi.preferencesWindow.timeoutSpin.Value = ( int ) ( ( double ) val );
-                }
-                
                 if ( key.Contains ( Config.Settings.ConnectOnStartup.KeyName ) )
                 {
                     Haguichi.preferencesWindow.connectOnStartup.Active = ( bool ) val;

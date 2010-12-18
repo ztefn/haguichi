@@ -133,9 +133,7 @@ public static class Command
             
             using ( Process p = Process.Start ( ps ) )
             {
-                int timeout = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.CommandTimeout ) );
-                
-                if ( p.WaitForExit ( 1000 * timeout ) )
+                if ( p.WaitForExit ( 60000 ) ) // 60 seconds timeout
                 {
                     val = p.StandardOutput.ReadToEnd ();
                 }
