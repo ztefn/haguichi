@@ -101,7 +101,7 @@ public class GlobalEvents
             GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
         }
         
-        UpdateCycle ();
+        Controller.UpdateCycle ();
         
     }
     
@@ -113,19 +113,6 @@ public class GlobalEvents
         UpdateNick ( Config.Settings.LastNick );
         
         return false;
-        
-    }
-    
-    
-    private static void UpdateCycle ()
-    {
-        
-        uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
-        
-        Controller.numUpdateCycles += 1;
-        Controller.continueUpdate = true;
-        
-        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.UpdateConnection ) );
         
     }
     

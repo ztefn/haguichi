@@ -1,4 +1,3 @@
-
 /*
  * Haguichi, a graphical frontend for Hamachi.
  * Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>
@@ -30,7 +29,6 @@ public static class Controller
 {
     
     public static bool continueUpdate;
-    public static int numUpdateCycles;
     public static int lastStatus;
     private static string startOutput;
     
@@ -475,21 +473,17 @@ public static class Controller
     public static bool UpdateConnection ()
     {
         
-        if ( ( !continueUpdate ) ||
-             ( numUpdateCycles > 1 ) )
+        if ( continueUpdate )
         {
-            numUpdateCycles -= 1;
-            return false;
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Retrieving connection status..." );
+            
+            MainWindow.statusBar.Push ( 0, TextStrings.updating );
+            
+            Thread thread = new Thread ( UpdateConnectionThread );
+            thread.Start ();
         }
         
-        Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Retrieving connection status..." );
-        
-        MainWindow.statusBar.Push ( 0, TextStrings.updating );
-        
-        Thread thread = new Thread ( UpdateConnectionThread );
-        thread.Start ();
-        
-        return true;
+        return false;
         
     }
     
@@ -512,21 +506,18 @@ public static class Controller
             nNetworksList = Hamachi.ReturnList ();
         }
         
-        Application.Invoke ( delegate {
-            UpdateList ();
-        });
+        if ( continueUpdate )
+        {
+            Application.Invoke ( delegate {
+                UpdateList ();
+            });
+        }
         
     }
     
     
-    private static bool UpdateList ()
+    private static void UpdateList ()
     {
-        
-        if ( !continueUpdate )
-        {
-            /* Check again if we should update because this function is called after timeout */
-            return false;
-        }
         
         if ( Config.Settings.DemoMode )
         {
@@ -534,7 +525,7 @@ public static class Controller
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Demo mode, not really updating list." );
             
             /* Continue update interval */
-            continueUpdate = true;
+            UpdateCycle ();
             
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
@@ -676,7 +667,7 @@ public static class Controller
             }
             
             /* Continue update interval */
-            continueUpdate = true;
+            UpdateCycle ();
             
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
@@ -697,7 +688,16 @@ public static class Controller
             
         }
         
-        return false; // Stop calling timeout handler
+    }
+    
+    
+    public static void UpdateCycle ()
+    {
+        
+        continueUpdate = true;
+        
+        uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
+        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnection ) );
         
     }
     
