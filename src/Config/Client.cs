@@ -71,6 +71,7 @@ namespace Config
                 if ( key.Contains ( Config.Settings.UpdateInterval.KeyName ) )
                 {
                     Haguichi.preferencesWindow.intervalSpin.Value = ( int ) ( ( double ) val );
+                    Haguichi.preferencesWindow.SetIntervalString ();
                 }
                 
                 if ( key.Contains ( Config.Settings.ConnectOnStartup.KeyName ) )

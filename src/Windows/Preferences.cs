@@ -48,6 +48,10 @@ namespace Windows
         public  FileChooserButton pathButton;
         public  SpinButton intervalSpin;
         
+        private Label intervalLabel;
+        private Label intervalLabel2;
+        private string [] intervalString;
+        
         
         public Preferences ( string title ) : base ( title )
         {
@@ -193,7 +197,7 @@ namespace Windows
                 Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, askTunCfg.Active );
             };
             
-            intervalSpin = new SpinButton ( 5, 600, 1 );
+            intervalSpin = new SpinButton ( 1, 600, 1 );
             intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
             intervalSpin.ValueChanged += delegate
             {
@@ -201,15 +205,11 @@ namespace Windows
             };
             intervalSpin.MaxLength = 3;
             
-            string [] intervalString = TextStrings.intervalLabel.Split ( new string [] { "%S" }, StringSplitOptions.None );
-            
-            Label intervalLabel = new Label ();
-            intervalLabel.TextWithMnemonic = intervalString [0];
+            intervalLabel = new Label ();
             intervalLabel.MnemonicWidget = intervalSpin;
             intervalLabel.Xalign = 0;
             
-            Label intervalLabel2 = new Label ();
-            intervalLabel2.Text = intervalString [1];
+            intervalLabel2 = new Label ();
             intervalLabel2.Xalign = 0;
             
             HBox intervalBox = new HBox ();
@@ -278,9 +278,22 @@ namespace Windows
         }
         
         
+        public void SetIntervalString ()
+        {
+            
+            string [] intervalString = Mono.Unix.Catalog.GetPluralString ( "_Update the network list every %S second",
+                                                                           "_Update the network list every %S seconds", ( int ) intervalSpin.Value ).Split ( new string [] { "%S" }, StringSplitOptions.None );
+            
+            intervalLabel.TextWithMnemonic = intervalString [0];
+            intervalLabel2.Text = intervalString [1];
+            
+        }
+        
+        
         public void Open ()
         {
             
+            this.SetIntervalString ();
             this.Show ();
             this.Present ();
             

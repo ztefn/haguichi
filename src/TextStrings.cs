@@ -262,7 +262,6 @@ Svenska (sv)
     
     public static string dataPathLabel;
     public static string chooseFolderTitle;
-    public static string intervalLabel;
     
     public static string checkboxShowOfflineMembers;
     public static string sortByName;
@@ -495,7 +494,6 @@ Svenska (sv)
 
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
-        intervalLabel                       = Catalog.GetString ( "_Update the network list every %S seconds" );
         
         checkboxShowOfflineMembers          = Catalog.GetString ( "_Offline Members" );
         sortByName                          = Catalog.GetString ( "Sort by _Name" );

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2010-12-18 21:53:50+0100\n"
-"PO-Revision-Date: 2010-12-18 21:53:50+0100\n"
+"POT-Creation-Date: 2010-12-18 23:03:58+0100\n"
+"PO-Revision-Date: 2010-12-18 23:03:58+0100\n"
 "Last-Translator: stephen\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -10,738 +10,740 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: MonoDevelop Gettext addin\n"
 
-#: ../src/TextStrings.cs:334
+#: ../src/TextStrings.cs:333
 msgid "Haguichi Website"
 msgstr ""
 
 #. Description used in about dialog
-#: ../src/TextStrings.cs:335
+#: ../src/TextStrings.cs:334
 msgid "A graphical frontend for Hamachi."
 msgstr ""
 
 #. Description used in application launchers
-#: ../src/TextStrings.cs:336
+#: ../src/TextStrings.cs:335
 msgid "Join and create local networks over the Internet"
 msgstr ""
 
-#: ../src/TextStrings.cs:338
+#: ../src/TextStrings.cs:337
 msgid "Yes"
 msgstr ""
 
-#: ../src/TextStrings.cs:339
+#: ../src/TextStrings.cs:338
 msgid "No"
 msgstr ""
 
-#: ../src/TextStrings.cs:341
+#: ../src/TextStrings.cs:340
 msgid "Address:"
 msgstr ""
 
-#: ../src/TextStrings.cs:342
+#: ../src/TextStrings.cs:341
 msgid "ID:"
 msgstr ""
 
-#: ../src/TextStrings.cs:343
+#: ../src/TextStrings.cs:342
 msgid "Client ID:"
 msgstr ""
 
-#: ../src/TextStrings.cs:344
+#: ../src/TextStrings.cs:343
 msgid "Network ID:"
 msgstr ""
 
-#: ../src/TextStrings.cs:345
+#: ../src/TextStrings.cs:344
 msgid "Status:"
 msgstr ""
 
-#: ../src/TextStrings.cs:346
+#: ../src/TextStrings.cs:345
 msgid "Tunnel:"
 msgstr ""
 
-#: ../src/TextStrings.cs:347
+#: ../src/TextStrings.cs:346
 msgid "Anonymous"
 msgstr ""
 
-#: ../src/TextStrings.cs:348
+#: ../src/TextStrings.cs:347
 msgid "_Nickname:"
 msgstr ""
 
-#: ../src/TextStrings.cs:350
+#: ../src/TextStrings.cs:349
 msgid "_Name:"
 msgstr ""
 
-#: ../src/TextStrings.cs:351
+#: ../src/TextStrings.cs:350
 msgid "_Password:"
 msgstr ""
 
-#: ../src/TextStrings.cs:352
+#: ../src/TextStrings.cs:351
 msgid "Version:"
 msgstr ""
 
-#: ../src/TextStrings.cs:354
+#: ../src/TextStrings.cs:353
 msgid "Offline"
 msgstr ""
 
-#: ../src/TextStrings.cs:355
+#: ../src/TextStrings.cs:354
 msgid "Online"
 msgstr ""
 
-#: ../src/TextStrings.cs:356
+#: ../src/TextStrings.cs:355
 msgid "Unreachable"
 msgstr ""
 
-#: ../src/TextStrings.cs:357
+#: ../src/TextStrings.cs:356
 msgid "Connected"
 msgstr ""
 
-#: ../src/TextStrings.cs:358
+#: ../src/TextStrings.cs:357
 msgid "Disconnected"
 msgstr ""
 
-#: ../src/TextStrings.cs:359
+#: ../src/TextStrings.cs:358
 msgid "Connecting..."
 msgstr ""
 
-#: ../src/TextStrings.cs:360
+#: ../src/TextStrings.cs:359
 msgid "Starting Hamachi..."
 msgstr ""
 
-#: ../src/TextStrings.cs:361
+#: ../src/TextStrings.cs:360
 msgid "Logging in..."
 msgstr ""
 
-#: ../src/TextStrings.cs:362
+#: ../src/TextStrings.cs:361
 msgid "Running tuncfg..."
 msgstr ""
 
-#: ../src/TextStrings.cs:363
+#: ../src/TextStrings.cs:362
 msgid "Getting nicknames..."
 msgstr ""
 
-#: ../src/TextStrings.cs:364
+#: ../src/TextStrings.cs:363
 msgid "Updating..."
 msgstr ""
 
-#: ../src/TextStrings.cs:366
+#: ../src/TextStrings.cs:365
 msgid "Connect a_utomatically"
 msgstr ""
 
-#: ../src/TextStrings.cs:368
+#: ../src/TextStrings.cs:367
 msgid "_Download"
 msgstr ""
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:368
 msgid "C_onfigure"
 msgstr ""
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:370
 msgid "Not configured"
 msgstr ""
 
-#: ../src/TextStrings.cs:372
+#: ../src/TextStrings.cs:371
 msgid "Hamachi is not configured"
 msgstr ""
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:372
 msgid "You need to configure Hamachi before you can connect."
 msgstr ""
 
-#: ../src/TextStrings.cs:375
+#: ../src/TextStrings.cs:374
 msgid "Not installed"
 msgstr ""
 
-#: ../src/TextStrings.cs:376
+#: ../src/TextStrings.cs:375
 msgid "Hamachi is not installed"
 msgstr ""
 
-#: ../src/TextStrings.cs:377
+#: ../src/TextStrings.cs:376
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr ""
 
-#: ../src/TextStrings.cs:379
+#: ../src/TextStrings.cs:378
 msgid "Members:"
 msgstr ""
 
-#: ../src/TextStrings.cs:380
+#: ../src/TextStrings.cs:379
 msgid "{0} online, {1} total"
 msgstr ""
 
-#: ../src/TextStrings.cs:381
+#: ../src/TextStrings.cs:380
 msgid "Owner:"
 msgstr ""
 
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:381
 msgid "You"
 msgstr ""
 
-#: ../src/TextStrings.cs:383
+#: ../src/TextStrings.cs:382
 msgid "Unknown"
 msgstr ""
 
-#: ../src/TextStrings.cs:384
+#: ../src/TextStrings.cs:383
 msgid "Unavailable"
 msgstr ""
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:384
 msgid "Awaiting approval"
 msgstr ""
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:385
 msgid "Locked:"
 msgstr ""
 
-#: ../src/TextStrings.cs:387
+#: ../src/TextStrings.cs:386
 msgid "Approval:"
 msgstr ""
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:387
 msgid "Manually"
 msgstr ""
 
-#: ../src/TextStrings.cs:389
+#: ../src/TextStrings.cs:388
 msgid "Automatically"
 msgstr ""
 
-#: ../src/TextStrings.cs:391
+#: ../src/TextStrings.cs:390
 msgid "_Client"
 msgstr ""
 
-#: ../src/TextStrings.cs:392
+#: ../src/TextStrings.cs:391
 msgid "_Edit"
 msgstr ""
 
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:392
 msgid "_View"
 msgstr ""
 
-#: ../src/TextStrings.cs:394
+#: ../src/TextStrings.cs:393
 msgid "_Help"
 msgstr ""
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:395
 msgid "_Online Help"
 msgstr ""
 
-#: ../src/TextStrings.cs:397
+#: ../src/TextStrings.cs:396
 msgid "_Create Network..."
 msgstr ""
 
-#: ../src/TextStrings.cs:398
+#: ../src/TextStrings.cs:397
 msgid "_Join Network..."
 msgstr ""
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:399
 msgid "_Go Online"
 msgstr ""
 
-#: ../src/TextStrings.cs:401
+#: ../src/TextStrings.cs:400
 msgid "_Go Offline"
 msgstr ""
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:401
 msgid "_Leave"
 msgstr ""
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:402
 msgid "_Locked"
 msgstr ""
 
-#: ../src/TextStrings.cs:404
+#: ../src/TextStrings.cs:403
 msgid "_New Member Approval"
 msgstr ""
 
-#: ../src/TextStrings.cs:405
+#: ../src/TextStrings.cs:404
 msgid "_Automatically"
 msgstr ""
 
-#: ../src/TextStrings.cs:406
+#: ../src/TextStrings.cs:405
 msgid "_Manually"
 msgstr ""
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:406
 msgid "_Copy Network ID"
 msgstr ""
 
-#: ../src/TextStrings.cs:409
+#: ../src/TextStrings.cs:408
 msgid "_Browse Shares"
 msgstr ""
 
-#: ../src/TextStrings.cs:410
+#: ../src/TextStrings.cs:409
 msgid "_Ping"
 msgstr ""
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:410
 msgid "_View Remote Desktop"
 msgstr ""
 
-#: ../src/TextStrings.cs:412
+#: ../src/TextStrings.cs:411
 msgid "_Approve"
 msgstr ""
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:412
 msgid "_Reject"
 msgstr ""
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:413
 msgid "_Evict"
 msgstr ""
 
-#: ../src/TextStrings.cs:415
+#: ../src/TextStrings.cs:414
 msgid "_Copy Address"
 msgstr ""
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:415
 msgid "_Copy Client ID"
 msgstr ""
 
-#: ../src/TextStrings.cs:418
+#: ../src/TextStrings.cs:417
 msgid "C_hange"
 msgstr ""
 
-#: ../src/TextStrings.cs:419
+#: ../src/TextStrings.cs:418
 msgid "Changing..."
 msgstr ""
 
-#: ../src/TextStrings.cs:421
+#: ../src/TextStrings.cs:420
 msgid "Change _Nickname..."
 msgstr ""
 
-#: ../src/TextStrings.cs:422
+#: ../src/TextStrings.cs:421
 msgid "Change Nickname"
 msgstr ""
 
-#: ../src/TextStrings.cs:423
+#: ../src/TextStrings.cs:422
 msgid "Please enter the nickname you want to use."
 msgstr ""
 
-#: ../src/TextStrings.cs:424
+#: ../src/TextStrings.cs:423
 msgid "Click to change your nickname"
 msgstr ""
 
-#: ../src/TextStrings.cs:426
+#: ../src/TextStrings.cs:425
 msgid "Change _Password..."
 msgstr ""
 
-#: ../src/TextStrings.cs:427
+#: ../src/TextStrings.cs:426
 msgid "Change Password"
 msgstr ""
 
-#: ../src/TextStrings.cs:428
+#: ../src/TextStrings.cs:427
 msgid "Please enter the new password for this network."
 msgstr ""
 
-#: ../src/TextStrings.cs:430
+#: ../src/TextStrings.cs:429
 msgid "_Account:"
 msgstr ""
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:432
 msgid "_Attach"
 msgstr ""
 
-#: ../src/TextStrings.cs:434
+#: ../src/TextStrings.cs:433
 msgid "_Attach to Account..."
 msgstr ""
 
-#: ../src/TextStrings.cs:435
+#: ../src/TextStrings.cs:434
 msgid "Attach to Account"
 msgstr ""
 
-#: ../src/TextStrings.cs:436
+#: ../src/TextStrings.cs:435
 msgid "Please enter the account you want to attach this client to."
 msgstr ""
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:436
 msgid "_Include all networks created by this client"
 msgstr ""
 
-#: ../src/TextStrings.cs:438
+#: ../src/TextStrings.cs:437
 msgid "Error attaching"
 msgstr ""
 
-#: ../src/TextStrings.cs:439
+#: ../src/TextStrings.cs:438
 msgid "Account not found."
 msgstr ""
 
-#: ../src/TextStrings.cs:441
+#: ../src/TextStrings.cs:440
 msgid "_Join"
 msgstr ""
 
-#: ../src/TextStrings.cs:442
+#: ../src/TextStrings.cs:441
 msgid "Joining..."
 msgstr ""
 
-#: ../src/TextStrings.cs:443
+#: ../src/TextStrings.cs:442
 msgid "Join Network"
 msgstr ""
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:443
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
 msgstr ""
 
-#: ../src/TextStrings.cs:446
+#: ../src/TextStrings.cs:445
 msgid "C_reate"
 msgstr ""
 
-#: ../src/TextStrings.cs:447
+#: ../src/TextStrings.cs:446
 msgid "Creating..."
 msgstr ""
 
-#: ../src/TextStrings.cs:448
+#: ../src/TextStrings.cs:447
 msgid "Create Network"
 msgstr ""
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
 msgstr ""
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Go directly online in the network"
 msgstr ""
 
-#: ../src/TextStrings.cs:453
+#: ../src/TextStrings.cs:452
 msgid "Network not found"
 msgstr ""
 
-#: ../src/TextStrings.cs:454
+#: ../src/TextStrings.cs:453
 msgid "Invalid password"
 msgstr ""
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:454
 msgid "Network is full"
 msgstr ""
 
-#: ../src/TextStrings.cs:456
+#: ../src/TextStrings.cs:455
 msgid "Network is locked"
 msgstr ""
 
-#: ../src/TextStrings.cs:457
+#: ../src/TextStrings.cs:456
 msgid "Network already joined"
 msgstr ""
 
-#: ../src/TextStrings.cs:458
+#: ../src/TextStrings.cs:457
 msgid "Unknown error"
 msgstr ""
 
-#: ../src/TextStrings.cs:459
+#: ../src/TextStrings.cs:458
 msgid "Network name too short"
 msgstr ""
 
-#: ../src/TextStrings.cs:460
+#: ../src/TextStrings.cs:459
 msgid "Network name is already taken"
 msgstr ""
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:461
 msgid "_Send Request"
 msgstr ""
 
-#: ../src/TextStrings.cs:463
+#: ../src/TextStrings.cs:462
 msgid "Send join request?"
 msgstr ""
 
-#: ../src/TextStrings.cs:464
+#: ../src/TextStrings.cs:463
 msgid ""
 "This network requires manual approval of new members by the owner.\n"
 "Would you like to send a join request?"
 msgstr ""
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:465
 msgid "Preferences"
 msgstr ""
 
-#: ../src/TextStrings.cs:467
+#: ../src/TextStrings.cs:466
 msgid "Information"
 msgstr ""
 
-#: ../src/TextStrings.cs:469
+#: ../src/TextStrings.cs:468
 msgid "Delete network '{0}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:469
 msgid "Are you sure you want to delete network '{0}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:472
+#: ../src/TextStrings.cs:471
 msgid "Leave network '{0}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:473
+#: ../src/TextStrings.cs:472
 msgid "Are you sure you want to leave network '{0}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:474
 msgid "Evict member '{0}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:476
+#: ../src/TextStrings.cs:475
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
 msgstr ""
 
-#: ../src/TextStrings.cs:478
+#: ../src/TextStrings.cs:477
 msgid "Failed deleting network '{0}'"
 msgstr ""
 
-#: ../src/TextStrings.cs:479
+#: ../src/TextStrings.cs:478
 msgid "You are not the owner of this network."
 msgstr ""
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:480
 msgid "Failed leaving network '{0}'"
 msgstr ""
 
-#: ../src/TextStrings.cs:482
+#: ../src/TextStrings.cs:481
 msgid "You are the owner of this network."
 msgstr ""
 
-#: ../src/TextStrings.cs:483
+#: ../src/TextStrings.cs:482
 msgid "You don't have permission to leave this network."
 msgstr ""
 
-#: ../src/TextStrings.cs:485
+#: ../src/TextStrings.cs:484
 msgid "Failed evicting member '{0}'"
 msgstr ""
 
-#: ../src/TextStrings.cs:486
+#: ../src/TextStrings.cs:485
 msgid "You are not the owner of network '{0}'."
 msgstr ""
 
-#: ../src/TextStrings.cs:488
+#: ../src/TextStrings.cs:487
 msgid "General"
 msgstr ""
 
 #. In this context meaning "work environment"
-#: ../src/TextStrings.cs:489
+#: ../src/TextStrings.cs:488
 msgid "Desktop"
 msgstr ""
 
-#: ../src/TextStrings.cs:490
+#: ../src/TextStrings.cs:489
 msgid "Commands"
 msgstr ""
 
-#: ../src/TextStrings.cs:492
+#: ../src/TextStrings.cs:491
 msgid "Notification Area"
 msgstr ""
 
-#: ../src/TextStrings.cs:493
+#: ../src/TextStrings.cs:492
 msgid "Behavior"
 msgstr ""
 
-#: ../src/TextStrings.cs:495
+#: ../src/TextStrings.cs:494
 msgid "_Account data folder:"
 msgstr ""
 
-#: ../src/TextStrings.cs:496
+#: ../src/TextStrings.cs:495
 msgid "Choose Folder"
 msgstr ""
 
 #: ../src/TextStrings.cs:497
-msgid "_Update the network list every %S seconds"
-msgstr ""
-
-#: ../src/TextStrings.cs:499
 msgid "_Offline Members"
 msgstr ""
 
-#: ../src/TextStrings.cs:500
+#: ../src/TextStrings.cs:498
 msgid "Sort by _Name"
 msgstr ""
 
-#: ../src/TextStrings.cs:501
+#: ../src/TextStrings.cs:499
 msgid "Sort by _Status"
 msgstr ""
 
-#: ../src/TextStrings.cs:502
+#: ../src/TextStrings.cs:500
 msgid "S_tatusbar"
 msgstr ""
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:502
 msgid "_Show Haguichi in the notification area"
 msgstr ""
 
-#: ../src/TextStrings.cs:505
+#: ../src/TextStrings.cs:503
 msgid "Start Haguichi _minimized in the notification area"
 msgstr ""
 
-#: ../src/TextStrings.cs:507
+#: ../src/TextStrings.cs:505
 msgid "C_onnect automatically on startup"
 msgstr ""
 
-#: ../src/TextStrings.cs:508
+#: ../src/TextStrings.cs:506
 msgid "_Reconnect automatically when connection is lost"
 msgstr ""
 
-#: ../src/TextStrings.cs:509
+#: ../src/TextStrings.cs:507
 msgid "_Disconnect on quit"
 msgstr ""
 
-#: ../src/TextStrings.cs:511
+#: ../src/TextStrings.cs:509
 msgid "Display notification when a member _joins"
 msgstr ""
 
-#: ../src/TextStrings.cs:512
+#: ../src/TextStrings.cs:510
 msgid "Display notification when a member _leaves"
 msgstr ""
 
-#: ../src/TextStrings.cs:513
+#: ../src/TextStrings.cs:511
 msgid "Display notification when a member comes o_nline"
 msgstr ""
 
-#: ../src/TextStrings.cs:514
+#: ../src/TextStrings.cs:512
 msgid "Display notification when a member goes o_ffline"
 msgstr ""
 
-#: ../src/TextStrings.cs:516
+#: ../src/TextStrings.cs:514
 msgid "Do you want to run tuncfg?"
 msgstr ""
 
-#: ../src/TextStrings.cs:517
+#: ../src/TextStrings.cs:515
 msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
 msgstr ""
 
-#: ../src/TextStrings.cs:518
+#: ../src/TextStrings.cs:516
 msgid "_Run"
 msgstr ""
 
-#: ../src/TextStrings.cs:519
+#: ../src/TextStrings.cs:517
 msgid "_Always ask before running tuncfg"
 msgstr ""
 
-#: ../src/TextStrings.cs:520
+#: ../src/TextStrings.cs:518
 msgid "A_sk confirmation before running tuncfg"
 msgstr ""
 
-#: ../src/TextStrings.cs:522
+#: ../src/TextStrings.cs:520
 msgid "Error connecting"
 msgstr ""
 
-#: ../src/TextStrings.cs:523
+#: ../src/TextStrings.cs:521
 msgid "Hamachi login failed."
 msgstr ""
 
-#: ../src/TextStrings.cs:524
+#: ../src/TextStrings.cs:522
 msgid "Connection refused."
 msgstr ""
 
-#: ../src/TextStrings.cs:525
+#: ../src/TextStrings.cs:523
 msgid "No internet connection."
 msgstr ""
 
-#: ../src/TextStrings.cs:527
+#: ../src/TextStrings.cs:525
 msgid "Loading configuration failed"
 msgstr ""
 
-#: ../src/TextStrings.cs:528
+#: ../src/TextStrings.cs:526
 msgid "Hamachi could not launch due to a configuration load failure."
 msgstr ""
 
-#: ../src/TextStrings.cs:530
+#: ../src/TextStrings.cs:528
 msgid "Member online"
 msgstr ""
 
-#: ../src/TextStrings.cs:531
+#: ../src/TextStrings.cs:529
 msgid "{0} came online in the network {1}"
 msgstr ""
 
-#: ../src/TextStrings.cs:532
+#: ../src/TextStrings.cs:530
 msgid "Member offline"
 msgstr ""
 
-#: ../src/TextStrings.cs:533
+#: ../src/TextStrings.cs:531
 msgid "{0} went offline in the network {1}"
 msgstr ""
 
-#: ../src/TextStrings.cs:534
+#: ../src/TextStrings.cs:532
 msgid "Member joined"
 msgstr ""
 
-#: ../src/TextStrings.cs:535
+#: ../src/TextStrings.cs:533
 msgid "{0} joined the network {1}"
 msgstr ""
 
-#: ../src/TextStrings.cs:536
+#: ../src/TextStrings.cs:534
 msgid "Member left"
 msgstr ""
 
-#: ../src/TextStrings.cs:537
+#: ../src/TextStrings.cs:535
 msgid "{0} left the network {1}"
 msgstr ""
 
-#: ../src/TextStrings.cs:539
+#: ../src/TextStrings.cs:537
 msgid "A_vailable commands:"
 msgstr ""
 
-#: ../src/TextStrings.cs:540
+#: ../src/TextStrings.cs:538
 msgid "Command"
 msgstr ""
 
-#: ../src/TextStrings.cs:541
+#: ../src/TextStrings.cs:539
 msgid "Available"
 msgstr ""
 
-#: ../src/TextStrings.cs:543
+#: ../src/TextStrings.cs:541
 msgid "Add Command"
 msgstr ""
 
-#: ../src/TextStrings.cs:544
+#: ../src/TextStrings.cs:542
 msgid "Edit Command"
 msgstr ""
 
-#: ../src/TextStrings.cs:545
+#: ../src/TextStrings.cs:543
 msgid "_Command:"
 msgstr ""
 
-#: ../src/TextStrings.cs:546
+#: ../src/TextStrings.cs:544
 msgid "_Label:"
 msgstr ""
 
-#: ../src/TextStrings.cs:547
+#: ../src/TextStrings.cs:545
 msgid "Use %A for address and %N for nickname"
 msgstr ""
 
-#: ../src/TextStrings.cs:549
+#: ../src/TextStrings.cs:547
 msgid "Click to choose an icon"
 msgstr ""
 
-#: ../src/TextStrings.cs:550
+#: ../src/TextStrings.cs:548
 msgid "Choose Icon"
 msgstr ""
 
-#: ../src/TextStrings.cs:551
+#: ../src/TextStrings.cs:549
 msgid "_No Icon"
 msgstr ""
 
-#: ../src/TextStrings.cs:553
+#: ../src/TextStrings.cs:551
 msgid "Default"
 msgstr ""
 
-#: ../src/TextStrings.cs:554
+#: ../src/TextStrings.cs:552
 msgid "_Default"
 msgstr ""
 
-#: ../src/TextStrings.cs:556
+#: ../src/TextStrings.cs:554
 msgid "Restore the default commands"
 msgstr ""
 
-#: ../src/TextStrings.cs:557
+#: ../src/TextStrings.cs:555
 msgid "Revert changes?"
 msgstr ""
 
-#: ../src/TextStrings.cs:558
+#: ../src/TextStrings.cs:556
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
 msgstr ""
 
-#: ../src/TextStrings.cs:560
+#: ../src/TextStrings.cs:558
 msgid "Move up"
 msgstr ""
 
-#: ../src/TextStrings.cs:561
+#: ../src/TextStrings.cs:559
 msgid "Move down"
 msgstr ""
+
+#: ../src/Windows/Preferences.cs:283
+msgid "_Update the network list every %S second"
+msgid_plural "_Update the network list every %S seconds"
+msgstr[0] ""
+msgstr[1] ""
 
