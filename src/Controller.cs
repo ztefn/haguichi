@@ -61,7 +61,8 @@ public static class Controller
             }
             else if ( Hamachi.ApiVersion == 1 )
             {
-                GetNicksAndNetworkList ();
+                Thread thread = new Thread ( GetNicksAndNetworkListThread );
+                thread.Start ();
             }
         }
         else if ( ( lastStatus >= 3 ) &&
@@ -94,15 +95,19 @@ public static class Controller
     }
     
     
-    private static void GetNicksAndNetworkList ()
+    private static void GetNicksAndNetworkListThread ()
     {
         
-        MainWindow.statusBar.Push ( 0, TextStrings.gettingNicks );
+        Application.Invoke ( delegate {
+            MainWindow.statusBar.Push ( 0, TextStrings.gettingNicks );
+        });
         
         Hamachi.GetNicks ();
         
         uint wait = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetNicksWaitTime ) );
         GLib.Timeout.Add ( wait, new GLib.TimeoutHandler ( TimedGetNetworkList ) );
+        
+        Hamachi.GetInfo (); // Get latest info to be able to update information dialog correcltly
         
     }
     
@@ -392,9 +397,7 @@ public static class Controller
             }
             else if ( Hamachi.ApiVersion == 1 )
             {
-                Application.Invoke ( delegate {
-                   GetNicksAndNetworkList ();
-                });
+                GetNicksAndNetworkListThread ();
             }
         }
         else
@@ -412,8 +415,9 @@ public static class Controller
     
     private static bool TimedGetNetworkList ()
     {
-        
-        GetNetworkList ();
+        Application.Invoke ( delegate {
+            GetNetworkList ();
+        });
         
         return false;
         
@@ -462,7 +466,6 @@ public static class Controller
         
         ArrayList networks = Hamachi.ReturnList ();
         Haguichi.connection.Networks = networks;
-
         
         MainWindow.networkView.FillTree ();
         GlobalEvents.ConnectionEstablished ();
