@@ -418,7 +418,7 @@ public static class Hamachi
             string heading = String.Format ( TextStrings.failedDeleteNetworkHeading, network.Name );
             string message = TextStrings.failedDeleteNetworkMessage;
             
-            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
+            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error", output );
         }
         
     }
@@ -435,14 +435,14 @@ public static class Hamachi
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
             string message = TextStrings.failedLeaveNetworkMessageIsOwner;
             
-            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
+            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error", output );
         }
         else if ( output.IndexOf ( ".. failed, denied" ) != -1 )
         {
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
             string message = TextStrings.failedLeaveNetworkMessageDenied;
             
-            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
+            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error", output );
         }
         
     }
@@ -478,7 +478,7 @@ public static class Hamachi
             string heading = String.Format ( TextStrings.failedEvictMemberHeading, member.Nick );
             string message = String.Format ( TextStrings.failedEvictMemberMessage, member.Network );
             
-            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error" );
+            Dialogs.Message delDlg = new Dialogs.Message ( heading, message, "Error", output );
         }
         
     }

@@ -269,7 +269,7 @@ public static class Controller
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Not properly configured, showing dialog." );
             Application.Invoke ( delegate {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error" );
+                Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error", output );
             });
         }
         else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 )
@@ -288,7 +288,7 @@ public static class Controller
             
             Application.Invoke ( delegate {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error" );
+                Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error", output );
             });
         }
         else
@@ -324,7 +324,7 @@ public static class Controller
         {
             Application.Invoke ( delegate {
                 MainWindow.SetMode ( "Disconnected" );
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error" );
+                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error", null );
             });
         }
         else if ( lastStatus >= 4 )
@@ -406,7 +406,7 @@ public static class Controller
             
             Application.Invoke ( delegate {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error" );
+                Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error", output );
             });
         }
         

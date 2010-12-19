@@ -26,12 +26,37 @@ namespace Dialogs
 
     public class Message : Dialogs.Base
     {
-
-        public Message ( string header, string message, string icon ) : base ( "", header, message, icon )
+        
+        public Message ( string header, string message, string icon, string output ) : base ( "", header, message, icon )
         {
             
             this.AddButton ( Stock.Ok, ResponseType.Ok );
-        
+            
+            if ( output != null )
+            {
+                TextView textview = new TextView ();
+                textview.Editable = false;
+                textview.LeftMargin = 3;
+                textview.RightMargin = 3;
+                textview.PixelsAboveLines = 3;
+                textview.PixelsBelowLines = 3;
+                
+                TextBuffer buffer = textview.Buffer;
+                TextIter iter = buffer.GetIterAtOffset ( 0 );
+                buffer.Insert ( iter, output );
+                
+                ScrolledWindow sw = new ScrolledWindow ();
+                sw.ShadowType = ShadowType.In;
+                sw.SetPolicy ( PolicyType.Never, PolicyType.Automatic );
+                sw.Add ( textview );
+                
+                Expander expander = new Expander ( TextStrings.hamachiOutput );
+                expander.Add ( sw );
+                expander.ShowAll ();
+                
+                this.AddContent ( expander );
+            }
+            
             this.SkipTaskbarHint = true;
             
             this.Run ();

@@ -172,12 +172,12 @@ namespace Dialogs
             }
             else if ( output.IndexOf ( ".. failed, not found" ) != -1 )
             {
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error" );
+                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error", output );
                 return;
             }
             else if ( output.IndexOf ( ".. failed" ) != -1 )
             {
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error" );
+                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error", output );
                 return;
             }
             else

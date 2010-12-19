@@ -106,6 +106,8 @@ Svenska (sv)
     public static string yes;
     public static string no;
     
+    public static string hamachiOutput;
+    
     public static string address;
     public static string id;
     public static string clientId;
@@ -133,16 +135,15 @@ Svenska (sv)
     
     public static string connectAutomatically;
     
-    public static string downloadLabel;
-    public static string configureLabel;
-    
     public static string notConfigured;
     public static string notConfiguredHeading;
     public static string notConfiguredMessage;
+    public static string configureLabel;
     
     public static string notInstalled;
     public static string notInstalledHeading;
     public static string notInstalledMessage;
+    public static string downloadLabel;
     
     public static string members;
     public static string memberCount;
@@ -338,6 +339,8 @@ Svenska (sv)
         yes                                 = Catalog.GetString ( "Yes" );
         no                                  = Catalog.GetString ( "No" );
         
+        hamachiOutput                       = Catalog.GetString ( "_Hamachi ouput" );
+        
         address                             = Catalog.GetString ( "Address:" );
         id                                  = Catalog.GetString ( "ID:" );
         clientId                            = Catalog.GetString ( "Client ID:" );
@@ -365,16 +368,15 @@ Svenska (sv)
         
         connectAutomatically                = Catalog.GetString ( "Connect a_utomatically" );
         
-        downloadLabel                       = Catalog.GetString ( "_Download" );
-        configureLabel                      = Catalog.GetString ( "C_onfigure" );
-        
         notConfigured                       = Catalog.GetString ( "Not configured" );
         notConfiguredHeading                = Catalog.GetString ( "Hamachi is not configured" );
         notConfiguredMessage                = Catalog.GetString ( "You need to configure Hamachi before you can connect." );
+        configureLabel                      = Catalog.GetString ( "C_onfigure" );
 
         notInstalled                        = Catalog.GetString ( "Not installed" );
         notInstalledHeading                 = Catalog.GetString ( "Hamachi is not installed" );
         notInstalledMessage                 = Catalog.GetString ( "Please download Hamachi and follow the installation instructions." );
+        downloadLabel                       = Catalog.GetString ( "_Download" );
         
         members                             = Catalog.GetString ( "Members:" );
         memberCount                         = Catalog.GetString ( "{0} online, {1} total" );
