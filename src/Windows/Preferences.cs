@@ -162,10 +162,6 @@ namespace Windows
             Box.BoxChild bc5 = ( ( Box.BoxChild ) ( pathBox [ pathLabel ] ) );
             bc5.Expand = false;
             
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( pathBox [ pathButton ] ) );
-            bc6.Expand = false;
-            bc6.PackType = PackType.End;
-            
             GroupBox hamachiBox = new GroupBox ( "Hamachi" );
             hamachiBox.AddWidget ( pathBox );
             
