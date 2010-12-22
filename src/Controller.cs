@@ -29,6 +29,8 @@ public static class Controller
 {
     
     public static bool continueUpdate;
+    public static bool restoreConnection;
+    public static int restoreCountdown;
     public static int lastStatus;
     private static string startOutput;
     
@@ -68,14 +70,24 @@ public static class Controller
         else if ( ( lastStatus >= 3 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+            }
+            
             MainWindow.SetMode ( "Connecting" );
             GoConnect ();
         }
         else if ( ( lastStatus >= 2 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+            }
+            
             MainWindow.SetMode ( "Disconnected" );
-            GlobalEvents.WaitForInternetCycle ();
+            WaitForInternetCycle ();
         }
         else if ( lastStatus >= 2 )
         {
@@ -98,7 +110,8 @@ public static class Controller
     private static void GetNicksAndNetworkListThread ()
     {
         
-        Application.Invoke ( delegate {
+        Application.Invoke ( delegate
+        {
             MainWindow.statusBar.Push ( 0, TextStrings.gettingNicks );
         });
         
@@ -231,7 +244,8 @@ public static class Controller
             /* Ok, started */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
             
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
             });
             GoLoginThread ();
@@ -250,7 +264,8 @@ public static class Controller
             {
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
                 
-                Application.Invoke ( delegate {
+                Application.Invoke ( delegate
+                {
                     MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
                 });
                 GoLoginThread ();
@@ -259,7 +274,8 @@ public static class Controller
             {
                 Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Still not finished started, stopping now." );
                 
-                Application.Invoke ( delegate {
+                Application.Invoke ( delegate
+                {
                     GlobalEvents.ConnectionStopped ();
                 });
             }
@@ -267,7 +283,8 @@ public static class Controller
         else if ( output.IndexOf ( "cfg: failed to load" ) != -1 )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Not properly configured, showing dialog." );
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 GlobalEvents.ConnectionStopped ();
                 Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error", output );
             });
@@ -276,7 +293,8 @@ public static class Controller
         {
             /* Not able to start, running tuncfg required */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Tuncfg required." );
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
                 GoRunTuncfgAndTryStartAgain ();
             });
@@ -286,7 +304,8 @@ public static class Controller
             /* Not able to start, connection refused */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Connection refused, showing dialog" );
             
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 GlobalEvents.ConnectionStopped ();
                 Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error", output );
             });
@@ -295,7 +314,8 @@ public static class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason." );
             
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 GlobalEvents.ConnectionStopped ();
             });
         }
@@ -308,7 +328,8 @@ public static class Controller
     public static void GoConnectThread ()
     {
         
-        Application.Invoke ( delegate {
+        Application.Invoke ( delegate
+        {
             MainWindow.SetMode ( "Connecting" );
         });
         
@@ -316,20 +337,31 @@ public static class Controller
         
         if ( Config.Settings.DemoMode )
         {
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 GlobalEvents.ConnectionEstablished ();
             });
         }
         else if ( lastStatus == 2 )
         {
-            Application.Invoke ( delegate {
-                MainWindow.SetMode ( "Disconnected" );
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error", null );
+            Application.Invoke ( delegate
+            {
+                if ( restoreConnection )
+                {
+                    MainWindow.SetMode ( "Disconnected" );
+                    WaitForInternetCycle ();
+                }
+                else
+                {
+                    GlobalEvents.ConnectionStopped ();
+                    Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error", null );
+                }
             });
         }
         else if ( lastStatus >= 4 )
         {
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
             });
             GoLoginThread ();
@@ -338,7 +370,8 @@ public static class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoConnectThread", "Not yet started, go start." );
             
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 MainWindow.statusBar.Push ( 0, TextStrings.starting );
                 
                 if ( Hamachi.ApiVersion > 1 )
@@ -391,7 +424,8 @@ public static class Controller
             
             if ( Hamachi.ApiVersion > 1 )
             {
-                Application.Invoke ( delegate {
+                Application.Invoke ( delegate
+                {
                    GetNetworkList ();
                 });
             }
@@ -404,9 +438,14 @@ public static class Controller
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Error connecting, showing dialog." );
             
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error", output );
+                
+                if ( !restoreConnection )
+                {
+                    Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error", output );
+                }
             });
         }
         
@@ -415,7 +454,9 @@ public static class Controller
     
     private static bool TimedGetNetworkList ()
     {
-        Application.Invoke ( delegate {
+        
+        Application.Invoke ( delegate
+        {
             GetNetworkList ();
         });
         
@@ -438,7 +479,8 @@ public static class Controller
             }
             else
             {
-                Application.Invoke ( delegate {
+                Application.Invoke ( delegate
+                {
                     GlobalEvents.ConnectionStopped ();
                 });
                 return;
@@ -462,7 +504,6 @@ public static class Controller
     {
         
         Haguichi.connection.ClearNetworks ();
-        Haguichi.connection.Status = new Status ( "*" );
         
         ArrayList networks = Hamachi.ReturnList ();
         Haguichi.connection.Networks = networks;
@@ -496,8 +537,7 @@ public static class Controller
         
         StatusCheck ();
     
-        if ( ( HasInternetConnection () ) &&
-             ( lastStatus >= 6 ) )
+        if ( lastStatus >= 6 )
         {
             
             if ( Hamachi.ApiVersion == 1 )
@@ -511,7 +551,8 @@ public static class Controller
         
         if ( continueUpdate )
         {
-            Application.Invoke ( delegate {
+            Application.Invoke ( delegate
+            {
                 UpdateList ();
             });
         }
@@ -533,9 +574,34 @@ public static class Controller
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
         }
-        else if ( ( HasInternetConnection () ) &&
-                  ( Haguichi.connection.Status.statusInt == 1 ) &&
-                  ( lastStatus >= 6 ) ) // We're connected allright
+        else if ( lastStatus == 2 )
+        {
+            
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Internet connection lost." );
+            
+            GlobalEvents.ConnectionStopped ();
+            
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+                WaitForInternetCycle ();
+            }
+            
+        }
+        else if ( lastStatus < 6 )
+        {
+            
+            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Hamachi connection lost." );
+            
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+            }
+            
+            GlobalEvents.ConnectionStopped ();
+            
+        }
+        else if ( lastStatus >= 6 ) // We're connected allright
         {
         
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Connected, updating list." );
@@ -675,21 +741,53 @@ public static class Controller
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
         }
-        else if ( ( Haguichi.connection.Status.statusInt == 1 ) &&
-                  ( ( lastStatus < 6 ) || !HasInternetConnection () ) ) // We're not connected, but should be
+        
+    }
+    
+    
+    
+    private static void WaitForInternetCycle ()
+    {
+        
+        uint interval = ( uint ) ( 1000 );
+        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( WaitForInternet ) );
+        
+    }
+    
+    
+    public static void RestoreConnectionCycle ()
+    {
+        
+        Debug.Log ( Debug.Domain.Info, "Controller.RestoreConnectionCycle", "Trying to reconnect..." );
+        
+        restoreCountdown = 30;
+        MainWindow.SetMode ( "Countdown" );
+        
+        uint interval = ( uint ) ( 1000 );
+        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( RestoreConnection ) );
+        
+    }
+    
+    
+    private static bool RestoreConnection ()
+    {
+        
+        if ( restoreConnection )
         {
+            restoreCountdown --;
             
-            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Connection lost." );
-            
-            GlobalEvents.ConnectionLost ();
-            
+            if ( restoreCountdown == 0 )
+            {
+                GlobalEvents.StartHamachi ();
+            }
+            else
+            {
+                MainWindow.SetMode ( "Countdown" );
+                return true;   
+            }
         }
-        else // Connection already stopped
-        {
-            
-            Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Disconnected, shall not update list." );
-            
-        }
+        
+        return false;
         
     }
     

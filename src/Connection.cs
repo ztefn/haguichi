@@ -24,23 +24,20 @@ using System.Collections;
 public class Connection
 {
     
-    public Status Status;
     public ArrayList Networks;
     
     
-    public Connection ( Status status )
+    public Connection ()
     {
         
-        this.Status = status;
         this.Networks = new ArrayList();
     
     }
     
     
-    public Connection ( Status status, ArrayList networks )
+    public Connection ( ArrayList networks )
     {
     
-        this.Status = status;
         this.Networks = networks;
     
     }

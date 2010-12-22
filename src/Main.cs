@@ -103,7 +103,7 @@ class Haguichi
         informationWindow   = new Dialogs.Information ( TextStrings.informationTitle );
         preferencesWindow   = new Windows.Preferences ( TextStrings.preferencesTitle );
         
-        connection          = new Connection ( new Status ( " " ) );
+        connection          = new Connection ();
         
         Controller.Init ();
         

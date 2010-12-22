@@ -44,6 +44,10 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
+        if ( Controller.restoreCountdown > 0 )
+        {
+            Controller.restoreConnection = false;
+        }
         Controller.GoConnect ();
         
     }
@@ -101,6 +105,7 @@ public class GlobalEvents
             GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
         }
         
+        Controller.restoreConnection = false;
         Controller.UpdateCycle ();
         
     }
@@ -117,38 +122,21 @@ public class GlobalEvents
     }
     
     
-    
-    public static void WaitForInternetCycle ()
-    {
-        
-        uint interval = ( uint ) ( 1000 );
-        
-        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( Controller.WaitForInternet ) );
-        
-    }
-    
-    
-    public static void ConnectionLost ()
-    {
-        
-        ConnectionStopped ();
-        
-        if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-        {
-            WaitForInternetCycle ();
-        }
-        
-    }
-    
-    
     public static void ConnectionStopped ()
     {
+        
+        MainWindow.SetMode ( "Disconnected" );
+        
+        if ( Controller.restoreConnection )
+        {
+            Controller.RestoreConnectionCycle ();
+            return;
+        }
         
         /* Stop update interval */
         Controller.continueUpdate = false;
         
         Haguichi.connection.ClearNetworks ();
-        Haguichi.connection.Status = new Status ( " " );
         
         if ( Hamachi.ApiVersion > 1 )
         {
@@ -158,8 +146,6 @@ public class GlobalEvents
         {
             Controller.lastStatus = 3;
         }
-        
-        MainWindow.SetMode ( "Disconnected" );
         
         SetAttach ();
         

@@ -133,6 +133,7 @@ Svenska (sv)
     public static string gettingNicks;
     public static string updating;
     
+    public static string connectCountdown;
     public static string connectAutomatically;
     
     public static string notConfigured;
@@ -366,6 +367,7 @@ Svenska (sv)
         gettingNicks                        = Catalog.GetString ( "Getting nicknames..." );
         updating                            = Catalog.GetString ( "Updating..." );
         
+        connectCountdown                    = Catalog.GetString ( "C_onnect (%S)" );
         connectAutomatically                = Catalog.GetString ( "Connect a_utomatically" );
         
         notConfigured                       = Catalog.GetString ( "Not configured" );

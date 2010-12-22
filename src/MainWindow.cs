@@ -376,8 +376,27 @@ public class MainWindow
         switch ( mode )
         {
             
+            case "Countdown":
+                
+                disconnectedBox.Show ();
+                connectedBox.Hide ();
+                
+                autoconnectCheckbox.Sensitive = true;
+                connectButton.Sensitive = true;
+                connectButton.Label = TextStrings.connectCountdown.Replace ( "%S", Controller.restoreCountdown.ToString () );
+                connectButton.Image = new Image ( Stock.Connect, IconSize.Button );
+                nameButton.Sensitive = true;
+                
+                panelIcon.SetMode ( "Disconnected" );
+                statusBar.Push ( 0, TextStrings.disconnected );
+                
+                menuBar.SetMode ( "Disconnected" );
+                quickMenu.SetMode ( "Disconnected" );
+                
+                break;
+                
             case "Connecting":
-            
+                
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
@@ -395,7 +414,7 @@ public class MainWindow
                 break;
                 
             case "Connected":
-            
+                
                 disconnectedBox.Hide ();
                 connectedBox.Show ();
                 
@@ -408,7 +427,7 @@ public class MainWindow
                 break;
                 
             case "Disconnected":
-            
+                
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
@@ -424,9 +443,9 @@ public class MainWindow
                 quickMenu.SetMode ( mode );
                 
                 break;
-            
+                
             case "Not configured":
-            
+                
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
@@ -440,9 +459,9 @@ public class MainWindow
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );
-            
+                
                 break;
-            
+                
             case "Not installed":
                 
                 disconnectedBox.Show ();
@@ -458,9 +477,9 @@ public class MainWindow
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );
-            
+                
                 break;
-            
+                
         }
         
     }
