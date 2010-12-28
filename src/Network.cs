@@ -198,7 +198,7 @@ public class Network
                 }
                 else
                 {
-                    output = Command.ReturnOutput ( "hamachi", "network " + this.Id );
+                    output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
                 }
                 Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
                 
@@ -219,7 +219,7 @@ public class Network
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
-            output = Command.ReturnOutput ( "hamachi", "evict '" + this.Id + "' 5.5.5.5" );
+            output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( this.Id ) + "\" 5.5.5.5" );
             Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
     
             if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||

@@ -48,5 +48,16 @@ public static class Utilities
         return output;
         
     }
+    
+    
+    public static string CleanString ( string inString )
+    {
+        
+        inString = inString.Replace("\\", "\\\\");
+        inString = inString.Replace("\"", "\\\"");
+        
+        return inString;
+        
+    }
 
 }

@@ -55,11 +55,16 @@ public static class Controller
         
         if ( lastStatus >= 5 )
         {
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+            }
+            
             MainWindow.SetMode ( "Connecting" );
             
             if ( Hamachi.ApiVersion > 1 )
             {
-                GetNetworkList ();
+                GoConnect ();
             }
             else if ( Hamachi.ApiVersion == 1 )
             {

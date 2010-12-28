@@ -366,7 +366,7 @@ public static class Hamachi
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "go-online '" + id + "'" );
+            output = Command.ReturnOutput ( "hamachi", "go-online \"" + Utilities.CleanString ( id ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
         }
         
@@ -390,7 +390,7 @@ public static class Hamachi
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "go-offline '" + id + "'" );
+            output = Command.ReturnOutput ( "hamachi", "go-offline \"" + Utilities.CleanString ( id ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
         }
         
@@ -410,7 +410,7 @@ public static class Hamachi
     public static void Delete ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "delete '" + network.Id + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "delete \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Delete", output );
 
         if ( output.IndexOf ( ".. failed, you are not an owner" ) != -1 )
@@ -427,7 +427,7 @@ public static class Hamachi
     public static void Leave ( Network network )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "leave '" + network.Id + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "leave \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Leave", output );
 
         if ( output.IndexOf ( ".. failed, you are an owner" ) != -1 )
@@ -451,7 +451,7 @@ public static class Hamachi
     public static void Approve ( Member member )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "approve '" + member.Network + "' " + member.ClientId );
+        string output = Command.ReturnOutput ( "hamachi", "approve \"" + Utilities.CleanString ( member.Network ) + "\" " + member.ClientId );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Approve", output );
         
     }
@@ -460,7 +460,7 @@ public static class Hamachi
     public static void Reject ( Member member )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "reject '" + member.Network + "' " + member.ClientId );
+        string output = Command.ReturnOutput ( "hamachi", "reject \"" + Utilities.CleanString ( member.Network ) + "\" " + member.ClientId );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Reject", output );
         
     }
@@ -469,7 +469,7 @@ public static class Hamachi
     public static void Evict ( Member member )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "evict '" + member.Network + "' " + member.ClientId );
+        string output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( member.Network ) + "\" " + member.ClientId );
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Evict", output );
 
@@ -798,12 +798,12 @@ public static class Hamachi
             else if ( ( Hamachi.ApiVersion == 1 ) &&
                       ( status >= 4 ) )
             {
-                output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+                output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
             }
             else if ( ( Hamachi.ApiVersion > 1 ) &&
                       ( status >= 6 ) )
             {
-                output = Command.ReturnOutput ( "hamachi", "set-nick '" + nick + "'" );
+                output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
             }
             else if ( Hamachi.ApiVersion > 1 )
             {
@@ -827,7 +827,7 @@ public static class Hamachi
             command += "-net";
         }
         
-        output = Command.ReturnOutput ( "hamachi", command + " '" + accountId + "'" );
+        output = Command.ReturnOutput ( "hamachi", command + " \"" + Utilities.CleanString ( accountId ) + "\"" );
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Attach", output );
         
@@ -843,7 +843,7 @@ public static class Hamachi
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "do-join '" + name + "' '" + password + "'" );
+            output = Command.ReturnOutput ( "hamachi", "do-join \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SendJoinRequest", output );
         }
         
@@ -855,7 +855,7 @@ public static class Hamachi
     public static string JoinNetwork ( string name, string password )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "join '" + name + "' '" + password + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "join \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.JoinNetwork", output );
         
         return output;
@@ -870,7 +870,7 @@ public static class Hamachi
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "set-access '" + networkId + "' '" + locking + "' '" + approve + "'" );
+            output = Command.ReturnOutput ( "hamachi", "set-access \"" + Utilities.CleanString ( networkId ) + "\" " + locking + " " + approve );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetAccess", output );
         }
         
@@ -886,7 +886,7 @@ public static class Hamachi
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "set-pass '" + networkId + "' '" + password + "'" );
+            output = Command.ReturnOutput ( "hamachi", "set-pass \"" + Utilities.CleanString ( networkId ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetPassword", output );
         }
         
@@ -898,7 +898,7 @@ public static class Hamachi
     public static string CreateNetwork ( string name, string password )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "create '" + name + "' '" + password + "'" );
+        string output = Command.ReturnOutput ( "hamachi", "create \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.CreateNetwork", output );
         
         return output;
