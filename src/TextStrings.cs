@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2011 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -30,7 +30,7 @@ public static class TextStrings
     public static string appWebsiteLabel;
     public static string appComments;
     public static string appDescription;
-    public static string appCopyright           = "Copyright © 2007-2010 Stephen Brandt";
+    public static string appCopyright           = "Copyright © 2007-2011 Stephen Brandt";
     public static string appLicense             =
 @"Haguichi is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
