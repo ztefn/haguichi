@@ -7,24 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-12-22 23:48:17+0100\n"
-"PO-Revision-Date: 2010-09-22 18:22+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2010-12-22 23:48+0100\n"
+"PO-Revision-Date: 2010-12-31 14:21+0000\n"
+"Last-Translator: Thibault Févry <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2011-01-02 19:40+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: ../src/TextStrings.cs:335
 msgid "Haguichi Website"
 msgstr "Site web d'Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:336
 msgid "A graphical frontend for Hamachi."
 msgstr "Une interface graphique pour Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:337
 msgid "Join and create local networks over the Internet"
 msgstr "Joindre ou créer des réseaux locaux au travers d'Internet"
@@ -39,7 +42,7 @@ msgstr "Non"
 
 #: ../src/TextStrings.cs:342
 msgid "_Hamachi ouput"
-msgstr ""
+msgstr "Sortie d'_Hamachi"
 
 #: ../src/TextStrings.cs:344
 msgid "Address:"
@@ -127,12 +130,11 @@ msgstr "Obtention des pseudos..."
 
 #: ../src/TextStrings.cs:367
 msgid "Updating..."
-msgstr "Mise à jour…"
+msgstr "Mise à jour..."
 
 #: ../src/TextStrings.cs:369
-#, fuzzy
 msgid "C_onnect (%S)"
-msgstr "Connecté"
+msgstr "Se _connecter (%S)"
 
 #: ../src/TextStrings.cs:370
 msgid "Connect a_utomatically"
@@ -536,6 +538,7 @@ msgstr "Vous n'êtes pas le propriétaire du réseau '{0}'."
 msgid "General"
 msgstr "Général"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:492
 msgid "Desktop"
 msgstr "Espace de travail"
@@ -772,5 +775,5 @@ msgstr "Déplacer vers le bas"
 #: ../src/Windows/Preferences.cs:279
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "_Mettre à jour la liste de serveur chaque %S seconde"
+msgstr[1] "_Mettre à jour la liste de serveur toutes les %S secondes"

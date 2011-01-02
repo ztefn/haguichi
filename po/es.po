@@ -130,9 +130,8 @@ msgid "Updating..."
 msgstr "Actualizando..."
 
 #: ../src/TextStrings.cs:369
-#, fuzzy
 msgid "C_onnect (%S)"
-msgstr "Conectado"
+msgstr "_Conectar (%S)"
 
 #: ../src/TextStrings.cs:370
 msgid "Connect a_utomatically"
