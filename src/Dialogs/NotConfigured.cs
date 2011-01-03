@@ -42,7 +42,7 @@ namespace Dialogs
         }
         
         
-        public void ResponseHandler ( object obj, ResponseArgs args )
+        private void ResponseHandler ( object obj, ResponseArgs args )
         {
             
             if ( args.ResponseId == ResponseType.Ok )

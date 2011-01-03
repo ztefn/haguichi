@@ -560,7 +560,7 @@ Svenska (sv)
         revertHeading                       = Catalog.GetString ( "Revert changes?" );
         revertMessage                       = Catalog.GetString ( "Are you sure you wish to revert all changes\nand thereby restore the default commands?" );
         
-        moveUpTip                           = Catalog.GetString ( "Move up");
+        moveUpTip                           = Catalog.GetString ( "Move up" );
         moveDownTip                         = Catalog.GetString ( "Move down" );
         
     }

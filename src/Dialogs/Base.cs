@@ -107,14 +107,18 @@ namespace Dialogs
         
         public void AddContent ( Widget widget )
         {
+            
             this.Contents.Add ( widget );   
             widget.Show ();
+            
         }
         
         
         public void SetResponseText ( object o, ResponseArgs args )
         {
+            
             this.ResponseText = args.ResponseId.ToString ();
+            
         }
 
     }

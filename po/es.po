@@ -7,24 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-12-22 23:48:17+0100\n"
-"PO-Revision-Date: 2010-11-14 12:35+0000\n"
-"Last-Translator: Eduardo Parra <Unknown>\n"
+"POT-Creation-Date: 2010-12-22 23:48+0100\n"
+"PO-Revision-Date: 2011-01-03 21:18+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-11-14 13:25+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-01-03 22:40+0000\n"
+"X-Generator: Launchpad (build 12138)\n"
 
 #: ../src/TextStrings.cs:335
 msgid "Haguichi Website"
 msgstr "Página web de Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:336
 msgid "A graphical frontend for Hamachi."
 msgstr "Una interfaz gráfica para Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:337
 msgid "Join and create local networks over the Internet"
 msgstr "Únase y cree redes locales a través de Internet"
@@ -39,7 +42,7 @@ msgstr "No"
 
 #: ../src/TextStrings.cs:342
 msgid "_Hamachi output"
-msgstr ""
+msgstr "Salida de _Hamachi"
 
 #: ../src/TextStrings.cs:344
 msgid "Address:"
@@ -534,6 +537,7 @@ msgstr "No es el dueño de la red «{0}»."
 msgid "General"
 msgstr "General"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:492
 msgid "Desktop"
 msgstr "Escritorio"
@@ -770,5 +774,5 @@ msgstr "Mover hacia abajo"
 #: ../src/Windows/Preferences.cs:279
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "_Actualizar la lista de redes cada %S segundo"
+msgstr[1] "_Actualizar la lista de redes cada %S segundos"

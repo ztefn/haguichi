@@ -29,13 +29,14 @@ namespace Dialogs
         
         public RunTunCfg () : base ( "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
         {
+            
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             
             Button runBut = ( Button ) this.AddButton ( TextStrings.runLabel, ResponseType.Ok );
             runBut.Image = new Image ( Stock.DialogAuthentication, IconSize.Button );
             runBut.GrabFocus ();
             
-            CheckButton check =  new CheckButton ( TextStrings.checkboxAskBeforeRunningTuncfg );
+            CheckButton check = new CheckButton ( TextStrings.checkboxAskBeforeRunningTuncfg );
             check.Active = ( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg );
             check.Toggled += ToggleAsk;
             
@@ -49,13 +50,16 @@ namespace Dialogs
            
             this.Run ();
             this.Destroy ();
+            
         }
         
         
         public void ToggleAsk ( object obj, EventArgs args )
         {
+            
             bool ask = !( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg );
             Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, ask );
+            
         }
 
     }

@@ -46,7 +46,7 @@ namespace Dialogs
             this.TranslatorCredits   = TextStrings.appTranslatorCredits;
             this.Artists             = TextStrings.appArtists;
             
-            this.Logo                = MainWindow.appIcons[4];
+            this.Logo                = MainWindow.appIcons [4];
             
             this.DeleteEvent        += OnDeleteEvent;
             this.Response           += ResponseHandler;

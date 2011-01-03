@@ -210,6 +210,7 @@ public class MainWindow
     [GLib.ConnectBefore]
     private void OnMoveResize ( object o, ConfigureEventArgs args )
     {
+        
         // Getting and setting window size and position values when changed (only in normal window state)
         
         if ( window.GdkWindow.State == 0 ) 
@@ -224,9 +225,12 @@ public class MainWindow
             Config.Client.Set ( Config.Settings.WinWidth, width );
             Config.Client.Set ( Config.Settings.WinHeight, height );
         }
+        
     }
     
-    private void OnStateChanged ( object sender, WindowStateEventArgs a ) {
+    
+    private void OnStateChanged ( object sender, WindowStateEventArgs a )
+    {
         
         Gdk.EventWindowState ews = a.Event;
         Gdk.WindowState ws = ews.NewWindowState;
@@ -256,6 +260,7 @@ public class MainWindow
     
     private void OnWinDelete ( object obj, DeleteEventArgs args )
     {
+        
         if ( !( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) )
         {
             GlobalEvents.QuitApp ( obj, args );
@@ -265,24 +270,31 @@ public class MainWindow
             Hide ();
             args.RetVal = true;
         }
+        
     }
      
     
     public static void ShowOfflineMembers ( bool show )
     {
+        
         networkView.GoFilterOfflineMembers ( !show );
+        
     }
     
     
     public static void ShowStatusbar ( bool show )
     {
+        
         statusBar.Visible = show;
+        
     }
     
     
     public static void ShowTrayIcon ( bool show )
     {
+        
         panelIcon.Visible = show;
+        
     }
     
     
@@ -341,32 +353,40 @@ public class MainWindow
     
     void StatusIconPopupHandler ( object o, PopupMenuArgs args )
     {
+        
         quickMenu.Popup ();
+        
     }
     
     
     public void Show ()
     {
+        
         window.Visible = true;
         Config.Settings.ShowMainWindow = true;
+        
     }    
     
     
     public void Hide ()
     {
+        
         window.Visible = false;
         Config.Settings.ShowMainWindow = false;
+        
     }
 
 
     public void SetNick ( string nick )
     {
+        
         if ( nick == "" )
         {
             nick = TextStrings.unavailable;
         }
         
         nameLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span>", nick );
+        
     }
     
     

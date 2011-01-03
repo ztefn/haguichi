@@ -49,7 +49,8 @@ namespace Dialogs
             
         }
         
-        public void ResponseHandler ( object o, ResponseArgs args )
+        
+        private void ResponseHandler ( object o, ResponseArgs args )
         {
         
             response = args.ResponseId.ToString();

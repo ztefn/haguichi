@@ -75,7 +75,8 @@ namespace Dialogs
             
         }
         
-        public void Fill ()
+        
+        private void Fill ()
         {
             
             uint countLeft   = 0;
@@ -121,7 +122,6 @@ namespace Dialogs
             
             foreach ( string icon in icons )
             {
-                
                 //Console.WriteLine ( "left: " + countLeft + "  right: " + countRight + "  top: " + countTop + "  bottom: " + countBottom );
                 
                 Image img = new Image ();
@@ -167,7 +167,6 @@ namespace Dialogs
                     countLeft    = 0;
                     countRight   = 1;
                 }
-                
             }
             
             NoneBut = new Button ( TextStrings.noIconLabel );
@@ -187,20 +186,26 @@ namespace Dialogs
         
         private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
+            
             Dismiss ();
             args.RetVal = true;
+            
         }
         
 
         private void Dismiss ()
         {
+            
             this.Destroy ();
+            
         }
         
         
         private void Dismiss ( object obj, EventArgs args )
         {
+            
             Dismiss ();
+            
         }
         
     }
