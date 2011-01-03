@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2010-12-22 23:48+0100\n"
+"POT-Creation-Date: 2011-01-03 17:35:37+0100\n"
 "PO-Revision-Date: 2010-12-31 14:21+0000\n"
 "Last-Translator: Thibault Févry <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -22,12 +22,10 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr "Site web d'Haguichi"
 
-#. Description used in about dialog
 #: ../src/TextStrings.cs:336
 msgid "A graphical frontend for Hamachi."
 msgstr "Une interface graphique pour Hamachi."
 
-#. Description used in application launchers
 #: ../src/TextStrings.cs:337
 msgid "Join and create local networks over the Internet"
 msgstr "Joindre ou créer des réseaux locaux au travers d'Internet"
@@ -41,7 +39,7 @@ msgid "No"
 msgstr "Non"
 
 #: ../src/TextStrings.cs:342
-msgid "_Hamachi ouput"
+msgid "_Hamachi output"
 msgstr "Sortie d'_Hamachi"
 
 #: ../src/TextStrings.cs:344
@@ -538,7 +536,6 @@ msgstr "Vous n'êtes pas le propriétaire du réseau '{0}'."
 msgid "General"
 msgstr "Général"
 
-#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:492
 msgid "Desktop"
 msgstr "Espace de travail"

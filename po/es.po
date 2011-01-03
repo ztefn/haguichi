@@ -38,7 +38,7 @@ msgid "No"
 msgstr "No"
 
 #: ../src/TextStrings.cs:342
-msgid "_Hamachi ouput"
+msgid "_Hamachi output"
 msgstr ""
 
 #: ../src/TextStrings.cs:344

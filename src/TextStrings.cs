@@ -340,7 +340,7 @@ Svenska (sv)
         yes                                 = Catalog.GetString ( "Yes" );
         no                                  = Catalog.GetString ( "No" );
         
-        hamachiOutput                       = Catalog.GetString ( "_Hamachi ouput" );
+        hamachiOutput                       = Catalog.GetString ( "_Hamachi output" );
         
         address                             = Catalog.GetString ( "Address:" );
         id                                  = Catalog.GetString ( "ID:" );
