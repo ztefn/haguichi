@@ -319,7 +319,7 @@ msgstr "Изменение..."
 
 #: ../src/TextStrings.cs:424
 msgid "Change _Nickname..."
-msgstr "Измени_ть псевдоним"
+msgstr "Измени_ть псевдоним..."
 
 #: ../src/TextStrings.cs:425
 msgid "Change Nickname"
