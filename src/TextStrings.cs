@@ -73,6 +73,7 @@ Options:
 Español (es)
     Eduardo Parra
     David Fernández
+    Adolfo Jayme
 
 Français (fr)
     Gabriel U.

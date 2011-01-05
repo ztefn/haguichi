@@ -692,6 +692,156 @@
       <DeployService-RelativeDeployPath>icons/Humanity/status/24/haguichi-disconnected.svg</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
     </None>
+    <None Include="data\icons\faenza\16x16\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/16/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\16x16\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/16/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\16x16\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/16/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\16x16\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/16/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\16x16\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/16/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\22x22\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/22/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\22x22\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/22/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\22x22\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/22/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\22x22\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/22/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\22x22\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/22/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\24x24\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/24/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\24x24\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/24/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\24x24\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/24/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\24x24\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/24/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza\24x24\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza/status/24/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\16x16\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/16/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\16x16\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/16/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\16x16\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/16/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\16x16\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/16/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\16x16\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/16/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\22x22\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/22/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\22x22\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/22/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\22x22\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/22/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\22x22\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/22/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\22x22\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/22/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\24x24\haguichi-connected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/24/haguichi-connected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\24x24\haguichi-connecting-1.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/24/haguichi-connecting-1.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\24x24\haguichi-connecting-2.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/24/haguichi-connecting-2.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\24x24\haguichi-connecting-3.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/24/haguichi-connecting-3.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
+    <None Include="data\icons\faenza-dark\24x24\haguichi-disconnected.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/Faenza-Dark/status/24/haguichi-disconnected.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
