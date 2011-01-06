@@ -53,7 +53,12 @@ public static class Controller
         
         StatusCheck ();
         
-        if ( lastStatus >= 5 )
+        if ( lastStatus >= 6 )
+        {
+            MainWindow.SetMode ( "Connected" );
+            GetNetworkList ();
+        }
+        else if ( lastStatus >= 5 )
         {
             if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
             {
@@ -68,8 +73,7 @@ public static class Controller
             }
             else if ( Hamachi.ApiVersion == 1 )
             {
-                Thread thread = new Thread ( GetNicksAndNetworkListThread );
-                thread.Start ();
+                GetNicksAndNetworkList ();
             }
         }
         else if ( ( lastStatus >= 3 ) &&
@@ -108,6 +112,15 @@ public static class Controller
             MainWindow.SetMode ( "Not installed" );
             Dialogs.NotInstalled dlgNotInstalled = new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
         }
+        
+    }
+    
+    
+    private static void GetNicksAndNetworkList ()
+    {
+        
+        Thread thread = new Thread ( GetNicksAndNetworkListThread );
+        thread.Start ();
         
     }
     
