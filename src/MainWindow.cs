@@ -89,8 +89,8 @@ public class MainWindow
 
         connectedBox = new VBox ();
         connectedBox.Add ( scrolledWindow );
-
-
+        
+        
         
         /* Disconnected Box */
         
@@ -114,40 +114,29 @@ public class MainWindow
         };
         
         
-        VBox vbTop = new VBox ();
-        VBox vbMid1 = new VBox ();
-        VBox vbMid2 = new VBox ();
-        VBox vbMid3 = new VBox ();
-        VBox vbBottom = new VBox ();
-
-        VBox vbDisonnected = new VBox ( false, 1 );
-        vbDisonnected.Add ( vbTop );
+        VBox vbDisonnected = new VBox ( false, 0 );
+        vbDisonnected.Add ( new VBox () );
+        vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( logoImg );
-        vbDisonnected.Add ( vbMid1 );
+        vbDisonnected.Add ( new VBox () );
+        vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( nameButton );
-        //vbDisonnected.Add ( vbMid2 );
+        vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( connectButton );
-        vbDisonnected.Add ( vbMid3 );
+        vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( autoconnectCheckbox );
-        vbDisonnected.Add ( vbBottom );
-
-        connectButton.GrabFocus ();
-        
-        VBox vbLeft = new VBox ();
-        VBox vbRight = new VBox ();;
+        vbDisonnected.Add ( new VBox () );
+        vbDisonnected.Add ( new VBox () );
         
         disconnectedBox = new HBox ();
-        disconnectedBox.Add ( vbLeft );
+        disconnectedBox.Add ( new VBox () );
         disconnectedBox.Add ( vbDisonnected );
-        disconnectedBox.Add ( vbRight );
+        disconnectedBox.Add ( new VBox () );
         
         
-        Box.BoxChild bc5 = ( ( Box.BoxChild ) ( disconnectedBox [ vbDisonnected ] ) );
-        bc5.Expand = false;
-
         
         /* Main VBox */
-
+        
         VBox mainBox = new VBox ( false, 1 );
         mainBox.Add ( menuBar );
         mainBox.Add ( disconnectedBox );
@@ -184,6 +173,8 @@ public class MainWindow
         window.IconList = appIcons;
         window.Add ( mainBox );
         window.ShowAll ();
+        
+        connectButton.GrabFocus ();
         
         statusBar.Visible = ( bool ) Config.Client.Get ( Config.Settings.ShowStatusbar );
         
