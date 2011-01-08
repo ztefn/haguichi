@@ -19,6 +19,7 @@
 
 using System;
 using Gtk;
+using Gdk;
 
 
 public class Status
@@ -60,22 +61,22 @@ public class Status
     }
     
     
-    public static Gdk.Pixbuf GetPixbuf ( Status status )
+    public Pixbuf GetPixbuf ( int size )
     {
         
-        Gdk.Pixbuf statusPix = GetPixbufOffline ();
+        Pixbuf statusPix = GetPixbufOffline ( size );
         
-        if ( status.statusInt == 1 )
+        if ( this.statusInt == 1 )
         {
-            statusPix = GetPixbufOnline ();
+            statusPix = GetPixbufOnline ( size );
         }
-        if ( status.statusInt == 2 )
+        if ( this.statusInt == 2 )
         {
-            statusPix = GetPixbufUnreachable ();
+            statusPix = GetPixbufUnreachable ( size );
         }
-        if ( status.statusInt == 3 )
+        if ( this.statusInt == 3 )
         {
-            statusPix = GetPixbufUnapproved ();
+            statusPix = GetPixbufUnapproved ( size );
         }
         
         return statusPix;
@@ -83,42 +84,57 @@ public class Status
     }
     
     
-    public static Gdk.Pixbuf GetPixbufOnline ()
+    public static Pixbuf GetPixbuf ( int size, int statusInt )
     {
         
-        IconTheme.AddBuiltinIcon ( "haguichi-node-online", 10, Gdk.Pixbuf.LoadFromResource ( "node-online" ) );
+        Pixbuf statusPix = GetPixbufOffline ( size );
         
-        return IconTheme.Default.LoadIcon ( "haguichi-node-online", 10, IconLookupFlags.UseBuiltin );
+        if ( statusInt == 1 )
+        {
+            statusPix = GetPixbufOnline ( size );
+        }
+        if ( statusInt == 2 )
+        {
+            statusPix = GetPixbufUnreachable ( size );
+        }
+        if ( statusInt == 3 )
+        {
+            statusPix = GetPixbufUnapproved ( size );
+        }
+        
+        return statusPix;
         
     }
     
     
-    public static Gdk.Pixbuf GetPixbufOffline ()
+    public static Pixbuf GetPixbufOnline ( int size )
     {
         
-        IconTheme.AddBuiltinIcon ( "haguichi-node-offline", 10, Gdk.Pixbuf.LoadFromResource ( "node-offline" ) );
-        
-        return IconTheme.Default.LoadIcon ( "haguichi-node-offline", 10, IconLookupFlags.UseBuiltin );
+        return IconTheme.Default.LoadIcon ( "haguichi-node-online", size, IconLookupFlags.UseBuiltin );
         
     }
     
     
-    public static Gdk.Pixbuf GetPixbufUnreachable ()
+    public static Pixbuf GetPixbufOffline ( int size )
     {
         
-        IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable", 10, Gdk.Pixbuf.LoadFromResource ( "node-unreachable" ) );
-        
-        return IconTheme.Default.LoadIcon ( "haguichi-node-unreachable", 10, IconLookupFlags.UseBuiltin );
+        return IconTheme.Default.LoadIcon ( "haguichi-node-offline", size, IconLookupFlags.UseBuiltin );
         
     }
     
     
-    public static Gdk.Pixbuf GetPixbufUnapproved ()
+    public static Pixbuf GetPixbufUnreachable ( int size )
     {
         
-        IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved", 10, Gdk.Pixbuf.LoadFromResource ( "node-unapproved" ) );
+        return IconTheme.Default.LoadIcon ( "haguichi-node-unreachable", size, IconLookupFlags.UseBuiltin );
         
-        return IconTheme.Default.LoadIcon ( "haguichi-node-unapproved", 10, IconLookupFlags.UseBuiltin );
+    }
+    
+    
+    public static Pixbuf GetPixbufUnapproved ( int size )
+    {
+        
+        return IconTheme.Default.LoadIcon ( "haguichi-node-unapproved", size, IconLookupFlags.UseBuiltin );
         
     }
     

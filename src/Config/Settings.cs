@@ -60,8 +60,14 @@ namespace Config
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );
         public static Key CollapsedNetworks                 = new Key ( "main_window/collapsed_networks", new string [] {} );
         public static Key WinHeight                         = new Key ( "main_window/height", 460 );
-        public static Key MemberTemplate                    = new Key ( "main_window/member_template", "%N" );
-        public static Key NetworkTemplate                   = new Key ( "main_window/network_template", "<b>%N</b> (%O/%T)" );
+        public static Key MemberTemplateSmall               = new Key ( "main_window/member_template_small", "%N%_*" );
+        public static Key MemberTemplateLarge               = new Key ( "main_window/member_template_large", "%N%_*<br><span size=\"smaller\">%S <i>%A</i></span>" );
+        public static Key NetworkListIconSizeSmall          = new Key ( "main_window/network_list_icon_size_small", 10 );
+        public static Key NetworkListIconSizeLarge          = new Key ( "main_window/network_list_icon_size_large", 18 );
+        public static Key NetworkListLayout                 = new Key ( "main_window/network_list_layout", "normal" );
+        public static Key NetworkTemplateSmall              = new Key ( "main_window/network_template_small", "<b>%N</b> (%O/%T)%_*" );
+        public static Key NetworkTemplateLarge              = new Key ( "main_window/network_template_large", "<b>%N</b> (%O/%T)%_*<br><span size=\"smaller\">%S</span>" );
+        public static Key ShowAlternatingRowColors          = new Key ( "main_window/show_alternating_row_colors", false );
         public static Key ShowOfflineMembers                = new Key ( "main_window/show_offline_members", true );
         public static Key ShowStatusbar                     = new Key ( "main_window/show_statusbar", true );
         public static Key ShowTrayIcon                      = new Key ( "main_window/show_tray_icon", true );

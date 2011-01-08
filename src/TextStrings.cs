@@ -266,6 +266,9 @@ Svenska (sv)
     public static string dataPathLabel;
     public static string chooseFolderTitle;
     
+    public static string checkboxShowAlternatingRowColors;
+    public static string layoutNormal;
+    public static string layoutLarge;
     public static string checkboxShowOfflineMembers;
     public static string sortByName;
     public static string sortByStatus;
@@ -500,10 +503,13 @@ Svenska (sv)
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
         
-        checkboxShowOfflineMembers          = Catalog.GetString ( "_Offline Members" );
+        checkboxShowAlternatingRowColors    = Catalog.GetString ( "Show Alt_ernating Row Colors" );
+        layoutNormal                        = Catalog.GetString ( "_Compact Layout" );
+        layoutLarge                         = Catalog.GetString ( "_Large Layout" );
+        checkboxShowOfflineMembers          = Catalog.GetString ( "Show _Offline Members" );
         sortByName                          = Catalog.GetString ( "Sort by _Name" );
-        sortByStatus                        = Catalog.GetString ( "Sort by _Status" );        
-        checkboxShowStatusbar               = Catalog.GetString ( "S_tatusbar" );
+        sortByStatus                        = Catalog.GetString ( "Sort by _Status" );
+        checkboxShowStatusbar               = Catalog.GetString ( "St_atusbar" );
         
         checkboxShowTrayIcon                = Catalog.GetString ( "_Show Haguichi in the notification area" );
         checkboxStartInTray                 = Catalog.GetString ( "Start Haguichi _minimized in the notification area" );

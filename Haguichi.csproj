@@ -68,25 +68,25 @@
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-offline.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>node-offline</LogicalName>
+      <LogicalName>10x10.node-offline</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-online.png">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-online.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>node-online</LogicalName>
+      <LogicalName>10x10.node-online</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-unapproved.png">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-unapproved.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>node-unapproved</LogicalName>
+      <LogicalName>10x10.node-unapproved</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-unreachable.png">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-unreachable.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>node-unreachable</LogicalName>
+      <LogicalName>10x10.node-unreachable</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi.png">
       <DeployService-Deploy>true</DeployService-Deploy>
@@ -214,6 +214,30 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <LogicalName>16x16.disconnected</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-offline.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-offline.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>18x18.node-offline</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-online.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-online.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>18x18.node-online</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-unapproved.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-unapproved.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>18x18.node-unapproved</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-unreachable.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-unreachable.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>18x18.node-unreachable</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Command.cs" />
@@ -264,14 +288,14 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <None Include="COPYING" />
-    <None Include="locale\nl\LC_MESSAGES\haguichi.mo">
+    <None Include="AUTHORS" />
+    <None Include="INSTALL" />
+    <None Include="description-pak" />
+    <None Include="locale\cs\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </None>
-    <None Include="AUTHORS" />
-    <None Include="INSTALL" />
-    <None Include="description-pak" />
     <None Include="locale\de\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
@@ -287,16 +311,6 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </None>
-    <None Include="locale\ru\LC_MESSAGES\haguichi.mo">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
-    </None>
-    <None Include="locale\sv\LC_MESSAGES\haguichi.mo">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
-    </None>
     <None Include="locale\it\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
@@ -308,6 +322,26 @@
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </None>
     <None Include="locale\kk\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
+    <None Include="locale\nl\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
+    <None Include="locale\ru\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
+    <None Include="locale\sv\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
+    <None Include="locale\tr\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>

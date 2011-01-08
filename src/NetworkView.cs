@@ -50,6 +50,7 @@ public class NetworkView : TreeView
     
     public  string networkTemplate;
     public  string memberTemplate;
+    private string currentLayout;
     
     private Menus.NetworkMenu networkMenu;
     private Menus.MemberMenu memberMenu;
@@ -69,7 +70,6 @@ public class NetworkView : TreeView
         textCell = new CellRendererText ();
         
         iconCell = new CellRendererPixbuf ();
-        iconCell.Width = 14;
         
         column = new TreeViewColumn ();
         
@@ -93,10 +93,24 @@ public class NetworkView : TreeView
         this.LevelIndentation  = 0;
         this.CursorChanged    += RowHandler;
         
-        this.HeadersVisible = false;
+        this.HeadersVisible    = false;
+        this.RulesHint         = ( bool ) Config.Client.Get ( Config.Settings.ShowAlternatingRowColors  );
         
-        networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplate );
-        memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplate  );
+        currentLayout = ( string ) Config.Client.Get ( Config.Settings.NetworkListLayout );
+        if ( currentLayout == "large" )
+        {
+            iconCell.Width = ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge ) + 4;
+            
+            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateLarge );
+            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateLarge  );
+        }
+        else
+        {
+            iconCell.Width = ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall ) + 4;
+            
+            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateSmall );
+            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateSmall  );
+        }
         
         InitStore ();
         GeneratePopupMenus ();
@@ -356,6 +370,21 @@ public class NetworkView : TreeView
     }
     
     
+    private int GetNetworkListIconSize ()
+    {
+        
+        if ( currentLayout == "large" )
+        {
+            return ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge );
+        }
+        else
+        {
+            return ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall );
+        }
+        
+    }
+    
+    
     public void AddNetwork ( Network network )
     {
         
@@ -364,7 +393,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
 
-        iter = store.AppendValues ( network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        iter = store.AppendValues ( network.Name, network.Status.GetPixbuf ( GetNetworkListIconSize () ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
         foreach ( Member member in network.Members )
         {
@@ -388,7 +417,7 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
         
-        store.SetValues ( iter, network.Name, Status.GetPixbuf ( network.Status ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        store.SetValues ( iter, network.Name, network.Status.GetPixbuf ( GetNetworkListIconSize () ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
         
     }
     
@@ -497,7 +526,7 @@ public class NetworkView : TreeView
     {
         
         TreeIter iter = ReturnNetworkIter ( network );
-        store.AppendValues ( iter, member.Nick, Status.GetPixbuf ( member.Status ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
+        store.AppendValues ( iter, member.Nick, member.Status.GetPixbuf ( GetNetworkListIconSize () ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
         
     }
     
@@ -506,7 +535,7 @@ public class NetworkView : TreeView
     {
         
         TreeIter iter = ReturnMemberIter ( network, member );
-        store.SetValues ( iter, member.Nick, Status.GetPixbuf ( member.Status ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
+        store.SetValues ( iter, member.Nick, member.Status.GetPixbuf ( GetNetworkListIconSize () ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
         
     }
     
@@ -603,16 +632,24 @@ public class NetworkView : TreeView
             network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
             
             string template = networkTemplate;
-            template = template.Replace ( "%ID", "{0}" );
-            template = template.Replace ( "%N", "{1}" );
-            template = template.Replace ( "%S", "{2}" );
-            template = template.Replace ( "%T", "{3}" );
-            template = template.Replace ( "%O", "{4}" );
+            template = template.Replace ( "%ID",  "{0}" );
+            template = template.Replace ( "%N",   "{1}" );
+            template = template.Replace ( "%S",   "{2}" );
+            template = template.Replace ( "%T",   "{3}" );
+            template = template.Replace ( "%O",   "{4}" );
             template = template.Replace ( "<br>", "{5}" );
             
             if ( network.IsOwner == 1 )
             {
-                template += " ✩";   
+                template = template.Replace ( "%*",  "✩"  );
+                template = template.Replace ( "%_*", " ✩" );
+                template = template.Replace ( "%*_", "✩ " );
+            }
+            else
+            {
+                template = template.Replace ( "%*",  "" );
+                template = template.Replace ( "%_*", "" );
+                template = template.Replace ( "%*_", "" );
             }
             
             textCell.Markup = String.Format ( template, network.Id, name, network.Status.statusString, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
@@ -637,15 +674,23 @@ public class NetworkView : TreeView
             name = name.Replace ( "\b", "" );
             
             string template = memberTemplate;
-            template = template.Replace ( "%ID", "{0}" );
-            template = template.Replace ( "%N", "{1}" );
-            template = template.Replace ( "%A", "{2}" );
-            template = template.Replace ( "%S", "{3}" );
+            template = template.Replace ( "%ID",  "{0}" );
+            template = template.Replace ( "%N",   "{1}" );
+            template = template.Replace ( "%A",   "{2}" );
+            template = template.Replace ( "%S",   "{3}" );
             template = template.Replace ( "<br>", "{4}" );
             
             if ( network.OwnerId == member.ClientId )
             {
-                template += " ✩";   
+                template = template.Replace ( "%*",  "✩"  );
+                template = template.Replace ( "%_*", " ✩" );
+                template = template.Replace ( "%*_", "✩ " );
+            }
+            else
+            {
+                template = template.Replace ( "%*",  "" );
+                template = template.Replace ( "%_*", "" );
+                template = template.Replace ( "%*_", "" );
             }
             
             textCell.Markup = String.Format ( template, member.ClientId, name, member.Address, member.Status.statusString, "\n" );
@@ -843,7 +888,7 @@ public class NetworkView : TreeView
     private void CollapseOrExpandNetwork ( Network network )
     {
         
-        TreeIter iter =  ReturnNetworkIter ( network );
+        TreeIter iter = ReturnNetworkIter ( network );
         
         if ( IsCollapsed ( network ) )
         {
@@ -908,6 +953,61 @@ public class NetworkView : TreeView
         }
         
          args.RetVal = true;
+        
+    }
+    
+    
+    private void SetNetworkListIconSize ( int size )
+    {
+        
+        this.iconCell.Width = size;
+        this.ColumnsAutosize ();
+        
+        store.Foreach( ( model, path, iter ) =>
+        {
+            int statusInt = ( int ) store.GetValue ( iter, statusColumn );
+            store.SetValue ( iter, iconColumn, Status.GetPixbuf ( size, statusInt ) );
+            
+            return false; // Continue
+        });
+        
+    }
+    
+    
+    public void SetLayout ()
+    {
+        
+        SetLayout ( currentLayout );
+        
+    }
+    
+    
+    public void SetLayout ( string layout )
+    {
+        
+        if ( layout == "large" )
+        {
+            currentLayout = "large";
+            
+            Config.Client.Set ( Config.Settings.NetworkListLayout, "large" );
+            
+            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateLarge );
+            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateLarge  );
+            
+            SetNetworkListIconSize ( ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge ) );
+        }
+        else
+        {
+            currentLayout = "normal";
+            
+            Config.Client.Set ( Config.Settings.NetworkListLayout, "normal" );
+            
+            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateSmall );
+            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateSmall  );
+            
+            SetNetworkListIconSize ( ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall ) );
+        }
+        
     }
     
     

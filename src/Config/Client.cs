@@ -53,14 +53,14 @@ namespace Config
                 
                 Debug.Log ( Debug.Domain.Info, "Config.Client.ValueChanged", "Updating GUI for GConf key " + key );
                 
-                if ( key.Contains ( Config.Settings.NetworkTemplate.KeyName ) )
+                if ( ( key.Contains ( Config.Settings.NetworkTemplateSmall.KeyName ) ) ||
+                     ( key.Contains ( Config.Settings.NetworkTemplateLarge.KeyName ) ) ||
+                     ( key.Contains ( Config.Settings.MemberTemplateSmall.KeyName ) ) ||
+                     ( key.Contains ( Config.Settings.MemberTemplateLarge.KeyName ) ) ||
+                     ( key.Contains ( Config.Settings.NetworkListIconSizeSmall.KeyName ) ) ||
+                     ( key.Contains ( Config.Settings.NetworkListIconSizeLarge.KeyName ) ) )
                 {
-                    MainWindow.networkView.networkTemplate = ( string ) val;
-                }
-                
-                if ( key.Contains ( Config.Settings.MemberTemplate.KeyName ) )
-                {
-                    MainWindow.networkView.memberTemplate = ( string ) val;
+                    MainWindow.networkView.SetLayout ();
                 }
                 
                 if ( key.Contains ( Config.Settings.HamachiDataPath.KeyName ) )
@@ -145,6 +145,12 @@ namespace Config
                     Haguichi.preferencesWindow.startInTray.Active = ( bool ) val;
                 }
                 
+                if ( key.Contains ( Config.Settings.ShowAlternatingRowColors.KeyName ) )
+                {
+                    MainWindow.menuBar.showAlternatingRowColors.Active = ( bool ) val;
+                    MainWindow.networkView.RulesHint = ( bool ) val;
+                }
+                
                 if ( key.Contains ( Config.Settings.ShowStatusbar.KeyName ) )
                 {
                     MainWindow.menuBar.showStatusbar.Active = ( bool ) val;
@@ -171,6 +177,22 @@ namespace Config
                     }
                     
                     MainWindow.networkView.GoSort ( ( string ) val );
+                }
+                
+                if ( key.Contains ( Config.Settings.NetworkListLayout.KeyName ) )
+                {
+                    if ( ( string ) val == "large" )
+                    {
+                        MainWindow.menuBar.layoutLarge.Active  = true;
+                        MainWindow.menuBar.layoutNormal.Active = false;
+                    }
+                    else
+                    {
+                        MainWindow.menuBar.layoutLarge.Active  = false;
+                        MainWindow.menuBar.layoutNormal.Active = true;
+                    }
+                    
+                    MainWindow.networkView.SetLayout ( ( string ) val );
                 }
                 
                 if ( key.Contains ( Config.Settings.GoOnlineInNewNetwork.KeyName ) )
