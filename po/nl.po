@@ -556,15 +556,15 @@ msgstr "Map kiezen"
 
 #: ../src/TextStrings.cs:505
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "A_fwisselende rijkleuren tonen"
 
 #: ../src/TextStrings.cs:506
 msgid "_Compact Layout"
-msgstr ""
+msgstr "_Compacte opmaak"
 
 #: ../src/TextStrings.cs:507
 msgid "_Large Layout"
-msgstr ""
+msgstr "_Ruime opmaak"
 
 #: ../src/TextStrings.cs:508
 msgid "Show _Offline Members"
