@@ -674,7 +674,7 @@ msgstr "Lid online"
 
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
-msgstr "{0} is online gekomen in het netwerk {1}"
+msgstr "{0} is in het netwerk {1} online gekomen"
 
 #: ../src/TextStrings.cs:545
 msgid "Member offline"
@@ -682,7 +682,7 @@ msgstr "Lid offline"
 
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
-msgstr "{0} is offline gegaan in het netwerk {1}"
+msgstr "{0} is in het netwerk {1} offline gegaan"
 
 #: ../src/TextStrings.cs:547
 msgid "Member joined"
@@ -783,29 +783,25 @@ msgstr[0] "_Werk de netwerklijst om de %S seconde bij"
 msgstr[1] "_Werk de netwerklijst om de %S seconden bij"
 
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} is online gekomen in het netwerk {1}"
-msgstr[1] "{0} is online gekomen in het netwerk {1}"
+msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk online gekomen"
+msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken online gekomen"
 
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} is offline gegaan in het netwerk {1}"
-msgstr[1] "{0} is offline gegaan in het netwerk {1}"
+msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk offline gegaan"
+msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken offline gegaan"
 
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} is tot het netwerk {1} toegetreden"
-msgstr[1] "{0} is tot het netwerk {1} toegetreden"
+msgstr[0] "{0} is tot het netwerk {1} en {2} ander netwerk toegetreden"
+msgstr[1] "{0} is tot het netwerk {1} en {2} andere netwerken toegetreden"
 
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} heeft het netwerk {1} verlaten"
-msgstr[1] "{0} heeft het netwerk {1} verlaten"
+msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
+msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
