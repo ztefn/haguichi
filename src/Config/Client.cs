@@ -101,7 +101,7 @@ namespace Config
                     
                     if ( Config.Settings.DemoMode )
                     {
-                        Controller.NotifyMemberJoined ( "T-800", "Skynet" ); 
+                        Controller.NotifyMemberJoined ( "T-800", "Skynet", 0 ); 
                     }
                 }
                 
@@ -111,7 +111,7 @@ namespace Config
                     
                     if ( Config.Settings.DemoMode )
                     {
-                        Controller.NotifyMemberLeft ( "T-800", "Skynet" );
+                        Controller.NotifyMemberLeft ( "T-800", "Skynet", 0 );
                     }
                 }
                 
@@ -121,7 +121,7 @@ namespace Config
                     
                     if ( Config.Settings.DemoMode )
                     {
-                        Controller.NotifyMemberOnline ( "T-800", "Skynet" );
+                        Controller.NotifyMemberOnline ( "T-800", "Skynet", 1 );
                     }
                 }
                 
@@ -131,7 +131,7 @@ namespace Config
                     
                     if ( Config.Settings.DemoMode )
                     {
-                        Controller.NotifyMemberOffline ( "T-800", "Skynet" );   
+                        Controller.NotifyMemberOffline ( "T-800", "Skynet", 2 );   
                     }
                 }
                 

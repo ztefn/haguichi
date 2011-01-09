@@ -575,5 +575,45 @@ Svenska (sv)
         moveDownTip                         = Catalog.GetString ( "Move down" );
         
     }
+    
+    
+    public static string updateNetworkListInterval ( int count )
+    {
+        
+        return Catalog.GetPluralString ( "_Update the network list every %S second", "_Update the network list every %S seconds", count );
+        
+    }
 
+    
+    public static string notifyMemberOnlineMessagePlural ( int count )
+    {
+        
+        return Catalog.GetPluralString ( "{0} came online in the network {1} and {2} other network", "{0} came online in the network {1} and {2} other networks", count );
+        
+    }
+    
+    
+    public static string notifyMemberOfflineMessagePlural ( int count )
+    {
+        
+        return Catalog.GetPluralString ( "{0} went offline in the network {1} and {2} other network", "{0} went offline in the network {1} and {2} other networks", count );
+        
+    }
+    
+    
+    public static string notifyMemberJoinedMessagePlural ( int count )
+    {
+        
+        return Catalog.GetPluralString ( "{0} joined the network {1} and {2} other network", "{0} joined the network {1} and {2} other networks", count );
+        
+    }
+    
+    
+    public static string notifyMemberLeftMessagePlural ( int count )
+    {
+        
+        return Catalog.GetPluralString ( "{0} left the network {1} and {2} other network", "{0} left the network {1} and {2} other networks", count );
+        
+    }
+    
 }

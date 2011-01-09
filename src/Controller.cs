@@ -34,6 +34,11 @@ public static class Controller
     public static int lastStatus;
     private static string startOutput;
     
+    private static Hashtable membersLeftHash;
+    private static Hashtable membersOnlineHash;
+    private static Hashtable membersOfflineHash;
+    private static Hashtable membersJoinedHash;
+            
     private static ArrayList oNetworksList;
     private static ArrayList nNetworksList;
     
@@ -626,6 +631,11 @@ public static class Controller
             
             oNetworksList = ( ArrayList ) Haguichi.connection.Networks.Clone (); // Cloning to prevent exception (InvalidOperationException: List has changed)
             
+            membersLeftHash    = new Hashtable ();
+            membersOnlineHash  = new Hashtable ();
+            membersOfflineHash = new Hashtable ();
+            membersJoinedHash  = new Hashtable ();
+            
             
             Hashtable oNetworksHash = new Hashtable ();
             
@@ -702,7 +712,7 @@ public static class Controller
                             if ( ( oMember.Status.statusInt < 3 ) &&
                                  ( !oMember.IsEvicted ) )
                             {
-                                NotifyMemberLeft ( oMember.Nick, oNetwork.Name );
+                                AddMemberToHash ( membersLeftHash, oMember, oNetwork );
                             }
                         }
                     }
@@ -718,12 +728,12 @@ public static class Controller
                             if ( ( oMember.Status.statusInt == 0 ) &&
                                  ( nMember.Status.statusInt == 1 ) )
                             {
-                                NotifyMemberOnline ( nMember.Nick, oNetwork.Name );
+                                AddMemberToHash ( membersOnlineHash, nMember, oNetwork );
                             }
                             if ( ( oMember.Status.statusInt == 1 ) &&
                                  ( nMember.Status.statusInt == 0 ) )
                             {
-                                NotifyMemberOffline ( nMember.Nick, oNetwork.Name );
+                                AddMemberToHash ( membersOfflineHash, nMember, oNetwork );
                             }
                             
                             oMember.Update ( nMember.Status, nMember.Network, nMember.Address, nMember.Nick, nMember.ClientId, nMember.Tunnel );
@@ -738,7 +748,7 @@ public static class Controller
                             
                             MainWindow.networkView.AddMember ( oNetwork, nMember );
                             
-                            NotifyMemberJoined ( nMember.Nick, oNetwork.Name );
+                            AddMemberToHash ( membersLeftHash, nMember, oNetwork );
                         }
                     }
                     
@@ -753,6 +763,11 @@ public static class Controller
                 }
             }
             
+            NotifyMembersJoined ();
+            NotifyMembersLeft ();
+            NotifyMembersOnline ();
+            NotifyMembersOffline ();
+            
             /* Continue update interval */
             UpdateCycle ();
             
@@ -762,6 +777,23 @@ public static class Controller
         
     }
     
+    
+    private static void AddMemberToHash ( Hashtable hash, Member member, Network network )
+    {
+        
+        ArrayList array = new ArrayList ();
+        
+        if ( hash.ContainsKey ( member.ClientId ) )
+        {
+            array = ( ArrayList ) hash [ member.ClientId ];
+            hash.Remove ( member.ClientId );
+        }
+        
+        array.Add ( new string [] { member.Nick, network.Name } );
+        
+        hash.Add ( member.ClientId, array );
+        
+    }
     
     
     private static void WaitForInternetCycle ()
@@ -821,48 +853,120 @@ public static class Controller
     }
     
     
-    public static void NotifyMemberJoined ( string nick, string network )
+    public static void NotifyMembersJoined ()
+    {
+        
+        foreach ( ArrayList member in membersJoinedHash.Values )
+        {
+            string [] network = ( string [] ) member [0];
+            NotifyMemberJoined ( network [0], ( string ) network [1], ( member.Count - 1 ) );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberJoined ( string nick, string network, int more )
     {
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin ) )
         {
-            string body = String.Format ( TextStrings.notifyMemberJoinedMessage, nick, network );
+            string message = TextStrings.notifyMemberJoinedMessage;
+            if ( more > 0 )
+            {
+                message = TextStrings.notifyMemberJoinedMessagePlural ( more );
+            }
+            
+            string body = String.Format ( message, nick, network, more );
             Notify n = new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
         }
         
     }
     
     
-    public static void NotifyMemberLeft ( string nick, string network )
+    public static void NotifyMembersLeft ()
+    {
+        
+        foreach ( ArrayList member in membersLeftHash.Values )
+        {
+            string [] network = ( string [] ) member [0];
+            NotifyMemberLeft ( network [0], ( string ) network [1], ( member.Count - 1 ) );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberLeft ( string nick, string network, int more )
     {
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) )
         {
-            string body = String.Format ( TextStrings.notifyMemberLeftMessage, nick, network );
+            string message = TextStrings.notifyMemberLeftMessage;
+            if ( more > 0 )
+            {
+                message = TextStrings.notifyMemberLeftMessagePlural ( more );
+            }
+            
+            string body = String.Format ( message, nick, network, more );
             Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
         }
         
     }
     
     
-    public static void NotifyMemberOnline ( string nick, string network )
+    public static void NotifyMembersOnline ()
+    {
+        
+        foreach ( ArrayList member in membersOnlineHash.Values )
+        {
+            string [] network = ( string [] ) member [0];
+            NotifyMemberOnline ( network [0], ( string ) network [1], ( member.Count - 1 ) );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberOnline ( string nick, string network, int more )
     {
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline ) )
         {
-            string body = String.Format ( TextStrings.notifyMemberOnlineMessage, nick, network );
+            string message = TextStrings.notifyMemberOnlineMessage;
+            if ( more > 0 )
+            {
+                message = TextStrings.notifyMemberOnlineMessagePlural ( more );
+            }
+            
+            string body = String.Format ( message, nick, network, more );
             Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
         }
         
     }
     
     
-    public static void NotifyMemberOffline ( string nick, string network )
+    public static void NotifyMembersOffline ()
+    {
+        
+        foreach ( ArrayList member in membersOfflineHash.Values )
+        {
+            string [] network = ( string [] ) member [0];
+            NotifyMemberOffline ( network [0], ( string ) network [1], ( member.Count - 1 ) );
+        }
+        
+    }
+    
+    
+    public static void NotifyMemberOffline ( string nick, string network, int more )
     {
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline ) )
         {
-            string body = String.Format ( TextStrings.notifyMemberOfflineMessage, nick, network );
+            string message = TextStrings.notifyMemberOfflineMessage;
+            if ( more > 0 )
+            {
+                message = TextStrings.notifyMemberOfflineMessagePlural ( more );
+            }
+            
+            string body = String.Format ( message, nick, network, more );
             Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
         }
         

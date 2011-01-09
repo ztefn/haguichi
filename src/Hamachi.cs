@@ -640,7 +640,7 @@ public static class Hamachi
             output = GetList ();
         }
         
-        string[] split = output.Split ( Environment.NewLine.ToCharArray () );
+        string [] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetworkId = "";
         
         int peerMinLength  = 0;

@@ -277,8 +277,7 @@ namespace Windows
         public void SetIntervalString ()
         {
             
-            string [] intervalString = Mono.Unix.Catalog.GetPluralString ( "_Update the network list every %S second",
-                                                                           "_Update the network list every %S seconds", ( int ) intervalSpin.Value ).Split ( new string [] { "%S" }, StringSplitOptions.None );
+            string [] intervalString = TextStrings.updateNetworkListInterval ( ( int ) intervalSpin.Value ).Split ( new string [] { "%S" }, StringSplitOptions.None );
             
             intervalLabel.TextWithMnemonic = intervalString [0];
             intervalLabel2.Text = intervalString [1];
