@@ -30,8 +30,8 @@ namespace Dialogs
         public About ()
         {
             
-            AboutDialog.SetUrlHook   ( new AboutDialogActivateLinkFunc ( OpenUrl   ) );
-            AboutDialog.SetEmailHook ( new AboutDialogActivateLinkFunc ( OpenEmail ) );
+            AboutDialog.SetUrlHook   ( new AboutDialogActivateLinkFunc ( OpenUrl      ) ); // App website
+            AboutDialog.SetEmailHook ( new AboutDialogActivateLinkFunc ( OpenUserInfo ) ); // Credits
             
             this.IconList            = MainWindow.appIcons;
             
@@ -75,6 +75,14 @@ namespace Dialogs
         {
             
             Command.OpenURL ( "mailto:" + email );
+            
+        }
+        
+        
+        private void OpenUserInfo ( AboutDialog dialog, string user )
+        {
+            
+            Command.OpenURL ( "https://launchpad.net/~" + user );
             
         }
         

@@ -63,42 +63,46 @@ Options:
 
 " + appInfo + "\n";
     
-    public static string[] appAuthors           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>" };
-    public static string[] appArtists           = new string [] { "Stephen Brandt <stephen@stephenbrandt.com>", "Lapo Calamandrei <calamandrei@gmail.com>" };
+    public static string[] appAuthors           = new string [] { "Stephen Brandt <ztefn>" };
+    public static string[] appArtists           = new string [] { "Stephen Brandt <ztefn>", "Lapo Calamandrei <calamandrei>" };
     public static string[] appDocumenters       = new string [] { "" };
     public static string   appTranslatorCredits =
-@"Deutsch (de)
-    Jannik Heller
+@"
+Čeština (cs)
+    Jan Bažant <brbla>
+
+Deutsch (de)
+    Jannik Heller <scrawl>
 
 Español (es)
-    Eduardo Parra
-    David Fernández
-    Adolfo Jayme
+    Eduardo Parra <soker>
+    David Fernández <dgvalde>
+    Adolfo Jayme <fitoschido>
 
 Français (fr)
-    Gabriel U.
-    Emilien Klein
+    Gabriel U. <gabriel-ull>
+    Emilien Klein <emilien-klein>
 
 Italiano (it)
-    Enrico Grassi
+    Enrico Grassi <enricog>
 
 日本語 (ja)
-    Satoru Matsumoto
+    Satoru Matsumoto <helios-reds>
 
 Қазақ (kk)
-    jmb_kz
+    jmb_kz <jmb-kz>
 
 Nederlands (nl)
-    Stephen Brandt
+    Stephen Brandt <ztefn>
 
 Русский (ru)
-    Sergey Korolev
-    Sergey Sedov
+    Sergey Korolev <slipped-on-blade>
+    Sergey Sedov <serg-sedov>
 
 Svenska (sv)
-    Daniel Holm
-    Daniel Nylander
-    David Bengtsson
+    Daniel Holm <danielholm>
+    Daniel Nylander <yeager>
+    David Bengtsson <justfaking>
 ";
     
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
