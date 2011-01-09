@@ -7,25 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-08 19:51:42+0100\n"
-"PO-Revision-Date: 2011-01-08 12:04+0000\n"
-"Last-Translator: Brbla80 <brbla@brbla.net>\n"
+"POT-Creation-Date: 2011-01-08 19:51+0100\n"
+"PO-Revision-Date: 2011-01-09 09:57+0000\n"
+"Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-01-08 18:36+0000\n"
+"X-Launchpad-Export-Date: 2011-01-09 11:32+0000\n"
 "X-Generator: Launchpad (build 12161)\n"
 
 #: ../src/TextStrings.cs:339
 msgid "Haguichi Website"
 msgstr "Webové stránky Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:340
 msgid "A graphical frontend for Hamachi."
 msgstr "Grafické rozhraní pro Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:341
 msgid "Join and create local networks over the Internet"
 msgstr "Připojení a vytváření lokálních sítí po internetu"
@@ -88,11 +90,11 @@ msgstr "Verze:"
 
 #: ../src/TextStrings.cs:361
 msgid "Offline"
-msgstr ""
+msgstr "Offline"
 
 #: ../src/TextStrings.cs:362
 msgid "Online"
-msgstr ""
+msgstr "Online"
 
 #: ../src/TextStrings.cs:363
 msgid "Unreachable"
@@ -136,7 +138,7 @@ msgstr "Přip_ojit (%S)"
 
 #: ../src/TextStrings.cs:374
 msgid "Connect a_utomatically"
-msgstr "Připojit a_utoamticky"
+msgstr "Připojit a_utomaticky"
 
 #: ../src/TextStrings.cs:376
 msgid "Not configured"
@@ -164,7 +166,7 @@ msgstr "Hamachi není nainstalováno"
 
 #: ../src/TextStrings.cs:383
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Prosím, stáhněte Hamachi a postupujte dle instalačních instrukcí."
+msgstr "Stáhněte si Hamachi a postupujte dle instalačních instrukcí."
 
 #: ../src/TextStrings.cs:384
 msgid "_Download"
@@ -244,11 +246,11 @@ msgstr "_Připojit síť"
 
 #: ../src/TextStrings.cs:407
 msgid "_Go Online"
-msgstr ""
+msgstr "_Jít online"
 
 #: ../src/TextStrings.cs:408
 msgid "_Go Offline"
-msgstr ""
+msgstr "_Jít offline"
 
 #: ../src/TextStrings.cs:409
 msgid "_Leave"
@@ -256,7 +258,7 @@ msgstr "_Opustit"
 
 #: ../src/TextStrings.cs:410
 msgid "_Locked"
-msgstr ""
+msgstr "_Uzamčeno"
 
 #: ../src/TextStrings.cs:411
 msgid "_New Member Approval"
@@ -296,7 +298,7 @@ msgstr "O_dmítnout"
 
 #: ../src/TextStrings.cs:421
 msgid "_Evict"
-msgstr "_Vypudit"
+msgstr "_Vyhodit"
 
 #: ../src/TextStrings.cs:422
 msgid "_Copy Address"
@@ -324,7 +326,7 @@ msgstr "Změnit přezdívku"
 
 #: ../src/TextStrings.cs:430
 msgid "Please enter the nickname you want to use."
-msgstr "Vložte prosím přezdívku kterou chcete používat."
+msgstr "Zadejte přezdívku, kterou chcete používat."
 
 #: ../src/TextStrings.cs:431
 msgid "Click to change your nickname"
@@ -352,7 +354,7 @@ msgstr "_Připojit"
 
 #: ../src/TextStrings.cs:441
 msgid "_Attach to Account..."
-msgstr "_Připojit k účtu"
+msgstr "Připo_jit k účtu"
 
 #: ../src/TextStrings.cs:442
 msgid "Attach to Account"
@@ -416,7 +418,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:458
 msgid "_Go directly online in the network"
-msgstr ""
+msgstr "_Jít přímo online do sítě"
 
 #: ../src/TextStrings.cs:460
 msgid "Network not found"
@@ -468,7 +470,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:473
 msgid "Preferences"
-msgstr ""
+msgstr "Nastavení"
 
 #: ../src/TextStrings.cs:474
 msgid "Information"
@@ -532,19 +534,20 @@ msgstr "Nejste majitelem sítě  '{0}'."
 
 #: ../src/TextStrings.cs:495
 msgid "General"
-msgstr ""
+msgstr "Obecné"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:496
 msgid "Desktop"
-msgstr ""
+msgstr "Plocha"
 
 #: ../src/TextStrings.cs:497
 msgid "Commands"
-msgstr ""
+msgstr "Příkazy"
 
 #: ../src/TextStrings.cs:499
 msgid "Notification Area"
-msgstr ""
+msgstr "Oznamovací oblast"
 
 #: ../src/TextStrings.cs:500
 msgid "Behavior"
@@ -556,35 +559,35 @@ msgstr "Složka dat účtu:"
 
 #: ../src/TextStrings.cs:503
 msgid "Choose Folder"
-msgstr ""
+msgstr "Zvolit složku"
 
 #: ../src/TextStrings.cs:505
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "Zobrazit střídající se barvy řádků"
 
 #: ../src/TextStrings.cs:506
 msgid "_Compact Layout"
-msgstr ""
+msgstr "_Kompaktní rozvržení"
 
 #: ../src/TextStrings.cs:507
 msgid "_Large Layout"
-msgstr ""
+msgstr "_Podrobné rozvržení"
 
 #: ../src/TextStrings.cs:508
 msgid "Show _Offline Members"
-msgstr "_Odpojení členové"
+msgstr "Zobrazit členy _offline"
 
 #: ../src/TextStrings.cs:509
 msgid "Sort by _Name"
-msgstr ""
+msgstr "Řadit dle _jména"
 
 #: ../src/TextStrings.cs:510
 msgid "Sort by _Status"
-msgstr ""
+msgstr "Řadit dle _stavu"
 
 #: ../src/TextStrings.cs:511
 msgid "St_atusbar"
-msgstr ""
+msgstr "_Stavový řádek"
 
 #: ../src/TextStrings.cs:513
 msgid "_Show Haguichi in the notification area"
@@ -616,7 +619,7 @@ msgstr "Zobrazit upozornění, když se člen odpojí"
 
 #: ../src/TextStrings.cs:522
 msgid "Display notification when a member comes o_nline"
-msgstr "Zobrazit upozornění když člen změní stav na o_nline"
+msgstr "Zobrazit upozornění, když člen změní stav na o_nline"
 
 #: ../src/TextStrings.cs:523
 msgid "Display notification when a member goes o_ffline"
@@ -636,11 +639,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:527
 msgid "_Run"
-msgstr ""
+msgstr "_Spustit"
 
 #: ../src/TextStrings.cs:528
 msgid "_Always ask before running tuncfg"
-msgstr ""
+msgstr "_Vždy se dotázat před spuštěním tuncfg"
 
 #: ../src/TextStrings.cs:529
 msgid "A_sk confirmation before running tuncfg"
@@ -656,7 +659,7 @@ msgstr "Přihlášení Hamachi selhalo."
 
 #: ../src/TextStrings.cs:533
 msgid "Connection refused."
-msgstr ""
+msgstr "Spojení odmítnuto."
 
 #: ../src/TextStrings.cs:534
 msgid "No internet connection."
@@ -704,19 +707,19 @@ msgstr "{0} opustil síť {1}"
 
 #: ../src/TextStrings.cs:548
 msgid "A_vailable commands:"
-msgstr "_Dostupní příkazy:"
+msgstr "_Dostupné příkazy:"
 
 #: ../src/TextStrings.cs:549
 msgid "Command"
-msgstr ""
+msgstr "Příkaz"
 
 #: ../src/TextStrings.cs:550
 msgid "Available"
-msgstr ""
+msgstr "K dispozici"
 
 #: ../src/TextStrings.cs:552
 msgid "Add Command"
-msgstr ""
+msgstr "Přidat příkaz"
 
 #: ../src/TextStrings.cs:553
 msgid "Edit Command"
@@ -724,11 +727,11 @@ msgstr "Upravit příkaz"
 
 #: ../src/TextStrings.cs:554
 msgid "_Command:"
-msgstr ""
+msgstr "_Příkaz:"
 
 #: ../src/TextStrings.cs:555
 msgid "_Label:"
-msgstr ""
+msgstr "Pop_is:"
 
 #: ../src/TextStrings.cs:556
 msgid "Use %A for address and %N for nickname"
@@ -740,7 +743,7 @@ msgstr "Klikněte pro výběr ikony"
 
 #: ../src/TextStrings.cs:559
 msgid "Choose Icon"
-msgstr ""
+msgstr "Vybrat ikonu"
 
 #: ../src/TextStrings.cs:560
 msgid "_No Icon"
@@ -748,11 +751,11 @@ msgstr "_Bez ikony"
 
 #: ../src/TextStrings.cs:562
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 #: ../src/TextStrings.cs:563
 msgid "_Default"
-msgstr ""
+msgstr "_Výchozí"
 
 #: ../src/TextStrings.cs:565
 msgid "Restore the default commands"
@@ -772,14 +775,15 @@ msgstr ""
 
 #: ../src/TextStrings.cs:569
 msgid "Move up"
-msgstr ""
+msgstr "Posunout nahoru"
 
 #: ../src/TextStrings.cs:570
 msgid "Move down"
-msgstr ""
+msgstr "Posunout dolů"
 
 #: ../src/Windows/Preferences.cs:279
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "_Aktualizovat seznam sítí jednou za %S sekundu"
-msgstr[1] "_Aktualizovat seznam sítí jednou za %S sekund"
+msgstr[0] "_Aktualizovat seznam sítí jednou za %S sekund"
+msgstr[1] "_Aktualizovat seznam sítí jednou za %S sekundy"
+msgstr[2] "_Aktualizovat seznam sítí jednou za %S sekund"
