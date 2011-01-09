@@ -99,13 +99,12 @@ namespace Menus
             clientMenu.Append ( configure );
             clientMenu.Append ( connect );
             clientMenu.Append ( disconnect );
+            clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem () );
+            clientMenu.Append ( change );
             clientMenu.Append ( join );
             clientMenu.Append ( create );
-            clientMenu.Append ( change );
             clientMenu.Append ( attach );
-            clientMenu.Add    ( new SeparatorMenuItem () );
-            clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem() );
             clientMenu.Append ( quit );
             
@@ -197,7 +196,6 @@ namespace Menus
             
             helpMenu = new Menu ();
             helpMenu.Append ( help );
-            helpMenu.Add    ( new SeparatorMenuItem () );
             helpMenu.Append ( about );
             
             helpMenuItem = new MenuItem ( TextStrings.helpLabel );

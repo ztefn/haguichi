@@ -38,6 +38,7 @@ namespace Menus
         private ImageMenuItem attach;
         private ImageMenuItem info;
         private ImageMenuItem preferences;
+        private ImageMenuItem about;
         private ImageMenuItem quit;
         
         
@@ -71,6 +72,9 @@ namespace Menus
             preferences = new ImageMenuItem ( Stock.Preferences, accelGroup );
             preferences.Activated += GlobalEvents.Preferences;
             
+            about = new ImageMenuItem ( Stock.About, accelGroup );
+            about.Activated += GlobalEvents.About;
+            
             quit = new Gtk.ImageMenuItem ( Stock.Quit, accelGroup );
             quit.Activated += GlobalEvents.QuitApp;
             
@@ -78,13 +82,15 @@ namespace Menus
             this.Add ( configure );
             this.Add ( connect );
             this.Add ( disconnect );
+            this.Add ( info );
+            this.Add ( new SeparatorMenuItem () );
             this.Add ( change );
             this.Add ( join );
             this.Add ( create );
             this.Add ( attach );
-            this.Add ( info );
             this.Add ( new SeparatorMenuItem () );
             this.Add ( preferences );
+            this.Add ( about );
             this.Add ( new SeparatorMenuItem () );
             this.Add ( quit );
             
