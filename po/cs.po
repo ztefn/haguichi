@@ -7,25 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2011-01-09 09:57+0000\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-10 01:26+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-01-09 11:32+0000\n"
+"X-Launchpad-Export-Date: 2011-01-10 16:52+0000\n"
 "X-Generator: Launchpad (build 12161)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
 msgstr "Webové stránky Haguichi"
 
+#. Description used in about dialog
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr "Grafické rozhraní pro Hamachi."
 
+#. Description used in application launchers
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr "Připojení a vytváření lokálních sítí po internetu"
@@ -534,6 +536,7 @@ msgstr "Nejste majitelem sítě  '{0}'."
 msgid "General"
 msgstr "Obecné"
 
+#. In this context meaning "work environment"
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr "Plocha"
@@ -786,33 +789,29 @@ msgstr[1] "_Aktualizovat seznam sítí jednou za %S sekundy"
 msgstr[2] "_Aktualizovat seznam sítí jednou za %S sekund"
 
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} je online v síti {1}"
-msgstr[1] "{0} je online v síti {1}"
-msgstr[2] "{0} je online v síti {1}"
+msgstr[0] "{0} je online v síti {1} a {2} další síti"
+msgstr[1] "{0} je online v síti {1} a {2} dalších sítí"
+msgstr[2] "{0} je online v síti {1} a {2} dalších sítí"
 
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} je offline ze sítě {1}"
-msgstr[1] "{0} je offline ze sítě {1}"
-msgstr[2] "{0} je offline ze sítě {1}"
+msgstr[0] "{0} je offline v síti {1} a {2} další síti"
+msgstr[1] "{0} je offline v síti {1} a {2} dalších sítí"
+msgstr[2] "{0} je offline v síti {1} a {2} dalších sítí"
 
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} přidán do sítě {1}"
-msgstr[1] "{0} přidán do sítě {1}"
-msgstr[2] "{0} přidán do sítě {1}"
+msgstr[0] "{0} se připojil do sítě {1} a {2} další sítě"
+msgstr[1] "{0} se připojil do sítě {1} a {2} dalších sítí"
+msgstr[2] "{0} se připojil do sítě {1} a {2} dalších sítí"
 
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} opustil síť {1}"
-msgstr[1] "{0} opustil síť {1}"
-msgstr[2] "{0} opustil síť {1}"
+msgstr[0] "{0} opustil síť {1} a {2} další síť"
+msgstr[1] "{0} opustil síť {1} a {2} dalších sítí"
+msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
