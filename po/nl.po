@@ -556,7 +556,7 @@ msgstr "Map kiezen"
 
 #: ../src/TextStrings.cs:509
 msgid "Show Alt_ernating Row Colors"
-msgstr "A_fwisselende rijkleuren tonen"
+msgstr "_Wisselende rijkleuren tonen"
 
 #: ../src/TextStrings.cs:510
 msgid "_Compact Layout"
