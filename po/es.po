@@ -22,10 +22,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr "Página web de Haguichi"
 
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr "Una interfaz gráfica para Hamachi."
 
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr "Únase y cree redes locales a través de Internet"
@@ -130,6 +132,7 @@ msgstr "Recibiendo apodos..."
 msgid "Updating..."
 msgstr "Actualizando..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
 msgid "C_onnect (%S)"
 msgstr "_Conectar (%S)"
@@ -294,6 +297,7 @@ msgstr "_Aprobar"
 msgid "_Reject"
 msgstr "_Rechazar"
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:425
 msgid "_Evict"
 msgstr "_Expulsar"
@@ -535,6 +539,7 @@ msgstr "No es el dueño de la red «{0}»."
 msgid "General"
 msgstr "General"
 
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr "Escritorio"
@@ -676,6 +681,7 @@ msgstr ""
 msgid "Member online"
 msgstr "Miembros conectados"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
 msgstr "{0} se ha conectado a la red {1}"
@@ -684,6 +690,7 @@ msgstr "{0} se ha conectado a la red {1}"
 msgid "Member offline"
 msgstr "Miembros desconectados"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
 msgstr "{0} se ha desconectado de la red {1}"
@@ -692,6 +699,7 @@ msgstr "{0} se ha desconectado de la red {1}"
 msgid "Member joined"
 msgstr "Se ha unido un miembro"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
 msgstr "{0} se ha unido a la red {1}"
@@ -700,6 +708,7 @@ msgstr "{0} se ha unido a la red {1}"
 msgid "Member left"
 msgstr "Se ha ido un miembro"
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:550
 msgid "{0} left the network {1}"
 msgstr "{o} han abandonado la red {1}"

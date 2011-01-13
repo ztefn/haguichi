@@ -21,10 +21,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr "Haguichi веб сайты"
 
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr "Hamachi бағдарламасы үшін графикалық қабықша."
 
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr "Интернет арқылы локальды желілерге кіріңіз, әрі оларды құрыңыз"
@@ -294,6 +296,7 @@ msgstr "_Мақұлдау"
 msgid "_Reject"
 msgstr "_Қабылдамау"
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:425
 msgid "_Evict"
 msgstr "_Шығарып тастау"
@@ -530,6 +533,7 @@ msgstr "\"{0}\" желінің иеcі сіз емес боласыз."
 msgid "General"
 msgstr "Негізгі"
 
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr "Жұмыс ортасы"
@@ -673,6 +677,7 @@ msgstr ""
 msgid "Member online"
 msgstr "Мүше желіге қосылды"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
 msgstr "{0} {1} желісіне қосылды"
@@ -681,6 +686,7 @@ msgstr "{0} {1} желісіне қосылды"
 msgid "Member offline"
 msgstr "Мүше желіден ажыратылды"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
 msgstr "{0} {1} желісінен ажыратылды"
@@ -689,6 +695,7 @@ msgstr "{0} {1} желісінен ажыратылды"
 msgid "Member joined"
 msgstr "Мүше желіге кірді"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
 msgstr "{0} {1} желісіне кірді"
@@ -697,6 +704,7 @@ msgstr "{0} {1} желісіне кірді"
 msgid "Member left"
 msgstr "Мүше желіден шығып кетті"
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:550
 msgid "{0} left the network {1}"
 msgstr "{0} {1} желісінен шығып кетті"

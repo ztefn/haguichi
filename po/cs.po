@@ -22,12 +22,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr "Webové stránky Haguichi"
 
-#. Description used in about dialog
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr "Grafické rozhraní pro Hamachi."
 
-#. Description used in application launchers
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr "Připojení a vytváření lokálních sítí po internetu"
@@ -132,6 +132,7 @@ msgstr "Získávání přezdívek..."
 msgid "Updating..."
 msgstr "Aktualizuje se..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
 msgid "C_onnect (%S)"
 msgstr "Přip_ojit (%S)"
@@ -296,6 +297,7 @@ msgstr "_Schválit"
 msgid "_Reject"
 msgstr "O_dmítnout"
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:425
 msgid "_Evict"
 msgstr "_Vyhodit"
@@ -536,7 +538,7 @@ msgstr "Nejste majitelem sítě  '{0}'."
 msgid "General"
 msgstr "Obecné"
 
-#. In this context meaning "work environment"
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr "Plocha"
@@ -677,6 +679,7 @@ msgstr "Hamachi nemohlo být spuštěno z důvodu selhání načtení nastavení
 msgid "Member online"
 msgstr "Člen online"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
 msgstr "{0} je online v síti {1}"
@@ -685,6 +688,7 @@ msgstr "{0} je online v síti {1}"
 msgid "Member offline"
 msgstr "Člen offline"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
 msgstr "{0} je offline ze sítě {1}"
@@ -693,6 +697,7 @@ msgstr "{0} je offline ze sítě {1}"
 msgid "Member joined"
 msgstr "Člen přidán"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
 msgstr "{0} přidán do sítě {1}"
@@ -701,6 +706,7 @@ msgstr "{0} přidán do sítě {1}"
 msgid "Member left"
 msgstr "Člen odešel"
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:550
 msgid "{0} left the network {1}"
 msgstr "{0} opustil síť {1}"
@@ -788,6 +794,7 @@ msgstr[0] "_Aktualizovat seznam sítí jednou za %S sekund"
 msgstr[1] "_Aktualizovat seznam sítí jednou za %S sekundy"
 msgstr[2] "_Aktualizovat seznam sítí jednou za %S sekund"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
@@ -795,6 +802,7 @@ msgstr[0] "{0} je online v síti {1} a {2} další síti"
 msgstr[1] "{0} je online v síti {1} a {2} dalších sítí"
 msgstr[2] "{0} je online v síti {1} a {2} dalších sítí"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
@@ -802,6 +810,7 @@ msgstr[0] "{0} je offline v síti {1} a {2} další síti"
 msgstr[1] "{0} je offline v síti {1} a {2} dalších sítí"
 msgstr[2] "{0} je offline v síti {1} a {2} dalších sítí"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
@@ -809,6 +818,7 @@ msgstr[0] "{0} se připojil do sítě {1} a {2} další sítě"
 msgstr[1] "{0} se připojil do sítě {1} a {2} dalších sítí"
 msgstr[2] "{0} se připojil do sítě {1} a {2} dalších sítí"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"

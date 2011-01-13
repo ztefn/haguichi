@@ -23,10 +23,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr "Сайт Haguichi"
 
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr "Графическая оболочка к Hamachi"
 
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr "Создавайте и подключайтесь к локальным сетям в интернете"
@@ -131,6 +133,7 @@ msgstr "Загрузка псевдонимов..."
 msgid "Updating..."
 msgstr "Обновление..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
 msgid "C_onnect (%S)"
 msgstr "П_одключение (%S)"
@@ -295,6 +298,7 @@ msgstr "_Одобрить"
 msgid "_Reject"
 msgstr "_Отклонить"
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:425
 msgid "_Evict"
 msgstr "_Выгнать"
@@ -536,6 +540,7 @@ msgstr "Вы не владелец сети '{0}'."
 msgid "General"
 msgstr "Общие"
 
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr "Рабочий стол"
@@ -676,6 +681,7 @@ msgstr "Hamachi не может запуститься из-за ошибки п
 msgid "Member online"
 msgstr "Пользователь в сети"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
 msgstr "{0} вошел в сеть {1}"
@@ -684,6 +690,7 @@ msgstr "{0} вошел в сеть {1}"
 msgid "Member offline"
 msgstr "Пользователь отключился"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
 msgstr "{0} отключился от сети {1}"
@@ -692,6 +699,7 @@ msgstr "{0} отключился от сети {1}"
 msgid "Member joined"
 msgstr "Пользователь подключился"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
 msgstr "{0} подключился к сети {1}"
@@ -700,6 +708,7 @@ msgstr "{0} подключился к сети {1}"
 msgid "Member left"
 msgstr "Пользователь покинул сеть"
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:550
 msgid "{0} left the network {1}"
 msgstr "{0} покинул сеть {1}"

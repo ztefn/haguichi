@@ -842,13 +842,23 @@ public static class Controller
     }
     
     
-    public static void UpdateCycle ()
+    public static bool UpdateCycle ()
     {
         
         continueUpdate = true;
         
         uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
-        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnection ) );
+        
+        if ( interval > 0 )
+        {
+            GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnection ) );
+        }
+        else
+        {
+            GLib.Timeout.Add ( 1000, new GLib.TimeoutHandler ( UpdateCycle ) );
+        }
+        
+        return false;
         
     }
     

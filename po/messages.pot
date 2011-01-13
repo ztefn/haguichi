@@ -14,12 +14,12 @@ msgstr ""
 msgid "Haguichi Website"
 msgstr ""
 
-#. Description used in about dialog
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:344
 msgid "A graphical frontend for Hamachi."
 msgstr ""
 
-#. Description used in application launchers
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:345
 msgid "Join and create local networks over the Internet"
 msgstr ""
@@ -124,6 +124,7 @@ msgstr ""
 msgid "Updating..."
 msgstr ""
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
 msgid "C_onnect (%S)"
 msgstr ""
@@ -288,6 +289,7 @@ msgstr ""
 msgid "_Reject"
 msgstr ""
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:425
 msgid "_Evict"
 msgstr ""
@@ -520,7 +522,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#. In this context meaning "work environment"
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:500
 msgid "Desktop"
 msgstr ""
@@ -659,6 +661,7 @@ msgstr ""
 msgid "Member online"
 msgstr ""
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
 msgstr ""
@@ -667,6 +670,7 @@ msgstr ""
 msgid "Member offline"
 msgstr ""
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:546
 msgid "{0} went offline in the network {1}"
 msgstr ""
@@ -675,6 +679,7 @@ msgstr ""
 msgid "Member joined"
 msgstr ""
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
 msgstr ""
@@ -683,6 +688,7 @@ msgstr ""
 msgid "Member left"
 msgstr ""
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:550
 msgid "{0} left the network {1}"
 msgstr ""
@@ -767,24 +773,28 @@ msgid_plural "_Update the network list every %S seconds"
 msgstr[0] ""
 msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
