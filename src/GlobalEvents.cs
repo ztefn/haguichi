@@ -56,6 +56,14 @@ public class GlobalEvents
     public static void StopHamachi ( object obj, EventArgs args )
     {
         
+        StopHamachi ();
+        
+    }
+    
+    
+    public static void StopHamachi ()
+    {
+        
         Thread thread = new Thread ( StopHamachiThread );
         thread.Start ();
         
@@ -294,9 +302,20 @@ public class GlobalEvents
     public static void QuitApp ( object obj, EventArgs args )
     {
         
+        MainWindow.Hide ();
+        
         if ( ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit ) )
         {
-            StopHamachi ( obj, args );
+            if ( ( Hamachi.ApiVersion > 1 ) &&
+                 ( Controller.lastStatus > 4 ) )
+            {
+                Hamachi.Logout ();
+            }
+            else if ( ( Hamachi.ApiVersion == 1 ) &&
+                      ( Controller.lastStatus > 3 ) )
+            {
+                Hamachi.Stop ();
+            }
         }
         
         Debug.Log ( Debug.Domain.Environment, "GlobalEvents.QuitApp", "Unregistering process" );

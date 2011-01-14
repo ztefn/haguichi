@@ -360,7 +360,7 @@ public class MainWindow
     }
     
     
-    public void Show ()
+    public static void Show ()
     {
         
         window.Visible = true;
@@ -369,7 +369,7 @@ public class MainWindow
     }    
     
     
-    public void Hide ()
+    public static void Hide ()
     {
         
         window.Visible = false;
