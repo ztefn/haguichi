@@ -810,7 +810,7 @@ public static class Controller
         
         Debug.Log ( Debug.Domain.Info, "Controller.RestoreConnectionCycle", "Trying to reconnect..." );
         
-        restoreCountdown = 30;
+        restoreCountdown = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.ReconnectInterval ) );
         MainWindow.SetMode ( "Countdown" );
         
         uint interval = ( uint ) ( 1000 );

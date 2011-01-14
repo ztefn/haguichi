@@ -57,6 +57,7 @@ namespace Config
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
         public static Key GetListWaitTime                   = new Key ( "config/get_list_wait_time", 2.0 );
         public static Key GetNicksWaitTime                  = new Key ( "config/get_nicks_wait_time", 0.5 );
+        public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );
         public static Key CollapsedNetworks                 = new Key ( "main_window/collapsed_networks", new string [] {} );
         public static Key WinHeight                         = new Key ( "main_window/height", 460 );
