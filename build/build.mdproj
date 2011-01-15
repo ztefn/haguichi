@@ -13,9 +13,7 @@
               <SolutionItemReference path="..\Haguichi.csproj" />
               <SolutionItemReference path="..\po\po.mdproj" />
             </ChildEntries>
-            <ExcludedFiles>
-              <File>po,CommonApplicationDataRoot,locale/nl/LC_MESSAGES/haguichi.mo</File>
-            </ExcludedFiles>
+            <ExcludedFiles></ExcludedFiles>
             <RootEntry path="..\Haguichi.sln" id=":root:" />
           </Builder>
         </Package>
