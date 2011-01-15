@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2010-10-29 10:53+0000\n"
-"Last-Translator: David Bengtsson <Unknown>\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-14 09:06+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-10-29 19:12+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
+"X-Generator: Launchpad (build 12200)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
@@ -41,7 +42,7 @@ msgstr "Nej"
 
 #: ../src/TextStrings.cs:350
 msgid "_Hamachi output"
-msgstr ""
+msgstr "Utdata från _Hamachi"
 
 #: ../src/TextStrings.cs:352
 msgid "Address:"
@@ -166,11 +167,11 @@ msgstr "Hamachi är inte installerat"
 
 #: ../src/TextStrings.cs:387
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Ladda ned Hamachi och följ installationsinstruktionerna."
+msgstr "Hämta ner Hamachi och följ installationsinstruktionerna."
 
 #: ../src/TextStrings.cs:388
 msgid "_Download"
-msgstr "_Ladda ned"
+msgstr "_Hämta"
 
 #: ../src/TextStrings.cs:390
 msgid "Members:"
@@ -527,7 +528,7 @@ msgstr "Du har inte behörighet att lämna det här nätverket."
 
 #: ../src/TextStrings.cs:496
 msgid "Failed evicting member '{0}'"
-msgstr "Det gick inte att vräka medlemen \"{0}\""
+msgstr "Det gick inte att kasta ut medlemmen \"{0}\""
 
 #: ../src/TextStrings.cs:497
 msgid "You are not the owner of network '{0}'."
@@ -564,15 +565,15 @@ msgstr "Välj mapp"
 
 #: ../src/TextStrings.cs:509
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "Visa alt_ernerade radfärger"
 
 #: ../src/TextStrings.cs:510
 msgid "_Compact Layout"
-msgstr ""
+msgstr "_Kompakt layout"
 
 #: ../src/TextStrings.cs:511
 msgid "_Large Layout"
-msgstr ""
+msgstr "S_tor layout"
 
 #: ../src/TextStrings.cs:512
 msgid "Show _Offline Members"
@@ -683,7 +684,7 @@ msgstr "Medlem ansluten"
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:544
 msgid "{0} came online in the network {1}"
-msgstr "{0} är anslöt till nätverket {1}"
+msgstr "{0} anslöt till nätverket {1}"
 
 #: ../src/TextStrings.cs:545
 msgid "Member offline"
@@ -701,7 +702,7 @@ msgstr "Medlem gick in"
 #. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:548
 msgid "{0} joined the network {1}"
-msgstr "{0} har gick in i nätverket {1}"
+msgstr "{0} har gått in i nätverket {1}"
 
 #: ../src/TextStrings.cs:549
 msgid "Member left"
@@ -791,33 +792,57 @@ msgstr "Flytta nedåt"
 #: ../src/TextStrings.cs:582
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "_Uppdatera nätverkslistan varje %S sekund"
+msgstr[1] "_Uppdatera nätverkslistan varje %S sekunder"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} är anslöt till nätverket {1}"
-msgstr[1] "{0} är anslöt till nätverket {1}"
+msgstr[0] "{0} anslöt till nätverket {1} och {2} annat nätverk"
+msgstr[1] "{0} anslöt till nätverket {1} och {2} andra nätverk"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} kopplade från nätverket {1}"
-msgstr[1] "{0} kopplade från nätverket {1}"
+msgstr[0] "{0} kopplade från nätverket {1} och {2} annat nätverk"
+msgstr[1] "{0} kopplade från nätverket {1} och {2} andra nätverk"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} har gick in i nätverket {1}"
-msgstr[1] "{0} har gick in i nätverket {1}"
+msgstr[0] "{0} gick in i nätverket {1} och {2} annat nätverk"
+msgstr[1] "{0} gick in i nätverket {1} och {2} andra nätverk"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} lämnade nätverket {1}"
-msgstr[1] "{0} lämnade nätverket {1}"
+msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
+msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
+
+#~ msgid "seconds"
+#~ msgstr "sekunder"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "S_tatusrad"
+
+#~ msgid "Go O_nline"
+#~ msgstr "Koppla _upp"
+
+#~ msgid "Go O_ffline"
+#~ msgstr "Koppla _ner"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Frånkopplade användare"
+
+#~ msgid "Nickname:"
+#~ msgstr "Smeknamn:"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Uppdateringsintervall (sekunder):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Tidsgräns för kommando (sekunder):"

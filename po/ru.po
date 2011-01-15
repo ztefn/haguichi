@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2010-12-25 08:36+0000\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-14 18:19+0000\n"
 "Last-Translator: Sergey Sedov <sedov@webmail.perm.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2010-12-28 20:20+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2011-01-15 19:56+0000\n"
+"X-Generator: Launchpad (build 12200)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
@@ -567,15 +567,15 @@ msgstr "Выберите каталог"
 
 #: ../src/TextStrings.cs:509
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "Показать аль_тернативные цвета для строк"
 
 #: ../src/TextStrings.cs:510
 msgid "_Compact Layout"
-msgstr ""
+msgstr "_Компактный вид"
 
 #: ../src/TextStrings.cs:511
 msgid "_Large Layout"
-msgstr ""
+msgstr "_Большой вид"
 
 #: ../src/TextStrings.cs:512
 msgid "Show _Offline Members"
@@ -796,34 +796,71 @@ msgstr[0] "_Обновлять сетевой список каждую %S се�
 msgstr[1] "_Обновлять сетевой список каждые %S секунды"
 msgstr[2] "_Обновлять сетевой список каждые %S секунд"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} вошел в сеть {1}"
-msgstr[1] "{0} вошел в сеть {1}"
-msgstr[2] "{0} вошел в сеть {1}"
+msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
+msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
+msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} отключился от сети {1}"
-msgstr[1] "{0} отключился от сети {1}"
-msgstr[2] "{0} отключился от сети {1}"
+msgstr[0] "{0} ушел из сети {1} и ещё {2} сети"
+msgstr[1] "{0} ушел из сети {1} и ещё {2} сетей"
+msgstr[2] "{0} ушел из сети {1} и ещё {2} сетей"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} подключился к сети {1}"
-msgstr[1] "{0} подключился к сети {1}"
-msgstr[2] "{0} подключился к сети {1}"
+msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
+msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
+msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} покинул сеть {1}"
-msgstr[1] "{0} покинул сеть {1}"
-msgstr[2] "{0} покинул сеть {1}"
+msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
+msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
+msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
+
+#~ msgid "seconds"
+#~ msgstr "секунда;секунды;секунд"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "_Строка состояния"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Показывать тех, кто \"не в сети\""
+
+#~ msgid "Go O_nline"
+#~ msgstr "_Статус \"в сети\""
+
+#~ msgid "Go O_ffline"
+#~ msgstr "C_татус \"не в сети\""
+
+#~ msgid "Nickname:"
+#~ msgstr "Псевдоним:"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Частота обновления (в секундах):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Таймаут команды (в секундах):"
+
+#~ msgid ""
+#~ "The network requires manual approval of new members by its owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Сеть требует ручного одобрения новых участников собственником сети.\n"
+#~ "Хотите послать ему запрос?"
+
+#~ msgid "Unapproved"
+#~ msgstr "Не одобрен"
+
+#~ msgid "_Hamachi ouput"
+#~ msgstr "_Вывод Hamachi"

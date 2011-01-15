@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2010-09-22 23:49+0000\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-14 14:37+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-09-25 16:20+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-01-15 19:56+0000\n"
+"X-Generator: Launchpad (build 12200)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
@@ -33,7 +34,7 @@ msgstr "インターネット越しのローカルネットワークを作った
 
 #: ../src/TextStrings.cs:347
 msgid "Yes"
-msgstr "はい"
+msgstr "はい (Y)"
 
 #: ../src/TextStrings.cs:348
 msgid "No"
@@ -41,7 +42,7 @@ msgstr "いいえ"
 
 #: ../src/TextStrings.cs:350
 msgid "_Hamachi output"
-msgstr ""
+msgstr "Hamachi からの出力 (_H)"
 
 #: ../src/TextStrings.cs:352
 msgid "Address:"
@@ -131,10 +132,10 @@ msgstr "ニックネーム取得中..."
 msgid "Updating..."
 msgstr "更新中..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
-#, fuzzy
 msgid "C_onnect (%S)"
-msgstr "接続しました"
+msgstr "(%S) に接続(_O)"
 
 #: ../src/TextStrings.cs:378
 msgid "Connect a_utomatically"
@@ -319,7 +320,7 @@ msgstr "変更しています..."
 
 #: ../src/TextStrings.cs:432
 msgid "Change _Nickname..."
-msgstr "ニックネームの変更(_N)..."
+msgstr "ニックネームの変更... (_N)"
 
 #: ../src/TextStrings.cs:433
 msgid "Change Nickname"
@@ -562,15 +563,15 @@ msgstr "フォルダを選択して下さい"
 
 #: ../src/TextStrings.cs:509
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "一行置きに色を変えて表示 (_E)"
 
 #: ../src/TextStrings.cs:510
 msgid "_Compact Layout"
-msgstr ""
+msgstr "コンパクトなレイアウト (_C)"
 
 #: ../src/TextStrings.cs:511
 msgid "_Large Layout"
-msgstr ""
+msgstr "広いレイアウト (_L)"
 
 #: ../src/TextStrings.cs:512
 msgid "Show _Offline Members"
@@ -646,7 +647,7 @@ msgstr "tuncfg を実行する前に常に確認する(_A)"
 
 #: ../src/TextStrings.cs:533
 msgid "A_sk confirmation before running tuncfg"
-msgstr "tuncfg を実行する前に常に確認を求める(_S)"
+msgstr "tuncfg を実行する前に確認を求める(_S)"
 
 #: ../src/TextStrings.cs:535
 msgid "Error connecting"
@@ -787,33 +788,46 @@ msgstr "下へ"
 #: ../src/TextStrings.cs:582
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S 秒毎にネットワーク一覧をアップデート (_U)"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{1} ネットワークで {0} がオンラインになりました"
-msgstr[1] "{1} ネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} と他ののネットワーク {2} で {0} がオンラインになりました"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{1} ネットワークで {0} がオフラインになりました"
-msgstr[1] "{1} ネットワークで {0} がオフラインになりました"
+msgstr[0] "ネッワーク {1} と他ののネットワーク {2} で {0} がオフラインになりました"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{1} ネットワークに {0} が参加しました"
-msgstr[1] "{1} ネットワークに {0} が参加しました"
+msgstr[0] "ネッワーク {1} と他ののネットワーク {2} に {0} が参加しました"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{1} ネットワークから {0} が離脱しました"
-msgstr[1] "{1} ネットワークから {0} が離脱しました"
+msgstr[0] "ネッワーク {1} と他ののネットワーク {2} から {0} が離脱しました"
+
+#~ msgid "Nickname:"
+#~ msgstr "ニックネーム:"
+
+#~ msgid "seconds"
+#~ msgstr "秒"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "インターバルを更新する (秒単位) (_U):"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "ステータスバー(_T)"
+
+#~ msgid "_Offline Members"
+#~ msgstr "オフラインメンバー(_O)"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "コマンドがタイムアウトするまでの時間 (秒単位) (_C):"

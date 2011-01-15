@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2011-01-03 21:18+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-14 11:23+0000\n"
+"Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-01-03 22:40+0000\n"
-"X-Generator: Launchpad (build 12138)\n"
+"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
+"X-Generator: Launchpad (build 12200)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
@@ -566,15 +566,15 @@ msgstr "Elija una carpeta"
 
 #: ../src/TextStrings.cs:509
 msgid "Show Alt_ernating Row Colors"
-msgstr ""
+msgstr "Alternar los Colores de las Filas"
 
 #: ../src/TextStrings.cs:510
 msgid "_Compact Layout"
-msgstr ""
+msgstr "Diseño _Compacto"
 
 #: ../src/TextStrings.cs:511
 msgid "_Large Layout"
-msgstr ""
+msgstr "Diseño _Extendido"
 
 #: ../src/TextStrings.cs:512
 msgid "Show _Offline Members"
@@ -795,30 +795,54 @@ msgid_plural "_Update the network list every %S seconds"
 msgstr[0] "_Actualizar la lista de redes cada %S segundo"
 msgstr[1] "_Actualizar la lista de redes cada %S segundos"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:590
-#, fuzzy
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} se ha conectado a la red {1}"
-msgstr[1] "{0} se ha conectado a la red {1}"
+msgstr[0] "{0} se ha conectado en la red {1} y en {2} red más"
+msgstr[1] "{0} se ha conectado en la red {1} y en otras {2} redes"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} se ha desconectado de la red {1}"
-msgstr[1] "{0} se ha desconectado de la red {1}"
+msgstr[0] "{0} se desconectó en la red {1} y en {2} red más"
+msgstr[1] "{0} se desconectó en la red {1} y en otras {2} redes"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} se ha unido a la red {1}"
-msgstr[1] "{0} se ha unido a la red {1}"
+msgstr[0] "{0} se ha unido a la red {1} y a otra {2} red más"
+msgstr[1] "{0} se ha unido a la red {1} y a otras {2} redes"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{o} han abandonado la red {1}"
-msgstr[1] "{o} han abandonado la red {1}"
+msgstr[0] "{0} ha dejado la red {1} y {2} red más"
+msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
+
+#~ msgid "seconds"
+#~ msgstr "segundos"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Miembros desconectados"
+
+#~ msgid "Go O_nline"
+#~ msgstr "_Conectarse"
+
+#~ msgid "Go O_ffline"
+#~ msgstr "_Desconectarse"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "_Barra de estado"
+
+#~ msgid "Nickname:"
+#~ msgstr "Apodo:"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Intervalo de actualización (segundos):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Tiempo máximo de espera (segundos):"

@@ -103,6 +103,9 @@ Svenska (sv)
     Daniel Holm <danielholm>
     Daniel Nylander <yeager>
     David Bengtsson <justfaking>
+
+Türkçe (tr)
+    Aytunç Yeni <aytuncyeni>
 ";
     
     public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";

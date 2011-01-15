@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43:00+0100\n"
-"PO-Revision-Date: 2010-10-03 06:58+0000\n"
-"Last-Translator: jmb_kz <Unknown>\n"
+"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"PO-Revision-Date: 2011-01-10 17:49+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2010-10-16 18:00+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2011-01-15 19:56+0000\n"
+"X-Generator: Launchpad (build 12200)\n"
 
 #: ../src/TextStrings.cs:343
 msgid "Haguichi Website"
@@ -41,7 +42,7 @@ msgstr "Жоқ"
 
 #: ../src/TextStrings.cs:350
 msgid "_Hamachi output"
-msgstr ""
+msgstr "_Hamachi шығаруы (output)"
 
 #: ../src/TextStrings.cs:352
 msgid "Address:"
@@ -131,10 +132,10 @@ msgstr "Ник тізімін алу..."
 msgid "Updating..."
 msgstr "Жаңарту..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:377
-#, fuzzy
 msgid "C_onnect (%S)"
-msgstr "Қосылған"
+msgstr "_Қосылу (%S)"
 
 #: ../src/TextStrings.cs:378
 msgid "Connect a_utomatically"
@@ -788,33 +789,47 @@ msgstr "Төмен жылжыту"
 #: ../src/TextStrings.cs:582
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
+msgstr[0] "Желілер тізімін әрбір %S секунд сайын _жаңарту"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:590
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/TextStrings.cs:590
-#, fuzzy
-msgid "{0} came online in the network {1} and {2} other network"
-msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} {1} желісіне қосылды"
-msgstr[1] "{0} {1} желісіне қосылды"
-
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
-#, fuzzy
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} {1} желісінен ажыратылды"
-msgstr[1] "{0} {1} желісінен ажыратылды"
+msgstr[0] ""
+msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
-#, fuzzy
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} {1} желісіне кірді"
-msgstr[1] "{0} {1} желісіне кірді"
+msgstr[0] ""
+msgstr[1] ""
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
-#, fuzzy
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} {1} желісінен шығып кетті"
-msgstr[1] "{0} {1} желісінен шығып кетті"
+msgstr[0] ""
+msgstr[1] ""
+
+#~ msgid "seconds"
+#~ msgstr "секунд"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "Күй _жолағы"
+
+#~ msgid "_Offline Members"
+#~ msgstr "Желіге _қосылмаған мүшелерді көрсету"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Жаңарту жиілігі (секундпен):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Команда таймауты (секундпен):"
