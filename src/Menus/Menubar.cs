@@ -47,6 +47,7 @@ namespace Menus
         private ImageMenuItem create;
         private ImageMenuItem attach;
         private ImageMenuItem info;
+        private ImageMenuItem close;
         private ImageMenuItem quit;
         
         private ImageMenuItem preferences;
@@ -73,9 +74,11 @@ namespace Menus
             
             connect = new ImageMenuItem ( Stock.Connect, MainWindow.accelGroup );
             connect.Activated += GlobalEvents.StartHamachi;
+            connect.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.O, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             disconnect = new ImageMenuItem ( Stock.Disconnect, MainWindow.accelGroup );
             disconnect.Activated += GlobalEvents.StopHamachi;
+            disconnect.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.D, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             change = new ImageMenuItem ( TextStrings.changeNickLabel );
             change.Activated += GlobalEvents.ChangeNick;
@@ -91,6 +94,11 @@ namespace Menus
             
             info = new ImageMenuItem ( Stock.Info, MainWindow.accelGroup );
             info.Activated += GlobalEvents.Information;
+            info.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F2, Gdk.ModifierType.None, AccelFlags.Visible ) );
+            
+            close = new ImageMenuItem ( Stock.Close, MainWindow.accelGroup );
+            close.Activated += MainWindow.Hide;
+            close.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.W, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             quit = new ImageMenuItem ( Stock.Quit, MainWindow.accelGroup );
             quit.Activated += GlobalEvents.QuitApp;
@@ -106,6 +114,7 @@ namespace Menus
             clientMenu.Append ( create );
             clientMenu.Append ( attach );
             clientMenu.Add    ( new SeparatorMenuItem() );
+            clientMenu.Append ( close );
             clientMenu.Append ( quit );
             
             clientMenuItem = new MenuItem ( TextStrings.clientLabel );
@@ -207,20 +216,32 @@ namespace Menus
             this.Append ( viewMenuItem );
             this.Append ( helpMenuItem );
             
-            this.ShowAll();
+            this.ShowAll ();
+            
+        }
+        
+        
+        public void SetClose ( bool visible )
+        {
+            
+            close.Visible = visible;
             
         }
         
         
         public void SetAttach ( bool visible, bool sensitive )
         {
+            
             attach.Visible   = visible;
             attach.Sensitive = sensitive;
+            
         }
         
         
         public void SetMode ( string mode )
         {
+            
+            SetClose ( ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) );
             
             switch ( mode )
             {

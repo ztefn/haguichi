@@ -360,11 +360,27 @@ public class MainWindow
     }
     
     
+    public static void Show ( object o, EventArgs args )
+    {
+        
+        Show ();
+        
+    }    
+    
+    
     public static void Show ()
     {
         
         window.Visible = true;
         Config.Settings.ShowMainWindow = true;
+        
+    }    
+    
+    
+    public static void Hide ( object o, EventArgs args )
+    {
+        
+        Hide ();
         
     }    
     

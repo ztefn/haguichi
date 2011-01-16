@@ -138,6 +138,7 @@ namespace Config
                 if ( key.Contains ( Config.Settings.ShowTrayIcon.KeyName ) )
                 {
                     Haguichi.preferencesWindow.showTrayIcon.Active = ( bool ) val;
+                    MainWindow.menuBar.SetClose ( ( bool ) val );
                 }
                 
                 if ( key.Contains ( Config.Settings.StartInTray.KeyName ) )
