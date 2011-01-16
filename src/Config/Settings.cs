@@ -55,6 +55,7 @@ namespace Config
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
+        public static Key CommandTimeout                    = new Key ( "config/command_timeout", 60.0 );
         public static Key GetListWaitTime                   = new Key ( "config/get_list_wait_time", 2.0 );
         public static Key GetNicksWaitTime                  = new Key ( "config/get_nicks_wait_time", 0.5 );
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
@@ -82,10 +83,8 @@ namespace Config
         public static Key NotifyOnMemberOnline              = new Key ( "notifications/member_online", true );
         
         
-        public static void Init()
+        public static void Init ()
         {
-            
-            Command.DetermineSudo ();
             
             if ( System.Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {

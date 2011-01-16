@@ -25,7 +25,33 @@ using System.Threading;
 public static class Command
 {
     
+    private static int timeout;
     private static bool inProgress = false;
+    
+    
+    public static void Init ()
+    {
+        
+        SetTimeout ();
+        DetermineSudo ();
+        
+    }
+    
+    
+    public static void SetTimeout ()
+    {
+        
+        double dTimeout = ( double ) Config.Client.Get ( Config.Settings.CommandTimeout );
+        
+        if ( dTimeout < 30.0 )
+        {
+            dTimeout = 60.0;
+            Config.Client.Set ( Config.Settings.CommandTimeout, dTimeout );
+        }
+        
+        timeout = ( int ) dTimeout;
+        
+    }
     
     
     public static void DetermineSudo ()
@@ -133,7 +159,7 @@ public static class Command
             
             using ( Process p = Process.Start ( ps ) )
             {
-                if ( p.WaitForExit ( 60000 ) ) // 60 seconds timeout
+                if ( p.WaitForExit ( 1000 * timeout ) )
                 {
                     val = p.StandardOutput.ReadToEnd ();
                 }

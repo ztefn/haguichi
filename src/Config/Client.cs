@@ -201,6 +201,11 @@ namespace Config
                     Haguichi.createWindow.goOnline.Active = ( bool ) val;
                 }
                 
+                if ( key.Contains ( Config.Settings.CommandTimeout.KeyName ) )
+                {
+                    Command.SetTimeout ();
+                }
+                
             }
             catch
             {
