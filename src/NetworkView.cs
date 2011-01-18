@@ -857,11 +857,11 @@ public class NetworkView : TreeView
             
             if ( IsCollapsed ( network ) )
             {
-                this.CollapseRow ( sortedStore.GetPath ( iter ) );
+                this.CollapseRow ( sortedStore.GetPath ( networkIter ) );
             }
             else
             {
-                this.ExpandRow ( sortedStore.GetPath ( iter ), false );
+                this.ExpandRow ( sortedStore.GetPath ( networkIter ), false );
             }
             
             while ( sortedStore.IterNext ( ref networkIter ) )                      // All other networks
