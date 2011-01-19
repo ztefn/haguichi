@@ -58,10 +58,10 @@ public class MainWindow
         IconTheme.AddBuiltinIcon ( "haguichi", 48,  Gdk.Pixbuf.LoadFromResource ( "48x48.haguichi" ) );
         IconTheme.AddBuiltinIcon ( "haguichi", 64,  Gdk.Pixbuf.LoadFromResource ( "64x64.haguichi" ) );
         
-        IconTheme.AddBuiltinIcon ( "haguichi-node-online",      10, Gdk.Pixbuf.LoadFromResource ( "10x10.node-online"      ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-node-offline",     10, Gdk.Pixbuf.LoadFromResource ( "10x10.node-offline"     ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable", 10, Gdk.Pixbuf.LoadFromResource ( "10x10.node-unreachable" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved",  10, Gdk.Pixbuf.LoadFromResource ( "10x10.node-unapproved"  ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-online",      12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-online"      ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-offline",     12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-offline"     ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable", 12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-unreachable" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved",  12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-unapproved"  ) );
         
         IconTheme.AddBuiltinIcon ( "haguichi-node-online",      18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-online"      ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-offline",     18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-offline"     ) );

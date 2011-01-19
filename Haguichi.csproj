@@ -64,30 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-offline.png">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-offline.png</DeployService-RelativeDeployPath>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>10x10.node-offline</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-online.png">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-online.png</DeployService-RelativeDeployPath>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>10x10.node-online</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-unapproved.png">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-unapproved.png</DeployService-RelativeDeployPath>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>10x10.node-unapproved</LogicalName>
-    </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\10x10\haguichi-node-unreachable.png">
-      <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/10x10/status/haguichi-node-unreachable.png</DeployService-RelativeDeployPath>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>10x10.node-unreachable</LogicalName>
-    </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi.png">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/16x16/apps/haguichi.png</DeployService-RelativeDeployPath>
@@ -213,6 +189,30 @@
       <DeployService-RelativeDeployPath>icons/hicolor/16x16/status/haguichi-disconnected.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <LogicalName>16x16.disconnected</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-offline.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-offline.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>12x12.node-offline</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-online.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-online.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>12x12.node-online</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-unapproved.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-unapproved.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>12x12.node-unapproved</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-unreachable.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-unreachable.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>12x12.node-unreachable</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-offline.png">
       <DeployService-Deploy>true</DeployService-Deploy>

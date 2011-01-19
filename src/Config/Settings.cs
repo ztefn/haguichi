@@ -64,7 +64,7 @@ namespace Config
         public static Key WinHeight                         = new Key ( "main_window/height", 460 );
         public static Key MemberTemplateSmall               = new Key ( "main_window/member_template_small", "%N%_*" );
         public static Key MemberTemplateLarge               = new Key ( "main_window/member_template_large", "%N%_*<br><span size=\"smaller\">%S <i>%A</i></span>" );
-        public static Key NetworkListIconSizeSmall          = new Key ( "main_window/network_list_icon_size_small", 10 );
+        public static Key NetworkListIconSizeSmall          = new Key ( "main_window/network_list_icon_size_small", 12 );
         public static Key NetworkListIconSizeLarge          = new Key ( "main_window/network_list_icon_size_large", 18 );
         public static Key NetworkListLayout                 = new Key ( "main_window/network_list_layout", "normal" );
         public static Key NetworkTemplateSmall              = new Key ( "main_window/network_template_small", "<b>%N</b> (%O/%T)%_*" );
