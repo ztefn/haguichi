@@ -192,11 +192,11 @@ public class MainWindow
         {
             if ( ( bool ) Config.Client.Get ( Config.Settings.StartInTray ) )
             {
-                this.Hide ();
+                window.Hide ();
             }
             else
             {
-                this.Show ();
+                window.Show ();
             }
         }
         else
