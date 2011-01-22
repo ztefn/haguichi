@@ -43,7 +43,7 @@ namespace Dialogs
                 
                 TextBuffer buffer = textview.Buffer;
                 TextIter iter = buffer.GetIterAtOffset ( 0 );
-                buffer.Insert ( iter, output );
+                buffer.Insert ( ref iter, output );
                 
                 ScrolledWindow sw = new ScrolledWindow ();
                 sw.ShadowType = ShadowType.In;

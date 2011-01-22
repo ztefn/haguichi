@@ -27,15 +27,15 @@ namespace Dialogs
     public class SendRequest : Dialogs.Base
     {
 
-        private string Name;
-        private string Password;
+        private string NetworkName;
+        private string NetworkPassword;
         
         
         public SendRequest ( string header, string message, string icon, string name, string password ) : base ( "", header, message, icon )
         {
             
-            this.Name      = name;
-            this.Password  = password;
+            this.NetworkName     = name;
+            this.NetworkPassword = password;
             
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             this.AddButton ( TextStrings.sendRequestLabel, ResponseType.Ok );
@@ -54,7 +54,7 @@ namespace Dialogs
             
             if ( args.ResponseId == ResponseType.Ok )
             {
-                string output = Hamachi.SendJoinRequest ( this.Name, this.Password );
+                string output = Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
             }
             
         }
