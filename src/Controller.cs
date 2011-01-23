@@ -539,6 +539,14 @@ public static class Controller
     }
     
     
+    public static void UpdateConnection ( object obj, EventArgs args )
+    {
+        
+        UpdateConnection ();
+        
+    }
+    
+    
     public static void UpdateConnection ()
     {
         

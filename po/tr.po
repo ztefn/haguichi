@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-01-09 18:43+0100\n"
+"POT-Creation-Date: 2011-01-23 21:22:08+0100\n"
 "PO-Revision-Date: 2011-01-14 20:22+0000\n"
 "Last-Translator: Aytunç <aytuncyeni@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -18,379 +18,379 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
 "X-Generator: Launchpad (build 12200)\n"
 
-#: ../src/TextStrings.cs:343
+#: ../src/TextStrings.cs:347
 msgid "Haguichi Website"
 msgstr "Haguichi Sitesi"
 
 #. Description used in about dialog.
-#: ../src/TextStrings.cs:344
+#: ../src/TextStrings.cs:348
 msgid "A graphical frontend for Hamachi."
 msgstr "Hamachi için görsel arayüz."
 
 #. Description used in application launchers.
-#: ../src/TextStrings.cs:345
+#: ../src/TextStrings.cs:349
 msgid "Join and create local networks over the Internet"
 msgstr "İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun"
 
-#: ../src/TextStrings.cs:347
+#: ../src/TextStrings.cs:351
 msgid "Yes"
 msgstr "Evet"
 
-#: ../src/TextStrings.cs:348
+#: ../src/TextStrings.cs:352
 msgid "No"
 msgstr "Hayır"
 
-#: ../src/TextStrings.cs:350
+#: ../src/TextStrings.cs:354
 msgid "_Hamachi output"
 msgstr "_Hamachi çıktısı"
 
-#: ../src/TextStrings.cs:352
+#: ../src/TextStrings.cs:356
 msgid "Address:"
 msgstr "Adres:"
 
-#: ../src/TextStrings.cs:353
+#: ../src/TextStrings.cs:357
 msgid "ID:"
 msgstr "Kimlik (ID):"
 
-#: ../src/TextStrings.cs:354
+#: ../src/TextStrings.cs:358
 msgid "Client ID:"
 msgstr "İstemci Kimliği:"
 
-#: ../src/TextStrings.cs:355
+#: ../src/TextStrings.cs:359
 msgid "Network ID:"
 msgstr "Ağ Kimliği:"
 
-#: ../src/TextStrings.cs:356
+#: ../src/TextStrings.cs:360
 msgid "Status:"
 msgstr "Durum:"
 
-#: ../src/TextStrings.cs:357
+#: ../src/TextStrings.cs:361
 msgid "Tunnel:"
 msgstr "Geçiş"
 
-#: ../src/TextStrings.cs:358
+#: ../src/TextStrings.cs:362
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: ../src/TextStrings.cs:359
+#: ../src/TextStrings.cs:363
 msgid "_Nickname:"
 msgstr "_Takma ad:"
 
-#: ../src/TextStrings.cs:361
+#: ../src/TextStrings.cs:365
 msgid "_Name:"
 msgstr "_İsim:"
 
-#: ../src/TextStrings.cs:362
+#: ../src/TextStrings.cs:366
 msgid "_Password:"
 msgstr "_Parola:"
 
-#: ../src/TextStrings.cs:363
+#: ../src/TextStrings.cs:367
 msgid "Version:"
 msgstr "Sürüm:"
 
-#: ../src/TextStrings.cs:365
+#: ../src/TextStrings.cs:369
 msgid "Offline"
 msgstr "Çevrimdışı"
 
-#: ../src/TextStrings.cs:366
+#: ../src/TextStrings.cs:370
 msgid "Online"
 msgstr "Çevirimiçi"
 
-#: ../src/TextStrings.cs:367
+#: ../src/TextStrings.cs:371
 msgid "Unreachable"
 msgstr "Erişilemez"
 
-#: ../src/TextStrings.cs:368
+#: ../src/TextStrings.cs:372
 msgid "Connected"
 msgstr "Bağlandı"
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:373
 msgid "Disconnected"
 msgstr "Bağlantı Kesildi"
 
-#: ../src/TextStrings.cs:370
+#: ../src/TextStrings.cs:374
 msgid "Connecting..."
 msgstr "Bağlanıyor..."
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:375
 msgid "Starting Hamachi..."
 msgstr "Hamachi başlatılıyor..."
 
-#: ../src/TextStrings.cs:372
+#: ../src/TextStrings.cs:376
 msgid "Logging in..."
 msgstr "Giriş yapılıyor..."
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:377
 msgid "Running tuncfg..."
 msgstr "tuncfg çalıştırılıyor..."
 
-#: ../src/TextStrings.cs:374
+#: ../src/TextStrings.cs:378
 msgid "Getting nicknames..."
 msgstr "Takma ad alın..."
 
-#: ../src/TextStrings.cs:375
+#: ../src/TextStrings.cs:379
 msgid "Updating..."
 msgstr "Güncelleniyor..."
 
 #. Please use the same text and shortcut as the stock connect button.
-#: ../src/TextStrings.cs:377
+#: ../src/TextStrings.cs:381
 msgid "C_onnect (%S)"
 msgstr "B_ağlan(%S)"
 
-#: ../src/TextStrings.cs:378
+#: ../src/TextStrings.cs:382
 msgid "Connect a_utomatically"
 msgstr "Otomatik b_ağlan"
 
-#: ../src/TextStrings.cs:380
+#: ../src/TextStrings.cs:384
 msgid "Not configured"
 msgstr "Yapılandırılmamış"
 
-#: ../src/TextStrings.cs:381
+#: ../src/TextStrings.cs:385
 msgid "Hamachi is not configured"
 msgstr "Hamachi yapılandırılmamış"
 
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:386
 msgid "You need to configure Hamachi before you can connect."
 msgstr "Bağlanmadan önce Hamachi'yi yapılandırmalısınız."
 
-#: ../src/TextStrings.cs:383
+#: ../src/TextStrings.cs:387
 msgid "C_onfigure"
 msgstr "_Yapılandır"
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:389
 msgid "Not installed"
 msgstr "Kurulmamış"
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:390
 msgid "Hamachi is not installed"
 msgstr "Hamachi kurulmamış."
 
-#: ../src/TextStrings.cs:387
+#: ../src/TextStrings.cs:391
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Lütfen Hamachi'yi indirin ve kurulum yönergelerini takip edin."
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:392
 msgid "_Download"
 msgstr "_İndir"
 
-#: ../src/TextStrings.cs:390
+#: ../src/TextStrings.cs:394
 msgid "Members:"
 msgstr "Üyeler:"
 
-#: ../src/TextStrings.cs:391
+#: ../src/TextStrings.cs:395
 msgid "{0} online, {1} total"
 msgstr "{0} çevrimiçi, {1} toplam"
 
-#: ../src/TextStrings.cs:392
+#: ../src/TextStrings.cs:396
 msgid "Owner:"
 msgstr "Ağ Sahibi"
 
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:397
 msgid "You"
 msgstr "Siz"
 
-#: ../src/TextStrings.cs:394
+#: ../src/TextStrings.cs:398
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: ../src/TextStrings.cs:395
+#: ../src/TextStrings.cs:399
 msgid "Unavailable"
 msgstr "Geçerli değil"
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:400
 msgid "Awaiting approval"
 msgstr "Onay bekliyor"
 
-#: ../src/TextStrings.cs:397
+#: ../src/TextStrings.cs:401
 msgid "Locked:"
 msgstr "Kilitli:"
 
-#: ../src/TextStrings.cs:398
+#: ../src/TextStrings.cs:402
 msgid "Approval:"
 msgstr "Onay"
 
-#: ../src/TextStrings.cs:399
+#: ../src/TextStrings.cs:403
 msgid "Manually"
 msgstr "Elle"
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:404
 msgid "Automatically"
 msgstr "Otomatik"
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:406
 msgid "_Client"
 msgstr "_İstemci"
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:407
 msgid "_Edit"
 msgstr "_Düzenle"
 
-#: ../src/TextStrings.cs:404
+#: ../src/TextStrings.cs:408
 msgid "_View"
 msgstr "_Görünüm"
 
-#: ../src/TextStrings.cs:405
+#: ../src/TextStrings.cs:409
 msgid "_Help"
 msgstr "_Yardım"
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:411
 msgid "_Online Help"
 msgstr "_Çevrimiçi Yardım"
 
-#: ../src/TextStrings.cs:408
+#: ../src/TextStrings.cs:412
 msgid "_Create Network..."
 msgstr "_Ağ Kur..."
 
-#: ../src/TextStrings.cs:409
+#: ../src/TextStrings.cs:413
 msgid "_Join Network..."
 msgstr "_Ağa katıl..."
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:415
 msgid "_Go Online"
 msgstr "_Çevrimiçi Ol"
 
-#: ../src/TextStrings.cs:412
+#: ../src/TextStrings.cs:416
 msgid "_Go Offline"
 msgstr "_Çevrimdışı Ol"
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:417
 msgid "_Leave"
 msgstr "_Ayrıl"
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:418
 msgid "_Locked"
 msgstr "_Kilitli"
 
-#: ../src/TextStrings.cs:415
+#: ../src/TextStrings.cs:419
 msgid "_New Member Approval"
 msgstr "_Yeni Üye Onayı"
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:420
 msgid "_Automatically"
 msgstr "_Otomatik"
 
-#: ../src/TextStrings.cs:417
+#: ../src/TextStrings.cs:421
 msgid "_Manually"
 msgstr "_Elle"
 
-#: ../src/TextStrings.cs:418
+#: ../src/TextStrings.cs:422
 msgid "_Copy Network ID"
 msgstr "_Ağ Kimliğini Kopyala"
 
-#: ../src/TextStrings.cs:420
+#: ../src/TextStrings.cs:424
 msgid "_Browse Shares"
 msgstr "_Paylaşımları Gözden Geçir"
 
-#: ../src/TextStrings.cs:421
+#: ../src/TextStrings.cs:425
 msgid "_Ping"
 msgstr "_Ping"
 
-#: ../src/TextStrings.cs:422
+#: ../src/TextStrings.cs:426
 msgid "_View Remote Desktop"
 msgstr "_Uzak Masaüstüne Bak"
 
-#: ../src/TextStrings.cs:423
+#: ../src/TextStrings.cs:427
 msgid "_Approve"
 msgstr "_Onay"
 
-#: ../src/TextStrings.cs:424
+#: ../src/TextStrings.cs:428
 msgid "_Reject"
 msgstr "_Reddet"
 
 #. This action removes the selected member from the network.
-#: ../src/TextStrings.cs:425
+#: ../src/TextStrings.cs:429
 msgid "_Evict"
 msgstr "_At"
 
-#: ../src/TextStrings.cs:426
+#: ../src/TextStrings.cs:430
 msgid "_Copy Address"
 msgstr "_Adresi Kopyala"
 
-#: ../src/TextStrings.cs:427
+#: ../src/TextStrings.cs:431
 msgid "_Copy Client ID"
 msgstr "_Adres Kimliğini Kopyala"
 
-#: ../src/TextStrings.cs:429
+#: ../src/TextStrings.cs:433
 msgid "C_hange"
 msgstr "D_eğiştir"
 
-#: ../src/TextStrings.cs:430
+#: ../src/TextStrings.cs:434
 msgid "Changing..."
 msgstr "Değiştiriliyor..."
 
-#: ../src/TextStrings.cs:432
+#: ../src/TextStrings.cs:436
 msgid "Change _Nickname..."
 msgstr "Takma _Adı Değiştir"
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:437
 msgid "Change Nickname"
 msgstr "Takma Adı Değiştir"
 
-#: ../src/TextStrings.cs:434
+#: ../src/TextStrings.cs:438
 msgid "Please enter the nickname you want to use."
 msgstr "Kullanmak isteğiniz kullanıcı adını girin."
 
-#: ../src/TextStrings.cs:435
+#: ../src/TextStrings.cs:439
 msgid "Click to change your nickname"
 msgstr "Takma adınızı değiştirmek için tıklayın"
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:441
 msgid "Change _Password..."
 msgstr "Şifreyi _Değiştir"
 
-#: ../src/TextStrings.cs:438
+#: ../src/TextStrings.cs:442
 msgid "Change Password"
 msgstr "Şifreyi Değiştir"
 
-#: ../src/TextStrings.cs:439
+#: ../src/TextStrings.cs:443
 msgid "Please enter the new password for this network."
 msgstr "Bu ağ için yeni bir şifre girin."
 
-#: ../src/TextStrings.cs:441
+#: ../src/TextStrings.cs:445
 msgid "_Account:"
 msgstr "_Hesap"
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:448
 msgid "_Attach"
 msgstr "_Ekle"
 
-#: ../src/TextStrings.cs:445
+#: ../src/TextStrings.cs:449
 msgid "_Attach to Account..."
 msgstr "_Hesaba Ekle..."
 
-#: ../src/TextStrings.cs:446
+#: ../src/TextStrings.cs:450
 msgid "Attach to Account"
 msgstr "Hesaba Ekle"
 
-#: ../src/TextStrings.cs:447
+#: ../src/TextStrings.cs:451
 msgid "Please enter the account you want to attach this client to."
 msgstr "Bu istemciye eklemek için bir hesap girin."
 
-#: ../src/TextStrings.cs:448
+#: ../src/TextStrings.cs:452
 msgid "_Include all networks created by this client"
 msgstr "_Kapsanan tüm bağlantılar bu istemci tarafından oluşturuldu."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:453
 msgid "Error attaching"
 msgstr "Ekleme hatası"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:454
 msgid "Account not found."
 msgstr "Hesap bulunamadı."
 
-#: ../src/TextStrings.cs:452
+#: ../src/TextStrings.cs:456
 msgid "_Join"
 msgstr "_Bağlan"
 
-#: ../src/TextStrings.cs:453
+#: ../src/TextStrings.cs:457
 msgid "Joining..."
 msgstr "Bağlanılınıyor..."
 
-#: ../src/TextStrings.cs:454
+#: ../src/TextStrings.cs:458
 msgid "Join Network"
 msgstr "Ağa Bağlan"
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:459
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
@@ -398,19 +398,19 @@ msgstr ""
 "Bağlanmak isteğiniz ağ için\n"
 "adınızı ve şifrenizi girin."
 
-#: ../src/TextStrings.cs:457
+#: ../src/TextStrings.cs:461
 msgid "C_reate"
 msgstr "O_luştur"
 
-#: ../src/TextStrings.cs:458
+#: ../src/TextStrings.cs:462
 msgid "Creating..."
 msgstr "Kuruluyor..."
 
-#: ../src/TextStrings.cs:459
+#: ../src/TextStrings.cs:463
 msgid "Create Network"
 msgstr "Ağ Kur"
 
-#: ../src/TextStrings.cs:460
+#: ../src/TextStrings.cs:464
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
@@ -418,51 +418,51 @@ msgstr ""
 "Lütfen kurmak istediğiniz ağ için\n"
 "adınızı ve şifrenizi girin."
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:466
 msgid "_Go directly online in the network"
 msgstr "_Direkt çevrimiçi ol"
 
-#: ../src/TextStrings.cs:464
+#: ../src/TextStrings.cs:468
 msgid "Network not found"
 msgstr "Ağ bulunamadı"
 
-#: ../src/TextStrings.cs:465
+#: ../src/TextStrings.cs:469
 msgid "Invalid password"
 msgstr "Geçersiz şifre"
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:470
 msgid "Network is full"
 msgstr "Ağ dolu"
 
-#: ../src/TextStrings.cs:467
+#: ../src/TextStrings.cs:471
 msgid "Network is locked"
 msgstr "Ağ kilitli"
 
-#: ../src/TextStrings.cs:468
+#: ../src/TextStrings.cs:472
 msgid "Network already joined"
 msgstr "Zaten ağa bağlanılmış."
 
-#: ../src/TextStrings.cs:469
+#: ../src/TextStrings.cs:473
 msgid "Unknown error"
 msgstr "Bilinmeyen hata"
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:474
 msgid "Network name too short"
 msgstr "Ağ adı çok kısa"
 
-#: ../src/TextStrings.cs:471
+#: ../src/TextStrings.cs:475
 msgid "Network name is already taken"
 msgstr "Ağ adı zaten kullanımda"
 
-#: ../src/TextStrings.cs:473
+#: ../src/TextStrings.cs:477
 msgid "_Send Request"
 msgstr "_İstek Gönder"
 
-#: ../src/TextStrings.cs:474
+#: ../src/TextStrings.cs:478
 msgid "Send join request?"
 msgstr "İstek gönderilsin mi?"
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:479
 msgid ""
 "This network requires manual approval of new members by the owner.\n"
 "Would you like to send a join request?"
@@ -470,35 +470,35 @@ msgstr ""
 "Bu ağ için yeni üyelerin ağ sahibi tarafından onaylanması gerekiyor.\n"
 "Katılmak için istek göndermek istiyor musunuz?"
 
-#: ../src/TextStrings.cs:477
+#: ../src/TextStrings.cs:481
 msgid "Preferences"
 msgstr "Tercihler"
 
-#: ../src/TextStrings.cs:478
+#: ../src/TextStrings.cs:482
 msgid "Information"
 msgstr "Bilgi"
 
-#: ../src/TextStrings.cs:480
+#: ../src/TextStrings.cs:484
 msgid "Delete network '{0}'?"
 msgstr "'{0}' ağını sil?"
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:485
 msgid "Are you sure you want to delete network '{0}'?"
 msgstr "'{0}' ağını silmek istediğinize emin misiniz?"
 
-#: ../src/TextStrings.cs:483
+#: ../src/TextStrings.cs:487
 msgid "Leave network '{0}'?"
 msgstr "'{0}' ağından ayrıl?"
 
-#: ../src/TextStrings.cs:484
+#: ../src/TextStrings.cs:488
 msgid "Are you sure you want to leave network '{0}'?"
 msgstr "'{0}' ağından ayrılmak istediğinize emin misiniz?"
 
-#: ../src/TextStrings.cs:486
+#: ../src/TextStrings.cs:490
 msgid "Evict member '{0}'?"
 msgstr "'{0}' üyesini at?"
 
-#: ../src/TextStrings.cs:487
+#: ../src/TextStrings.cs:491
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
@@ -506,132 +506,137 @@ msgstr ""
 "'{0}' üyesini '{1}' ağından atmak istediğinize\n"
 "emin misiniz?"
 
-#: ../src/TextStrings.cs:489
+#: ../src/TextStrings.cs:493
 msgid "Failed deleting network '{0}'"
 msgstr "'{0}' ağını silmede hata oluştu"
 
-#: ../src/TextStrings.cs:490
+#: ../src/TextStrings.cs:494
 msgid "You are not the owner of this network."
 msgstr "Bu ağın sahibi değilsiniz"
 
-#: ../src/TextStrings.cs:492
+#: ../src/TextStrings.cs:496
 msgid "Failed leaving network '{0}'"
 msgstr "'{0}' ağından ayrılmada hata oluştu"
 
-#: ../src/TextStrings.cs:493
+#: ../src/TextStrings.cs:497
 msgid "You are the owner of this network."
 msgstr "Bu ağın sahibisiniz."
 
-#: ../src/TextStrings.cs:494
+#: ../src/TextStrings.cs:498
 msgid "You don't have permission to leave this network."
 msgstr "Bu ağdan ayrılmak için izniniz yok."
 
-#: ../src/TextStrings.cs:496
+#: ../src/TextStrings.cs:500
 msgid "Failed evicting member '{0}'"
 msgstr "'{0}' üyesi atılırken hata oluştu"
 
-#: ../src/TextStrings.cs:497
+#: ../src/TextStrings.cs:501
 msgid "You are not the owner of network '{0}'."
 msgstr "'{0}' ağının sahibi değilsiniz."
 
-#: ../src/TextStrings.cs:499
+#: ../src/TextStrings.cs:503
 msgid "General"
 msgstr "Genel"
 
 #. In this context meaning "work environment".
-#: ../src/TextStrings.cs:500
+#: ../src/TextStrings.cs:504
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: ../src/TextStrings.cs:501
+#: ../src/TextStrings.cs:505
 msgid "Commands"
 msgstr "Komutlar"
 
-#: ../src/TextStrings.cs:503
+#: ../src/TextStrings.cs:507
 msgid "Notification Area"
 msgstr "Bildirim Alanı"
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:508
 msgid "Behavior"
 msgstr "İşleyiş"
 
-#: ../src/TextStrings.cs:506
+#: ../src/TextStrings.cs:510
 msgid "_Account data folder:"
 msgstr "_Hesap veri dizini:"
 
-#: ../src/TextStrings.cs:507
+#: ../src/TextStrings.cs:511
 msgid "Choose Folder"
 msgstr "Dizin seç"
 
-#: ../src/TextStrings.cs:509
+#: ../src/TextStrings.cs:513
+#, fuzzy
+msgid "_Update Network List"
+msgstr "Ağ Kur"
+
+#: ../src/TextStrings.cs:514
 msgid "Show Alt_ernating Row Colors"
 msgstr "Alternatif dizi renklerini göst_er"
 
-#: ../src/TextStrings.cs:510
+#: ../src/TextStrings.cs:515
 msgid "_Compact Layout"
 msgstr "_Kompakt düzeni"
 
-#: ../src/TextStrings.cs:511
+#: ../src/TextStrings.cs:516
 msgid "_Large Layout"
 msgstr "Daha faz_la düzen"
 
-#: ../src/TextStrings.cs:512
+#: ../src/TextStrings.cs:517
 msgid "Show _Offline Members"
 msgstr "_Çevrimdışı üyeler"
 
-#: ../src/TextStrings.cs:513
+#: ../src/TextStrings.cs:518
 msgid "Sort by _Name"
 msgstr "_Ada Göre Sırala"
 
-#: ../src/TextStrings.cs:514
+#: ../src/TextStrings.cs:519
 msgid "Sort by _Status"
 msgstr "_Duruma Göre Sırala"
 
-#: ../src/TextStrings.cs:515
+#: ../src/TextStrings.cs:520
 msgid "St_atusbar"
 msgstr "D_urum Çubuğu"
 
-#: ../src/TextStrings.cs:517
+#: ../src/TextStrings.cs:522
 msgid "_Show Haguichi in the notification area"
 msgstr "_Haguichi'yi bildirim alanında göster"
 
-#: ../src/TextStrings.cs:518
+#: ../src/TextStrings.cs:523
 msgid "Start Haguichi _minimized in the notification area"
 msgstr "Haguchi'yi _küçültülmüş olarak bildirim alanında başlat"
 
-#: ../src/TextStrings.cs:520
+#: ../src/TextStrings.cs:525
 msgid "C_onnect automatically on startup"
 msgstr "A_çılışta otomatik bağlan"
 
-#: ../src/TextStrings.cs:521
+#: ../src/TextStrings.cs:526
 msgid "_Reconnect automatically when connection is lost"
 msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
 
-#: ../src/TextStrings.cs:522
+#: ../src/TextStrings.cs:527
 msgid "_Disconnect on quit"
 msgstr "_Çıkışta bağlantıyı kopar"
 
-#: ../src/TextStrings.cs:524
+#: ../src/TextStrings.cs:529
 msgid "Display notification when a member _joins"
 msgstr "Üyeler _bağlandığında bildir"
 
-#: ../src/TextStrings.cs:525
+#: ../src/TextStrings.cs:530
 msgid "Display notification when a member _leaves"
 msgstr "Üyeler _ayrıldığında bildir"
 
-#: ../src/TextStrings.cs:526
+#: ../src/TextStrings.cs:531
 msgid "Display notification when a member comes o_nline"
 msgstr "Üyeler ç_evrimiçi olduğunda bildir"
 
-#: ../src/TextStrings.cs:527
+#: ../src/TextStrings.cs:532
 msgid "Display notification when a member goes o_ffline"
 msgstr "Üyeler çe_vrimdışı olduğunda bildir"
 
-#: ../src/TextStrings.cs:529
+#: ../src/TextStrings.cs:534
 msgid "Do you want to run tuncfg?"
 msgstr "tuncfg'yi çalıştırmak istiyor musunuz?"
 
-#: ../src/TextStrings.cs:530
+#: ../src/TextStrings.cs:535
 msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
@@ -639,139 +644,139 @@ msgstr ""
 "Hamachi bağlanmak için tuncfg'yi çalıştırmak istiyor.\n"
 "tuncfg'yi çalıştırmak yönetici ayrıcalıkları ister."
 
-#: ../src/TextStrings.cs:531
+#: ../src/TextStrings.cs:536
 msgid "_Run"
 msgstr "_Çalıştır"
 
-#: ../src/TextStrings.cs:532
+#: ../src/TextStrings.cs:537
 msgid "_Always ask before running tuncfg"
 msgstr "_tuncfg'yi çalıştırmadan önce sor"
 
-#: ../src/TextStrings.cs:533
+#: ../src/TextStrings.cs:538
 msgid "A_sk confirmation before running tuncfg"
 msgstr "tuncfg'yi çalıştırmadan önce yapılandırılmasını sor"
 
-#: ../src/TextStrings.cs:535
+#: ../src/TextStrings.cs:540
 msgid "Error connecting"
 msgstr "Bağlanma hatası"
 
-#: ../src/TextStrings.cs:536
+#: ../src/TextStrings.cs:541
 msgid "Hamachi login failed."
 msgstr "Hamachi girişi başarısız oldu."
 
-#: ../src/TextStrings.cs:537
+#: ../src/TextStrings.cs:542
 msgid "Connection refused."
 msgstr "Bağlantı reddedildi."
 
-#: ../src/TextStrings.cs:538
+#: ../src/TextStrings.cs:543
 msgid "No internet connection."
 msgstr "İnternet bağlantısı yok."
 
-#: ../src/TextStrings.cs:540
+#: ../src/TextStrings.cs:545
 msgid "Loading configuration failed"
 msgstr "Yapılandırma yüklemesi başarısız oldu"
 
-#: ../src/TextStrings.cs:541
+#: ../src/TextStrings.cs:546
 msgid "Hamachi could not launch due to a configuration load failure."
 msgstr "Hamachi bir yapılandırma yükleme hatası nedeniyle başlatılamadı."
 
-#: ../src/TextStrings.cs:543
+#: ../src/TextStrings.cs:548
 msgid "Member online"
 msgstr "Üye çevrimiçi"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: ../src/TextStrings.cs:544
+#: ../src/TextStrings.cs:549
 msgid "{0} came online in the network {1}"
 msgstr "{0}, {1} ağında çevrimiçi oldu"
 
-#: ../src/TextStrings.cs:545
+#: ../src/TextStrings.cs:550
 msgid "Member offline"
 msgstr "Üye çevrimdışı"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: ../src/TextStrings.cs:546
+#: ../src/TextStrings.cs:551
 msgid "{0} went offline in the network {1}"
 msgstr "{0}, {1} ağında çevrimdışı oldu"
 
-#: ../src/TextStrings.cs:547
+#: ../src/TextStrings.cs:552
 msgid "Member joined"
 msgstr "Üye bağlandı"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: ../src/TextStrings.cs:548
+#: ../src/TextStrings.cs:553
 msgid "{0} joined the network {1}"
 msgstr "{0}, {1} ağına bağlandı"
 
-#: ../src/TextStrings.cs:549
+#: ../src/TextStrings.cs:554
 msgid "Member left"
 msgstr "Üye ayrıldı"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: ../src/TextStrings.cs:550
+#: ../src/TextStrings.cs:555
 msgid "{0} left the network {1}"
 msgstr "{0}, {1} ağından ayrıldı"
 
-#: ../src/TextStrings.cs:552
+#: ../src/TextStrings.cs:557
 msgid "A_vailable commands:"
 msgstr "G_eçerli komutlar:"
 
-#: ../src/TextStrings.cs:553
+#: ../src/TextStrings.cs:558
 msgid "Command"
 msgstr "Komut"
 
-#: ../src/TextStrings.cs:554
+#: ../src/TextStrings.cs:559
 msgid "Available"
 msgstr "Geçerli"
 
-#: ../src/TextStrings.cs:556
+#: ../src/TextStrings.cs:561
 msgid "Add Command"
 msgstr "Komut Ekle"
 
-#: ../src/TextStrings.cs:557
+#: ../src/TextStrings.cs:562
 msgid "Edit Command"
 msgstr "Komutu Düzenle"
 
-#: ../src/TextStrings.cs:558
+#: ../src/TextStrings.cs:563
 msgid "_Command:"
 msgstr "_Komut:"
 
-#: ../src/TextStrings.cs:559
+#: ../src/TextStrings.cs:564
 msgid "_Label:"
 msgstr "_Etiket:"
 
-#: ../src/TextStrings.cs:560
+#: ../src/TextStrings.cs:565
 msgid "Use %A for address and %N for nickname"
 msgstr "Adres için %A, takma ad için %N kullanın"
 
-#: ../src/TextStrings.cs:562
+#: ../src/TextStrings.cs:567
 msgid "Click to choose an icon"
 msgstr "Simge seçmek için tıklayın"
 
-#: ../src/TextStrings.cs:563
+#: ../src/TextStrings.cs:568
 msgid "Choose Icon"
 msgstr "Simge Seç"
 
-#: ../src/TextStrings.cs:564
+#: ../src/TextStrings.cs:569
 msgid "_No Icon"
 msgstr "_Simge yok"
 
-#: ../src/TextStrings.cs:566
+#: ../src/TextStrings.cs:571
 msgid "Default"
 msgstr "Öntanımlı"
 
-#: ../src/TextStrings.cs:567
+#: ../src/TextStrings.cs:572
 msgid "_Default"
 msgstr "_Öntanımlı"
 
-#: ../src/TextStrings.cs:569
+#: ../src/TextStrings.cs:574
 msgid "Restore the default commands"
 msgstr "Öntanımlı komutları eski haline getir"
 
-#: ../src/TextStrings.cs:570
+#: ../src/TextStrings.cs:575
 msgid "Revert changes?"
 msgstr "Değişiklikleri eski haline getir?"
 
-#: ../src/TextStrings.cs:571
+#: ../src/TextStrings.cs:576
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
@@ -779,39 +784,39 @@ msgstr ""
 "Bütün değişiklikleri geri alarak öntanımlı komutlara\n"
 "geri dönmek istediğinize emin misiniz?"
 
-#: ../src/TextStrings.cs:573
+#: ../src/TextStrings.cs:578
 msgid "Move up"
 msgstr "Yukarı taşı"
 
-#: ../src/TextStrings.cs:574
+#: ../src/TextStrings.cs:579
 msgid "Move down"
 msgstr "Aşağı Taşı"
 
-#: ../src/TextStrings.cs:582
+#: ../src/TextStrings.cs:587
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
 msgstr[0] "_Ağ listesini her %S saniyede bir güncelle"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:590
+#: ../src/TextStrings.cs:595
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağda çevrimiçi oldu"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:598
+#: ../src/TextStrings.cs:603
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağda çevrimdışı oldu"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:606
+#: ../src/TextStrings.cs:611
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağa katıldu."
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:614
+#: ../src/TextStrings.cs:619
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"

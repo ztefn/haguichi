@@ -273,6 +273,7 @@ Türkçe (tr)
     public static string dataPathLabel;
     public static string chooseFolderTitle;
     
+    public static string updateLabel;
     public static string checkboxShowAlternatingRowColors;
     public static string layoutNormal;
     public static string layoutLarge;
@@ -510,6 +511,7 @@ Türkçe (tr)
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
         
+        updateLabel                         = Catalog.GetString ( "_Update Network List" );
         checkboxShowAlternatingRowColors    = Catalog.GetString ( "Show Alt_ernating Row Colors" );
         layoutNormal                        = Catalog.GetString ( "_Compact Layout" );
         layoutLarge                         = Catalog.GetString ( "_Large Layout" );

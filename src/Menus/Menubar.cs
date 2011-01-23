@@ -52,6 +52,7 @@ namespace Menus
         
         private ImageMenuItem preferences;
         
+        private ImageMenuItem update;
         public  CheckMenuItem showStatusbar;
         public  CheckMenuItem showAlternatingRowColors;
         private RadioMenuItem layoutGroup;
@@ -131,6 +132,10 @@ namespace Menus
             editMenuItem.Submenu = editMenu;
             
             
+            update = new ImageMenuItem ( TextStrings.updateLabel );
+            update.Activated += Controller.UpdateConnection;
+            update.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F5, Gdk.ModifierType.None, AccelFlags.Visible ) );
+            
             showStatusbar = new CheckMenuItem ( TextStrings.checkboxShowStatusbar );
             showStatusbar.Active = (bool) Config.Client.Get ( Config.Settings.ShowStatusbar );
             showStatusbar.Toggled += delegate
@@ -181,6 +186,8 @@ namespace Menus
             layoutNormal.Toggled += ChangeLayout;
             
             viewMenu = new Menu ();
+            viewMenu.Append ( update );
+            viewMenu.Add    ( new SeparatorMenuItem () );
             viewMenu.Append ( layoutNormal );
             viewMenu.Append ( layoutLarge );
             viewMenu.Add    ( new SeparatorMenuItem () );
@@ -258,6 +265,7 @@ namespace Menus
                     join.Sensitive = true;
                     create.Sensitive = true;
                     info.Sensitive = true;
+                    update.Sensitive = true;
                 
                     break;
                     
@@ -270,6 +278,7 @@ namespace Menus
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
+                    update.Sensitive = false;
                 
                     break;
                 
@@ -282,6 +291,7 @@ namespace Menus
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
+                    update.Sensitive = false;
                 
                     break;
                 
@@ -294,6 +304,7 @@ namespace Menus
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
+                    update.Sensitive = false;
                 
                     break;
                 
