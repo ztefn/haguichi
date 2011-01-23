@@ -13,12 +13,11 @@
               <SolutionItemReference path="..\Haguichi.csproj" />
               <SolutionItemReference path="..\po\po.mdproj" />
             </ChildEntries>
-            <ExcludedFiles></ExcludedFiles>
             <RootEntry path="..\Haguichi.sln" id=":root:" />
           </Builder>
         </Package>
       </Packages>
     </Packages>
-    <ReleaseVersion>1.0.4</ReleaseVersion>
+    <ReleaseVersion>1.0.5</ReleaseVersion>
   </PropertyGroup>
 </Project>
