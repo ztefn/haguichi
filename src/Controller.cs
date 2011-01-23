@@ -748,7 +748,7 @@ public static class Controller
                             
                             MainWindow.networkView.AddMember ( oNetwork, nMember );
                             
-                            AddMemberToHash ( membersLeftHash, nMember, oNetwork );
+                            AddMemberToHash ( membersJoinedHash, nMember, oNetwork );
                         }
                     }
                     
