@@ -29,6 +29,7 @@ public static class Controller
 {
     
     public static bool continueUpdate;
+    public static bool manualUpdate;
     public static bool restoreConnection;
     public static int restoreCountdown;
     public static int lastStatus;
@@ -537,7 +538,16 @@ public static class Controller
     }
     
     
-    public static bool UpdateConnection ()
+    public static void UpdateConnection ()
+    {
+        
+        manualUpdate = true;
+        UpdateConnectionTimeout ();
+        
+    }
+    
+    
+    private static bool UpdateConnectionTimeout ()
     {
         
         if ( continueUpdate )
@@ -591,8 +601,14 @@ public static class Controller
             
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Demo mode, not really updating list." );
             
-            /* Continue update interval */
-            UpdateCycle ();
+            if ( manualUpdate )
+            {
+                manualUpdate = false;
+            }
+            else
+            {
+                UpdateCycle (); // Continue update interval
+            }
             
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
@@ -768,8 +784,14 @@ public static class Controller
             NotifyMembersOnline ();
             NotifyMembersOffline ();
             
-            /* Continue update interval */
-            UpdateCycle ();
+            if ( manualUpdate )
+            {
+                manualUpdate = false;
+            }
+            else
+            {
+                UpdateCycle (); // Continue update interval
+            }
             
             MainWindow.statusBar.Push ( 0, TextStrings.connected );
             
@@ -851,7 +873,7 @@ public static class Controller
         
         if ( interval > 0 )
         {
-            GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnection ) );
+            GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnectionTimeout ) );
         }
         else
         {
