@@ -28,11 +28,12 @@ using Gtk;
 public static class Controller
 {
     
-    public static bool continueUpdate;
-    public static bool manualUpdate;
-    public static bool restoreConnection;
-    public static int restoreCountdown;
-    public static int lastStatus;
+    public  static bool continueUpdate;
+    public  static bool manualUpdate;
+    public  static bool restoreConnection;
+    public  static int restoreCountdown;
+    public  static int numUpdateCycles;
+    public  static int lastStatus;
     private static string startOutput;
     
     private static Hashtable membersLeftHash;
@@ -550,6 +551,14 @@ public static class Controller
     private static bool UpdateConnectionTimeout ()
     {
         
+        Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnectionTimeout", "Number of active update cycles: " + numUpdateCycles );
+        
+        if ( numUpdateCycles > 1 )
+        {
+            numUpdateCycles --;
+            return false;
+        }
+        
         if ( continueUpdate )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnection", "Retrieving connection status..." );
@@ -558,6 +567,10 @@ public static class Controller
             
             Thread thread = new Thread ( UpdateConnectionThread );
             thread.Start ();
+        }
+        else
+        {
+            numUpdateCycles --;
         }
         
         return false;

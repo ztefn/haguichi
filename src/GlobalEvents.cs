@@ -114,6 +114,7 @@ public class GlobalEvents
         }
         
         Controller.restoreConnection = false;
+        Controller.numUpdateCycles ++;
         Controller.UpdateCycle ();
         
     }
