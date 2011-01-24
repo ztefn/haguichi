@@ -63,6 +63,12 @@ public static class Controller
         if ( lastStatus >= 6 )
         {
             MainWindow.SetMode ( "Connected" );
+            
+            if ( Hamachi.ApiVersion == 1 )
+            {
+                Hamachi.GetNicks ();
+            }
+            
             GetNetworkList ();
         }
         else if ( lastStatus >= 5 )
@@ -73,15 +79,7 @@ public static class Controller
             }
             
             MainWindow.SetMode ( "Connecting" );
-            
-            if ( Hamachi.ApiVersion > 1 )
-            {
-                GoConnect ();
-            }
-            else if ( Hamachi.ApiVersion == 1 )
-            {
-                GetNicksAndNetworkList ();
-            }
+            GoConnect ();
         }
         else if ( ( lastStatus >= 3 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
@@ -119,33 +117,6 @@ public static class Controller
             MainWindow.SetMode ( "Not installed" );
             Dialogs.NotInstalled dlgNotInstalled = new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
         }
-        
-    }
-    
-    
-    private static void GetNicksAndNetworkList ()
-    {
-        
-        Thread thread = new Thread ( GetNicksAndNetworkListThread );
-        thread.Start ();
-        
-    }
-    
-    
-    private static void GetNicksAndNetworkListThread ()
-    {
-        
-        Application.Invoke ( delegate
-        {
-            MainWindow.statusBar.Push ( 0, TextStrings.gettingNicks );
-        });
-        
-        Hamachi.GetNicks ();
-        
-        uint wait = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.GetNicksWaitTime ) );
-        GLib.Timeout.Add ( wait, new GLib.TimeoutHandler ( TimedGetNetworkList ) );
-        
-        Hamachi.GetInfo (); // Get latest info to be able to update information dialog correcltly
         
     }
     
@@ -447,17 +418,18 @@ public static class Controller
             
             lastStatus = 6;
             
-            if ( Hamachi.ApiVersion > 1 )
+            if ( Hamachi.ApiVersion == 1 )
             {
-                Application.Invoke ( delegate
-                {
-                   GetNetworkList ();
-                });
+                Hamachi.GetNicks ();
+                Hamachi.GetInfo (); // Get latest info to be able to update information dialog correcltly
             }
-            else if ( Hamachi.ApiVersion == 1 )
+            
+            Thread.Sleep ( 1000 ); // Wait a second to get an updated list 
+            
+            Application.Invoke ( delegate
             {
-                GetNicksAndNetworkListThread ();
-            }
+               GetNetworkList ();
+            });
         }
         else
         {
@@ -473,19 +445,6 @@ public static class Controller
                 }
             });
         }
-        
-    }
-    
-    
-    private static bool TimedGetNetworkList ()
-    {
-        
-        Application.Invoke ( delegate
-        {
-            GetNetworkList ();
-        });
-        
-        return false;
         
     }
     

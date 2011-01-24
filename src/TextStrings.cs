@@ -138,7 +138,6 @@ Türkçe (tr)
     public static string starting;
     public static string loggingIn;
     public static string runningTuncfg;
-    public static string gettingNicks;
     public static string updating;
     
     public static string connectCountdown;
@@ -376,7 +375,6 @@ Türkçe (tr)
         starting                            = Catalog.GetString ( "Starting Hamachi..." );
         loggingIn                           = Catalog.GetString ( "Logging in..." );
         runningTuncfg                       = Catalog.GetString ( "Running tuncfg..." );
-        gettingNicks                        = Catalog.GetString ( "Getting nicknames..." );
         updating                            = Catalog.GetString ( "Updating..." );
         
         connectCountdown                    = Catalog.GetString ( "C_onnect (%S)" );
