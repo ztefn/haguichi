@@ -38,12 +38,14 @@ public class Network
     public string NameSortString;
     public string StatusSortString;
     
-    public DateTime lastUpdate;
+    private bool updating;
     
     
     public Network ()
     {
+        
         // Just for creating unassigned instances
+        
     }
     
     
@@ -59,7 +61,6 @@ public class Network
         this.Lock    = "";
         this.Approve = "";
         
-        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
     }
@@ -75,7 +76,6 @@ public class Network
         this.IsOwner = -1;
         this.OwnerId = "";
         
-        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
     }
@@ -93,20 +93,12 @@ public class Network
     public void Update ( Status status, string id, string name )
     {
         
-        /* 
-         * Make sure the last update wasn't in the GetListWaitTime timespan to prevent the background
-         * update process from overriding a more recent update triggered by some other event
-         */
-        int seconds = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.GetListWaitTime ) );
-        DateTime offset = DateTime.Now.Subtract ( new System.TimeSpan ( 0, 0, seconds ) );
-        
-        if ( offset > this.lastUpdate)
+        if ( !updating ) // Check this flag to prevent the background update process from overriding a very recent change
         {
             this.Status = status;
             this.Id     = id;
             this.Name   = name;
             
-            this.lastUpdate = DateTime.Now;
             SetSortStrings ();
         }
         
@@ -255,12 +247,13 @@ public class Network
     public void GoOnline ( object o, EventArgs args )
     {
         
+        updating = true;
+        
         Thread thread = new Thread ( GoOnlineThread );
         thread.Start ();
         
         this.Status = new Status ( "*" );
         
-        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
         MainWindow.networkView.UpdateNetwork ( this );
@@ -273,18 +266,21 @@ public class Network
         
         Hamachi.GoOnline ( this );
         
+        updating = false;
+        
     }
     
     
     public void GoOffline ( object o, EventArgs args )
     {
         
+        updating = true;
+        
         Thread thread = new Thread ( GoOfflineThread );
         thread.Start ();
         
         this.Status = new Status ( " " );
         
-        this.lastUpdate = DateTime.Now;
         SetSortStrings ();
         
         MainWindow.networkView.UpdateNetwork ( this );
@@ -296,6 +292,8 @@ public class Network
     {
         
         Hamachi.GoOffline ( this );
+        
+        updating = false;
         
     }
     
@@ -310,6 +308,8 @@ public class Network
     
     public void SetLock ( string locked )
     {
+        
+        updating = true;
         
         this.Lock = locked;
         
@@ -331,11 +331,15 @@ public class Network
         
         Hamachi.SetAccess ( this.Id, locked, this.Approve );
         
+        updating = false;
+        
     }
     
     
     public void SetApproval ( string approval )
     {
+        
+        updating = true;
         
         this.Approve = approval;
         
@@ -356,6 +360,8 @@ public class Network
         }
         
         Hamachi.SetAccess ( this.Id, locked, this.Approve );
+        
+        updating = false;
         
     }
     
