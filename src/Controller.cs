@@ -569,6 +569,10 @@ public static class Controller
                 UpdateList ();
             });
         }
+        else
+        {
+            numUpdateCycles --;
+        }
         
     }
     
