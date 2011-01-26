@@ -133,6 +133,7 @@ namespace Menus
             
             
             update = new ImageMenuItem ( TextStrings.updateLabel );
+            update.Image = new Image ( Stock.Refresh, IconSize.Menu );
             update.Activated += Controller.UpdateConnection;
             update.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F5, Gdk.ModifierType.None, AccelFlags.Visible ) );
             
