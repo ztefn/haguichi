@@ -643,39 +643,21 @@ public static class Hamachi
         string [] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetworkId = "";
         
-        int peerMinLength  = 0;
-        
-        int clientStart    = 0;
-        int clientLength   = 0;
-        int addressStart   = 0;
-        int addressLength  = 0;
-        int nickStart      = 0;
-        int nickLength     = 0;
-        int tunnelStart    = 0;
+        Regex networkRegex;
+        Regex normalMemberRegex;
+        Regex unapprovedMemberRegex;
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            peerMinLength  = 61;
-        
-            clientStart    = 7;
-            clientLength   = 12;
-            addressStart   = 48;
-            addressLength  = 13;
-            nickStart      = 21;
-            nickLength     = 25;
-            tunnelStart    = 80;
+            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.+?)([ ]+)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?" );
+            unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
-        else if ( Hamachi.ApiVersion == 1 )
+        else
         {
-            peerMinLength  = 49;
-            
-            clientStart    = 7;
-            clientLength   = 17;
-            addressStart   = 7;
-            addressLength  = 17;
-            nickStart      = 24;
-            nickLength     = 25;
-            tunnelStart    = 51;
+            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]+)(?<name>.+?)([ ]*)(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            unapprovedMemberRegex = new Regex ( "" );
         }
         
         foreach ( string s in split )
@@ -684,16 +666,16 @@ public static class Hamachi
             if ( s.Length > 5 ) // Check string for minimum chars
             {
             
-                if ( s.IndexOf ( "[" ) == 3 ) // String contains network
+                if ( s.IndexOf ( "[" ) == 3 ) // Line contains network
                 {
                     
-                    Status status = new Status ( s.Substring ( 1, 1 ) );
-                    string id     = s.Substring ( 4, s.IndexOf ( "]" ) - 4 );
+                    Status status = new Status ( networkRegex.Match ( s ).Groups["status"].ToString () );
+                    string id     = networkRegex.Match ( s ).Groups["id"].ToString ();
                     string name   = id;
                     
                     try
                     {
-                        name = s.Substring ( s.IndexOf ( "]" ) + 3, 27 ).TrimEnd ();
+                        name = networkRegex.Match ( s ).Groups["name"].ToString ().TrimEnd ();
                         
                         if ( name.Length == 0 )
                         {
@@ -711,16 +693,16 @@ public static class Hamachi
                     curNetworkId = id;
                     
                 }
-                else if ( s.IndexOf ( "?" ) == 5 ) // Unapproved peer
+                else if ( s.IndexOf ( "?" ) == 5 ) // Line contains unapproved member
                 {
                     
-                    Status status = new Status ( s.Substring ( 5, 1 ) );
-                    string client = s.Substring ( clientStart, clientLength ).TrimEnd ();
+                    Status status = new Status ( unapprovedMemberRegex.Match ( s ).Groups["status"].ToString () );
+                    string client = unapprovedMemberRegex.Match ( s ).Groups["id"].ToString ();
                     string nick   = TextStrings.unknown;
                     
                     Member member = new Member ( status, curNetworkId, "", nick, client, "" );
                     
-                    foreach (Network network in networks)
+                    foreach ( Network network in networks )
                     {
                         if ( network.Id == curNetworkId )
                         {
@@ -729,39 +711,35 @@ public static class Hamachi
                     }
                     
                 }
-                else if ( s.Length >= peerMinLength )
+                else // Line contains normal member
                 {
                     
-                    Status status = new Status ( s.Substring ( 5, 1 ) );
-                    string client = s.Substring ( clientStart, clientLength ).TrimEnd ();
-                    string address = s.Substring ( addressStart, addressLength ).TrimEnd ();
-                    string nick = s.Substring ( nickStart, nickLength ).TrimEnd ();
+                    Status status = new Status ( normalMemberRegex.Match ( s ).Groups["status"].ToString () );
+                    string client;
                     
-                    if ( ( nick == "" ) || ( nick == "anonymous" ) )
+                    if ( Hamachi.ApiVersion > 1 )
+                    {
+                        client = normalMemberRegex.Match ( s ).Groups["id"].ToString ();
+                    }
+                    else
+                    {
+                        client = normalMemberRegex.Match ( s ).Groups["address"].ToString ();
+                    }
+                    
+                    string address = normalMemberRegex.Match ( s ).Groups["address"].ToString ();
+                    string nick = normalMemberRegex.Match ( s ).Groups["name"].ToString ();
+                    
+                    if ( ( nick == "" ) ||
+                         ( nick == "anonymous" ) )
                     {
                         nick = TextStrings.anonymous;
                     }
                     
-                    string tunnel = "";
-                    
-                    try
-                    {
-                        tunnel = s.Substring ( tunnelStart ).TrimEnd ();
-                    }
-                    catch ( Exception e )
-                    {
-                        // No tunnel
-                    }
+                    string tunnel = normalMemberRegex.Match ( s ).Groups["tunnel"].ToString ();
 
                     Member member = new Member ( status, curNetworkId, address, nick, client, tunnel );
                     
-                    if ( ( nick.Length == 25 ) &&
-                         ( Hamachi.ApiVersion > 1 ) )
-                    {
-                        member.GetLongNick ();
-                    }
-                    
-                    foreach (Network network in networks)
+                    foreach ( Network network in networks )
                     {
                         if ( network.Id == curNetworkId )
                         {
@@ -776,6 +754,7 @@ public static class Hamachi
         }
         
         return networks;
+        
     }
     
     

@@ -19,6 +19,7 @@
 
 using System;
 using Gtk;
+using GLib;
 
 
 namespace Dialogs
@@ -331,7 +332,7 @@ namespace Dialogs
                 nick = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            nickEntry.Markup = nick;
+            nickEntry.Markup = Markup.EscapeText ( nick );
             
         }
         

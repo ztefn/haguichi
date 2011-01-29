@@ -61,10 +61,10 @@ public class Member
         this.Status   = status;
         this.Network  = network;
         this.Address  = address;
-        this.Nick     = nick;
         this.ClientId = client;
         this.Tunnel   = tunnel;
         
+        GetLongNick ( nick );
         SetSortStrings ();
     
     }
@@ -79,11 +79,20 @@ public class Member
     }
     
     
-    public void GetLongNick ()
+    public void GetLongNick ( string nick )
     {
         
-        Thread thread = new Thread ( GetLongNickThread );
-        thread.Start ();
+        if ( ( Hamachi.ApiVersion > 1 ) &&
+             ( ( this.Nick.Length >= 25 ) ||
+               ( this.Nick.EndsWith ( "�" ) ) ) )
+        {
+            Thread thread = new Thread ( GetLongNickThread );
+            thread.Start ();
+        }
+        else
+        {
+            this.Nick = nick;
+        }
         
     }
     

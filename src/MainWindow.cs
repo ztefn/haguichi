@@ -19,6 +19,7 @@
 
 using System;
 using Gtk;
+using GLib;
 
 
 public class MainWindow
@@ -208,7 +209,7 @@ public class MainWindow
     
     
     
-    [GLib.ConnectBefore]
+    [ConnectBefore]
     private void OnMoveResize ( object o, ConfigureEventArgs args )
     {
         
@@ -402,7 +403,7 @@ public class MainWindow
             nick = TextStrings.unavailable;
         }
         
-        nameLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span>", nick );
+        nameLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span>", Markup.EscapeText ( nick ) );
         
     }
     

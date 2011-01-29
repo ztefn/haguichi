@@ -20,6 +20,7 @@
 using System;
 using System.Collections;
 using Gtk;
+using GLib;
 
 
 public class NetworkView : TreeView
@@ -235,7 +236,7 @@ public class NetworkView : TreeView
                 }
                 else if ( ( network.OwnerId != "" ) && ( ownerNick != "" ) )
                 {
-                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, ownerNick );
+                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, Markup.EscapeText ( ownerNick ) );
                 }
                 else if ( network.OwnerId != "" )
                 {
@@ -266,7 +267,7 @@ public class NetworkView : TreeView
                     approveString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.approval, TextStrings.automatically );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}</span>", network.Name, idString, memberString, ownerString, approveString, lockString, statusString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}</span>", Markup.EscapeText ( network.Name ), idString, memberString, ownerString, approveString, lockString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -310,7 +311,7 @@ public class NetworkView : TreeView
                     tunnelString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", member.Nick, clientString, addressString, tunnelString, statusString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", Markup.EscapeText ( member.Nick ), clientString, addressString, tunnelString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -621,7 +622,7 @@ public class NetworkView : TreeView
         if ( IsNetwork ( model, iter ) )
         {
         
-            string name = GLib.Markup.EscapeText ( network.Name );
+            string name = Markup.EscapeText ( network.Name );
             name = name.Replace ( "\n", "" );
             name = name.Replace ( "\r", "" );
             name = name.Replace ( "\t", "" );
@@ -667,7 +668,7 @@ public class NetworkView : TreeView
         else
         {
             
-            string name = GLib.Markup.EscapeText ( member.Nick );
+            string name = Markup.EscapeText ( member.Nick );
             name = name.Replace ( "\n", "" );
             name = name.Replace ( "\r", "" );
             name = name.Replace ( "\t", "" );
