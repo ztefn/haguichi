@@ -57,7 +57,7 @@ public class Member
     
     public void Update ( Status status, string network, string address, string nick, string client, string tunnel )
     {
-    
+        
         this.Status   = status;
         this.Network  = network;
         this.Address  = address;
@@ -66,16 +66,16 @@ public class Member
         
         GetLongNick ( nick );
         SetSortStrings ();
-    
+        
     }
     
     
     private void SetSortStrings ()
     {
-    
+        
         NameSortString = this.Nick + this.ClientId;
         StatusSortString = this.Status.statusSortable + this.Nick + this.ClientId;
-    
+        
     }
     
     
@@ -102,7 +102,7 @@ public class Member
         
         string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
         Debug.Log ( Debug.Domain.Hamachi, "Network.GetLongNickThread", output );
-                
+        
         this.Nick = Hamachi.Retrieve ( output, "nickname" );
         
     }
@@ -110,24 +110,25 @@ public class Member
     
     public void CopyAddressToClipboard ( object o, EventArgs args )
     {
-    
+        
         Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
         clip.Text = this.Address;
-    
+        
     }
     
     
     public void CopyClientIdToClipboard ( object o, EventArgs args )
     {
-    
+        
         Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
         clip.Text = this.ClientId;
-    
+        
     }
     
     
     public void Approve ( object o, EventArgs args )
     {
+        
         if ( Config.Settings.DemoMode )
         {
             this.Nick    = "Nick";
@@ -143,12 +144,13 @@ public class Member
             Hamachi.Approve ( this );
             Controller.UpdateConnection (); // Update list
         }
-    
+        
     }
     
     
     public void Reject ( object o, EventArgs args )
     {
+        
         if ( Config.Settings.DemoMode )
         {
             MainWindow.networkView.RemoveMember ( MainWindow.networkView.ReturnNetworkById ( this.Network ), this );
@@ -158,7 +160,7 @@ public class Member
             Hamachi.Reject ( this );
             Controller.UpdateConnection (); // Update list
         }
-    
+        
     }
     
     
@@ -187,7 +189,7 @@ public class Member
                 Controller.UpdateConnection (); // Update list
             }
         }
-    
+        
     }
     
 }
