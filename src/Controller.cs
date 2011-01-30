@@ -621,6 +621,12 @@ public static class Controller
                 restoreConnection = true;
             }
             
+            if ( ( Hamachi.ApiVersion > 1 ) &&
+                 ( lastStatus == 3 ) )
+            {
+                Config.Settings.SetNickAfterLogin = true; // Restore nickname after Hamachi² crash
+            }
+            
             GlobalEvents.ConnectionStopped ();
             
         }
