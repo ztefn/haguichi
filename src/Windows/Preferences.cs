@@ -40,6 +40,7 @@ namespace Windows
         public  CheckButton disconnectOnQuit;
         public  CheckButton askTunCfg;
         
+        public  CheckButton notifyOnConnectionLoss;
         public  CheckButton notifyOnMemberJoin;
         public  CheckButton notifyOnMemberLeave;
         public  CheckButton notifyOnMemberOnline;
@@ -56,10 +57,11 @@ namespace Windows
         public Preferences ( string title ) : base ( title )
         {
             
-            this.WindowPosition = WindowPosition.Center;
+            this.TransientFor   = Haguichi.mainWindow.ReturnWindow ();
+            this.WindowPosition = WindowPosition.CenterOnParent;
+            this.IconList       = MainWindow.appIcons;
             this.DefaultWidth   = 440;
             this.DefaultHeight  = 360;
-            this.IconList       = MainWindow.appIcons;
             this.BorderWidth    = 12;
             this.DeleteEvent   += OnWinDelete;
             
@@ -92,7 +94,14 @@ namespace Windows
             
             IndentHBox hbox1 = new IndentHBox ();
             hbox1.AddWidget ( startInTray );
-                        
+            
+            notifyOnConnectionLoss = new CheckButton ( TextStrings.checkboxNotifyConnectionLost );
+            notifyOnConnectionLoss.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss );
+            notifyOnConnectionLoss.Toggled += delegate
+            {
+                Config.Client.Set ( Config.Settings.NotifyOnConnectionLoss, notifyOnConnectionLoss.Active );
+            };
+            
             notifyOnMemberJoin = new CheckButton ( TextStrings.checkboxNotifyMemberJoin );
             notifyOnMemberJoin.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin );
             notifyOnMemberJoin.Toggled += delegate
@@ -113,7 +122,7 @@ namespace Windows
             {
                 Config.Client.Set ( Config.Settings.NotifyOnMemberOnline, notifyOnMemberOnline.Active );
             };
-
+            
             notifyOnMemberOffline = new CheckButton ( TextStrings.checkboxNotifyMemberOffline );
             notifyOnMemberOffline.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline );
             notifyOnMemberOffline.Toggled += delegate
@@ -124,6 +133,7 @@ namespace Windows
             GroupBox trayBox = new GroupBox ( TextStrings.notifyGroup );
             trayBox.AddWidget ( showTrayIcon );
             trayBox.AddWidget ( hbox1 );
+            trayBox.AddWidget ( notifyOnConnectionLoss );
             trayBox.AddWidget ( notifyOnMemberJoin );
             trayBox.AddWidget ( notifyOnMemberLeave );
             trayBox.AddWidget ( notifyOnMemberOnline );

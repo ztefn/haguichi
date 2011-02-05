@@ -31,15 +31,16 @@ namespace Dialogs
         public VBox Contents;
         
         
-        public Base ( string title, string header, string message, string icon ) : base ()
+        public Base ( Window parent, string title, string header, string message, string icon ) : base ()
         {
         
-            this.Title = title;
-            this.IconList = MainWindow.appIcons;
-            this.HasSeparator = false;
-            this.Resizable = false;
-            this.BorderWidth = 6;
-            this.Response += SetResponseText;
+            this.Title           = title;
+            this.TransientFor    = parent;
+            this.IconList        = MainWindow.appIcons;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
+            this.BorderWidth     = 6;
+            this.Response       += SetResponseText;
             
             Image img = new Image ( "", IconSize.Dialog );
             img.Yalign = 0;

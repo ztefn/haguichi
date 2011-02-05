@@ -208,6 +208,13 @@ public class MainWindow
     }
     
     
+    public Window ReturnWindow ()
+    {
+        
+        return window;
+        
+    }
+    
     
     [ConnectBefore]
     private void OnMoveResize ( object o, ConfigureEventArgs args )

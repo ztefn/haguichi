@@ -30,19 +30,19 @@ namespace Dialogs
         public string response;
         
         
-        public Confirm ( string heading, string message, string icon, string label, string stock ) : base ( "", heading, message, icon )
+        public Confirm ( Window parent, string heading, string message, string icon, string label, string stock ) : base ( parent, "", heading, message, icon )
         {
             
+            this.TransientFor    = parent;
+            this.Modal           = true;
             this.SkipTaskbarHint = true;
+            this.Response       += ResponseHandler;
             
             Button cancelBut = ( Button ) this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             
             Button okBut = ( Button ) this.AddButton ( Stock.Ok, ResponseType.Ok );
             okBut.Label = label;
             okBut.Image = new Image ( stock, IconSize.Button );
-            
-            
-            this.Response += ResponseHandler;
             
             this.Run ();
             this.Destroy ();
@@ -53,7 +53,7 @@ namespace Dialogs
         private void ResponseHandler ( object o, ResponseArgs args )
         {
         
-            response = args.ResponseId.ToString();
+            response = args.ResponseId.ToString ();
             
         }
 

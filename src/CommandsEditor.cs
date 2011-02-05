@@ -276,7 +276,7 @@ public class CommandsEditor : VBox
         string heading = String.Format ( TextStrings.revertHeading );
         string message = String.Format ( TextStrings.revertMessage );
             
-        Dialogs.Confirm dlg = new Dialogs.Confirm ( heading, message, "Question", label, null );
+        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.preferencesWindow, heading, message, "Question", label, null );
         
         if ( dlg.response == "Ok" )
         {

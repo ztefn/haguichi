@@ -173,7 +173,7 @@ public class Member
         string heading = String.Format ( TextStrings.confirmEvictMemberHeading, this.Nick );
         string message = String.Format ( TextStrings.confirmEvictMemberMessage, this.Nick, network.Name );
             
-        Dialogs.Confirm dlg = new Dialogs.Confirm ( heading, message, "Warning", label, null );
+        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Warning", label, null );
         
         if ( dlg.response == "Ok" )
         {

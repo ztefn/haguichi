@@ -282,7 +282,11 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg3 = new Dialogs.Message ( TextStrings.configErrorHeading, TextStrings.configErrorMessage, "Error", output );
+                Dialogs.Message dlg3 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                                             TextStrings.configErrorHeading,
+                                                             TextStrings.configErrorMessage,
+                                                             "Error",
+                                                             output );
             });
         }
         else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 )
@@ -303,7 +307,11 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg2 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorConnectionRefused, "Error", output );
+                Dialogs.Message dlg2 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                                             TextStrings.connectErrorHeading,
+                                                             TextStrings.connectErrorConnectionRefused,
+                                                             "Error",
+                                                             output );
             });
         }
         else
@@ -350,7 +358,11 @@ public static class Controller
                 else
                 {
                     GlobalEvents.ConnectionStopped ();
-                    Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, "Error", null );
+                    Dialogs.Message msgDlg = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                                                   TextStrings.connectErrorHeading,
+                                                                   TextStrings.connectErrorNoInternetConnection,
+                                                                   "Error",
+                                                                   null );
                 }
             });
         }
@@ -441,7 +453,11 @@ public static class Controller
                 
                 if ( !restoreConnection )
                 {
-                    Dialogs.Message dlg1 = new Dialogs.Message ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, "Error", output );
+                    Dialogs.Message dlg1 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                                                 TextStrings.connectErrorHeading,
+                                                                 TextStrings.connectErrorLoginFailed,
+                                                                 "Error",
+                                                                 output );
                 }
             });
         }
@@ -625,6 +641,11 @@ public static class Controller
                  ( lastStatus == 3 ) )
             {
                 Config.Settings.SetNickAfterLogin = true; // Restore nickname after Hamachi² crash
+            }
+            
+            if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )
+            {
+                Notify n = new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
             }
             
             GlobalEvents.ConnectionStopped ();

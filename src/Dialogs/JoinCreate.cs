@@ -58,16 +58,18 @@ namespace Dialogs
         public JoinCreate ( string mode, string title ) : base ()
         {
             
-            this.Mode = mode;
+            this.Mode            = mode;
             
-            this.Title = title;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.Title           = title;
+            this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
+            this.IconList        = MainWindow.appIcons;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 6;
+            this.BorderWidth     = 6;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
             
             
             heading = new Label ();

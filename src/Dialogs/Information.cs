@@ -54,14 +54,16 @@ namespace Dialogs
         public Information ( string title ) : base ()
         {
 
-            this.Title = title;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.Title           = title;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 6;
+            this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
+            this.IconList        = MainWindow.appIcons;
+            this.BorderWidth     = 6;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
             
             
             Image img = new Image ( Stock.DialogInfo, IconSize.Dialog );

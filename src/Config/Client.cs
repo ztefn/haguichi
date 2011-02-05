@@ -95,6 +95,11 @@ namespace Config
                     Haguichi.preferencesWindow.askTunCfg.Active = ( bool ) val;
                 }
                 
+                if ( key.Contains ( Config.Settings.NotifyOnConnectionLoss.KeyName ) )
+                {
+                    Haguichi.preferencesWindow.notifyOnConnectionLoss.Active = ( bool ) val;
+                }
+                
                 if ( key.Contains ( Config.Settings.NotifyOnMemberJoin.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnMemberJoin.Active = ( bool ) val;

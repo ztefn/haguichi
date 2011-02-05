@@ -226,7 +226,7 @@ Türkçe (tr)
     public static string createNetworkMessage;
     
     public static string checkboxGoOnlineInNewNetwork;
-
+    
     public static string errorNetworkNotFound;
     public static string errorInvalidPassword;
     public static string errorNetworkFull;
@@ -288,25 +288,27 @@ Türkçe (tr)
     public static string reconnectOnConnectionLoss;
     public static string disconnectOnQuit;
     
+    public static string checkboxNotifyConnectionLost;
     public static string checkboxNotifyMemberJoin;
     public static string checkboxNotifyMemberLeave;
     public static string checkboxNotifyMemberOnline;
     public static string checkboxNotifyMemberOffline;
-
+    
     public static string runTuncfgHeading;
     public static string runTuncfgMessage;
     public static string runLabel;
     public static string checkboxAskBeforeRunningTuncfg;
     public static string checkboxAskBeforeRunningTuncfg2;
-
+    
     public static string connectErrorHeading;
     public static string connectErrorLoginFailed;
     public static string connectErrorConnectionRefused;
     public static string connectErrorNoInternetConnection;
-
+    
     public static string configErrorHeading;
     public static string configErrorMessage;
-
+    
+    public static string notifyConnectionLost;
     public static string notifyMemberOnlineHeading;
     public static string notifyMemberOnlineMessage;
     public static string notifyMemberOfflineHeading;
@@ -522,9 +524,10 @@ Türkçe (tr)
         checkboxStartInTray                 = Catalog.GetString ( "Start Haguichi _minimized in the notification area" );
         
         connectOnStartup                    = Catalog.GetString ( "C_onnect automatically on startup" );
-        reconnectOnConnectionLoss           = Catalog.GetString ( "_Reconnect automatically when connection is lost" );
+        reconnectOnConnectionLoss           = Catalog.GetString ( "_Reconnect automatically when the connection is lost" );
         disconnectOnQuit                    = Catalog.GetString ( "_Disconnect on quit" );
         
+        checkboxNotifyConnectionLost        = Catalog.GetString ( "Display notification when the connection is l_ost" );
         checkboxNotifyMemberJoin            = Catalog.GetString ( "Display notification when a member _joins" );
         checkboxNotifyMemberLeave           = Catalog.GetString ( "Display notification when a member _leaves" );
         checkboxNotifyMemberOnline          = Catalog.GetString ( "Display notification when a member comes o_nline" );
@@ -544,6 +547,7 @@ Türkçe (tr)
         configErrorHeading                  = Catalog.GetString ( "Loading configuration failed" );
         configErrorMessage                  = Catalog.GetString ( "Hamachi could not launch due to a configuration load failure." );
         
+        notifyConnectionLost                = Catalog.GetString ( "Hamachi lost connection" );
         notifyMemberOnlineHeading           = Catalog.GetString ( "Member online" );
         notifyMemberOnlineMessage           = Catalog.GetString ( "{0} came online in the network {1}" );
         notifyMemberOfflineHeading          = Catalog.GetString ( "Member offline" );

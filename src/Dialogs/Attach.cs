@@ -42,15 +42,16 @@ namespace Dialogs
         public Attach () : base ()
         {
             
-            this.Title = TextStrings.attachTitle;
-            this.Modal = true;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.Title           = TextStrings.attachTitle;
+            this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
+            this.IconList        = MainWindow.appIcons;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 6;
+            this.BorderWidth     = 6;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
             
             
             heading = new Label ();
@@ -172,12 +173,12 @@ namespace Dialogs
             }
             else if ( output.IndexOf ( ".. failed, not found" ) != -1 )
             {
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error", output );
+                Dialogs.Message msgDlg = new Dialogs.Message ( this, TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error", output );
                 return;
             }
             else if ( output.IndexOf ( ".. failed" ) != -1 )
             {
-                Dialogs.Message msgDlg = new Dialogs.Message ( TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error", output );
+                Dialogs.Message msgDlg = new Dialogs.Message ( this, TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error", output );
                 return;
             }
             else

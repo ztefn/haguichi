@@ -27,15 +27,16 @@ namespace Dialogs
     public class NotInstalled : Dialogs.Base
     {
 
-        public NotInstalled ( string header, string message, string icon ) : base ( "", header, message, icon )
+        public NotInstalled ( string header, string message, string icon ) : base ( Haguichi.mainWindow.ReturnWindow (), "", header, message, icon )
         {
             
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             this.AddButton ( TextStrings.downloadLabel, ResponseType.Ok );
             
+            this.Modal           = true;
             this.SkipTaskbarHint = true;
+            this.Response       += ResponseHandler;
             
-            this.Response += ResponseHandler;
             this.Run ();
             this.Destroy ();
             

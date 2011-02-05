@@ -27,7 +27,7 @@ namespace Dialogs
     public class RunTunCfg : Dialogs.Base
     {
         
-        public RunTunCfg () : base ( "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
+        public RunTunCfg () : base ( Haguichi.mainWindow.ReturnWindow (), "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
         {
             
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
@@ -46,6 +46,7 @@ namespace Dialogs
             bc.Expand = false;
             bc.Padding = 6;
             
+            this.Modal           = true;
             this.SkipTaskbarHint = true;
            
             this.Run ();

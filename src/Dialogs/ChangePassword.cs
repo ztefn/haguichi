@@ -42,17 +42,19 @@ namespace Dialogs
         public ChangePassword ( Network network ) : base ()
         {
             
-            this.Network = network;
+            this.Network         = network;
             
-            this.Title = TextStrings.changePasswordTitle;
-            this.Modal = true;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.Title           = TextStrings.changePasswordTitle;
+            this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
+            this.IconList        = MainWindow.appIcons;
+            this.Modal           = true;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 6;
+            this.BorderWidth     = 6;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
             
             
             heading = new Label ();

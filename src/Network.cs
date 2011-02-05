@@ -382,7 +382,7 @@ public class Network
         string heading = String.Format ( TextStrings.confirmLeaveNetworkHeading, this.Name );
         string message = String.Format ( TextStrings.confirmLeaveNetworkMessage, this.Name );
         
-        Dialogs.Confirm dlg = new Dialogs.Confirm ( heading, message, "Warning", label, null );
+        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Warning", label, null );
         
         if ( dlg.response == "Ok" )
         {
@@ -407,7 +407,7 @@ public class Network
         string heading = String.Format ( TextStrings.confirmDeleteNetworkHeading, this.Name );
         string message = String.Format ( TextStrings.confirmDeleteNetworkMessage, this.Name );
         
-        Dialogs.Confirm dlg = new Dialogs.Confirm ( heading, message, "Warning", label, Stock.Delete );
+        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Warning", label, Stock.Delete );
         
         if ( dlg.response == "Ok" )
         {

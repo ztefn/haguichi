@@ -51,19 +51,20 @@ namespace Dialogs
         public AddEditCommand ( string mode, CommandsEditor editor, string icon, string label, string command ) : base ()
         {
             
-            this.Mode = mode;
-            this.Editor = editor;
+            this.Mode            = mode;
+            this.Editor          = editor;
+            this.CommandIcon     = icon;
             
-            this.CommandIcon = icon;
-            
-            this.Modal = true;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.TransientFor    = Haguichi.preferencesWindow;
+            this.IconList        = MainWindow.appIcons;
+            this.Modal           = true;
+            this.HasSeparator    = false;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
-            this.BorderWidth = 9;
+            this.BorderWidth     = 9;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
             
             
             if ( Mode == "Add" )

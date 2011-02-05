@@ -27,7 +27,7 @@ namespace Dialogs
     public class Message : Dialogs.Base
     {
         
-        public Message ( string header, string message, string icon, string output ) : base ( "", header, message, icon )
+        public Message ( Window parent, string header, string message, string icon, string output ) : base ( parent, "", header, message, icon )
         {
             
             this.AddButton ( Stock.Ok, ResponseType.Ok );
@@ -57,6 +57,9 @@ namespace Dialogs
                 this.AddContent ( expander );
             }
             
+            
+            this.TransientFor    = parent;
+            this.Modal           = true;
             this.SkipTaskbarHint = true;
             
             this.Run ();

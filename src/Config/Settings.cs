@@ -75,6 +75,7 @@ namespace Config
         public static Key WinWidth                          = new Key ( "main_window/width", 230 );
         public static Key WinX                              = new Key ( "main_window/x_pos", 100 );
         public static Key WinY                              = new Key ( "main_window/y_pos", 90 );
+        public static Key NotifyOnConnectionLoss            = new Key ( "notifications/connection_loss", true );
         public static Key NotifyOnMemberJoin                = new Key ( "notifications/member_join", true );
         public static Key NotifyOnMemberLeave               = new Key ( "notifications/member_leave", true );
         public static Key NotifyOnMemberOffline             = new Key ( "notifications/member_offline", true );

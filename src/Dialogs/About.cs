@@ -33,8 +33,7 @@ namespace Dialogs
             AboutDialog.SetUrlHook   ( new AboutDialogActivateLinkFunc ( OpenUrl      ) ); // App website
             AboutDialog.SetEmailHook ( new AboutDialogActivateLinkFunc ( OpenUserInfo ) ); // Credits
             
-            this.IconList            = MainWindow.appIcons;
-            
+            this.Logo                = MainWindow.appIcons [4];
             this.ProgramName         = TextStrings.appName;
             this.Comments            = TextStrings.appComments;
             this.Version             = TextStrings.appVersion;
@@ -46,8 +45,8 @@ namespace Dialogs
             this.TranslatorCredits   = TextStrings.appTranslatorCredits;
             this.Artists             = TextStrings.appArtists;
             
-            this.Logo                = MainWindow.appIcons [4];
-            
+            this.TransientFor        = Haguichi.mainWindow.ReturnWindow ();
+            this.IconList            = MainWindow.appIcons;
             this.DeleteEvent        += OnDeleteEvent;
             this.Response           += ResponseHandler;
             

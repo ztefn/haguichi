@@ -40,22 +40,25 @@ namespace Dialogs
         public ChooseIcon ( Dialogs.AddEditCommand opener, string currentIcon ) : base ()
         {
             
-            this.Opener = opener;
-            this.CurrentIcon = currentIcon;
+            this.Opener          = opener;
+            this.CurrentIcon     = currentIcon;
             
-            this.Rows = 10;
-            this.Columns = 6;
+            this.Rows            = 10;
+            this.Columns         = 6;
             
-            this.Modal = true;
-            this.HasSeparator = false;
-            this.Resizable = false;
+            this.Title           = TextStrings.chooseIconTitle;
+            this.TransientFor    = opener;
+            this.Modal           = true;
+            this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.IconList = MainWindow.appIcons;
+            this.HasSeparator    = false;
+            this.IconList        = MainWindow.appIcons;
             this.WindowPosition = WindowPosition.Mouse;
-            this.BorderWidth = 9;
+            this.BorderWidth     = 9;
+            this.DeleteEvent    += OnDeleteEvent;
+            
             this.ActionArea.Destroy ();
-            this.DeleteEvent += OnDeleteEvent;
-            this.Title = TextStrings.chooseIconTitle;
+            
             
             Table = new Table ( Rows, Columns, false );
             

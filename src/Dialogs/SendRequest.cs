@@ -31,7 +31,7 @@ namespace Dialogs
         private string NetworkPassword;
         
         
-        public SendRequest ( string header, string message, string icon, string name, string password ) : base ( "", header, message, icon )
+        public SendRequest ( string header, string message, string icon, string name, string password ) : base ( Haguichi.joinWindow, "", header, message, icon )
         {
             
             this.NetworkName     = name;
@@ -40,9 +40,10 @@ namespace Dialogs
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             this.AddButton ( TextStrings.sendRequestLabel, ResponseType.Ok );
             
+            this.Modal           = true;
             this.SkipTaskbarHint = true;
+            this.Response       += ResponseHandler;
             
-            this.Response += ResponseHandler;
             this.Run ();
             this.Destroy ();
             
