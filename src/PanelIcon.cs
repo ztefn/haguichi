@@ -57,15 +57,12 @@ public class PanelIcon : StatusIcon
         IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.disconnected" ) );
         
         this.IconName = disconnected;
-        this.Tooltip  = TextStrings.appName;
         
     }
     
     
     public void SetMode ( string mode )
     {
-    
-        string tipTail = " - ";
         
         this.lastMode = mode;
         
@@ -74,42 +71,35 @@ public class PanelIcon : StatusIcon
             
             case "Connecting":
             
-                tipTail      += TextStrings.connecting;
                 GLib.Timeout.Add ( 400, new GLib.TimeoutHandler ( updateStatus ) );
             
                 break;
                 
             case "Connected":
             
-                tipTail      += TextStrings.connected;
                 this.IconName = connected;
             
                 break;
                 
             case "Disconnected":
             
-                tipTail      += TextStrings.disconnected;
                 this.IconName = disconnected;
             
                 break;
             
             case "Not configured":
             
-                tipTail      += TextStrings.notConfigured;
                 this.IconName = disconnected;
             
                 break;
             
             case "Not installed":
             
-                tipTail      += TextStrings.notInstalled;
                 this.IconName = disconnected;
             
                 break;
             
         }
-        
-        this.Tooltip = TextStrings.appName + tipTail;
         
     }
 

@@ -329,12 +329,14 @@ namespace Dialogs
         public void SetNick ( string nick )
         {
             
+            nick = Markup.EscapeText ( nick );
+            
             if ( nick == "" )
             {
                 nick = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            nickEntry.Markup = Markup.EscapeText ( nick );
+            nickEntry.Markup = nick;
             
         }
         

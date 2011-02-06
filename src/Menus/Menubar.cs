@@ -67,7 +67,7 @@ namespace Menus
         private ImageMenuItem about;
         
         
-        public Menubar()
+        public Menubar ()
         {
             
             configure = new ImageMenuItem ( TextStrings.configureLabel );

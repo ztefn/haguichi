@@ -143,12 +143,10 @@ Türkçe (tr)
     public static string connectCountdown;
     public static string connectAutomatically;
     
-    public static string notConfigured;
     public static string notConfiguredHeading;
     public static string notConfiguredMessage;
     public static string configureLabel;
     
-    public static string notInstalled;
     public static string notInstalledHeading;
     public static string notInstalledMessage;
     public static string downloadLabel;
@@ -382,12 +380,10 @@ Türkçe (tr)
         connectCountdown                    = Catalog.GetString ( "C_onnect (%S)" );
         connectAutomatically                = Catalog.GetString ( "Connect a_utomatically" );
         
-        notConfigured                       = Catalog.GetString ( "Not configured" );
         notConfiguredHeading                = Catalog.GetString ( "Hamachi is not configured" );
         notConfiguredMessage                = Catalog.GetString ( "You need to configure Hamachi before you can connect." );
         configureLabel                      = Catalog.GetString ( "C_onfigure" );
 
-        notInstalled                        = Catalog.GetString ( "Not installed" );
         notInstalledHeading                 = Catalog.GetString ( "Hamachi is not installed" );
         notInstalledMessage                 = Catalog.GetString ( "Please download Hamachi and follow the installation instructions." );
         downloadLabel                       = Catalog.GetString ( "_Download" );

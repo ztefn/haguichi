@@ -500,7 +500,7 @@ public class MainWindow
                 nameButton.Sensitive = false;
                 
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.notConfigured );
+                statusBar.Push ( 0, TextStrings.notConfiguredHeading );
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );
@@ -518,7 +518,7 @@ public class MainWindow
                 nameButton.Sensitive = false;
                 
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.notInstalled );
+                statusBar.Push ( 0, TextStrings.notInstalledHeading );
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );
