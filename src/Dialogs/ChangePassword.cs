@@ -42,6 +42,8 @@ namespace Dialogs
         public ChangePassword ( Network network ) : base ()
         {
             
+            Haguichi.modalDialog = this;
+            
             this.Network         = network;
             
             this.Title           = TextStrings.changePasswordTitle;
@@ -127,19 +129,11 @@ namespace Dialogs
             
             
             this.VBox.Add ( hbox );
-            this.ShowAll ();
             
             passwordEntry.GrabFocus ();
             changeBut.GrabDefault ();
             
-        }
-        
-        
-        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
-        {
-            
-            Dismiss ();
-            args.RetVal = true;
+            this.ShowAll ();
             
         }
         
@@ -154,10 +148,21 @@ namespace Dialogs
             Dismiss ();
             
         }
-
-
+        
+        
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
+        {
+            
+            Dismiss ();
+            args.RetVal = true;
+            
+        }
+        
+        
         private void Dismiss ()
         {
+            
+            Haguichi.modalDialog = null;
             
             this.Destroy ();
             

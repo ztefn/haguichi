@@ -27,11 +27,10 @@ class Haguichi
     
     public static MainWindow mainWindow;
     public static Dialogs.About aboutDialog;
-    public static Dialogs.ChangeNick nickWindow;
-    public static Dialogs.JoinCreate joinWindow;
-    public static Dialogs.JoinCreate createWindow;
     public static Dialogs.Information informationWindow;
     public static Windows.Preferences preferencesWindow;
+    
+    public static Dialog modalDialog;
     
     public static Connection connection;
     
@@ -98,9 +97,6 @@ class Haguichi
         
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();
-        nickWindow          = new Dialogs.ChangeNick ( TextStrings.changeNickTitle );
-        joinWindow          = new Dialogs.JoinCreate ( "Join", TextStrings.joinNetworkTitle );
-        createWindow        = new Dialogs.JoinCreate ( "Create", TextStrings.createNetworkTitle );
         informationWindow   = new Dialogs.Information ( TextStrings.informationTitle );
         preferencesWindow   = new Windows.Preferences ( TextStrings.preferencesTitle );
         

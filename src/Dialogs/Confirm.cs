@@ -33,6 +33,8 @@ namespace Dialogs
         public Confirm ( Window parent, string heading, string message, string icon, string label, string stock ) : base ( parent, "", heading, message, icon )
         {
             
+            Haguichi.modalDialog = this;
+            
             this.TransientFor    = parent;
             this.Modal           = true;
             this.SkipTaskbarHint = true;
@@ -52,11 +54,13 @@ namespace Dialogs
         
         private void ResponseHandler ( object o, ResponseArgs args )
         {
-        
+            
             response = args.ResponseId.ToString ();
             
+            Haguichi.modalDialog = null;
+            
         }
-
+        
     }
 
 }

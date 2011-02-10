@@ -30,6 +30,8 @@ namespace Dialogs
         public RunTunCfg () : base ( Haguichi.mainWindow.ReturnWindow (), "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
         {
             
+            Haguichi.modalDialog = this;
+            
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             
             Button runBut = ( Button ) this.AddButton ( TextStrings.runLabel, ResponseType.Ok );
@@ -48,7 +50,8 @@ namespace Dialogs
             
             this.Modal           = true;
             this.SkipTaskbarHint = true;
-           
+            this.Response       += ResponseHandler;
+            
             this.Run ();
             this.Destroy ();
             
@@ -62,7 +65,15 @@ namespace Dialogs
             Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, ask );
             
         }
-
+        
+        
+        private void ResponseHandler ( object o, ResponseArgs args )
+        {
+            
+            Haguichi.modalDialog = null;
+            
+        }
+        
     }
 
 }

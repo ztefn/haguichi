@@ -58,11 +58,14 @@ namespace Dialogs
         public JoinCreate ( string mode, string title ) : base ()
         {
             
+            Haguichi.modalDialog = this;
+            
             this.Mode            = mode;
             
             this.Title           = title;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
             this.IconList        = MainWindow.appIcons;
+            this.Modal           = true;
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
@@ -205,7 +208,6 @@ namespace Dialogs
             hbox.Add ( vbox );
             
             
-            
             Box.BoxChild bc7 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
             bc7.Padding = 6;
                         
@@ -216,15 +218,20 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.VBox.ShowAll ();
             
+            
             if ( Hamachi.ApiVersion > 1 )
             {
                 goOnline.Hide ();
             }
+            else if ( Hamachi.ApiVersion == 1 )
+            {
+                goOnline.Active = ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork );
+            }
             
             SetMode ( mode );
             
-            HideFailure ();
-                        
+            this.Show ();
+            
         }
         
         
@@ -237,30 +244,12 @@ namespace Dialogs
         }
         
         
-        public void Open ()
-        {
-            
-            goOnline.Active = ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork );
-            
-            if ( this.Visible )
-            {
-                this.Present ();
-            }
-            else
-            {
-                this.Visible = true;
-                this.Show ();
-            }
-            
-        }
-
-
         private void Dismiss ()
         {
             
-            this.Visible = false;
-            this.Hide ();
-            SetMode ( "Reset" );
+            Haguichi.modalDialog = null;
+            
+            this.Destroy ();
             
         }
         
@@ -341,7 +330,7 @@ namespace Dialogs
             }
             else if ( output.IndexOf ( ".. failed, manual approval required" ) != -1 )
             {
-                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
+                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( this, TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
                 
                 SetMode ( "Normal" );
                 if ( dlg.ResponseText == "Ok" )
@@ -452,7 +441,9 @@ namespace Dialogs
         
         private void CheckNameLength ( object obj, EventArgs args )
         {
+            
             CheckNameLength ();
+            
         }
         
         
@@ -541,14 +532,7 @@ namespace Dialogs
                     
                 case "Normal":
                                         
-                    if ( Mode == "Join" )
-                    {
-                        SetMode ( "Join" );
-                    }
-                    if ( Mode == "Create" )
-                    {
-                        SetMode ( "Create" );
-                    }
+                    SetMode ( Mode );
                     
                     cancelBut.Sensitive = true;
                     
@@ -559,19 +543,6 @@ namespace Dialogs
                     passwordEntry.Sensitive = true;
                 
                     CheckNameLength ();
-                    
-                    break;
-                
-                case "Reset":
-                         
-                    SetMode ( "Normal" );
-                
-                    HideFailure ();
-                    
-                    nameEntry.GrabFocus ();
-                
-                    nameEntry.DeleteText ( 0, -1 );
-                    passwordEntry.DeleteText ( 0, -1 );
                     
                     break;
                 

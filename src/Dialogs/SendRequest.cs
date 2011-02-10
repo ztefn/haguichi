@@ -31,7 +31,7 @@ namespace Dialogs
         private string NetworkPassword;
         
         
-        public SendRequest ( string header, string message, string icon, string name, string password ) : base ( Haguichi.joinWindow, "", header, message, icon )
+        public SendRequest ( Dialog parent, string header, string message, string icon, string name, string password ) : base ( parent, "", header, message, icon )
         {
             
             this.NetworkName     = name;

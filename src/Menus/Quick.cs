@@ -101,8 +101,10 @@ namespace Menus
         
         public void SetAttach ( bool visible, bool sensitive )
         {
+            
             attach.Visible   = visible;
             attach.Sensitive = sensitive;
+            
         }
         
         

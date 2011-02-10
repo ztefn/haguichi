@@ -40,9 +40,12 @@ namespace Dialogs
         public ChangeNick ( string title ) : base ()
         {
             
+            Haguichi.modalDialog = this;
+            
             this.Title           = title;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
             this.IconList        = MainWindow.appIcons;
+            this.Modal           = true;
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
@@ -76,6 +79,7 @@ namespace Dialogs
             buttonBox.Spacing = 6;
             
             nickEntry = new Entry ();
+            nickEntry.Text = Config.Settings.LastNick;
             nickEntry.ActivatesDefault = true;
             nickEntry.MaxLength = 64;
             
@@ -122,18 +126,11 @@ namespace Dialogs
             
             
             this.VBox.Add ( hbox );
-            this.VBox.ShowAll ();
             
+            nickEntry.GrabFocus ();
             changeBut.GrabDefault ();
             
-        }
-        
-        
-        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
-        {
-            
-            Dismiss ();
-            args.RetVal = true;
+            this.ShowAll ();
             
         }
         
@@ -153,30 +150,23 @@ namespace Dialogs
         }
         
         
-        public void Open ()
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
             
-            if ( this.Visible )
-            {
-                this.Present ();
-            }
-            else
-            {
-                this.Visible = true;
-                this.Show ();
-                nickEntry.GrabFocus ();
-            }
+            Dismiss ();
+            args.RetVal = true;
             
         }
-
-
+        
+        
         private void Dismiss ()
         {
             
-            this.Visible = false;
-            this.Hide ();
             GlobalEvents.UpdateNick ();
-            SetMode ( "Reset" );
+            
+            Haguichi.modalDialog = null;
+            
+            this.Destroy ();
             
         }
         
@@ -185,14 +175,6 @@ namespace Dialogs
         {
             
             Dismiss ();
-            
-        }
-        
-        
-        public void SetNick ( string nick )
-        {
-            
-            nickEntry.Text = nick;
             
         }
         
@@ -210,16 +192,6 @@ namespace Dialogs
                     changeBut.Label = TextStrings.changingLabel;
                     
                     nickEntry.Sensitive = false;
-                    
-                    break;
-                    
-                case "Reset":
-                    cancelBut.Sensitive = true;
-                    
-                    changeBut.Sensitive = true;
-                    changeBut.Label = TextStrings.changeLabel;
-                    
-                    nickEntry.Sensitive = true;
                     
                     break;
                 

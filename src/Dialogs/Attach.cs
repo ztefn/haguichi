@@ -42,9 +42,12 @@ namespace Dialogs
         public Attach () : base ()
         {
             
+            Haguichi.modalDialog = this;
+            
             this.Title           = TextStrings.attachTitle;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
             this.IconList        = MainWindow.appIcons;
+            this.Modal           = true;
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
@@ -134,9 +137,10 @@ namespace Dialogs
             
             
             this.VBox.Add ( hbox );
-            this.ShowAll ();
             
             idEntry.GrabFocus ();
+            
+            this.ShowAll ();
             
         }
         
@@ -209,6 +213,8 @@ namespace Dialogs
         
         private void Dismiss ()
         {
+            
+            Haguichi.modalDialog = null;
             
             this.Destroy ();
             

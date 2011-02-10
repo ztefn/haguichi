@@ -52,12 +52,12 @@ public class MainWindow
     
         Application.Init ();
         
-        IconTheme.AddBuiltinIcon ( "haguichi", 16,  Gdk.Pixbuf.LoadFromResource ( "16x16.haguichi" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 22,  Gdk.Pixbuf.LoadFromResource ( "22x22.haguichi" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 24,  Gdk.Pixbuf.LoadFromResource ( "24x24.haguichi" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 32,  Gdk.Pixbuf.LoadFromResource ( "32x32.haguichi" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 48,  Gdk.Pixbuf.LoadFromResource ( "48x48.haguichi" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi", 64,  Gdk.Pixbuf.LoadFromResource ( "64x64.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 32, Gdk.Pixbuf.LoadFromResource ( "32x32.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.haguichi" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi", 64, Gdk.Pixbuf.LoadFromResource ( "64x64.haguichi" ) );
         
         IconTheme.AddBuiltinIcon ( "haguichi-node-online",      12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-online"      ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-offline",     12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-offline"     ) );
@@ -310,51 +310,58 @@ public class MainWindow
     public void ToggleMainWindow ( object obj, EventArgs args )
     {
         
-        if ( Config.Settings.WinMinimized )
+        if ( Haguichi.modalDialog == null )
         {
-            window.Deiconify ();
-        }
-
-        if ( Config.Settings.ShowMainWindow )
-        {
-            window.Hide ();
+            if ( Config.Settings.WinMinimized )
+            {
+                window.Deiconify ();
+            }
+    
+            if ( Config.Settings.ShowMainWindow )
+            {
+                window.Hide ();
+            }
+            else
+            {
+                /*
+                 * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
+                 */
+                int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
+                int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
+                
+                window.Show ();
+                
+                /*
+                 * Move window to the current desktop.
+                 */
+                
+                while ( x < 0 )
+                {
+                    x += window.Screen.Width;
+                }
+                while ( x > window.Screen.Width )
+                {
+                    x -= window.Screen.Width;
+                }
+                
+                while ( y < 0 )
+                {
+                    y += window.Screen.Height;
+                }
+                while ( y > window.Screen.Height )
+                {
+                    y -= window.Screen.Height;
+                }
+                
+                window.Move ( x, y );
+            }
+            
+            Config.Settings.ShowMainWindow = !Config.Settings.ShowMainWindow;
         }
         else
         {
-            /*
-             * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
-             */
-            int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
-            int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
-            
-            window.Show ();
-            
-            /*
-             * Move window to the current desktop.
-             */
-            
-            while ( x < 0 )
-            {
-                x += window.Screen.Width;
-            }
-            while ( x > window.Screen.Width )
-            {
-                x -= window.Screen.Width;
-            }
-            
-            while ( y < 0 )
-            {
-                y += window.Screen.Height;
-            }
-            while ( y > window.Screen.Height )
-            {
-                y -= window.Screen.Height;
-            }
-            
-            window.Move ( x, y );
+            Haguichi.modalDialog.Present ();
         }
-        
-        Config.Settings.ShowMainWindow = !Config.Settings.ShowMainWindow;
         
     }
     
@@ -363,7 +370,14 @@ public class MainWindow
     void StatusIconPopupHandler ( object o, PopupMenuArgs args )
     {
         
-        quickMenu.Popup ();
+        if ( Haguichi.modalDialog == null )
+        {
+            quickMenu.Popup ();
+        }
+        else
+        {
+            Haguichi.modalDialog.Present ();
+        }
         
     }
     

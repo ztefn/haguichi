@@ -201,12 +201,6 @@ namespace Config
                     MainWindow.networkView.SetLayout ( ( string ) val );
                 }
                 
-                if ( key.Contains ( Config.Settings.GoOnlineInNewNetwork.KeyName ) )
-                {
-                    Haguichi.joinWindow.goOnline.Active   = ( bool ) val;
-                    Haguichi.createWindow.goOnline.Active = ( bool ) val;
-                }
-                
                 if ( key.Contains ( Config.Settings.CommandTimeout.KeyName ) )
                 {
                     Command.SetTimeout ();
