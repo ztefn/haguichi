@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-02-06 19:18:50+0100\n"
-"PO-Revision-Date: 2011-01-14 19:20+0000\n"
+"POT-Creation-Date: 2011-02-06 19:18+0100\n"
+"PO-Revision-Date: 2011-02-11 01:00+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-02-12 15:20+0000\n"
+"X-Generator: Launchpad (build 12351)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -552,9 +552,8 @@ msgid "Choose Folder"
 msgstr "Zvolit složku"
 
 #: ../src/TextStrings.cs:509
-#, fuzzy
 msgid "_Update Network List"
-msgstr "Vytvořit síť"
+msgstr "_Aktualizovat seznam sítí"
 
 #: ../src/TextStrings.cs:510
 msgid "Show Alt_ernating Row Colors"
@@ -605,9 +604,8 @@ msgid "_Disconnect on quit"
 msgstr "_Odpojit při ukončení"
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid "Display notification when the connection is l_ost"
-msgstr "Zobrazit upozornění, když se člen připojí"
+msgstr "Zobrazit upozornění, když je spojení _ztraceno"
 
 #: ../src/TextStrings.cs:526
 msgid "Display notification when a member _joins"
@@ -674,9 +672,8 @@ msgid "Hamachi could not launch due to a configuration load failure."
 msgstr "Hamachi nemohlo být spuštěno z důvodu selhání načtení nastavení."
 
 #: ../src/TextStrings.cs:545
-#, fuzzy
 msgid "Hamachi lost connection"
-msgstr "Hamachi není nastaveno"
+msgstr "Hamachi spojení ztraceno"
 
 #: ../src/TextStrings.cs:546
 msgid "Member online"
@@ -829,14 +826,17 @@ msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
-#~ msgid "Not configured"
-#~ msgstr "Nekonfigurováno"
-
-#~ msgid "Not installed"
-#~ msgstr "Nenainstalováno"
-
 #~ msgid "Getting nicknames..."
 #~ msgstr "Získávání přezdívek..."
 
+#~ msgid "Not configured"
+#~ msgstr "Nekonfigurováno"
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Odpojení členové"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "Automatiky obnovit spojení, pokud bylo ztraceno"
+
+#~ msgid "Not installed"
+#~ msgstr "Nenainstalováno"
