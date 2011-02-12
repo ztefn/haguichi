@@ -79,7 +79,7 @@ namespace Dialogs
             buttonBox.Spacing = 6;
             
             nickEntry = new Entry ();
-            nickEntry.Text = Config.Settings.LastNick;
+            nickEntry.Text = ( string ) Config.Client.Get ( Config.Settings.Nickname );
             nickEntry.ActivatesDefault = true;
             nickEntry.MaxLength = 64;
             
@@ -142,8 +142,7 @@ namespace Dialogs
             
             this.Name = nickEntry.GetChars ( 0, -1 );
             
-            Hamachi.SetNick ( this.Name );
-            GlobalEvents.UpdateNick ( this.Name );
+            GlobalEvents.SetNick ( this.Name );
             
             Dismiss ();
             
@@ -161,8 +160,6 @@ namespace Dialogs
         
         private void Dismiss ()
         {
-            
-            GlobalEvents.UpdateNick ();
             
             Haguichi.modalDialog = null;
             

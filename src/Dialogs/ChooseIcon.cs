@@ -53,7 +53,7 @@ namespace Dialogs
             this.SkipTaskbarHint = true;
             this.HasSeparator    = false;
             this.IconList        = MainWindow.appIcons;
-            this.WindowPosition = WindowPosition.Mouse;
+            this.WindowPosition  = WindowPosition.Mouse;
             this.BorderWidth     = 9;
             this.DeleteEvent    += OnDeleteEvent;
             

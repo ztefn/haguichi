@@ -30,14 +30,12 @@ namespace Config
         public static string LocalePath                     = System.AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
         public static string DefaultHamachiDataPath         = Environment.GetFolderPath ( Environment.SpecialFolder.Personal ) + "/.hamachi";
         public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower ();
-        public static string LastNick                       = "";
         
         public static bool Debugging                        = false;
         public static bool DemoMode                         = false;
         public static bool ShowMainWindow                   = true;
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
-        public static bool SetNickAfterLogin                = false;
         
         public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
                                                                 "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A",
@@ -54,6 +52,7 @@ namespace Config
         public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
+        public static Key Nickname                          = new Key ( "config/nickname", "" );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 60.0 );
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
@@ -85,7 +84,7 @@ namespace Config
         public static void Init ()
         {
             
-            if ( System.Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
+            if ( Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {
                 SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/",
                                                          "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;krdc %A",

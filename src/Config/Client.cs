@@ -63,6 +63,11 @@ namespace Config
                     MainWindow.networkView.SetLayout ();
                 }
                 
+                if ( key.Contains ( Config.Settings.Nickname.KeyName ) )
+                {
+                    GlobalEvents.UpdateNick ( ( string ) val );
+                }
+                
                 if ( key.Contains ( Config.Settings.HamachiDataPath.KeyName ) )
                 {
                     Haguichi.preferencesWindow.pathButton.SetCurrentFolder ( ( string ) val );

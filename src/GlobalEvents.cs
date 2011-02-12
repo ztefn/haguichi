@@ -108,25 +108,11 @@ public class GlobalEvents
         
         Haguichi.informationWindow.SetVersion ();
         
-        if ( Config.Settings.SetNickAfterLogin == true )
-        {
-            GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
-        }
+        GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
         
         Controller.restoreConnection = false;
         Controller.numUpdateCycles ++;
         Controller.UpdateCycle ();
-        
-    }
-    
-    
-    private static bool SetNickAfterLogin ()
-    {
-        
-        Hamachi.SetNick ( Config.Settings.LastNick );
-        UpdateNick ( Config.Settings.LastNick );
-        
-        return false;
         
     }
     
@@ -142,8 +128,7 @@ public class GlobalEvents
             return;
         }
         
-        /* Stop update interval */
-        Controller.continueUpdate = false;
+        Controller.continueUpdate = false; // Stop update interval
         
         Haguichi.connection.ClearNetworks ();
         
@@ -177,10 +162,38 @@ public class GlobalEvents
     }
     
     
-    public static void UpdateNick ( string nick )
+    public static void SetNick ( string nick )
     {
         
-        Config.Settings.LastNick = nick;
+        Config.Client.Set ( Config.Settings.Nickname, nick );
+        
+        UpdateNick ( nick );
+        
+        Hamachi.SetNick ( nick );
+        
+    }
+    
+    
+    private static bool SetNickAfterLogin ()
+    {
+        
+        string nick   = ( string ) Config.Client.Get ( Config.Settings.Nickname );
+        string output = Hamachi.SetNick ( nick );
+        
+        if ( output.Contains ( ".. failed, busy" ) )
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+    }
+    
+    
+    public static void UpdateNick ( string nick )
+    {
         
         Haguichi.mainWindow.SetNick ( nick );
         Haguichi.informationWindow.SetNick ( nick );
@@ -191,9 +204,15 @@ public class GlobalEvents
     public static void UpdateNick ()
     {
         
-        if ( Config.Settings.LastNick.Length > 0 )
+        string nick = ( string ) Config.Client.Get ( Config.Settings.Nickname );
+        
+        if ( Config.Settings.DemoMode )
         {
-            UpdateNick ( Config.Settings.LastNick );
+            UpdateNick ( "Joe Demo" );
+        }
+        else if ( nick.Length > 0 )
+        {
+            UpdateNick ( nick );
         }
         else
         {
@@ -208,9 +227,12 @@ public class GlobalEvents
     {
         
         string nick = Hamachi.GetNick ();
-        UpdateNick ( nick );
         
-    }
+        Config.Client.Set ( Config.Settings.Nickname, nick );
+        
+        UpdateNick ( nick );
+         
+     }
     
     
     public static void ChangeNick ( object obj, EventArgs args )

@@ -281,7 +281,7 @@ namespace Dialogs
                 output = Hamachi.JoinNetwork ( this.NetworkName, this.NetworkPassword );
             }
             
-            if ( output.IndexOf ( ".. ok" ) != -1 )
+            if ( output.Contains ( ".. ok" ) )
             {
                 Dismiss ();
                 
@@ -293,42 +293,42 @@ namespace Dialogs
                 Controller.UpdateConnection (); // Update list
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, network not found" ) != -1 )
+            else if ( output.Contains ( ".. failed, network not found" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNotFound );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, invalid password" ) != -1 )
+            else if ( output.Contains ( ".. failed, invalid password" ) )
             {
                 ShowFailure ( TextStrings.errorInvalidPassword );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, the network is full" ) != -1 )
+            else if ( output.Contains ( ".. failed, the network is full" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkFull );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, network is locked" ) != -1 )
+            else if ( output.Contains ( ".. failed, network is locked" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkLocked );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, you are already a member" ) != -1 )
+            else if ( output.Contains ( ".. failed, you are already a member" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, manual approval required" ) != -1 )
+            else if ( output.Contains ( ".. failed, manual approval required" ) )
             {
                 Dialogs.SendRequest dlg = new Dialogs.SendRequest ( this, TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
                 
@@ -339,7 +339,7 @@ namespace Dialogs
                 }
                 return;
             }
-            else if ( output.IndexOf ( ".. failed" ) != -1 )
+            else if ( output.Contains ( ".. failed" ) )
             {
                 ShowFailure ( TextStrings.errorUnknown );
                 
@@ -373,7 +373,7 @@ namespace Dialogs
             
             string output = Hamachi.CreateNetwork ( this.NetworkName, this.NetworkPassword );
             
-            if ( output.IndexOf ( ".. ok" ) != -1 )
+            if ( output.Contains ( ".. ok" ) )
             {
                 Dismiss ();
                 
@@ -385,21 +385,21 @@ namespace Dialogs
                 Controller.UpdateConnection (); // Update list
                 return;
             }
-            else if ( output.IndexOf ( "Network name must be between 4 and 64 characters long" ) != -1 )
+            else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNameTooShort );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, network name is already taken" ) != -1 )
+            else if ( output.Contains ( ".. failed, network name is already taken" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNameTaken );
                 
                 SetMode ( "Normal" );
                 return;
             }
-            else if ( output.IndexOf ( ".. failed" ) != -1 )
+            else if ( output.Contains ( ".. failed" ) )
             {
                 ShowFailure ( TextStrings.errorUnknown );
                 

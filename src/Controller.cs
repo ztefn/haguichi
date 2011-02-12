@@ -147,8 +147,8 @@ public static class Controller
             return 0;
         }
         
-        if ( ( output.IndexOf ( "Cannot find configuration directory" ) == 0 ) ||
-             ( output.IndexOf ( "You do not have permission to control the hamachid daemon." ) == 0 ) )
+        if ( ( output.Contains ( "Cannot find configuration directory" ) ) ||
+             ( output.Contains ( "You do not have permission to control the hamachid daemon." ) ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not configured." );
             return 1;
@@ -160,7 +160,7 @@ public static class Controller
             return 2;
         }
         
-        if ( output.IndexOf ( "Hamachi does not seem to be running." ) == 0 )
+        if ( output.Contains ( "Hamachi does not seem to be running." ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not started." );
             return 3;
@@ -233,9 +233,9 @@ public static class Controller
         
         string output = startOutput;
         
-        if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
+        if ( ( output.Contains ( ".. ok" ) ) ||
              ( output == "empty" ) ||
-             ( output.IndexOf ( "Hamachi is already started" ) == 0 ) )
+             ( output.Contains ( "Hamachi is already started" ) ) )
         {
             /* Ok, started */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
@@ -246,7 +246,7 @@ public static class Controller
             });
             GoLoginThread ();
         }
-        else if ( output.IndexOf ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) == 0 )
+        else if ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
         {
             /* Hamachi is starting */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is starting." );
@@ -276,7 +276,7 @@ public static class Controller
                 });
             }
         }
-        else if ( output.IndexOf ( "cfg: failed to load" ) != -1 )
+        else if ( output.Contains ( "cfg: failed to load" ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Not properly configured, showing dialog." );
             Application.Invoke ( delegate
@@ -289,7 +289,7 @@ public static class Controller
                                                              output );
             });
         }
-        else if ( output.IndexOf ( "tap: connect() failed 2 (No such file or directory)" ) != -1 )
+        else if ( output.Contains ( "tap: connect() failed 2 (No such file or directory)" ) )
         {
             /* Not able to start, running tuncfg required */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Tuncfg required." );
@@ -299,7 +299,7 @@ public static class Controller
                 GoRunTuncfgAndTryStartAgain ();
             });
         }
-        else if ( output.IndexOf ( "tap: connect() failed 111 (Connection refused)" ) != -1 )
+        else if ( output.Contains ( "tap: connect() failed 111 (Connection refused)" ) )
         {
             /* Not able to start, connection refused */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Connection refused, showing dialog" );
@@ -423,8 +423,8 @@ public static class Controller
         
         string output = Hamachi.Login ();
         
-        if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
-             ( output.IndexOf ( "Already logged in" ) == 0 ) ) // Ok, logged in.
+        if ( ( output.Contains ( ".. ok" ) ) ||
+             ( output.Contains ( "Already logged in" ) ) ) // Ok, logged in.
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Connected!" );
             
@@ -635,12 +635,6 @@ public static class Controller
             if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
             {
                 restoreConnection = true;
-            }
-            
-            if ( ( Hamachi.ApiVersion > 1 ) &&
-                 ( lastStatus == 3 ) )
-            {
-                Config.Settings.SetNickAfterLogin = true; // Restore nickname after Hamachi² crash
             }
             
             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )

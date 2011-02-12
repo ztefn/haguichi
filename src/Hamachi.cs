@@ -487,11 +487,6 @@ public static class Hamachi
     public static string GetNick ()
     {
         
-        if ( Config.Settings.DemoMode )
-        {
-            return "Joe Demo";
-        }
-        
         string nick = "";
         
         if ( Hamachi.ApiVersion > 1 )
@@ -758,39 +753,20 @@ public static class Hamachi
     }
     
     
-    public static void SetNick ( string nick )
+    public static string SetNick ( string nick )
     {
         
-        if ( !Config.Settings.DemoMode )
+        string output = "";
+        
+        if ( ( !Config.Settings.DemoMode ) &&
+             ( Controller.lastStatus >= 6 ) )
         {
-            Config.Settings.SetNickAfterLogin = false;
-            
-            string output = "";
-            int status = Controller.lastStatus;
-            
-            if ( ( Hamachi.ApiVersion == 1 ) &&
-                 ( status < 4 ) )
-            {
-                string filePath = ( string ) Config.Client.Get ( Config.Settings.HamachiDataPath ) + "/state";
-                output = Command.ReturnOutput ( "bash", "-c \"echo 'RenameTo   " + nick + "' >> " + filePath + "\"" );
-            }
-            else if ( ( Hamachi.ApiVersion == 1 ) &&
-                      ( status >= 4 ) )
-            {
-                output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
-            }
-            else if ( ( Hamachi.ApiVersion > 1 ) &&
-                      ( status >= 6 ) )
-            {
-                output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
-            }
-            else if ( Hamachi.ApiVersion > 1 )
-            {
-                Config.Settings.SetNickAfterLogin = true;   
-            }
+            output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
             
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
         }
+        
+        return output;
         
     }
     
