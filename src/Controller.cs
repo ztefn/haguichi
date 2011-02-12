@@ -84,10 +84,7 @@ public static class Controller
         else if ( ( lastStatus >= 3 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
-            }
+            restoreConnection = true;
             
             MainWindow.SetMode ( "Connecting" );
             GoConnect ();
@@ -95,10 +92,7 @@ public static class Controller
         else if ( ( lastStatus >= 2 ) &&
                   ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
         {
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
-            }
+            restoreConnection = true;
             
             MainWindow.SetMode ( "Disconnected" );
             WaitForInternetCycle ();
@@ -214,7 +208,11 @@ public static class Controller
     public static bool WaitForInternet ()
     {
         
-        if ( HasInternetConnection () )
+        if ( !restoreConnection )
+        {
+            return false;
+        }
+        else if ( HasInternetConnection () )
         {
             GlobalEvents.StartHamachi ();
             return false;
@@ -445,10 +443,15 @@ public static class Controller
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Error connecting, showing dialog." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoLoginThread", "Error connecting." );
             
             Application.Invoke ( delegate
             {
+                if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+                {
+                    restoreConnection = true;
+                }
+                
                 GlobalEvents.ConnectionStopped ();
                 
                 if ( !restoreConnection )
@@ -619,6 +622,7 @@ public static class Controller
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Internet connection lost." );
             
             GlobalEvents.ConnectionStopped ();
+            numUpdateCycles --;
             
             if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
             {
@@ -632,17 +636,18 @@ public static class Controller
             
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Hamachi connection lost." );
             
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
-            }
-            
             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )
             {
                 Notify n = new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
             }
             
+            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
+            {
+                restoreConnection = true;
+            }
+            
             GlobalEvents.ConnectionStopped ();
+            numUpdateCycles --;
             
         }
         else if ( lastStatus >= 6 ) // We're connected allright

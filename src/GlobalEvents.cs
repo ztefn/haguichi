@@ -21,7 +21,7 @@ using System;
 using System.Threading;
 using Gtk;
 
-    
+
 public class GlobalEvents
 {
     
@@ -44,10 +44,7 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
-        if ( Controller.restoreCountdown > 0 )
-        {
-            Controller.restoreConnection = false;
-        }
+        Controller.restoreConnection = false;
         Controller.GoConnect ();
         
     }

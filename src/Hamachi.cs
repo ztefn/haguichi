@@ -69,7 +69,8 @@ public static class Hamachi
         
         string output = lastInfo;
         
-        if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
+        if ( ( output == "timeout" ) ||
+             ( output == "error" ) ) // 'bash: hamachi: command not found' causes exception
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "0" );
             return 0;
