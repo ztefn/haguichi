@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-02-06 19:18:50+0100\n"
-"PO-Revision-Date: 2011-01-14 09:06+0000\n"
+"POT-Creation-Date: 2011-02-06 19:18+0100\n"
+"PO-Revision-Date: 2011-02-12 19:23+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-02-12 22:00+0000\n"
+"X-Generator: Launchpad (build 12351)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -552,9 +552,8 @@ msgid "Choose Folder"
 msgstr "Välj mapp"
 
 #: ../src/TextStrings.cs:509
-#, fuzzy
 msgid "_Update Network List"
-msgstr "Skapa nätverk"
+msgstr "_Uppdatera nätverkslistan"
 
 #: ../src/TextStrings.cs:510
 msgid "Show Alt_ernating Row Colors"
@@ -605,9 +604,8 @@ msgid "_Disconnect on quit"
 msgstr "_Koppla från vid stängning"
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid "Display notification when the connection is l_ost"
-msgstr "Visa notifiering när en användare _går in"
+msgstr "Visa notifiering när anslutningen för_loras"
 
 #: ../src/TextStrings.cs:526
 msgid "Display notification when a member _joins"
@@ -676,9 +674,8 @@ msgstr ""
 "konfigurationen."
 
 #: ../src/TextStrings.cs:545
-#, fuzzy
 msgid "Hamachi lost connection"
-msgstr "Hamachi är inte konfiguerat"
+msgstr "Hamachi förlorade anslutningen"
 
 #: ../src/TextStrings.cs:546
 msgid "Member online"
@@ -826,17 +823,14 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
-#~ msgid "Not configured"
-#~ msgstr "Inte konfiguerad"
-
-#~ msgid "Not installed"
-#~ msgstr "Inte installerad"
+#~ msgid "seconds"
+#~ msgstr "sekunder"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Hämtar smeknamn..."
 
-#~ msgid "seconds"
-#~ msgstr "sekunder"
+#~ msgid "Not configured"
+#~ msgstr "Inte konfiguerad"
 
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusrad"
@@ -847,8 +841,14 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 #~ msgid "Go O_ffline"
 #~ msgstr "Koppla _ner"
 
+#~ msgid "Not installed"
+#~ msgstr "Inte installerad"
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Frånkopplade användare"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "_Återanslut automatiskt när anslutningen avbrutits"
 
 #~ msgid "Nickname:"
 #~ msgstr "Smeknamn:"

@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-02-06 19:18:50+0100\n"
-"PO-Revision-Date: 2011-01-14 11:23+0000\n"
+"POT-Creation-Date: 2011-02-06 19:18+0100\n"
+"PO-Revision-Date: 2011-02-12 20:19+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-02-12 21:56+0000\n"
+"X-Generator: Launchpad (build 12351)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -553,9 +553,8 @@ msgid "Choose Folder"
 msgstr "Elija una carpeta"
 
 #: ../src/TextStrings.cs:509
-#, fuzzy
 msgid "_Update Network List"
-msgstr "Crear red"
+msgstr "_Actualizar la Lista de Redes"
 
 #: ../src/TextStrings.cs:510
 msgid "Show Alt_ernating Row Colors"
@@ -606,9 +605,8 @@ msgid "_Disconnect on quit"
 msgstr "_Desconectar al salir"
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid "Display notification when the connection is l_ost"
-msgstr "Mostrar una notificación cuando un miembro se _una"
+msgstr "Mostrar una notificación cuando se pierda la conexión"
 
 #: ../src/TextStrings.cs:526
 msgid "Display notification when a member _joins"
@@ -676,9 +674,8 @@ msgstr ""
 "Hamachi no ha podido cargarse debido a un fallo al cargar la configuración."
 
 #: ../src/TextStrings.cs:545
-#, fuzzy
 msgid "Hamachi lost connection"
-msgstr "Hamachi no está configurado"
+msgstr "Hamachi ha perdido la conexión"
 
 #: ../src/TextStrings.cs:546
 msgid "Member online"
@@ -826,17 +823,17 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
+#~ msgid "seconds"
+#~ msgstr "segundos"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Recibiendo apodos..."
+
 #~ msgid "Not configured"
 #~ msgstr "No configurado"
 
 #~ msgid "Not installed"
 #~ msgstr "No instalado"
-
-#~ msgid "Getting nicknames..."
-#~ msgstr "Recibiendo apodos..."
-
-#~ msgid "seconds"
-#~ msgstr "segundos"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Miembros desconectados"
@@ -849,6 +846,9 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
 #~ msgid "S_tatusbar"
 #~ msgstr "_Barra de estado"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "_Reconectar cuando se pierda la conexión"
 
 #~ msgid "Nickname:"
 #~ msgstr "Apodo:"
