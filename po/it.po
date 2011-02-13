@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-02-06 19:18:50+0100\n"
-"PO-Revision-Date: 2011-01-14 08:16+0000\n"
+"POT-Creation-Date: 2011-02-06 19:18+0100\n"
+"PO-Revision-Date: 2011-02-13 11:21+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-02-13 13:56+0000\n"
+"X-Generator: Launchpad (build 12351)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -553,9 +553,8 @@ msgid "Choose Folder"
 msgstr "Scegli cartella"
 
 #: ../src/TextStrings.cs:509
-#, fuzzy
 msgid "_Update Network List"
-msgstr "Crea una rete"
+msgstr "_Aggiorna la lista delle reti"
 
 #: ../src/TextStrings.cs:510
 msgid "Show Alt_ernating Row Colors"
@@ -606,9 +605,8 @@ msgid "_Disconnect on quit"
 msgstr "_Disconnetti all'uscita"
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid "Display notification when the connection is l_ost"
-msgstr "Mostra una notifica quando un membro _entra nella rete"
+msgstr "Mostra una notifica quando viene persa la connessione"
 
 #: ../src/TextStrings.cs:526
 msgid "Display notification when a member _joins"
@@ -677,9 +675,8 @@ msgstr ""
 "configurazione"
 
 #: ../src/TextStrings.cs:545
-#, fuzzy
 msgid "Hamachi lost connection"
-msgstr "Hamachi non è configurato"
+msgstr "Hamachi ha perso la connessione"
 
 #: ../src/TextStrings.cs:546
 msgid "Member online"
@@ -827,20 +824,20 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
-#~ msgid "Not configured"
-#~ msgstr "Non configurato"
-
-#~ msgid "Not installed"
-#~ msgstr "Non installato"
-
-#~ msgid "Getting nicknames..."
-#~ msgstr "Richiesta nickname in corso..."
-
 #~ msgid "Nickname:"
 #~ msgstr "Nickname:"
 
 #~ msgid "seconds"
 #~ msgstr "secondi"
+
+#~ msgid "Not configured"
+#~ msgstr "Non configurato"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Richiesta nickname in corso..."
+
+#~ msgid "Not installed"
+#~ msgstr "Non installato"
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervallo di aggiornamento (secondi):"
@@ -853,6 +850,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Timeout dei comandi (secondi):"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "_Riconnetti automaticamente quando viene persa la connessione"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Vai in linea"
