@@ -104,6 +104,8 @@ public class GlobalEvents
         SetAttach ();
         
         Haguichi.informationWindow.SetVersion ();
+        Haguichi.informationWindow.SetAddress ();
+        Haguichi.informationWindow.SetClientId ();
         
         GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
         
