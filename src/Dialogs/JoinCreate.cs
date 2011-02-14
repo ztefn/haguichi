@@ -19,6 +19,7 @@
 
 using System;
 using System.Diagnostics;
+using System.Threading;
 using Gtk;
 
 
@@ -267,6 +268,15 @@ namespace Dialogs
             
             SetMode ( "Joining" );
             
+            Thread thread = new Thread ( GoJoinThread );
+            thread.Start ();
+            
+        }
+        
+        
+        private void GoJoinThread ()
+        {
+            
             this.NetworkName     = nameEntry.GetChars ( 0, -1 );
             this.NetworkPassword = passwordEntry.GetChars ( 0, -1 );
             
@@ -283,67 +293,62 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                Dismiss ();
-                
-                if ( ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
+                if ( ( Hamachi.ApiVersion == 1 ) &&
+                     ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
                 {
                     Hamachi.GoOnline ( this.NetworkName );
                 }
                 
-                Controller.UpdateConnection (); // Update list
+                Application.Invoke ( delegate
+                {
+                    Dismiss ();
+                    Controller.UpdateConnection (); // Update list
+                });
+                
                 return;
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNotFound );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, invalid password" ) )
             {
                 ShowFailure ( TextStrings.errorInvalidPassword );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, the network is full" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkFull );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, network is locked" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkLocked );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, you are already a member" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, manual approval required" ) )
             {
-                Dialogs.SendRequest dlg = new Dialogs.SendRequest ( this, TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
-                
-                SetMode ( "Normal" );
-                if ( dlg.ResponseText == "Ok" )
+                Application.Invoke ( delegate
                 {
-                    Dismiss ();
-                }
+                    Dialogs.SendRequest dlg = new Dialogs.SendRequest ( this, TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
+                    
+                    SetMode ( "Normal" );
+                    if ( dlg.ResponseText == "Ok" )
+                    {
+                        Dismiss ();
+                    }
+                });
                 return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
                 ShowFailure ( TextStrings.errorUnknown );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else
@@ -359,15 +364,27 @@ namespace Dialogs
             
             SetMode ( "Creating" );
             
+            Thread thread = new Thread ( GoCreateThread );
+            thread.Start ();
+            
+        }
+        
+        
+        private void GoCreateThread ()
+        {
+            
             this.NetworkName     = nameEntry.GetChars ( 0, -1 );
             this.NetworkPassword = passwordEntry.GetChars ( 0, -1 );
             
             if ( Config.Settings.DemoMode )
             {
-                Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName );
-                MainWindow.networkView.AddNetwork ( network );
-                
-                Dismiss ();
+                Application.Invoke ( delegate
+                {
+                    Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName );
+                    MainWindow.networkView.AddNetwork ( network );
+                    
+                    Dismiss ();
+                });
                 return;
             }
             
@@ -375,35 +392,32 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                Dismiss ();
-                
-                if ( ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
+                if ( ( Hamachi.ApiVersion == 1 ) &&
+                     ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
                 {
                     Hamachi.GoOnline ( this.NetworkName );
                 }
                 
-                Controller.UpdateConnection (); // Update list
+                Application.Invoke ( delegate
+                {
+                    Dismiss ();
+                    Controller.UpdateConnection (); // Update list
+                });
                 return;
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNameTooShort );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed, network name is already taken" ) )
             {
                 ShowFailure ( TextStrings.errorNetworkNameTaken );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
                 ShowFailure ( TextStrings.errorUnknown );
-                
-                SetMode ( "Normal" );
                 return;
             }
             else
@@ -417,16 +431,13 @@ namespace Dialogs
         private void ShowFailure ( string message )
         {
             
-            failLabel.Markup = String.Format ( "<span weight=\"bold\">{0}</span>", message );
-            failBox.ShowAll ();
-            
-        }
-        
-        
-        private void HideFailure ()
-        {
-            
-            failBox.HideAll ();
+            Application.Invoke ( delegate
+            {
+                SetMode ( "Normal" );
+                
+                failLabel.Markup = String.Format ( "<span weight=\"bold\">{0}</span>", message );
+                failBox.ShowAll ();
+            });
             
         }
         
@@ -434,7 +445,7 @@ namespace Dialogs
         private void HideFailure ( object obj, EventArgs args )
         {
             
-            HideFailure ();
+            failBox.HideAll ();
             
         }
         
@@ -531,21 +542,21 @@ namespace Dialogs
                     break;
                     
                 case "Normal":
-                                        
+                
                     SetMode ( Mode );
                     
                     cancelBut.Sensitive = true;
                     
                     createBut.Label = TextStrings.createLabel;
                     joinBut.Label = TextStrings.joinLabel;
-                
+                    
                     nameEntry.Sensitive = true;
                     passwordEntry.Sensitive = true;
-                
+                    
                     CheckNameLength ();
                     
                     break;
-                
+                 
             }
             
         }

@@ -613,7 +613,7 @@ public static class Controller
                 UpdateCycle (); // Continue update interval
             }
             
-            MainWindow.statusBar.Push ( 0, TextStrings.connected );
+            MainWindow.statusBar.Pop ( 0 );
             
         }
         else if ( lastStatus == 2 )
@@ -803,7 +803,7 @@ public static class Controller
                 UpdateCycle (); // Continue update interval
             }
             
-            MainWindow.statusBar.Push ( 0, TextStrings.connected );
+            MainWindow.statusBar.Pop ( 0 );
             
         }
         
