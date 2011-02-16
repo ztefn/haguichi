@@ -18,6 +18,7 @@
  */
 
 using System;
+using System.Threading;
 using Gtk;
 
 
@@ -26,6 +27,8 @@ namespace Dialogs
 
     public class ChangeNick : Dialog
     {
+        
+        private string Nick;
         
         private Label heading;
         
@@ -138,13 +141,24 @@ namespace Dialogs
         private void GoChangeNick ( object obj, EventArgs args )
         {
             
-            SetMode ( "Changing" );
+            this.Nick = nickEntry.GetChars ( 0, -1 );
             
-            this.Name = nickEntry.GetChars ( 0, -1 );
+            Config.Client.Set ( Config.Settings.Nickname, this.Nick );
             
-            GlobalEvents.SetNick ( this.Name );
+            GlobalEvents.UpdateNick ( this.Nick );
+            
+            Thread thread = new Thread ( SetNickThread );
+            thread.Start ();
             
             Dismiss ();
+            
+        }
+        
+        
+        public void SetNickThread ()
+        {
+            
+            Hamachi.SetNick ( this.Nick );
             
         }
         
@@ -172,27 +186,6 @@ namespace Dialogs
         {
             
             Dismiss ();
-            
-        }
-        
-        
-        private void SetMode ( string mode )
-        {
-            
-            switch ( mode )
-            {
-                
-                case "Changing":
-                    cancelBut.Sensitive = false;
-                    
-                    changeBut.Sensitive = false;
-                    changeBut.Label = TextStrings.changingLabel;
-                    
-                    nickEntry.Sensitive = false;
-                    
-                    break;
-                
-            }
             
         }
         

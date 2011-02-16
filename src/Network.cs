@@ -392,10 +392,23 @@ public class Network
             }
             else
             {
-                Hamachi.Leave ( this );
-                Controller.UpdateConnection (); // Update list
+                Thread thread = new Thread ( LeaveThread );
+                thread.Start ();
             }
         }
+        
+    }
+    
+    
+    private void LeaveThread ()
+    {
+        
+        Hamachi.Leave ( this );
+
+        Application.Invoke ( delegate
+        {
+            Controller.UpdateConnection (); // Update list
+        });
         
     }
     
@@ -417,11 +430,24 @@ public class Network
             }
             else
             {
-                Hamachi.Delete ( this );
-                Controller.UpdateConnection (); // Update list
+                Thread thread = new Thread ( DeleteThread );
+                thread.Start ();
             }
         }
         
     }
+    
+    
+    private void DeleteThread ()
+    {
+        
+        Hamachi.Delete ( this );
 
+        Application.Invoke ( delegate
+        {
+            Controller.UpdateConnection (); // Update list
+        });
+        
+    }
+    
 }

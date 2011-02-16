@@ -191,7 +191,6 @@ Türkçe (tr)
     public static string copyClientIdLabel;
     
     public static string changeLabel;
-    public static string changingLabel;
     
     public static string changeNickLabel;
     public static string changeNickTitle;
@@ -428,7 +427,6 @@ Türkçe (tr)
         copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
         
         changeLabel                         = Catalog.GetString ( "C_hange" );
-        changingLabel                       = Catalog.GetString ( "Changing..." );
         
         changeNickLabel                     = Catalog.GetString ( "Change _Nickname..." );
         changeNickTitle                     = Catalog.GetString ( "Change Nickname" );

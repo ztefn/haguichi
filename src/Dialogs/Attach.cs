@@ -145,15 +145,6 @@ namespace Dialogs
         }
         
         
-        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
-        {
-            
-            Dismiss ();
-            args.RetVal = true;
-            
-        }
-        
-        
         private void GoAttach ( object obj, EventArgs args )
         {
             
@@ -207,6 +198,15 @@ namespace Dialogs
             {
                 attachBut.Sensitive = false;
             }
+            
+        }
+        
+        
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
+        {
+            
+            Dismiss ();
+            args.RetVal = true;
             
         }
         

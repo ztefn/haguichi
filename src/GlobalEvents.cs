@@ -161,18 +161,6 @@ public class GlobalEvents
     }
     
     
-    public static void SetNick ( string nick )
-    {
-        
-        Config.Client.Set ( Config.Settings.Nickname, nick );
-        
-        UpdateNick ( nick );
-        
-        Hamachi.SetNick ( nick );
-        
-    }
-    
-    
     private static bool SetNickAfterLogin ()
     {
         

@@ -18,6 +18,7 @@
  */
 
 using System;
+using System.Threading;
 using Gtk;
 
 
@@ -27,6 +28,7 @@ namespace Dialogs
     public class ChangePassword : Dialog
     {
         
+        private string Password;
         private Network Network;
         
         private Label heading;
@@ -141,11 +143,20 @@ namespace Dialogs
         private void GoChangePassword ( object obj, EventArgs args )
         {
             
-            this.Name = passwordEntry.GetChars ( 0, -1 );
+            this.Password = passwordEntry.GetChars ( 0, -1 );
             
-            Hamachi.SetPassword ( this.Network.Id, this.Name );
+            Thread thread = new Thread ( SetPasswordThread );
+            thread.Start ();
             
             Dismiss ();
+            
+        }
+        
+        
+        public void SetPasswordThread ()
+        {
+            
+            Hamachi.SetPassword ( this.Network.Id, this.Password );
             
         }
         

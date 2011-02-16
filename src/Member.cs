@@ -141,9 +141,22 @@ public class Member
         }
         else
         {
-            Hamachi.Approve ( this );
-            Controller.UpdateConnection (); // Update list
+            Thread thread = new Thread ( ApproveThread );
+            thread.Start ();
         }
+        
+    }
+    
+    
+    private void ApproveThread ()
+    {
+        
+        Hamachi.Approve ( this );
+        
+        Application.Invoke ( delegate
+        {
+            Controller.UpdateConnection (); // Update list
+        });
         
     }
     
@@ -157,9 +170,22 @@ public class Member
         }
         else
         {
-            Hamachi.Reject ( this );
-            Controller.UpdateConnection (); // Update list
+            Thread thread = new Thread ( RejectThread );
+            thread.Start ();
         }
+        
+    }
+    
+    
+    private void RejectThread ()
+    {
+        
+        Hamachi.Reject ( this );
+        
+        Application.Invoke ( delegate
+        {
+            Controller.UpdateConnection (); // Update list
+        });
         
     }
     
@@ -185,10 +211,23 @@ public class Member
             {
                 this.IsEvicted = true;
                 
-                Hamachi.Evict ( this );
-                Controller.UpdateConnection (); // Update list
+                Thread thread = new Thread ( EvictThread );
+                thread.Start ();
             }
         }
+        
+    }
+    
+    
+    private void EvictThread ()
+    {
+        
+        Hamachi.Evict ( this );
+        
+        Application.Invoke ( delegate
+        {
+            Controller.UpdateConnection (); // Update list
+        });
         
     }
     
