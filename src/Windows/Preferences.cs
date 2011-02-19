@@ -203,7 +203,7 @@ namespace Windows
                 Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, askTunCfg.Active );
             };
             
-            intervalSpin = new SpinButton ( 0, 600, 1 );
+            intervalSpin = new SpinButton ( 0, 999, 1 );
             intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
             intervalSpin.ValueChanged += delegate
             {
