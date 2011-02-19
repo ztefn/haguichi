@@ -66,32 +66,37 @@ public static class Command
     private static void DetermineSudoThread ()
     {
         
-        string sudo    = "sudo";
+        string sudo    = "";
         string curSudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
         
         if ( ReturnOutput ( curSudo, "--help" ) != "error" )
         {
             sudo = curSudo;
         }   
-        if ( ReturnOutput ( "gksudo", "--help" ) != "error" )
+        else if ( ReturnOutput ( "gksudo", "--help" ) != "error" )
         {
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, "gksudo" );
             sudo = "gksudo";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        if ( ReturnOutput ( "gnomesu", "--help" ) != "error" )
+        else if ( ReturnOutput ( "gnomesu", "--help" ) != "error" )
         {
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, "gnomesu" );
             sudo = "gnomesu";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        if ( ReturnOutput ( "kdesudo", "--help" ) != "error" )
+        else if ( ReturnOutput ( "kdesudo", "--help" ) != "error" )
         {
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesudo" );
             sudo = "kdesudo";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        if ( ReturnOutput ( "kdesu", "--help" ) != "error" )
+        else if ( ReturnOutput ( "kdesu", "--help" ) != "error" )
         {
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, "kdesu" );
             sudo = "kdesu";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
+        }
+        else if ( ReturnOutput ( "sudo", "-h" ) != "error" )
+        {
+            sudo = "sudo";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
         
         Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );
@@ -144,12 +149,15 @@ public static class Command
         
         string val = "error";
         
-        while ( inProgress )
+        if ( filename == "hamachi" )
         {
-            // Wait
+            while ( inProgress )
+            {
+                // Wait
+            }
+            
+            inProgress = true;
         }
-        
-        inProgress = true;
         
         try
         {
@@ -176,7 +184,10 @@ public static class Command
             // Nothing
         }
         
-        inProgress = false;
+        if ( filename == "hamachi" )
+        {
+            inProgress = false;
+        }
         
         return val;
         

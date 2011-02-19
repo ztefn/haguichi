@@ -27,7 +27,7 @@ public static class Hamachi
 {
     
     public  static int ApiVersion;
-    private static string lastInfo;
+    public  static string lastInfo;
     private static Random random;
     
     
@@ -92,19 +92,25 @@ public static class Hamachi
             return 2;
         }
         
-        Regex regex = new Regex ( "version([ ]+):([ ]+)(.+)" );
-        Version version = new Version ( regex.Match ( output ).Groups[3].ToString () );
-        if ( version.Major == 0 )
+        try
         {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
-            return 1;
+            Regex regex = new Regex ( "version([ ]+):([ ]+)(.+)" );
+            Version version = new Version ( regex.Match ( output ).Groups[3].ToString () );
+            
+            if ( version.Major == 0 )
+            {
+                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+                return 1;
+            }
+            if ( version.Major >= 2 )
+            {
+                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
+                return 2;
+            }
         }
-        if ( version.Major >= 2 )
-        {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
-            return 2;
-        }
+        catch {}
         
+        Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "-1" );
         return -1;
         
     }
@@ -296,7 +302,7 @@ public static class Hamachi
             output = "";
         }
         
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetClient", output );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetClientId", output );
         
         return output;
         
@@ -659,13 +665,13 @@ public static class Hamachi
         if ( Hamachi.ApiVersion > 1 )
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.+?)([ ]+)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
         else
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]+)(?<name>.+?)([ ]*)(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]+)(?<name>.*?)([ ]*)(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
             unapprovedMemberRegex = new Regex ( "" );
         }
         

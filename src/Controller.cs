@@ -58,6 +58,7 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
+        lastStatus = -2;
         StatusCheck ();
         
         if ( lastStatus >= 6 )
@@ -131,7 +132,16 @@ public static class Controller
             return 6;
         }
         
-        string output = Hamachi.GetInfo ();
+        string output;
+        
+        if ( lastStatus == -2 )
+        {
+            output = Hamachi.lastInfo; // Reuse last info requested by Hamachi.Init when launching to increase startup speed
+        }
+        else
+        {
+            output = Hamachi.GetInfo ();
+        }
         
         Regex regex;
         

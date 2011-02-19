@@ -107,7 +107,8 @@ public class GlobalEvents
         Haguichi.informationWindow.SetAddress ();
         Haguichi.informationWindow.SetClientId ();
         
-        GLib.Timeout.Add ( 2000, new GLib.TimeoutHandler ( SetNickAfterLogin ) );
+        Thread thread = new Thread ( SetNickAfterLoginThread );
+        thread.Start ();
         
         Controller.restoreConnection = false;
         Controller.numUpdateCycles ++;
@@ -161,20 +162,11 @@ public class GlobalEvents
     }
     
     
-    private static bool SetNickAfterLogin ()
+    private static void SetNickAfterLoginThread ()
     {
         
-        string nick   = ( string ) Config.Client.Get ( Config.Settings.Nickname );
-        string output = Hamachi.SetNick ( nick );
-        
-        if ( output.Contains ( ".. failed, busy" ) )
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        string nick = ( string ) Config.Client.Get ( Config.Settings.Nickname );
+        Hamachi.SetNick ( nick );
         
     }
     

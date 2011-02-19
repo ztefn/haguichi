@@ -155,7 +155,7 @@ namespace Dialogs
         }
         
         
-        public void SetNickThread ()
+        private void SetNickThread ()
         {
             
             Hamachi.SetNick ( this.Nick );
