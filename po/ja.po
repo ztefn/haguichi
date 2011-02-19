@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-02-16 22:18:32+0100\n"
-"PO-Revision-Date: 2011-01-14 14:37+0000\n"
+"POT-Creation-Date: 2011-02-16 22:18+0100\n"
+"PO-Revision-Date: 2011-02-18 00:40+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:56+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-02-18 20:00+0000\n"
+"X-Generator: Launchpad (build 12399)\n"
 
 #: ../src/TextStrings.cs:345
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "インターネット越しのローカルネットワークを作った
 
 #: ../src/TextStrings.cs:349
 msgid "Yes"
-msgstr "はい (Y)"
+msgstr "はい"
 
 #: ../src/TextStrings.cs:350
 msgid "No"
@@ -546,9 +546,8 @@ msgid "Choose Folder"
 msgstr "フォルダを選択して下さい"
 
 #: ../src/TextStrings.cs:507
-#, fuzzy
 msgid "_Update Network List"
-msgstr "ネットワークの作成"
+msgstr "ネットワーク一覧を更新(_U)"
 
 #: ../src/TextStrings.cs:508
 msgid "Show Alt_ernating Row Colors"
@@ -560,11 +559,11 @@ msgstr "コンパクトなレイアウト (_C)"
 
 #: ../src/TextStrings.cs:510
 msgid "_Large Layout"
-msgstr "広いレイアウト (_L)"
+msgstr "広いレイアウト(_L)"
 
 #: ../src/TextStrings.cs:511
 msgid "Show _Offline Members"
-msgstr "オフラインメンバー(_O)"
+msgstr "オフラインのメンバーを表示(_O)"
 
 #: ../src/TextStrings.cs:512
 msgid "Sort by _Name"
@@ -584,7 +583,7 @@ msgstr "通知エリアで Haguichi を表示(_S)"
 
 #: ../src/TextStrings.cs:517
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "通知領域内で最小化して Haguichi を開始する(_M)"
+msgstr "通知エリア内で最小化して Haguichi を開始する(_M)"
 
 #: ../src/TextStrings.cs:519
 msgid "C_onnect automatically on startup"
@@ -599,9 +598,8 @@ msgid "_Disconnect on quit"
 msgstr "停止する際に接続を切る(_D)"
 
 #: ../src/TextStrings.cs:523
-#, fuzzy
 msgid "Display notification when the connection is l_ost"
-msgstr "メンバーが参加したら通知を表示する(_J)"
+msgstr "接続が切れたら通知を表示する(_O)"
 
 #: ../src/TextStrings.cs:524
 msgid "Display notification when a member _joins"
@@ -668,9 +666,8 @@ msgid "Hamachi could not launch due to a configuration load failure."
 msgstr "設定の読み込みに失敗したため Hamachi を起動できませんでした。"
 
 #: ../src/TextStrings.cs:543
-#, fuzzy
 msgid "Hamachi lost connection"
-msgstr "Hamachi が未設定です"
+msgstr "Hamachi の接続が切れました"
 
 #: ../src/TextStrings.cs:544
 msgid "Member online"
@@ -793,45 +790,43 @@ msgstr[0] "%S 秒毎にネットワーク一覧をアップデート (_U)"
 #: ../src/TextStrings.cs:591
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} と他ののネットワーク {2} で {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:599
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネッワーク {1} と他ののネットワーク {2} で {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:607
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "ネッワーク {1} と他ののネットワーク {2} に {0} が参加しました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} が参加しました"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:615
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "ネッワーク {1} と他ののネットワーク {2} から {0} が離脱しました"
-
-#~ msgid "Changing..."
-#~ msgstr "変更しています..."
-
-#~ msgid "Not configured"
-#~ msgstr "未設定"
-
-#~ msgid "Not installed"
-#~ msgstr "未インストール"
-
-#~ msgid "Getting nicknames..."
-#~ msgstr "ニックネーム取得中..."
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
 
 #~ msgid "Nickname:"
 #~ msgstr "ニックネーム:"
 
 #~ msgid "seconds"
 #~ msgstr "秒"
+
+#~ msgid "Not configured"
+#~ msgstr "未設定"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "ニックネーム取得中..."
+
+#~ msgid "Not installed"
+#~ msgstr "未インストール"
+
+#~ msgid "Changing..."
+#~ msgstr "変更しています..."
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "インターバルを更新する (秒単位) (_U):"
@@ -844,3 +839,6 @@ msgstr[0] "ネッワーク {1} と他ののネットワーク {2} から {0} が
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "コマンドがタイムアウトするまでの時間 (秒単位) (_C):"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "接続が切れたら自動で再接続する(_R)"
