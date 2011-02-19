@@ -382,7 +382,7 @@ public class Network
         string heading = String.Format ( TextStrings.confirmLeaveNetworkHeading, this.Name );
         string message = String.Format ( TextStrings.confirmLeaveNetworkMessage, this.Name );
         
-        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Warning", label, null );
+        Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Question", label, null );
         
         if ( dlg.response == "Ok" )
         {
