@@ -20,6 +20,7 @@
 using Gtk;
 using System;
 using System.Collections;
+using System.IO;
 using System.Text.RegularExpressions;
 
 
@@ -28,6 +29,7 @@ public static class Hamachi
     
     public  static int ApiVersion;
     public  static string lastInfo;
+    private static string ScriptDirectory;
     private static Random random;
     
     
@@ -36,6 +38,7 @@ public static class Hamachi
         
         GetInfo ();
         ApiVersion = DetermineApiVersion ();
+        ScriptDirectory = DetermineScriptDirectory ();
         
     }
     
@@ -115,6 +118,30 @@ public static class Hamachi
         
     }
     
+    
+    private static string DetermineScriptDirectory ()
+    {
+        
+        ScriptDirectory = "/etc/init.d"; // Standard for most distro's
+        
+        if ( Directory.Exists ( "/etc/init.d" ) )
+        {
+            // Ok, keep it
+        }
+        else if ( Directory.Exists ( "/etc/rc.d/init.d" ) )
+        {
+            ScriptDirectory = "/etc/rc.d/init.d"; // Red Hat based distro's
+        }
+        else if ( Directory.Exists ( "/etc/rc.d" ) )
+        {
+            ScriptDirectory = "/etc/rc.d"; // Arch, Slackware
+        }
+        
+        Debug.Log ( Debug.Domain.Environment, "Hamachi.DetermineScriptDirectory", ScriptDirectory );
+        return ScriptDirectory;
+        
+    }
+    
 
     public static string Retrieve ( string filename, string args, string nfo, int cut )
     {
@@ -158,7 +185,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; /etc/init.d/logmein-hamachi restart\"" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" );
             
             if ( output.IndexOf ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) != -1 )
             {
@@ -197,7 +224,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi start" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ScriptDirectory + "/logmein-hamachi start" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
@@ -222,7 +249,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "/etc/init.d/logmein-hamachi stop" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ScriptDirectory + "/logmein-hamachi stop" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
