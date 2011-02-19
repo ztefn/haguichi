@@ -307,56 +307,12 @@ public class MainWindow
     }
     
     
-    public void ToggleMainWindow ( object obj, EventArgs args )
+    private void StatusIconPopupHandler ( object o, PopupMenuArgs args )
     {
         
         if ( Haguichi.modalDialog == null )
         {
-            if ( Config.Settings.WinMinimized )
-            {
-                window.Deiconify ();
-            }
-    
-            if ( Config.Settings.ShowMainWindow )
-            {
-                window.Hide ();
-            }
-            else
-            {
-                /*
-                 * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
-                 */
-                int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
-                int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
-                
-                window.Show ();
-                
-                /*
-                 * Move window to the current desktop.
-                 */
-                
-                while ( x < 0 )
-                {
-                    x += window.Screen.Width;
-                }
-                while ( x > window.Screen.Width )
-                {
-                    x -= window.Screen.Width;
-                }
-                
-                while ( y < 0 )
-                {
-                    y += window.Screen.Height;
-                }
-                while ( y > window.Screen.Height )
-                {
-                    y -= window.Screen.Height;
-                }
-                
-                window.Move ( x, y );
-            }
-            
-            Config.Settings.ShowMainWindow = !Config.Settings.ShowMainWindow;
+            quickMenu.Popup ();
         }
         else
         {
@@ -365,14 +321,20 @@ public class MainWindow
         
     }
     
-
     
-    void StatusIconPopupHandler ( object o, PopupMenuArgs args )
+    public void ToggleMainWindow ( object obj, EventArgs args )
     {
         
         if ( Haguichi.modalDialog == null )
         {
-            quickMenu.Popup ();
+            if ( Config.Settings.WinMinimized || !window.Visible )
+            {
+                Show ();
+            }
+            else
+            {
+                Hide ();
+            }
         }
         else
         {
@@ -393,8 +355,44 @@ public class MainWindow
     public static void Show ()
     {
         
-        window.Visible = true;
-        Config.Settings.ShowMainWindow = true;
+        /*
+         * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
+         */
+        int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
+        int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
+        
+        window.Show ();
+        
+        if ( Config.Settings.WinMinimized )
+        {
+            window.Deiconify ();
+            Config.Settings.WinMinimized = false;
+        }
+        
+        /*
+         * Move window to the current desktop.
+         */
+        
+        while ( x < 0 )
+        {
+            x += window.Screen.Width;
+        }
+        while ( x > window.Screen.Width )
+        {
+            x -= window.Screen.Width;
+        }
+        
+        while ( y < 0 )
+        {
+            y += window.Screen.Height;
+        }
+        while ( y > window.Screen.Height )
+        {
+            y -= window.Screen.Height;
+        }
+        
+        window.Move ( x, y );
+        window.Present ();
         
     }    
     
@@ -410,8 +408,7 @@ public class MainWindow
     public static void Hide ()
     {
         
-        window.Visible = false;
-        Config.Settings.ShowMainWindow = false;
+        window.Hide ();
         
     }
 

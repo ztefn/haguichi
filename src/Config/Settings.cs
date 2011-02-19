@@ -33,7 +33,6 @@ namespace Config
         
         public static bool Debugging                        = false;
         public static bool DemoMode                         = false;
-        public static bool ShowMainWindow                   = true;
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
         

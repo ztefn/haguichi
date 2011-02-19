@@ -222,35 +222,35 @@ namespace Dialogs
         
         private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
+            
             Dismiss ();
             args.RetVal = true;
+            
         }
         
         
         public void Open ()
         {
-            if ( this.Visible )
-            {
-                this.Present ();
-            }
-            else
-            {
-                this.Visible = true;
-                this.Show ();
-            }
+            
+            this.Show ();
+            this.Present ();
+            
         }
 
 
         private void Dismiss ()
         {
-            this.Visible = false;
+            
             this.Hide ();
+            
         }
         
         
         private void Dismiss ( object obj, EventArgs args )
         {
+            
             Dismiss ();
+            
         }
         
         

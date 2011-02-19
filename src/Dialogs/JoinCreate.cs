@@ -219,6 +219,7 @@ namespace Dialogs
             this.VBox.Add ( hbox );
             this.VBox.ShowAll ();
             
+            HideFailure ();
             
             if ( Hamachi.ApiVersion > 1 )
             {
@@ -443,6 +444,14 @@ namespace Dialogs
         
         
         private void HideFailure ( object obj, EventArgs args )
+        {
+            
+            HideFailure ();
+            
+        }
+        
+        
+        private void HideFailure ()
         {
             
             failBox.HideAll ();
