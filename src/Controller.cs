@@ -105,12 +105,12 @@ public static class Controller
         else if ( lastStatus >= 1 )
         {
             MainWindow.SetMode ( "Not configured" );
-            Dialogs.NotConfigured dlgNotConfigured = new Dialogs.NotConfigured ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, "Info" );
+            new Dialogs.NotConfigured ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, "Info" );
         }
         else
         {
             MainWindow.SetMode ( "Not installed" );
-            Dialogs.NotInstalled dlgNotInstalled = new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
+            new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
         }
         
     }
@@ -207,7 +207,7 @@ public static class Controller
             
             return true;
         }
-        catch ( System.Exception ex )
+        catch ( Exception e )
         {
             return false;
         }
@@ -290,11 +290,11 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg3 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                                             TextStrings.configErrorHeading,
-                                                             TextStrings.configErrorMessage,
-                                                             "Error",
-                                                             output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                      TextStrings.configErrorHeading,
+                                      TextStrings.configErrorMessage,
+                                      "Error",
+                                      output );
             });
         }
         else if ( output.Contains ( "tap: connect() failed 2 (No such file or directory)" ) )
@@ -315,11 +315,11 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                Dialogs.Message dlg2 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                                             TextStrings.connectErrorHeading,
-                                                             TextStrings.connectErrorConnectionRefused,
-                                                             "Error",
-                                                             output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                      TextStrings.connectErrorHeading,
+                                      TextStrings.connectErrorConnectionRefused,
+                                      "Error",
+                                      output );
             });
         }
         else
@@ -366,11 +366,11 @@ public static class Controller
                 else
                 {
                     GlobalEvents.ConnectionStopped ();
-                    Dialogs.Message msgDlg = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                                                   TextStrings.connectErrorHeading,
-                                                                   TextStrings.connectErrorNoInternetConnection,
-                                                                   "Error",
-                                                                   null );
+                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                          TextStrings.connectErrorHeading,
+                                          TextStrings.connectErrorNoInternetConnection,
+                                          "Error",
+                                          null );
                 }
             });
         }
@@ -466,11 +466,11 @@ public static class Controller
                 
                 if ( !restoreConnection )
                 {
-                    Dialogs.Message dlg1 = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                                                 TextStrings.connectErrorHeading,
-                                                                 TextStrings.connectErrorLoginFailed,
-                                                                 "Error",
-                                                                 output );
+                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                          TextStrings.connectErrorHeading,
+                                          TextStrings.connectErrorLoginFailed,
+                                          "Error",
+                                          output );
                 }
             });
         }
@@ -648,7 +648,7 @@ public static class Controller
             
             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )
             {
-                Notify n = new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
+                new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
             }
             
             if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
@@ -929,7 +929,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            Notify n = new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
         }
         
     }
@@ -959,7 +959,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            Notify n = new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
         }
         
     }
@@ -989,7 +989,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            Notify n = new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
         }
         
     }
@@ -1019,7 +1019,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            Notify n = new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
         }
         
     }

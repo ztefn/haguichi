@@ -51,7 +51,6 @@ namespace Windows
         
         private Label intervalLabel;
         private Label intervalLabel2;
-        private string [] intervalString;
         
         
         public Preferences ( string title ) : base ( title )
@@ -265,8 +264,6 @@ namespace Windows
             vbox.Add ( buttonBox );
             vbox.Spacing = 12;
             
-            
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ notebook ] ) );
             
             Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
             bc2.Expand = false;

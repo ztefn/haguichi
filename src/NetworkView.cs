@@ -173,23 +173,6 @@ public class NetworkView : TreeView
     }
     
     
-    private bool IsNetwork ( TreeStore store, TreeIter iter )
-    {
-        
-        Member member = ( Member ) store.GetValue ( iter, memberColumn );
-        
-        if ( member == null )
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-        
-    }
-    
-    
     private void OnQueryTooltip ( object sender, QueryTooltipArgs args )
     {
 

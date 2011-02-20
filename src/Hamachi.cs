@@ -455,7 +455,7 @@ public static class Hamachi
             
             Application.Invoke ( delegate
             {
-                Dialogs.Message dialog = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
         
@@ -475,7 +475,7 @@ public static class Hamachi
             
             Application.Invoke ( delegate
             {
-                Dialogs.Message dialog = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
         else if ( output.IndexOf ( ".. failed, denied" ) != -1 )
@@ -485,7 +485,7 @@ public static class Hamachi
             
             Application.Invoke ( delegate
             {
-                Dialogs.Message dialog = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
         
@@ -524,7 +524,7 @@ public static class Hamachi
             
             Application.Invoke ( delegate
             {
-                Dialogs.Message dialog = new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
         

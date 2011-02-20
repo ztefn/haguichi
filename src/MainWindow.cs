@@ -164,7 +164,7 @@ public class MainWindow
         Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbDisonnected [ autoconnectCheckbox ] ) );
         bc6.Expand = false;
         
-        Box.BoxChild bc7 = ( ( Box.BoxChild ) ( vbDisonnected [ nameButton ] ) );
+        //Box.BoxChild bc7 = ( ( Box.BoxChild ) ( vbDisonnected [ nameButton ] ) );
         //bc7.Expand = false;
         
         Box.BoxChild bc3 = ( ( Box.BoxChild ) ( mainBox [ statusBar ] ) );

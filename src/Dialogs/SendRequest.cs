@@ -55,7 +55,7 @@ namespace Dialogs
             
             if ( args.ResponseId == ResponseType.Ok )
             {
-                string output = Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
+                Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
             }
             
         }

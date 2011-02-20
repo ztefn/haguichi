@@ -218,7 +218,7 @@ public class GlobalEvents
     {
         
         MainWindow.Show ();
-        Dialogs.ChangeNick nickDlg = new Dialogs.ChangeNick ( TextStrings.changeNickTitle );
+        new Dialogs.ChangeNick ( TextStrings.changeNickTitle );
         
     }
     
@@ -235,7 +235,7 @@ public class GlobalEvents
     {
         
         MainWindow.Show ();
-        Dialogs.JoinCreate joinDlg = new Dialogs.JoinCreate ( "Join", TextStrings.joinNetworkTitle );
+        new Dialogs.JoinCreate ( "Join", TextStrings.joinNetworkTitle );
         
     }
     
@@ -244,7 +244,7 @@ public class GlobalEvents
     {
         
         MainWindow.Show ();
-        Dialogs.JoinCreate createDlg = new Dialogs.JoinCreate ( "Create", TextStrings.createNetworkTitle );
+        new Dialogs.JoinCreate ( "Create", TextStrings.createNetworkTitle );
         
     }
     
@@ -253,7 +253,7 @@ public class GlobalEvents
     {
         
         MainWindow.Show ();
-        Dialogs.Attach attachDlg = new Dialogs.Attach ();
+        new Dialogs.Attach ();
         
     }
     

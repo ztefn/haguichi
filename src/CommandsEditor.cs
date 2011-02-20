@@ -29,7 +29,6 @@ public class CommandsEditor : VBox
     private VBox vbox;
     
     private ListStore store;
-    private TreeIter iter;
     private TreeView tv;
     
     private CellRendererPixbuf iconCell;
@@ -97,7 +96,6 @@ public class CommandsEditor : VBox
         column2.PackStart ( textCell, true );
         
         column2.SetCellDataFunc ( textCell, new CellLayoutDataFunc ( TextCellLayout ) );
-        column1.SetCellDataFunc ( toggleCell, new CellLayoutDataFunc ( ToggleCellLayout ) );
         
         column1.AddAttribute ( toggleCell, "active", activeColumn );
         
@@ -166,7 +164,7 @@ public class CommandsEditor : VBox
         vbox.Add ( sw );
         vbox.Add ( buttonBox );
         
-        Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ sw ] ) );
+        //Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ sw ] ) );
         //bc1.Padding = 6;
         
         Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
@@ -373,7 +371,7 @@ public class CommandsEditor : VBox
     public void InsertCommand ( string icon, string label, string command )
     {
         
-        iter = store.AppendValues ( true, false, GetIconPixbuf ( icon ), icon, label, command, Catalog.GetString ( label ) );
+        store.AppendValues ( true, false, GetIconPixbuf ( icon ), icon, label, command, Catalog.GetString ( label ) );
         
         UpdateCommands ();
         
@@ -423,7 +421,7 @@ public class CommandsEditor : VBox
             string label   = ( string ) store.GetValue ( selected, viewColumn );
             string command = ( string ) store.GetValue ( selected, commandColumn );
             
-            Dialogs.AddEditCommand edit = new Dialogs.AddEditCommand ( "Edit", this, icon, label, command );
+            new Dialogs.AddEditCommand ( "Edit", this, icon, label, command );
         }
         
     }
@@ -432,7 +430,7 @@ public class CommandsEditor : VBox
     private void AddCommand ( object o, EventArgs args )
     {
         
-        Dialogs.AddEditCommand add = new Dialogs.AddEditCommand ( "Add", this, "none", "", "" );   
+        new Dialogs.AddEditCommand ( "Add", this, "none", "", "" );   
         
     }
     
@@ -475,7 +473,7 @@ public class CommandsEditor : VBox
                     isDefault = true;
                 }
                 
-                iter = store.AppendValues ( isActive, isDefault, GetIconPixbuf ( cArray [ 2 ] ), cArray [ 2 ], cArray [ 3 ], cArray [ 4 ], Catalog.GetString ( cArray [ 3 ] ) );
+                store.AppendValues ( isActive, isDefault, GetIconPixbuf ( cArray [ 2 ] ), cArray [ 2 ], cArray [ 3 ], cArray [ 4 ], Catalog.GetString ( cArray [ 3 ] ) );
             }
 
         }
@@ -574,18 +572,6 @@ public class CommandsEditor : VBox
         string command = ( string ) store.GetValue ( iter, commandColumn );
         
         return isActive + ";" + isDefault + ";" + icon + ";" + label + ";" + command;
-        
-    }
-    
-    
-    private void IconCellLayout ( CellLayout layout, CellRenderer cell, TreeModel model, TreeIter iter )
-    {
-        
-    }
-
-    
-    private void ToggleCellLayout ( CellLayout layout, CellRenderer cell, TreeModel model, TreeIter iter )
-    {
         
     }
     

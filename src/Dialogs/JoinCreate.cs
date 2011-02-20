@@ -155,8 +155,6 @@ namespace Dialogs
             passwordBox.Add ( passwordLabel );
             passwordBox.Add ( passwordEntry );
             
-            Box.BoxChild bc9 = ( ( Box.BoxChild ) ( passwordBox [ passwordEntry ] ) );
-            
 
             VBox inputBox = new VBox ();
             inputBox.Add ( nameBox );
@@ -497,9 +495,6 @@ namespace Dialogs
         
         private void SetMode ( string mode )
         {
-            
-            string head;
-            string mesg;
             
             switch ( mode )
             {

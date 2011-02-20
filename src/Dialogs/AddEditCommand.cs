@@ -186,14 +186,14 @@ namespace Dialogs
             Box.BoxChild bc5 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
             bc5.Padding = 6;
             
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ iconBox ] ) );
+            //Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ iconBox ] ) );
             //bc2.Padding = 3;
             
             
             this.VBox.Add ( hbox );
             this.VBox.Add ( buttonBox );
             
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
+            //Box.BoxChild bc1 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
             //bc1.Padding = 3;
             
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( this.VBox [ buttonBox ] ) );
@@ -211,7 +211,7 @@ namespace Dialogs
         private void ChooseIcon ( object o, EventArgs args )
         {
             
-            Dialogs.ChooseIcon iconDialog = new Dialogs.ChooseIcon ( this, this.CommandIcon );
+            new Dialogs.ChooseIcon ( this, this.CommandIcon );
             
         }
         

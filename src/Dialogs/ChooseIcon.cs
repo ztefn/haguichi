@@ -195,19 +195,11 @@ namespace Dialogs
             
         }
         
-
+        
         private void Dismiss ()
         {
             
             this.Destroy ();
-            
-        }
-        
-        
-        private void Dismiss ( object obj, EventArgs args )
-        {
-            
-            Dismiss ();
             
         }
         

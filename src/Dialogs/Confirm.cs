@@ -40,7 +40,7 @@ namespace Dialogs
             this.SkipTaskbarHint = true;
             this.Response       += ResponseHandler;
             
-            Button cancelBut = ( Button ) this.AddButton ( Stock.Cancel, ResponseType.Cancel );
+            this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             
             Button okBut = ( Button ) this.AddButton ( Stock.Ok, ResponseType.Ok );
             okBut.Label = label;
