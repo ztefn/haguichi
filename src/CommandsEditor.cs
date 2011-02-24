@@ -418,8 +418,8 @@ public class CommandsEditor : VBox
         if ( tv.Selection.GetSelected ( out model, out selected ) )
         {
             string icon    = ( string ) store.GetValue ( selected, iconStringColumn );
-            string label   = ( string ) store.GetValue ( selected, viewColumn );
-            string command = ( string ) store.GetValue ( selected, commandColumn );
+            string label   = ( string ) store.GetValue ( selected, viewColumn       );
+            string command = ( string ) store.GetValue ( selected, commandColumn    );
             
             new Dialogs.AddEditCommand ( "Edit", this, icon, label, command );
         }
@@ -462,18 +462,24 @@ public class CommandsEditor : VBox
             {
                 
                 bool isActive = false;
-                if ( cArray [ 0 ] == "true" )
+                if ( cArray [0] == "true" )
                 {
                     isActive = true;
                 }
                 
                 bool isDefault = false;
-                if ( cArray [ 1 ] == "true" )
+                if ( cArray [1] == "true" )
                 {
                     isDefault = true;
                 }
                 
-                store.AppendValues ( isActive, isDefault, GetIconPixbuf ( cArray [ 2 ] ), cArray [ 2 ], cArray [ 3 ], cArray [ 4 ], Catalog.GetString ( cArray [ 3 ] ) );
+                store.AppendValues ( isActive,
+                                     isDefault,
+                                     GetIconPixbuf ( cArray [2] ),
+                                     cArray [2],
+                                     cArray [3],
+                                     cArray [4],
+                                     Catalog.GetString ( cArray [3] ) );
             }
 
         }
@@ -568,8 +574,8 @@ public class CommandsEditor : VBox
         }
         
         string icon    = ( string ) store.GetValue ( iter, iconStringColumn );
-        string label   = ( string ) store.GetValue ( iter, labelColumn );
-        string command = ( string ) store.GetValue ( iter, commandColumn );
+        string label   = ( string ) store.GetValue ( iter, labelColumn      );
+        string command = ( string ) store.GetValue ( iter, commandColumn    );
         
         return isActive + ";" + isDefault + ";" + icon + ";" + label + ";" + command;
         
@@ -581,8 +587,8 @@ public class CommandsEditor : VBox
     
         CellRendererText textCell = ( cell as CellRendererText );
         
-        Gdk.Color darkTxtColor = this.Style.TextColors [ (int) StateType.Normal ];
-        Gdk.Color lightTxtColor =  this.Style.TextColors [ (int) StateType.Insensitive ];
+        Gdk.Color darkTxtColor  = this.Style.TextColors [ (int) StateType.Normal      ];
+        Gdk.Color lightTxtColor = this.Style.TextColors [ (int) StateType.Insensitive ];
         
         string isDefault = "";
         if ( ( bool ) model.GetValue ( iter, defaultColumn ) )
@@ -603,8 +609,9 @@ public class CommandsEditor : VBox
         title = title.Replace ( "_", "" );
         
         string command = ( string ) model.GetValue ( iter, commandColumn );
-        command = command.Replace ( "%N", "Nick" );
-        command = command.Replace ( "%A", "123.45.67.89" );
+        command = command.Replace ( "%N",  "Nick"          );
+        command = command.Replace ( "%A",  "5.123.456.789" );
+        command = command.Replace ( "%ID", "090-123-456"   );
         
         textCell.Markup = String.Format ( "<b>{0}</b>{1}\n<span size=\"smaller\">{2}</span>", title, isDefault, command );
         

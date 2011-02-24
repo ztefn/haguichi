@@ -799,6 +799,8 @@ public static class Controller
                 }
             }
             
+            MainWindow.networkView.CollapseOrExpandNetworks ();
+            
             NotifyMembersJoined ();
             NotifyMembersLeft ();
             NotifyMembersOnline ();

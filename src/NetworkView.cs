@@ -130,19 +130,19 @@ public class NetworkView : TreeView
                                 typeof ( string ),      // Sortable name string
                                 typeof ( string ) );    // Sortable status
         
-        sortedStore = new Gtk.TreeModelSort ( store );
-        
-        filter = new TreeModelFilter ( sortedStore , null );
+        filter = new TreeModelFilter ( store , null );
         filter.VisibleFunc = new Gtk.TreeModelFilterVisibleFunc ( FilterOfflineMembers );
         
-        if ( ( bool ) Config.Client.Get( Config.Settings.ShowOfflineMembers ) )
+        if ( ( bool ) Config.Client.Get ( Config.Settings.ShowOfflineMembers ) )
         {
-            this.Model = sortedStore;
+            sortedStore = new Gtk.TreeModelSort ( store );
         }
         else
         {
-            this.Model = filter;
+            sortedStore = new Gtk.TreeModelSort ( filter );
         }
+        
+        this.Model = sortedStore;
         
     }
     
@@ -351,6 +351,10 @@ public class NetworkView : TreeView
         /* Go sort tree. Doing this after the tree is filled, because otherwise things get messy... */
         GoSort ( ( string ) Config.Client.Get ( Config.Settings.SortNetworkListBy ) );
         
+        filter.Refilter ();
+        
+        CollapseOrExpandNetworks ();
+        
     }
     
     
@@ -377,7 +381,13 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
 
-        iter = store.AppendValues ( network.Name, network.Status.GetPixbuf ( GetNetworkListIconSize () ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        iter = store.AppendValues ( network.Name,
+                                    network.Status.GetPixbuf ( GetNetworkListIconSize () ),
+                                    network.Status.statusInt,
+                                    network,
+                                    null,
+                                    network.NameSortString,
+                                    network.StatusSortString );
         
         foreach ( Member member in network.Members )
         {
@@ -401,7 +411,14 @@ public class NetworkView : TreeView
 
         network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
         
-        store.SetValues ( iter, network.Name, network.Status.GetPixbuf ( GetNetworkListIconSize () ), network.Status.statusInt, network, null, network.NameSortString, network.StatusSortString );
+        store.SetValues ( iter,
+                          network.Name,
+                          network.Status.GetPixbuf ( GetNetworkListIconSize () ),
+                          network.Status.statusInt,
+                          network,
+                          null,
+                          network.NameSortString,
+                          network.StatusSortString );
         
     }
     
@@ -439,6 +456,7 @@ public class NetworkView : TreeView
         }
         
         return returnNetwork;
+        
     }
     
     
@@ -467,6 +485,7 @@ public class NetworkView : TreeView
         }
         
         return returnIter;
+        
     }
     
     
@@ -495,6 +514,7 @@ public class NetworkView : TreeView
         }
         
         return returnIter;
+        
     }
     
     
@@ -503,6 +523,7 @@ public class NetworkView : TreeView
         
         TreeIter iter = ReturnNetworkIter ( network );
         store.Remove ( ref iter );
+        
     }
     
     
@@ -510,7 +531,14 @@ public class NetworkView : TreeView
     {
         
         TreeIter iter = ReturnNetworkIter ( network );
-        store.AppendValues ( iter, member.Nick, member.Status.GetPixbuf ( GetNetworkListIconSize () ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
+        store.AppendValues ( iter,
+                             member.Nick,
+                             member.Status.GetPixbuf ( GetNetworkListIconSize () ),
+                             member.Status.statusInt,
+                             network,
+                             member,
+                             member.NameSortString,
+                             member.StatusSortString );
         
     }
     
@@ -519,7 +547,14 @@ public class NetworkView : TreeView
     {
         
         TreeIter iter = ReturnMemberIter ( network, member );
-        store.SetValues ( iter, member.Nick, member.Status.GetPixbuf ( GetNetworkListIconSize () ), member.Status.statusInt, network, member, member.NameSortString, member.StatusSortString );
+        store.SetValues ( iter,
+                          member.Nick,
+                          member.Status.GetPixbuf ( GetNetworkListIconSize () ),
+                          member.Status.statusInt,
+                          network,
+                          member,
+                          member.NameSortString,
+                          member.StatusSortString );
         
     }
     
@@ -536,16 +571,18 @@ public class NetworkView : TreeView
     public void GoFilterOfflineMembers ( bool boolean )
     {
         
-        if ( boolean == true )
+        if ( boolean )
         {
-            this.Model = filter;
+            sortedStore = new Gtk.TreeModelSort ( filter );
         }
         else
         {
-            this.Model = sortedStore;
+            sortedStore = new Gtk.TreeModelSort ( store );
         }
         
-        filter.Refilter ();
+        this.Model = sortedStore;
+        
+        GoSort ( ( string ) Config.Client.Get ( Config.Settings.SortNetworkListBy ) );
         
         CollapseOrExpandNetworks ();
         
@@ -636,7 +673,13 @@ public class NetworkView : TreeView
                 template = template.Replace ( "%*_", "" );
             }
             
-            textCell.Markup = String.Format ( template, network.Id, name, network.Status.statusString, memberCount.ToString(), memberOnlineCount.ToString(), "\n" );
+            textCell.Markup = String.Format ( template,
+                                              network.Id,
+                                              name,
+                                              network.Status.statusString,
+                                              memberCount.ToString (),
+                                              memberOnlineCount.ToString (),
+                                              "\n" );
             
             if ( network.Status.statusInt == 0 )
             {
@@ -677,7 +720,12 @@ public class NetworkView : TreeView
                 template = template.Replace ( "%*_", "" );
             }
             
-            textCell.Markup = String.Format ( template, member.ClientId, name, member.Address, member.Status.statusString, "\n" );
+            textCell.Markup = String.Format ( template,
+                                              member.ClientId,
+                                              name,
+                                              member.Address,
+                                              member.Status.statusString,
+                                              "\n" );
             
             if ( member.Status.statusInt == 0 )
             {
@@ -749,8 +797,9 @@ public class NetworkView : TreeView
                 
                 if ( command != "" )
                 {
-                    command = command.Replace ( "%N", lastMember.Nick );
-                    command = command.Replace ( "%A", lastMember.Address );
+                    command = command.Replace ( "%N",  lastMember.Nick     );
+                    command = command.Replace ( "%A",  lastMember.Address  );
+                    command = command.Replace ( "%ID", lastMember.ClientId );
                     
                     Command.Execute ( command );
                 }
@@ -829,7 +878,7 @@ public class NetworkView : TreeView
     }
     
     
-    private void CollapseOrExpandNetworks ()
+    public void CollapseOrExpandNetworks ()
     {
         
         TreeIter networkIter = new TreeIter ();

@@ -51,8 +51,9 @@ namespace Menus
         private void Execute ( object o, EventArgs args )
         {
             string cmd = this.command;
-            cmd = cmd.Replace ( "%N", MainWindow.networkView.lastMember.Nick );
-            cmd = cmd.Replace ( "%A", MainWindow.networkView.lastMember.Address );
+            cmd = cmd.Replace ( "%N",  MainWindow.networkView.lastMember.Nick     );
+            cmd = cmd.Replace ( "%A",  MainWindow.networkView.lastMember.Address  );
+            cmd = cmd.Replace ( "%ID", MainWindow.networkView.lastMember.ClientId );
             
             Command.Execute ( cmd );
         }

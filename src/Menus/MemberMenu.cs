@@ -96,13 +96,13 @@ namespace Menus
             foreach ( string c in commands )
             {
                 
-                string[] cArray = c.Split ( new char [] { ';' }, 5 );
+                string [] cArray = c.Split ( new char [] { ';' }, 5 );
                 
-                if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [ 0 ] == "true" ) )
+                if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [0] == "true" ) )
                 {
-                    string icon    = cArray [ 2 ];
-                    string label   = cArray [ 3 ];
-                    string command = cArray [ 4 ];
+                    string icon    = cArray [2];
+                    string label   = cArray [3];
+                    string command = cArray [4];
                     
                     CommandMenuItem custom = new Menus.CommandMenuItem ( icon, label, command );
                     
@@ -149,7 +149,7 @@ namespace Menus
             evict.Activated       -= new EventHandler ( member.Evict );
 
             /* Set the new member */
-            this.member = memb;
+            this.member  = memb;
             this.network = netw;
             
             /* Set menu items to show */
