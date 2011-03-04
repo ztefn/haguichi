@@ -95,6 +95,9 @@ Italiano (it)
 Nederlands (nl)
     Stephen Brandt <ztefn>
 
+Polski (pl)
+    Antoni Sperka <antek1004-gmail>
+
 Русский (ru)
     Sergey Korolev <slipped-on-blade>
     Sergey Sedov <serg-sedov>

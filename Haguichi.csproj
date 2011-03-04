@@ -331,6 +331,11 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </None>
+    <None Include="locale\pl\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
     <None Include="locale\ru\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
