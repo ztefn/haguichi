@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-02-16 22:18+0100\n"
-"PO-Revision-Date: 2011-03-03 16:25+0000\n"
-"Last-Translator: Antoni Sperka <Unknown>\n"
+"PO-Revision-Date: 2011-03-04 22:08+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-03-04 09:14+0000\n"
+"X-Launchpad-Export-Date: 2011-03-04 22:12+0000\n"
 "X-Generator: Launchpad (build 12515)\n"
 
 #: ../src/TextStrings.cs:345
@@ -208,7 +208,7 @@ msgstr "Automatycznie"
 
 #: ../src/TextStrings.cs:401
 msgid "_Client"
-msgstr "Klient"
+msgstr "_Klient"
 
 #: ../src/TextStrings.cs:402
 msgid "_Edit"
@@ -216,15 +216,15 @@ msgstr "_Edycja"
 
 #: ../src/TextStrings.cs:403
 msgid "_View"
-msgstr "Widok"
+msgstr "_Widok"
 
 #: ../src/TextStrings.cs:404
 msgid "_Help"
-msgstr "Pomoc"
+msgstr "Pomo_c"
 
 #: ../src/TextStrings.cs:406
 msgid "_Online Help"
-msgstr "Pomoc online"
+msgstr "_Pomoc online"
 
 #: ../src/TextStrings.cs:407
 msgid "_Create Network..."
@@ -236,11 +236,11 @@ msgstr "_Dołącz do sieci..."
 
 #: ../src/TextStrings.cs:410
 msgid "_Go Online"
-msgstr "Włącz"
+msgstr "_Włącz"
 
 #: ../src/TextStrings.cs:411
 msgid "_Go Offline"
-msgstr "Wyłącz"
+msgstr "_Wyłącz"
 
 #: ../src/TextStrings.cs:412
 msgid "_Leave"
@@ -248,11 +248,11 @@ msgstr "_Opuść"
 
 #: ../src/TextStrings.cs:413
 msgid "_Locked"
-msgstr "Zab_lokowany"
+msgstr "_Zablokowany"
 
 #: ../src/TextStrings.cs:414
 msgid "_New Member Approval"
-msgstr "Zatwierdzanie nowych członków"
+msgstr "Zatwierdzanie _nowych członków"
 
 #: ../src/TextStrings.cs:415
 msgid "_Automatically"
@@ -264,11 +264,11 @@ msgstr "_Ręcznie"
 
 #: ../src/TextStrings.cs:417
 msgid "_Copy Network ID"
-msgstr "Kopjuj ID sieci"
+msgstr "_Kopjuj ID sieci"
 
 #: ../src/TextStrings.cs:419
 msgid "_Browse Shares"
-msgstr "Przeglądaj zawartość"
+msgstr "P_rzeglądaj zawartość"
 
 #: ../src/TextStrings.cs:420
 msgid "_Ping"
@@ -276,11 +276,11 @@ msgstr "_Ping"
 
 #: ../src/TextStrings.cs:421
 msgid "_View Remote Desktop"
-msgstr "Pokaż zdalny pulpit"
+msgstr "P_okaż zdalny pulpit"
 
 #: ../src/TextStrings.cs:422
 msgid "_Approve"
-msgstr "Z_atwierdź"
+msgstr "_Zatwierdź"
 
 #: ../src/TextStrings.cs:423
 msgid "_Reject"
@@ -289,15 +289,15 @@ msgstr "_Odrzuć"
 #. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:424
 msgid "_Evict"
-msgstr "Wyklucz"
+msgstr "_Wyklucz"
 
 #: ../src/TextStrings.cs:425
 msgid "_Copy Address"
-msgstr "Skopiuj adres"
+msgstr "_Skopiuj adres"
 
 #: ../src/TextStrings.cs:426
 msgid "_Copy Client ID"
-msgstr "Kopjuj ID klienta"
+msgstr "_Kopjuj ID klienta"
 
 #: ../src/TextStrings.cs:428
 msgid "C_hange"
@@ -305,7 +305,7 @@ msgstr "_Zmień"
 
 #: ../src/TextStrings.cs:430
 msgid "Change _Nickname..."
-msgstr "Zmień pseudo_nim..."
+msgstr "_Zmień pseudonim..."
 
 #: ../src/TextStrings.cs:431
 msgid "Change Nickname"
@@ -321,7 +321,7 @@ msgstr "Kliknij, aby zmienić pseudonim"
 
 #: ../src/TextStrings.cs:435
 msgid "Change _Password..."
-msgstr "Zmień hasło..."
+msgstr "Zmień _hasło..."
 
 #: ../src/TextStrings.cs:436
 msgid "Change Password"
@@ -333,7 +333,7 @@ msgstr "Wprowadź nowe hasło dla tej sieci."
 
 #: ../src/TextStrings.cs:439
 msgid "_Account:"
-msgstr "Konto:"
+msgstr "_Konto:"
 
 #: ../src/TextStrings.cs:442
 msgid "_Attach"
@@ -353,7 +353,7 @@ msgstr "Wprowadź nazwę konta, które chcesz przypisac do tego klienta."
 
 #: ../src/TextStrings.cs:446
 msgid "_Include all networks created by this client"
-msgstr "Dołącz wszystkie sieci stworzone przez tego klienta"
+msgstr "D_ołącz wszystkie sieci stworzone przez tego klienta"
 
 #: ../src/TextStrings.cs:447
 msgid "Error attaching"
@@ -365,7 +365,7 @@ msgstr "Konto nie znalezione."
 
 #: ../src/TextStrings.cs:450
 msgid "_Join"
-msgstr "Dołącz"
+msgstr "_Dołącz"
 
 #: ../src/TextStrings.cs:451
 msgid "Joining..."
@@ -385,7 +385,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:455
 msgid "C_reate"
-msgstr "Utwó_rz"
+msgstr "_Utwórz"
 
 #: ../src/TextStrings.cs:456
 msgid "Creating..."
@@ -405,7 +405,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:460
 msgid "_Go directly online in the network"
-msgstr "Przejdź bezpośrednio w tryb niedostępny w sieci"
+msgstr "_Przejdź bezpośrednio w tryb niedostępny w sieci"
 
 #: ../src/TextStrings.cs:462
 msgid "Network not found"
@@ -441,7 +441,7 @@ msgstr "Nazwa sieci jest zajęta"
 
 #: ../src/TextStrings.cs:471
 msgid "_Send Request"
-msgstr "Wyślij prośbę"
+msgstr "_Wyślij prośbę"
 
 #: ../src/TextStrings.cs:472
 msgid "Send join request?"
@@ -542,7 +542,7 @@ msgstr "Zachowanie"
 
 #: ../src/TextStrings.cs:504
 msgid "_Account data folder:"
-msgstr "Folder d_anych konta:"
+msgstr "_Folder danych konta:"
 
 #: ../src/TextStrings.cs:505
 msgid "Choose Folder"
@@ -550,23 +550,23 @@ msgstr "Wybierz folder"
 
 #: ../src/TextStrings.cs:507
 msgid "_Update Network List"
-msgstr "Akt_ualizuj listę sieci"
+msgstr "_Aktualizuj listę sieci"
 
 #: ../src/TextStrings.cs:508
 msgid "Show Alt_ernating Row Colors"
-msgstr "Włącz przemiene kolorowanie wiersza"
+msgstr "Włącz przemiene _kolorowanie wiersza"
 
 #: ../src/TextStrings.cs:509
 msgid "_Compact Layout"
-msgstr "Proste rozmieszczenie"
+msgstr "_Proste rozmieszczenie"
 
 #: ../src/TextStrings.cs:510
 msgid "_Large Layout"
-msgstr "Duże rozmieszczenie"
+msgstr "_Duże rozmieszczenie"
 
 #: ../src/TextStrings.cs:511
 msgid "Show _Offline Members"
-msgstr "Pokaż niepołączonych członków"
+msgstr "Pokaż niepołączonych _członków"
 
 #: ../src/TextStrings.cs:512
 msgid "Sort by _Name"
@@ -578,15 +578,15 @@ msgstr "Sortowanie według _stanu"
 
 #: ../src/TextStrings.cs:514
 msgid "St_atusbar"
-msgstr "P_asek stanu"
+msgstr "Pasek s_tanu"
 
 #: ../src/TextStrings.cs:516
 msgid "_Show Haguichi in the notification area"
-msgstr "Pokaż Haguichi w obszarze powiadomień"
+msgstr "_Pokaż Haguichi w obszarze powiadomień"
 
 #: ../src/TextStrings.cs:517
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "Uruchom Haguichi zminimalizowanego do obszarze powiadomień"
+msgstr "_Uruchom Haguichi zminimalizowanego do obszarze powiadomień"
 
 #: ../src/TextStrings.cs:519
 msgid "C_onnect automatically on startup"
@@ -594,31 +594,31 @@ msgstr "P_ołacz automatycznie przy starcie"
 
 #: ../src/TextStrings.cs:520
 msgid "_Reconnect automatically when the connection is lost"
-msgstr "Połącz automatycznie, kiedy zostanie zerwane połączenie"
+msgstr "Połącz automatycznie, kiedy zostanie _zerwane połączenie"
 
 #: ../src/TextStrings.cs:521
 msgid "_Disconnect on quit"
-msgstr "Rozłącz przy wyjściu"
+msgstr "_Rozłącz przy wyjściu"
 
 #: ../src/TextStrings.cs:523
 msgid "Display notification when the connection is l_ost"
-msgstr "Pokaż p_owiadomienie, gdy połączenie zostanie zerwane"
+msgstr "Pokaż powiadomienie, gdy połączenie zostanie _zerwane"
 
 #: ../src/TextStrings.cs:524
 msgid "Display notification when a member _joins"
-msgstr "Pokaż powiadomienie, gdy dołączy nowy członek"
+msgstr "Pokaż powiadomienie, gdy dołączy _nowy członek"
 
 #: ../src/TextStrings.cs:525
 msgid "Display notification when a member _leaves"
-msgstr "Pokaż powiadomienie, gdy członek opuści sieć"
+msgstr "Pokaż powiadomienie, gdy członek _opuści sieć"
 
 #: ../src/TextStrings.cs:526
 msgid "Display notification when a member comes o_nline"
-msgstr "Pokaż powiadomienie, gdy członek stanie się dostępny"
+msgstr "Pokaż powiadomienie, gdy członek stanie się _dostępny"
 
 #: ../src/TextStrings.cs:527
 msgid "Display notification when a member goes o_ffline"
-msgstr "Pokaż powiadomienie, gdy członek stanie się niedostępny"
+msgstr "Pokaż powiadomienie, gdy członek stanie się ni_edostępny"
 
 #: ../src/TextStrings.cs:529
 msgid "Do you want to run tuncfg?"
@@ -634,15 +634,15 @@ msgstr ""
 
 #: ../src/TextStrings.cs:531
 msgid "_Run"
-msgstr "U_ruchom"
+msgstr "_Uruchom"
 
 #: ../src/TextStrings.cs:532
 msgid "_Always ask before running tuncfg"
-msgstr "Z_awsze pytaj przed uruchomieniem tuncfg"
+msgstr "_Zawsze pytaj przed uruchomieniem tuncfg"
 
 #: ../src/TextStrings.cs:533
 msgid "A_sk confirmation before running tuncfg"
-msgstr "Wyświetl potwierdzenie przed uruchomieniem tuncfg"
+msgstr "_Wyświetl potwierdzenie przed uruchomieniem tuncfg"
 
 #: ../src/TextStrings.cs:535
 msgid "Error connecting"
@@ -711,7 +711,7 @@ msgstr "{0} opuścił sieć {1}"
 
 #: ../src/TextStrings.cs:553
 msgid "A_vailable commands:"
-msgstr "Dostępne polecenia:"
+msgstr "D_ostępne polecenia:"
 
 #: ../src/TextStrings.cs:554
 msgid "Command"
@@ -731,11 +731,11 @@ msgstr "Edytuj polecenie"
 
 #: ../src/TextStrings.cs:559
 msgid "_Command:"
-msgstr "Pole_cenie:"
+msgstr "_Polecenie:"
 
 #: ../src/TextStrings.cs:560
 msgid "_Label:"
-msgstr "Etykieta:"
+msgstr "_Etykieta:"
 
 #: ../src/TextStrings.cs:561
 msgid "Use %A for address and %N for nickname"
@@ -751,7 +751,7 @@ msgstr "Wybierz ikonę"
 
 #: ../src/TextStrings.cs:565
 msgid "_No Icon"
-msgstr "Brak iko_ny"
+msgstr "_Brak ikony"
 
 #: ../src/TextStrings.cs:567
 msgid "Default"
@@ -759,7 +759,7 @@ msgstr "Domyślna"
 
 #: ../src/TextStrings.cs:568
 msgid "_Default"
-msgstr "_Domyślna"
+msgstr "Dom_yślna"
 
 #: ../src/TextStrings.cs:570
 msgid "Restore the default commands"
