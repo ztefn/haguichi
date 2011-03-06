@@ -74,17 +74,7 @@ class Haguichi
         
         Debug.Log ( Debug.Domain.Info, "Main", "Greetings, I am " + TextStrings.appName + " " + TextStrings.appVersion );
         
-        if ( Platform.ActiveProcess () )
-        {
-            Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active process, will exit now" );
-            return;
-        }
-        else
-        {
-            Debug.Log ( Debug.Domain.Environment, "Main", "Registering process" );
-            Platform.RegisterProcess ();
-            Platform.SetProcessName (); 
-        }
+        Platform.Init ();
         
         Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );
         Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );

@@ -24,14 +24,14 @@ using Mono.Unix;
 public static class TextStrings
 {
     
-    public static string appName                = "Haguichi";
-    public static string appVersion             = "1.0.7";
-    public static string appWebsite             = "http://www.haguichi.net/";
+    public const  string appName                = "Haguichi";
+    public const  string appVersion             = "1.0.7";
+    public const  string appWebsite             = "http://www.haguichi.net/";
     public static string appWebsiteLabel;
     public static string appComments;
     public static string appDescription;
     public static string appCopyright           = "Copyright © 2007-2011 Stephen Brandt";
-    public static string appLicense             =
+    public const  string appLicense             =
 @"Haguichi is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
 by the Free Software Foundation; either version 2 of the License,
@@ -46,11 +46,11 @@ You should have received a copy of the GNU General Public License
 along with Haguichi; if not, write to the Free Software Foundation,
 Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     
-    public static string appInfo                =
+    public const  string appInfo                =
 @"Haguichi, a graphical frontend for Hamachi.
 Copyright © 2007-2010 Stephen Brandt <stephen@stephenbrandt.com>";
             
-    public static string appHelp                =
+    public const  string appHelp                =
 @"Usage:
   haguichi [options]
 
@@ -63,10 +63,10 @@ Options:
 
 " + appInfo + "\n";
     
-    public static string[] appAuthors           = new string [] { "Stephen Brandt <ztefn>" };
-    public static string[] appArtists           = new string [] { "Stephen Brandt <ztefn>", "Lapo Calamandrei <calamandrei>" };
-    public static string[] appDocumenters       = new string [] { "" };
-    public static string   appTranslatorCredits =
+    public static string [] appAuthors           = new string [] { "Stephen Brandt <ztefn>" };
+    public static string [] appArtists           = new string [] { "Stephen Brandt <ztefn>", "Lapo Calamandrei <calamandrei>" };
+    public static string [] appDocumenters       = new string [] { "" };
+    public const  string    appTranslatorCredits =
 @"
 Čeština (cs)
     Jan Bažant <brbla>
@@ -111,8 +111,8 @@ Türkçe (tr)
     Aytunç Yeni <aytuncyeni>
 ";
     
-    public static string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
-    public static string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
+    public const  string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
+    public const  string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
     
     public static string yes;
     public static string no;

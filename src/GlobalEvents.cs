@@ -324,7 +324,7 @@ public class GlobalEvents
         }
         
         Debug.Log ( Debug.Domain.Environment, "GlobalEvents.QuitApp", "Unregistering process" );
-        Platform.UnregisterProcess ();
+        Platform.UnregisterSession ();
         
         Application.Quit ();
         

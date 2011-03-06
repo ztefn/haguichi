@@ -62,6 +62,10 @@
       <Package>ndesk-dbus-1.0</Package>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="NDesk.DBus.GLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f6716e4f9b2ed099">
+      <Package>ndesk-dbus-glib-1.0</Package>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi.png">
@@ -284,6 +288,7 @@
     <Compile Include="src\Dialogs\ChangePassword.cs" />
     <Compile Include="src\Dialogs\Attach.cs" />
     <Compile Include="src\Utilities.cs" />
+    <Compile Include="src\Session.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

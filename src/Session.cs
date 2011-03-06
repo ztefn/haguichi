@@ -18,39 +18,17 @@
  */
 
 using System;
+using NDesk.DBus;
 
 
-public class Debug
+[Interface ( Platform.busName )]
+public class Session : MarshalByRefObject
 {
     
-    public static void Log ( Domain domain, string reporter, string output )
+    public void Present ()
     {
         
-        if ( Config.Settings.Debugging )
-        {
-            
-            string domainString = Enum.GetName ( typeof ( Domain ), domain );
-            
-            Console.ForegroundColor = ( ConsoleColor ) domain;
-            DateTime datetime = DateTime.Now;
-            Console.Write ( "[{0} {1}] [{2}]", datetime.TimeOfDay, domainString.ToUpper (), reporter );
-            Console.Write ( " " );
-            Console.ResetColor ();
-            Console.WriteLine ( output );
-            
-        }
-        
-    }
-    
-    
-    public enum Domain
-    {
-        
-        Error       = ConsoleColor.DarkRed,
-        Info        = ConsoleColor.DarkBlue,
-        Hamachi     = ConsoleColor.DarkGray,
-        Environment = ConsoleColor.DarkCyan,
-        Gui         = ConsoleColor.DarkGreen,
+        MainWindow.Show ();
         
     }
     

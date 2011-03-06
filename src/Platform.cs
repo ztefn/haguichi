@@ -25,17 +25,49 @@ using NDesk.DBus;
 
 public static class Platform
 {
-
-    private static string sessionName = "org." + TextStrings.appName;
+    
+    public const string busName = "org." + TextStrings.appName;
+    
+    private static Bus bus;
+    private static ObjectPath path;
+    private static Session session;
     
     
-    [ DllImport ( "libc" ) ] // Linux
+    [DllImport ( "libc" )] // Linux
     private static extern int prctl ( int option, byte [] arg2, IntPtr arg3, IntPtr arg4, IntPtr arg5 );
 
     
-    [ DllImport ( "libc" ) ] // BSD
+    [DllImport ( "libc" )] // BSD
     private static extern void setproctitle ( byte [] fmt, byte [] str_arg );
 
+    
+    public static void Init ()
+    {
+        
+        BusG.Init ();
+        
+        bus  = Bus.Session;
+        path = new ObjectPath ( "/org/" + TextStrings.appName );
+        
+        if ( Platform.ActiveSession () )
+        {
+            Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active session, will try to show it and close this session" );
+            
+            session = bus.GetObject <Session> ( busName, path );
+            session.Present ();
+            
+            Environment.Exit ( 0 );
+        }
+        else
+        {
+            Debug.Log ( Debug.Domain.Environment, "Main", "Registering session" );
+            
+            RegisterSession ();
+            SetProcessName ();
+        }
+        
+    }
+    
     
     public static void SetProcessName ()
     {
@@ -49,7 +81,7 @@ public static class Platform
         {
             if ( prctl ( 15 /* PR_SET_NAME */, Encoding.ASCII.GetBytes ( TextStrings.appName.ToLower () + "\0" ), IntPtr.Zero, IntPtr.Zero, IntPtr.Zero ) != 0 ) 
             {
-                throw new ApplicationException ("Error setting process name: " + Mono.Unix.Native.Stdlib.GetLastError () );
+                throw new ApplicationException ( "Error setting process name: " + Mono.Unix.Native.Stdlib.GetLastError () );
             }
         }
         catch ( EntryPointNotFoundException )
@@ -60,10 +92,10 @@ public static class Platform
     }
     
     
-    public static bool ActiveProcess ()
+    public static bool ActiveSession ()
     {
         
-        if ( Bus.Session.NameHasOwner ( sessionName ) )
+        if ( bus.NameHasOwner ( busName ) )
         {
             return true;
         }
@@ -75,18 +107,21 @@ public static class Platform
     }
     
     
-    public static void RegisterProcess ()
+    public static void RegisterSession ()
     {
         
-        Bus.Session.RequestName ( sessionName );
+        session = new Session ();
+        
+        bus.RequestName ( busName );
+        bus.Register ( path, session );
         
     }
     
     
-    public static void UnregisterProcess ()
+    public static void UnregisterSession ()
     {
         
-        Bus.Session.ReleaseName ( sessionName );
+        bus.ReleaseName ( busName );
         
     }
     

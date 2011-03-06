@@ -312,12 +312,20 @@ public class MainWindow
         
         if ( Haguichi.modalDialog == null )
         {
-            quickMenu.Popup ();
+            quickMenu.Popup ( null, null, PositionMenu, 3, Gtk.Global.CurrentEventTime );
         }
         else
         {
             Haguichi.modalDialog.Present ();
         }
+        
+    }
+    
+    
+    public void PositionMenu (Menu menu, out int x, out int y, out bool push_in)
+    {
+        
+        StatusIcon.PositionMenu ( menu, out x, out y, out push_in, panelIcon.Handle );
         
     }
     
