@@ -108,12 +108,13 @@ namespace Menus
             clientMenu.Append ( configure );
             clientMenu.Append ( connect );
             clientMenu.Append ( disconnect );
-            clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem () );
             clientMenu.Append ( change );
             clientMenu.Append ( join );
             clientMenu.Append ( create );
             clientMenu.Append ( attach );
+            clientMenu.Add    ( new SeparatorMenuItem () );
+            clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem() );
             clientMenu.Append ( close );
             clientMenu.Append ( quit );

@@ -28,6 +28,14 @@ public class GlobalEvents
     public static void ConfigureHamachi ( object obj, EventArgs args )
     {
         
+        ConfigureHamachi ();
+        
+    }
+    
+    
+    public static void ConfigureHamachi ()
+    {
+        
         Hamachi.Configure ();
         
     }
@@ -149,12 +157,28 @@ public class GlobalEvents
     public static void About ( object obj, EventArgs args )
     {
         
+        About ();
+        
+    }
+    
+    
+    public static void About ()
+    {
+        
         Haguichi.aboutDialog.Open ();
         
     }
     
     
     public static void Preferences ( object obj, EventArgs args )
+    {
+        
+        Preferences ();
+        
+    }
+    
+    
+    public static void Preferences ()
     {
         
         Haguichi.preferencesWindow.Open ();
@@ -211,10 +235,18 @@ public class GlobalEvents
         
         UpdateNick ( nick );
          
-     }
+    }
     
     
     public static void ChangeNick ( object obj, EventArgs args )
+    {
+        
+        ChangeNick ();
+        
+    }
+    
+    
+    public static void ChangeNick ()
     {
         
         MainWindow.Show ();
@@ -226,12 +258,28 @@ public class GlobalEvents
     public static void Information ( object obj, EventArgs args )
     {
         
+        Information ();
+        
+    }
+    
+    
+    public static void Information ()
+    {
+        
         Haguichi.informationWindow.Open ();
         
     }
     
     
     public static void JoinNetwork ( object obj, EventArgs args )
+    {
+        
+        JoinNetwork ();
+        
+    }
+    
+    
+    public static void JoinNetwork ()
     {
         
         MainWindow.Show ();
@@ -243,6 +291,14 @@ public class GlobalEvents
     public static void CreateNetwork ( object obj, EventArgs args )
     {
         
+        CreateNetwork ();
+        
+    }
+    
+    
+    public static void CreateNetwork ()
+    {
+        
         MainWindow.Show ();
         new Dialogs.JoinCreate ( "Create", TextStrings.createNetworkTitle );
         
@@ -250,6 +306,14 @@ public class GlobalEvents
     
     
     public static void Attach ( object obj, EventArgs args )
+    {
+        
+        Attach ();
+        
+    }
+    
+    
+    public static void Attach ()
     {
         
         MainWindow.Show ();
@@ -272,31 +336,34 @@ public class GlobalEvents
                  ( Controller.lastStatus >= 6 ) )
             {
                 MainWindow.menuBar.SetAttach ( true, true );
-                MainWindow.quickMenu.SetAttach ( true, true );
             }
             else if ( ( account == "" ) ||
                       ( account == "-" ) )
             {
                 MainWindow.menuBar.SetAttach ( true, false );
-                MainWindow.quickMenu.SetAttach ( true, false );
             }
             else
             {
                 MainWindow.menuBar.SetAttach ( false, false );
-                MainWindow.quickMenu.SetAttach ( false, false );
             }
         }
         else
         {
             MainWindow.menuBar.SetAttach ( false, false );
-            MainWindow.quickMenu.SetAttach ( false, false );
         }
-        
         
     }
     
     
     public static void Help ( object obj, EventArgs args )
+    {
+        
+        Help ();
+        
+    }
+    
+    
+    public static void Help ()
     {
         
         Command.OpenURL ( TextStrings.helpURL );
@@ -307,7 +374,19 @@ public class GlobalEvents
     public static void QuitApp ( object obj, EventArgs args )
     {
         
+        QuitApp ();
+        
+    }
+    
+    public static void QuitApp ()
+    {
+        
         MainWindow.Hide ();
+        
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.QuitApp ();
+        }
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit ) )
         {

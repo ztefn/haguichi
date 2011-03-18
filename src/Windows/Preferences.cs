@@ -143,8 +143,11 @@ namespace Windows
                 startInTray.Sensitive = false;
             }
             
+            GroupBox spaceBox1 = new GroupBox ( "" );
+            
             VBox appearanceBox = new VBox ();
             appearanceBox.Add ( trayBox );
+            appearanceBox.Add ( spaceBox1 );
             
             Box.BoxChild trayBoxC = ( ( Box.BoxChild ) ( appearanceBox [ trayBox ] ) );
             trayBoxC.Expand = false;
@@ -235,12 +238,12 @@ namespace Windows
             behaviorBox.AddWidget ( askTunCfg );
             behaviorBox.AddWidget ( intervalBox );
             
-            GroupBox spaceBox = new GroupBox ( "" );
+            GroupBox spaceBox2 = new GroupBox ( "" );
             
             VBox systemBox = new VBox ();
             systemBox.Add ( hamachiBox );
             systemBox.Add ( behaviorBox );
-            systemBox.Add ( spaceBox );
+            systemBox.Add ( spaceBox2 );
             
             Box.BoxChild hamachiBoxC = ( ( Box.BoxChild ) ( systemBox [ hamachiBox ] ) );
             hamachiBoxC.Expand = false; 

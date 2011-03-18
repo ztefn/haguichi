@@ -191,18 +191,32 @@ public class MainWindow
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) )
         {
+            ShowTrayIcon ( true );
+            
             if ( ( bool ) Config.Client.Get ( Config.Settings.StartInTray ) )
             {
                 window.Hide ();
+                
+                quickMenu.SetVisibility ( false );
+                if ( Platform.IndicatorSession != null )
+                {
+                    Platform.IndicatorSession.SetVisibility ( false );    
+                }
             }
             else
             {
                 window.Show ();
+                
+                quickMenu.SetVisibility ( true );
+                if ( Platform.IndicatorSession != null )
+                {
+                    Platform.IndicatorSession.SetVisibility ( true );    
+                }
             }
         }
         else
         {
-            panelIcon.Visible = false;
+            ShowTrayIcon ( false );
         }
         
     }
@@ -302,7 +316,15 @@ public class MainWindow
     public static void ShowTrayIcon ( bool show )
     {
         
-        panelIcon.Visible = show;
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.Show ( show );
+            panelIcon.Visible = false;
+        }
+        else
+        {
+            panelIcon.Visible = show;
+        }
         
     }
     
@@ -369,12 +391,18 @@ public class MainWindow
         int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
         int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
         
-        window.Show ();
+        window.Present ();
         
         if ( Config.Settings.WinMinimized )
         {
             window.Deiconify ();
             Config.Settings.WinMinimized = false;
+        }
+        
+        quickMenu.SetVisibility ( true );
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.SetVisibility ( true );    
         }
         
         /*
@@ -400,7 +428,6 @@ public class MainWindow
         }
         
         window.Move ( x, y );
-        window.Present ();
         
     }    
     
@@ -417,6 +444,12 @@ public class MainWindow
     {
         
         window.Hide ();
+        
+        quickMenu.SetVisibility ( false );
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.SetVisibility ( false );    
+        }
         
     }
 
@@ -436,7 +469,12 @@ public class MainWindow
     
     public static void SetMode ( string mode )
     {
-          
+        
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.SetMode ( mode );    
+        }
+        
         switch ( mode )
         {
             

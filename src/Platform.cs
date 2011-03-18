@@ -26,11 +26,13 @@ using NDesk.DBus;
 public static class Platform
 {
     
-    public const string busName = "org." + TextStrings.appName;
+    public const string appBusName = "org." + TextStrings.appName;
+    public const string indicatorBusName = "org." + TextStrings.appName + ".appindicator";
     
     private static Bus bus;
     private static ObjectPath path;
-    private static Session session;
+    private static ApplicationSession appSession;
+    private static IndicatorSession indicatorSession;
     
     
     [DllImport ( "libc" )] // Linux
@@ -53,8 +55,8 @@ public static class Platform
         {
             Debug.Log ( Debug.Domain.Environment, "Main", "There is already an active session, will try to show it and close this session" );
             
-            session = bus.GetObject <Session> ( busName, path );
-            session.Present ();
+            appSession = bus.GetObject <ApplicationSession> ( appBusName, path );
+            appSession.Show ();
             
             Environment.Exit ( 0 );
         }
@@ -63,6 +65,8 @@ public static class Platform
             Debug.Log ( Debug.Domain.Environment, "Main", "Registering session" );
             
             RegisterSession ();
+            Command.Execute ( "haguichi-appindicator" );
+            
             SetProcessName ();
         }
         
@@ -95,14 +99,12 @@ public static class Platform
     public static bool ActiveSession ()
     {
         
-        if ( bus.NameHasOwner ( busName ) )
+        if ( bus.NameHasOwner ( appBusName ) )
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        
+        return false;
         
     }
     
@@ -110,10 +112,10 @@ public static class Platform
     public static void RegisterSession ()
     {
         
-        session = new Session ();
+        appSession = new ApplicationSession ();
         
-        bus.RequestName ( busName );
-        bus.Register ( path, session );
+        bus.RequestName ( appBusName );
+        bus.Register ( path, appSession );
         
     }
     
@@ -121,8 +123,32 @@ public static class Platform
     public static void UnregisterSession ()
     {
         
-        bus.ReleaseName ( busName );
+        bus.ReleaseName ( appBusName );
         
+    }
+    
+    
+    public static IndicatorSession IndicatorSession
+    {
+        get
+        {
+            if ( indicatorSession != null )
+            {
+                return indicatorSession;
+            }
+            
+            if ( bus.NameHasOwner ( indicatorBusName ) )
+            {
+                indicatorSession = bus.GetObject <IndicatorSession> ( indicatorBusName, path );
+                return indicatorSession;
+            }
+            
+            return null;
+        }
+        set
+        {
+            indicatorSession = value;
+        }
     }
     
 }

@@ -21,15 +21,130 @@ using System;
 using NDesk.DBus;
 
 
-[Interface ( Platform.busName )]
-public class Session : MarshalByRefObject
+[Interface ( Platform.appBusName )]
+public class ApplicationSession : MarshalByRefObject
 {
     
-    public void Present ()
+    public void Show ()
     {
         
         MainWindow.Show ();
         
     }
+    
+    
+    public void Hide ()
+    {
+        
+        MainWindow.Hide ();
+        
+    }
+    
+    
+    public void ConfigureHamachi ()
+    {
+        
+        GlobalEvents.ConfigureHamachi ();
+        
+    }
+    
+    
+    public void StartHamachi ()
+    {
+        
+        GlobalEvents.StartHamachi ();
+        
+    }
+    
+    
+    public void StopHamachi ()
+    {
+        
+        GlobalEvents.StopHamachi ();
+        
+    }
+    
+    
+    public void ChangeNick ()
+    {
+        
+        GlobalEvents.ChangeNick ();
+        
+    }
+    
+    
+    public void JoinNetwork ()
+    {
+        
+        GlobalEvents.JoinNetwork ();
+        
+    }
+    
+    
+    public void CreateNetwork ()
+    {
+        
+        GlobalEvents.CreateNetwork ();
+        
+    }
+    
+    
+    public void Information ()
+    {
+        
+        GlobalEvents.Information ();
+        
+    }
+    
+    
+    public void Preferences ()
+    {
+        
+        GlobalEvents.Preferences ();
+        
+    }
+    
+    
+    public void About ()
+    {
+        
+        GlobalEvents.About ();
+        
+    }
+    
+    
+    public void QuitApp ()
+    {
+        
+        GlobalEvents.QuitApp ();
+        
+    }
+    
+    
+    public void SetMode ( string mode )
+    {
+        
+        MainWindow.SetMode ( mode );
+        
+    }
+    
+}
+
+
+[Interface ( Platform.indicatorBusName )]
+public class IndicatorSession : MarshalByRefObject
+{
+    
+    public void Show ( bool show )
+    {}
+    
+    public void SetVisibility ( bool visible )
+    {}
+    
+    public void SetMode ( string mode )
+    {}
+    
+    public void QuitApp ()
+    {}
     
 }

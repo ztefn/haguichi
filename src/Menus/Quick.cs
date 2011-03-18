@@ -29,21 +29,30 @@ namespace Menus
     
         private AccelGroup accelGroup;
         
+        private CheckMenuItem show;
         private ImageMenuItem configure;
         private ImageMenuItem connect;
         private ImageMenuItem disconnect;
-        private ImageMenuItem change;
         private ImageMenuItem join;
         private ImageMenuItem create;
-        private ImageMenuItem attach;
         private ImageMenuItem info;
-        private ImageMenuItem preferences;
-        private ImageMenuItem about;
         private ImageMenuItem quit;
         
         
-        public Quick()
+        public Quick ()
         {
+            
+            show = new CheckMenuItem ( TextStrings.showApp );
+            show.Toggled += delegate {
+                if ( show.Active )
+                {
+                    MainWindow.Show ();
+                }
+                else
+                {
+                    MainWindow.Hide ();
+                }
+            };
             
             configure = new ImageMenuItem ( TextStrings.configureLabel );
             configure.Activated += GlobalEvents.ConfigureHamachi;
@@ -54,43 +63,29 @@ namespace Menus
             disconnect = new ImageMenuItem ( Stock.Disconnect, accelGroup );
             disconnect.Activated += GlobalEvents.StopHamachi;
             
-            change = new ImageMenuItem ( TextStrings.changeNickLabel );
-            change.Activated += GlobalEvents.ChangeNick;
-            
             join = new ImageMenuItem ( TextStrings.joinNetworkLabel );
             join.Activated += GlobalEvents.JoinNetwork;
             
             create = new ImageMenuItem ( TextStrings.createNetworkLabel );
             create.Activated += GlobalEvents.CreateNetwork;
             
-            attach = new ImageMenuItem ( TextStrings.attachMenuLabel );
-            attach.Activated += GlobalEvents.Attach;
-            
             info = new ImageMenuItem ( Stock.Info, accelGroup );
             info.Activated += GlobalEvents.Information;
             
-            preferences = new ImageMenuItem ( Stock.Preferences, accelGroup );
-            preferences.Activated += GlobalEvents.Preferences;
-            
-            about = new ImageMenuItem ( Stock.About, accelGroup );
-            about.Activated += GlobalEvents.About;
-            
-            quit = new Gtk.ImageMenuItem ( Stock.Quit, accelGroup );
+            quit = new ImageMenuItem ( Stock.Quit, accelGroup );
             quit.Activated += GlobalEvents.QuitApp;
             
             
+            this.Add ( show );
+            this.Add ( new SeparatorMenuItem () );
             this.Add ( configure );
             this.Add ( connect );
             this.Add ( disconnect );
-            this.Add ( info );
             this.Add ( new SeparatorMenuItem () );
-            this.Add ( change );
             this.Add ( join );
             this.Add ( create );
-            this.Add ( attach );
             this.Add ( new SeparatorMenuItem () );
-            this.Add ( preferences );
-            this.Add ( about );
+            this.Add ( info );
             this.Add ( new SeparatorMenuItem () );
             this.Add ( quit );
             
@@ -99,11 +94,10 @@ namespace Menus
         }
         
         
-        public void SetAttach ( bool visible, bool sensitive )
+        public void SetVisibility ( bool visible )
         {
             
-            attach.Visible   = visible;
-            attach.Sensitive = sensitive;
+            show.Active = visible;
             
         }
         
@@ -113,6 +107,7 @@ namespace Menus
             
             switch ( mode )
             {
+                
                 case "Connecting":
                     connect.Sensitive = false;
                 
@@ -122,7 +117,6 @@ namespace Menus
                     configure.Hide ();
                     connect.Hide ();
                     disconnect.Show ();
-                    change.Sensitive = true;
                     join.Sensitive = true;
                     create.Sensitive = true;
                     info.Sensitive = true;
@@ -134,7 +128,6 @@ namespace Menus
                     connect.Show ();
                     connect.Sensitive = true;
                     disconnect.Hide ();
-                    change.Sensitive = true;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
@@ -145,7 +138,6 @@ namespace Menus
                     configure.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
@@ -153,14 +145,15 @@ namespace Menus
                     break;
                 
                 case "Not installed":
+                    configure.Hide ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
                 
                     break;
+                
             }
             
         }

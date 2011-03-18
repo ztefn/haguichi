@@ -48,7 +48,7 @@ namespace Dialogs
             
             if ( args.ResponseId == ResponseType.Ok )
             {
-                GlobalEvents.ConfigureHamachi ( obj, args );
+                GlobalEvents.ConfigureHamachi ();
             }
             
         }

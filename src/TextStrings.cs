@@ -114,6 +114,8 @@ Türkçe (tr)
     public const  string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
     public const  string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
     
+    public static string showApp;
+    
     public static string yes;
     public static string no;
     
@@ -349,6 +351,8 @@ Türkçe (tr)
         appWebsiteLabel                     = Catalog.GetString ( "Haguichi Website" );
         appComments                         = Catalog.GetString ( "A graphical frontend for Hamachi." );
         appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
+        
+        showApp                             = Catalog.GetString ( "_Show Haguichi" );
         
         yes                                 = Catalog.GetString ( "Yes" );
         no                                  = Catalog.GetString ( "No" );
