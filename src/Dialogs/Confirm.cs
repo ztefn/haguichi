@@ -33,7 +33,7 @@ namespace Dialogs
         public Confirm ( Window parent, string heading, string message, string icon, string label, string stock ) : base ( parent, "", heading, message, icon )
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.TransientFor    = parent;
             this.Modal           = true;
@@ -57,7 +57,7 @@ namespace Dialogs
             
             response = args.ResponseId.ToString ();
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
         }
         

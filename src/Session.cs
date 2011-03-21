@@ -120,14 +120,6 @@ public class ApplicationSession : MarshalByRefObject
         
     }
     
-    
-    public void SetMode ( string mode )
-    {
-        
-        MainWindow.SetMode ( mode );
-        
-    }
-    
 }
 
 
@@ -139,6 +131,9 @@ public class IndicatorSession : MarshalByRefObject
     {}
     
     public void SetVisibility ( bool visible )
+    {}
+    
+    public void SetModality ( bool modal )
     {}
     
     public void SetMode ( string mode )

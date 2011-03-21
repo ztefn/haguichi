@@ -43,7 +43,7 @@ namespace Dialogs
         public ChangeNick ( string title ) : base ()
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.Title           = title;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
@@ -175,7 +175,7 @@ namespace Dialogs
         private void Dismiss ()
         {
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
             this.Destroy ();
             

@@ -44,7 +44,7 @@ namespace Dialogs
         public ChangePassword ( Network network ) : base ()
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.Network         = network;
             
@@ -173,7 +173,7 @@ namespace Dialogs
         private void Dismiss ()
         {
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
             this.Destroy ();
             

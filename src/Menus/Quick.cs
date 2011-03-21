@@ -109,7 +109,7 @@ namespace Menus
             {
                 
                 case "Connecting":
-                    connect.Sensitive = false;
+                    connect.Sensitive    = false;
                 
                     break;
                     
@@ -117,40 +117,38 @@ namespace Menus
                     configure.Hide ();
                     connect.Hide ();
                     disconnect.Show ();
-                    join.Sensitive = true;
-                    create.Sensitive = true;
-                    info.Sensitive = true;
+                    disconnect.Sensitive = true;
+                    join.Sensitive       = true;
+                    create.Sensitive     = true;
                 
                     break;
                     
                 case "Disconnected":
                     configure.Hide ();
                     connect.Show ();
-                    connect.Sensitive = true;
+                    connect.Sensitive    = true;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    info.Sensitive = true;
+                    join.Sensitive       = false;
+                    create.Sensitive     = false;
                 
                     break;
                 
                 case "Not configured":
                     configure.Show ();
-                    connect.Sensitive = false;
+                    configure.Sensitive  = true;
+                    connect.Sensitive    = false;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    info.Sensitive = true;
+                    join.Sensitive       = false;
+                    create.Sensitive     = false;
                 
                     break;
                 
                 case "Not installed":
                     configure.Hide ();
-                    connect.Sensitive = false;
+                    connect.Sensitive    = false;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    info.Sensitive = true;
+                    join.Sensitive       = false;
+                    create.Sensitive     = false;
                 
                     break;
                 

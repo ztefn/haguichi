@@ -59,7 +59,7 @@ namespace Dialogs
         public JoinCreate ( string mode, string title ) : base ()
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.Mode            = mode;
             
@@ -247,7 +247,7 @@ namespace Dialogs
         private void Dismiss ()
         {
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
             this.Destroy ();
             

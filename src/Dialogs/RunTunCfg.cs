@@ -30,7 +30,7 @@ namespace Dialogs
         public RunTunCfg () : base ( Haguichi.mainWindow.ReturnWindow (), "", TextStrings.runTuncfgHeading, TextStrings.runTuncfgMessage, "Question" )
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             
@@ -70,7 +70,7 @@ namespace Dialogs
         private void ResponseHandler ( object o, ResponseArgs args )
         {
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
         }
         

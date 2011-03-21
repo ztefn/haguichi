@@ -25,6 +25,19 @@ using Gtk;
 public class GlobalEvents
 {
     
+    public static void SetModalDialog ( Dialog dialog )
+    {
+        
+        Haguichi.modalDialog = dialog;
+        
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.SetModality ( ( dialog != null ) );
+        }
+        
+    }
+    
+    
     public static void ConfigureHamachi ( object obj, EventArgs args )
     {
         

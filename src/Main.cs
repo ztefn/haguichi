@@ -97,5 +97,5 @@ class Haguichi
         Application.Run ();
         
     }
-
+    
 }

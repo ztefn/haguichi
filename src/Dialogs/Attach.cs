@@ -42,7 +42,7 @@ namespace Dialogs
         public Attach () : base ()
         {
             
-            Haguichi.modalDialog = this;
+            GlobalEvents.SetModalDialog ( this );
             
             this.Title           = TextStrings.attachTitle;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
@@ -214,7 +214,7 @@ namespace Dialogs
         private void Dismiss ()
         {
             
-            Haguichi.modalDialog = null;
+            GlobalEvents.SetModalDialog ( null );
             
             this.Destroy ();
             
