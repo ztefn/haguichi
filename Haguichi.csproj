@@ -586,6 +586,8 @@
       <DeployService-RelativeDeployPath>icons/Humanity/status/24/haguichi-disconnected.svg</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
     </None>
+    <None Include="postinstall-pak" />
+    <None Include="postremove-pak" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
