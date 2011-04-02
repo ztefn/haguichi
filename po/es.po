@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
-"PO-Revision-Date: 2011-02-12 20:19+0000\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
+"PO-Revision-Date: 2011-03-30 18:43+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-02-12 21:56+0000\n"
-"X-Generator: Launchpad (build 12351)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "Únase y cree redes locales a través de Internet"
 
 #: ../src/TextStrings.cs:354
 msgid "_Show Haguichi"
-msgstr ""
+msgstr "_Mostrar Haguichi"
 
 #: ../src/TextStrings.cs:356
 msgid "Yes"
@@ -179,7 +179,7 @@ msgstr "Propietario:"
 
 #: ../src/TextStrings.cs:399
 msgid "You"
-msgstr "Usted"
+msgstr "Tú"
 
 #: ../src/TextStrings.cs:400
 msgid "Unknown"
@@ -823,9 +823,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
-#~ msgid "Changing..."
-#~ msgstr "Cambiando..."
-
 #~ msgid "seconds"
 #~ msgstr "segundos"
 
@@ -837,6 +834,9 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
 #~ msgid "Not installed"
 #~ msgstr "No instalado"
+
+#~ msgid "Changing..."
+#~ msgstr "Cambiando..."
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Miembros desconectados"

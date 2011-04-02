@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
-"PO-Revision-Date: 2011-02-12 19:23+0000\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
+"PO-Revision-Date: 2011-03-30 18:39+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-02-12 22:00+0000\n"
-"X-Generator: Launchpad (build 12351)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "Anslut och skapa lokala nätverk över internet"
 
 #: ../src/TextStrings.cs:354
 msgid "_Show Haguichi"
-msgstr ""
+msgstr "_Visa Haguichi"
 
 #: ../src/TextStrings.cs:356
 msgid "Yes"
@@ -823,9 +823,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
-#~ msgid "Changing..."
-#~ msgstr "Ändrar..."
-
 #~ msgid "seconds"
 #~ msgstr "sekunder"
 
@@ -834,6 +831,9 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
 #~ msgid "Not configured"
 #~ msgstr "Inte konfiguerad"
+
+#~ msgid "Changing..."
+#~ msgstr "Ändrar..."
 
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusrad"

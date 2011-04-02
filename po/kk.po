@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
-"PO-Revision-Date: 2011-02-06 12:14+0000\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
+"PO-Revision-Date: 2011-03-21 10:51+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-02-06 15:56+0000\n"
-"X-Generator: Launchpad (build 12309)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "Интернет арқылы локальды желілерге кір
 
 #: ../src/TextStrings.cs:354
 msgid "_Show Haguichi"
-msgstr ""
+msgstr "Haguichi _көрсету"
 
 #: ../src/TextStrings.cs:356
 msgid "Yes"
@@ -815,23 +815,20 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "Changing..."
-#~ msgstr "Өзгерту..."
-
-#~ msgid "Not configured"
-#~ msgstr "Қалыпқа келтірілмеген"
-
-#~ msgid "Not installed"
-#~ msgstr "Hamachi орнатылмаған"
-
 #~ msgid "seconds"
 #~ msgstr "секунд"
+
+#~ msgid "Changing..."
+#~ msgstr "Өзгерту..."
 
 #~ msgid "S_tatusbar"
 #~ msgstr "Күй _жолағы"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Ник тізімін алу..."
+
+#~ msgid "Not configured"
+#~ msgstr "Қалыпқа келтірілмеген"
 
 #~ msgid "_Offline Members"
 #~ msgstr "Желіге _қосылмаған мүшелерді көрсету"
@@ -844,3 +841,6 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Қосылыс үзілгенде автоматты түрде _қайта қосылу"
+
+#~ msgid "Not installed"
+#~ msgstr "Hamachi орнатылмаған"

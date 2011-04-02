@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
-"PO-Revision-Date: 2011-02-18 00:40+0000\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
+"PO-Revision-Date: 2011-03-31 00:29+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-02-18 20:00+0000\n"
-"X-Generator: Launchpad (build 12399)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "インターネット越しのローカルネットワークを作った
 
 #: ../src/TextStrings.cs:354
 msgid "_Show Haguichi"
-msgstr ""
+msgstr "Haguichi を表示 (_S)"
 
 #: ../src/TextStrings.cs:356
 msgid "Yes"
@@ -794,15 +794,13 @@ msgstr[0] "%S 秒毎にネットワーク一覧をアップデート (_U)"
 #: ../src/TextStrings.cs:598
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614

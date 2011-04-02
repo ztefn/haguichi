@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
-"PO-Revision-Date: 2011-01-14 13:21+0000\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
+"PO-Revision-Date: 2011-03-19 06:42+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-01-15 19:52+0000\n"
-"X-Generator: Launchpad (build 12200)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
@@ -820,8 +820,11 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
 msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
-#~ msgid "Changing..."
-#~ msgstr "Wijzigen..."
+#~ msgid "seconds"
+#~ msgstr "seconden"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Bijnamen opvragen..."
 
 #~ msgid "Not configured"
 #~ msgstr "Niet geconfigureerd"
@@ -829,23 +832,23 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 #~ msgid "Not installed"
 #~ msgstr "Niet geïnstalleerd"
 
-#~ msgid "Getting nicknames..."
-#~ msgstr "Bijnamen opvragen..."
-
-#~ msgid "seconds"
-#~ msgstr "seconden"
-
 #~ msgid "Go O_nline"
 #~ msgstr "O_nline gaan"
 
 #~ msgid "Go O_ffline"
 #~ msgstr "O_ffline gaan"
 
+#~ msgid "Changing..."
+#~ msgstr "Wijzigen..."
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Offline leden tonen"
 
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusbalk tonen"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "Automatisch een verbroken verbinding _herstellen"
 
 #~ msgid "Nickname:"
 #~ msgstr "Bijnaam:"

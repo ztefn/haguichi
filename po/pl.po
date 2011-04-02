@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-03-18 19:07:37+0100\n"
+"POT-Creation-Date: 2011-03-18 19:07+0100\n"
 "PO-Revision-Date: 2011-03-04 22:08+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -16,17 +16,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-03-04 22:12+0000\n"
-"X-Generator: Launchpad (build 12515)\n"
+"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
+"X-Generator: Launchpad (build 12710)\n"
 
 #: ../src/TextStrings.cs:350
 msgid "Haguichi Website"
 msgstr "Strona główna Haguichi"
 
+#. Description used in about dialog.
 #: ../src/TextStrings.cs:351
 msgid "A graphical frontend for Hamachi."
 msgstr "Graficzny interfejs dla Hamachi."
 
+#. Description used in application launchers.
 #: ../src/TextStrings.cs:352
 msgid "Join and create local networks over the Internet"
 msgstr "Dołączaj i twórz lokalne sieci po przez internet"
@@ -131,6 +133,7 @@ msgstr "Uruchamianie tuncfg..."
 msgid "Updating..."
 msgstr "Aktualizowanie..."
 
+#. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:385
 msgid "C_onnect (%S)"
 msgstr "P_ołącz (%S)"
@@ -287,6 +290,7 @@ msgstr "_Zatwierdź"
 msgid "_Reject"
 msgstr "_Odrzuć"
 
+#. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:431
 msgid "_Evict"
 msgstr "_Wyklucz"
@@ -523,6 +527,7 @@ msgstr "Nie jesteś właścicielem sieci '{0}'."
 msgid "General"
 msgstr "Ogólne"
 
+#. In this context meaning "work environment".
 #: ../src/TextStrings.cs:505
 msgid "Desktop"
 msgstr "Pulpit"
@@ -665,7 +670,8 @@ msgstr "Ładowanie konfiguracji nie udane"
 
 #: ../src/TextStrings.cs:548
 msgid "Hamachi could not launch due to a configuration load failure."
-msgstr "Hamachi nie może zostać z powodu nieudanego załadowania konfiguracji."
+msgstr ""
+"Hamachi nie może zostać z powodu nieudanego załadowania konfiguracji."
 
 #: ../src/TextStrings.cs:550
 msgid "Hamachi lost connection"
@@ -675,6 +681,7 @@ msgstr "Hamachi utraciło połączenie"
 msgid "Member online"
 msgstr "Dostępny"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:552
 msgid "{0} came online in the network {1}"
 msgstr "{0} jest dostępny w sieci {1}"
@@ -683,6 +690,7 @@ msgstr "{0} jest dostępny w sieci {1}"
 msgid "Member offline"
 msgstr "Niedostępny"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:554
 msgid "{0} went offline in the network {1}"
 msgstr "{0} jest niedostępny w sieci {1}"
@@ -691,6 +699,7 @@ msgstr "{0} jest niedostępny w sieci {1}"
 msgid "Member joined"
 msgstr "Dołączył"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:556
 msgid "{0} joined the network {1}"
 msgstr "{0} dołączył do sieci {1}"
@@ -699,6 +708,7 @@ msgstr "{0} dołączył do sieci {1}"
 msgid "Member left"
 msgstr "Opuścił"
 
+#. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:558
 msgid "{0} left the network {1}"
 msgstr "{0} opuścił sieć {1}"
@@ -786,6 +796,7 @@ msgstr[0] "_Aktualizuj liste sieci co %S sekunde"
 msgstr[1] "_Aktualizuj liste sieci co %S sekund"
 msgstr[2] "_Aktualizuj liste sieci co %S sekund"
 
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:598
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
@@ -793,6 +804,7 @@ msgstr[0] "{0} jest dostępny w sieci {1}, {2} i innej sieci"
 msgstr[1] "{0} jest dostępny w sieci {1}, {2} oraz innych sieciach"
 msgstr[2] "{0} jest dostępny w sieci {1}, {2} oraz innych sieciach"
 
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:606
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
@@ -800,6 +812,7 @@ msgstr[0] "{0} jest niedostępny w sieci {1}, {2} i innej sieci"
 msgstr[1] "{0} jest niedostępny w sieci {1}, {2} i innych siecach"
 msgstr[2] "{0} jest niedostępny w sieci {1}, {2} i innych sieciach"
 
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:614
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
@@ -807,6 +820,7 @@ msgstr[0] "{0} dołączył do sieci {1}, {2} i innej sieci"
 msgstr[1] "{0} dołączył do sieci {1}, {2} i innych sieci"
 msgstr[2] "{0} dołączył do sieci {1}, {2} i innych sieci"
 
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:622
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
