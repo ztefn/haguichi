@@ -30,6 +30,8 @@ namespace Dialogs
         public NotConfigured ( string header, string message, string icon ) : base ( Haguichi.mainWindow.ReturnWindow (), "", header, message, icon )
         {
             
+            GlobalEvents.SetModalDialog ( this );
+            
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             this.AddButton ( TextStrings.configureLabel, ResponseType.Ok );
             
@@ -50,6 +52,7 @@ namespace Dialogs
             {
                 GlobalEvents.ConfigureHamachi ();
             }
+            GlobalEvents.SetModalDialog ( null );
             
         }
 

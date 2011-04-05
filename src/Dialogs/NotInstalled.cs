@@ -30,6 +30,8 @@ namespace Dialogs
         public NotInstalled ( string header, string message, string icon ) : base ( Haguichi.mainWindow.ReturnWindow (), "", header, message, icon )
         {
             
+            GlobalEvents.SetModalDialog ( this );
+            
             this.AddButton ( Stock.Cancel, ResponseType.Cancel );
             this.AddButton ( TextStrings.downloadLabel, ResponseType.Ok );
             
@@ -52,6 +54,7 @@ namespace Dialogs
                 Command.OpenURL ( TextStrings.getHamachiURL );
                 
             }
+            GlobalEvents.SetModalDialog ( null );
             
         }
 
