@@ -33,7 +33,7 @@ public static class Controller
     public  static bool restoreConnection;
     public  static int restoreCountdown;
     public  static int numUpdateCycles;
-    public  static int lastStatus;
+    public  static int lastStatus = -2;
     private static string startOutput;
     
     private static Hashtable membersLeftHash;
@@ -58,7 +58,6 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
-        lastStatus = -2;
         StatusCheck ();
         
         if ( lastStatus >= 6 )
