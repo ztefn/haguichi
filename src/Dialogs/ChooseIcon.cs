@@ -135,11 +135,10 @@ namespace Dialogs
                 iconBut.Relief = ReliefStyle.None;
                 iconBut.TooltipText = icon;
                 iconBut.HasTooltip = false;
-                iconBut.Clicked += delegate {
-                    
+                iconBut.Clicked += delegate
+                {
                     Opener.SetIcon ( iconBut.TooltipText );
                     Dismiss ();
-                    
                 };
                 if ( CurrentIcon == icon )
                 {
@@ -175,11 +174,10 @@ namespace Dialogs
             NoneBut = new Button ( TextStrings.noIconLabel );
             NoneBut.TooltipText = "none";
             NoneBut.HasTooltip = false;
-            NoneBut.Clicked += delegate {
-                    
+            NoneBut.Clicked += delegate
+            {
                 Opener.SetIcon ( NoneBut.TooltipText );
                 Dismiss ();
-                
             };
             
             Table.Attach ( NoneBut, 0, 7, 5, 6 );

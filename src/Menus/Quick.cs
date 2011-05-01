@@ -30,7 +30,6 @@ namespace Menus
         private AccelGroup accelGroup;
         
         private CheckMenuItem show;
-        private ImageMenuItem configure;
         private ImageMenuItem connect;
         private ImageMenuItem disconnect;
         private ImageMenuItem join;
@@ -54,9 +53,6 @@ namespace Menus
                 }
             };
             
-            configure = new ImageMenuItem ( TextStrings.configureLabel );
-            configure.Activated += GlobalEvents.ConfigureHamachi;
-            
             connect = new ImageMenuItem ( Stock.Connect, accelGroup );
             connect.Activated += GlobalEvents.StartHamachi;
             
@@ -78,7 +74,6 @@ namespace Menus
             
             this.Add ( show );
             this.Add ( new SeparatorMenuItem () );
-            this.Add ( configure );
             this.Add ( connect );
             this.Add ( disconnect );
             this.Add ( new SeparatorMenuItem () );
@@ -114,7 +109,6 @@ namespace Menus
                     break;
                     
                 case "Connected":
-                    configure.Hide ();
                     connect.Hide ();
                     disconnect.Show ();
                     disconnect.Sensitive = true;
@@ -124,7 +118,6 @@ namespace Menus
                     break;
                     
                 case "Disconnected":
-                    configure.Hide ();
                     connect.Show ();
                     connect.Sensitive    = true;
                     disconnect.Hide ();
@@ -134,8 +127,6 @@ namespace Menus
                     break;
                 
                 case "Not configured":
-                    configure.Show ();
-                    configure.Sensitive  = true;
                     connect.Sensitive    = false;
                     disconnect.Hide ();
                     join.Sensitive       = false;
@@ -144,7 +135,6 @@ namespace Menus
                     break;
                 
                 case "Not installed":
-                    configure.Hide ();
                     connect.Sensitive    = false;
                     disconnect.Hide ();
                     join.Sensitive       = false;

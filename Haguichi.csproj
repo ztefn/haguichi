@@ -281,14 +281,14 @@
     <Compile Include="src\Dialogs\AddEditCommand.cs" />
     <Compile Include="src\Dialogs\ChooseIcon.cs" />
     <Compile Include="src\Dialogs\Information.cs" />
-    <Compile Include="src\Dialogs\NotInstalled.cs" />
-    <Compile Include="src\Dialogs\NotConfigured.cs" />
     <Compile Include="src\Platform.cs" />
     <Compile Include="src\Dialogs\SendRequest.cs" />
     <Compile Include="src\Dialogs\ChangePassword.cs" />
     <Compile Include="src\Dialogs\Attach.cs" />
     <Compile Include="src\Utilities.cs" />
     <Compile Include="src\Session.cs" />
+    <Compile Include="src\Widgets\WrapLabel.cs" />
+    <Compile Include="src\Widgets\MessageBar.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

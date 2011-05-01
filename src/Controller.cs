@@ -50,6 +50,8 @@ public static class Controller
     public static void Init ()
     {
         
+        MainWindow.messageBar.Hide ();
+        
         notifyIcon = MainWindow.appIcons [4];
         
         oNetworksList = new ArrayList ();
@@ -104,12 +106,28 @@ public static class Controller
         else if ( lastStatus >= 1 )
         {
             MainWindow.SetMode ( "Not configured" );
-            new Dialogs.NotConfigured ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, "Info" );
+            
+            Button configureButton = new Button ( TextStrings.configureLabel );
+            configureButton.Clicked += delegate
+            {
+                Hamachi.Configure ();
+            };
+            
+            MainWindow.messageBar.SetMessage ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, MessageType.Warning, false );
+            MainWindow.messageBar.AddButton ( configureButton );
         }
         else
         {
             MainWindow.SetMode ( "Not installed" );
-            new Dialogs.NotInstalled ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, "Info" );
+            
+            Button downloadButton = new Button ( TextStrings.downloadLabel );
+            downloadButton.Clicked += delegate
+            {
+                Command.OpenURL ( TextStrings.getHamachiURL );
+            };
+            
+            MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error, false );
+            MainWindow.messageBar.AddButton ( downloadButton );
         }
         
     }

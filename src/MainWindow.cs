@@ -34,6 +34,8 @@ public class MainWindow
     public  static Menus.Quick quickMenu;
     public  static Menus.Menubar menuBar;
     
+    public  static Widgets.MessageBar messageBar;
+    
     private static Window window;
     
     public  static NetworkView networkView;
@@ -87,6 +89,8 @@ public class MainWindow
         
         quickMenu = new Menus.Quick ();
         menuBar = new Menus.Menubar ();
+        
+        messageBar = new Widgets.MessageBar ();
         
         
         
@@ -150,6 +154,7 @@ public class MainWindow
         
         VBox mainBox = new VBox ( false, 1 );
         mainBox.Add ( menuBar );
+        mainBox.Add ( messageBar );
         mainBox.Add ( disconnectedBox );
         mainBox.Add ( connectedBox );
         mainBox.Add ( statusBar );
@@ -169,8 +174,11 @@ public class MainWindow
         
         Box.BoxChild bc3 = ( ( Box.BoxChild ) ( mainBox [ statusBar ] ) );
         bc3.Expand = false;
-
-
+        
+        Box.BoxChild bc8 = ( ( Box.BoxChild ) ( mainBox [ messageBar ] ) );
+        bc8.Expand = false;
+        
+        
         window = new Window ( TextStrings.appName);
         window.AddAccelGroup( accelGroup );
 
@@ -184,6 +192,8 @@ public class MainWindow
         window.IconList = appIcons;
         window.Add ( mainBox );
         window.ShowAll ();
+        
+        messageBar.Hide ();
         
         connectButton.GrabFocus ();
         

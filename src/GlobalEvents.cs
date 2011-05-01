@@ -38,22 +38,6 @@ public class GlobalEvents
     }
     
     
-    public static void ConfigureHamachi ( object obj, EventArgs args )
-    {
-        
-        ConfigureHamachi ();
-        
-    }
-    
-    
-    public static void ConfigureHamachi ()
-    {
-        
-        Hamachi.Configure ();
-        
-    }
-    
-    
     public static void StartHamachi ( object obj, EventArgs args )
     {
         

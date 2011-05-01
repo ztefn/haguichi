@@ -41,14 +41,6 @@ public class ApplicationSession : MarshalByRefObject
     }
     
     
-    public void ConfigureHamachi ()
-    {
-        
-        GlobalEvents.ConfigureHamachi ();
-        
-    }
-    
-    
     public void StartHamachi ()
     {
         
