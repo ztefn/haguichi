@@ -84,6 +84,7 @@ namespace Widgets
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
+            
             this.Add ( hbox );
             this.Add ( buttonBox );
             

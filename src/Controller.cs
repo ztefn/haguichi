@@ -32,8 +32,9 @@ public static class Controller
     public  static bool manualUpdate;
     public  static bool restoreConnection;
     public  static int restoreCountdown;
-    public  static int numUpdateCycles;
     public  static int lastStatus = -2;
+    public  static int numUpdateCycles;
+    private static int numWaitForInternetCycles;
     private static string startOutput;
     
     private static Hashtable membersLeftHash;
@@ -64,6 +65,8 @@ public static class Controller
         
         if ( lastStatus >= 6 )
         {
+            restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+            
             MainWindow.SetMode ( "Connected" );
             
             if ( Hamachi.ApiVersion == 1 )
@@ -75,10 +78,7 @@ public static class Controller
         }
         else if ( lastStatus >= 5 )
         {
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
-            }
+            restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
             
             MainWindow.SetMode ( "Connecting" );
             GoConnect ();
@@ -149,6 +149,12 @@ public static class Controller
             return 6;
         }
         
+        if ( !HasInternetConnection () && lastStatus > 1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet connection." ); // We don't want to call Hamachi if there's no Internet connection...
+            return 2;
+        }
+        
         string output;
         
         if ( lastStatus == -2 )
@@ -177,7 +183,7 @@ public static class Controller
         
         if ( !HasInternetConnection () )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet." );
+            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet connection." );
             return 2;
         }
         
@@ -232,15 +238,22 @@ public static class Controller
     }
     
     
-    public static bool WaitForInternet ()
+    private static bool WaitForInternet ()
     {
         
-        if ( !restoreConnection )
+        if ( numWaitForInternetCycles > 1 )
         {
+            numWaitForInternetCycles --;
+            return false;
+        }
+        else if ( !restoreConnection )
+        {
+            numWaitForInternetCycles --;
             return false;
         }
         else if ( HasInternetConnection () )
         {
+            numWaitForInternetCycles --;
             GlobalEvents.StartHamachi ();
             return false;
         }
@@ -360,6 +373,7 @@ public static class Controller
         Application.Invoke ( delegate
         {
             MainWindow.SetMode ( "Connecting" );
+            MainWindow.messageBar.Hide ();
         });
         
         StatusCheck ();
@@ -375,20 +389,8 @@ public static class Controller
         {
             Application.Invoke ( delegate
             {
-                if ( restoreConnection )
-                {
-                    MainWindow.SetMode ( "Disconnected" );
-                    WaitForInternetCycle ();
-                }
-                else
-                {
-                    GlobalEvents.ConnectionStopped ();
-                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                          TextStrings.connectErrorHeading,
-                                          TextStrings.connectErrorNoInternetConnection,
-                                          "Error",
-                                          null );
-                }
+                GlobalEvents.ConnectionStopped ();
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, MessageType.Error, true );
             });
         }
         else if ( lastStatus >= 4 )
@@ -474,21 +476,8 @@ public static class Controller
             
             Application.Invoke ( delegate
             {
-                if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-                {
-                    restoreConnection = true;
-                }
-                
                 GlobalEvents.ConnectionStopped ();
-                
-                if ( !restoreConnection )
-                {
-                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                          TextStrings.connectErrorHeading,
-                                          TextStrings.connectErrorLoginFailed,
-                                          "Error",
-                                          output );
-                }
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, MessageType.Error, true );
             });
         }
         
@@ -651,12 +640,6 @@ public static class Controller
             GlobalEvents.ConnectionStopped ();
             numUpdateCycles --;
             
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
-                WaitForInternetCycle ();
-            }
-            
         }
         else if ( lastStatus < 6 )
         {
@@ -666,11 +649,6 @@ public static class Controller
             if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )
             {
                 new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
-            }
-            
-            if ( ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss ) )
-            {
-                restoreConnection = true;
             }
             
             GlobalEvents.ConnectionStopped ();
@@ -857,8 +835,10 @@ public static class Controller
     }
     
     
-    private static void WaitForInternetCycle ()
+    public static void WaitForInternetCycle ()
     {
+        
+        numWaitForInternetCycles ++;
         
         uint interval = ( uint ) ( 1000 );
         GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( WaitForInternet ) );

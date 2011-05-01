@@ -49,7 +49,6 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
-        Controller.restoreConnection = false;
         Controller.GoConnect ();
         
     }
@@ -68,6 +67,8 @@ public class GlobalEvents
         
         Thread thread = new Thread ( StopHamachiThread );
         thread.Start ();
+        
+        Controller.restoreConnection = false;
         
         ConnectionStopped ();
         
@@ -115,7 +116,7 @@ public class GlobalEvents
         Thread thread = new Thread ( SetNickAfterLoginThread );
         thread.Start ();
         
-        Controller.restoreConnection = false;
+        Controller.restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
         Controller.numUpdateCycles ++;
         Controller.UpdateCycle ();
         
@@ -127,13 +128,20 @@ public class GlobalEvents
         
         MainWindow.SetMode ( "Disconnected" );
         
+        Controller.continueUpdate = false; // Stop update interval
+        
         if ( Controller.restoreConnection )
         {
-            Controller.RestoreConnectionCycle ();
+            if ( Controller.lastStatus == 2 )
+            {
+                Controller.WaitForInternetCycle ();
+            }
+            else
+            {
+                Controller.RestoreConnectionCycle ();
+            }
             return;
         }
-        
-        Controller.continueUpdate = false; // Stop update interval
         
         Haguichi.connection.ClearNetworks ();
         
