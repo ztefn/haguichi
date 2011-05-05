@@ -49,6 +49,7 @@ public class GlobalEvents
     public static void StartHamachi ()
     {
         
+        Controller.restoreCountdown = 0;
         Controller.GoConnect ();
         
     }

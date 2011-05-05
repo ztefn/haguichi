@@ -21,6 +21,7 @@ using System;
 using System.Diagnostics;
 using System.Threading;
 using Gtk;
+using Widgets;
 
 
 namespace Dialogs
@@ -43,6 +44,8 @@ namespace Dialogs
         private Label passwordLabel;
         private Entry passwordEntry;
         private HBox  passwordBox;
+        
+        private MessageBar messageBar;
         
         private Image    failImg;
         private Label    failLabel;
@@ -70,7 +73,6 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.BorderWidth     = 6;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
@@ -78,29 +80,8 @@ namespace Dialogs
             
             heading = new Label ();
             heading.Xalign = 0;
-            heading.Ypad = 6;
-
-            HBox headBox = new HBox ();
-            headBox.Add ( heading );
             
-            
-            failImg = new Image ( Stock.DialogError, IconSize.Button );
-            
-            failLabel = new Label ();
-            failLabel.Xalign = 0;
-
-            failBox = new EventBox ();
-            failHBox = new HBox ();
-            failHBox.Add ( failImg );
-            failHBox.Add ( failLabel );
-            failBox.Add ( failHBox );
-            
-            Box.BoxChild bc11 = ( ( Box.BoxChild ) ( failHBox [ failLabel ] ) );
-            bc11.Padding = 6;
-            bc11.Expand = false;
-            
-            Box.BoxChild bc12 = ( ( Box.BoxChild ) ( failHBox [ failImg ] ) );
-            bc12.Expand = false;
+            messageBar = new MessageBar ();
             
             
             cancelBut = new Button ( Stock.Cancel );
@@ -125,7 +106,7 @@ namespace Dialogs
             
             nameEntry = new Entry ();
             nameEntry.ActivatesDefault = true;
-            nameEntry.FocusGrabbed += HideFailure;
+            nameEntry.FocusGrabbed += HideMessage;
             nameEntry.WidthChars = 30;
             nameEntry.MaxLength = 40;
             nameEntry.Changed += CheckNameLength;
@@ -143,7 +124,7 @@ namespace Dialogs
             
             passwordEntry = new Entry ();
             passwordEntry.ActivatesDefault = true;
-            passwordEntry.FocusGrabbed += HideFailure;
+            passwordEntry.FocusGrabbed += HideMessage;
             passwordEntry.Visibility = false;
             passwordEntry.WidthChars = 30;
             passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
@@ -167,24 +148,19 @@ namespace Dialogs
             };
             
             VBox vbox = new VBox ();
-            vbox.Add ( headBox );
-            vbox.Add ( failBox );
+            vbox.Add ( heading );
             vbox.Add ( inputBox );
             vbox.Add ( goOnline );
             vbox.Add ( buttonBox );
             
             
-            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( vbox [ headBox ] ) );
-            //bc8.Padding = 6;
+            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( vbox [ heading ] ) );
+            bc8.Padding = 6;
             bc8.Expand = false;
             
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
             bc4.Padding = 6;
             bc4.Expand = false;
-            
-            Box.BoxChild bc13 = ( ( Box.BoxChild ) ( vbox [ failBox ] ) );
-            bc13.Padding = 6;
-            bc13.Expand = false;
             
             Box.BoxChild bc6 = ( ( Box.BoxChild ) ( inputBox [ nameBox ] ) );
             bc6.Padding = 3;
@@ -206,18 +182,23 @@ namespace Dialogs
             HBox hbox = new HBox ();
             hbox.Add ( vbox );
             
+            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
+            bc1.Padding = 12;
             
-            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
+            
+            
+            VBox container = new VBox ();
+            container.Add ( messageBar );
+            container.Add ( hbox );
+            
+            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( container [ hbox ] ) );
             bc7.Padding = 6;
-                        
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( headBox [ heading ] ) );
-            bc2.Expand = false;
-
             
-            this.VBox.Add ( hbox );
-            this.VBox.ShowAll ();
+            this.Remove ( this.VBox );
+            this.Add ( container );
+            this.ShowAll ();
             
-            HideFailure ();
+            HideMessage ();
             
             if ( Hamachi.ApiVersion > 1 )
             {
@@ -231,6 +212,8 @@ namespace Dialogs
             SetMode ( mode );
             
             this.Show ();
+            
+            nameEntry.GrabFocus ();
             
         }
         
@@ -308,46 +291,64 @@ namespace Dialogs
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkNotFound );
+                ShowMessage ( TextStrings.errorNetworkNotFound );
                 return;
             }
             else if ( output.Contains ( ".. failed, invalid password" ) )
             {
-                ShowFailure ( TextStrings.errorInvalidPassword );
+                ShowMessage ( TextStrings.errorInvalidPassword );
                 return;
             }
             else if ( output.Contains ( ".. failed, the network is full" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkFull );
+                ShowMessage ( TextStrings.errorNetworkFull );
                 return;
             }
             else if ( output.Contains ( ".. failed, network is locked" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkLocked );
+                ShowMessage ( TextStrings.errorNetworkLocked );
                 return;
             }
             else if ( output.Contains ( ".. failed, you are already a member" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkAlreadyJoined );
+                ShowMessage ( TextStrings.errorNetworkAlreadyJoined );
                 return;
             }
             else if ( output.Contains ( ".. failed, manual approval required" ) )
             {
                 Application.Invoke ( delegate
                 {
-                    Dialogs.SendRequest dlg = new Dialogs.SendRequest ( this, TextStrings.sendRequestTitle, TextStrings.sendRequestMessage , "Question", this.NetworkName, this.NetworkPassword );
-                    
-                    SetMode ( "Normal" );
-                    if ( dlg.ResponseText == "Ok" )
+                    Button noButton = new Button ( Stock.No );
+                    noButton.Clicked += delegate
                     {
+                        HideMessage ();
+                        SetMode ( "Normal" );
+                    };
+                    
+                    Button yesButton = new Button ( Stock.Yes );
+                    yesButton.Clicked += delegate
+                    {
+                        output = Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
+                        if ( output.Contains ( ".. ok, request sent, waiting for approval" ) )
+                        {
+                            MainWindow.messageBar.SetMessage ( TextStrings.requestSentMessage, null, MessageType.Info, 3000 );
+                        }
+                        
                         Dismiss ();
-                    }
+                    };
+                    
+                    messageBar.SetMessage ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage, MessageType.Question );
+                    messageBar.AddButton ( noButton );
+                    messageBar.AddButton ( yesButton );
+                    
+                    yesButton.CanDefault = true;
+                    yesButton.GrabDefault ();
                 });
                 return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
-                ShowFailure ( TextStrings.errorUnknown );
+                ShowMessage ( TextStrings.errorUnknown );
                 return;
             }
             else
@@ -406,17 +407,17 @@ namespace Dialogs
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkNameTooShort );
+                ShowMessage ( TextStrings.errorNetworkNameTooShort );
                 return;
             }
             else if ( output.Contains ( ".. failed, network name is already taken" ) )
             {
-                ShowFailure ( TextStrings.errorNetworkNameTaken );
+                ShowMessage ( TextStrings.errorNetworkNameTaken );
                 return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
-                ShowFailure ( TextStrings.errorUnknown );
+                ShowMessage ( TextStrings.errorUnknown );
                 return;
             }
             else
@@ -427,32 +428,31 @@ namespace Dialogs
         }
         
         
-        private void ShowFailure ( string message )
+        private void ShowMessage ( string message )
         {
             
             Application.Invoke ( delegate
             {
                 SetMode ( "Normal" );
                 
-                failLabel.Markup = String.Format ( "<span weight=\"bold\">{0}</span>", message );
-                failBox.ShowAll ();
+                messageBar.SetMessage ( message, null, MessageType.Error );
             });
             
         }
         
         
-        private void HideFailure ( object obj, EventArgs args )
+        private void HideMessage ( object obj, EventArgs args )
         {
             
-            HideFailure ();
+            HideMessage ();
             
         }
         
         
-        private void HideFailure ()
+        private void HideMessage ()
         {
             
-            failBox.HideAll ();
+            messageBar.Hide ();
             
         }
         
@@ -556,6 +556,8 @@ namespace Dialogs
                     
                     nameEntry.Sensitive = true;
                     passwordEntry.Sensitive = true;
+                    
+                    nameEntry.GrabFocus ();
                     
                     CheckNameLength ();
                     

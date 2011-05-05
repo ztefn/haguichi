@@ -28,6 +28,7 @@ namespace Widgets
     {
         
         private MessageType messageType;
+        private uint timerID;
         
         private Gdk.Color errorColor;
         private Gdk.Color infoColor;
@@ -35,7 +36,8 @@ namespace Widgets
         private Gdk.Color questionColor;
         private Gdk.Color warningColor;
         
-        private HBox hbox;
+        private HBox topBox;
+        private HBox bottomBox;
         private Image image;
         private WrapLabel label;
         private Button closeButton;
@@ -52,9 +54,10 @@ namespace Widgets
             VBox closeBox = new VBox ();
             
             closeButton = new Button ();
-            closeButton.Image = new Image ( Stock.Close, IconSize.Menu );
+            closeButton.Image = new Image ( Stock.Close, IconSize.Button );
             closeButton.Relief = ReliefStyle.None;
-            closeButton.Clicked += delegate {
+            closeButton.Clicked += delegate
+            {
                 this.Hide ();
             };
             
@@ -63,20 +66,27 @@ namespace Widgets
             Box.BoxChild bc0 = ( ( Box.BoxChild ) ( closeBox [ closeButton ] ) );
             bc0.Expand = false;
             
+            
             label = new WrapLabel ();
             
-            hbox = new HBox ();
-            hbox.Add ( image );
-            hbox.Add ( label );
-            hbox.Add ( closeBox );
+            VBox labelBox = new VBox ();
+            labelBox.Add ( new HBox () );
+            labelBox.Add ( label );
+            labelBox.Add ( new HBox () );
             
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( hbox [ image ] ) );
+            
+            topBox = new HBox ();
+            topBox.Add ( image );
+            topBox.Add ( labelBox );
+            topBox.Add ( closeBox );
+            
+            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( topBox [ image ] ) );
             bc1.Expand = false;
             
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ label ] ) );
+            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( topBox [ labelBox ] ) );
             bc2.Padding = 6;
             
-            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( hbox [ closeBox ] ) );
+            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( topBox [ closeBox ] ) );
             bc3.Expand = false;
             
             
@@ -85,8 +95,19 @@ namespace Widgets
             buttonBox.Spacing = 6;
             
             
-            this.Add ( hbox );
-            this.Add ( buttonBox );
+            bottomBox = new HBox ();
+            bottomBox.Add ( buttonBox );
+            
+            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( bottomBox [ buttonBox ] ) );
+            bc4.Padding = 3;
+            
+            
+            this.Add ( topBox );
+            this.Add ( bottomBox );
+            
+            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( this [ bottomBox ] ) );
+            bc5.Padding = 3;
+            
             
             this.BorderWidth = 6;
             
@@ -110,7 +131,7 @@ namespace Widgets
         }
         
         
-        public void SetMessage ( string header, string message, MessageType messageType, bool showClose )
+        public void SetMessage ( string header, string message, MessageType messageType )
         {
             
             foreach ( var child in buttonBox.Children )
@@ -119,12 +140,65 @@ namespace Widgets
                 child.Destroy ();
             }
             
-            label.Markup = String.Format ( "<b>{0}</b>\n<span size=\"smaller\">{1}</span>", header, message );
-            closeButton.Visible = showClose;
+            string markup = "";
+            
+            if ( header != null )
+            {
+                markup += "<b>{0}</b>";
+            }
+            if ( message != null )
+            {
+                markup += "\n<span size=\"smaller\">{1}</span>";
+            }
+            
+            label.Markup = String.Format ( markup, header, message );
+            closeButton.Visible = false;
             
             SetMessageType ( messageType );
             
+            bottomBox.Hide ();
+            
             this.Show ();
+            
+        }
+        
+        
+        public void SetMessage ( string header, string message, MessageType messageType, bool showClose )
+        {
+            
+            SetMessage ( header, message, messageType );
+            
+            closeButton.Visible = showClose;
+            
+        }
+        
+        
+        public void SetMessage ( string header, string message, MessageType messageType, int timeout )
+        {
+            
+            SetMessage ( header, message, messageType );
+            
+            SetTimeout ( timeout );
+            
+        }
+        
+        
+        public void SetTimeout ( int timeout )
+        {
+            
+            if ( timerID > 0 )
+            {
+                GLib.Source.Remove( timerID );
+                timerID = 0;
+            }
+            
+            timerID = GLib.Timeout.Add ( ( uint ) timeout, () =>
+            {
+                this.Hide ();
+                timerID = 0;
+                
+                return false;
+            });
             
         }
         
@@ -134,6 +208,7 @@ namespace Widgets
             
             ButtonBox.Add ( button );
             button.Show ();
+            bottomBox.Show ();
             
         }
         

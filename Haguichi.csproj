@@ -282,7 +282,6 @@
     <Compile Include="src\Dialogs\ChooseIcon.cs" />
     <Compile Include="src\Dialogs\Information.cs" />
     <Compile Include="src\Platform.cs" />
-    <Compile Include="src\Dialogs\SendRequest.cs" />
     <Compile Include="src\Dialogs\ChangePassword.cs" />
     <Compile Include="src\Dialogs\Attach.cs" />
     <Compile Include="src\Utilities.cs" />

@@ -57,7 +57,7 @@ namespace Config
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );
         public static Key CollapsedNetworks                 = new Key ( "main_window/collapsed_networks", new string [] {} );
-        public static Key WinHeight                         = new Key ( "main_window/height", 460 );
+        public static Key WinHeight                         = new Key ( "main_window/height", 480 );
         public static Key MemberTemplateSmall               = new Key ( "main_window/member_template_small", "%N%_*" );
         public static Key MemberTemplateLarge               = new Key ( "main_window/member_template_large", "%N%_*<br><span size=\"smaller\">%S <i>%A</i></span>" );
         public static Key NetworkListIconSizeSmall          = new Key ( "main_window/network_list_icon_size_small", 12 );
@@ -70,7 +70,7 @@ namespace Config
         public static Key ShowStatusbar                     = new Key ( "main_window/show_statusbar", true );
         public static Key ShowTrayIcon                      = new Key ( "main_window/show_tray_icon", true );
         public static Key SortNetworkListBy                 = new Key ( "main_window/sort_by", "name" );
-        public static Key WinWidth                          = new Key ( "main_window/width", 230 );
+        public static Key WinWidth                          = new Key ( "main_window/width", 250 );
         public static Key WinX                              = new Key ( "main_window/x_pos", 100 );
         public static Key WinY                              = new Key ( "main_window/y_pos", 90 );
         public static Key NotifyOnConnectionLoss            = new Key ( "notifications/connection_loss", true );

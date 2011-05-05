@@ -113,7 +113,7 @@ public static class Controller
                 Hamachi.Configure ();
             };
             
-            MainWindow.messageBar.SetMessage ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, MessageType.Warning, false );
+            MainWindow.messageBar.SetMessage ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, MessageType.Warning );
             MainWindow.messageBar.AddButton ( configureButton );
         }
         else
@@ -126,7 +126,7 @@ public static class Controller
                 Command.OpenURL ( TextStrings.getHamachiURL );
             };
             
-            MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error, false );
+            MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error );
             MainWindow.messageBar.AddButton ( downloadButton );
         }
         
@@ -340,16 +340,12 @@ public static class Controller
         else if ( output.Contains ( "tap: connect() failed 111 (Connection refused)" ) )
         {
             /* Not able to start, connection refused */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Connection refused, showing dialog" );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Connection refused." );
             
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                      TextStrings.connectErrorHeading,
-                                      TextStrings.connectErrorConnectionRefused,
-                                      "Error",
-                                      output );
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorConnectionRefused, null, MessageType.Error );
             });
         }
         else
@@ -390,7 +386,7 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorHeading, TextStrings.connectErrorNoInternetConnection, MessageType.Error, true );
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorNoInternetConnection, null, MessageType.Warning );
             });
         }
         else if ( lastStatus >= 4 )
@@ -477,7 +473,7 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorHeading, TextStrings.connectErrorLoginFailed, MessageType.Error, true );
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorLoginFailed, null, MessageType.Error );
             });
         }
         
@@ -863,7 +859,7 @@ public static class Controller
     private static bool RestoreConnection ()
     {
         
-        if ( restoreConnection )
+        if ( restoreConnection && restoreCountdown > 0 )
         {
             restoreCountdown --;
             

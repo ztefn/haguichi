@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-@files_out = ('messages.pot', 'cs.po', 'de.po', 'es.po', 'fr.po', 'it.po', 'ja.po', 'kk.po', 'nl.po', 'ru.po', 'sv.po', 'tr.po');
+@files_out = ('messages.pot', 'cs.po', 'de.po', 'es.po', 'fr.po', 'it.po', 'ja.po', 'kk.po', 'nl.po', 'pl.po', 'ru.po', 'sv.po', 'tr.po');
 
 foreach $file_out (@files_out)
 {
