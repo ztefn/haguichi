@@ -329,7 +329,8 @@ namespace Dialogs
                     yesButton.Clicked += delegate
                     {
                         output = Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
-                        if ( output.Contains ( ".. ok, request sent, waiting for approval" ) )
+                        if ( ( output.Contains ( ".. ok, request sent, waiting for approval" ) ) ||
+                             ( Config.Settings.DemoMode ) )
                         {
                             MainWindow.messageBar.SetMessage ( TextStrings.requestSentMessage, null, MessageType.Info, 3000 );
                         }
@@ -341,8 +342,7 @@ namespace Dialogs
                     messageBar.AddButton ( noButton );
                     messageBar.AddButton ( yesButton );
                     
-                    yesButton.CanDefault = true;
-                    yesButton.GrabDefault ();
+                    yesButton.GrabFocus ();
                 });
                 return;
             }

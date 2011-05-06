@@ -160,6 +160,23 @@ namespace Widgets
             
             this.Show ();
             
+            int myHeight = 0;
+            
+            GLib.Timeout.Add ( 10, () =>
+            {
+                if ( myHeight < Allocation.Height )
+                {
+                    myHeight ++;
+                    this.QueueDrawArea ( Allocation.X, Allocation.Y, Allocation.Width, Allocation.Height );
+                    
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+            
         }
         
         
@@ -246,6 +263,8 @@ namespace Widgets
         
         private void SetMessageType ( MessageType messageType )
         {
+            
+            this.messageType = messageType;
             
             switch ( messageType )
             {
