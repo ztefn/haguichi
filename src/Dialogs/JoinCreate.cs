@@ -342,6 +342,8 @@ namespace Dialogs
                     messageBar.AddButton ( noButton );
                     messageBar.AddButton ( yesButton );
                     
+                    yesButton.CanDefault = true;
+                    yesButton.GrabDefault ();
                     yesButton.GrabFocus ();
                 });
                 return;

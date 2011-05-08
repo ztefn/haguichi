@@ -257,7 +257,6 @@ namespace Menus
                 case "Connected":
                     connect.Hide ();
                     disconnect.Show ();
-                    change.Sensitive = true;
                     join.Sensitive = true;
                     create.Sensitive = true;
                     info.Sensitive = true;
@@ -269,7 +268,6 @@ namespace Menus
                     connect.Show ();
                     connect.Sensitive = true;
                     disconnect.Hide ();
-                    change.Sensitive = true;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
@@ -281,7 +279,6 @@ namespace Menus
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;
@@ -293,7 +290,6 @@ namespace Menus
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    change.Sensitive = false;
                     join.Sensitive = false;
                     create.Sensitive = false;
                     info.Sensitive = true;

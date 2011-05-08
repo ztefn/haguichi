@@ -469,7 +469,7 @@ public class MainWindow
         
         if ( nick == "" )
         {
-            nick = TextStrings.unavailable;
+            nick = TextStrings.anonymous;
         }
         
         nameLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span>", Markup.EscapeText ( nick ) );
@@ -497,7 +497,6 @@ public class MainWindow
                 connectButton.Sensitive = true;
                 connectButton.Label = TextStrings.connectCountdown.Replace ( "%S", Controller.restoreCountdown.ToString () );
                 connectButton.Image = new Image ( Stock.Connect, IconSize.Button );
-                nameButton.Sensitive = true;
                 
                 panelIcon.SetMode ( "Disconnected" );
                 statusBar.Push ( 0, TextStrings.disconnected );
@@ -515,7 +514,6 @@ public class MainWindow
                 autoconnectCheckbox.Sensitive = false;
                 connectButton.Sensitive = false;
                 connectButton.Label = TextStrings.connecting;
-                nameButton.Sensitive = true;
                 
                 panelIcon.SetMode ( mode );
                 statusBar.Push ( 0, TextStrings.connecting );
@@ -546,7 +544,6 @@ public class MainWindow
                 autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = true;
                 connectButton.Label = Stock.Connect;
-                nameButton.Sensitive = true;
                 
                 panelIcon.SetMode ( mode );
                 statusBar.Push ( 0, TextStrings.disconnected );
@@ -564,10 +561,9 @@ public class MainWindow
                 autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
-                nameButton.Sensitive = false;
                 
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.notConfiguredHeading );
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );
@@ -582,10 +578,9 @@ public class MainWindow
                 autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
-                nameButton.Sensitive = false;
                 
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.notInstalledHeading );
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 menuBar.SetMode ( mode );
                 quickMenu.SetMode ( mode );

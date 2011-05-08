@@ -107,6 +107,13 @@ public static class Controller
         {
             MainWindow.SetMode ( "Not configured" );
             
+            Button refreshButton = new Button ( Stock.Refresh );
+            refreshButton.Clicked += delegate
+            {
+                Hamachi.Init ();
+                Controller.Init ();
+            };
+            
             Button configureButton = new Button ( TextStrings.configureLabel );
             configureButton.Clicked += delegate
             {
@@ -114,11 +121,23 @@ public static class Controller
             };
             
             MainWindow.messageBar.SetMessage ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, MessageType.Warning );
+            MainWindow.messageBar.AddButton ( refreshButton );
             MainWindow.messageBar.AddButton ( configureButton );
+            
+            configureButton.CanDefault = true;
+            configureButton.GrabDefault ();
+            configureButton.GrabFocus ();
         }
         else
         {
             MainWindow.SetMode ( "Not installed" );
+            
+            Button refreshButton = new Button ( Stock.Refresh );
+            refreshButton.Clicked += delegate
+            {
+                Hamachi.Init ();
+                Controller.Init ();
+            };
             
             Button downloadButton = new Button ( TextStrings.downloadLabel );
             downloadButton.Clicked += delegate
@@ -127,7 +146,12 @@ public static class Controller
             };
             
             MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error );
+            MainWindow.messageBar.AddButton ( refreshButton );
             MainWindow.messageBar.AddButton ( downloadButton );
+            
+            downloadButton.CanDefault = true;
+            downloadButton.GrabDefault ();
+            downloadButton.GrabFocus ();
         }
         
     }

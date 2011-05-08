@@ -333,7 +333,7 @@ namespace Dialogs
             
             if ( nick == "" )
             {
-                nick = "<i>" + TextStrings.unavailable + "</i>";
+                nick = "<i>" + TextStrings.anonymous + "</i>";
             }
             
             nickEntry.Markup = nick;
