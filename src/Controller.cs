@@ -110,7 +110,6 @@ public static class Controller
             Button refreshButton = new Button ( Stock.Refresh );
             refreshButton.Clicked += delegate
             {
-                Hamachi.Init ();
                 Controller.Init ();
             };
             
@@ -135,7 +134,7 @@ public static class Controller
             Button refreshButton = new Button ( Stock.Refresh );
             refreshButton.Clicked += delegate
             {
-                Hamachi.Init ();
+                Hamachi.Init (); // If hamachi was installed in the meantime, we want to know what version
                 Controller.Init ();
             };
             
