@@ -27,6 +27,8 @@ namespace Menus
     public class Quick : Menu
     {
     
+        private string lastMode;
+        
         private AccelGroup accelGroup;
         
         private CheckMenuItem show;
@@ -97,8 +99,33 @@ namespace Menus
         }
         
         
+        public void SetModality ( bool modal )
+        {
+            
+            if ( modal )
+            {
+                show.Sensitive       = false;
+                connect.Sensitive    = false;
+                disconnect.Sensitive = false;
+                join.Sensitive       = false;
+                create.Sensitive     = false;
+                info.Sensitive       = false;
+            }
+            else
+            {
+                show.Sensitive       = true;
+                info.Sensitive       = true;
+                
+                SetMode ( lastMode );
+            }
+            
+        }
+        
+        
         public void SetMode ( string mode )
         {
+            
+            lastMode = mode;
             
             switch ( mode )
             {

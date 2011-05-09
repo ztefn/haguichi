@@ -30,6 +30,8 @@ public class GlobalEvents
         
         Haguichi.modalDialog = dialog;
         
+        MainWindow.quickMenu.SetModality ( ( dialog != null ) );
+        
         if ( Platform.IndicatorSession != null )
         {
             Platform.IndicatorSession.SetModality ( ( dialog != null ) );

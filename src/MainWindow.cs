@@ -342,14 +342,7 @@ public class MainWindow
     private void StatusIconPopupHandler ( object o, PopupMenuArgs args )
     {
         
-        if ( Haguichi.modalDialog == null )
-        {
-            quickMenu.Popup ( null, null, PositionMenu, 3, Gtk.Global.CurrentEventTime );
-        }
-        else
-        {
-            Haguichi.modalDialog.Present ();
-        }
+        quickMenu.Popup ( null, null, PositionMenu, 3, Gtk.Global.CurrentEventTime );
         
     }
     
