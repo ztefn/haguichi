@@ -55,6 +55,7 @@ public class NetworkView : TreeView
     
     private Menus.NetworkMenu networkMenu;
     private Menus.MemberMenu memberMenu;
+    private Menu treeMenu;
     
 
     public NetworkView ()
@@ -151,7 +152,18 @@ public class NetworkView : TreeView
     {
         
         networkMenu = new Menus.NetworkMenu ();
-        memberMenu  = new Menus.MemberMenu ();   
+        memberMenu  = new Menus.MemberMenu ();
+        
+        MenuItem join = new MenuItem ( TextStrings.joinNetworkLabel );
+        join.Activated += GlobalEvents.JoinNetwork;
+        
+        MenuItem create = new MenuItem ( TextStrings.createNetworkLabel );
+        create.Activated += GlobalEvents.CreateNetwork;
+        
+        treeMenu = new Menu ();
+        treeMenu.Add ( join );
+        treeMenu.Add ( create );
+        treeMenu.ShowAll ();
         
     }
     
@@ -335,6 +347,7 @@ public class NetworkView : TreeView
             args.RetVal = false;
         
         }
+        
     }
     
     
@@ -951,6 +964,7 @@ public class NetworkView : TreeView
         }   
         
         return false;
+        
     }
     
     
@@ -985,7 +999,7 @@ public class NetworkView : TreeView
             ShowPopupMenu ();
         }
         
-         args.RetVal = true;
+        args.RetVal = true;
         
     }
     
@@ -1053,9 +1067,14 @@ public class NetworkView : TreeView
             {
                 ShowPopupMenu ();
             }
+            else
+            {
+                treeMenu.Popup ();
+            }
         }
         
         return base.OnButtonPressEvent ( evnt );
+        
     }
     
 }
