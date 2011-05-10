@@ -190,13 +190,13 @@ namespace Dialogs
             VBox container = new VBox ();
             container.Add ( messageBar );
             container.Add ( hbox );
+            container.ShowAll ();
             
             Box.BoxChild bc7 = ( ( Box.BoxChild ) ( container [ hbox ] ) );
             bc7.Padding = 6;
             
             this.Remove ( this.VBox );
             this.Add ( container );
-            this.ShowAll ();
             
             HideMessage ();
             
