@@ -52,7 +52,7 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.BorderWidth     = 6;
+            this.BorderWidth     = 3;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();

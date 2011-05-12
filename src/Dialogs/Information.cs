@@ -57,7 +57,7 @@ namespace Dialogs
             this.SkipTaskbarHint = true;
             this.TransientFor    = Haguichi.mainWindow.ReturnWindow ();
             this.IconList        = MainWindow.appIcons;
-            this.BorderWidth     = 6;
+            this.BorderWidth     = 3;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
@@ -65,6 +65,7 @@ namespace Dialogs
             
             image = new Image ( Stock.DialogInfo, IconSize.Dialog );
             image.Yalign = 0;
+            image.Ypad = 3;
             
             
             closeButton = new Button ( Stock.Close );
@@ -149,7 +150,7 @@ namespace Dialogs
             hbox.Add ( vbox );
            
             Box.BoxChild bc3 = ( ( Box.BoxChild ) ( hbox [ image ] ) );
-            bc3.Padding = 3;
+            bc3.Padding = 6;
             bc3.Expand = false;
             
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );

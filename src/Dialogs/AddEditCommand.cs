@@ -32,20 +32,17 @@ namespace Dialogs
         
         private string CommandIcon;
         
-        private VBox   iconBox;
         private Image  iconImg;
         private Button iconBut;
         
         private Label labelLabel;
         private Entry labelEntry;
-        private HBox  labelBox;
         
         private Label commandLabel;
         private Entry commandEntry;
-        private HBox  commandBox;
         
-        private Button cancelBut;
-        private Button okBut;
+        private Button cancelButton;
+        private Button saveButton;
         
         
         public AddEditCommand ( string mode, CommandsEditor editor, string icon, string label, string command ) : base ()
@@ -61,7 +58,7 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.BorderWidth     = 9;
+            this.BorderWidth     = 6;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
@@ -71,66 +68,51 @@ namespace Dialogs
             {
                 this.Title = TextStrings.addCommandTitle;
                 
-                okBut = new Button ( Stock.Add );
-                okBut.Clicked += AddCommand;
+                saveButton = new Button ( Stock.Add );
+                saveButton.Clicked += AddCommand;
             }
             if ( Mode == "Edit" )
             {
                 this.Title = TextStrings.editCommandTitle;
                 
-                okBut = new Button ( Stock.Save );
-                okBut.Clicked += SaveCommand;
+                saveButton = new Button ( Stock.Save );
+                saveButton.Clicked += SaveCommand;
             }
-            okBut.CanDefault = true;
-            okBut.Realized += CheckEntryLengths;
+            saveButton.CanDefault = true;
+            saveButton.Realized += CheckEntryLengths;
             
-            cancelBut = new Button ( Stock.Cancel );
-            cancelBut.Clicked += Dismiss;
+            cancelButton = new Button ( Stock.Cancel );
+            cancelButton.Clicked += Dismiss;
             
             HButtonBox buttonBox = new HButtonBox ();
-            buttonBox.Add ( cancelBut );
-            buttonBox.Add ( okBut );
+            buttonBox.Add ( cancelButton );
+            buttonBox.Add ( saveButton );
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
+            buttonBox.BorderWidth = 3;
             
             
             labelEntry = new Entry ();
             labelEntry.ActivatesDefault = true;
-            labelEntry.WidthChars = 39;
+            labelEntry.WidthChars = 36;
             labelEntry.Text = label;
             labelEntry.Changed += CheckEntryLengths;
             
-            labelLabel = new Label ( TextStrings.labelLabel + "  " );
+            labelLabel = new Label ( TextStrings.labelLabel + " " );
             labelLabel.Xalign = 0;
             labelLabel.MnemonicWidget = labelEntry;
-            
-            labelBox = new HBox ();
-            labelBox.Add ( labelLabel );
-            labelBox.Add ( labelEntry );
-            
-            Box.BoxChild labelBoxC = ( ( Box.BoxChild ) ( labelBox [ labelEntry ] ) );
-            labelBoxC.Expand = false;
             
             
             commandEntry = new Entry ();
             commandEntry.ActivatesDefault = true;
-            commandEntry.WidthChars = 39;
+            commandEntry.WidthChars = 36;
             commandEntry.Text = command;
             commandEntry.Changed += CheckEntryLengths;
             
-            commandLabel = new Label ( TextStrings.commandLabel + "  " );
+            commandLabel = new Label ( TextStrings.commandLabel + " " );
             commandLabel.Xalign = 0;
             commandLabel.MnemonicWidget = commandEntry;
             
-            commandBox = new HBox ();
-            commandBox.Add ( commandLabel );
-            commandBox.Add ( commandEntry );
-            
-            Box.BoxChild commandBoxC = ( ( Box.BoxChild ) ( commandBox [ commandEntry ] ) );
-            commandBoxC.Expand = false;
-            
-            
-            Label empty = new Label ();
             
             string info = TextStrings.commandInfo;
             info = info.Replace ( "%N", "<b>%N</b>" );
@@ -139,28 +121,6 @@ namespace Dialogs
             Label infoLabel = new Label ();
             infoLabel.Markup = String.Format ( "<span size='smaller'>{0}</span>", info );
             infoLabel.Xalign = 0;
-            infoLabel.WidthChars = 40;
-            
-            HBox infoBox = new HBox ();
-            infoBox.Add ( empty );
-            infoBox.Add ( infoLabel );
-            
-            Box.BoxChild infoBoxC = ( ( Box.BoxChild ) ( infoBox [ infoLabel ] ) );
-            infoBoxC.Expand = false;
-            
-            
-            VBox vbox = new VBox ();
-            vbox.Add ( labelBox );
-            vbox.Add ( commandBox );
-            vbox.Add ( infoBox );
-            
-            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( vbox [ labelBox ] ) );
-            bc8.Padding = 3;
-            bc8.Expand = false;
-            
-            Box.BoxChild bc9 = ( ( Box.BoxChild ) ( vbox [ commandBox ] ) );
-            bc9.Padding = 3;
-            bc9.Expand = false;
             
             
             iconImg = new Image ();
@@ -171,39 +131,28 @@ namespace Dialogs
             iconBut.TooltipText = TextStrings.chooseIconTip;
             iconBut.Clicked += ChooseIcon;
             
-            iconBox = new VBox ();
-            iconBox.Add ( iconBut );
             
-            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( iconBox [ iconBut ] ) );
-            bc3.Padding = 3;
-            bc3.Expand = false;
+            Table table = new Table ( 3, 3, false );
+            table.RowSpacing = 6;
+            table.ColumnSpacing = 6;
+            table.BorderWidth = 3;
+            table.Attach ( labelLabel, 0, 1, 0, 1 );
+            table.Attach ( labelEntry, 1, 2, 0, 1 );
+            table.Attach ( commandLabel, 0, 1, 1, 2 );
+            table.Attach ( commandEntry, 1, 2, 1, 2 );
+            table.Attach ( iconBut, 2, 3, 0, 2, AttachOptions.Shrink, AttachOptions.Shrink, 0, 0 );
+            table.Attach ( infoLabel, 1, 3, 2, 3 );
             
-            
-            HBox hbox = new HBox ();
-            hbox.Add ( vbox );
-            hbox.Add ( iconBox );
-
-            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
-            bc5.Padding = 6;
-            
-            //Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ iconBox ] ) );
-            //bc2.Padding = 3;
-            
-            
-            this.VBox.Add ( hbox );
+            this.VBox.Add ( table );
             this.VBox.Add ( buttonBox );
             
-            //Box.BoxChild bc1 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
-            //bc1.Padding = 3;
-            
-            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( this.VBox [ buttonBox ] ) );
-            bc4.Padding = 3;
-            bc4.Expand = false;
+            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( this.VBox [ table ] ) );
+            bc1.Padding = 3;
             
             
             this.ShowAll ();
             
-            okBut.GrabDefault ();
+            saveButton.GrabDefault ();
             
         }
 
@@ -235,12 +184,12 @@ namespace Dialogs
             
             if ( ( label.Length > 0 ) && ( command.Length > 0 ) )
             {
-                okBut.Sensitive = true;
-                okBut.GrabDefault ();
+                saveButton.Sensitive = true;
+                saveButton.GrabDefault ();
             }
             else
             {
-                okBut.Sensitive = false;
+                saveButton.Sensitive = false;
             }
             
         }
