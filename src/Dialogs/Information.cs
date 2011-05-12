@@ -28,27 +28,24 @@ namespace Dialogs
     public class Information : Dialog
     {
         
-        private Label nickLabel;
-        private Label nickEntry;
-        private HBox  nickBox;
+        private Image image;
         
-        private Label accountLabel;
-        private Label accountEntry;
-        private HBox  accountBox;
-        
-        private Label addressLabel;
-        private Label addressEntry;
-        private HBox  addressBox;
-        
-        private Label idLabel;
-        private Label idEntry;
-        private HBox  idBox;
+        private Button closeButton;
         
         private Label versionLabel;
         private Label versionEntry;
-        private HBox  versionBox;
         
-        private Button okBut;
+        private Label addressLabel;
+        private Label addressEntry;
+        
+        private Label idLabel;
+        private Label idEntry;
+        
+        private Label accountLabel;
+        private Label accountEntry;
+        
+        private Label nickLabel;
+        private Label nickEntry;
         
         
         public Information ( string title ) : base ()
@@ -66,151 +63,109 @@ namespace Dialogs
             this.ActionArea.Destroy ();
             
             
-            Image img = new Image ( Stock.DialogInfo, IconSize.Dialog );
-            img.Yalign = 0;
-            img.Xpad = 3;
+            image = new Image ( Stock.DialogInfo, IconSize.Dialog );
+            image.Yalign = 0;
             
-            okBut = new Button ( Stock.Close );
-            okBut.Clicked += Dismiss;
+            
+            closeButton = new Button ( Stock.Close );
+            closeButton.Clicked += Dismiss;
             
             HButtonBox buttonBox = new HButtonBox ();
-            buttonBox.Add ( okBut );
+            buttonBox.Add ( closeButton );
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
             
-            nickEntry = new Label ();
-            nickEntry.Xalign = 0;
-            nickEntry.WidthChars = 25;
-            nickEntry.Selectable = true;
-            
-            nickLabel = new Label ( TextStrings.nick + "  " );
-            nickLabel.Xalign = 0;
-            
-            nickBox = new HBox ();
-            nickBox.Add ( nickLabel );
-            nickBox.Add ( nickEntry );
-            
-            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( nickBox [ nickEntry ] ) );
-            bc8.Expand = false;
-            
-            
-            accountEntry = new Label ();
-            accountEntry.Xalign = 0;
-            accountEntry.WidthChars = 25;
-            accountEntry.Selectable = true;
-            
-            accountLabel = new Label ( TextStrings.account + "  " );
-            accountLabel.Xalign = 0;
-            
-            accountBox = new HBox ();
-            accountBox.Add ( accountLabel );
-            accountBox.Add ( accountEntry );
-            
-            Box.BoxChild bc17 = ( ( Box.BoxChild ) ( accountBox [ accountEntry ] ) );
-            bc17.Expand = false;
-            
-            
-            addressEntry = new Label ();
-            addressEntry.Xalign = 0;
-            addressEntry.WidthChars = 25;
-            addressEntry.Selectable = true;
-            
-            addressLabel = new Label ( TextStrings.address + "  " );
-            addressLabel.Xalign = 0;
-            
-            addressBox = new HBox ();
-            addressBox.Add ( addressLabel );
-            addressBox.Add ( addressEntry );
-            
-            Box.BoxChild bc9 = ( ( Box.BoxChild ) ( addressBox [ addressEntry ] ) );
-            bc9.Expand = false;
-            
-            
-            idEntry = new Label ();
-            idEntry.Xalign = 0;
-            idEntry.WidthChars = 25;
-            idEntry.Selectable = true;
-            
-            idLabel = new Label ( TextStrings.id + "  " );
-            idLabel.Xalign = 0;
-            
-            idBox = new HBox ();
-            idBox.Add ( idLabel );
-            idBox.Add ( idEntry );
-            
-            Box.BoxChild bc15 = ( ( Box.BoxChild ) ( idBox [ idEntry ] ) );
-            bc15.Expand = false;
-            
-            
             versionEntry = new Label ();
             versionEntry.Xalign = 0;
-            versionEntry.WidthChars = 25;
+            versionEntry.SetSizeRequest ( 160, 0 ); /* Triggers minimum dialog size */
             versionEntry.Selectable = true;
             
             versionLabel = new Label ( TextStrings.version + "  " );
             versionLabel.Xalign = 0;
             
-            versionBox = new HBox ();
-            versionBox.Add ( versionLabel );
-            versionBox.Add ( versionEntry );
             
-            Box.BoxChild bc10 = ( ( Box.BoxChild ) ( versionBox [ versionEntry ] ) );
-            bc10.Expand = false;
+            addressEntry = new Label ();
+            addressEntry.Xalign = 0;
+            addressEntry.Selectable = true;
+            
+            addressLabel = new Label ( TextStrings.address + "  " );
+            addressLabel.Xalign = 0;
+            
+            
+            idEntry = new Label ();
+            idEntry.Xalign = 0;
+            idEntry.Selectable = true;
+            
+            idLabel = new Label ( TextStrings.id + "  " );
+            idLabel.Xalign = 0;
+            
+            
+            accountEntry = new Label ();
+            accountEntry.Xalign = 0;
+            accountEntry.Selectable = true;
+            
+            accountLabel = new Label ( TextStrings.account + "  " );
+            accountLabel.Xalign = 0;
+            
+            
+            nickEntry = new Label ();
+            nickEntry.Xalign = 0;
+            nickEntry.Selectable = true;
+            
+            nickLabel = new Label ( TextStrings.nick + "  " );
+            nickLabel.Xalign = 0;
+            
+            
+            Table table = new Table ( 6, 2, false );
+            table.RowSpacing = 12;
+            table.Attach ( versionLabel, 0, 1, 0, 1 );
+            table.Attach ( versionEntry, 1, 2, 0, 1 );
+            table.Attach ( addressLabel, 0, 1, 1, 2 );
+            table.Attach ( addressEntry, 1, 2, 1, 2 );
+            table.Attach ( idLabel, 0, 1, 2, 3 );
+            table.Attach ( idEntry, 1, 2, 2, 3 );
+            table.Attach ( accountLabel , 0, 1, 3, 4 );
+            table.Attach ( accountEntry , 1, 2, 3, 4 );
+            table.Attach ( nickLabel , 0, 1, 4, 5 );
+            table.Attach ( nickEntry , 1, 2, 4, 5 );
             
             
             VBox vbox = new VBox ();
-            vbox.Add ( versionBox );
-            vbox.Add ( addressBox );
-            vbox.Add ( idBox );
-            vbox.Add ( accountBox );
-            vbox.Add ( nickBox );
+            vbox.Add ( table );
             vbox.Add ( buttonBox );
             
+            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
+            bc1.Padding = 3;
+            bc1.Expand = false;
             
-            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
-            bc4.Padding = 6;
-            bc4.Expand = false;
-            
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbox [ addressBox ] ) );
-            bc6.Padding = 6;
-            bc6.Expand = false;
-            
-            Box.BoxChild bc14 = ( ( Box.BoxChild ) ( vbox [ idBox ] ) );
-            bc14.Padding = 6;
-            bc14.Expand = false;
-            
-            Box.BoxChild bc12 = ( ( Box.BoxChild ) ( vbox [ nickBox ] ) );
-            bc12.Padding = 6;
-            bc12.Expand = false;
-            
-            Box.BoxChild bc16 = ( ( Box.BoxChild ) ( vbox [ accountBox ] ) );
-            bc16.Padding = 6;
-            bc16.Expand = false;
-            
-            Box.BoxChild bc13 = ( ( Box.BoxChild ) ( vbox [ versionBox ] ) );
-            bc13.Padding = 6;
-            bc13.Expand = false;
-            
-
-            HBox Contents = new HBox ();
-            Contents.Add ( vbox );
-
-            
-            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( Contents [ vbox ] ) );
-            bc7.Padding = 6;
+            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ table ] ) );
+            bc2.Padding = 3;
+            bc2.Expand = false;
             
             
             HBox hbox = new HBox ();
-            hbox.Add ( img );
-            hbox.Add ( Contents );
+            hbox.Add ( image );
+            hbox.Add ( vbox );
            
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( hbox [ img ] ) );
-            bc1.Expand = false;
+            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( hbox [ image ] ) );
+            bc3.Padding = 3;
+            bc3.Expand = false;
+            
+            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
+            bc4.Padding = 6;
             
             
             this.VBox.Add ( hbox );
+            
+            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
+            bc5.Padding = 3;
+            
             this.VBox.ShowAll ();
+            
+            
+            closeButton.CanDefault = true;
+            closeButton.GrabDefault ();
             
             SetAddress ();
             SetClientId ();
@@ -300,7 +255,8 @@ namespace Dialogs
             }
             else
             {
-                idBox.Hide ();
+                idLabel.Hide ();
+                idEntry.Hide ();
             }
             
         }
@@ -320,7 +276,8 @@ namespace Dialogs
             }
             else
             {
-                accountBox.Hide ();
+                accountLabel.Hide ();
+                accountEntry.Hide ();
             }
             
         }

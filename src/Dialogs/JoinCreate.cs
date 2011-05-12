@@ -39,18 +39,11 @@ namespace Dialogs
         
         private Label nameLabel;
         private Entry nameEntry;
-        private HBox  nameBox;
         
         private Label passwordLabel;
         private Entry passwordEntry;
-        private HBox  passwordBox;
         
         private MessageBar messageBar;
-        
-        private Image    failImg;
-        private Label    failLabel;
-        private EventBox failBox;
-        private HBox     failHBox;
         
         public  CheckButton goOnline;
         
@@ -104,6 +97,7 @@ namespace Dialogs
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
+            
             nameEntry = new Entry ();
             nameEntry.ActivatesDefault = true;
             nameEntry.FocusGrabbed += HideMessage;
@@ -114,14 +108,6 @@ namespace Dialogs
             nameLabel.Xalign = 0;
             nameLabel.MnemonicWidget = nameEntry;
 
-            
-            nameBox = new HBox ();
-            nameBox.Add ( nameLabel );
-            nameBox.Add ( nameEntry );
-            
-            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( nameBox [ nameEntry ] ) );
-            bc5.Expand = false;
-            
             passwordEntry = new Entry ();
             passwordEntry.ActivatesDefault = true;
             passwordEntry.FocusGrabbed += HideMessage;
@@ -131,15 +117,13 @@ namespace Dialogs
             passwordLabel.Xalign = 0;
             passwordLabel.MnemonicWidget = passwordEntry;
             
+            Table inputTable = new Table ( 2, 2, false );
+            inputTable.RowSpacing = 6;
+            inputTable.Attach ( nameLabel, 0, 1, 0, 1 );
+            inputTable.Attach ( nameEntry, 1, 2, 0, 1 );
+            inputTable.Attach ( passwordLabel, 0, 1, 1, 2 );
+            inputTable.Attach ( passwordEntry, 1, 2, 1, 2 );
             
-            passwordBox = new HBox ();
-            passwordBox.Add ( passwordLabel );
-            passwordBox.Add ( passwordEntry );
-            
-
-            VBox inputBox = new VBox ();
-            inputBox.Add ( nameBox );
-            inputBox.Add ( passwordBox );
             
             goOnline = new CheckButton ( TextStrings.checkboxGoOnlineInNewNetwork );
             goOnline.Toggled += delegate
@@ -147,9 +131,10 @@ namespace Dialogs
                 Config.Client.Set ( Config.Settings.GoOnlineInNewNetwork, goOnline.Active );
             };
             
+            
             VBox vbox = new VBox ();
             vbox.Add ( heading );
-            vbox.Add ( inputBox );
+            vbox.Add ( inputTable );
             vbox.Add ( goOnline );
             vbox.Add ( buttonBox );
             
@@ -162,20 +147,12 @@ namespace Dialogs
             bc4.Padding = 6;
             bc4.Expand = false;
             
-            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( inputBox [ nameBox ] ) );
-            bc6.Padding = 3;
-            bc6.Expand = false;
-            
-            Box.BoxChild bc10 = ( ( Box.BoxChild ) ( inputBox [ passwordBox ] ) );
-            bc10.Padding = 3;
-            bc10.Expand = false;
-            
             Box.BoxChild bc15 = ( ( Box.BoxChild ) ( vbox [ goOnline ] ) );
             bc15.Padding = 3;
             bc15.Expand = false;
             
-            Box.BoxChild bc14 = ( ( Box.BoxChild ) ( vbox [ inputBox ] ) );
-            bc14.Padding = 3;
+            Box.BoxChild bc14 = ( ( Box.BoxChild ) ( vbox [ inputTable ] ) );
+            bc14.Padding = 6;
             bc14.Expand = false;
             
             
@@ -186,7 +163,6 @@ namespace Dialogs
             bc1.Padding = 12;
             
             
-            
             VBox container = new VBox ();
             container.Add ( messageBar );
             container.Add ( hbox );
@@ -194,6 +170,7 @@ namespace Dialogs
             
             Box.BoxChild bc7 = ( ( Box.BoxChild ) ( container [ hbox ] ) );
             bc7.Padding = 6;
+            
             
             this.Remove ( this.VBox );
             this.Add ( container );
