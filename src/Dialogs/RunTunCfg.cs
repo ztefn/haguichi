@@ -46,7 +46,6 @@ namespace Dialogs
             
             Box.BoxChild bc = ( ( Box.BoxChild ) ( this.Contents [ check ] ) );
             bc.Expand = false;
-            bc.Padding = 6;
             
             this.Modal           = true;
             this.SkipTaskbarHint = true;

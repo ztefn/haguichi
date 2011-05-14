@@ -58,7 +58,7 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.BorderWidth     = 6;
+            this.BorderWidth     = 4;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
@@ -89,7 +89,7 @@ namespace Dialogs
             buttonBox.Add ( saveButton );
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
-            buttonBox.BorderWidth = 3;
+            buttonBox.BorderWidth = 6;
             
             
             labelEntry = new Entry ();
@@ -135,7 +135,7 @@ namespace Dialogs
             Table table = new Table ( 3, 3, false );
             table.RowSpacing = 6;
             table.ColumnSpacing = 6;
-            table.BorderWidth = 3;
+            table.BorderWidth = 6;
             table.Attach ( labelLabel, 0, 1, 0, 1 );
             table.Attach ( labelEntry, 1, 2, 0, 1 );
             table.Attach ( commandLabel, 0, 1, 1, 2 );

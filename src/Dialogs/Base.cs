@@ -39,12 +39,12 @@ namespace Dialogs
             this.IconList        = MainWindow.appIcons;
             this.HasSeparator    = false;
             this.Resizable       = false;
-            this.BorderWidth     = 6;
+            this.BorderWidth     = 5;
             this.Response       += SetResponseText;
             
             Image img = new Image ( "", IconSize.Dialog );
             img.Yalign = 0;
-            img.Xpad = 3;
+            img.Xpad = 6;
             
             switch ( icon )
             {
@@ -68,13 +68,13 @@ namespace Dialogs
             Label headerLabel = new Label ();
             headerLabel.Markup = String.Format ( "<span size=\"large\" weight=\"bold\">{0}</span>", header );
             headerLabel.Xalign = 0;
-            headerLabel.Xpad = 9;
+            headerLabel.Selectable = true;
             
             Label messageLabel = new Label ();
             messageLabel.Markup = String.Format ( "{0}", message );
             messageLabel.Xalign = 0;
-            messageLabel.Xpad = 9;
             messageLabel.Ypad = 12;
+            messageLabel.Selectable = true;
            
             Contents = new VBox ();
             Contents.Add ( headerLabel );
@@ -94,12 +94,13 @@ namespace Dialogs
             bc1.Expand = false;
            
             Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ Contents ] ) );
+            bc2.Padding = 6;
             bc2.Expand = false;
            
             this.VBox.Add ( hbox );
             
             Box.BoxChild bc3 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
-            bc3.Padding = 3;
+            bc3.Padding = 5;
             
             this.VBox.ShowAll ();
 

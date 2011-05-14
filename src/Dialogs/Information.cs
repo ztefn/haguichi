@@ -65,7 +65,7 @@ namespace Dialogs
             
             image = new Image ( Stock.DialogInfo, IconSize.Dialog );
             image.Yalign = 0;
-            image.Ypad = 3;
+            image.Ypad = 4;
             
             
             closeButton = new Button ( Stock.Close );
@@ -79,47 +79,56 @@ namespace Dialogs
             
             versionEntry = new Label ();
             versionEntry.Xalign = 0;
+            versionEntry.Xpad = 4;
             versionEntry.SetSizeRequest ( 160, 0 ); /* Triggers minimum dialog size */
             versionEntry.Selectable = true;
             
-            versionLabel = new Label ( TextStrings.version + "  " );
+            versionLabel = new Label ( TextStrings.version + " " );
             versionLabel.Xalign = 0;
+            versionLabel.Ypad = 4;
             
             
             addressEntry = new Label ();
             addressEntry.Xalign = 0;
+            addressEntry.Xpad = 4;
             addressEntry.Selectable = true;
             
-            addressLabel = new Label ( TextStrings.address + "  " );
+            addressLabel = new Label ( TextStrings.address + " " );
             addressLabel.Xalign = 0;
+            addressLabel.Ypad = 4;
             
             
             idEntry = new Label ();
             idEntry.Xalign = 0;
+            idEntry.Xpad = 4;
             idEntry.Selectable = true;
             
-            idLabel = new Label ( TextStrings.id + "  " );
+            idLabel = new Label ( TextStrings.id + " " );
             idLabel.Xalign = 0;
+            idLabel.Ypad = 4;
             
             
             accountEntry = new Label ();
             accountEntry.Xalign = 0;
+            accountEntry.Xpad = 4;
             accountEntry.Selectable = true;
             
-            accountLabel = new Label ( TextStrings.account + "  " );
+            accountLabel = new Label ( TextStrings.account + " " );
             accountLabel.Xalign = 0;
+            accountLabel.Ypad = 4;
             
             
             nickEntry = new Label ();
             nickEntry.Xalign = 0;
+            nickEntry.Xpad = 4;
             nickEntry.Selectable = true;
             
-            nickLabel = new Label ( TextStrings.nick + "  " );
+            nickLabel = new Label ( TextStrings.nick + " " );
             nickLabel.Xalign = 0;
+            nickLabel.Ypad = 4;
             
             
             Table table = new Table ( 6, 2, false );
-            table.RowSpacing = 12;
             table.Attach ( versionLabel, 0, 1, 0, 1 );
             table.Attach ( versionEntry, 1, 2, 0, 1 );
             table.Attach ( addressLabel, 0, 1, 1, 2 );
@@ -132,35 +141,33 @@ namespace Dialogs
             table.Attach ( nickEntry , 1, 2, 4, 5 );
             
             
-            VBox vbox = new VBox ();
-            vbox.Add ( table );
-            vbox.Add ( buttonBox );
-            
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
-            bc1.Padding = 3;
-            bc1.Expand = false;
-            
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ table ] ) );
-            bc2.Padding = 3;
-            bc2.Expand = false;
-            
-            
             HBox hbox = new HBox ();
             hbox.Add ( image );
-            hbox.Add ( vbox );
+            hbox.Add ( table );
            
             Box.BoxChild bc3 = ( ( Box.BoxChild ) ( hbox [ image ] ) );
-            bc3.Padding = 6;
+            bc3.Padding = 9;
             bc3.Expand = false;
             
-            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
-            bc4.Padding = 6;
+            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( hbox [ table ] ) );
+            bc4.Padding = 3;
+            
+            
+            HBox hbox2 = new HBox ();
+            hbox2.Add ( buttonBox );
+            
+            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( hbox2 [ buttonBox ] ) );
+            bc7.Padding = 6;
             
             
             this.VBox.Add ( hbox );
+            this.VBox.Add ( hbox2 );
             
             Box.BoxChild bc5 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
             bc5.Padding = 3;
+            
+            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( this.VBox [ hbox2 ] ) );
+            bc6.Padding = 6;
             
             this.VBox.ShowAll ();
             

@@ -54,7 +54,7 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.IconList        = MainWindow.appIcons;
             this.WindowPosition  = WindowPosition.Mouse;
-            this.BorderWidth     = 9;
+            this.BorderWidth     = 10;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
