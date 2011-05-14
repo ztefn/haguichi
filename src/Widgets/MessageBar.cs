@@ -27,6 +27,7 @@ namespace Widgets
     public class MessageBar : VBox
     {
         
+        private Widget parent;
         private MessageType messageType;
         private uint timerID;
         
@@ -158,24 +159,11 @@ namespace Widgets
             
             bottomBox.Hide ();
             
+            parent = this.Parent;
+            parent.SizeAllocated -= HandleParentSizeAllocated;
+            parent.SizeAllocated += HandleParentSizeAllocated;
+            
             this.Show ();
-            
-            int myHeight = 0;
-            
-            GLib.Timeout.Add ( 10, () =>
-            {
-                if ( myHeight < Allocation.Height )
-                {
-                    myHeight ++;
-                    this.QueueDrawArea ( Allocation.X, Allocation.Y, Allocation.Width, Allocation.Height );
-                    
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            });
             
         }
         
@@ -310,6 +298,14 @@ namespace Widgets
                     break;
                     
             }
+            
+        }
+        
+        
+        private void HandleParentSizeAllocated ( object o, SizeAllocatedArgs args )
+        {
+            
+            parent.QueueDrawArea ( parent.Allocation.X, parent.Allocation.Y, parent.Allocation.Width, parent.Allocation.Height );
             
         }
         
