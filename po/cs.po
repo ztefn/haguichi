@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-23 22:36+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-14 19:39+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-14 22:20+0000\n"
+"X-Generator: Launchpad (build 13037)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -455,9 +455,8 @@ msgstr ""
 "žádost o připojení?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "Odeslat žádost o připojení?"
+msgstr "Žádost o připojení zaslána"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -823,12 +822,6 @@ msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Odeslat žádost"
-
-#~ msgid "Error connecting"
-#~ msgstr "Chyba při připojování"
-
 #~ msgid "Getting nicknames..."
 #~ msgstr "Získávání přezdívek..."
 
@@ -838,11 +831,33 @@ msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 #~ msgid "Changing..."
 #~ msgstr "Mění se..."
 
+#~ msgid "_Send Request"
+#~ msgstr "_Odeslat žádost"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Tato síť vyžaduje ruční schválení nových členů majitelem.\n"
+#~ "Chcete poslat žádost o připojení?"
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Odpojení členové"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Automatiky obnovit spojení, pokud bylo ztraceno"
 
+#~ msgid "Error connecting"
+#~ msgstr "Chyba při připojování"
+
+#~ msgid "No internet connection."
+#~ msgstr "Žádné připojení k internetu."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Přihlášení Hamachi selhalo."
+
 #~ msgid "Not installed"
 #~ msgstr "Nenainstalováno"
+
+#~ msgid "Connection refused."
+#~ msgstr "Spojení odmítnuto."
