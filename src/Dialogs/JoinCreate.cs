@@ -99,18 +99,18 @@ namespace Dialogs
             
             
             nameEntry = new Entry ();
+            nameEntry.Changed += CheckNameLength;
+            nameEntry.Changed += HideMessage;
             nameEntry.ActivatesDefault = true;
-            nameEntry.FocusGrabbed += HideMessage;
             nameEntry.WidthChars = 30;
             nameEntry.MaxLength = 40;
-            nameEntry.Changed += CheckNameLength;
             nameLabel = new Label ( TextStrings.nameLabel + "  " );
             nameLabel.Xalign = 0;
             nameLabel.MnemonicWidget = nameEntry;
 
             passwordEntry = new Entry ();
+            passwordEntry.Changed += HideMessage;
             passwordEntry.ActivatesDefault = true;
-            passwordEntry.FocusGrabbed += HideMessage;
             passwordEntry.Visibility = false;
             passwordEntry.WidthChars = 30;
             passwordLabel = new Label ( TextStrings.passwordLabel + "  " );
@@ -268,27 +268,27 @@ namespace Dialogs
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkNotFound );
+                ShowMessage ( output, TextStrings.errorNetworkNotFound );
                 return;
             }
             else if ( output.Contains ( ".. failed, invalid password" ) )
             {
-                ShowMessage ( TextStrings.errorInvalidPassword );
+                ShowMessage ( output, TextStrings.errorInvalidPassword );
                 return;
             }
             else if ( output.Contains ( ".. failed, the network is full" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkFull );
+                ShowMessage ( output, TextStrings.errorNetworkFull );
                 return;
             }
             else if ( output.Contains ( ".. failed, network is locked" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkLocked );
+                ShowMessage ( output, TextStrings.errorNetworkLocked );
                 return;
             }
             else if ( output.Contains ( ".. failed, you are already a member" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkAlreadyJoined );
+                ShowMessage ( output, TextStrings.errorNetworkAlreadyJoined );
                 return;
             }
             else if ( output.Contains ( ".. failed, manual approval required" ) )
@@ -300,6 +300,7 @@ namespace Dialogs
                     {
                         HideMessage ();
                         SetMode ( "Normal" );
+                        nameEntry.GrabFocus ();
                     };
                     
                     Button yesButton = new Button ( Stock.Yes );
@@ -327,7 +328,7 @@ namespace Dialogs
             }
             else if ( output.Contains ( ".. failed" ) )
             {
-                ShowMessage ( TextStrings.errorUnknown );
+                ShowMessage ( output, TextStrings.errorUnknown );
                 return;
             }
             else
@@ -386,17 +387,17 @@ namespace Dialogs
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkNameTooShort );
+                ShowMessage ( output, TextStrings.errorNetworkNameTooShort );
                 return;
             }
             else if ( output.Contains ( ".. failed, network name is already taken" ) )
             {
-                ShowMessage ( TextStrings.errorNetworkNameTaken );
+                ShowMessage ( output, TextStrings.errorNetworkNameTaken );
                 return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
-                ShowMessage ( TextStrings.errorUnknown );
+                ShowMessage ( output, TextStrings.errorUnknown );
                 return;
             }
             else
@@ -407,12 +408,21 @@ namespace Dialogs
         }
         
         
-        private void ShowMessage ( string message )
+        private void ShowMessage ( string output, string message )
         {
             
             Application.Invoke ( delegate
             {
                 SetMode ( "Normal" );
+                
+                if ( output.Contains ( "password" ) )
+                {
+                    passwordEntry.GrabFocus ();
+                }
+                else
+                {
+                    nameEntry.GrabFocus ();
+                }
                 
                 messageBar.SetMessage ( message, null, MessageType.Error );
             });
@@ -535,8 +545,6 @@ namespace Dialogs
                     
                     nameEntry.Sensitive = true;
                     passwordEntry.Sensitive = true;
-                    
-                    nameEntry.GrabFocus ();
                     
                     CheckNameLength ();
                     
