@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-30 18:43+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-18 19:05+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-18 20:56+0000\n"
+"X-Generator: Launchpad (build 13067)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -455,9 +455,8 @@ msgstr ""
 "miembros. ¿Quiere enviar una solicitud para unirse?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "¿Enviar solicitud para unirse?"
+msgstr "Solicitud de unión enviada"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -819,12 +818,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Enviar Solicitud"
-
-#~ msgid "Error connecting"
-#~ msgstr "Error al conectar"
-
 #~ msgid "seconds"
 #~ msgstr "segundos"
 
@@ -840,6 +833,12 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "Changing..."
 #~ msgstr "Cambiando..."
 
+#~ msgid "Connection refused."
+#~ msgstr "Conexión rechazada."
+
+#~ msgid "Error connecting"
+#~ msgstr "Error al conectar"
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Miembros desconectados"
 
@@ -852,6 +851,9 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "S_tatusbar"
 #~ msgstr "_Barra de estado"
 
+#~ msgid "No internet connection."
+#~ msgstr "No hay conexión a Internet."
+
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Reconectar cuando se pierda la conexión"
 
@@ -863,3 +865,17 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tiempo máximo de espera (segundos):"
+
+#~ msgid "_Send Request"
+#~ msgstr "_Enviar Solicitud"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Esta red requiere de aprobación manual del propietario de los nuevos "
+#~ "miembros.\n"
+#~ "¿Quiere enviar una solicitud para unirse?"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Ha fallado el inicio de sesión de Hamachi."
