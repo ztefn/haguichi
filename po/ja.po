@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-31 00:29+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-18 00:57+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
+"X-Generator: Launchpad (build 13067)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -450,14 +450,11 @@ msgstr "参加リクエストを送信しますか？"
 msgid ""
 "This network requires manual approval of new members by the owner. Would you "
 "like to send a join request?"
-msgstr ""
-"このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参"
-"加リクエストを送信しますか？"
+msgstr "このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参加リクエストを送信しますか？"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "参加リクエストを送信しますか？"
+msgstr "参加リクエストを送信しました"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -791,15 +788,13 @@ msgstr[0] "%S 秒毎にネットワーク一覧をアップデート (_U)"
 #: ../src/TextStrings.cs:596
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:604
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:612
@@ -812,12 +807,6 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} 
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
-
-#~ msgid "_Send Request"
-#~ msgstr "リクエスト送信(_S)"
-
-#~ msgid "Error connecting"
-#~ msgstr "接続エラー"
 
 #~ msgid "Nickname:"
 #~ msgstr "ニックネーム:"
@@ -837,6 +826,16 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 #~ msgid "Changing..."
 #~ msgstr "変更しています..."
 
+#~ msgid "_Send Request"
+#~ msgstr "リクエスト送信(_S)"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "このネットワークの新規メンバーになるには所有者による手動の承認が必要です。\n"
+#~ "参加リクエストを送信しますか？"
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "インターバルを更新する (秒単位) (_U):"
 
@@ -851,3 +850,15 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "接続が切れたら自動で再接続する(_R)"
+
+#~ msgid "No internet connection."
+#~ msgstr "インターネットに接続できません。"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi のログインに失敗しました。"
+
+#~ msgid "Connection refused."
+#~ msgstr "接続が拒否されました。"
+
+#~ msgid "Error connecting"
+#~ msgstr "接続エラー"

@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-30 18:21+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-17 21:55+0000\n"
 "Last-Translator: scrawl <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
+"X-Generator: Launchpad (build 13067)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -458,9 +458,8 @@ msgstr ""
 "Besitzer. Möchten Sie eine Anfrage senden?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "Beitrittsanfrage senden?"
+msgstr "Beitrittsanfrage gesendet"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -823,12 +822,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} verlässt das Netzwerk {1} und {2} anderes Netzwerk"
 msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 
-#~ msgid "_Send Request"
-#~ msgstr "Anfrage _senden"
-
-#~ msgid "Error connecting"
-#~ msgstr "Fehler beim Verbinden"
-
 #~ msgid "seconds"
 #~ msgstr "Sekunden"
 
@@ -847,6 +840,15 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusleiste"
 
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi-Login fehlgeschlagen."
+
+#~ msgid "Connection refused."
+#~ msgstr "Verbindung abgelehnt."
+
+#~ msgid "Error connecting"
+#~ msgstr "Fehler beim Verbinden"
+
 #~ msgid "Go O_nline"
 #~ msgstr "_Online gehen"
 
@@ -859,6 +861,9 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Beim Verlust der Ve_rbindung automatisch neu verbinden"
 
+#~ msgid "No internet connection."
+#~ msgstr "Keine Internetverbindung."
+
 #~ msgid "Nickname:"
 #~ msgstr "Benutzername:"
 
@@ -867,3 +872,14 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Zeitüberschreitung für Befehle (in Sekunden):"
+
+#~ msgid "_Send Request"
+#~ msgstr "Anfrage _senden"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Dieses Netzwerk erfordert eine Zulassung neuer Mitglieder durch den "
+#~ "Besitzer.\n"
+#~ "Möchten Sie eine Anfrage senden?"

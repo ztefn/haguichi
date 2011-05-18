@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-02-19 18:32+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-18 05:47+0000\n"
+"Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
+"X-Generator: Launchpad (build 13067)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "Joindre ou créer des réseaux locaux au travers d'Internet"
 
 #: ../src/TextStrings.cs:353
 msgid "_Show Haguichi"
-msgstr ""
+msgstr "_Afficher Haguichi"
 
 #: ../src/TextStrings.cs:355
 msgid "Yes"
@@ -456,9 +456,8 @@ msgstr ""
 "propriétaire. Voulez-vous envoyer une demande de connexion ?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "Envoyer la demande de connexion ?"
+msgstr "Demande de connexion envoyée"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -820,12 +819,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Envoyer la demande"
-
-#~ msgid "Error connecting"
-#~ msgstr "Erreur de connexion"
-
 #~ msgid "Not configured"
 #~ msgstr "Pas configuré"
 
@@ -834,6 +827,12 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
 #~ msgid "Changing..."
 #~ msgstr "Changement..."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Echec de l'ouverture de la session Hamachi."
+
+#~ msgid "Connection refused."
+#~ msgstr "Connexion refusée."
 
 #~ msgid "seconds"
 #~ msgstr "secondes"
@@ -850,11 +849,17 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "S_tatusbar"
 #~ msgstr "_Barre d'état"
 
+#~ msgid "No internet connection."
+#~ msgstr "Pas de connexion Internet."
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervalle de mise à jour (secondes) :"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "Délai d'_attente de la commande (secondes) :"
+
+#~ msgid "_Send Request"
+#~ msgstr "_Envoyer la demande"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Obtention des pseudos..."
@@ -862,8 +867,19 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Se _reconnecter automatiquement lorsque la connexion a été perdue"
 
+#~ msgid "Error connecting"
+#~ msgstr "Erreur de connexion"
+
 #~ msgid "Nickname:"
 #~ msgstr "Pseudo :"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Ce réseau requiert une approbation manuelle des nouveaux membres par le "
+#~ "propriétaire.\n"
+#~ "Voulez-vous envoyer une demande de connexion ?"
 
 #~ msgid "_Hamachi ouput"
 #~ msgstr "Sortie d'_Hamachi"
