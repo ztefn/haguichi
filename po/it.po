@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-30 18:25+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-21 12:00+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-21 20:52+0000\n"
+"X-Generator: Launchpad (build 13085)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -455,9 +455,8 @@ msgstr ""
 "proprietario. Vuoi inviare una richiesta per poter entrare nella rete?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "Inviare una richiesta per entrare nella rete?"
+msgstr "Inviata richiesta per entrare nella rete"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -820,12 +819,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Richiesta inviata"
-
-#~ msgid "Error connecting"
-#~ msgstr "Errore di connessione"
-
 #~ msgid "Nickname:"
 #~ msgstr "Nickname:"
 
@@ -844,6 +837,17 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 #~ msgid "Changing..."
 #~ msgstr "Sto modificando..."
 
+#~ msgid "_Send Request"
+#~ msgstr "_Richiesta inviata"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "La rete richiede l'approvazione manuale dei nuovi membri da parte del "
+#~ "proprietario.\n"
+#~ "Vuoi inviare una richiesta per poter entrare nella rete?"
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervallo di aggiornamento (secondi):"
 
@@ -858,6 +862,18 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Riconnetti automaticamente quando viene persa la connessione"
+
+#~ msgid "No internet connection."
+#~ msgstr "Connessione ad internet non presente."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi ha fallito il login."
+
+#~ msgid "Connection refused."
+#~ msgstr "Connessione rifiutata."
+
+#~ msgid "Error connecting"
+#~ msgstr "Errore di connessione"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Vai in linea"
