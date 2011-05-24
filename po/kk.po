@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-05-05 22:56:35+0200\n"
-"PO-Revision-Date: 2011-03-21 10:51+0000\n"
+"POT-Creation-Date: 2011-05-05 22:56+0200\n"
+"PO-Revision-Date: 2011-05-24 15:37+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-05-24 17:48+0000\n"
+"X-Generator: Launchpad (build 13085)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -451,9 +451,8 @@ msgstr ""
 "жібергіңіз келеді ме?"
 
 #: ../src/TextStrings.cs:479
-#, fuzzy
 msgid "Join request sent"
-msgstr "Кіруге сұраныс жіберу қажет пе?"
+msgstr "Кіру сұранысы жіберілді"
 
 #: ../src/TextStrings.cs:481
 msgid "Preferences"
@@ -812,20 +811,29 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "_Send Request"
-#~ msgstr "Сұраныс _жіберу"
-
-#~ msgid "Error connecting"
-#~ msgstr "Қосылу қатесі"
-
 #~ msgid "seconds"
 #~ msgstr "секунд"
 
 #~ msgid "Changing..."
 #~ msgstr "Өзгерту..."
 
+#~ msgid "_Send Request"
+#~ msgstr "Сұраныс _жіберу"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "Күй _жолағы"
+
+#~ msgid "No internet connection."
+#~ msgstr "Интернетпен қосылыс жоқ."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi кіру қатесі."
+
+#~ msgid "Connection refused."
+#~ msgstr "Қосылыс қабылданбады."
+
+#~ msgid "Error connecting"
+#~ msgstr "Қосылу қатесі"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Ник тізімін алу..."
@@ -844,6 +852,13 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Қосылыс үзілгенде автоматты түрде _қайта қосылу"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Желі әрбір жаңа мүшелердің жекешелей мақұлдауын талап етеді.\n"
+#~ "Сұраныс жібергіңіз келеді ме?"
 
 #~ msgid "Not installed"
 #~ msgstr "Hamachi орнатылмаған"
