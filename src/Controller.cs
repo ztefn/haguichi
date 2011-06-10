@@ -172,10 +172,13 @@ public static class Controller
             return 6;
         }
         
-        if ( !HasInternetConnection () && lastStatus > 1 )
+        if ( lastStatus > 1 )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet connection." ); // We don't want to call Hamachi if there's no Internet connection...
-            return 2;
+            if ( !HasInternetConnection () )
+            {
+                Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "No internet connection." ); // We don't want to call Hamachi if there's no Internet connection...
+                return 2;
+            }
         }
         
         string output;
