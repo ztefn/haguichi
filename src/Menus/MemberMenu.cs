@@ -142,7 +142,7 @@ namespace Menus
         {
             
             /* Remove event handlers for the previous member if present */
-            try
+            if ( member != null )
             {
                 copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
                 copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
@@ -150,11 +150,10 @@ namespace Menus
                 reject.Activated      -= new EventHandler ( member.Reject );
                 evict.Activated       -= new EventHandler ( member.Evict );
             }
-            catch {}
 
             /* Set the new member */
-            this.member  = memb;
-            this.network = netw;
+            member  = memb;
+            network = netw;
             
             /* Set menu items to show */
             if ( ( network.IsOwner == 1 ) &&

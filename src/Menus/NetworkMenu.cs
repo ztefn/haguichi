@@ -113,11 +113,11 @@ namespace Menus
             
             if ( locked.Active )
             {
-                this.network.SetLock ( "locked" );
+                network.SetLock ( "locked" );
             }
             else
             {
-                this.network.SetLock ( "unlocked" );
+                network.SetLock ( "unlocked" );
             }
             
         }
@@ -128,11 +128,11 @@ namespace Menus
             
             if ( manual.Active )
             {
-                this.network.SetApproval ( "manual" );
+                network.SetApproval ( "manual" );
             }
             else
             {
-                this.network.SetApproval ( "auto" );
+                network.SetApproval ( "auto" );
             }
             
         }
@@ -142,7 +142,7 @@ namespace Menus
         {
             
             /* Remove event handlers for the previous network if present */
-            try
+            if ( network != null )
             {
                 goOnline.Activated   -= new EventHandler ( network.GoOnline );
                 goOffline.Activated  -= new EventHandler ( network.GoOffline );
@@ -153,10 +153,9 @@ namespace Menus
                 auto.Toggled         -= new EventHandler ( ChangeApproval );
                 password.Activated   -= new EventHandler ( network.ChangePassword );
             }
-            catch {}
             
             /* Set the new network */
-            this.network = netw;
+            network = netw;
             
             /* Set menu items to show */
             if ( network.Status.statusInt == 0 )
