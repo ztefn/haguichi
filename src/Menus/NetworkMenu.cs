@@ -141,20 +141,22 @@ namespace Menus
         public void SetNetwork ( Network netw )
         {
             
-            /* Remove event handlers from the previous network */
-            goOnline.Activated   -= new EventHandler ( network.GoOnline );
-            goOffline.Activated  -= new EventHandler ( network.GoOffline );
-            copy.Activated       -= new EventHandler ( network.CopyIdToClipboard );
-            leave.Activated      -= new EventHandler ( network.Leave );
-            delete.Activated     -= new EventHandler ( network.Delete );
-            locked.Toggled       -= new EventHandler ( ChangeLock );
-            auto.Toggled         -= new EventHandler ( ChangeApproval );
-            password.Activated   -= new EventHandler ( network.ChangePassword );
-
+            /* Remove event handlers for the previous network if present */
+            try
+            {
+                goOnline.Activated   -= new EventHandler ( network.GoOnline );
+                goOffline.Activated  -= new EventHandler ( network.GoOffline );
+                copy.Activated       -= new EventHandler ( network.CopyIdToClipboard );
+                leave.Activated      -= new EventHandler ( network.Leave );
+                delete.Activated     -= new EventHandler ( network.Delete );
+                locked.Toggled       -= new EventHandler ( ChangeLock );
+                auto.Toggled         -= new EventHandler ( ChangeApproval );
+                password.Activated   -= new EventHandler ( network.ChangePassword );
+            }
+            catch {}
             
             /* Set the new network */
             this.network = netw;
-            
             
             /* Set menu items to show */
             if ( network.Status.statusInt == 0 )

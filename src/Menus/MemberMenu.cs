@@ -141,12 +141,16 @@ namespace Menus
         public void SetMember ( Member memb, Network netw )
         {
             
-            /* Remove event handlers from the previous member */
-            copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
-            copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
-            approve.Activated     -= new EventHandler ( member.Approve );
-            reject.Activated      -= new EventHandler ( member.Reject );
-            evict.Activated       -= new EventHandler ( member.Evict );
+            /* Remove event handlers for the previous member if present */
+            try
+            {
+                copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
+                copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
+                approve.Activated     -= new EventHandler ( member.Approve );
+                reject.Activated      -= new EventHandler ( member.Reject );
+                evict.Activated       -= new EventHandler ( member.Evict );
+            }
+            catch {}
 
             /* Set the new member */
             this.member  = memb;
