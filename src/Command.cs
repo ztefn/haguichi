@@ -136,7 +136,7 @@ public static class Command
                 p.Dispose ();
             }
         }
-        catch ( Exception e )
+        catch
         {
             // Nothing
         }
@@ -179,7 +179,7 @@ public static class Command
                 p.Dispose ();
             }
         }
-        catch ( Exception e )
+        catch
         {
             // Nothing
         }

@@ -724,7 +724,7 @@ public static class Hamachi
                             name = id;
                         }
                     }
-                    catch ( Exception e )
+                    catch
                     {
                         // No name
                     }

@@ -43,6 +43,8 @@ namespace Menus
         public Quick ()
         {
             
+            accelGroup = new AccelGroup ();
+            
             show = new CheckMenuItem ( TextStrings.showApp );
             show.Toggled += delegate {
                 if ( show.Active )

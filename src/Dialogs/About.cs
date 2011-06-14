@@ -70,12 +70,12 @@ namespace Dialogs
         }
         
         
-        private void OpenEmail ( AboutDialog dialog, string email )
-        {
-            
-            Command.OpenURL ( "mailto:" + email );
-            
-        }
+//        private void OpenEmail ( AboutDialog dialog, string email )
+//        {
+//            
+//            Command.OpenURL ( "mailto:" + email );
+//            
+//        }
         
         
         private void OpenUserInfo ( AboutDialog dialog, string user )

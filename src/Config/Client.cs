@@ -227,7 +227,7 @@ namespace Config
             {
                 client.Set ( Config.Settings.ConfPath + "/" + ck.KeyName, val );
             }
-            catch ( Exception e )
+            catch
             {
                 string debug = String.Format ( "Failed setting GConf key \"{0}\" to \"{1}\". Falling back to default setting." , ck.KeyName, val );
                 Debug.Log ( Debug.Domain.Info, "Config.Client.Set", debug );
@@ -243,7 +243,7 @@ namespace Config
             {
                 return ( object ) client.Get ( Config.Settings.ConfPath + "/" + ck.KeyName );
             }
-            catch ( Exception e )
+            catch
             {
                 Config.Client.Set ( ck, ck.DefaultValue );
                 
