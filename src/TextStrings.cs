@@ -98,6 +98,9 @@ Nederlands (nl)
 Polski (pl)
     Antoni Sperka <antek1004-gmail>
 
+Português do Brasil (pt-BR)
+    Rodrigo de Avila <rodrigo-avila>
+
 Русский (ru)
     Sergey Korolev <slipped-on-blade>
     Sergey Sedov <serg-sedov>

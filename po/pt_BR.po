@@ -1,885 +1,819 @@
-# German translation for haguichi
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
+# Brazilian Portuguese translation for haguichi
+# Copyright (c) 2011 Rosetta Contributors and Canonical Ltd 2011
 # This file is distributed under the same license as the haguichi package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-06-29 14:41:28+0200\n"
-"PO-Revision-Date: 2011-05-17 21:55+0000\n"
-"Last-Translator: scrawl <Unknown>\n"
-"Language-Team: German <de@li.org>\n"
+"POT-Creation-Date: 2011-06-29 14:55:25+0200\n"
+"PO-Revision-Date: 2011-06-28 18:17+0000\n"
+"Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
+"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
-"X-Generator: Launchpad (build 13067)\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2011-06-29 12:30+0000\n"
+"X-Generator: Launchpad (build 13299)\n"
 
 #: ../src/TextStrings.cs:352
 msgid "Haguichi Website"
-msgstr "Haguichi-Webseite"
+msgstr "Website do Haguichi"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:353
 msgid "A graphical frontend for Hamachi."
-msgstr "Eine grafische Oberfläche für Hamachi."
+msgstr "Uma interface gráfica para o Hamachi."
 
 #. Description used in application launchers.
 #: ../src/TextStrings.cs:354
 msgid "Join and create local networks over the Internet"
-msgstr "Lokale Netzwerke im Internet erstellen und diesen beitreten"
+msgstr "Crie e junte-se a redes locais via internet"
 
 #: ../src/TextStrings.cs:356
 msgid "_Show Haguichi"
-msgstr "Haguichi _zeigen"
+msgstr "_Mostrar o Haguichi"
 
 #: ../src/TextStrings.cs:358
 msgid "Yes"
-msgstr "Ja"
+msgstr "Sim"
 
 #: ../src/TextStrings.cs:359
 msgid "No"
-msgstr "Nein"
+msgstr "Não"
 
 #: ../src/TextStrings.cs:361
 msgid "_Hamachi output"
-msgstr "_Hamachi-Ausgabe"
+msgstr "Saída do _Hamachi"
 
 #: ../src/TextStrings.cs:363
 msgid "Address:"
-msgstr "Adresse:"
+msgstr "Endereço:"
 
 #: ../src/TextStrings.cs:364
 msgid "ID:"
-msgstr "Kennung:"
+msgstr "ID:"
 
 #: ../src/TextStrings.cs:365
 msgid "Client ID:"
-msgstr "Client-Kennung:"
+msgstr "ID do cliente:"
 
 #: ../src/TextStrings.cs:366
 msgid "Network ID:"
-msgstr "Netzwerk-Kennung:"
+msgstr "ID da rede:"
 
 #: ../src/TextStrings.cs:367
 msgid "Status:"
-msgstr "Status:"
+msgstr "Estado:"
 
 #: ../src/TextStrings.cs:368
 msgid "Tunnel:"
-msgstr "Tunnel:"
+msgstr "Túnel:"
 
 #: ../src/TextStrings.cs:369
 msgid "Anonymous"
-msgstr "Anonym"
+msgstr "Anônimo"
 
 #: ../src/TextStrings.cs:370
 msgid "_Nickname:"
-msgstr "_Benutzername:"
+msgstr "_Apelido:"
 
 #: ../src/TextStrings.cs:372
 msgid "_Name:"
-msgstr "_Name:"
+msgstr "_Nome:"
 
 #: ../src/TextStrings.cs:373
 msgid "_Password:"
-msgstr "_Passwort:"
+msgstr "_Senha:"
 
 #: ../src/TextStrings.cs:374
 msgid "Version:"
-msgstr "Version:"
+msgstr "Versão:"
 
 #: ../src/TextStrings.cs:376
 msgid "Offline"
-msgstr "Offline"
+msgstr "Desconectado"
 
 #: ../src/TextStrings.cs:377
 msgid "Online"
-msgstr "Online"
+msgstr "Conectado"
 
 #: ../src/TextStrings.cs:378
 msgid "Unreachable"
-msgstr "Nicht erreichbar"
+msgstr "Inacessível"
 
 #: ../src/TextStrings.cs:379
 msgid "Connected"
-msgstr "Verbunden"
+msgstr "Conectado"
 
 #: ../src/TextStrings.cs:380
 msgid "Disconnected"
-msgstr "Getrennt"
+msgstr "Desconectado"
 
 #: ../src/TextStrings.cs:381
 msgid "Connecting..."
-msgstr "Verbinde..."
+msgstr "Conectando..."
 
 #: ../src/TextStrings.cs:382
 msgid "Starting Hamachi..."
-msgstr "Starte Hamachi..."
+msgstr "Iniciando o Hamachi..."
 
 #: ../src/TextStrings.cs:383
 msgid "Logging in..."
-msgstr "Anmelden..."
+msgstr "Autenticando..."
 
 #: ../src/TextStrings.cs:384
 msgid "Running tuncfg..."
-msgstr "Starte tuncfg..."
+msgstr "Executando tuncfg..."
 
 #: ../src/TextStrings.cs:385
 msgid "Updating..."
-msgstr "Aktualisiere..."
+msgstr "Atualizando..."
 
 #. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:387
 msgid "C_onnect (%S)"
-msgstr "_Verbinden (%S)"
+msgstr "C_onectar (%S)"
 
 #: ../src/TextStrings.cs:388
 msgid "Connect a_utomatically"
-msgstr "A_utomatisch verbinden"
+msgstr "Conectar a_utomaticamente"
 
 #: ../src/TextStrings.cs:390
 msgid "Hamachi is not configured"
-msgstr "Hamachi ist nicht konfiguriert"
+msgstr "O Hamachi não está configurado"
 
 #: ../src/TextStrings.cs:391
 msgid "You need to configure Hamachi before you can connect."
-msgstr "Bevor Sie sich verbinden können, muss Hamachi konfiguriert werden."
+msgstr "Você precisa configurar o hamachi antes de conectar."
 
 #: ../src/TextStrings.cs:392
 msgid "C_onfigure"
-msgstr "_Konfigurieren"
+msgstr "C_onfigurar"
 
 #: ../src/TextStrings.cs:394
 msgid "Hamachi is not installed"
-msgstr "Hamachi ist nicht installiert"
+msgstr "O Hamachi não está instalado"
 
 #: ../src/TextStrings.cs:395
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr ""
-"Bitte laden Sie Hamachi herunter und folgen Sie der Installationsanleitung."
+"Por favor efetue o download do hamachi e siga as instruções do instalador."
 
 #: ../src/TextStrings.cs:396
 msgid "_Download"
-msgstr "_Herunterladen"
+msgstr "_Baixar"
 
 #: ../src/TextStrings.cs:398
 msgid "Members:"
-msgstr "Mitglieder:"
+msgstr "Membros:"
 
 #: ../src/TextStrings.cs:399
 msgid "{0} online, {1} total"
-msgstr "{0} online, {1} insgesamt"
+msgstr "{0} conectados, total de {1}"
 
 #: ../src/TextStrings.cs:400
 msgid "Owner:"
-msgstr "Besitzer:"
+msgstr "Proprietário:"
 
 #: ../src/TextStrings.cs:401
 msgid "You"
-msgstr "Sie"
+msgstr "Você"
 
 #: ../src/TextStrings.cs:402
 msgid "Unknown"
-msgstr "Unbekannt"
+msgstr "Desconhecido"
 
 #: ../src/TextStrings.cs:403
 msgid "Unavailable"
-msgstr "Nicht verfügbar"
+msgstr "Indisponível"
 
 #: ../src/TextStrings.cs:404
 msgid "Awaiting approval"
-msgstr "Warte auf Zulassung"
+msgstr "Aguardando aprovação"
 
 #: ../src/TextStrings.cs:405
 msgid "Locked:"
-msgstr "Gesperrt:"
+msgstr "Trancado:"
 
 #: ../src/TextStrings.cs:406
 msgid "Approval:"
-msgstr "Zulassung:"
+msgstr "Aprovação:"
 
 #: ../src/TextStrings.cs:407
 msgid "Manually"
-msgstr "Manuell"
+msgstr "Manualmente"
 
 #: ../src/TextStrings.cs:408
 msgid "Automatically"
-msgstr "Automatisch"
+msgstr "Automaticamente"
 
 #: ../src/TextStrings.cs:410
 msgid "_Client"
-msgstr "_Client"
+msgstr "_Cliente"
 
 #: ../src/TextStrings.cs:411
 msgid "_Edit"
-msgstr "_Bearbeiten"
+msgstr "_Editar"
 
 #: ../src/TextStrings.cs:412
 msgid "_View"
-msgstr "_Ansicht"
+msgstr "_Visualizar"
 
 #: ../src/TextStrings.cs:413
 msgid "_Help"
-msgstr "_Hilfe"
+msgstr "_Ajuda"
 
 #: ../src/TextStrings.cs:415
 msgid "_Online Help"
-msgstr "_Online-Hilfe"
+msgstr "Ajuda _Online"
 
 #: ../src/TextStrings.cs:416
 msgid "_Create Network..."
-msgstr "Netzwerk _erstellen..."
+msgstr "_Criar Rede..."
 
 #: ../src/TextStrings.cs:417
 msgid "_Join Network..."
-msgstr "Netzwerk bei_treten..."
+msgstr "_Junte-se à Rede..."
 
 #: ../src/TextStrings.cs:419
 msgid "_Go Online"
-msgstr "_Online gehen"
+msgstr "_Ficar Online"
 
 #: ../src/TextStrings.cs:420
 msgid "_Go Offline"
-msgstr "_Offline gehen"
+msgstr "_Ficar Offline"
 
 #: ../src/TextStrings.cs:421
 msgid "_Leave"
-msgstr "_Verlassen"
+msgstr "_Sair"
 
 #: ../src/TextStrings.cs:422
 msgid "_Locked"
-msgstr "_Gesperrt"
+msgstr "_Trancado"
 
 #: ../src/TextStrings.cs:423
 msgid "_New Member Approval"
-msgstr "Zulassung _neuer Mitglieder"
+msgstr "Aprovação de _Novo Membro"
 
 #: ../src/TextStrings.cs:424
 msgid "_Automatically"
-msgstr "_Automatisch"
+msgstr "_Automaticamente"
 
 #: ../src/TextStrings.cs:425
 msgid "_Manually"
-msgstr "_Manuell"
+msgstr "_Manualmente"
 
 #: ../src/TextStrings.cs:426
 msgid "_Copy Network ID"
-msgstr "Netzwerk-Kennung _kopieren"
+msgstr "_Copiar ID da Rede"
 
 #: ../src/TextStrings.cs:428
 msgid "_Browse Shares"
-msgstr "_Freigaben durchsuchen"
+msgstr "_Navegar nos Compartilhamentos"
 
 #: ../src/TextStrings.cs:429
 msgid "_Ping"
-msgstr "_Pingen"
+msgstr "_Ping"
 
 #: ../src/TextStrings.cs:430
 msgid "_View Remote Desktop"
-msgstr "_Entfernten Desktop betrachten"
+msgstr "_Ver Desktop remoto"
 
 #: ../src/TextStrings.cs:431
 msgid "_Approve"
-msgstr "_Annehmen"
+msgstr "_Aprovar"
 
 #: ../src/TextStrings.cs:432
 msgid "_Reject"
-msgstr "A_blehnen"
+msgstr "_Rejeitar"
 
 #. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:433
 msgid "_Evict"
-msgstr "_Hinauswerfen"
+msgstr "_Evitar"
 
 #: ../src/TextStrings.cs:434
 msgid "_Copy Address"
-msgstr "Adresse _kopieren"
+msgstr "_Copiar Endereço"
 
 #: ../src/TextStrings.cs:435
 msgid "_Copy Client ID"
-msgstr "Client-Kennung _kopieren"
+msgstr "_Copiar ID do Cliente"
 
 #: ../src/TextStrings.cs:437
 msgid "C_hange"
-msgstr "Ä_ndern"
+msgstr "A_lterar"
 
 #: ../src/TextStrings.cs:439
 msgid "Change _Nickname..."
-msgstr "_Benutzernamen ändern..."
+msgstr "Alterar _Apelido..."
 
 #: ../src/TextStrings.cs:440
 msgid "Change Nickname"
-msgstr "Benutzernamen ändern"
+msgstr "Alterar apelido"
 
 #: ../src/TextStrings.cs:441
 msgid "Please enter the nickname you want to use."
-msgstr "Bitte geben Sie ihren Benutzernamen ein."
+msgstr "Por favor digite o apelido que você quer usar."
 
 #: ../src/TextStrings.cs:442
 msgid "Click to change your nickname"
-msgstr "Klicken, um den Benutzernamen zu ändern"
+msgstr "Clique para mudar seu apelido"
 
 #: ../src/TextStrings.cs:444
 msgid "Change _Password..."
-msgstr "_Passwort ändern..."
+msgstr "Alterar _Senha..."
 
 #: ../src/TextStrings.cs:445
 msgid "Change Password"
-msgstr "Passwort ändern"
+msgstr "Alterar Senha"
 
 #: ../src/TextStrings.cs:446
 msgid "Please enter the new password for this network."
-msgstr "Bitte geben Sie das neue Passwort für das Netzwerk ein."
+msgstr "Por favir digite a sua nova senha para esta rede."
 
 #: ../src/TextStrings.cs:448
 msgid "_Account:"
-msgstr "_Konto:"
+msgstr "_Conta:"
 
 #: ../src/TextStrings.cs:451
 msgid "_Attach"
-msgstr "_Zuweisen"
+msgstr "_Anexar"
 
 #: ../src/TextStrings.cs:452
 msgid "_Attach to Account..."
-msgstr "_Einem Konto zuweisen..."
+msgstr "_Anextar à Conta..."
 
 #: ../src/TextStrings.cs:453
 msgid "Attach to Account"
-msgstr "Einem Konto zuweisen"
+msgstr "Anexar à Conta"
 
 #: ../src/TextStrings.cs:454
 msgid "Please enter the account you want to attach this client to."
-msgstr ""
-"Bitte geben Sie den Namen des Kontos ein, mit dem Sie diesen Client "
-"verbinden möchten."
+msgstr "Por favor digite a conta na qual você quer anexar este cliente."
 
 #: ../src/TextStrings.cs:455
 msgid "_Include all networks created by this client"
-msgstr "Alle Netzwerke dieses Cl_ients einbinden"
+msgstr "_Incluir todas as redes criadas por este cliente"
 
 #: ../src/TextStrings.cs:456
 msgid "Error attaching"
-msgstr "Zuweisungsfehler"
+msgstr "Erro ao anexar"
 
 #: ../src/TextStrings.cs:457
 msgid "Account not found."
-msgstr "Konto wurde nicht gefunden."
+msgstr "Conta não encontrada."
 
 #: ../src/TextStrings.cs:459
 msgid "_Join"
-msgstr "Bei_treten"
+msgstr "_Junte-se"
 
 #: ../src/TextStrings.cs:460
 msgid "Joining..."
-msgstr "Trete bei..."
+msgstr "Juntando-se..."
 
 #: ../src/TextStrings.cs:461
 msgid "Join Network"
-msgstr "Netzwerk beitreten"
+msgstr "Junte-se à Rede"
 
 #: ../src/TextStrings.cs:462
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
 msgstr ""
-"Bitte den Namen und das Passwort des Netzwerks\n"
-"eingeben, dem sie beitreten möchten."
+"Por favor digite o nome e a senha da\n"
+"rede ao qual você quer juntar-se"
 
 #: ../src/TextStrings.cs:464
 msgid "C_reate"
-msgstr "_Erstellen"
+msgstr "C_riar"
 
 #: ../src/TextStrings.cs:465
 msgid "Creating..."
-msgstr "Erstelle..."
+msgstr "Criando..."
 
 #: ../src/TextStrings.cs:466
 msgid "Create Network"
-msgstr "Netzwerk erstellen"
+msgstr "Criar Rede"
 
 #: ../src/TextStrings.cs:467
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
 msgstr ""
-"Bitte den Namen und das Passwort für das Netzwerk,\n"
-"das Sie erstellen möchten, eingeben."
+"Por favor digite o nome e a senha para a nova\n"
+"rede que você quer criar."
 
 #: ../src/TextStrings.cs:469
 msgid "_Go directly online in the network"
-msgstr "_Sofort online gehen im Netzwerk"
+msgstr "_Aparecer online automaticamente nesta rede"
 
 #: ../src/TextStrings.cs:471
 msgid "Network not found"
-msgstr "Netzwerk nicht gefunden"
+msgstr "Rede não encontrada"
 
 #: ../src/TextStrings.cs:472
 msgid "Invalid password"
-msgstr "Ungültiges Passwort"
+msgstr "Senha inválida"
 
 #: ../src/TextStrings.cs:473
 msgid "Network is full"
-msgstr "Netzwerk ist voll"
+msgstr "A rede está cheia"
 
 #: ../src/TextStrings.cs:474
 msgid "Network is locked"
-msgstr "Netzwerk ist gesperrt"
+msgstr "A rede está trancada"
 
 #: ../src/TextStrings.cs:475
 msgid "Network already joined"
-msgstr "Sie sind diesem Netzwerk bereits beigetreten"
+msgstr "Você já juntou-se a esta Rede antes"
 
 #: ../src/TextStrings.cs:476
 msgid "Unknown error"
-msgstr "Unbekannter Fehler"
+msgstr "Erro desconhecido"
 
 #: ../src/TextStrings.cs:477
 msgid "Network name too short"
-msgstr "Name des Netzwerks zu kurz"
+msgstr "Nome da rede é muito curto"
 
 #: ../src/TextStrings.cs:478
 msgid "Network name is already taken"
-msgstr "Name des Netzwerks wird schon benutzt"
+msgstr "Este Nome de Rede já está em uso"
 
 #: ../src/TextStrings.cs:480
 msgid "Send join request?"
-msgstr "Beitrittsanfrage senden?"
+msgstr "Enviar solicitação para juntar-se?"
 
 #: ../src/TextStrings.cs:481
 msgid ""
 "This network requires manual approval of new members by the owner. Would you "
 "like to send a join request?"
 msgstr ""
-"Dieses Netzwerk erfordert eine Zulassung neuer Mitglieder durch den "
-"Besitzer. Möchten Sie eine Anfrage senden?"
+"Esta rede requer aprovação manual de novos membros pelo dono. Você deseja "
+"enviar uma requisição para juntar-se?"
 
 #: ../src/TextStrings.cs:482
 msgid "Join request sent"
-msgstr "Beitrittsanfrage gesendet"
+msgstr "Requisição para juntar-se foi enviada"
 
 #: ../src/TextStrings.cs:484
 msgid "Preferences"
-msgstr "Einstellungen"
+msgstr "Preferências"
 
 #: ../src/TextStrings.cs:485
 msgid "Information"
-msgstr "Informationen"
+msgstr "Informações"
 
 #: ../src/TextStrings.cs:487
 msgid "Delete network '{0}'?"
-msgstr "Netzwerk '{0}' löschen?"
+msgstr "Remover rede '{0}'?"
 
 #: ../src/TextStrings.cs:488
 msgid "Are you sure you want to delete network '{0}'?"
-msgstr "Sind Sie sicher, dass Sie das Netzwerk '{0}' löschen möchten?"
+msgstr "Você tem certeza que deseja remover a rede '{0}'?"
 
 #: ../src/TextStrings.cs:490
 msgid "Leave network '{0}'?"
-msgstr "Netzwerk '{0}' verlassen?"
+msgstr "Sair da rede '{0}'?"
 
 #: ../src/TextStrings.cs:491
 msgid "Are you sure you want to leave network '{0}'?"
-msgstr "Sind Sie sicher, dass Sie das Netzwerk '{0}' verlassen möchten?"
+msgstr "Você tem certeza que quer sair da rede '{0}'?"
 
 #: ../src/TextStrings.cs:493
 msgid "Evict member '{0}'?"
-msgstr "Mitglied '{0}' hinauswerfen?"
+msgstr "Evitar o membro '{0}'?"
 
 #: ../src/TextStrings.cs:494
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
 msgstr ""
-"Sind Sie sicher, dass Sie das Mitglied '{0}'\n"
-"aus dem Netzwerk '{1}' hinauswerfen möchten?"
+"Tem certeza que quer evitar o membro '{0}'\n"
+"da rede '{1}'?"
 
 #: ../src/TextStrings.cs:496
 msgid "Failed deleting network '{0}'"
-msgstr "Fehler beim Löschen des Netzwerks '{0}'"
+msgstr "Falha ao remover a rede '{0}'"
 
 #: ../src/TextStrings.cs:497
 msgid "You are not the owner of this network."
-msgstr "Sie sind nicht der Eigentümer dieses Netzwerks."
+msgstr "Você não é o dono desta Rede."
 
 #: ../src/TextStrings.cs:499
 msgid "Failed leaving network '{0}'"
-msgstr "Fehler beim Verlassen des Netzwerks '{0}'"
+msgstr "falha ao sair da rede '{0}'"
 
 #: ../src/TextStrings.cs:500
 msgid "You are the owner of this network."
-msgstr "Sie sind der Eigentümer dieses Netzwerks."
+msgstr "Você é o dono desta rede."
 
 #: ../src/TextStrings.cs:501
 msgid "You don't have permission to leave this network."
-msgstr "Sie haben keine Rechte, dieses Netzwerk zu verlassen."
+msgstr "Você não tem permissões para sair desta rede."
 
 #: ../src/TextStrings.cs:503
 msgid "Failed evicting member '{0}'"
-msgstr "Fehler beim Hinauswerfen des Mitglieds '{0}'"
+msgstr "Falha ao evitar o membro '{0}'"
 
 #: ../src/TextStrings.cs:504
 msgid "You are not the owner of network '{0}'."
-msgstr "Sie sind nicht der Eigentümer des Netzwerks '{0}'"
+msgstr "Você não é o dono da rede '{0}'."
 
 #: ../src/TextStrings.cs:506
 msgid "General"
-msgstr "Allgemein"
+msgstr "Geral"
 
 #. In this context meaning "work environment".
 #: ../src/TextStrings.cs:507
 msgid "Desktop"
-msgstr "Arbeitsumgebung"
+msgstr "Ambiente de Trabalho"
 
 #: ../src/TextStrings.cs:508
 msgid "Commands"
-msgstr "Befehle"
+msgstr "Comandos"
 
 #: ../src/TextStrings.cs:510
 msgid "Notification Area"
-msgstr "Benachrichtigungsfeld"
+msgstr "Área de Notificação"
 
 #: ../src/TextStrings.cs:511
 msgid "Behavior"
-msgstr "Verhalten"
+msgstr "Comportamento"
 
 #: ../src/TextStrings.cs:513
 msgid "_Account data folder:"
-msgstr "_Datenordner des Kontos:"
+msgstr "Pasta de dados da _conta:"
 
 #: ../src/TextStrings.cs:514
 msgid "Choose Folder"
-msgstr "Ordner wählen"
+msgstr "Escolher Pasta"
 
 #: ../src/TextStrings.cs:516
 msgid "_Update Network List"
-msgstr "Netzwerkliste akt_ualisieren"
+msgstr "_Atualizar Lista de Redes"
 
 #: ../src/TextStrings.cs:517
 msgid "Show Alt_ernating Row Colors"
-msgstr "Zeilen abw_echselnd farbig anzeigen"
+msgstr "Exibir cores alt_ernadas nas linhas"
 
 #: ../src/TextStrings.cs:518
 msgid "_Compact Layout"
-msgstr "_Kompakte Ansicht"
+msgstr "Layout _Compacto"
 
 #: ../src/TextStrings.cs:519
 msgid "_Large Layout"
-msgstr "Vo_llständige Ansicht"
+msgstr "Layout _Largo"
 
 #: ../src/TextStrings.cs:520
 msgid "Show _Offline Members"
-msgstr "_Offline-Mitglieder"
+msgstr "Exibir Membros _Desconectados"
 
 #: ../src/TextStrings.cs:521
 msgid "Sort by _Name"
-msgstr "Nach _Namen sortieren"
+msgstr "Ordenar por _Nome"
 
 #: ../src/TextStrings.cs:522
 msgid "Sort by _Status"
-msgstr "Nach _Status sortieren"
+msgstr "Ordenar por _Status"
 
 #: ../src/TextStrings.cs:523
 msgid "St_atusbar"
-msgstr "St_atusleiste"
+msgstr "Barra de St_atus"
 
 #: ../src/TextStrings.cs:525
 msgid "_Show Haguichi in the notification area"
-msgstr "Haguichi im Benachrichtigungsfeld _anzeigen"
+msgstr "_Mostrar o Haguichi na área de notificação"
 
 #: ../src/TextStrings.cs:526
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "In das Benachrichtigungsfeld _minimiert starten"
+msgstr "Iniciar o Haguichi _minimizado na área de notificação"
 
 #: ../src/TextStrings.cs:528
 msgid "C_onnect automatically on startup"
-msgstr "_Beim Start automatisch verbinden"
+msgstr "C_onnectar automaticamente na inicialização"
 
 #: ../src/TextStrings.cs:529
 msgid "_Reconnect automatically when the connection is lost"
-msgstr "Beim Verlust der Ve_rbindung automatisch neu verbinden"
+msgstr "_Reconectar automaticamente quando a conexão for perdida"
 
 #: ../src/TextStrings.cs:530
 msgid "_Disconnect on quit"
-msgstr "_Trennen beim Beenden"
+msgstr "_Desconectar ao sair"
 
 #: ../src/TextStrings.cs:532
 msgid "Display notification when the connection is l_ost"
-msgstr "Benachrichtigung anzeigen, wenn die Verbindun_g unterbrochen wird"
+msgstr "Exibir notificação quando a conexão for perdida"
 
 #: ../src/TextStrings.cs:533
 msgid "Display notification when a member _joins"
-msgstr "Benachrichtigung anzeigen, wenn ein Mitglied das Netzwerk _betritt"
+msgstr "Mostrar uma notificação quando um membro se _junta"
 
 #: ../src/TextStrings.cs:534
 msgid "Display notification when a member _leaves"
-msgstr "Benachrichtigung anzeigen, wenn ein Mitglied das Netzwerk _verlässt"
+msgstr "Exibir notificação quando um membro _sai"
 
 #: ../src/TextStrings.cs:535
 msgid "Display notification when a member comes o_nline"
-msgstr "Benachrichtigung anzeigen, wenn ein Mitglied o_nline geht"
+msgstr "Exibir notificação quando um membro se _conecta"
 
 #: ../src/TextStrings.cs:536
 msgid "Display notification when a member goes o_ffline"
-msgstr "Benachrichtigung anzeigen, wenn ein Mitglied o_ffline geht"
+msgstr "Exibir notificação quando um membro de d_esconecta"
 
 #: ../src/TextStrings.cs:538
 msgid "Do you want to run tuncfg?"
-msgstr "Möchten Sie tuncfg starten?"
+msgstr "Você quer executar o tuncfg?"
 
 #: ../src/TextStrings.cs:539
 msgid ""
 "Hamachi needs to run tuncfg to be able to connect.\n"
 "Running tuncfg requires administrative privileges."
 msgstr ""
-"Damit Hamachi sich verbinden kann, muss tuncfg ausgeführt werden.\n"
-"Das Starten von tuncfg erfordet Administratorrechte."
+"O Hamachi precisa executar o tuncfg para conseguir conectar.\n"
+"Executar o tuncfg requer privilégios administrativos."
 
 #: ../src/TextStrings.cs:540
 msgid "_Run"
-msgstr "Ausfüh_ren"
+msgstr "_Executar"
 
 #: ../src/TextStrings.cs:541
 msgid "_Always ask before running tuncfg"
-msgstr "Vor dem _Ausführen von tuncfg immer fragen"
+msgstr "_Sempre pergunte antes de executar o tuncfg"
 
 #: ../src/TextStrings.cs:542
 msgid "A_sk confirmation before running tuncfg"
-msgstr "_Vor dem Ausführen von tuncfg Bestätigung verlangen"
+msgstr "P_eça confirmação antes de executar o tuncfg"
 
 #: ../src/TextStrings.cs:544
 msgid "Hamachi login failed"
-msgstr "Hamachi-Login fehlgeschlagen"
+msgstr "Falha no login do Hamachi"
 
 #: ../src/TextStrings.cs:545
 msgid "Connection refused"
-msgstr "Verbindung abgelehnt"
+msgstr "Conexão recusada"
 
 #: ../src/TextStrings.cs:546
 msgid "No internet connection"
-msgstr "Keine Internetverbindung"
+msgstr "Sem conexão à internet"
 
 #: ../src/TextStrings.cs:548
 msgid "Loading configuration failed"
-msgstr "Laden der Konfiguration fehlgeschlagen"
+msgstr "falha ao carregar configuração"
 
 #: ../src/TextStrings.cs:549
 msgid "Hamachi could not launch due to a configuration load failure."
-msgstr ""
-"Hamachi konnte wegen eines Fehlers beim Laden der Konfiguration nicht "
-"starten."
+msgstr "O Hamachi não pode iniciar porque falhou ao ler as configurações."
 
 #: ../src/TextStrings.cs:551
 msgid "Hamachi lost connection"
-msgstr "Hamachi-Verbindung wurde unterbrochen"
+msgstr "O Hamachi perdeu a conexão"
 
 #: ../src/TextStrings.cs:552
 msgid "Member online"
-msgstr "Mitglied online"
+msgstr "Membro conectado"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:553
 msgid "{0} came online in the network {1}"
-msgstr "{0} geht online im Netzwerk {1}"
+msgstr "{0} conectou-se na rede {1}"
 
 #: ../src/TextStrings.cs:554
 msgid "Member offline"
-msgstr "Mitglied offline"
+msgstr "Membro desconectado"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:555
 msgid "{0} went offline in the network {1}"
-msgstr "{0} geht offline im Netzwerk {1}"
+msgstr "{0} desconectou-se na rede {1}"
 
 #: ../src/TextStrings.cs:556
 msgid "Member joined"
-msgstr "Mitglied beigetreten"
+msgstr "Membro juntou-se"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:557
 msgid "{0} joined the network {1}"
-msgstr "{0} trat dem Netzwerk {1} bei"
+msgstr "{0} juntou-se à rede {1}"
 
 #: ../src/TextStrings.cs:558
 msgid "Member left"
-msgstr "Mitglied verlässt Netzwerk"
+msgstr "Membro saiu"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:559
 msgid "{0} left the network {1}"
-msgstr "{0} hat das Netzwerk {1} verlassen"
+msgstr "{0} saiu da rede {1}"
 
 #: ../src/TextStrings.cs:561
 msgid "A_vailable commands:"
-msgstr "_Verfügbare Befehle:"
+msgstr "Comandos D_isponíveis:"
 
 #: ../src/TextStrings.cs:562
 msgid "Command"
-msgstr "Befehl"
+msgstr "Comando"
 
 #: ../src/TextStrings.cs:563
 msgid "Available"
-msgstr "Verfügbar"
+msgstr "Disponível"
 
 #: ../src/TextStrings.cs:565
 msgid "Add Command"
-msgstr "Befehl hinzufügen"
+msgstr "Adicionar Comando"
 
 #: ../src/TextStrings.cs:566
 msgid "Edit Command"
-msgstr "Befehl bearbeiten"
+msgstr "Editar Comando"
 
 #: ../src/TextStrings.cs:567
 msgid "_Command:"
-msgstr "_Befehl:"
+msgstr "_Comando:"
 
 #: ../src/TextStrings.cs:568
 msgid "_Label:"
-msgstr "B_ezeichnung:"
+msgstr "_Rótulo:"
 
 #: ../src/TextStrings.cs:569
 msgid "Use %A for address and %N for nickname"
-msgstr "Benutzen Sie %A für die Adresse und %N für den Benutzernamen"
+msgstr "Use %A para endereço e %N para apelido"
 
 #: ../src/TextStrings.cs:571
 msgid "Click to choose an icon"
-msgstr "Klicken, um ein Symbol zu wählen"
+msgstr "Clique para escolher um ícone"
 
 #: ../src/TextStrings.cs:572
 msgid "Choose Icon"
-msgstr "Symbol wählen"
+msgstr "Escolher ícone"
 
 #: ../src/TextStrings.cs:573
 msgid "_No Icon"
-msgstr "_Kein Symbol"
+msgstr "_Sem ícone"
 
 #: ../src/TextStrings.cs:575
 msgid "Default"
-msgstr "Vorgabe"
+msgstr "Padrão"
 
 #: ../src/TextStrings.cs:576
 msgid "_Default"
-msgstr "_Standard"
+msgstr "_Padrão"
 
 #: ../src/TextStrings.cs:578
 msgid "Restore the default commands"
-msgstr "Standardbefehle wiederherstellen"
+msgstr "Voltar às configurações padrão"
 
 #: ../src/TextStrings.cs:579
 msgid "Revert changes?"
-msgstr "Änderungen rückgängig machen?"
+msgstr "Reverter alterações?"
 
 #: ../src/TextStrings.cs:580
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
 msgstr ""
-"Sind Sie sicher, dass sie alle Änderungen rückgängig machen\n"
-"und die Standardbefehle wiederherstellen möchten?"
+"Tem certeza que deseja reverter todas as alterações\n"
+"e restaurar os comandos padrão?"
 
 #: ../src/TextStrings.cs:582
 msgid "Move up"
-msgstr "Nach oben"
+msgstr "Mover para cima"
 
 #: ../src/TextStrings.cs:583
 msgid "Move down"
-msgstr "Nach unten"
+msgstr "Mover para baixo"
 
 #: ../src/TextStrings.cs:591
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "Netzwerkliste jede %S Sekunde akt_ualisieren"
-msgstr[1] "Netzwerkliste alle %S Sekunden akt_ualisieren"
+msgstr[0] "_Atualizar a lista de redes a cada %S segundo"
+msgstr[1] "_Atualizar a lista de redes a cada %S segundos"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:599
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} geht online im Netzwerk {1} und {2} anderen Netzwerk"
-msgstr[1] "{0} geht online im Netzwerk {1} und {2} anderen Netzwerken"
+msgstr[0] "{0} conectou-se na rede {1} e em {2} outra rede"
+msgstr[1] "{0} conectou-se na rede {1} e em {2} outras redes"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:607
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} geht offline im Netzwerk {1} und {2} anderen Netzwerk"
-msgstr[1] "{0} geht offline im Netzwerk {1} und {2} anderen Netzwerken"
+msgstr[0] "{0} desconectou-se na rede {1} e em {2} outra rede"
+msgstr[1] "{0} desconectou-se na rede {1} e em {2} outras redes"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:615
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} betritt das Netzwerk {1} und {2} anderes Netzwerk"
-msgstr[1] "{0} betritt das Netzwerk {1} und {2} andere Netzwerke"
+msgstr[0] "{0} juntou-se à rede {1} e a {2} outra rede"
+msgstr[1] "{0} juntou-se à rede {1} e a {2} outras redes"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:623
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} verlässt das Netzwerk {1} und {2} anderes Netzwerk"
-msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
-
-#~ msgid "seconds"
-#~ msgstr "Sekunden"
-
-#~ msgid "Getting nicknames..."
-#~ msgstr "Benutzer abrufen..."
-
-#~ msgid "Not configured"
-#~ msgstr "Nicht konfiguriert"
-
-#~ msgid "Not installed"
-#~ msgstr "Nicht installiert"
-
-#~ msgid "Changing..."
-#~ msgstr "Ändere..."
-
-#~ msgid "S_tatusbar"
-#~ msgstr "S_tatusleiste"
-
-#~ msgid "Hamachi login failed."
-#~ msgstr "Hamachi-Login fehlgeschlagen."
-
-#~ msgid "Connection refused."
-#~ msgstr "Verbindung abgelehnt."
-
-#~ msgid "Error connecting"
-#~ msgstr "Fehler beim Verbinden"
-
-#~ msgid "Go O_nline"
-#~ msgstr "_Online gehen"
-
-#~ msgid "Go O_ffline"
-#~ msgstr "_Offline gehen"
-
-#~ msgid "_Offline Members"
-#~ msgstr "_Offline-Mitglieder"
-
-#~ msgid "_Reconnect automatically when connection is lost"
-#~ msgstr "Beim Verlust der Ve_rbindung automatisch neu verbinden"
-
-#~ msgid "No internet connection."
-#~ msgstr "Keine Internetverbindung."
-
-#~ msgid "Nickname:"
-#~ msgstr "Benutzername:"
-
-#~ msgid "_Update interval (seconds):"
-#~ msgstr "_Aktualisierungsintervall (in Sekunden):"
-
-#~ msgid "_Command timeout (seconds):"
-#~ msgstr "_Zeitüberschreitung für Befehle (in Sekunden):"
-
-#~ msgid "_Send Request"
-#~ msgstr "Anfrage _senden"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Dieses Netzwerk erfordert eine Zulassung neuer Mitglieder durch den "
-#~ "Besitzer.\n"
-#~ "Möchten Sie eine Anfrage senden?"
+msgstr[0] "{0} saiu da rede {1} e de {2} outra rede"
+msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
