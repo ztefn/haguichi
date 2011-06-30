@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-06-29 14:55:25+0200\n"
-"PO-Revision-Date: 2011-06-28 18:17+0000\n"
+"POT-Creation-Date: 2011-06-29 14:55+0200\n"
+"PO-Revision-Date: 2011-06-29 17:06+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-06-29 12:30+0000\n"
+"X-Launchpad-Export-Date: 2011-06-30 11:08+0000\n"
 "X-Generator: Launchpad (build 13299)\n"
 
 #: ../src/TextStrings.cs:352
@@ -688,7 +688,7 @@ msgstr "Membro desconectado"
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:555
 msgid "{0} went offline in the network {1}"
-msgstr "{0} desconectou-se na rede {1}"
+msgstr "{0} desconectou-se da rede {1}"
 
 #: ../src/TextStrings.cs:556
 msgid "Member joined"
@@ -801,8 +801,8 @@ msgstr[1] "{0} conectou-se na rede {1} e em {2} outras redes"
 #: ../src/TextStrings.cs:607
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} desconectou-se na rede {1} e em {2} outra rede"
-msgstr[1] "{0} desconectou-se na rede {1} e em {2} outras redes"
+msgstr[0] "{0} desconectou-se da rede {1} e de {2} outra rede"
+msgstr[1] "{0} desconectou-se da rede {1} e de {2} outras redes"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:615
