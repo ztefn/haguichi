@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-06-29 14:41:28+0200\n"
-"PO-Revision-Date: 2011-04-19 09:05+0000\n"
-"Last-Translator: Emre AYTAÇ <Unknown>\n"
+"POT-Creation-Date: 2011-06-29 14:55+0200\n"
+"PO-Revision-Date: 2011-07-03 16:49+0000\n"
+"Last-Translator: Irmak Bıçakçıgil <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-04-19 17:36+0000\n"
-"X-Generator: Launchpad (build 12847)\n"
+"X-Launchpad-Export-Date: 2011-07-04 19:10+0000\n"
+"X-Generator: Launchpad (build 13333)\n"
 
 #: ../src/TextStrings.cs:352
 msgid "Haguichi Website"
@@ -455,9 +455,8 @@ msgstr ""
 "Katılmak için istek göndermek istiyor musunuz?"
 
 #: ../src/TextStrings.cs:482
-#, fuzzy
 msgid "Join request sent"
-msgstr "İstek gönderilsin mi?"
+msgstr "Katılma isteği gönderildi"
 
 #: ../src/TextStrings.cs:484
 msgid "Preferences"
@@ -813,12 +812,6 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
-#~ msgid "_Send Request"
-#~ msgstr "_İstek Gönder"
-
-#~ msgid "Error connecting"
-#~ msgstr "Bağlanma hatası"
-
 #~ msgid "seconds"
 #~ msgstr "saniye"
 
@@ -834,6 +827,16 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 #~ msgid "Not installed"
 #~ msgstr "Kurulmamış"
 
+#~ msgid "_Send Request"
+#~ msgstr "_İstek Gönder"
+
+#~ msgid ""
+#~ "This network requires manual approval of new members by the owner.\n"
+#~ "Would you like to send a join request?"
+#~ msgstr ""
+#~ "Bu ağ için yeni üyelerin ağ sahibi tarafından onaylanması gerekiyor.\n"
+#~ "Katılmak için istek göndermek istiyor musunuz?"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "D_urum Çubuğu"
 
@@ -842,3 +845,15 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
+
+#~ msgid "Error connecting"
+#~ msgstr "Bağlanma hatası"
+
+#~ msgid "No internet connection."
+#~ msgstr "İnternet bağlantısı yok."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi girişi başarısız oldu."
+
+#~ msgid "Connection refused."
+#~ msgstr "Bağlantı reddedildi."
