@@ -97,6 +97,7 @@ Nederlands (nl)
 
 Polski (pl)
     Antoni Sperka <antek1004-gmail>
+    Piotr Drąg <raven46>
 
 Português do Brasil (pt-BR)
     Rodrigo de Avila <rodrigo-avila>
