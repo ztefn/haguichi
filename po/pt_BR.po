@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2011-06-29 14:55+0200\n"
-"PO-Revision-Date: 2011-06-29 17:06+0000\n"
+"PO-Revision-Date: 2011-07-18 13:31+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-06-30 11:08+0000\n"
-"X-Generator: Launchpad (build 13299)\n"
+"X-Launchpad-Export-Date: 2011-07-19 17:36+0000\n"
+"X-Generator: Launchpad (build 13453)\n"
 
 #: ../src/TextStrings.cs:352
 msgid "Haguichi Website"
@@ -293,7 +293,7 @@ msgstr "_Rejeitar"
 #. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:433
 msgid "_Evict"
-msgstr "_Evitar"
+msgstr "_Expulsar"
 
 #: ../src/TextStrings.cs:434
 msgid "_Copy Address"
@@ -485,14 +485,14 @@ msgstr "Você tem certeza que quer sair da rede '{0}'?"
 
 #: ../src/TextStrings.cs:493
 msgid "Evict member '{0}'?"
-msgstr "Evitar o membro '{0}'?"
+msgstr "Expulsar o membro '{0}'?"
 
 #: ../src/TextStrings.cs:494
 msgid ""
 "Are you sure you want to evict member '{0}'\n"
 "from network '{1}'?"
 msgstr ""
-"Tem certeza que quer evitar o membro '{0}'\n"
+"Tem certeza que quer expulsar o membro '{0}'\n"
 "da rede '{1}'?"
 
 #: ../src/TextStrings.cs:496
@@ -517,7 +517,7 @@ msgstr "Você não tem permissões para sair desta rede."
 
 #: ../src/TextStrings.cs:503
 msgid "Failed evicting member '{0}'"
-msgstr "Falha ao evitar o membro '{0}'"
+msgstr "Falha ao expulsar o membro '{0}'"
 
 #: ../src/TextStrings.cs:504
 msgid "You are not the owner of network '{0}'."
