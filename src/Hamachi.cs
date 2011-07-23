@@ -80,16 +80,16 @@ public static class Hamachi
             return 0;
         }
         
-        if ( ( output.IndexOf ( "Have you run 'hamachi-init' ?" ) != -1 ) ||
-             ( output.IndexOf ( "Have you run 'hamachi start' ?" ) != -1 ) ||
-             ( output.IndexOf ( "hamachi-lnx-0.9.9.9" ) != -1 ) )
+        if ( ( output.Contains ( "Have you run 'hamachi-init' ?" ) ) ||
+             ( output.Contains ( "Have you run 'hamachi start' ?" ) ) ||
+             ( output.Contains ( "hamachi-lnx-0.9.9.9" ) ) )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
             return 1;
         }
         
-        if ( ( output.IndexOf ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) != -1 ) ||
-             ( output.IndexOf ( "You do not have permission to control the hamachid daemon." ) != -1 ) )
+        if ( ( output.Contains ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) ) ||
+             ( output.Contains ( "You do not have permission to control the hamachid daemon." ) ) )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
             return 2;
@@ -187,7 +187,7 @@ public static class Hamachi
         {
             output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" );
             
-            if ( output.IndexOf ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) != -1 )
+            if ( output.Contains ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
             {
                 Controller.Init ();
             }
@@ -196,7 +196,7 @@ public static class Hamachi
         {
             output = Command.ReturnOutput ( "hamachi-init", "" );
             
-            if ( output.IndexOf ( "Authentication information has been created." ) != -1 )
+            if ( output.Contains ( "Authentication information has been created." ) )
             {
                 Config.Client.Set ( Config.Settings.HamachiDataPath, Config.Settings.DefaultHamachiDataPath );
                 Controller.Init ();
@@ -448,7 +448,7 @@ public static class Hamachi
         string output = Command.ReturnOutput ( "hamachi", "delete \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Delete", output );
 
-        if ( output.IndexOf ( ".. failed, you are not an owner" ) != -1 )
+        if ( output.Contains ( ".. failed, you are not an owner" ) )
         {
             string heading = String.Format ( TextStrings.failedDeleteNetworkHeading, network.Name );
             string message = TextStrings.failedDeleteNetworkMessage;
@@ -468,7 +468,7 @@ public static class Hamachi
         string output = Command.ReturnOutput ( "hamachi", "leave \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Leave", output );
 
-        if ( output.IndexOf ( ".. failed, you are an owner" ) != -1 )
+        if ( output.Contains ( ".. failed, you are an owner" ) )
         {
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
             string message = TextStrings.failedLeaveNetworkMessageIsOwner;
@@ -478,7 +478,7 @@ public static class Hamachi
                 new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
-        else if ( output.IndexOf ( ".. failed, denied" ) != -1 )
+        else if ( output.Contains ( ".. failed, denied" ) )
         {
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
             string message = TextStrings.failedLeaveNetworkMessageDenied;
@@ -517,7 +517,7 @@ public static class Hamachi
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Evict", output );
 
-        if ( output.IndexOf ( ".. failed, denied" ) != -1 )
+        if ( output.Contains ( ".. failed, denied" ) )
         {
             string heading = String.Format ( TextStrings.failedEvictMemberHeading, member.Nick );
             string message = String.Format ( TextStrings.failedEvictMemberMessage, member.Network );
