@@ -69,37 +69,54 @@ public static class Command
         string sudo    = "";
         string curSudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
         
-        if ( ReturnOutput ( curSudo, "--help" ) != "error" )
+        if ( Exists ( curSudo ) )
         {
             sudo = curSudo;
-        }   
-        else if ( ReturnOutput ( "gksudo", "--help" ) != "error" )
+        }
+        else if ( Exists ( "gksudo" ) )
         {
             sudo = "gksudo";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        else if ( ReturnOutput ( "gnomesu", "--help" ) != "error" )
+        else if ( Exists ( "gnomesu" ) )
         {
             sudo = "gnomesu";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        else if ( ReturnOutput ( "kdesudo", "--help" ) != "error" )
+        else if ( Exists ( "kdesudo" ) )
         {
             sudo = "kdesudo";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        else if ( ReturnOutput ( "kdesu", "--help" ) != "error" )
+        else if ( Exists ( "kdesu" ) )
         {
             sudo = "kdesu";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
-        else if ( ReturnOutput ( "sudo", "-h" ) != "error" )
+        else if ( Exists ( "sudo" ) )
         {
             sudo = "sudo";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
         
         Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );
+        
+    }
+    
+    
+    public static bool Exists ( string command )
+    {
+        
+        string output = ReturnOutput ( "bash", "-c \"command -v " + command + " &>/dev/null || echo 'command not found'\"" );
+        
+        if ( output.Contains ( "command not found" ) )
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
         
     }
     
