@@ -98,6 +98,11 @@ public static class Command
             sudo = "kdesu";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
+        else if ( Exists ( "beesu" ) )
+        {
+            sudo = "beesu";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
+        }
         else if ( Exists ( "sudo" ) )
         {
             sudo = "sudo";
