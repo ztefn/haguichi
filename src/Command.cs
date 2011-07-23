@@ -78,6 +78,11 @@ public static class Command
             sudo = "gksudo";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
+        else if ( Exists ( "gksu" ) )
+        {
+            sudo = "gksu";
+            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
+        }
         else if ( Exists ( "gnomesu" ) )
         {
             sudo = "gnomesu";
