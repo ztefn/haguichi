@@ -35,6 +35,17 @@ public static class Utilities
     }
     
     
+    public static string RemoveColons ( string label )
+    {
+        
+        label = label.Replace ( " :", "" );
+        label = label.Replace ( ":",  "" );
+        
+        return label;
+        
+    }
+    
+    
     public static string AsString ( string [] commands )
     {
         
@@ -53,8 +64,8 @@ public static class Utilities
     public static string CleanString ( string inString )
     {
         
-        inString = inString.Replace("\\", "\\\\");
-        inString = inString.Replace("\"", "\\\"");
+        inString = inString.Replace ( "\\", "\\\\" );
+        inString = inString.Replace ( "\"", "\\\"" );
         
         return inString;
         

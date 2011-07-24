@@ -76,6 +76,8 @@ namespace Dialogs
             buttonBox.Layout = ButtonBoxStyle.End;
             buttonBox.Spacing = 6;
             
+            Gdk.Color labelColor = this.Style.TextColors [ (int) StateType.Insensitive ];
+            
             
             versionEntry = new Label ();
             versionEntry.Xalign = 0;
@@ -83,9 +85,10 @@ namespace Dialogs
             versionEntry.SetSizeRequest ( 160, 0 ); /* Triggers minimum dialog size */
             versionEntry.Selectable = true;
             
-            versionLabel = new Label ( TextStrings.version + " " );
-            versionLabel.Xalign = 0;
+            versionLabel = new Label ( Utilities.RemoveColons ( TextStrings.version ) + "  " );
+            versionLabel.Xalign = 1;
             versionLabel.Ypad = 4;
+            versionLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
             addressEntry = new Label ();
@@ -93,9 +96,10 @@ namespace Dialogs
             addressEntry.Xpad = 4;
             addressEntry.Selectable = true;
             
-            addressLabel = new Label ( TextStrings.address + " " );
-            addressLabel.Xalign = 0;
+            addressLabel = new Label ( Utilities.RemoveColons ( TextStrings.address ) + "  " );
+            addressLabel.Xalign = 1;
             addressLabel.Ypad = 4;
+            addressLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
             idEntry = new Label ();
@@ -103,9 +107,10 @@ namespace Dialogs
             idEntry.Xpad = 4;
             idEntry.Selectable = true;
             
-            idLabel = new Label ( TextStrings.id + " " );
-            idLabel.Xalign = 0;
+            idLabel = new Label ( Utilities.RemoveColons ( TextStrings.id ) + "  " );
+            idLabel.Xalign = 1;
             idLabel.Ypad = 4;
+            idLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
             accountEntry = new Label ();
@@ -113,9 +118,10 @@ namespace Dialogs
             accountEntry.Xpad = 4;
             accountEntry.Selectable = true;
             
-            accountLabel = new Label ( TextStrings.account + " " );
-            accountLabel.Xalign = 0;
+            accountLabel = new Label ( Utilities.RemoveColons ( TextStrings.account ) + "  " );
+            accountLabel.Xalign = 1;
             accountLabel.Ypad = 4;
+            accountLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
             nickEntry = new Label ();
@@ -123,9 +129,10 @@ namespace Dialogs
             nickEntry.Xpad = 4;
             nickEntry.Selectable = true;
             
-            nickLabel = new Label ( TextStrings.nick + " " );
-            nickLabel.Xalign = 0;
+            nickLabel = new Label ( Utilities.RemoveColons ( TextStrings.nick ) + "  " );
+            nickLabel.Xalign = 1;
             nickLabel.Ypad = 4;
+            nickLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
             Table table = new Table ( 6, 2, false );
