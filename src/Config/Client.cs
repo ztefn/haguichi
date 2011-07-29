@@ -103,6 +103,12 @@ namespace Config
                 if ( key.Contains ( Config.Settings.NotifyOnConnectionLoss.KeyName ) )
                 {
                     Haguichi.preferencesWindow.notifyOnConnectionLoss.Active = ( bool ) val;
+                    
+                    if ( ( Config.Settings.DemoMode ) &&
+                         ( ( bool ) val ) )
+                    {
+                        new Notify ( TextStrings.notifyConnectionLost, "", MainWindow.appIcons [4] );
+                    }
                 }
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberJoin.KeyName ) )
