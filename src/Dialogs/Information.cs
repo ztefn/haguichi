@@ -282,7 +282,8 @@ namespace Dialogs
             
             if ( Hamachi.ApiVersion > 1 )
             {
-                if ( account == "" )
+                if ( ( account == "" ) ||
+                     ( account == "-" ) )
                 {
                     account = "<i>" + TextStrings.unavailable + "</i>";
                 }

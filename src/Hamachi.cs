@@ -171,7 +171,15 @@ public static class Hamachi
     public static string Retrieve ( string output, string nfo )
     {
         
-        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(.+)" );
+        /*
+         *  Retrieve text value from the line starting with {nfo}
+         *  1. Followed by any number of spaces before the separating colon
+         *  2. Followed by at least one space
+         *  3. Then using \S to match a string of characters that does NOT contain whitespace (spaces, tabs, and line breaks)
+         * 
+         */
+        
+        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(\\S+)" );
             
         return regex.Match ( output ).Groups[3].ToString ();
         
