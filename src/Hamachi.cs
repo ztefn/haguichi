@@ -700,7 +700,7 @@ public static class Hamachi
         if ( Hamachi.ApiVersion > 1 )
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
         else
