@@ -171,15 +171,7 @@ public static class Hamachi
     public static string Retrieve ( string output, string nfo )
     {
         
-        /*
-         *  Retrieve text value from the line starting with {nfo}
-         *  1. Followed by any number of spaces before the separating colon
-         *  2. Followed by at least one space
-         *  3. Then using \S to match a string of characters that does NOT contain whitespace (spaces, tabs, and line breaks)
-         * 
-         */
-        
-        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(\\S+)" );
+        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(.+)" );
             
         return regex.Match ( output ).Groups[3].ToString ();
         
@@ -358,7 +350,10 @@ public static class Hamachi
         {
             try
             {
-                output = Retrieve ( lastInfo, "address" );
+                string rawOuput = Retrieve ( lastInfo, "address" );
+                
+                Regex regex = new Regex ( "(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
+                output = regex.Match ( rawOuput ).Groups["address"].ToString ();
             }
             catch {}
         }
