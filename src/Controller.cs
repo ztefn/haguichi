@@ -35,6 +35,7 @@ public static class Controller
     public  static int lastStatus = -2;
     public  static int numUpdateCycles;
     private static int numWaitForInternetCycles;
+    private static int numTuncfgRuns;
     private static string startOutput;
     
     private static Hashtable membersLeftHash;
@@ -353,7 +354,8 @@ public static class Controller
                                       output );
             });
         }
-        else if ( output.Contains ( "tap: connect() failed 2 (No such file or directory)" ) )
+        else if ( ( output.Contains ( "tap: connect() failed 2 (No such file or directory)" ) ) &&
+                  ( numTuncfgRuns == 0 ) )
         {
             /* Not able to start, running tuncfg required */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Tuncfg required." );
@@ -439,6 +441,8 @@ public static class Controller
             
             if ( Hamachi.ApiVersion == 1 )
             {
+                numTuncfgRuns = 0;
+                
                 startOutput = Hamachi.Start ();
                 GoStartThread ();
             }
@@ -508,14 +512,14 @@ public static class Controller
     
     private static void GoRunTuncfgAndTryStartAgain ()
     {
-
+        
+        numTuncfgRuns ++;
+        
         Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Running tuncfg." );
         Hamachi.TunCfg ();
         
         Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Trying to start again." );
-        
-        Thread thread = new Thread ( GoConnectThread );
-        thread.Start ();
+        GoStart ();
         
     }
     

@@ -97,14 +97,6 @@ public class GlobalEvents
     }
 
     
-    public static void RunTunCfg ( object obj, EventArgs args )
-    {
-        
-        Hamachi.TunCfg ();
-        
-    }
-    
-    
     public static void ConnectionEstablished ()
     {
         
