@@ -123,6 +123,8 @@ Türkçe (tr)
     public static string yes;
     public static string no;
     
+    public static string enterPassword;
+    
     public static string hamachiOutput;
     
     public static string address;
@@ -300,12 +302,6 @@ Türkçe (tr)
     public static string checkboxNotifyMemberOnline;
     public static string checkboxNotifyMemberOffline;
     
-    public static string runTuncfgHeading;
-    public static string runTuncfgMessage;
-    public static string runLabel;
-    public static string checkboxAskBeforeRunningTuncfg;
-    public static string checkboxAskBeforeRunningTuncfg2;
-    
     public static string connectErrorLoginFailed;
     public static string connectErrorConnectionRefused;
     public static string connectErrorNoInternetConnection;
@@ -359,6 +355,8 @@ Türkçe (tr)
         
         yes                                 = Catalog.GetString ( "Yes" );
         no                                  = Catalog.GetString ( "No" );
+        
+        enterPassword                       = Catalog.GetString ( "Please enter your password to proceed." );
         
         hamachiOutput                       = Catalog.GetString ( "_Hamachi output" );
         
@@ -536,12 +534,6 @@ Türkçe (tr)
         checkboxNotifyMemberLeave           = Catalog.GetString ( "Display notification when a member _leaves" );
         checkboxNotifyMemberOnline          = Catalog.GetString ( "Display notification when a member comes o_nline" );
         checkboxNotifyMemberOffline         = Catalog.GetString ( "Display notification when a member goes o_ffline" );
-
-        runTuncfgHeading                    = Catalog.GetString ( "Do you want to run tuncfg?" );
-        runTuncfgMessage                    = Catalog.GetString ( "Hamachi needs to run tuncfg to be able to connect.\nRunning tuncfg requires administrative privileges." );
-        runLabel                            = Catalog.GetString ( "_Run" );
-        checkboxAskBeforeRunningTuncfg      = Catalog.GetString ( "_Always ask before running tuncfg" );
-        checkboxAskBeforeRunningTuncfg2     = Catalog.GetString ( "A_sk confirmation before running tuncfg" );
         
         connectErrorLoginFailed             = Catalog.GetString ( "Hamachi login failed" );
         connectErrorConnectionRefused       = Catalog.GetString ( "Connection refused" );

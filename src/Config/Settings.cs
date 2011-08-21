@@ -42,7 +42,6 @@ namespace Config
         
         public static string [] SessionDefaultCommands;
         
-        public static Key AskBeforeRunningTunCfg            = new Key ( "behavior/ask_before_running_tuncfg", true );
         public static Key ConnectOnStartup                  = new Key ( "behavior/connect_on_startup", false );
         public static Key ReconnectOnConnectionLoss         = new Key ( "behavior/reconnect_on_connection_loss", true );
         public static Key DisconnectOnQuit                  = new Key ( "behavior/disconnect_on_quit", true );

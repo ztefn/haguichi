@@ -509,29 +509,8 @@ public static class Controller
     private static void GoRunTuncfgAndTryStartAgain ()
     {
 
-        if ( ( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg ) )
-        {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Asking before running tuncfg." );
-            Dialogs.RunTunCfg dlg = new Dialogs.RunTunCfg ();
-            
-            if ( dlg.ResponseText == "Ok" )
-            {
-                Hamachi.TunCfg ();
-            }
-            else
-            {
-                Application.Invoke ( delegate
-                {
-                    GlobalEvents.ConnectionStopped ();
-                });
-                return;
-            }
-        }
-        else
-        {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Running tuncfg." );
-            Hamachi.TunCfg ();
-        }
+        Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Running tuncfg." );
+        Hamachi.TunCfg ();
         
         Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Trying to start again." );
         

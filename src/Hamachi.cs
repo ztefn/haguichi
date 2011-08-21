@@ -185,7 +185,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + "-- bash -c \"echo 'Ipc.User      " + System.Environment.UserName + "' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" );
             
             if ( output.Contains ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
             {
@@ -211,7 +211,7 @@ public static class Hamachi
     public static void TunCfg ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + ( string ) Config.Client.Get ( Config.Settings.CommandForTunCfg ) );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.TunCfg", output );
         
     }
@@ -224,7 +224,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ScriptDirectory + "/logmein-hamachi start" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + ScriptDirectory + "/logmein-hamachi start" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
@@ -249,7 +249,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), ScriptDirectory + "/logmein-hamachi stop" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + ScriptDirectory + "/logmein-hamachi stop" );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {

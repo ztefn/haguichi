@@ -28,6 +28,8 @@ public static class Command
     private static int timeout;
     private static bool inProgress = false;
     
+    public static string SudoArguments = "";
+    
     
     public static void Init ()
     {
@@ -107,6 +109,11 @@ public static class Command
         {
             sudo = "sudo";
             Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
+        }
+        
+        if ( sudo.StartsWith ( "gksu" ) )
+        {
+            SudoArguments = "-m \"" + TextStrings.enterPassword + "\" ";
         }
         
         Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );

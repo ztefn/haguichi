@@ -38,7 +38,6 @@ namespace Windows
         public  CheckButton connectOnStartup;
         public  CheckButton reconnectOnConnectionLoss;
         public  CheckButton disconnectOnQuit;
-        public  CheckButton askTunCfg;
         
         public  CheckButton notifyOnConnectionLoss;
         public  CheckButton notifyOnMemberJoin;
@@ -198,13 +197,6 @@ namespace Windows
                 Config.Client.Set ( Config.Settings.DisconnectOnQuit, disconnectOnQuit.Active );
             };
             
-            askTunCfg =  new CheckButton ( TextStrings.checkboxAskBeforeRunningTuncfg2 );
-            askTunCfg.Active = ( bool ) Config.Client.Get ( Config.Settings.AskBeforeRunningTunCfg );
-            askTunCfg.Toggled += delegate
-            {
-                Config.Client.Set ( Config.Settings.AskBeforeRunningTunCfg, askTunCfg.Active );
-            };
-            
             intervalSpin = new SpinButton ( 0, 999, 1 );
             intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
             intervalSpin.ValueChanged += delegate
@@ -235,7 +227,6 @@ namespace Windows
             behaviorBox.AddWidget ( connectOnStartup );
             behaviorBox.AddWidget ( reconnectOnConnectionLoss );
             behaviorBox.AddWidget ( disconnectOnQuit );
-            behaviorBox.AddWidget ( askTunCfg );
             behaviorBox.AddWidget ( intervalBox );
             
             GroupBox spaceBox2 = new GroupBox ( "" );
@@ -278,7 +269,6 @@ namespace Windows
             if ( Hamachi.ApiVersion != 1 )
             {
                 hamachiBox.Hide ();
-                askTunCfg.Hide ();
             }
             
         }
