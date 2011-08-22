@@ -344,6 +344,7 @@ public static class Controller
         else if ( output.Contains ( "cfg: failed to load" ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Not properly configured, showing dialog." );
+            
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
@@ -354,35 +355,41 @@ public static class Controller
                                       output );
             });
         }
-        else if ( ( output.Contains ( "tap: connect() failed 2 (No such file or directory)" ) ) &&
+        else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
                   ( numTuncfgRuns == 0 ) )
         {
             /* Not able to start, running tuncfg required */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Tuncfg required." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Running tuncfg required." );
+            
             Application.Invoke ( delegate
             {
                 MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
                 GoRunTuncfgAndTryStartAgain ();
             });
         }
-        else if ( output.Contains ( "tap: connect() failed 111 (Connection refused)" ) )
+        else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
+                  ( numTuncfgRuns > 0 ) )
         {
-            /* Not able to start, connection refused */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Connection refused." );
+            /* Running tuncfg cancelled */
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Running tuncfg cancelled." );
             
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
-                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorConnectionRefused, null, MessageType.Error );
             });
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason, showing output." );
             
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
+                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
+                                      TextStrings.connectErrorHeading,
+                                      TextStrings.errorUnknown,
+                                      "Error",
+                                      output );
             });
         }
         

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-24 15:39+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -631,12 +631,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Пока_зывать уведомление, когда пользователь уходит из сети"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Ошибка при подключении Hamachi"
+msgid "Error connecting"
+msgstr "Ошибка при подключении"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Подключение отклонено"
+msgid "Hamachi login failed"
+msgstr "Ошибка при подключении Hamachi"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -805,6 +805,9 @@ msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
+#~ msgid "Connection refused"
+#~ msgstr "Подключение отклонено"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Вы хотите запустить tuncfg?"
 
@@ -842,9 +845,6 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
 #~ msgid "Connection refused."
 #~ msgstr "Подключение отклонено."
-
-#~ msgid "Error connecting"
-#~ msgstr "Ошибка при подключении"
 
 #~ msgid "No internet connection."
 #~ msgstr "Отсутствует соединение с интернет."

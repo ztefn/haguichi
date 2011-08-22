@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-18 05:47+0000\n"
 "Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -630,12 +630,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Afficher une notification lorsqu'un membre n'est pl_us en ligne"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Echec de l'ouverture de la session Hamachi"
+msgid "Error connecting"
+msgstr "Erreur de connexion"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Connexion refusée"
+msgid "Hamachi login failed"
+msgstr "Echec de l'ouverture de la session Hamachi"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -800,6 +800,9 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
+#~ msgid "Connection refused"
+#~ msgstr "Connexion refusée"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Voulez-vous exécuter tuncfg ?"
 
@@ -866,9 +869,6 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Se _reconnecter automatiquement lorsque la connexion a été perdue"
-
-#~ msgid "Error connecting"
-#~ msgstr "Erreur de connexion"
 
 #~ msgid "Nickname:"
 #~ msgstr "Pseudo :"

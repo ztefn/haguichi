@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-03-19 06:42+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
@@ -625,12 +625,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Melding weergeven als een lid o_ffline gaat"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Hamachi login is mislukt"
+msgid "Error connecting"
+msgstr "Fout bij verbinden"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Verbinding geweigerd"
+msgid "Hamachi login failed"
+msgstr "Hamachi login is mislukt"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -796,6 +796,9 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
 msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
+#~ msgid "Connection refused"
+#~ msgstr "Verbinding geweigerd"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Wilt u tuncfg uitvoeren?"
 
@@ -817,9 +820,6 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
 #~ msgid "_Send Request"
 #~ msgstr "_Verzoek indienen"
-
-#~ msgid "Error connecting"
-#~ msgstr "Fout bij verbinden"
 
 #~ msgid "seconds"
 #~ msgstr "seconden"

@@ -302,8 +302,8 @@ Türkçe (tr)
     public static string checkboxNotifyMemberOnline;
     public static string checkboxNotifyMemberOffline;
     
+    public static string connectErrorHeading;
     public static string connectErrorLoginFailed;
-    public static string connectErrorConnectionRefused;
     public static string connectErrorNoInternetConnection;
     
     public static string configErrorHeading;
@@ -535,8 +535,8 @@ Türkçe (tr)
         checkboxNotifyMemberOnline          = Catalog.GetString ( "Display notification when a member comes o_nline" );
         checkboxNotifyMemberOffline         = Catalog.GetString ( "Display notification when a member goes o_ffline" );
         
+        connectErrorHeading                 = Catalog.GetString ( "Error connecting" );
         connectErrorLoginFailed             = Catalog.GetString ( "Hamachi login failed" );
-        connectErrorConnectionRefused       = Catalog.GetString ( "Connection refused" );
         connectErrorNoInternetConnection    = Catalog.GetString ( "No internet connection" );
         
         configErrorHeading                  = Catalog.GetString ( "Loading configuration failed" );

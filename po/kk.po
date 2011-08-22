@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-24 15:37+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
@@ -626,12 +626,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Мүше желіден _ажыратылатын кезде (offline) мәлімдеу"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Hamachi кіру қатесі"
+msgid "Error connecting"
+msgstr "Қосылу қатесі"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Қосылыс қабылданбады"
+msgid "Hamachi login failed"
+msgstr "Hamachi кіру қатесі"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -792,6 +792,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
+#~ msgid "Connection refused"
+#~ msgstr "Қосылыс қабылданбады"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "tuncfg орындауын қалайсыз ба?"
 
@@ -831,9 +834,6 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 
 #~ msgid "Connection refused."
 #~ msgstr "Қосылыс қабылданбады."
-
-#~ msgid "Error connecting"
-#~ msgstr "Қосылу қатесі"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Ник тізімін алу..."

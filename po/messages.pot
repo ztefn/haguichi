@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
-"PO-Revision-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
+"PO-Revision-Date: 2011-08-22 20:48:00+0200\n"
 "Last-Translator: stephen\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -612,11 +612,11 @@ msgid "Display notification when a member goes o_ffline"
 msgstr ""
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
+msgid "Error connecting"
 msgstr ""
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
+msgid "Hamachi login failed"
 msgstr ""
 
 #: ../src/TextStrings.cs:539

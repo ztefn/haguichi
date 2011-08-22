@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-21 12:00+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -629,12 +629,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Mostra una notifica quando un membro si _disconnette"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Hamachi ha fallito il login"
+msgid "Error connecting"
+msgstr "Errore di connessione"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Connessione rifiutata"
+msgid "Hamachi login failed"
+msgstr "Hamachi ha fallito il login"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -800,6 +800,9 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
+#~ msgid "Connection refused"
+#~ msgstr "Connessione rifiutata"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Vuoi avviare tuncfg?"
 
@@ -871,9 +874,6 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "Connection refused."
 #~ msgstr "Connessione rifiutata."
-
-#~ msgid "Error connecting"
-#~ msgstr "Errore di connessione"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Vai in linea"

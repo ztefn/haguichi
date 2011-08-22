@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-07-03 16:49+0000\n"
 "Last-Translator: Irmak Bıçakçıgil <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -629,12 +629,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Üyeler çe_vrimdışı olduğunda bildir"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Hamachi girişi başarısız oldu"
+msgid "Error connecting"
+msgstr "Bağlanma hatası"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Bağlantı reddedildi"
+msgid "Hamachi login failed"
+msgstr "Hamachi girişi başarısız oldu"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -793,6 +793,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
+#~ msgid "Connection refused"
+#~ msgstr "Bağlantı reddedildi"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "tuncfg'yi çalıştırmak istiyor musunuz?"
 
@@ -845,9 +848,6 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
-
-#~ msgid "Error connecting"
-#~ msgstr "Bağlanma hatası"
 
 #~ msgid "No internet connection."
 #~ msgstr "İnternet bağlantısı yok."

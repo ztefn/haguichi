@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-07-05 18:19+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -631,12 +631,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Zalogowanie do Hamachi się nie powiodło"
+msgid "Error connecting"
+msgstr "Błąd łączenie"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Odrzucono połączenie"
+msgid "Hamachi login failed"
+msgstr "Zalogowanie do Hamachi się nie powiodło"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -813,6 +813,9 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
+#~ msgid "Connection refused"
+#~ msgstr "Odrzucono połączenie"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Wykonać program tuncfg?"
 
@@ -847,9 +850,6 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "Connection refused."
 #~ msgstr "Połączenie odrzucone."
-
-#~ msgid "Error connecting"
-#~ msgstr "Błąd łączenie"
 
 #~ msgid "_Send Request"
 #~ msgstr "_Wyślij prośbę"

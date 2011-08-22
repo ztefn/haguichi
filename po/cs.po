@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-14 19:39+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -629,12 +629,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Zobrazit upozornění, když člen změní stav na o_ffline"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Přihlášení Hamachi selhalo"
+msgid "Error connecting"
+msgstr "Chyba při připojování"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "Spojení odmítnuto"
+msgid "Hamachi login failed"
+msgstr "Přihlášení Hamachi selhalo"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -803,6 +803,9 @@ msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
+#~ msgid "Connection refused"
+#~ msgstr "Spojení odmítnuto"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Opravdu spustit tuncfg?"
 
@@ -846,9 +849,6 @@ msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Automatiky obnovit spojení, pokud bylo ztraceno"
-
-#~ msgid "Error connecting"
-#~ msgstr "Chyba při připojování"
 
 #~ msgid "No internet connection."
 #~ msgstr "Žádné připojení k internetu."

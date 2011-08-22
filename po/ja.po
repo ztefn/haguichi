@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-21 14:54:40+0200\n"
+"POT-Creation-Date: 2011-08-22 20:47:59+0200\n"
 "PO-Revision-Date: 2011-05-18 00:57+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -627,12 +627,12 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "メンバーがオフラインになったら通知を表示する(_F)"
 
 #: ../src/TextStrings.cs:537
-msgid "Hamachi login failed"
-msgstr "Hamachi のログインに失敗しました"
+msgid "Error connecting"
+msgstr "接続エラー"
 
 #: ../src/TextStrings.cs:538
-msgid "Connection refused"
-msgstr "接続が拒否されました"
+msgid "Hamachi login failed"
+msgstr "Hamachi のログインに失敗しました"
 
 #: ../src/TextStrings.cs:539
 msgid "No internet connection"
@@ -793,6 +793,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
 
+#~ msgid "Connection refused"
+#~ msgstr "接続が拒否されました"
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "tuncfg を実行しますか？"
 
@@ -864,6 +867,3 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "Connection refused."
 #~ msgstr "接続が拒否されました。"
-
-#~ msgid "Error connecting"
-#~ msgstr "接続エラー"
