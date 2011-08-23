@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-18 00:57+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -344,31 +344,32 @@ msgid "_Account:"
 msgstr "アカウント(_A):"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "関連付け(_A)"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "アカウントと関連付ける(_A)..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "アカウントと関連付け"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "このクライアントと関連付けたいアカウントを入力してください。"
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "このクライアントで作った全てのネットワークを含める(_I)"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "関連付け(_A)"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "関連付けに失敗"
+#, fuzzy
+msgid "Attaching..."
+msgstr "関連付け(_A)"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
+msgid "Account not found"
 msgstr "アカウントが見つかりませんでした"
 
 #: ../src/TextStrings.cs:455
@@ -784,6 +785,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} 
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
+
+#~ msgid "Error attaching"
+#~ msgstr "関連付けに失敗"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "設定の読み込みに失敗"

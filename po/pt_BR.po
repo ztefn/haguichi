@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-07-18 13:31+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -345,32 +345,33 @@ msgid "_Account:"
 msgstr "_Conta:"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Anexar"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "_Anextar à Conta..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Anexar à Conta"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Por favor digite a conta na qual você quer anexar este cliente."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Incluir todas as redes criadas por este cliente"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Anexar"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Erro ao anexar"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Anexar"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Conta não encontrada."
+msgid "Account not found"
+msgstr "Conta não encontrada"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -791,6 +792,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} saiu da rede {1} e de {2} outra rede"
 msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
+
+#~ msgid "Error attaching"
+#~ msgstr "Erro ao anexar"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "falha ao carregar configuração"

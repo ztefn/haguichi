@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-18 06:05+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -344,32 +344,33 @@ msgid "_Account:"
 msgstr "_Konto:"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "K_oppla"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "K_oppla till konto..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Koppla till konto"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Ange kontot som du vill koppla denna klient till."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Inkludera alla nätverk som skapats av denna klient"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "K_oppla"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Fel vid koppling till"
+#, fuzzy
+msgid "Attaching..."
+msgstr "K_oppla"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Kontot hittades inte."
+msgid "Account not found"
+msgstr "Kontot hittades inte"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -789,6 +790,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
+
+#~ msgid "Error attaching"
+#~ msgstr "Fel vid koppling till"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Misslyckades med att läsa in konfigurationen"

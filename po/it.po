@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-21 12:00+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -344,32 +344,33 @@ msgid "_Account:"
 msgstr "_Account:"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Associa"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "_Associa all'account..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Associa all'account"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Per favore, inserisci l'account che vuoi associare a questo client."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Includi tutte le reti create da questo client"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Associa"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Errore nell'associazione"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Associa"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Account non trovato."
+msgid "Account not found"
+msgstr "Account non trovato"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -789,6 +790,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
+
+#~ msgid "Error attaching"
+#~ msgstr "Errore nell'associazione"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Caricamento della configurazione non riuscito"

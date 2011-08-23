@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-18 05:47+0000\n"
 "Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -345,32 +345,33 @@ msgid "_Account:"
 msgstr "_Compte :"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Attacher"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "_Attacher au compte..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Attacher au compte"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Veuillez entrer le compte que vous voulez attacher à ce client."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Inclure tous les réseaux créés par ce client"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Attacher"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Erreur lors de l'attachement"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Attacher"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Compte introuvable."
+msgid "Account not found"
+msgstr "Compte introuvable"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -790,6 +791,9 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
+
+#~ msgid "Error attaching"
+#~ msgstr "Erreur lors de l'attachement"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Echec du chargement de la configuration"

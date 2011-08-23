@@ -18,7 +18,9 @@
  */
 
 using System;
+using System.Threading;
 using Gtk;
+using Widgets;
 
 
 namespace Dialogs
@@ -26,6 +28,8 @@ namespace Dialogs
 
     public class Attach : Dialog
     {
+        
+        private MessageBar messageBar;
         
         private Label heading;
         
@@ -51,19 +55,16 @@ namespace Dialogs
             this.HasSeparator    = false;
             this.Resizable       = false;
             this.SkipTaskbarHint = true;
-            this.BorderWidth     = 4;
             this.DeleteEvent    += OnDeleteEvent;
             
             this.ActionArea.Destroy ();
             
             
+            messageBar = new MessageBar ();
+            
             heading = new Label ();
             heading.Markup = String.Format ( TextStrings.attachMessage );
             heading.Xalign = 0;
-            heading.Ypad = 6;
-
-            HBox headBox = new HBox ();
-            headBox.Add ( heading );
             
             
             cancelBut = new Button ( Stock.Cancel );
@@ -85,6 +86,7 @@ namespace Dialogs
             idEntry.ActivatesDefault = true;
             idEntry.MaxLength = 100;
             idEntry.Changed += CheckEntryLength;
+            idEntry.Changed += HideMessage;
             
             idLabel = new Label ( TextStrings.accountLabel + "  " );
             idLabel.Xalign = 0;
@@ -103,13 +105,14 @@ namespace Dialogs
             
             
             VBox vbox = new VBox ();
-            vbox.Add ( headBox );
+            vbox.Add ( heading );
             vbox.Add ( idBox );
             vbox.Add ( withNetworks );
             vbox.Add ( buttonBox );
             
             
-            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( vbox [ headBox ] ) );
+            Box.BoxChild bc8 = ( ( Box.BoxChild ) ( vbox [ heading ] ) );
+            bc8.Padding = 6;
             bc8.Expand = false;
             
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
@@ -127,25 +130,43 @@ namespace Dialogs
             
             HBox hbox = new HBox ();
             hbox.Add ( vbox );
-
             
-            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
+            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
+            bc2.Padding = 12;
+            
+            
+            VBox container = new VBox ();
+            container.Add ( messageBar );
+            container.Add ( hbox );
+            container.ShowAll ();
+
+            Box.BoxChild bc7 = ( ( Box.BoxChild ) ( container [ hbox ] ) );
             bc7.Padding = 6;
             
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( headBox [ heading ] ) );
-            bc2.Expand = false;
             
+            this.Remove ( this.VBox );
+            this.Add ( container );
             
-            this.VBox.Add ( hbox );
-            
+            HideMessage ();
             idEntry.GrabFocus ();
             
-            this.ShowAll ();
+            this.Show ();
             
         }
         
         
         private void GoAttach ( object obj, EventArgs args )
+        {
+            
+            SetMode ( "Attaching" );
+            
+            Thread thread = new Thread ( GoAttachThread );
+            thread.Start ();
+            
+        }
+        
+        
+        private void GoAttachThread ()
         {
             
             string output;
@@ -161,19 +182,28 @@ namespace Dialogs
             
             if ( output.IndexOf ( ".. ok" ) != -1 )
             {
-                GlobalEvents.SetAttach ();
+                Application.Invoke ( delegate
+                {
+                    Dismiss ();
+                });
                 
-                Dismiss ();
+                Thread.Sleep ( 2000 ); // Wait a couple of seconds to get an updated account
+                
+                Application.Invoke ( delegate
+                {
+                    GlobalEvents.SetAttach ();
+                });
                 return;
             }
-            else if ( output.IndexOf ( ".. failed, not found" ) != -1 )
+            else if ( ( output.IndexOf ( ".. failed, not found" ) != -1 ) ||
+                      ( output.IndexOf ( ".. failed, [248]" ) != -1 ) )
             {
-                new Dialogs.Message ( this, TextStrings.attachErrorHeading, TextStrings.attachErrorAccountNotFound, "Error", output );
+                ShowMessage ( TextStrings.attachErrorAccountNotFound );
                 return;
             }
             else if ( output.IndexOf ( ".. failed" ) != -1 )
             {
-                new Dialogs.Message ( this, TextStrings.attachErrorHeading, TextStrings.errorUnknown, "Error", output );
+                ShowMessage ( TextStrings.errorUnknown );
                 return;
             }
             else
@@ -197,6 +227,66 @@ namespace Dialogs
             else
             {
                 attachBut.Sensitive = false;
+            }
+            
+        }
+        
+        
+        private void ShowMessage ( string message )
+        {
+            
+            Application.Invoke ( delegate
+            {
+                SetMode ( "Normal" );
+                
+                messageBar.SetMessage ( message, null, MessageType.Error );
+            });
+            
+        }
+        
+        
+        private void HideMessage ( object obj, EventArgs args )
+        {
+            
+            HideMessage ();
+            
+        }
+        
+        
+        private void HideMessage ()
+        {
+            
+            messageBar.Hide ();
+            
+        }
+        
+        
+        private void SetMode ( string mode )
+        {
+            
+            switch ( mode )
+            {
+                
+                case "Attaching":
+                
+                    idEntry.Sensitive       = false;
+                    withNetworks.Sensitive  = false;
+                    cancelBut.Sensitive     = false;
+                    attachBut.Sensitive     = false;
+                    attachBut.Label         = TextStrings.attachingLabel;
+                    
+                    break;
+                    
+                case "Normal":
+                
+                    idEntry.Sensitive       = true;
+                    withNetworks.Sensitive  = true;
+                    cancelBut.Sensitive     = true;
+                    attachBut.Sensitive     = true;
+                    attachBut.Label         = TextStrings.attachButtonLabel;
+                    
+                    break;
+                 
             }
             
         }

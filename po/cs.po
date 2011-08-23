@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-14 19:39+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -344,32 +344,33 @@ msgid "_Account:"
 msgstr "Úče_t:"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Připojit"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "Připo_jit k účtu"
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Připojit k účtu"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Vložte prosím účet, který chcete připojit k tomuto klientu."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Zahrnout všechny sítě vytvořené tímto klientem"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Připojit"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Chyba připojení"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Připojit"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Účet nenalezen."
+msgid "Account not found"
+msgstr "Účet nenalezen"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -794,6 +795,9 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
+
+#~ msgid "Error attaching"
+#~ msgstr "Chyba připojení"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Načtení nastavení selhalo"

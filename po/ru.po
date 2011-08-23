@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-05-24 15:39+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -345,33 +345,34 @@ msgid "_Account:"
 msgstr "_Учётная запись:"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Прикрепить"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "П_рикрепить к учётной записи..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Прикрепить к учётной записи"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr ""
 "Пожалуйста, введите учётную запись к которой вы хотите прикрепить клиента."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Включить все сети, созданные этим клиентом"
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Прикрепить"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Ошибка прикрепления"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Прикрепить"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Учётная запись не найдена."
+msgid "Account not found"
+msgstr "Учётная запись не найдена"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -796,6 +797,9 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
+
+#~ msgid "Error attaching"
+#~ msgstr "Ошибка прикрепления"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Ошибка при загрузке конфигурации"

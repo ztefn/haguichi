@@ -482,7 +482,7 @@ public static class Controller
                 Hamachi.GetInfo (); // Get latest info to be able to update information dialog correcltly
             }
             
-            Thread.Sleep ( 1000 ); // Wait a second to get an updated list 
+            Thread.Sleep ( 1000 ); // Wait a second to get an updated list
             
             Application.Invoke ( delegate
             {

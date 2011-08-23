@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
 "PO-Revision-Date: 2011-07-03 16:49+0000\n"
 "Last-Translator: Irmak Bıçakçıgil <Unknown>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -344,32 +344,33 @@ msgid "_Account:"
 msgstr "_Hesap"
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr "_Ekle"
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr "_Hesaba Ekle..."
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr "Hesaba Ekle"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr "Bu istemciye eklemek için bir hesap girin."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr "_Kapsanan tüm bağlantılar bu istemci tarafından oluşturuldu."
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr "_Ekle"
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
-msgstr "Ekleme hatası"
+#, fuzzy
+msgid "Attaching..."
+msgstr "_Ekle"
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
-msgstr "Hesap bulunamadı."
+msgid "Account not found"
+msgstr "Hesap bulunamadı"
 
 #: ../src/TextStrings.cs:455
 msgid "_Join"
@@ -784,6 +785,9 @@ msgstr[0] "{0}, {1} ve {2} başka ağa katıldı."
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
+
+#~ msgid "Error attaching"
+#~ msgstr "Ekleme hatası"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Yapılandırma yüklemesi başarısız oldu"

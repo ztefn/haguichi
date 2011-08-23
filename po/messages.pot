@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2011-08-23 19:51:43+0200\n"
-"PO-Revision-Date: 2011-08-23 19:51:44+0200\n"
+"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
+"PO-Revision-Date: 2011-08-23 23:27:48+0200\n"
 "Last-Translator: stephen\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -335,31 +335,31 @@ msgid "_Account:"
 msgstr ""
 
 #: ../src/TextStrings.cs:447
-msgid "_Attach"
-msgstr ""
-
-#: ../src/TextStrings.cs:448
 msgid "_Attach to Account..."
 msgstr ""
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Attach to Account"
 msgstr ""
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
 msgstr ""
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
 msgstr ""
 
+#: ../src/TextStrings.cs:451
+msgid "_Attach"
+msgstr ""
+
 #: ../src/TextStrings.cs:452
-msgid "Error attaching"
+msgid "Attaching..."
 msgstr ""
 
 #: ../src/TextStrings.cs:453
-msgid "Account not found."
+msgid "Account not found"
 msgstr ""
 
 #: ../src/TextStrings.cs:455

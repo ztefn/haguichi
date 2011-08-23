@@ -215,12 +215,12 @@ Türkçe (tr)
     public static string accountLabel;
     public static string account;
     
-    public static string attachButtonLabel;
     public static string attachMenuLabel;
     public static string attachTitle;
     public static string attachMessage;
     public static string attachWithNetworksCheckbox;
-    public static string attachErrorHeading;
+    public static string attachButtonLabel;
+    public static string attachingLabel;
     public static string attachErrorAccountNotFound;
     
     public static string joinLabel;
@@ -445,13 +445,13 @@ Türkçe (tr)
         accountLabel                        = Catalog.GetString ( "_Account:" );
         account                             = Utilities.RemoveMnemonics ( accountLabel ); // "Account:"
         
-        attachButtonLabel                   = Catalog.GetString ( "_Attach" );
         attachMenuLabel                     = Catalog.GetString ( "_Attach to Account..." );
         attachTitle                         = Catalog.GetString ( "Attach to Account" );
         attachMessage                       = Catalog.GetString ( "Please enter the account you want to attach this client to." );
         attachWithNetworksCheckbox          = Catalog.GetString ( "_Include all networks created by this client" );
-        attachErrorHeading                  = Catalog.GetString ( "Error attaching" );
-        attachErrorAccountNotFound          = Catalog.GetString ( "Account not found." );
+        attachButtonLabel                   = Catalog.GetString ( "_Attach" );
+        attachingLabel                      = Catalog.GetString ( "Attaching..." );
+        attachErrorAccountNotFound          = Catalog.GetString ( "Account not found" );
         
         joinLabel                           = Catalog.GetString ( "_Join" );
         joiningLabel                        = Catalog.GetString ( "Joining..." );
