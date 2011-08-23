@@ -306,9 +306,6 @@ Türkçe (tr)
     public static string connectErrorLoginFailed;
     public static string connectErrorNoInternetConnection;
     
-    public static string configErrorHeading;
-    public static string configErrorMessage;
-    
     public static string notifyConnectionLost;
     public static string notifyMemberOnlineHeading;
     public static string notifyMemberOnlineMessage;
@@ -538,9 +535,6 @@ Türkçe (tr)
         connectErrorHeading                 = Catalog.GetString ( "Error connecting" );
         connectErrorLoginFailed             = Catalog.GetString ( "Hamachi login failed" );
         connectErrorNoInternetConnection    = Catalog.GetString ( "No internet connection" );
-        
-        configErrorHeading                  = Catalog.GetString ( "Loading configuration failed" );
-        configErrorMessage                  = Catalog.GetString ( "Hamachi could not launch due to a configuration load failure." );
         
         notifyConnectionLost                = Catalog.GetString ( "Hamachi lost connection" );
         notifyMemberOnlineHeading           = Catalog.GetString ( "Member online" );

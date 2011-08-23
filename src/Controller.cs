@@ -341,20 +341,6 @@ public static class Controller
                 });
             }
         }
-        else if ( output.Contains ( "cfg: failed to load" ) )
-        {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Not properly configured, showing dialog." );
-            
-            Application.Invoke ( delegate
-            {
-                GlobalEvents.ConnectionStopped ();
-                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
-                                      TextStrings.configErrorHeading,
-                                      TextStrings.configErrorMessage,
-                                      "Error",
-                                      output );
-            });
-        }
         else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
                   ( numTuncfgRuns == 0 ) )
         {
