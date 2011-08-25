@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-07-05 18:19+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-24 21:29+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-07-05 19:36+0000\n"
-"X-Generator: Launchpad (build 13333)\n"
+"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
+"X-Generator: Launchpad (build 13779)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -46,9 +46,8 @@ msgid "No"
 msgstr "Nie"
 
 #: ../src/TextStrings.cs:355
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Proszę wpisać nowe hasło dla tej sieci."
+msgstr "Proszę podać hasło, aby kontynuować."
 
 #: ../src/TextStrings.cs:357
 msgid "_Hamachi output"
@@ -165,7 +164,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: ../src/TextStrings.cs:391
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: ../src/TextStrings.cs:392
 msgid "_Download"
@@ -354,7 +354,8 @@ msgstr "Dołącz do konta"
 
 #: ../src/TextStrings.cs:449
 msgid "Please enter the account you want to attach this client to."
-msgstr "Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
+msgstr ""
+"Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
 
 #: ../src/TextStrings.cs:450
 msgid "_Include all networks created by this client"
@@ -365,9 +366,8 @@ msgid "_Attach"
 msgstr "_Dołącz"
 
 #: ../src/TextStrings.cs:452
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Dołącz"
+msgstr "Dołączanie..."
 
 #: ../src/TextStrings.cs:453
 msgid "Account not found"
@@ -625,11 +625,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: ../src/TextStrings.cs:531
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: ../src/TextStrings.cs:532
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:534
 msgid "Error connecting"
@@ -804,19 +806,14 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
-#~ msgid "Error attaching"
-#~ msgstr "Błąd podczas dołączania"
+#~ msgid "No internet connection."
+#~ msgstr "Brak połączenia z internetem."
 
-#~ msgid "Loading configuration failed"
-#~ msgstr "Wczytanie konfiguracji się nie powiodło"
+#~ msgid "Hamachi login failed."
+#~ msgstr "Nie udane logowanie do Hamachi."
 
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi nie może zostać uruchomione z powodu niepowodzenia wczytania "
-#~ "konfiguracji."
-
-#~ msgid "Connection refused"
-#~ msgstr "Odrzucono połączenie"
+#~ msgid "Connection refused."
+#~ msgstr "Połączenie odrzucone."
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Wykonać program tuncfg?"
@@ -834,24 +831,13 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "_Pytanie przed wykonaniem programu tuncfg"
 
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi nie może zostać uruchomione z powodu niepowodzenia wczytania "
+#~ "konfiguracji."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Wczytanie konfiguracji się nie powiodło"
+
 #~ msgid "A_sk confirmation before running tuncfg"
 #~ msgstr "_Pytanie o potwierdzenie przed wykonaniem programu tuncfg"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Sieć wymaga zatwierdzenia nowych członków przez jej właściciela.\n"
-#~ "Chcesz wysłać prośbę o zatwierdzenie?"
-
-#~ msgid "No internet connection."
-#~ msgstr "Brak połączenia z internetem."
-
-#~ msgid "Hamachi login failed."
-#~ msgstr "Nie udane logowanie do Hamachi."
-
-#~ msgid "Connection refused."
-#~ msgstr "Połączenie odrzucone."
-
-#~ msgid "_Send Request"
-#~ msgstr "_Wyślij prośbę"

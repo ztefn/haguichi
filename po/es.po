@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-05-18 19:05+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-25 10:58+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-05-18 20:56+0000\n"
-"X-Generator: Launchpad (build 13067)\n"
+"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
+"X-Generator: Launchpad (build 13779)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "No"
 
 #: ../src/TextStrings.cs:355
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Introduzca la nueva contraseña para esta red."
+msgstr "Introduzca su contraseña para continuar."
 
 #: ../src/TextStrings.cs:357
 msgid "_Hamachi output"
@@ -364,9 +363,8 @@ msgid "_Attach"
 msgstr "_Adjuntar"
 
 #: ../src/TextStrings.cs:452
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Adjuntar"
+msgstr "Adjuntando..."
 
 #: ../src/TextStrings.cs:453
 msgid "Account not found"
@@ -791,39 +789,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
-#~ msgid "Error attaching"
-#~ msgstr "Error al conectar"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Error al cargar la configuración"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi no ha podido cargarse debido a un fallo al cargar la "
-#~ "configuración."
-
-#~ msgid "Connection refused"
-#~ msgstr "Conexión rechazada"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "¿Desea ejecutar tuncfg?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Hamachi necesita ejecutar tuncfg para poder conectarse.\n"
-#~ "Se requieren permisos de administrador para ejecutar tuncfg."
-
-#~ msgid "_Run"
-#~ msgstr "_Ejecutar"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "_Preguntar siempre antes de ejecutar tuncfg"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "_Pedir confirmación antes de ejecutar tuncfg"
-
 #~ msgid "seconds"
 #~ msgstr "segundos"
 
@@ -842,8 +807,31 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "Connection refused."
 #~ msgstr "Conexión rechazada."
 
+#~ msgid "_Run"
+#~ msgstr "_Ejecutar"
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Miembros desconectados"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi no ha podido cargarse debido a un fallo al cargar la configuración."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Error al cargar la configuración"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "_Pedir confirmación antes de ejecutar tuncfg"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Preguntar siempre antes de ejecutar tuncfg"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi necesita ejecutar tuncfg para poder conectarse.\n"
+#~ "Se requieren permisos de administrador para ejecutar tuncfg."
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Conectarse"
@@ -869,16 +857,8 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tiempo máximo de espera (segundos):"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Enviar Solicitud"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Esta red requiere de aprobación manual del propietario de los nuevos "
-#~ "miembros.\n"
-#~ "¿Quiere enviar una solicitud para unirse?"
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "¿Desea ejecutar tuncfg?"
 
 #~ msgid "Hamachi login failed."
 #~ msgstr "Ha fallado el inicio de sesión de Hamachi."

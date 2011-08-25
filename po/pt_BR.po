@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-07-18 13:31+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-25 11:07+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-07-19 17:36+0000\n"
-"X-Generator: Launchpad (build 13453)\n"
+"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
+"X-Generator: Launchpad (build 13779)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "Não"
 
 #: ../src/TextStrings.cs:355
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Por favir digite a sua nova senha para esta rede."
+msgstr "Por favor digite sua senha para continuar."
 
 #: ../src/TextStrings.cs:357
 msgid "_Hamachi output"
@@ -346,7 +345,7 @@ msgstr "_Conta:"
 
 #: ../src/TextStrings.cs:447
 msgid "_Attach to Account..."
-msgstr "_Anextar à Conta..."
+msgstr "_Anexar à Conta..."
 
 #: ../src/TextStrings.cs:448
 msgid "Attach to Account"
@@ -365,9 +364,8 @@ msgid "_Attach"
 msgstr "_Anexar"
 
 #: ../src/TextStrings.cs:452
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Anexar"
+msgstr "Anexando..."
 
 #: ../src/TextStrings.cs:453
 msgid "Account not found"
@@ -631,9 +629,8 @@ msgid "Display notification when a member goes o_ffline"
 msgstr "Exibir notificação quando um membro de d_esconecta"
 
 #: ../src/TextStrings.cs:534
-#, fuzzy
 msgid "Error connecting"
-msgstr "Erro ao anexar"
+msgstr "Erro ao conectar"
 
 #: ../src/TextStrings.cs:535
 msgid "Hamachi login failed"
@@ -793,17 +790,8 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} saiu da rede {1} e de {2} outra rede"
 msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
-#~ msgid "Error attaching"
-#~ msgstr "Erro ao anexar"
-
 #~ msgid "Loading configuration failed"
 #~ msgstr "falha ao carregar configuração"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr "O Hamachi não pode iniciar porque falhou ao ler as configurações."
-
-#~ msgid "Connection refused"
-#~ msgstr "Conexão recusada"
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Você quer executar o tuncfg?"
@@ -815,11 +803,14 @@ msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 #~ "O Hamachi precisa executar o tuncfg para conseguir conectar.\n"
 #~ "Executar o tuncfg requer privilégios administrativos."
 
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "P_eça confirmação antes de executar o tuncfg"
+
 #~ msgid "_Run"
 #~ msgstr "_Executar"
 
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "_Sempre pergunte antes de executar o tuncfg"
 
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "P_eça confirmação antes de executar o tuncfg"
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "O Hamachi não pode iniciar porque falhou ao ler as configurações."

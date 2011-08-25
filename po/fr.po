@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-05-18 05:47+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-25 07:38+0000\n"
 "Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
-"X-Generator: Launchpad (build 13067)\n"
+"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
+"X-Generator: Launchpad (build 13779)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "Non"
 
 #: ../src/TextStrings.cs:355
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Veuillez entrer le nouveau mot de passe pour ce réseau."
+msgstr "Veuillez saisir votre mot de passe pour pouvoir continuer."
 
 #: ../src/TextStrings.cs:357
 msgid "_Hamachi output"
@@ -365,9 +364,8 @@ msgid "_Attach"
 msgstr "_Attacher"
 
 #: ../src/TextStrings.cs:452
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Attacher"
+msgstr "En train d'attacher..."
 
 #: ../src/TextStrings.cs:453
 msgid "Account not found"
@@ -792,39 +790,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
-#~ msgid "Error attaching"
-#~ msgstr "Erreur lors de l'attachement"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Echec du chargement de la configuration"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi n'a pas pu se lancer du a l'échec du chargement de la "
-#~ "configuration."
-
-#~ msgid "Connection refused"
-#~ msgstr "Connexion refusée"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "Voulez-vous exécuter tuncfg ?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Hamachi a besoin d'exécuter tuncfg pour être capable de se connecter.\n"
-#~ "Exécutez tuncfg requière les droits d'administration."
-
-#~ msgid "_Run"
-#~ msgstr "_Exécuter"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "_Toujours demander avant d'exécuter tuncfg"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "Demande une confirmation avant d'exécuter _tuncfg"
-
 #~ msgid "Not configured"
 #~ msgstr "Pas configuré"
 
@@ -834,11 +799,21 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Changing..."
 #~ msgstr "Changement..."
 
+#~ msgid "Loading configuration failed"
+#~ msgstr "Echec du chargement de la configuration"
+
 #~ msgid "Hamachi login failed."
 #~ msgstr "Echec de l'ouverture de la session Hamachi."
 
 #~ msgid "Connection refused."
 #~ msgstr "Connexion refusée."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi a besoin d'exécuter tuncfg pour être capable de se connecter.\n"
+#~ "Exécutez tuncfg requière les droits d'administration."
 
 #~ msgid "seconds"
 #~ msgstr "secondes"
@@ -846,8 +821,17 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Not installed"
 #~ msgstr "Pas installé"
 
+#~ msgid "_Run"
+#~ msgstr "_Exécuter"
+
 #~ msgid "Go O_ffline"
 #~ msgstr "Se _déconnecter"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "Demande une confirmation avant d'exécuter _tuncfg"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Toujours demander avant d'exécuter tuncfg"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Membres hors ligne"
@@ -864,8 +848,8 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "Délai d'_attente de la commande (secondes) :"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Envoyer la demande"
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Voulez-vous exécuter tuncfg ?"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Obtention des pseudos..."
@@ -873,16 +857,9 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Se _reconnecter automatiquement lorsque la connexion a été perdue"
 
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi n'a pas pu se lancer du a l'échec du chargement de la configuration."
+
 #~ msgid "Nickname:"
 #~ msgstr "Pseudo :"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Ce réseau requiert une approbation manuelle des nouveaux membres par le "
-#~ "propriétaire.\n"
-#~ "Voulez-vous envoyer une demande de connexion ?"
-
-#~ msgid "_Hamachi ouput"
-#~ msgstr "Sortie d'_Hamachi"

@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-03-19 06:42+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-23 22:46+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-04-02 09:44+0000\n"
-"X-Generator: Launchpad (build 12710)\n"
+"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
+"X-Generator: Launchpad (build 13779)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -786,42 +786,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
 msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
-#~ msgid "Error attaching"
-#~ msgstr "Fout bij koppelen"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Configuratie inladen is mislukt"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi kon niet worden gestart omdat het inladen van de configuratie is "
-#~ "mislukt."
-
-#~ msgid "Connection refused"
-#~ msgstr "Verbinding geweigerd"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "Wilt u tuncfg uitvoeren?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Hamachi moet tuncfg uitvoeren om verbinding te kunnen maken.\n"
-#~ "Om tuncfg uit te voeren zijn administratieve rechten nodig."
-
-#~ msgid "_Run"
-#~ msgstr "_Uitvoeren"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "A_ltijd vragen voordat tuncfg wordt uitgevoerd"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "V_raag om bevestiging voordat tuncfg wordt uitgevoerd"
-
-#~ msgid "_Send Request"
-#~ msgstr "_Verzoek indienen"
-
 #~ msgid "seconds"
 #~ msgstr "seconden"
 
@@ -849,6 +813,42 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusbalk tonen"
 
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Wilt u tuncfg uitvoeren?"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi moet tuncfg uitvoeren om verbinding te kunnen maken.\n"
+#~ "Om tuncfg uit te voeren zijn administratieve rechten nodig."
+
+#~ msgid "_Run"
+#~ msgstr "_Uitvoeren"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "A_ltijd vragen voordat tuncfg wordt uitgevoerd"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "V_raag om bevestiging voordat tuncfg wordt uitgevoerd"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi login is mislukt."
+
+#~ msgid "Connection refused."
+#~ msgstr "Verbinding geweigerd."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Configuratie inladen is mislukt"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi kon niet worden gestart omdat het inladen van de configuratie is "
+#~ "mislukt."
+
+#~ msgid "No internet connection."
+#~ msgstr "Geen internetverbinding."
+
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Automatisch een verbroken verbinding _herstellen"
 
@@ -860,6 +860,3 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Opdrachttijdslimiet (seconden):"
-
-#~ msgid "_Hamachi ouput"
-#~ msgstr "_Hamachi uitvoer"
