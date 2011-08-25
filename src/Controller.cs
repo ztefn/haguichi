@@ -588,7 +588,6 @@ public static class Controller
             
             if ( Hamachi.ApiVersion == 1 )
             {
-                 // Update nicks
                 Hamachi.GetNicks ();
             }
             
@@ -600,6 +599,7 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 UpdateList ();
+                GlobalEvents.SetAttach ();
             });
         }
         else

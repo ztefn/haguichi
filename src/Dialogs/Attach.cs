@@ -185,12 +185,7 @@ namespace Dialogs
                 Application.Invoke ( delegate
                 {
                     Dismiss ();
-                });
-                
-                Thread.Sleep ( 2000 ); // Wait a couple of seconds to get an updated account
-                
-                Application.Invoke ( delegate
-                {
+                    Hamachi.GetInfo ();
                     GlobalEvents.SetAttach ();
                 });
                 return;
