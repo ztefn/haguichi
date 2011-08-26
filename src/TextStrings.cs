@@ -484,24 +484,24 @@ Türkçe (tr)
         preferencesTitle                    = Catalog.GetString ( "Preferences" );
         informationTitle                    = Catalog.GetString ( "Information" );
         
-        confirmDeleteNetworkHeading         = Catalog.GetString ( "Delete network '{0}'?" );
-        confirmDeleteNetworkMessage         = Catalog.GetString ( "Are you sure you want to delete network '{0}'?" );
+        confirmDeleteNetworkHeading         = Catalog.GetString ( "Delete network \"{0}\"?" );
+        confirmDeleteNetworkMessage         = Catalog.GetString ( "Are you sure you want to delete network \"{0}\"?" );
         
-        confirmLeaveNetworkHeading          = Catalog.GetString ( "Leave network '{0}'?" );
-        confirmLeaveNetworkMessage          = Catalog.GetString ( "Are you sure you want to leave network '{0}'?" );
+        confirmLeaveNetworkHeading          = Catalog.GetString ( "Leave network \"{0}\"?" );
+        confirmLeaveNetworkMessage          = Catalog.GetString ( "Are you sure you want to leave network \"{0}\"?" );
         
-        confirmEvictMemberHeading           = Catalog.GetString ( "Evict member '{0}'?" );
-        confirmEvictMemberMessage           = Catalog.GetString ( "Are you sure you want to evict member '{0}'\nfrom network '{1}'?" );
+        confirmEvictMemberHeading           = Catalog.GetString ( "Evict member \"{0}\"?" );
+        confirmEvictMemberMessage           = Catalog.GetString ( "Are you sure you want to evict member \"{0}\"\nfrom network \"{1}\"?" );
         
-        failedDeleteNetworkHeading          = Catalog.GetString ( "Failed deleting network '{0}'" );
+        failedDeleteNetworkHeading          = Catalog.GetString ( "Failed deleting network \"{0}\"" );
         failedDeleteNetworkMessage          = Catalog.GetString ( "You are not the owner of this network." );
         
-        failedLeaveNetworkHeading           = Catalog.GetString ( "Failed leaving network '{0}'" );
+        failedLeaveNetworkHeading           = Catalog.GetString ( "Failed leaving network \"{0}\"" );
         failedLeaveNetworkMessageIsOwner    = Catalog.GetString ( "You are the owner of this network." );
         failedLeaveNetworkMessageDenied     = Catalog.GetString ( "You don't have permission to leave this network." );
         
-        failedEvictMemberHeading            = Catalog.GetString ( "Failed evicting member '{0}'" );
-        failedEvictMemberMessage            = Catalog.GetString ( "You are not the owner of network '{0}'." );
+        failedEvictMemberHeading            = Catalog.GetString ( "Failed evicting member \"{0}\"" );
+        failedEvictMemberMessage            = Catalog.GetString ( "You are not the owner of network \"{0}\"." );
         
         generalTab                          = Catalog.GetString ( "General" );
         desktopTab                          = Catalog.GetString ( "Desktop" );
