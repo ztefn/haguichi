@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-23 23:27:48+0200\n"
-"PO-Revision-Date: 2011-05-18 06:05+0000\n"
+"POT-Creation-Date: 2011-08-23 23:27+0200\n"
+"PO-Revision-Date: 2011-08-26 05:56+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-05-18 17:36+0000\n"
-"X-Generator: Launchpad (build 13067)\n"
+"X-Launchpad-Export-Date: 2011-08-26 17:04+0000\n"
+"X-Generator: Launchpad (build 13794)\n"
 
 #: ../src/TextStrings.cs:346
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "Nej"
 
 #: ../src/TextStrings.cs:355
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Ange det nya lösenordet för det här nätverket."
+msgstr "Ange ditt lösenord för att fortsätta."
 
 #: ../src/TextStrings.cs:357
 msgid "_Hamachi output"
@@ -364,9 +363,8 @@ msgid "_Attach"
 msgstr "K_oppla"
 
 #: ../src/TextStrings.cs:452
-#, fuzzy
 msgid "Attaching..."
-msgstr "K_oppla"
+msgstr "Ansluter..."
 
 #: ../src/TextStrings.cs:453
 msgid "Account not found"
@@ -791,19 +789,20 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
-#~ msgid "Error attaching"
-#~ msgstr "Fel vid koppling till"
+#~ msgid "seconds"
+#~ msgstr "sekunder"
 
-#~ msgid "Loading configuration failed"
-#~ msgstr "Misslyckades med att läsa in konfigurationen"
+#~ msgid "Getting nicknames..."
+#~ msgstr "Hämtar smeknamn..."
 
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi kunde inte öppnas på grund av att det inte gick att läsa in "
-#~ "konfigurationen."
+#~ msgid "Not configured"
+#~ msgstr "Inte konfiguerad"
 
-#~ msgid "Connection refused"
-#~ msgstr "Anslutningen nekades"
+#~ msgid "Changing..."
+#~ msgstr "Ändrar..."
+
+#~ msgid "S_tatusbar"
+#~ msgstr "S_tatusrad"
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Vill du köra tuncfg?"
@@ -820,24 +819,6 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "Fråga alltid _innan tuncfg ska köras"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "_Fråga efter bekräftelse innan tuncfg körs"
-
-#~ msgid "seconds"
-#~ msgstr "sekunder"
-
-#~ msgid "Getting nicknames..."
-#~ msgstr "Hämtar smeknamn..."
-
-#~ msgid "Not configured"
-#~ msgstr "Inte konfiguerad"
-
-#~ msgid "Changing..."
-#~ msgstr "Ändrar..."
-
-#~ msgid "S_tatusbar"
-#~ msgstr "S_tatusrad"
 
 #~ msgid "Go O_nline"
 #~ msgstr "Koppla _upp"
@@ -863,6 +844,17 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 #~ msgid "Connection refused."
 #~ msgstr "Anslutningen nekades."
 
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "_Fråga efter bekräftelse innan tuncfg körs"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi kunde inte öppnas på grund av att det inte gick att läsa in "
+#~ "konfigurationen."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Misslyckades med att läsa in konfigurationen"
+
 #~ msgid "Nickname:"
 #~ msgstr "Smeknamn:"
 
@@ -871,14 +863,3 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tidsgräns för kommando (sekunder):"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Det här nätverket kräver manuellt godkännande av nya medlemmar av "
-#~ "ägaren.\n"
-#~ "Vill du skicka en anslutningsförfrågan?"
-
-#~ msgid "_Send Request"
-#~ msgstr "_Skicka förfrågan"

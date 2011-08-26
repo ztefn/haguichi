@@ -294,6 +294,11 @@
     <None Include="AUTHORS" />
     <None Include="INSTALL" />
     <None Include="description-pak" />
+    <None Include="locale\bg\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
     <None Include="locale\cs\LC_MESSAGES\haguichi.mo">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>

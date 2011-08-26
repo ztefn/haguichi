@@ -68,6 +68,9 @@ Options:
     public static string [] appDocumenters       = new string [] { "" };
     public const  string    appTranslatorCredits =
 @"
+Български (bg)
+    Dimitar Dimitrov <dimitrov>
+
 Čeština (cs)
     Jan Bažant <brbla>
 
