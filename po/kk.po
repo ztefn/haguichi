@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-26 22:56:26+0200\n"
-"PO-Revision-Date: 2011-05-24 15:37+0000\n"
+"POT-Creation-Date: 2011-08-26 22:56+0200\n"
+"PO-Revision-Date: 2011-08-27 15:48+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-05-24 17:48+0000\n"
-"X-Generator: Launchpad (build 13085)\n"
+"X-Launchpad-Export-Date: 2011-08-27 20:16+0000\n"
+"X-Generator: Launchpad (build 13794)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "Жоқ"
 
 #: ../src/TextStrings.cs:358
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Осы желі үшін жаңа құпия сөзін енгізіңіз."
+msgstr "Жалғастыру үшін, құпия сөзіңізді енгізіңіз."
 
 #: ../src/TextStrings.cs:360
 msgid "_Hamachi output"
@@ -353,7 +352,7 @@ msgstr "Пайдаланушы атына бекіту"
 
 #: ../src/TextStrings.cs:452
 msgid "Please enter the account you want to attach this client to."
-msgstr "Осы клиентке бекітемін деген тіркемені көрсетіңіз."
+msgstr "Осы клиентті келесі тіркемеге (пайдаланушы атына) бекіту."
 
 #: ../src/TextStrings.cs:453
 msgid "_Include all networks created by this client"
@@ -364,9 +363,8 @@ msgid "_Attach"
 msgstr "_Бекіту"
 
 #: ../src/TextStrings.cs:455
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Бекіту"
+msgstr "Бекітілуде..."
 
 #: ../src/TextStrings.cs:456
 msgid "Account not found"
@@ -783,50 +781,26 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "Error attaching"
-#~ msgstr "Бекіту қатесі"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Баптаулама (конфигурация) ашу қатесі"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу "
-#~ "мүмкін емес."
-
-#~ msgid "Connection refused"
-#~ msgstr "Қосылыс қабылданбады"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "tuncfg орындауын қалайсыз ба?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Қосылу үшін, Hamachi tuncfg орындауын талап етеді.\n"
-#~ "tuncfg ашылуы әкімшілік құқықтарды қажет етеді."
-
-#~ msgid "_Run"
-#~ msgstr "О_рындау"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "tuncfg _әрбір орындау кезінде сұрау"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "tuncfg орындау кезінде растауды сұрау"
-
 #~ msgid "seconds"
 #~ msgstr "секунд"
 
 #~ msgid "Changing..."
 #~ msgstr "Өзгерту..."
 
-#~ msgid "_Send Request"
-#~ msgstr "Сұраныс _жіберу"
-
 #~ msgid "S_tatusbar"
 #~ msgstr "Күй _жолағы"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "tuncfg орындауын қалайсыз ба?"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "tuncfg орындау кезінде растауды сұрау"
+
+#~ msgid "_Run"
+#~ msgstr "О_рындау"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "tuncfg _әрбір орындау кезінде сұрау"
 
 #~ msgid "No internet connection."
 #~ msgstr "Интернетпен қосылыс жоқ."
@@ -843,6 +817,30 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 #~ msgid "Not configured"
 #~ msgstr "Қалыпқа келтірілмеген"
 
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "\"{0}\" желісін жою қажет пе?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "\"{0}\" желісін жоюға сенімдісіз бе?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "\"{0}\" желісінен мүшені шығарып тастау сәтсіз аяқталды"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "\"{0}\" желісінен шығу сәтсіз аяқталды"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "\"{0}\" мүшені шығарып тастау қажет пе?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "\"{0}\" желіден шығу қажет пе?"
+
 #~ msgid "_Offline Members"
 #~ msgstr "Желіге _қосылмаған мүшелерді көрсету"
 
@@ -855,12 +853,30 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Қосылыс үзілгенде автоматты түрде _қайта қосылу"
 
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Желі әрбір жаңа мүшелердің жекешелей мақұлдауын талап етеді.\n"
-#~ "Сұраныс жібергіңіз келеді ме?"
+#~ msgid "Loading configuration failed"
+#~ msgstr "Баптаулама (конфигурация) ашу қатесі"
 
 #~ msgid "Not installed"
 #~ msgstr "Hamachi орнатылмаған"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "\"{1}\" желісінен \"{0}\" мүшені шығарып\n"
+#~ "тастауға сенімдісіз бе?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "\"{0}\" желінің иеcі сіз емес боласыз."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Қосылу үшін, Hamachi tuncfg орындауын талап етеді.\n"
+#~ "tuncfg ашылуы әкімшілік құқықтарды қажет етеді."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу мүмкін "
+#~ "емес."
