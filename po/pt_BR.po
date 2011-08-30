@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-08-26 22:56:26+0200\n"
-"PO-Revision-Date: 2011-08-25 11:07+0000\n"
+"POT-Creation-Date: 2011-08-26 22:56+0200\n"
+"PO-Revision-Date: 2011-08-30 12:27+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
-"X-Generator: Launchpad (build 13779)\n"
+"X-Launchpad-Export-Date: 2011-08-30 17:44+0000\n"
+"X-Generator: Launchpad (build 13815)\n"
 
 #: ../src/TextStrings.cs:349
 msgid "Haguichi Website"
@@ -598,7 +598,7 @@ msgstr "Iniciar o Haguichi _minimizado na área de notificação"
 
 #: ../src/TextStrings.cs:527
 msgid "C_onnect automatically on startup"
-msgstr "C_onnectar automaticamente na inicialização"
+msgstr "C_onectar automaticamente na inicialização"
 
 #: ../src/TextStrings.cs:528
 msgid "_Reconnect automatically when the connection is lost"
@@ -614,7 +614,7 @@ msgstr "Exibir notificação quando a conexão for perdida"
 
 #: ../src/TextStrings.cs:532
 msgid "Display notification when a member _joins"
-msgstr "Mostrar uma notificação quando um membro se _junta"
+msgstr "Exibir notificação quando um membro se _junta"
 
 #: ../src/TextStrings.cs:533
 msgid "Display notification when a member _leaves"
@@ -626,7 +626,7 @@ msgstr "Exibir notificação quando um membro se _conecta"
 
 #: ../src/TextStrings.cs:535
 msgid "Display notification when a member goes o_ffline"
-msgstr "Exibir notificação quando um membro de d_esconecta"
+msgstr "Exibir notificação quando um membro se d_esconecta"
 
 #: ../src/TextStrings.cs:537
 msgid "Error connecting"
@@ -790,6 +790,27 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} saiu da rede {1} e de {2} outra rede"
 msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Sair da rede '{0}'?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Você tem certeza que deseja remover a rede '{0}'?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Você tem certeza que quer sair da rede '{0}'?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Remover rede '{0}'?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Falha ao remover a rede '{0}'"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "falha ao sair da rede '{0}'"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Você não é o dono da rede '{0}'."
+
 #~ msgid "Loading configuration failed"
 #~ msgstr "falha ao carregar configuração"
 
@@ -814,3 +835,16 @@ msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
 #~ msgstr "O Hamachi não pode iniciar porque falhou ao ler as configurações."
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Falha ao expulsar o membro '{0}'"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Expulsar o membro '{0}'?"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Tem certeza que quer expulsar o membro '{0}'\n"
+#~ "da rede '{1}'?"
