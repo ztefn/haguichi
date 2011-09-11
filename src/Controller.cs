@@ -298,20 +298,8 @@ public static class Controller
         
         string output = startOutput;
         
-        if ( ( output.Contains ( ".. ok" ) ) ||
-             ( output == "empty" ) ||
-             ( output.Contains ( "Hamachi is already started" ) ) )
-        {
-            /* Ok, started */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
-            
-            Application.Invoke ( delegate
-            {
-                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
-            });
-            GoLoginThread ();
-        }
-        else if ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
+        if ( ( Hamachi.ApiVersion > 1 ) &&
+             ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) ) )
         {
             /* Hamachi is starting */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is starting." );
@@ -341,6 +329,20 @@ public static class Controller
                 });
             }
         }
+        else if ( ( Hamachi.ApiVersion == 1 ) &&
+                  ( ( output.Contains ( ".. ok" ) ) ||
+                    ( output == "" ) ||
+                    ( output.Contains ( "Hamachi is already started" ) ) ) )
+        {
+            /* Ok, started */
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
+            
+            Application.Invoke ( delegate
+            {
+                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
+            });
+            GoLoginThread ();
+        }
         else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
                   ( numTuncfgRuns == 0 ) )
         {
@@ -364,7 +366,7 @@ public static class Controller
                 GlobalEvents.ConnectionStopped ();
             });
         }
-        else
+        else if ( output != "" )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason, showing output." );
             
@@ -376,6 +378,13 @@ public static class Controller
                                       TextStrings.errorUnknown,
                                       "Error",
                                       output );
+            });
+        }
+        else
+        {
+            Application.Invoke ( delegate
+            {
+                GlobalEvents.ConnectionStopped ();
             });
         }
         
