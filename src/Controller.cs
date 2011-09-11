@@ -321,7 +321,7 @@ public static class Controller
             }
             else
             {
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Still not finished started, stopping now." );
+                Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Still not finished starting, stopping now." );
                 
                 Application.Invoke ( delegate
                 {
@@ -382,6 +382,8 @@ public static class Controller
         }
         else
         {
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason, no output to show." );
+            
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
