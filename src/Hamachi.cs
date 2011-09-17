@@ -348,8 +348,8 @@ public static class Hamachi
             {
                 string rawOuput = Retrieve ( lastInfo, "address" );
                 
-                Regex regex = new Regex ( "(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
-                output = regex.Match ( rawOuput ).Groups["address"].ToString ();
+                Regex regex = new Regex ( "(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
+                output = regex.Match ( rawOuput ).Groups["ipv4"].ToString ();
             }
             catch {}
         }
@@ -691,13 +691,13 @@ public static class Hamachi
         if ( Hamachi.ApiVersion > 1 )
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
         else
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<address>[0-9" + Regex.Escape (".") + "]{7,15})([ ]+)(?<name>.*?)([ ]*)(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})([ ]+)(?<name>.*?)([ ]*)(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
             unapprovedMemberRegex = new Regex ( "" );
         }
         
@@ -764,10 +764,10 @@ public static class Hamachi
                     }
                     else
                     {
-                        client = normalMemberRegex.Match ( s ).Groups["address"].ToString ();
+                        client = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
                     }
                     
-                    string address = normalMemberRegex.Match ( s ).Groups["address"].ToString ();
+                    string address = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
                     string nick = normalMemberRegex.Match ( s ).Groups["name"].ToString ();
                     
                     if ( ( nick == "" ) ||
