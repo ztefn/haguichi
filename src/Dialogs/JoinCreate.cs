@@ -264,6 +264,9 @@ namespace Dialogs
                     Controller.UpdateConnection (); // Update list
                 });
                 
+                Thread.Sleep ( 2000 );
+                Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
+                
                 return;
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
@@ -383,6 +386,10 @@ namespace Dialogs
                     Dismiss ();
                     Controller.UpdateConnection (); // Update list
                 });
+                
+                Thread.Sleep ( 2000 );
+                Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
+                
                 return;
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )

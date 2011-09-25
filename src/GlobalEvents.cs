@@ -189,8 +189,7 @@ public class GlobalEvents
     private static void SetNickAfterLoginThread ()
     {
         
-        string nick = ( string ) Config.Client.Get ( Config.Settings.Nickname );
-        Hamachi.SetNick ( nick );
+        Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) );
         
     }
     
