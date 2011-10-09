@@ -20,6 +20,7 @@
 using System;
 using System.Collections;
 using Gtk;
+using GLib;
 using Mono.Unix;
 
     
@@ -48,27 +49,33 @@ public class CommandsEditor : VBox
     private int iconPixColumn;
     private int iconStringColumn;
     private int labelColumn;
-    private int commandColumn;
+    private int commandIPv4Column;
+    private int commandIPv6Column;
+    private int priorityColumn;
     private int viewColumn;
     
     
     public CommandsEditor ()
     {
         
-        activeColumn     = 0;
-        defaultColumn    = 1;
-        iconPixColumn    = 2;
-        iconStringColumn = 3;
-        labelColumn      = 4;
-        commandColumn    = 5;
-        viewColumn       = 6;
+        activeColumn      = 0;
+        defaultColumn     = 1;
+        iconPixColumn     = 2;
+        iconStringColumn  = 3;
+        labelColumn       = 4;
+        commandIPv4Column = 5;
+        commandIPv6Column = 6;
+        priorityColumn    = 7;
+        viewColumn        = 8;
         
         store = new ListStore ( typeof ( bool       ),     // Active
                                 typeof ( bool       ),     // Default
                                 typeof ( Gdk.Pixbuf ),     // Icon (pixbuf)
                                 typeof ( string     ),     // Icon (string)
                                 typeof ( string     ),     // Label
-                                typeof ( string     ),     // Command
+                                typeof ( string     ),     // IPv4 command
+                                typeof ( string     ),     // IPv6 command
+                                typeof ( string     ),     // Priority
                                 typeof ( string     ) );   // View
 
         tv = new TreeView (store);
@@ -346,7 +353,7 @@ public class CommandsEditor : VBox
     }
     
     
-    public void UpdateSelectedCommand ( string icon, string label, string command )
+    public void UpdateSelectedCommand ( string icon, string label, string commandIPv4, string commandIPv6, string priority )
     {
         
         TreeIter selected;
@@ -356,11 +363,13 @@ public class CommandsEditor : VBox
         {
             Gdk.Pixbuf pix = GetIconPixbuf ( icon );
             
-            store.SetValue ( selected, iconPixColumn,    pix     );
-            store.SetValue ( selected, iconStringColumn, icon    );
-            store.SetValue ( selected, labelColumn,      label   );
-            store.SetValue ( selected, commandColumn,    command );
-            store.SetValue ( selected, viewColumn,       label   );
+            store.SetValue ( selected, iconPixColumn,     pix         );
+            store.SetValue ( selected, iconStringColumn,  icon        );
+            store.SetValue ( selected, labelColumn,       label       );
+            store.SetValue ( selected, commandIPv4Column, commandIPv4 );
+            store.SetValue ( selected, commandIPv6Column, commandIPv6 );
+            store.SetValue ( selected, priorityColumn,    priority    );
+            store.SetValue ( selected, viewColumn,        label       );
         }
         
         UpdateCommands ();
@@ -368,10 +377,10 @@ public class CommandsEditor : VBox
     }
     
     
-    public void InsertCommand ( string icon, string label, string command )
+    public void InsertCommand ( string icon, string label, string commandIPv4, string commandIPv6, string priority )
     {
         
-        store.AppendValues ( true, false, GetIconPixbuf ( icon ), icon, label, command, Catalog.GetString ( label ) );
+        store.AppendValues ( true, false, GetIconPixbuf ( icon ), icon, label, commandIPv4, commandIPv6, priority, Catalog.GetString ( label ) );
         
         UpdateCommands ();
         
@@ -417,11 +426,13 @@ public class CommandsEditor : VBox
         
         if ( tv.Selection.GetSelected ( out model, out selected ) )
         {
-            string icon    = ( string ) store.GetValue ( selected, iconStringColumn );
-            string label   = ( string ) store.GetValue ( selected, viewColumn       );
-            string command = ( string ) store.GetValue ( selected, commandColumn    );
+            string icon        = ( string ) store.GetValue ( selected, iconStringColumn  );
+            string label       = ( string ) store.GetValue ( selected, viewColumn        );
+            string commandIPv4 = ( string ) store.GetValue ( selected, commandIPv4Column );
+            string commandIPv6 = ( string ) store.GetValue ( selected, commandIPv6Column );
+            string priority    = ( string ) store.GetValue ( selected, priorityColumn    );
             
-            new Dialogs.AddEditCommand ( "Edit", this, icon, label, command );
+            new Dialogs.AddEditCommand ( "Edit", this, icon, label, commandIPv4, commandIPv6, priority );
         }
         
     }
@@ -430,7 +441,7 @@ public class CommandsEditor : VBox
     private void AddCommand ( object o, EventArgs args )
     {
         
-        new Dialogs.AddEditCommand ( "Add", this, "none", "", "" );   
+        new Dialogs.AddEditCommand ( "Add", this, "none", "", "", "", "IPv4" );   
         
     }
     
@@ -455,12 +466,10 @@ public class CommandsEditor : VBox
         
         foreach ( string c in commands )
         {
+            string [] cArray = c.Split ( new char [] { ';' }, 7 );
             
-            string [] cArray = c.Split ( new char [] { ';' }, 5 );
-            
-            if ( cArray.GetLength ( 0 ) == 5 )
+            if ( cArray.GetLength ( 0 ) >= 5 )
             {
-                
                 bool isActive = false;
                 if ( cArray [0] == "true" )
                 {
@@ -473,15 +482,45 @@ public class CommandsEditor : VBox
                     isDefault = true;
                 }
                 
+                string commandIPv4 = cArray [4];
+                string commandIPv6 = "";
+                string priority    = "";
+                
+                if ( cArray.GetLength ( 0 ) == 5 )
+                {
+                    if ( cArray [4] == "nautilus smb://%A/" )
+                    {
+                        commandIPv6 = "nautilus smb://[%A]/";
+                    }
+                    if ( cArray [4] == "vinagre %A" )
+                    {
+                        commandIPv6 = "vinagre [%A]";
+                    }
+                    if ( cArray [4] == "gnome-terminal -x ping %A" )
+                    {
+                        commandIPv6 = "gnome-terminal -x ping6 %A";
+                    }
+                    priority = "IPv4";
+                }
+                else if ( cArray.GetLength ( 0 ) == 7 )
+                {
+                    commandIPv6 = cArray [5];
+                    priority    = cArray [6];
+                }
+                
+                commandIPv4 = commandIPv4.Replace ( "{COLON}", ";" );
+                commandIPv6 = commandIPv6.Replace ( "{COLON}", ";" );
+                
                 store.AppendValues ( isActive,
                                      isDefault,
                                      GetIconPixbuf ( cArray [2] ),
                                      cArray [2],
                                      cArray [3],
-                                     cArray [4],
+                                     commandIPv4,
+                                     commandIPv6,
+                                     priority,
                                      Catalog.GetString ( cArray [3] ) );
             }
-
         }
         
     }
@@ -573,11 +612,16 @@ public class CommandsEditor : VBox
             isDefault = "true";
         }
         
-        string icon    = ( string ) store.GetValue ( iter, iconStringColumn );
-        string label   = ( string ) store.GetValue ( iter, labelColumn      );
-        string command = ( string ) store.GetValue ( iter, commandColumn    );
+        string icon        = ( string ) store.GetValue ( iter, iconStringColumn  );
+        string label       = ( string ) store.GetValue ( iter, labelColumn       );
+        string commandIPv4 = ( string ) store.GetValue ( iter, commandIPv4Column );
+        string commandIPv6 = ( string ) store.GetValue ( iter, commandIPv6Column );
+        string priority    = ( string ) store.GetValue ( iter, priorityColumn    );
         
-        return isActive + ";" + isDefault + ";" + icon + ";" + label + ";" + command;
+        commandIPv4 = commandIPv4.Replace ( ";", "{COLON}" );
+        commandIPv6 = commandIPv6.Replace ( ";", "{COLON}" );
+        
+        return isActive + ";" + isDefault + ";" + icon + ";" + label + ";" + commandIPv4 + ";" + commandIPv6 + ";" + priority;
         
     }
     
@@ -605,15 +649,30 @@ public class CommandsEditor : VBox
             textCell.ForegroundGdk = lightTxtColor;
         }
         
-        string title   = ( string ) model.GetValue ( iter, viewColumn );
+        string title = ( string ) model.GetValue ( iter, viewColumn );
         title = title.Replace ( "_", "" );
         
-        string command = ( string ) model.GetValue ( iter, commandColumn );
-        command = command.Replace ( "%N",  "Nick"          );
-        command = command.Replace ( "%A",  "5.123.456.789" );
-        command = command.Replace ( "%ID", "090-123-456"   );
+        string command = "";
+        string priority = ( string ) model.GetValue ( iter, priorityColumn );
         
-        textCell.Markup = String.Format ( "<b>{0}</b>{1}\n<span size=\"smaller\">{2}</span>", title, isDefault, command );
+        if ( priority == "IPv4" )
+        {
+            command = ( string ) model.GetValue ( iter, commandIPv4Column );
+            command = command.Replace ( "%A", "5.123.456.789" );
+        }
+        if ( priority == "IPv6" )
+        {
+            command = ( string ) model.GetValue ( iter, commandIPv6Column );
+            command = command.Replace ( "%A", "2620:9b::56d:f78e" );
+        }
+        
+        command = command.Replace ( "%N", "Nick" );
+        command = command.Replace ( "%ID", "090-123-456" );
+        
+        textCell.Markup = String.Format ( "<b>{0}</b>{1}\n<span size=\"smaller\">{2}</span>",
+                                          Markup.EscapeText ( title ),
+                                          isDefault,
+                                          Markup.EscapeText ( command ) );
         
     }
     

@@ -38,6 +38,9 @@ namespace Dialogs
         private Label addressLabel;
         private Label addressEntry;
         
+        private Label addressLabel2;
+        private Label addressEntry2;
+        
         private Label idLabel;
         private Label idEntry;
         
@@ -96,10 +99,21 @@ namespace Dialogs
             addressEntry.Xpad = 4;
             addressEntry.Selectable = true;
             
-            addressLabel = new Label ( Utilities.RemoveColons ( TextStrings.address ) + "  " );
+            addressLabel = new Label ();
             addressLabel.Xalign = 1;
             addressLabel.Ypad = 4;
             addressLabel.ModifyFg ( StateType.Normal, labelColor );
+            
+            
+            addressEntry2 = new Label ();
+            addressEntry2.Xalign = 0;
+            addressEntry2.Xpad = 4;
+            addressEntry2.Selectable = true;
+            
+            addressLabel2 = new Label ();
+            addressLabel2.Xalign = 1;
+            addressLabel2.Ypad = 4;
+            addressLabel2.ModifyFg ( StateType.Normal, labelColor );
             
             
             idEntry = new Label ();
@@ -135,17 +149,19 @@ namespace Dialogs
             nickLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
-            Table table = new Table ( 6, 2, false );
-            table.Attach ( versionLabel, 0, 1, 0, 1 );
-            table.Attach ( versionEntry, 1, 2, 0, 1 );
-            table.Attach ( addressLabel, 0, 1, 1, 2 );
-            table.Attach ( addressEntry, 1, 2, 1, 2 );
-            table.Attach ( idLabel, 0, 1, 2, 3 );
-            table.Attach ( idEntry, 1, 2, 2, 3 );
-            table.Attach ( accountLabel , 0, 1, 3, 4 );
-            table.Attach ( accountEntry , 1, 2, 3, 4 );
-            table.Attach ( nickLabel , 0, 1, 4, 5 );
-            table.Attach ( nickEntry , 1, 2, 4, 5 );
+            Table table = new Table ( 7, 2, false );
+            table.Attach ( versionLabel,  0, 1, 0, 1 );
+            table.Attach ( versionEntry,  1, 2, 0, 1 );
+            table.Attach ( idLabel,       0, 1, 1, 2 );
+            table.Attach ( idEntry,       1, 2, 1, 2 );
+            table.Attach ( accountLabel,  0, 1, 2, 3 );
+            table.Attach ( accountEntry,  1, 2, 2, 3 );
+            table.Attach ( nickLabel,     0, 1, 3, 4 );
+            table.Attach ( nickEntry,     1, 2, 3, 4 );
+            table.Attach ( addressLabel,  0, 1, 4, 5 );
+            table.Attach ( addressEntry,  1, 2, 4, 5 );
+            table.Attach ( addressLabel2, 0, 1, 5, 6 );
+            table.Attach ( addressEntry2, 1, 2, 5, 6 );
             
             
             HBox hbox = new HBox ();
@@ -242,14 +258,53 @@ namespace Dialogs
         public void SetAddress ()
         {
             
-            string address = Hamachi.GetAddress ();
+            string [] address = Hamachi.GetAddress ();
+            string ipv4 = address [0];
+            string ipv6 = address [1];
             
-            if ( address == "" )
+            if ( ipv4 == "" )
             {
-                address = "<i>" + TextStrings.unavailable + "</i>";
+                ipv4 = "<i>" + TextStrings.unavailable + "</i>";
+            }
+            if ( ipv6 == "" )
+            {
+                ipv6 = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            addressEntry.Markup = address;
+            if ( Hamachi.IpVersion == "Both" )
+            {
+                addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
+                addressEntry.Markup = ipv4;
+                
+                addressLabel2.Text = Utilities.RemoveColons ( TextStrings.addressIPv6 ) + "  ";
+                addressEntry2.Markup = ipv6;
+                
+                addressLabel2.Show ();
+                addressEntry2.Show ();
+            }
+            else
+            {
+                addressLabel2.Hide ();
+                addressEntry2.Hide ();
+                
+                if ( Hamachi.IpVersion == "IPv4" )
+                {
+                    if ( Hamachi.ApiVersion <= 2 )
+                    {
+                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.address ) + "  ";
+                    }
+                    else
+                    {
+                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
+                    }
+                    addressEntry.Markup = ipv4;
+                }
+                if ( Hamachi.IpVersion == "IPv6" )
+                {
+                    addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv6 ) + "  ";
+                    addressEntry.Markup = ipv6;
+                }
+            }
             
         }
         

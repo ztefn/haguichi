@@ -45,6 +45,7 @@ namespace Windows
         public  CheckButton notifyOnMemberOnline;
         public  CheckButton notifyOnMemberOffline;
         
+        public  ComboBox ipCombo;
         public  FileChooserButton pathButton;
         public  SpinButton intervalSpin;
         
@@ -154,6 +155,27 @@ namespace Windows
             
             commandsEditor = new CommandsEditor ();
             
+            ipCombo = new ComboBox ( new string [] { TextStrings.protocolBoth, TextStrings.protocolIPv4, TextStrings.protocolIPv6 } );
+            ipCombo.Active = ( int ) Utilities.ProtocolToInt ( ( string ) Config.Client.Get ( Config.Settings.Protocol ) );
+            ipCombo.Changed += delegate
+            {
+                Config.Client.Set ( Config.Settings.Protocol, Utilities.ProtocolToString ( ipCombo.Active ) );            
+            };
+            
+            Label ipLabel = new Label ();
+            ipLabel.TextWithMnemonic = TextStrings.protocolLabel + "  ";
+            ipLabel.MnemonicWidget = ipCombo;
+            
+            HBox ipBox = new HBox ();
+            ipBox.Add ( ipLabel );
+            ipBox.Add ( ipCombo );
+            
+            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( ipBox [ ipLabel ] ) );
+            bc3.Expand = false;
+            
+            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( ipBox [ ipCombo ] ) );
+            bc4.Expand = false;
+            
             pathButton = new FileChooserButton ( TextStrings.chooseFolderTitle, FileChooserAction.SelectFolder );
             pathButton.SelectionChanged += delegate
             {
@@ -174,6 +196,7 @@ namespace Windows
             bc5.Expand = false;
             
             GroupBox hamachiBox = new GroupBox ( "Hamachi" );
+            hamachiBox.AddWidget ( ipBox );
             hamachiBox.AddWidget ( pathBox );
             
             connectOnStartup = new CheckButton ( TextStrings.connectOnStartup );
@@ -266,9 +289,17 @@ namespace Windows
             this.Add ( vbox );
             vbox.ShowAll ();
             
-            if ( Hamachi.ApiVersion != 1 )
+            if ( Hamachi.ApiVersion == 1 )
+            {
+                ipBox.Hide ();
+            }
+            else if ( Hamachi.ApiVersion == 2 )
             {
                 hamachiBox.Hide ();
+            }
+            else if ( Hamachi.ApiVersion >= 3 )
+            {
+                pathBox.Hide ();
             }
             
         }

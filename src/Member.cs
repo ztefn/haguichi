@@ -27,7 +27,8 @@ public class Member
 
     public Status Status;
     public string Network;
-    public string Address;
+    public string IPv4;
+    public string IPv6;
     public string Nick;
     public string ClientId;
     public string Tunnel;
@@ -38,12 +39,13 @@ public class Member
     public bool IsEvicted;
     
     
-    public Member ( Status status, string network, string address, string nick, string client, string tunnel )
+    public Member ( Status status, string network, string ipv4, string ipv6, string nick, string client, string tunnel )
     {
         
         this.Status   = status;
         this.Network  = network;
-        this.Address  = address;
+        this.IPv4     = ipv4;
+        this.IPv6     = ipv6;
         this.Nick     = nick;
         this.ClientId = client;
         this.Tunnel   = tunnel;
@@ -55,12 +57,13 @@ public class Member
     }
     
     
-    public void Update ( Status status, string network, string address, string nick, string client, string tunnel )
+    public void Update ( Status status, string network, string ipv4, string ipv6, string nick, string client, string tunnel )
     {
         
         this.Status   = status;
         this.Network  = network;
-        this.Address  = address;
+        this.IPv4     = ipv4;
+        this.IPv6     = ipv6;
         this.ClientId = client;
         this.Tunnel   = tunnel;
         
@@ -108,11 +111,20 @@ public class Member
     }
     
     
-    public void CopyAddressToClipboard ( object o, EventArgs args )
+    public void CopyIPv4ToClipboard ( object o, EventArgs args )
     {
         
         Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
-        clip.Text = this.Address;
+        clip.Text = this.IPv4;
+        
+    }
+    
+    
+    public void CopyIPv6ToClipboard ( object o, EventArgs args )
+    {
+        
+        Clipboard clip = Clipboard.Get ( Gdk.Atom.Intern( "CLIPBOARD", true ) );
+        clip.Text = this.IPv6;
         
     }
     
@@ -132,7 +144,7 @@ public class Member
         if ( Config.Settings.DemoMode )
         {
             this.Nick    = "Nick";
-            this.Address = "5.092.112.049";
+            this.IPv4    = "5.092.112.049";
             this.Status  = new Status ( "*" );
         
             SetSortStrings ();

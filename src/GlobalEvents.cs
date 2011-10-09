@@ -102,18 +102,34 @@ public class GlobalEvents
         
         MainWindow.SetMode ( "Connected" );
         
+        Thread thread = new Thread ( SetNickAfterLoginThread );
+        thread.Start ();
+        
+        ConnectionUpdated ();
+        
+        string protocol = ( string ) Config.Client.Get ( Config.Settings.Protocol );
+        
+        if ( ( Hamachi.ApiVersion >= 3 ) &&
+             ( Hamachi.IpVersion.ToLower () != protocol ) )
+        {
+            UpdateProtocol ( protocol );
+        }
+        
+        Controller.restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+        Controller.numUpdateCycles ++;
+        Controller.UpdateCycle ();
+        
+    }
+    
+    
+    public static void ConnectionUpdated ()
+    {
+        
         SetAttach ();
         
         Haguichi.informationWindow.SetVersion ();
         Haguichi.informationWindow.SetAddress ();
         Haguichi.informationWindow.SetClientId ();
-        
-        Thread thread = new Thread ( SetNickAfterLoginThread );
-        thread.Start ();
-        
-        Controller.restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
-        Controller.numUpdateCycles ++;
-        Controller.UpdateCycle ();
         
     }
     
@@ -189,6 +205,7 @@ public class GlobalEvents
     private static void SetNickAfterLoginThread ()
     {
         
+        Thread.Sleep ( 2000 );
         Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) );
         
     }
@@ -250,6 +267,29 @@ public class GlobalEvents
         
         MainWindow.Show ();
         new Dialogs.ChangeNick ( TextStrings.changeNickTitle );
+        
+    }
+    
+    
+    public static void UpdateProtocol ( string protocol )
+    {
+        
+        if ( ( Controller.lastStatus >= 6 ) &&
+             ( Hamachi.ApiVersion >= 3 ) )
+        {
+            Haguichi.preferencesWindow.ipCombo.Active = ( int ) Utilities.ProtocolToInt ( protocol );
+            
+            Thread thread = new Thread ( UpdateProtocolThread );
+            thread.Start ();
+        }
+        
+    }
+    
+    
+    private static void UpdateProtocolThread ()
+    {
+        
+        Hamachi.SetProtocol ( ( string ) Config.Client.Get ( Config.Settings.Protocol ) );
         
     }
     

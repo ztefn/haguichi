@@ -291,14 +291,26 @@ public class NetworkView : TreeView
                 string tunnelString  = "";
                 string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
                 
-                if ( member.ClientId != member.Address )
+                if ( Hamachi.ApiVersion >= 2 )
                 {
                     clientString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.clientId, member.ClientId );
                 }
                 
-                if ( member.Address != "" )
+                if ( member.IPv4 != "" )
                 {
-                    addressString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.Address );
+                    if ( Hamachi.ApiVersion <= 2 )
+                    {
+                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.IPv4 );
+                    }
+                    else
+                    {
+                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv4, member.IPv4 );
+                    }
+                }
+                
+                if ( member.IPv6 != "" )
+                {
+                    addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv6, member.IPv6 );
                 }
                 
                 if ( member.Tunnel != "" )
@@ -717,8 +729,10 @@ public class NetworkView : TreeView
             template = template.Replace ( "%ID",  "{0}" );
             template = template.Replace ( "%N",   "{1}" );
             template = template.Replace ( "%A",   "{2}" );
-            template = template.Replace ( "%S",   "{3}" );
-            template = template.Replace ( "<br>", "{4}" );
+            template = template.Replace ( "%IP4", "{3}" );
+            template = template.Replace ( "%IP6", "{4}" );
+            template = template.Replace ( "%S",   "{5}" );
+            template = template.Replace ( "<br>", "{6}" );
             
             if ( network.OwnerId == member.ClientId )
             {
@@ -733,10 +747,27 @@ public class NetworkView : TreeView
                 template = template.Replace ( "%*_", "" );
             }
             
+            string address = "";
+            if ( ( member.IPv4 != "" ) &&
+                 ( member.IPv6 != "" ) )
+            {
+                address = member.IPv4 + " / " + member.IPv6;
+            }
+            else if ( member.IPv4 != "" )
+            {
+                address = member.IPv4;
+            }
+            else if ( member.IPv6 != "" )
+            {
+                address = member.IPv6;
+            }
+            
             textCell.Markup = String.Format ( template,
                                               member.ClientId,
                                               name,
-                                              member.Address,
+                                              address,
+                                              member.IPv4,
+                                              member.IPv6,
                                               member.Status.statusString,
                                               "\n" );
             
@@ -806,15 +837,11 @@ public class NetworkView : TreeView
         {
             if ( lastMember.Status.statusInt != 3 )
             {
-                string command = Command.ReturnDefault();
+                string [] command = Command.ReturnDefault ();
                 
-                if ( command != "" )
+                if ( command.GetLength ( 0 ) == 7 )
                 {
-                    command = command.Replace ( "%N",  lastMember.Nick     );
-                    command = command.Replace ( "%A",  lastMember.Address  );
-                    command = command.Replace ( "%ID", lastMember.ClientId );
-                    
-                    Command.Execute ( command );
+                    Command.Execute ( Command.ReturnCustom ( lastMember, command [4], command [5], command [6] ) );
                 }
             }
 

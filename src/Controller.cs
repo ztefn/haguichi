@@ -596,7 +596,6 @@ public static class Controller
     
         if ( lastStatus >= 6 )
         {
-            
             if ( Hamachi.ApiVersion == 1 )
             {
                 Hamachi.GetNicks ();
@@ -610,7 +609,7 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 UpdateList ();
-                GlobalEvents.SetAttach ();
+                GlobalEvents.ConnectionUpdated ();
             });
         }
         else
@@ -776,7 +775,7 @@ public static class Controller
                                 AddMemberToHash ( membersOfflineHash, nMember, oNetwork );
                             }
                             
-                            oMember.Update ( nMember.Status, nMember.Network, nMember.Address, nMember.Nick, nMember.ClientId, nMember.Tunnel );
+                            oMember.Update ( nMember.Status, nMember.Network, nMember.IPv4, nMember.IPv6, nMember.Nick, nMember.ClientId, nMember.Tunnel );
                             
                             MainWindow.networkView.UpdateMember ( oNetwork, oMember );
                         }

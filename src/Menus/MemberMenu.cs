@@ -32,7 +32,8 @@ namespace Menus
         private Network network;
         
         private ImageMenuItem copyId;
-        private ImageMenuItem copyAddress;
+        private ImageMenuItem copyIPv4;
+        private ImageMenuItem copyIPv6;
         private ImageMenuItem approve;
         private ImageMenuItem reject;
         private ImageMenuItem evict;
@@ -56,8 +57,18 @@ namespace Menus
             copyId = new ImageMenuItem ( TextStrings.copyClientIdLabel );
             copyId.Image = new Image ( Stock.Copy, IconSize.Menu );
             
-            copyAddress = new ImageMenuItem ( TextStrings.copyAddressLabel );
-            copyAddress.Image = new Image ( Stock.Copy, IconSize.Menu );
+            if ( Hamachi.ApiVersion <= 2 )
+            {
+                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressLabel );
+            }
+            else
+            {
+                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressIPv4Label );
+            }
+            copyIPv4.Image = new Image ( Stock.Copy, IconSize.Menu );
+            
+            copyIPv6 = new ImageMenuItem ( TextStrings.copyAddressIPv6Label );
+            copyIPv6.Image = new Image ( Stock.Copy, IconSize.Menu );
             
             evict = new ImageMenuItem ( TextStrings.evictLabel );
             
@@ -65,13 +76,14 @@ namespace Menus
             
             AddCustomCommands ();
             
-            this.Add ( approve );
-            this.Add ( reject );
-            this.Add ( separator1 );
-            this.Add ( copyAddress );
-            this.Add ( copyId );
-            this.Add ( separator2 );
-            this.Add ( evict );
+            this.Add ( approve     );
+            this.Add ( reject      );
+            this.Add ( separator1  );
+            this.Add ( copyIPv4    );
+            this.Add ( copyIPv6    );
+            this.Add ( copyId      );
+            this.Add ( separator2  );
+            this.Add ( evict       );
             
             this.ShowAll ();
             
@@ -96,15 +108,18 @@ namespace Menus
             foreach ( string c in commands )
             {
                 
-                string [] cArray = c.Split ( new char [] { ';' }, 5 );
+                string [] cArray = c.Split ( new char [] { ';' }, 7 );
                 
-                if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [0] == "true" ) )
+                if ( ( cArray.GetLength ( 0 ) == 7 ) &&
+                     ( cArray [0] == "true" ) )
                 {
-                    string icon    = cArray [2];
-                    string label   = cArray [3];
-                    string command = cArray [4];
+                    string icon        = cArray [2];
+                    string label       = cArray [3];
+                    string commandIPv4 = cArray [4];
+                    string commandIPv6 = cArray [5];
+                    string priority    = cArray [6];
                     
-                    CommandMenuItem custom = new Menus.CommandMenuItem ( icon, label, command );
+                    CommandMenuItem custom = new Menus.CommandMenuItem ( icon, label, commandIPv4, commandIPv6, priority );
                     
                     customItems.Add ( custom );
                     
@@ -145,10 +160,11 @@ namespace Menus
             if ( member != null )
             {
                 copyId.Activated      -= new EventHandler ( member.CopyClientIdToClipboard );
-                copyAddress.Activated -= new EventHandler ( member.CopyAddressToClipboard );
-                approve.Activated     -= new EventHandler ( member.Approve );
-                reject.Activated      -= new EventHandler ( member.Reject );
-                evict.Activated       -= new EventHandler ( member.Evict );
+                copyIPv4.Activated    -= new EventHandler ( member.CopyIPv4ToClipboard     );
+                copyIPv6.Activated    -= new EventHandler ( member.CopyIPv6ToClipboard     );
+                approve.Activated     -= new EventHandler ( member.Approve                 );
+                reject.Activated      -= new EventHandler ( member.Reject                  );
+                evict.Activated       -= new EventHandler ( member.Evict                   );
             }
 
             /* Set the new member */
@@ -168,29 +184,40 @@ namespace Menus
                 evict.Visible      = false;
             }
             
+            copyIPv4.Visible = false;
+            copyIPv6.Visible = false;
+            
             if ( member.Status.statusInt != 3 )
             {
                 ShowCustomCommands ();
                 
-                copyAddress.Visible = true;
-                approve.Visible     = false;
-                reject.Visible      = false;
+                if ( member.IPv4 != "" )
+                {
+                    copyIPv4.Visible = true;
+                }
+                if ( member.IPv6 != "" )
+                {
+                    copyIPv6.Visible = true;
+                }
+                
+                approve.Visible = false;
+                reject.Visible  = false;
             }
             else
             {
                 HideCustomCommands ();
                 
-                copyAddress.Visible = false;
                 approve.Visible     = true;
                 reject.Visible      = true;
             }
             
             /* Add event handlers for the new member */
             copyId.Activated      += new EventHandler ( member.CopyClientIdToClipboard );
-            copyAddress.Activated += new EventHandler ( member.CopyAddressToClipboard );
-            approve.Activated     += new EventHandler ( member.Approve );
-            reject.Activated      += new EventHandler ( member.Reject );
-            evict.Activated       += new EventHandler ( member.Evict );
+            copyIPv4.Activated    += new EventHandler ( member.CopyIPv4ToClipboard     );
+            copyIPv6.Activated    += new EventHandler ( member.CopyIPv6ToClipboard     );
+            approve.Activated     += new EventHandler ( member.Approve                 );
+            reject.Activated      += new EventHandler ( member.Reject                  );
+            evict.Activated       += new EventHandler ( member.Evict                   );
             
         }
         

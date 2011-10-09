@@ -68,6 +68,11 @@ namespace Config
                     GlobalEvents.UpdateNick ( ( string ) val );
                 }
                 
+                if ( key.Contains ( Config.Settings.Protocol.KeyName ) )
+                {
+                    GlobalEvents.UpdateProtocol ( ( string ) val );
+                }
+                
                 if ( key.Contains ( Config.Settings.HamachiDataPath.KeyName ) )
                 {
                     Haguichi.preferencesWindow.pathButton.SetCurrentFolder ( ( string ) val );

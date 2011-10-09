@@ -70,5 +70,55 @@ public static class Utilities
         return inString;
         
     }
-
+    
+    
+    public static string ProtocolToString ( int protocol )
+    {
+        
+        string output = "";
+        
+        switch ( protocol )
+        {
+            case 0:
+                output = "Both";
+                break;
+            
+            case 1:
+                output = "IPv4";
+                break;
+            
+            case 2:
+                output = "IPv6";
+                break;
+        }
+        
+        return output.ToLower ();
+        
+    }
+    
+    
+    public static int ProtocolToInt ( string protocol )
+    {
+        
+        int output = 0;
+        
+        switch ( protocol.ToLower () )
+        {
+            case "both":
+                output = 0;
+                break;
+            
+            case "ipv4":
+                output = 1;
+                break;
+            
+            case "ipv6":
+                output = 2;
+                break;
+        }
+        
+        return output;
+        
+    }
+    
 }

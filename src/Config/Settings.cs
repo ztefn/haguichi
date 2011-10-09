@@ -36,9 +36,9 @@ namespace Config
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
         
-        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
-                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A",
-                                                                "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A" };
+        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/;nautilus smb://[%A]/;IPv4",
+                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A;vinagre [%A];IPv4",
+                                                                "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A;gnome-terminal -x ping6 %A;IPv4" };
         
         public static string [] SessionDefaultCommands;
         
@@ -51,6 +51,7 @@ namespace Config
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
         public static Key CommandForTunCfg                  = new Key ( "commands/tuncfg", "/sbin/tuncfg" );
         public static Key Nickname                          = new Key ( "config/nickname", "" );
+        public static Key Protocol                          = new Key ( "config/protocol", "both" );
         public static Key HamachiDataPath                   = new Key ( "config/hamachi_data_path", DefaultHamachiDataPath );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 60.0 );
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
@@ -84,9 +85,9 @@ namespace Config
             
             if ( Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
             {
-                SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/",
-                                                         "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;krdc %A",
-                                                         "true;false;utilities-terminal;_Ping;konsole -e ping %A" };
+                SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/;dolphin smb://[%A]/;IPv4",
+                                                         "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;krdc %A;krdc [%A];IPv4",
+                                                         "true;false;utilities-terminal;_Ping;konsole -e ping %A;konsole -e ping6 %A;IPv4" };
                 
                 Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: KDE" );
             }

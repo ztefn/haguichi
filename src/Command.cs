@@ -228,25 +228,66 @@ public static class Command
     }
     
     
-    public static string ReturnDefault ()
+    public static string ReturnCustom ( Member member, string commandIPv4, string commandIPv6, string priority )
     {
         
         string command = "";
+        
+        if ( priority == "IPv4" )
+        {
+            if ( member.IPv4 != "" )
+            {
+                command = commandIPv4;
+                command = command.Replace ( "%A", member.IPv4 );
+            }
+            else
+            {
+                command = commandIPv6;
+                command = command.Replace ( "%A", member.IPv6 );
+            }
+        }
+        if ( priority == "IPv6" )
+        {
+            if ( member.IPv6 != "" )
+            {
+                command = commandIPv6;
+                command = command.Replace ( "%A", member.IPv6 );
+            }
+            else
+            {
+                command = commandIPv4;
+                command = command.Replace ( "%A", member.IPv4 );
+            }
+        }
+        
+        command = command.Replace ( "%N",  member.Nick     );
+        command = command.Replace ( "%ID", member.ClientId );
+        
+        command = command.Replace ( "{COLON}", ";" );
+        
+        return command;
+        
+    }
+    
+    
+    public static string [] ReturnDefault ()
+    {
+        
+        string [] command  = new string [] { "" };
         string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
         
         foreach ( string c in commands )
         {
+            string[] cArray = c.Split ( new char[] { ';' }, 7 );
             
-            string[] cArray = c.Split ( new char[] { ';' }, 5 );
-            
-            if ( ( cArray.GetLength ( 0 ) == 5 ) && ( cArray [ 1 ] == "true" ) )
+            if ( ( cArray.GetLength ( 0 ) == 7 ) && ( cArray [ 1 ] == "true" ) )
             {
-                command = cArray [ 4 ];
+                command = cArray;
             }
-
         }
         
         return command;
+        
     }
     
     

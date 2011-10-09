@@ -131,6 +131,8 @@ Türkçe (tr)
     public static string hamachiOutput;
     
     public static string address;
+    public static string addressIPv4;
+    public static string addressIPv6;
     public static string id;
     public static string clientId;
     public static string networkId;
@@ -202,6 +204,8 @@ Türkçe (tr)
     public static string rejectLabel;
     public static string evictLabel;
     public static string copyAddressLabel;
+    public static string copyAddressIPv4Label;
+    public static string copyAddressIPv6Label;
     public static string copyClientIdLabel;
     
     public static string changeLabel;
@@ -283,6 +287,11 @@ Türkçe (tr)
     public static string dataPathLabel;
     public static string chooseFolderTitle;
     
+    public static string protocolLabel;
+    public static string protocolBoth;
+    public static string protocolIPv4;
+    public static string protocolIPv6;
+    
     public static string updateLabel;
     public static string checkboxShowAlternatingRowColors;
     public static string layoutNormal;
@@ -325,9 +334,12 @@ Türkçe (tr)
     
     public static string addCommandTitle;
     public static string editCommandTitle;
-    public static string commandLabel;
     public static string labelLabel;
+    public static string commandLabel;
+    public static string commandIPv4Label;
+    public static string commandIPv6Label;
     public static string commandInfo;
+    public static string priorityLabel;
     
     public static string chooseIconTip;
     public static string chooseIconTitle;
@@ -361,6 +373,8 @@ Türkçe (tr)
         hamachiOutput                       = Catalog.GetString ( "_Hamachi output" );
         
         address                             = Catalog.GetString ( "Address:" );
+        addressIPv4                         = Catalog.GetString ( "IPv4 address:" );
+        addressIPv6                         = Catalog.GetString ( "IPv6 address:" );
         id                                  = Catalog.GetString ( "ID:" );
         clientId                            = Catalog.GetString ( "Client ID:" );
         networkId                           = Catalog.GetString ( "Network ID:" );
@@ -431,7 +445,9 @@ Türkçe (tr)
         approveLabel                        = Catalog.GetString ( "_Approve" );
         rejectLabel                         = Catalog.GetString ( "_Reject" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
-        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );
+        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );     
+        copyAddressIPv4Label                = Catalog.GetString ( "Copy IPv_4 Address" );
+        copyAddressIPv6Label                = Catalog.GetString ( "Copy IPv_6 Address" );
         copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
         
         changeLabel                         = Catalog.GetString ( "C_hange" );
@@ -513,6 +529,11 @@ Türkçe (tr)
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
         
+        protocolLabel                       = Catalog.GetString ( "Protocol:" );
+        protocolBoth                        = Catalog.GetString ( "Both IPv4 and IPv6" );
+        protocolIPv4                        = Catalog.GetString ( "IPv4 only" );
+        protocolIPv6                        = Catalog.GetString ( "IPv6 only" );
+        
         updateLabel                         = Catalog.GetString ( "_Update Network List" );
         checkboxShowAlternatingRowColors    = Catalog.GetString ( "Show Alt_ernating Row Colors" );
         layoutNormal                        = Catalog.GetString ( "_Compact Layout" );
@@ -555,9 +576,12 @@ Türkçe (tr)
         
         addCommandTitle                     = Catalog.GetString ( "Add Command" );
         editCommandTitle                    = Catalog.GetString ( "Edit Command" );
-        commandLabel                        = Catalog.GetString ( "_Command:" );
         labelLabel                          = Catalog.GetString ( "_Label:" );
+        commandLabel                        = Catalog.GetString ( "_Command:" );
+        commandIPv4Label                    = Catalog.GetString ( "IPv_4 command:" );
+        commandIPv6Label                    = Catalog.GetString ( "IPv_6 command:" );
         commandInfo                         = Catalog.GetString ( "Use %A for address and %N for nickname" );
+        priorityLabel                       = Catalog.GetString ( "_Priority:" );
         
         chooseIconTip                       = Catalog.GetString ( "Click to choose an icon" );
         chooseIconTitle                     = Catalog.GetString ( "Choose Icon" );

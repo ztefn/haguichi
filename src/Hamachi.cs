@@ -28,6 +28,7 @@ public static class Hamachi
 {
     
     public  static int ApiVersion;
+    public  static string IpVersion = "IPv4";
     public  static string lastInfo;
     private static string ScriptDirectory;
     private static Random random;
@@ -46,32 +47,20 @@ public static class Hamachi
     public static int DetermineApiVersion ()
     {
         
-        /*
+        /* 
          *  <= 0.9.9.9-20 : 1
          *  >= 2.0.0.11   : 2
-         * 
-         *  Returns version string for all Hamachi versions if started 1 2
-         * 
-         *  1. Not installed                                                                                    0
-         * 
-         *  2. Not configured:
-         *     a. Cannot find configuration directory /home/stephen/.hamachi. Have you run 'hamachi-init' ?     1
-         * 
-         *  3. Not started:
-         *     a. Hamachi does not seem to be running. Have you run 'hamachi start' ?                           1
-         * 
-         *     b. Hamachi does not seem to be running.                                                          2
-         *        Run '/etc/init.d/logmein-hamachi start' to start daemon.
-         * 
+         *  >= 2.1.0.17   : 3
          * 
          */
         
         if ( Config.Settings.DemoMode )
         {
-            return 2;
+            return 3;
         }
         
-        string output = lastInfo;
+        string output = Command.ReturnOutput ( "hamachi", "-h" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineApiVersion", output );
         
         if ( ( output == "timeout" ) ||
              ( output == "error" ) ) // 'bash: hamachi: command not found' causes exception
@@ -80,38 +69,26 @@ public static class Hamachi
             return 0;
         }
         
-        if ( ( output.Contains ( "Have you run 'hamachi-init' ?" ) ) ||
-             ( output.Contains ( "Have you run 'hamachi start' ?" ) ) ||
-             ( output.Contains ( "hamachi-lnx-0.9.9.9" ) ) )
+        if ( output.StartsWith ( "LogMeIn Hamachi, a zero-config virtual private networking utility" ) )
         {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
-            return 1;
-        }
-        
-        if ( ( output.Contains ( "Run '/etc/init.d/logmein-hamachi start' to start daemon." ) ) ||
-             ( output.Contains ( "You do not have permission to control the hamachid daemon." ) ) )
-        {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
-            return 2;
-        }
-        
-        try
-        {
-            Regex regex = new Regex ( "version([ ]+):([ ]+)(.+)" );
-            Version version = new Version ( regex.Match ( output ).Groups[3].ToString () );
-            
-            if ( version.Major == 0 )
+            if ( output.Contains ( "set-ip-mode" ) )
             {
-                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
-                return 1;
+                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "3" );
+                return 3;
             }
-            if ( version.Major >= 2 )
+            else
             {
                 Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "2" );
                 return 2;
             }
         }
-        catch {}
+        
+        if ( ( output.StartsWith ( "Hamachi, a zero-config virtual private networking utility" ) ) ||
+             ( output == "" ) )
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "1" );
+            return 1;
+        }
         
         Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "-1" );
         return -1;
@@ -172,7 +149,7 @@ public static class Hamachi
     {
         
         Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(.+)" );
-            
+        
         return regex.Match ( output ).Groups[3].ToString ();
         
     }
@@ -332,24 +309,51 @@ public static class Hamachi
     }
     
     
-    public static string GetAddress ()
+    public static string [] GetAddress ()
     {
         
         if ( Config.Settings.DemoMode )
         {
-            return "5.123.456.789";
+            IpVersion = "Both";
+            return new string [] { "5.123.456.789", "2620:9b::56d:f78e" };
         }
         
-        string output = "";
+        string [] output = new string [] { "", "" };
         
-        if ( Hamachi.ApiVersion > 1 )
+        if ( Hamachi.ApiVersion >= 3 )
         {
             try
             {
                 string rawOuput = Retrieve ( lastInfo, "address" );
                 
                 Regex regex = new Regex ( "(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
-                output = regex.Match ( rawOuput ).Groups["ipv4"].ToString ();
+                string IPv4 = regex.Match ( rawOuput ).Groups["ipv4"].ToString ();
+                string IPv6 = regex.Match ( rawOuput ).Groups["ipv6"].ToString ();
+                
+                if ( ( IPv4 != "" ) &&
+                     ( IPv6 != "" ) )
+                {
+                    IpVersion = "Both";
+                }
+                else if ( IPv4 != "" )
+                {
+                    IpVersion = "IPv4";
+                }
+                else if ( IPv6 != "" )
+                {
+                    IpVersion = "IPv6";
+                }
+                
+                output [0] = IPv4;
+                output [1] = IPv6;
+            }
+            catch {}
+        }
+        else if ( Hamachi.ApiVersion == 2 )
+        {
+            try
+            {
+                output [0] = Retrieve ( lastInfo, "address" );
             }
             catch {}
         }
@@ -359,12 +363,13 @@ public static class Hamachi
             
             try
             {
-                output = Retrieve ( "cat", filePath, "Identity", 11 );
+                output [0] = Retrieve ( "cat", filePath, "Identity", 11 );
             }
             catch {}
         }
         
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAddress", output );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAddress", "IPv4: " + output [0] );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAddress", "IPv6: " + output [1] );
         
         return output;
         
@@ -513,7 +518,6 @@ public static class Hamachi
     {
         
         string output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( member.Network ) + "\" " + member.ClientId );
-        
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Evict", output );
 
         if ( output.Contains ( ".. failed, denied" ) )
@@ -568,7 +572,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            return "2.0.0.11";
+            return "2.1.0.17";
         }
         
         string output;
@@ -667,7 +671,7 @@ public static class Hamachi
             output  = " * [" + RandomNetworkId () + "]  Contributors               \n";
             output += "       " + RandomClientId () + "   Enrico                     " + RandomAddress () + "\n";
             output += "     x " + RandomClientId () + "   Holmen                     " + RandomAddress () + "\n";
-            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + "\n";
+            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + " 2620:9b::753:b470\n";
             output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
             output += "     ? " + RandomClientId () + " \n";
             output += " * [" + RandomNetworkId () + "]  Portal Ubuntu              \n";
@@ -691,7 +695,7 @@ public static class Hamachi
         if ( Hamachi.ApiVersion > 1 )
         {
             networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".:") + "]+)?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
         else
@@ -741,7 +745,7 @@ public static class Hamachi
                     string client = unapprovedMemberRegex.Match ( s ).Groups["id"].ToString ();
                     string nick   = TextStrings.unknown;
                     
-                    Member member = new Member ( status, curNetworkId, "", nick, client, "" );
+                    Member member = new Member ( status, curNetworkId, "", "", nick, client, "" );
                     
                     foreach ( Network network in networks )
                     {
@@ -767,7 +771,8 @@ public static class Hamachi
                         client = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
                     }
                     
-                    string address = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
+                    string ipv4 = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
+                    string ipv6 = normalMemberRegex.Match ( s ).Groups["ipv6"].ToString ();
                     string nick = normalMemberRegex.Match ( s ).Groups["name"].ToString ();
                     
                     if ( ( nick == "" ) ||
@@ -778,7 +783,7 @@ public static class Hamachi
                     
                     string tunnel = normalMemberRegex.Match ( s ).Groups["tunnel"].ToString ();
 
-                    Member member = new Member ( status, curNetworkId, address, nick, client, tunnel );
+                    Member member = new Member ( status, curNetworkId, ipv4, ipv6, nick, client, tunnel );
                     
                     foreach ( Network network in networks )
                     {
@@ -808,8 +813,23 @@ public static class Hamachi
              ( Controller.lastStatus >= 6 ) )
         {
             output = Command.ReturnOutput ( "hamachi", "set-nick \"" + Utilities.CleanString ( nick ) + "\"" );
-            
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetNick", output );
+        }
+        
+        return output;
+        
+    }
+    
+    
+    public static string SetProtocol ( string protocol )
+    {
+        
+        string output = "";
+        
+        if ( !Config.Settings.DemoMode )
+        {
+            output = Command.ReturnOutput ( "hamachi", "set-ip-mode \"" + protocol + "\"" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SetProtocol", output );
         }
         
         return output;
@@ -829,7 +849,6 @@ public static class Hamachi
         }
         
         output = Command.ReturnOutput ( "hamachi", command + " \"" + Utilities.CleanString ( accountId ) + "\"" );
-        
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Attach", output );
         
         return output;

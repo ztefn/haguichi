@@ -134,14 +134,14 @@ namespace Menus
             update.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F5, Gdk.ModifierType.None, AccelFlags.Visible ) );
             
             showStatusbar = new CheckMenuItem ( TextStrings.checkboxShowStatusbar );
-            showStatusbar.Active = (bool) Config.Client.Get ( Config.Settings.ShowStatusbar );
+            showStatusbar.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowStatusbar );
             showStatusbar.Toggled += delegate
             {
                 Config.Client.Set ( Config.Settings.ShowStatusbar, showStatusbar.Active );
             };
             
             showAlternatingRowColors = new CheckMenuItem ( TextStrings.checkboxShowAlternatingRowColors );
-            showAlternatingRowColors.Active = (bool) Config.Client.Get ( Config.Settings.ShowAlternatingRowColors );
+            showAlternatingRowColors.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowAlternatingRowColors );
             showAlternatingRowColors.Toggled += delegate
             {
                 Config.Client.Set ( Config.Settings.ShowAlternatingRowColors, showAlternatingRowColors.Active );
