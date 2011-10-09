@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 18:35:13+0200\n"
-"PO-Revision-Date: 2011-08-26 05:56+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31:05+0200\n"
+"PO-Revision-Date: 2011-10-09 20:13+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-08-26 17:04+0000\n"
-"X-Generator: Launchpad (build 13794)\n"
+"X-Launchpad-Export-Date: 2011-10-09 21:28+0000\n"
+"X-Generator: Launchpad (build 14110)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -57,14 +57,12 @@ msgid "Address:"
 msgstr "Adress:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Adress:"
+msgstr "IPv4-adress:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Adress:"
+msgstr "IPv6-adress:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -313,14 +311,12 @@ msgid "_Copy Address"
 msgstr "K_opiera adress"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "K_opiera adress"
+msgstr "Kopiera IPv_4-adress"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "K_opiera adress"
+msgstr "Kopiera IPv_6-adress"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -576,20 +572,20 @@ msgid "Choose Folder"
 msgstr "Välj mapp"
 
 #: ../src/TextStrings.cs:531
-msgid "Protocol:"
-msgstr ""
+msgid "_Protocol:"
+msgstr "_Protokoll:"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "Både IPv4 och IPv6"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "Endast IPv4"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "Endast IPv6"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -744,14 +740,12 @@ msgid "_Command:"
 msgstr "_Kommando:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Kommando:"
+msgstr "IPv_4-kommando:"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Kommando:"
+msgstr "IPv_6-kommando:"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -759,7 +753,7 @@ msgstr "Använd %A för adress och %N för smeknamn"
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Prioritet:"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -879,6 +873,37 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 #~ msgid "Not installed"
 #~ msgstr "Inte installerad"
 
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Lämna nätverket \"{0}\"?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Vill du verkligen ta bort nätverket \"{0}\"?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Ta bort nätverket \"{0}\"?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Det gick inte att ta bort nätverket \"{0}\""
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Vill du verkligen kasta ut medlemmen \"{0}\"\n"
+#~ "från nätverket \"{1}\"?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Det gick inte att lämna nätverket \"{0}\""
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Kasta ut medlemmen \"{0}\"?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Vill du verkligen lämna nätverket \"{0}\"?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Du är inte ägare av nätverket \"{0}\""
+
 #~ msgid "_Offline Members"
 #~ msgstr "_Frånkopplade användare"
 
@@ -913,3 +938,6 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tidsgräns för kommando (sekunder):"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Det gick inte att kasta ut medlemmen \"{0}\""

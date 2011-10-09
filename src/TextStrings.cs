@@ -529,7 +529,7 @@ Türkçe (tr)
         dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
         chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
         
-        protocolLabel                       = Catalog.GetString ( "Protocol:" );
+        protocolLabel                       = Catalog.GetString ( "_Protocol:" );
         protocolBoth                        = Catalog.GetString ( "Both IPv4 and IPv6" );
         protocolIPv4                        = Catalog.GetString ( "IPv4 only" );
         protocolIPv6                        = Catalog.GetString ( "IPv6 only" );

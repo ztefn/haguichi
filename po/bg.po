@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 18:35:13+0200\n"
+"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
 "PO-Revision-Date: 2011-08-26 13:56+0000\n"
 "Last-Translator: Dimitar Dimitrov <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -576,7 +576,7 @@ msgid "Choose Folder"
 msgstr "Избор на папка"
 
 #: ../src/TextStrings.cs:531
-msgid "Protocol:"
+msgid "_Protocol:"
 msgstr ""
 
 #: ../src/TextStrings.cs:532
