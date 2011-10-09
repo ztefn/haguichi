@@ -464,6 +464,8 @@ public class CommandsEditor : VBox
             commands = Config.Settings.SessionDefaultCommands;
         }
         
+        bool needsUpdate = false;
+        
         foreach ( string c in commands )
         {
             string [] cArray = c.Split ( new char [] { ';' }, 7 );
@@ -488,6 +490,8 @@ public class CommandsEditor : VBox
                 
                 if ( cArray.GetLength ( 0 ) == 5 )
                 {
+                    needsUpdate = true;
+                    
                     if ( cArray [4] == "nautilus smb://%A/" )
                     {
                         commandIPv6 = "nautilus smb://[%A]/";
@@ -521,6 +525,11 @@ public class CommandsEditor : VBox
                                      priority,
                                      Catalog.GetString ( cArray [3] ) );
             }
+        }
+        
+        if ( needsUpdate )
+        {
+            UpdateCommands ();
         }
         
     }
