@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-08-26 17:09+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-10 00:50+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-08-26 17:32+0000\n"
-"X-Generator: Launchpad (build 13794)\n"
+"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
+"X-Generator: Launchpad (build 14123)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -34,7 +34,7 @@ msgstr "インターネット越しのローカルネットワークを作った
 
 #: ../src/TextStrings.cs:365
 msgid "_Show Haguichi"
-msgstr "Haguichi を表示 (_S)"
+msgstr "Haguichi を表示(_S)"
 
 #: ../src/TextStrings.cs:367
 msgid "Yes"
@@ -50,21 +50,19 @@ msgstr "次に進むにはパスワードを入力してください。"
 
 #: ../src/TextStrings.cs:372
 msgid "_Hamachi output"
-msgstr "Hamachi からの出力 (_H)"
+msgstr "Hamachi からの出力(_H)"
 
 #: ../src/TextStrings.cs:374
 msgid "Address:"
 msgstr "アドレス:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "アドレス:"
+msgstr "IPv4 アドレス:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "アドレス:"
+msgstr "IPv6 アドレス:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -72,11 +70,11 @@ msgstr "ID:"
 
 #: ../src/TextStrings.cs:378
 msgid "Client ID:"
-msgstr "クライアント ID"
+msgstr "クライアント ID:"
 
 #: ../src/TextStrings.cs:379
 msgid "Network ID:"
-msgstr "ネットワーク ID"
+msgstr "ネットワーク ID:"
 
 #: ../src/TextStrings.cs:380
 msgid "Status:"
@@ -92,7 +90,7 @@ msgstr "匿名"
 
 #: ../src/TextStrings.cs:383
 msgid "_Nickname:"
-msgstr "ニックネーム (_N):"
+msgstr "ニックネーム(_N):"
 
 #: ../src/TextStrings.cs:385
 msgid "_Name:"
@@ -128,23 +126,23 @@ msgstr "切断しました"
 
 #: ../src/TextStrings.cs:394
 msgid "Connecting..."
-msgstr "接続中..."
+msgstr "接続しています..."
 
 #: ../src/TextStrings.cs:395
 msgid "Starting Hamachi..."
-msgstr "Hamachi 起動中..."
+msgstr "Hamachi を起動しています..."
 
 #: ../src/TextStrings.cs:396
 msgid "Logging in..."
-msgstr "ログイン中..."
+msgstr "ログインしています..."
 
 #: ../src/TextStrings.cs:397
 msgid "Running tuncfg..."
-msgstr "tuncfg 実行中..."
+msgstr "tuncfg を実行しています..."
 
 #: ../src/TextStrings.cs:398
 msgid "Updating..."
-msgstr "更新中..."
+msgstr "更新しています..."
 
 #. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:400
@@ -310,21 +308,19 @@ msgstr "登録抹消(_E)"
 
 #: ../src/TextStrings.cs:447
 msgid "_Copy Address"
-msgstr "アドレスのコピー(_C)"
+msgstr "アドレスをコピー(_C)"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "アドレスのコピー(_C)"
+msgstr "IPv4 アドレスをコピー(_4)"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "アドレスのコピー(_C)"
+msgstr "IPv6 アドレスをコピー(_6)"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
-msgstr "クライアント ID のコピー(_C)"
+msgstr "クライアント ID をコピー(_C)"
 
 #: ../src/TextStrings.cs:452
 msgid "C_hange"
@@ -332,7 +328,7 @@ msgstr "変更(_H)"
 
 #: ../src/TextStrings.cs:454
 msgid "Change _Nickname..."
-msgstr "ニックネームの変更... (_N)"
+msgstr "ニックネームを変更(_N)..."
 
 #: ../src/TextStrings.cs:455
 msgid "Change Nickname"
@@ -348,11 +344,11 @@ msgstr "クリックしてニックネームを変更"
 
 #: ../src/TextStrings.cs:459
 msgid "Change _Password..."
-msgstr "パスワード変更(_P)"
+msgstr "パスワードを変更(_P)"
 
 #: ../src/TextStrings.cs:460
 msgid "Change Password"
-msgstr "パスワード変更"
+msgstr "パスワードを変更"
 
 #: ../src/TextStrings.cs:461
 msgid "Please enter the new password for this network."
@@ -440,7 +436,7 @@ msgstr "ネットワークが見つかりません"
 
 #: ../src/TextStrings.cs:487
 msgid "Invalid password"
-msgstr "パスワードが正しくありません。"
+msgstr "パスワードが正しくありません"
 
 #: ../src/TextStrings.cs:488
 msgid "Network is full"
@@ -474,9 +470,7 @@ msgstr "参加リクエストを送信しますか？"
 msgid ""
 "This network requires manual approval of new members by the owner. Would you "
 "like to send a join request?"
-msgstr ""
-"このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参"
-"加リクエストを送信しますか？"
+msgstr "このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参加リクエストを送信しますか？"
 
 #: ../src/TextStrings.cs:497
 msgid "Join request sent"
@@ -559,11 +553,11 @@ msgstr "コマンド"
 
 #: ../src/TextStrings.cs:525
 msgid "Notification Area"
-msgstr "通知スペース"
+msgstr "通知エリア"
 
 #: ../src/TextStrings.cs:526
 msgid "Behavior"
-msgstr "挙動"
+msgstr "動作"
 
 #: ../src/TextStrings.cs:528
 msgid "_Account data folder:"
@@ -575,19 +569,19 @@ msgstr "フォルダを選択して下さい"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "プロトコル(_P):"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "IPv4 と IPv6 の両方"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "IPv4 のみ"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "IPv6 のみ"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -595,11 +589,11 @@ msgstr "ネットワーク一覧を更新(_U)"
 
 #: ../src/TextStrings.cs:537
 msgid "Show Alt_ernating Row Colors"
-msgstr "一行置きに色を変えて表示 (_E)"
+msgstr "一行置きに色を変えて表示(_E)"
 
 #: ../src/TextStrings.cs:538
 msgid "_Compact Layout"
-msgstr "コンパクトなレイアウト (_C)"
+msgstr "コンパクトなレイアウト(_C)"
 
 #: ../src/TextStrings.cs:539
 msgid "_Large Layout"
@@ -631,7 +625,7 @@ msgstr "通知エリア内で最小化して Haguichi を開始する(_M)"
 
 #: ../src/TextStrings.cs:548
 msgid "C_onnect automatically on startup"
-msgstr "起動と同時に自動で接続する(_C)"
+msgstr "起動時に自動で接続する(_C)"
 
 #: ../src/TextStrings.cs:549
 msgid "_Reconnect automatically when the connection is lost"
@@ -639,7 +633,7 @@ msgstr "接続が切れたら自動で再接続する(_R)"
 
 #: ../src/TextStrings.cs:550
 msgid "_Disconnect on quit"
-msgstr "停止する際に接続を切る(_D)"
+msgstr "終了時に接続を切る(_D)"
 
 #: ../src/TextStrings.cs:552
 msgid "Display notification when the connection is l_ost"
@@ -742,14 +736,12 @@ msgid "_Command:"
 msgstr "コマンド(_C):"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "コマンド(_C):"
+msgstr "IPv4 コマンド(_4):"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "コマンド(_C):"
+msgstr "IPv6 コマンド(_6):"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -757,7 +749,7 @@ msgstr "アドレスとして %A を使い、ニックネームとして %N を�
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "優先度(_P):"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -781,7 +773,7 @@ msgstr "既定(_D)"
 
 #: ../src/TextStrings.cs:592
 msgid "Restore the default commands"
-msgstr "コマンドを既定に戻す"
+msgstr "既定のコマンドに戻す"
 
 #: ../src/TextStrings.cs:593
 msgid "Revert changes?"
@@ -793,7 +785,7 @@ msgid ""
 "and thereby restore the default commands?"
 msgstr ""
 "本当にすべての変更を取り消し\n"
-"コマンドを既定に戻してしまっていいですか？"
+"既定コマンドに戻してしまっていいですか？"
 
 #: ../src/TextStrings.cs:596
 msgid "Move up"
@@ -806,21 +798,19 @@ msgstr "下へ"
 #: ../src/TextStrings.cs:605
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "%S 秒毎にネットワーク一覧をアップデート (_U)"
+msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:613
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:621
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:629
@@ -851,6 +841,35 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "Changing..."
 #~ msgstr "変更しています..."
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "'{0}' ネットワークの削除に失敗しました"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr "本当にメンバー '{0}' を登録から抹消していいですか？"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "'{0}' ネットワークから離脱しますか？"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "本当に '{0}' ネットワークを削除していいですか？"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "メンバー '{0}' を登録から抹消しますか？"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "'{0}' ネットワークを削除しますか？"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "本当に '{0}' ネットワークから離脱していいですか？"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "メンバー '{0}' の登録抹消失敗"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "あなたは '{0}' ネットワークの所有者ではありません。"
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "インターバルを更新する (秒単位) (_U):"
@@ -897,6 +916,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "tuncfg を実行する前に常に確認する(_A)"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "'{0}' ネットワークからの離脱に失敗"
 
 #~ msgid "A_sk confirmation before running tuncfg"
 #~ msgstr "tuncfg を実行する前に確認を求める(_S)"

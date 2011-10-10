@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-08-26 13:56+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-10 07:13+0000\n"
 "Last-Translator: Dimitar Dimitrov <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-08-26 17:04+0000\n"
-"X-Generator: Launchpad (build 13794)\n"
+"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
+"X-Generator: Launchpad (build 14123)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -57,14 +57,12 @@ msgid "Address:"
 msgstr "Адрес:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Адрес:"
+msgstr "IPv4 адрес:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Адрес:"
+msgstr "IPv6 адрес:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -313,14 +311,12 @@ msgid "_Copy Address"
 msgstr "_Копирай адреса"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Копирай адреса"
+msgstr "Копирай IPv_4 Адреса"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Копирай адреса"
+msgstr "Копирай IPv_6 Адреса"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -577,19 +573,19 @@ msgstr "Избор на папка"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Протокол:"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "IPv4 и IPv6"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "IPv4 само"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "IPv6 само"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -744,14 +740,12 @@ msgid "_Command:"
 msgstr "_Команда:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Команда:"
+msgstr "IPv_4 команда:"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Команда:"
+msgstr "IPv_6 команда:"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -759,7 +753,7 @@ msgstr "Използвай %A за адрес и %N за псевдоним"
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Приоритет:"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -839,6 +833,27 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} напусна мрежата {1} и {2} друга мрежа"
 msgstr[1] "{0} напусна мрежата {1} и {2} други мрежи"
 
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Сигурни ли сте че искате да изтриете мрежата '{0}'?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Изтриване на мрежа '{0}'?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Грешка при изтриването на мрежата '{0}'"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Грешка при напускането на мрежата '{0}'"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Напускане на мрежа '{0}'?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Сигурни ли сте, че искате да напуснете мрежата '{0}'?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Вие не сте собственикът на мрежата '{0}'."
+
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Искате ли да стартирате tuncfg?"
 
@@ -862,3 +877,16 @@ msgstr[1] "{0} напусна мрежата {1} и {2} други мрежи"
 #~ msgstr ""
 #~ "Hamachi не може да се стартира поради грешка при зареждането на "
 #~ "конфигурацията."
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Сигурни ли сте, че искате да изгоните потребител '{0}'\n"
+#~ "от мрежата '{1}'?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Изгони потребител '{0}'?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Грешка при изгонването на потребител '{0}'"

@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-05-24 15:39+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-10 05:52+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-05-24 17:48+0000\n"
-"X-Generator: Launchpad (build 13085)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
+"X-Generator: Launchpad (build 14123)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -46,9 +46,8 @@ msgid "No"
 msgstr "Нет"
 
 #: ../src/TextStrings.cs:370
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Пожалуйста, введите новый пароль для этой сети"
+msgstr "Для продолжения введите свой пароль."
 
 #: ../src/TextStrings.cs:372
 msgid "_Hamachi output"
@@ -59,14 +58,12 @@ msgid "Address:"
 msgstr "Адрес:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Адрес:"
+msgstr "IPv4 адрес:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Адрес:"
+msgstr "IPv6 адрес:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -315,14 +312,12 @@ msgid "_Copy Address"
 msgstr "_Копировать адрес"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Копировать адрес"
+msgstr "Копировать адрес IPv_4"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Копировать адрес"
+msgstr "Копировать адрес IPv_6"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -386,9 +381,8 @@ msgid "_Attach"
 msgstr "_Прикрепить"
 
 #: ../src/TextStrings.cs:471
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Прикрепить"
+msgstr ""
 
 #: ../src/TextStrings.cs:472
 msgid "Account not found"
@@ -581,19 +575,19 @@ msgstr "Выберите каталог"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Протокол:"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "Оба, IPv4 и IPv6"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "только IPv4"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "только IPv6"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -748,14 +742,12 @@ msgid "_Command:"
 msgstr "_Команда:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Команда:"
+msgstr "IPv_4 команда:"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Команда:"
+msgstr "IPv_6 команда:"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -763,7 +755,7 @@ msgstr "Использовать %A для адреса и %N для псевд�
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Приоритет:"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -848,39 +840,6 @@ msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
-#~ msgid "Error attaching"
-#~ msgstr "Ошибка прикрепления"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Ошибка при загрузке конфигурации"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
-
-#~ msgid "Connection refused"
-#~ msgstr "Подключение отклонено"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "Вы хотите запустить tuncfg?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность "
-#~ "подключиться.\n"
-#~ "Запуск tuncfg требует прав администратора."
-
-#~ msgid "_Run"
-#~ msgstr "_Запустить"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "_Всегда спрашивать перед запуском tuncfg"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "З_апрашивать подтверждение перед запуском tuncfg"
-
 #~ msgid "seconds"
 #~ msgstr "секунда;секунды;секунд"
 
@@ -890,14 +849,64 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgid "Changing..."
 #~ msgstr "Изменение..."
 
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Покинуть сеть '{0}'?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Вы уверены, что хотите удалить сеть '{0}'?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Вы уверены, что хотите покинуть сеть '{0}'?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Удалить сеть '{0}'?"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "_Строка состояния"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Вы хотите запустить tuncfg?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Ошибка при попытке выгнать '{0}'"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Ошибка при удалении сети '{0}'"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Вы уверены, что хотите выгнать '{0}'\n"
+#~ "из сети '{1}'?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Ошибка при попытке покинуть сеть '{0}'"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Выгнать '{0}'?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Вы не владелец сети '{0}'."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Ошибка при загрузке конфигурации"
 
 #~ msgid "Hamachi login failed."
 #~ msgstr "Ошибка при подключении Hamachi."
 
 #~ msgid "Connection refused."
 #~ msgstr "Подключение отклонено."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность подключиться.\n"
+#~ "Запуск tuncfg требует прав администратора."
 
 #~ msgid "No internet connection."
 #~ msgstr "Отсутствует соединение с интернет."
@@ -907,6 +916,15 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "А_втоматически подключаться при потере соединения"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "З_апрашивать подтверждение перед запуском tuncfg"
+
+#~ msgid "_Run"
+#~ msgstr "_Запустить"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Всегда спрашивать перед запуском tuncfg"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Показывать тех, кто \"не в сети\""
@@ -926,28 +944,5 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Таймаут команды (в секундах):"
 
-#~ msgid "_Send Request"
-#~ msgstr "_Послать запрос"
-
-#~ msgid ""
-#~ "The network requires manual approval of new members by its owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Сеть требует ручного одобрения новых участников собственником сети.\n"
-#~ "Хотите послать ему запрос?"
-
-#~ msgid "Unapproved"
-#~ msgstr "Не одобрен"
-
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Сеть требует ручного одобрения новых участников собственником сети.\n"
-#~ "Хотите послать ему запрос?"
-
 #~ msgid "Not installed"
 #~ msgstr "Не установлен"
-
-#~ msgid "_Hamachi ouput"
-#~ msgstr "_Вывод Hamachi"

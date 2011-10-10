@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-08-30 12:27+0000\n"
-"Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-10 21:01+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-08-30 17:44+0000\n"
-"X-Generator: Launchpad (build 13815)\n"
+"X-Launchpad-Export-Date: 2011-10-10 21:08+0000\n"
+"X-Generator: Launchpad (build 14123)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -57,14 +57,12 @@ msgid "Address:"
 msgstr "Endereço:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Endereço:"
+msgstr "Endereço IPv4:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Endereço:"
+msgstr "Endereço IPv6:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -314,14 +312,12 @@ msgid "_Copy Address"
 msgstr "_Copiar Endereço"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Copiar Endereço"
+msgstr "Copiar Endereço IPv_4"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Copiar Endereço"
+msgstr "Copiar Endereço IPv_6"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -578,19 +574,19 @@ msgstr "Escolher Pasta"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Protocolo:"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "Tanto IPv4 quanto IPv6"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "Apenas IPv4"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "Apenas IPv6"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -745,14 +741,12 @@ msgid "_Command:"
 msgstr "_Comando:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Comando:"
+msgstr "Comando IPv_4:"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Comando:"
+msgstr "Comando IPv_6:"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -760,7 +754,7 @@ msgstr "Use %A para endereço e %N para apelido"
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Prioridade:"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
