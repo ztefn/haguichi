@@ -28,7 +28,9 @@ public static class Command
     private static int timeout;
     private static bool inProgress = false;
     
-    public static string SudoArguments = "";
+    public static string SudoArguments    = "";
+    public static string SudoCommandStart = "-- ";
+    public static string SudoCommandEnd   = "";
     
     
     public static void Init ()
@@ -114,6 +116,11 @@ public static class Command
         if ( sudo.StartsWith ( "gksu" ) )
         {
             SudoArguments = "-m \"" + TextStrings.enterPassword + "\" ";
+        }
+        else if ( sudo == "beesu" )
+        {
+            SudoCommandStart = "-c '";
+            SudoCommandEnd   = "'";
         }
         
         Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );
@@ -278,9 +285,10 @@ public static class Command
         
         foreach ( string c in commands )
         {
-            string[] cArray = c.Split ( new char[] { ';' }, 7 );
+            string [] cArray = c.Split ( new char [] { ';' }, 7 );
             
-            if ( ( cArray.GetLength ( 0 ) == 7 ) && ( cArray [ 1 ] == "true" ) )
+            if ( ( cArray.GetLength ( 0 ) == 7 ) &&
+                 ( cArray [1] == "true" ) )
             {
                 command = cArray;
             }
