@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-08-25 10:58+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-12 22:12+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
-"X-Generator: Launchpad (build 13779)\n"
+"X-Launchpad-Export-Date: 2011-10-13 17:37+0000\n"
+"X-Generator: Launchpad (build 14124)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -57,14 +57,12 @@ msgid "Address:"
 msgstr "Dirección:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Dirección:"
+msgstr "Dirección IPv4:"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Dirección:"
+msgstr "Dirección IPv6:"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -313,14 +311,12 @@ msgid "_Copy Address"
 msgstr "_Copiar dirección"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Copiar dirección"
+msgstr "Copiar Dirección IPv_4"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Copiar dirección"
+msgstr "Copiar Dirección IPv_6"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -577,19 +573,19 @@ msgstr "Elija una carpeta"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Protocolo:"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "Ambos IPv4 e IPv6"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "Solo IPv4"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "Solo IPv6"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -744,14 +740,12 @@ msgid "_Command:"
 msgstr "C_omando:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "C_omando:"
+msgstr "Comando IPv_4:"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "C_omando:"
+msgstr "Comando IPv_6:"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -759,7 +753,7 @@ msgstr "Usar %A para la dirección y %N para el apodo"
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Prioridad:"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -865,8 +859,7 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
 #~ msgstr ""
-#~ "Hamachi no ha podido cargarse debido a un fallo al cargar la "
-#~ "configuración."
+#~ "Hamachi no ha podido cargarse debido a un fallo al cargar la configuración."
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Error al cargar la configuración"
@@ -907,6 +900,40 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tiempo máximo de espera (segundos):"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "No se ha podido eliminar la red «{0}»"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "¿Está seguro de querer expulsar al miembro «{0}»\n"
+#~ "de la red «{1}»?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "No se ha podido abandonar la red «{0}»"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "¿Abandonar la red «{0}»?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "¿Está seguro de que desea borrar la red «{0}»?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "¿Expulsar al miembro «{0}»?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "¿Está seguro de que desea dejar la red «{0}»?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "¿Borrar red «{0}»?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "No se ha podido expulsar al miembro «{0}»"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "No es el dueño de la red «{0}»."
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "¿Desea ejecutar tuncfg?"
