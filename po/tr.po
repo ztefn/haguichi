@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-07-03 16:49+0000\n"
-"Last-Translator: Irmak Bıçakçıgil <Unknown>\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-09 18:24+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-07-04 19:10+0000\n"
-"X-Generator: Launchpad (build 13333)\n"
+"X-Launchpad-Export-Date: 2011-10-13 20:32+0000\n"
+"X-Generator: Launchpad (build 14124)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -45,9 +45,8 @@ msgid "No"
 msgstr "Hayır"
 
 #: ../src/TextStrings.cs:370
-#, fuzzy
 msgid "Please enter your password to proceed."
-msgstr "Bu ağ için yeni bir şifre girin."
+msgstr "Devam etmek için lütfen parolanızı giriniz."
 
 #: ../src/TextStrings.cs:372
 msgid "_Hamachi output"
@@ -58,14 +57,12 @@ msgid "Address:"
 msgstr "Adres:"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Adres:"
+msgstr ""
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Adres:"
+msgstr ""
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -314,14 +311,12 @@ msgid "_Copy Address"
 msgstr "_Adresi Kopyala"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Adresi Kopyala"
+msgstr ""
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Adresi Kopyala"
+msgstr ""
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -384,9 +379,8 @@ msgid "_Attach"
 msgstr "_Ekle"
 
 #: ../src/TextStrings.cs:471
-#, fuzzy
 msgid "Attaching..."
-msgstr "_Ekle"
+msgstr ""
 
 #: ../src/TextStrings.cs:472
 msgid "Account not found"
@@ -746,14 +740,12 @@ msgid "_Command:"
 msgstr "_Komut:"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Komut:"
+msgstr ""
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Komut:"
+msgstr ""
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -836,37 +828,6 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
-#~ msgid "Error attaching"
-#~ msgstr "Ekleme hatası"
-
-#~ msgid "Loading configuration failed"
-#~ msgstr "Yapılandırma yüklemesi başarısız oldu"
-
-#~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr "Hamachi bir yapılandırma yükleme hatası nedeniyle başlatılamadı."
-
-#~ msgid "Connection refused"
-#~ msgstr "Bağlantı reddedildi"
-
-#~ msgid "Do you want to run tuncfg?"
-#~ msgstr "tuncfg'yi çalıştırmak istiyor musunuz?"
-
-#~ msgid ""
-#~ "Hamachi needs to run tuncfg to be able to connect.\n"
-#~ "Running tuncfg requires administrative privileges."
-#~ msgstr ""
-#~ "Hamachi bağlanmak için tuncfg'yi çalıştırmak istiyor.\n"
-#~ "tuncfg'yi çalıştırmak yönetici ayrıcalıkları ister."
-
-#~ msgid "_Run"
-#~ msgstr "_Çalıştır"
-
-#~ msgid "_Always ask before running tuncfg"
-#~ msgstr "_tuncfg'yi çalıştırmadan önce sor"
-
-#~ msgid "A_sk confirmation before running tuncfg"
-#~ msgstr "tuncfg'yi çalıştırmadan önce yapılandırılmasını sor"
-
 #~ msgid "seconds"
 #~ msgstr "saniye"
 
@@ -882,15 +843,26 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 #~ msgid "Not installed"
 #~ msgstr "Kurulmamış"
 
-#~ msgid "_Send Request"
-#~ msgstr "_İstek Gönder"
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "'{0}' ağından ayrılmada hata oluştu"
 
-#~ msgid ""
-#~ "This network requires manual approval of new members by the owner.\n"
-#~ "Would you like to send a join request?"
-#~ msgstr ""
-#~ "Bu ağ için yeni üyelerin ağ sahibi tarafından onaylanması gerekiyor.\n"
-#~ "Katılmak için istek göndermek istiyor musunuz?"
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "'{0}' ağından ayrıl?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "'{0}' ağını silmek istediğinize emin misiniz?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "'{0}' ağından ayrılmak istediğinize emin misiniz?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "'{0}' ağını silmede hata oluştu"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "'{0}' ağını sil?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "'{0}' ağının sahibi değilsiniz."
 
 #~ msgid "S_tatusbar"
 #~ msgstr "D_urum Çubuğu"
@@ -901,11 +873,49 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
 
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "tuncfg'yi çalıştırmak istiyor musunuz?"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "tuncfg'yi çalıştırmadan önce yapılandırılmasını sor"
+
+#~ msgid "_Run"
+#~ msgstr "_Çalıştır"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_tuncfg'yi çalıştırmadan önce sor"
+
 #~ msgid "No internet connection."
 #~ msgstr "İnternet bağlantısı yok."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "Hamachi bir yapılandırma yükleme hatası nedeniyle başlatılamadı."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Yapılandırma yüklemesi başarısız oldu"
 
 #~ msgid "Hamachi login failed."
 #~ msgstr "Hamachi girişi başarısız oldu."
 
 #~ msgid "Connection refused."
 #~ msgstr "Bağlantı reddedildi."
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "'{0}' üyesini '{1}' ağından atmak istediğinize\n"
+#~ "emin misiniz?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "'{0}' üyesini at?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "'{0}' üyesi atılırken hata oluştu"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi bağlanmak için tuncfg'yi çalıştırmak istiyor.\n"
+#~ "tuncfg'yi çalıştırmak yönetici ayrıcalıkları ister."
