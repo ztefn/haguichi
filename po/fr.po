@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-10-09 23:26:55+0200\n"
-"PO-Revision-Date: 2011-08-25 07:38+0000\n"
+"POT-Creation-Date: 2011-10-09 23:31+0200\n"
+"PO-Revision-Date: 2011-10-31 22:10+0000\n"
 "Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
-"X-Generator: Launchpad (build 13779)\n"
+"X-Launchpad-Export-Date: 2011-11-01 18:56+0000\n"
+"X-Generator: Launchpad (build 14214)\n"
 
 #: ../src/TextStrings.cs:361
 msgid "Haguichi Website"
@@ -57,14 +57,12 @@ msgid "Address:"
 msgstr "Adresse :"
 
 #: ../src/TextStrings.cs:375
-#, fuzzy
 msgid "IPv4 address:"
-msgstr "Adresse :"
+msgstr "Adresse IPv4 :"
 
 #: ../src/TextStrings.cs:376
-#, fuzzy
 msgid "IPv6 address:"
-msgstr "Adresse :"
+msgstr "Adresse IPv6 :"
 
 #: ../src/TextStrings.cs:377
 msgid "ID:"
@@ -314,14 +312,12 @@ msgid "_Copy Address"
 msgstr "_Copier l'adresse"
 
 #: ../src/TextStrings.cs:448
-#, fuzzy
 msgid "Copy IPv_4 Address"
-msgstr "_Copier l'adresse"
+msgstr "Copier l'adresse IPv_4"
 
 #: ../src/TextStrings.cs:449
-#, fuzzy
 msgid "Copy IPv_6 Address"
-msgstr "_Copier l'adresse"
+msgstr "Copier l'adresse IPv_6"
 
 #: ../src/TextStrings.cs:450
 msgid "_Copy Client ID"
@@ -578,7 +574,7 @@ msgstr "Choisir un dossier"
 
 #: ../src/TextStrings.cs:531
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Protocole :"
 
 #: ../src/TextStrings.cs:532
 msgid "Both IPv4 and IPv6"
@@ -586,11 +582,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:533
 msgid "IPv4 only"
-msgstr ""
+msgstr "IPv4 seul"
 
 #: ../src/TextStrings.cs:534
 msgid "IPv6 only"
-msgstr ""
+msgstr "IPv6 seul"
 
 #: ../src/TextStrings.cs:536
 msgid "_Update Network List"
@@ -745,14 +741,12 @@ msgid "_Command:"
 msgstr "_Commande :"
 
 #: ../src/TextStrings.cs:580
-#, fuzzy
 msgid "IPv_4 command:"
-msgstr "_Commande :"
+msgstr "Commande IPv_4 :"
 
 #: ../src/TextStrings.cs:581
-#, fuzzy
 msgid "IPv_6 command:"
-msgstr "_Commande :"
+msgstr "Commande IPv_6 :"
 
 #: ../src/TextStrings.cs:582
 msgid "Use %A for address and %N for nickname"
@@ -760,7 +754,7 @@ msgstr "Utiliser %A pour l'adresse et %N pour le pseudo"
 
 #: ../src/TextStrings.cs:583
 msgid "_Priority:"
-msgstr ""
+msgstr "_Priorité :"
 
 #: ../src/TextStrings.cs:585
 msgid "Click to choose an icon"
@@ -849,6 +843,15 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Changing..."
 #~ msgstr "Changement..."
 
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Echec de l'expulsion du membre '{0}'"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Echec de la sortie du réseau '{0}'"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Vous n'êtes pas le propriétaire du réseau '{0}'."
+
 #~ msgid "Loading configuration failed"
 #~ msgstr "Echec du chargement de la configuration"
 
@@ -892,6 +895,15 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "No internet connection."
 #~ msgstr "Pas de connexion Internet."
 
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Supprimer le réseau '{0}' ?"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Quitter le réseau '{0}' ?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Expulser le membre '{0}' ?"
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervalle de mise à jour (secondes) :"
 
@@ -904,13 +916,28 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Getting nicknames..."
 #~ msgstr "Obtention des pseudos..."
 
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Échec de la suppression du réseau '{0}'"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Êtes-vous sûr de vouloir expulser le membre '{0}'\n"
+#~ "du réseau '{1}' ?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Êtes-vous sûr de vouloir supprimer le réseau '{0}' ?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Êtes-vous sûr de vouloir quitter le réseau '{0}' ?"
+
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "Se _reconnecter automatiquement lorsque la connexion a été perdue"
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
 #~ msgstr ""
-#~ "Hamachi n'a pas pu se lancer du a l'échec du chargement de la "
-#~ "configuration."
+#~ "Hamachi n'a pas pu se lancer du a l'échec du chargement de la configuration."
 
 #~ msgid "Nickname:"
 #~ msgstr "Pseudo :"
