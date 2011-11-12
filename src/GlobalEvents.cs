@@ -363,7 +363,7 @@ public class GlobalEvents
     
     public static void SetAttach ()
     {
-          
+        
         if ( Hamachi.ApiVersion > 1 )
         {
             string account = Hamachi.GetAccount ();
@@ -389,6 +389,8 @@ public class GlobalEvents
         else
         {
             MainWindow.menuBar.SetAttach ( false, false );
+            
+            Haguichi.informationWindow.SetAccount ( "" );
         }
         
     }

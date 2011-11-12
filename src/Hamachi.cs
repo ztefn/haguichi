@@ -265,16 +265,13 @@ public static class Hamachi
             return "-";
         }
         
-        string output;
+        string output = "";
         
         try
         {
             output = Retrieve ( lastInfo, "lmi account" );
         }
-        catch
-        {
-            output = "";
-        }
+        catch {}
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetAccount", output );
         
@@ -291,16 +288,13 @@ public static class Hamachi
             return "090-123-456";
         }
         
-        string output;
+        string output = "";
         
         try
         {
             output = Retrieve ( lastInfo, "client id" );
         }
-        catch
-        {
-            output = "";
-        }
+        catch {}
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetClientId", output );
         
@@ -575,17 +569,14 @@ public static class Hamachi
             return "2.1.0.17";
         }
         
-        string output;
+        string output = "";
         
         try
         {
             output = Retrieve ( lastInfo, "version" );
             output = output.Replace ( "hamachi-lnx-", "" );
         }
-        catch
-        {
-            output = "";
-        }
+        catch {}
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", output );
         
