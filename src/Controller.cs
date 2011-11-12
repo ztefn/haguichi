@@ -62,9 +62,8 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
-        Haguichi.informationWindow.SetVersion ();
-        Haguichi.informationWindow.SetAddress ();
-        Haguichi.informationWindow.SetClientId ();
+        Haguichi.informationWindow.Update ();
+        Haguichi.preferencesWindow.Update ();
         
         StatusCheck ();
         

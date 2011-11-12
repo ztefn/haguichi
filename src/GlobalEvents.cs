@@ -126,10 +126,7 @@ public class GlobalEvents
     {
         
         SetAttach ();
-        
-        Haguichi.informationWindow.SetVersion ();
-        Haguichi.informationWindow.SetAddress ();
-        Haguichi.informationWindow.SetClientId ();
+        Haguichi.informationWindow.Update ();
         
     }
     

@@ -235,7 +235,17 @@ namespace Dialogs
         }
         
         
-        public void SetVersion ()
+        public void Update ()
+        {
+            
+            SetVersion ();
+            SetAddress ();
+            SetClientId ();
+            
+        }
+        
+        
+        private void SetVersion ()
         {
             
             string version = Hamachi.GetVersion ();
@@ -250,7 +260,7 @@ namespace Dialogs
         }
         
         
-        public void SetAddress ()
+        private void SetAddress ()
         {
             
             string [] address = Hamachi.GetAddress ();
@@ -304,7 +314,7 @@ namespace Dialogs
         }
         
         
-        public void SetClientId ()
+        private void SetClientId ()
         {
             
             if ( Hamachi.ApiVersion > 1 )

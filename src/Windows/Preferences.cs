@@ -45,6 +45,10 @@ namespace Windows
         public  CheckButton notifyOnMemberOnline;
         public  CheckButton notifyOnMemberOffline;
         
+        private HBox ipBox;
+        private HBox pathBox;
+        private GroupBox hamachiBox;
+        
         public  ComboBox ipCombo;
         public  FileChooserButton pathButton;
         public  SpinButton intervalSpin;
@@ -166,7 +170,7 @@ namespace Windows
             ipLabel.TextWithMnemonic = TextStrings.protocolLabel + "  ";
             ipLabel.MnemonicWidget = ipCombo;
             
-            HBox ipBox = new HBox ();
+            ipBox = new HBox ();
             ipBox.Add ( ipLabel );
             ipBox.Add ( ipCombo );
             
@@ -188,14 +192,14 @@ namespace Windows
             pathLabel.TextWithMnemonic = TextStrings.dataPathLabel + "  ";
             pathLabel.MnemonicWidget = pathButton;
             
-            HBox pathBox = new HBox ();
+            pathBox = new HBox ();
             pathBox.Add ( pathLabel );
             pathBox.Add ( pathButton );
             
             Box.BoxChild bc5 = ( ( Box.BoxChild ) ( pathBox [ pathLabel ] ) );
             bc5.Expand = false;
             
-            GroupBox hamachiBox = new GroupBox ( "Hamachi" );
+            hamachiBox = new GroupBox ( "Hamachi" );
             hamachiBox.AddWidget ( ipBox );
             hamachiBox.AddWidget ( pathBox );
             
@@ -288,6 +292,12 @@ namespace Windows
             
             this.Add ( vbox );
             vbox.ShowAll ();
+            
+        }
+        
+        
+        public void Update ()
+        {
             
             hamachiBox.Hide ();
             
