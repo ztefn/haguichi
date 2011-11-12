@@ -62,6 +62,10 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
+        Haguichi.informationWindow.SetVersion ();
+        Haguichi.informationWindow.SetAddress ();
+        Haguichi.informationWindow.SetClientId ();
+        
         StatusCheck ();
         
         if ( lastStatus >= 6 )

@@ -198,11 +198,6 @@ namespace Dialogs
             closeButton.CanDefault = true;
             closeButton.GrabDefault ();
             
-            SetAddress ();
-            SetClientId ();
-            SetVersion ();
-            SetAccount ( "" );
-            
         }
         
         
@@ -322,6 +317,9 @@ namespace Dialogs
                 }
                 
                 idEntry.Markup = id;
+                
+                idLabel.Show ();
+                idEntry.Show ();
             }
             else
             {
@@ -335,15 +333,14 @@ namespace Dialogs
         public void SetAccount ( string account )
         {
             
-            if ( Hamachi.ApiVersion > 1 )
+            if ( ( Hamachi.ApiVersion > 1 ) &&
+                 ( account != "" ) &&
+                 ( account != "-" ) )
             {
-                if ( ( account == "" ) ||
-                     ( account == "-" ) )
-                {
-                    account = "<i>" + TextStrings.unavailable + "</i>";
-                }
-                
                 accountEntry.Markup = account;
+                
+                accountLabel.Show ();
+                accountEntry.Show ();
             }
             else
             {

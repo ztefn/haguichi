@@ -185,9 +185,12 @@ namespace Dialogs
                 Application.Invoke ( delegate
                 {
                     Dismiss ();
-                    Hamachi.GetInfo ();
-                    GlobalEvents.SetAttach ();
                 });
+                
+                Thread.Sleep ( 2000 );
+                Hamachi.GetInfo ();
+                GlobalEvents.SetAttach ();
+                
                 return;
             }
             else if ( ( output.IndexOf ( ".. failed, not found" ) != -1 ) ||

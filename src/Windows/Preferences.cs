@@ -289,17 +289,21 @@ namespace Windows
             this.Add ( vbox );
             vbox.ShowAll ();
             
+            hamachiBox.Hide ();
+            
             if ( Hamachi.ApiVersion == 1 )
             {
+                hamachiBox.Show ();
+                
+                pathBox.Show ();
                 ipBox.Hide ();
-            }
-            else if ( Hamachi.ApiVersion == 2 )
-            {
-                hamachiBox.Hide ();
             }
             else if ( Hamachi.ApiVersion >= 3 )
             {
+                hamachiBox.Show ();
+                
                 pathBox.Hide ();
+                ipBox.Show ();
             }
             
         }
