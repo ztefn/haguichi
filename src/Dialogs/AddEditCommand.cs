@@ -32,8 +32,9 @@ namespace Dialogs
         
         private string CommandIcon;
         
-        private Image  iconImg;
-        private Button iconBut;
+        private Menu IconMenu;
+        private Image IconImg;
+        private ToggleButton IconBut;
         
         private Label labelLabel;
         private Entry labelEntry;
@@ -169,13 +170,22 @@ namespace Dialogs
             priorityLabel.MnemonicWidget = priorityGroup;
             
             
-            iconImg = new Image ();
-            iconImg.SetFromIconName ( this.CommandIcon, IconSize.Dialog );
+            IconMenu = new Menu ();
+            IconMenu.Hidden += delegate
+            {
+                IconBut.Active = false;  
+                IconBut.HasTooltip = true;
+            };
             
-            iconBut = new Button ();
-            iconBut.Image = iconImg;
-            iconBut.TooltipText = TextStrings.chooseIconTip;
-            iconBut.Clicked += ChooseIcon;
+            IconImg = new Image ();
+            IconImg.SetFromIconName ( this.CommandIcon, IconSize.Dialog );
+            
+            IconBut = new ToggleButton ();
+            IconBut.Image = IconImg;
+            IconBut.TooltipText = TextStrings.chooseIconTip;
+            IconBut.Clicked += Popup;
+            
+            Fill ();
             
             
             Table table = new Table ( 4, 3, false );
@@ -190,7 +200,7 @@ namespace Dialogs
             table.Attach ( commandIPv6Entry, 1, 2, 2, 3 );
             table.Attach ( priorityLabel,    0, 1, 3, 4 );
             table.Attach ( priorityBox,      1, 2, 3, 4 );
-            table.Attach ( iconBut,          2, 3, 0, 2, AttachOptions.Shrink, AttachOptions.Shrink, 0, 0 );
+            table.Attach ( IconBut,          2, 3, 0, 2, AttachOptions.Shrink, AttachOptions.Shrink, 0, 0 );
             
             
             this.VBox.Add ( table );
@@ -216,12 +226,112 @@ namespace Dialogs
             }
             
         }
-
         
-        private void ChooseIcon ( object o, EventArgs args )
+        
+        private void Fill ()
         {
             
-            new Dialogs.ChooseIcon ( this, this.CommandIcon );
+            uint columns     = 6;
+            uint countLeft   = 0;
+            uint countRight  = 1;
+            uint countTop    = 0;
+            uint countBottom = 1;
+            
+            string [] iconNames = { "folder-remote",
+                                    "network-workgroup",
+                                    "network-server",
+                                    "printer",
+                                    "preferences-desktop-remote-desktop",
+                                    "application-x-remote-connection",
+                                    "applications-internet",
+                                    "computer",
+                                    "go-home",
+                                    "user-home",
+                                    "folder-open",
+                                    "utilities-terminal",
+                                    "utilities-system-monitor",
+                                    "dialog-password",
+                                    "system-search",
+                                    "audio-x-generic",
+                                    "video-x-generic",
+                                    "x-office-address-book",
+                                    "package-x-generic",
+                                    "input-gaming",
+                                    "system-users",
+                                    "drive-harddisk",
+                                    "drive-optical",
+                                    "drive-removable-media",
+                                    "camera-web",
+                                    "audio-input-microphone",
+                                    "network-wired",
+                                    "network-wireless",
+                                    "modem",
+                                    "call-start",
+                                    "call-stop",
+                                    "document-send",
+                                    "face-cool",
+                                    "face-devilish",
+                                    "system-shutdown" };
+            
+            foreach ( string iconName in iconNames )
+            {
+                //Console.WriteLine ( "left: " + countLeft + "  right: " + countRight + "  top: " + countTop + "  bottom: " + countBottom );
+                
+                Image img = new Image ();
+                img.SetFromIconName ( iconName, IconSize.LargeToolbar );
+                
+                MenuItem icon = new MenuItem ();
+                icon.Add ( img );
+                icon.TooltipText = iconName;
+                icon.HasTooltip = false;
+                icon.Activated += delegate
+                {
+                    SetIcon ( icon.TooltipText );
+                };
+                
+                IconMenu.Attach ( icon, countLeft, countRight, countTop, countBottom );
+                
+                if ( countLeft < columns )
+                {
+                    countLeft   += 1;
+                    countRight  += 1;
+                }
+                else
+                {
+                    if ( countTop < columns )
+                    {
+                        countTop    += 1;
+                        countBottom += 1;
+                    }
+                    else
+                    {
+                        countTop     = 0;
+                        countBottom  = 1;
+                    }
+                    
+                    countLeft    = 0;
+                    countRight   = 1;
+                }
+            }
+            
+            MenuItem none = new MenuItem ( TextStrings.noIconLabel );
+            none.Activated += delegate
+            {
+                SetIcon ( "none" );
+            };
+            
+            IconMenu.Attach ( new SeparatorMenuItem (), 0, 7, 5, 6 );
+            IconMenu.Attach ( none, 0, 7, 6, 7 );
+            IconMenu.ShowAll ();
+            
+        }
+        
+        
+        private void Popup ( object o, EventArgs args )
+        {
+            
+            IconMenu.Popup ();
+            IconBut.HasTooltip = false;
             
         }
         
@@ -231,8 +341,8 @@ namespace Dialogs
             
             this.CommandIcon = icon;
             
-            iconImg.SetFromIconName ( this.CommandIcon, IconSize.Dialog );
-            iconBut.Image = iconImg;
+            IconImg.SetFromIconName ( this.CommandIcon, IconSize.Dialog );
+            IconBut.Image = IconImg;
             
         }
         

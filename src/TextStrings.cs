@@ -342,7 +342,6 @@ Türkçe (tr)
     public static string priorityLabel;
     
     public static string chooseIconTip;
-    public static string chooseIconTitle;
     public static string noIconLabel;
     
     public static string isDefault;
@@ -584,7 +583,6 @@ Türkçe (tr)
         priorityLabel                       = Catalog.GetString ( "_Priority:" );
         
         chooseIconTip                       = Catalog.GetString ( "Click to choose an icon" );
-        chooseIconTitle                     = Catalog.GetString ( "Choose Icon" );
         noIconLabel                         = Catalog.GetString ( "_No Icon" );
         
         isDefault                           = Catalog.GetString ( "Default" );
