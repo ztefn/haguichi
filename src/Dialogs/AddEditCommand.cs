@@ -171,7 +171,7 @@ namespace Dialogs
             
             
             IconMenu = new Menu ();
-            IconMenu.Hidden += delegate
+            IconMenu.Deactivated += delegate
             {
                 IconBut.Active = false;  
                 IconBut.HasTooltip = true;
