@@ -330,8 +330,20 @@ namespace Dialogs
         private void Popup ( object o, EventArgs args )
         {
             
-            IconMenu.Popup ();
+            IconMenu.Popup ( null, null, PositionMenu, 0, Gtk.Global.CurrentEventTime );
             IconBut.HasTooltip = false;
+            
+        }
+        
+        
+        public void PositionMenu ( Menu menu, out int x, out int y, out bool push_in )
+        {
+            
+            this.GdkWindow.GetPosition ( out x, out y );
+            x += IconBut.Allocation.X;
+            y += IconBut.Allocation.Bottom;
+            
+            push_in = true;
             
         }
         

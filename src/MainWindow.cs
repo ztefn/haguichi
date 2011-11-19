@@ -342,12 +342,12 @@ public class MainWindow
     private void StatusIconPopupHandler ( object o, PopupMenuArgs args )
     {
         
-        quickMenu.Popup ( null, null, PositionMenu, 3, Gtk.Global.CurrentEventTime );
+        quickMenu.Popup ( null, null, PositionMenu, 0, Gtk.Global.CurrentEventTime );
         
     }
     
     
-    public void PositionMenu (Menu menu, out int x, out int y, out bool push_in)
+    public void PositionMenu ( Menu menu, out int x, out int y, out bool push_in )
     {
         
         StatusIcon.PositionMenu ( menu, out x, out y, out push_in, panelIcon.Handle );
