@@ -258,6 +258,8 @@ namespace Dialogs
                     Hamachi.GoOnline ( this.NetworkName );
                 }
                 
+                Thread.Sleep ( 1000 ); // Wait a second to get an updated list
+                
                 Application.Invoke ( delegate
                 {
                     Dismiss ();
@@ -380,6 +382,8 @@ namespace Dialogs
                 {
                     Hamachi.GoOnline ( this.NetworkName );
                 }
+                
+                Thread.Sleep ( 1000 ); // Wait a second to get an updated list
                 
                 Application.Invoke ( delegate
                 {
