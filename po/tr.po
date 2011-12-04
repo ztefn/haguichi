@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-11-13 22:17:30+0100\n"
-"PO-Revision-Date: 2011-10-09 18:24+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2011-11-13 22:17+0100\n"
+"PO-Revision-Date: 2011-12-04 10:04+0000\n"
+"Last-Translator: Aytunç <aytuncyeni@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-10-13 20:32+0000\n"
-"X-Generator: Launchpad (build 14124)\n"
+"X-Launchpad-Export-Date: 2011-12-04 13:36+0000\n"
+"X-Generator: Launchpad (build 14418)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -58,11 +58,11 @@ msgstr "Adres:"
 
 #: ../src/TextStrings.cs:374
 msgid "IPv4 address:"
-msgstr ""
+msgstr "IPv4 adresi:"
 
 #: ../src/TextStrings.cs:375
 msgid "IPv6 address:"
-msgstr ""
+msgstr "IPv6 adresi:"
 
 #: ../src/TextStrings.cs:376
 msgid "ID:"
@@ -312,11 +312,11 @@ msgstr "_Adresi Kopyala"
 
 #: ../src/TextStrings.cs:447
 msgid "Copy IPv_4 Address"
-msgstr ""
+msgstr "IPv_4 adresini kopyala"
 
 #: ../src/TextStrings.cs:448
 msgid "Copy IPv_6 Address"
-msgstr ""
+msgstr "IPv_6 adresini kopyala"
 
 #: ../src/TextStrings.cs:449
 msgid "_Copy Client ID"
@@ -573,19 +573,19 @@ msgstr "Dizin seç"
 
 #: ../src/TextStrings.cs:530
 msgid "_Protocol:"
-msgstr ""
+msgstr "_Protokol"
 
 #: ../src/TextStrings.cs:531
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "IPv4 ve IPv6"
 
 #: ../src/TextStrings.cs:532
 msgid "IPv4 only"
-msgstr ""
+msgstr "Sadece IPv4"
 
 #: ../src/TextStrings.cs:533
 msgid "IPv6 only"
-msgstr ""
+msgstr "Sadece IPv6"
 
 #: ../src/TextStrings.cs:535
 msgid "_Update Network List"
@@ -741,11 +741,11 @@ msgstr "_Komut:"
 
 #: ../src/TextStrings.cs:579
 msgid "IPv_4 command:"
-msgstr ""
+msgstr "IPv_4 komutu"
 
 #: ../src/TextStrings.cs:580
 msgid "IPv_6 command:"
-msgstr ""
+msgstr "IPv_6 komutu:"
 
 #: ../src/TextStrings.cs:581
 msgid "Use %A for address and %N for nickname"
@@ -753,7 +753,7 @@ msgstr "Adres için %A, takma ad için %N kullanın"
 
 #: ../src/TextStrings.cs:582
 msgid "_Priority:"
-msgstr ""
+msgstr "_Öncelik"
 
 #: ../src/TextStrings.cs:584
 msgid "Click to choose an icon"
@@ -823,9 +823,6 @@ msgstr[0] "{0}, {1} ve {2} başka ağa katıldı."
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Simge Seç"
 
 #~ msgid "seconds"
 #~ msgstr "saniye"
@@ -898,6 +895,9 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "Connection refused."
 #~ msgstr "Bağlantı reddedildi."
+
+#~ msgid "Choose Icon"
+#~ msgstr "Simge Seç"
 
 #~ msgid ""
 #~ "Are you sure you want to evict member '{0}'\n"
