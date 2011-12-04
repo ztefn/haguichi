@@ -162,7 +162,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + Command.SudoCommandStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" + Command.SudoCommandEnd );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + Command.SudoCommandStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart --skip-redirect\"" + Command.SudoCommandEnd );
             
             if ( output.Contains ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
             {
@@ -201,7 +201,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + ScriptDirectory + "/logmein-hamachi start" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + Command.SudoCommandStart + ScriptDirectory + "/logmein-hamachi start --skip-redirect" + Command.SudoCommandEnd );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
@@ -222,7 +222,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + ScriptDirectory + "/logmein-hamachi stop" );
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArguments + Command.SudoCommandStart + ScriptDirectory + "/logmein-hamachi stop --skip-redirect" + Command.SudoCommandEnd );
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
