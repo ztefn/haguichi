@@ -373,8 +373,11 @@ public static class Hamachi
     public static string GetInfo ()
     {
         
-        lastInfo = Command.ReturnOutput ( "hamachi", "" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetInfo", lastInfo );
+        if ( !Config.Settings.DemoMode )
+        {
+            lastInfo = Command.ReturnOutput ( "hamachi", "" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetInfo", lastInfo );
+        }
         
         return lastInfo;
         
