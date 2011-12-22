@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-11-13 22:17:30+0100\n"
-"PO-Revision-Date: 2011-08-23 22:46+0000\n"
+"POT-Creation-Date: 2011-11-13 22:17+0100\n"
+"PO-Revision-Date: 2011-12-22 13:21+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-08-25 18:52+0000\n"
-"X-Generator: Launchpad (build 13779)\n"
+"X-Launchpad-Export-Date: 2011-12-22 13:24+0000\n"
+"X-Generator: Launchpad (build 14560)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -638,7 +638,7 @@ msgstr "_Verbinding verbreken bij afsluiten"
 
 #: ../src/TextStrings.cs:551
 msgid "Display notification when the connection is l_ost"
-msgstr "Melding weergeven als de verbinding is verbroken"
+msgstr "Melding weergeven als de verbinding is v_erbroken"
 
 #: ../src/TextStrings.cs:552
 msgid "Display notification when a member _joins"
@@ -826,9 +826,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
 msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
-#~ msgid "Choose Icon"
-#~ msgstr "Pictogram kiezen"
-
 #~ msgid "seconds"
 #~ msgstr "seconden"
 
@@ -849,6 +846,40 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
 #~ msgid "Changing..."
 #~ msgstr "Wijzigen..."
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Netwerk '{0}' verwijderen?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Weet u zeker dat u het netwerk '{0}' wilt verwijderen?"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Netwerk '{0}' verlaten?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Weet u zeker dat u het netwerk '{0}' wilt verlaten?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Lid '{0}' uitsmijten?"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Weet u zeker dat u lid '{0}'\n"
+#~ "uit netwerk '{1}' wilt verwijderen?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Het verwijderen van netwerk '{0}' is mislukt"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Het verlaten van netwerk '{0}' is mislukt"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Het uitsmijten van lid '{0}' is mislukt"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "U bent niet de eigenaar van netwerk '{0}'."
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Offline leden tonen"
@@ -888,6 +919,9 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 #~ msgstr ""
 #~ "Hamachi kon niet worden gestart omdat het inladen van de configuratie is "
 #~ "mislukt."
+
+#~ msgid "Choose Icon"
+#~ msgstr "Pictogram kiezen"
 
 #~ msgid "No internet connection."
 #~ msgstr "Geen internetverbinding."
