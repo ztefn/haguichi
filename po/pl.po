@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-11-13 22:17:30+0100\n"
-"PO-Revision-Date: 2011-10-09 19:23+0000\n"
+"POT-Creation-Date: 2011-11-13 22:17+0100\n"
+"PO-Revision-Date: 2011-10-09 22:18+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-10-09 21:28+0000\n"
-"X-Generator: Launchpad (build 14110)\n"
+"X-Launchpad-Export-Date: 2012-01-02 13:56+0000\n"
+"X-Generator: Launchpad (build 14560)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -172,7 +172,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: ../src/TextStrings.cs:407
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: ../src/TextStrings.cs:408
 msgid "_Download"
@@ -369,7 +370,8 @@ msgstr "Dołącz do konta"
 
 #: ../src/TextStrings.cs:467
 msgid "Please enter the account you want to attach this client to."
-msgstr "Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
+msgstr ""
+"Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
 
 #: ../src/TextStrings.cs:468
 msgid "_Include all networks created by this client"
@@ -655,11 +657,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: ../src/TextStrings.cs:554
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: ../src/TextStrings.cs:555
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:557
 msgid "Error connecting"
@@ -842,9 +846,6 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
-#~ msgid "Choose Icon"
-#~ msgstr "Wybór ikony"
-
 #~ msgid "No internet connection."
 #~ msgstr "Brak połączenia z internetem."
 
@@ -914,3 +915,6 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "A_sk confirmation before running tuncfg"
 #~ msgstr "_Pytanie o potwierdzenie przed wykonaniem programu tuncfg"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Wybór ikony"
