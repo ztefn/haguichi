@@ -45,8 +45,6 @@ namespace Dialogs
         
         private MessageBar messageBar;
         
-        public  CheckButton goOnline;
-        
         private Button cancelBut;
         private Button joinBut;
         private Button createBut;
@@ -125,17 +123,9 @@ namespace Dialogs
             inputTable.Attach ( passwordEntry, 1, 2, 1, 2 );
             
             
-            goOnline = new CheckButton ( TextStrings.checkboxGoOnlineInNewNetwork );
-            goOnline.Toggled += delegate
-            {
-                Config.Client.Set ( Config.Settings.GoOnlineInNewNetwork, goOnline.Active );
-            };
-            
-            
             VBox vbox = new VBox ();
             vbox.Add ( heading );
             vbox.Add ( inputTable );
-            vbox.Add ( goOnline );
             vbox.Add ( buttonBox );
             
             
@@ -146,10 +136,6 @@ namespace Dialogs
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
             bc4.Padding = 6;
             bc4.Expand = false;
-            
-            Box.BoxChild bc15 = ( ( Box.BoxChild ) ( vbox [ goOnline ] ) );
-            bc15.Padding = 3;
-            bc15.Expand = false;
             
             Box.BoxChild bc14 = ( ( Box.BoxChild ) ( vbox [ inputTable ] ) );
             bc14.Padding = 6;
@@ -176,16 +162,6 @@ namespace Dialogs
             this.Add ( container );
             
             HideMessage ();
-            
-            if ( Hamachi.ApiVersion > 1 )
-            {
-                goOnline.Hide ();
-            }
-            else if ( Hamachi.ApiVersion == 1 )
-            {
-                goOnline.Active = ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork );
-            }
-            
             SetMode ( mode );
             
             this.Show ();
@@ -252,8 +228,7 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                if ( ( Hamachi.ApiVersion == 1 ) &&
-                     ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
+                if ( Hamachi.ApiVersion == 1 )
                 {
                     Hamachi.GoOnline ( this.NetworkName );
                 }
@@ -377,8 +352,7 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                if ( ( Hamachi.ApiVersion == 1 ) &&
-                     ( bool ) Config.Client.Get ( Config.Settings.GoOnlineInNewNetwork ) )
+                if ( Hamachi.ApiVersion == 1 )
                 {
                     Hamachi.GoOnline ( this.NetworkName );
                 }

@@ -240,8 +240,6 @@ Türkçe (tr)
     public static string createNetworkTitle;
     public static string createNetworkMessage;
     
-    public static string checkboxGoOnlineInNewNetwork;
-    
     public static string errorNetworkNotFound;
     public static string errorInvalidPassword;
     public static string errorNetworkFull;
@@ -480,8 +478,6 @@ Türkçe (tr)
         creatingLabel                       = Catalog.GetString ( "Creating..." );
         createNetworkTitle                  = Catalog.GetString ( "Create Network" );
         createNetworkMessage                = Catalog.GetString ( "Please enter the name and password for the\nnetwork you want to create." );
-        
-        checkboxGoOnlineInNewNetwork        = Catalog.GetString ( "_Go directly online in the network" );
         
         errorNetworkNotFound                = Catalog.GetString ( "Network not found" );
         errorInvalidPassword                = Catalog.GetString ( "Invalid password" );

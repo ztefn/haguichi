@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2011-11-13 22:17:30+0100\n"
+"POT-Creation-Date: 2012-01-25 23:53:03+0100\n"
 "PO-Revision-Date: 2011-10-10 00:50+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -18,387 +18,387 @@ msgstr ""
 "X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
 "X-Generator: Launchpad (build 14123)\n"
 
-#: ../src/TextStrings.cs:360
+#: ../src/TextStrings.cs:358
 msgid "Haguichi Website"
 msgstr "Haguichi ウェブサイト"
 
 #. Description used in about dialog.
-#: ../src/TextStrings.cs:361
+#: ../src/TextStrings.cs:359
 msgid "A graphical frontend for Hamachi."
 msgstr "Hamachi 用のグラフィカルフロントエンド"
 
 #. Description used in application launchers.
-#: ../src/TextStrings.cs:362
+#: ../src/TextStrings.cs:360
 msgid "Join and create local networks over the Internet"
 msgstr "インターネット越しのローカルネットワークを作ったり参加してみよう"
 
-#: ../src/TextStrings.cs:364
+#: ../src/TextStrings.cs:362
 msgid "_Show Haguichi"
 msgstr "Haguichi を表示(_S)"
 
-#: ../src/TextStrings.cs:366
+#: ../src/TextStrings.cs:364
 msgid "Yes"
 msgstr "はい"
 
-#: ../src/TextStrings.cs:367
+#: ../src/TextStrings.cs:365
 msgid "No"
 msgstr "いいえ"
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:367
 msgid "Please enter your password to proceed."
 msgstr "次に進むにはパスワードを入力してください。"
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:369
 msgid "_Hamachi output"
 msgstr "Hamachi からの出力(_H)"
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:371
 msgid "Address:"
 msgstr "アドレス:"
 
-#: ../src/TextStrings.cs:374
+#: ../src/TextStrings.cs:372
 msgid "IPv4 address:"
 msgstr "IPv4 アドレス:"
 
-#: ../src/TextStrings.cs:375
+#: ../src/TextStrings.cs:373
 msgid "IPv6 address:"
 msgstr "IPv6 アドレス:"
 
-#: ../src/TextStrings.cs:376
+#: ../src/TextStrings.cs:374
 msgid "ID:"
 msgstr "ID:"
 
-#: ../src/TextStrings.cs:377
+#: ../src/TextStrings.cs:375
 msgid "Client ID:"
 msgstr "クライアント ID:"
 
-#: ../src/TextStrings.cs:378
+#: ../src/TextStrings.cs:376
 msgid "Network ID:"
 msgstr "ネットワーク ID:"
 
-#: ../src/TextStrings.cs:379
+#: ../src/TextStrings.cs:377
 msgid "Status:"
 msgstr "状態:"
 
-#: ../src/TextStrings.cs:380
+#: ../src/TextStrings.cs:378
 msgid "Tunnel:"
 msgstr "トンネル:"
 
-#: ../src/TextStrings.cs:381
+#: ../src/TextStrings.cs:379
 msgid "Anonymous"
 msgstr "匿名"
 
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:380
 msgid "_Nickname:"
 msgstr "ニックネーム(_N):"
 
-#: ../src/TextStrings.cs:384
+#: ../src/TextStrings.cs:382
 msgid "_Name:"
 msgstr "名前(_N):"
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:383
 msgid "_Password:"
 msgstr "パスワード(_P)："
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:384
 msgid "Version:"
 msgstr "バージョン:"
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:386
 msgid "Offline"
 msgstr "オフライン"
 
-#: ../src/TextStrings.cs:389
+#: ../src/TextStrings.cs:387
 msgid "Online"
 msgstr "オンライン"
 
-#: ../src/TextStrings.cs:390
+#: ../src/TextStrings.cs:388
 msgid "Unreachable"
 msgstr "接続できません"
 
-#: ../src/TextStrings.cs:391
+#: ../src/TextStrings.cs:389
 msgid "Connected"
 msgstr "接続しました"
 
-#: ../src/TextStrings.cs:392
+#: ../src/TextStrings.cs:390
 msgid "Disconnected"
 msgstr "切断しました"
 
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:391
 msgid "Connecting..."
 msgstr "接続しています..."
 
-#: ../src/TextStrings.cs:394
+#: ../src/TextStrings.cs:392
 msgid "Starting Hamachi..."
 msgstr "Hamachi を起動しています..."
 
-#: ../src/TextStrings.cs:395
+#: ../src/TextStrings.cs:393
 msgid "Logging in..."
 msgstr "ログインしています..."
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:394
 msgid "Running tuncfg..."
 msgstr "tuncfg を実行しています..."
 
-#: ../src/TextStrings.cs:397
+#: ../src/TextStrings.cs:395
 msgid "Updating..."
 msgstr "更新しています..."
 
 #. Please use the same text and shortcut as the stock connect button.
-#: ../src/TextStrings.cs:399
+#: ../src/TextStrings.cs:397
 msgid "C_onnect (%S)"
 msgstr "(%S) に接続(_O)"
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:398
 msgid "Connect a_utomatically"
 msgstr "自動接続(_U)"
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:400
 msgid "Hamachi is not configured"
 msgstr "Hamachi が未設定です"
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:401
 msgid "You need to configure Hamachi before you can connect."
 msgstr "接続する前に Hamachi を設定する必要があります。"
 
-#: ../src/TextStrings.cs:404
+#: ../src/TextStrings.cs:402
 msgid "C_onfigure"
 msgstr "設定(_O)"
 
-#: ../src/TextStrings.cs:406
+#: ../src/TextStrings.cs:404
 msgid "Hamachi is not installed"
 msgstr "Hamachi がインストールされていません"
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:405
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Hamachi をダウンロードして手順に従いインストールしてください。"
 
-#: ../src/TextStrings.cs:408
+#: ../src/TextStrings.cs:406
 msgid "_Download"
 msgstr "ダウンロード(_D)"
 
-#: ../src/TextStrings.cs:410
+#: ../src/TextStrings.cs:408
 msgid "Members:"
 msgstr "メンバー:"
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:409
 msgid "{0} online, {1} total"
 msgstr "オンライン {0}, トータル {1}"
 
-#: ../src/TextStrings.cs:412
+#: ../src/TextStrings.cs:410
 msgid "Owner:"
 msgstr "所有者:"
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:411
 msgid "You"
 msgstr "あなた"
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:412
 msgid "Unknown"
 msgstr "不明"
 
-#: ../src/TextStrings.cs:415
+#: ../src/TextStrings.cs:413
 msgid "Unavailable"
 msgstr "利用不可"
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:414
 msgid "Awaiting approval"
 msgstr "承認待ち"
 
-#: ../src/TextStrings.cs:417
+#: ../src/TextStrings.cs:415
 msgid "Locked:"
 msgstr "ロック:"
 
-#: ../src/TextStrings.cs:418
+#: ../src/TextStrings.cs:416
 msgid "Approval:"
 msgstr "承認:"
 
-#: ../src/TextStrings.cs:419
+#: ../src/TextStrings.cs:417
 msgid "Manually"
 msgstr "手動"
 
-#: ../src/TextStrings.cs:420
+#: ../src/TextStrings.cs:418
 msgid "Automatically"
 msgstr "自動"
 
-#: ../src/TextStrings.cs:422
+#: ../src/TextStrings.cs:420
 msgid "_Client"
 msgstr "クライアント(_C)"
 
-#: ../src/TextStrings.cs:423
+#: ../src/TextStrings.cs:421
 msgid "_Edit"
 msgstr "編集(_E)"
 
-#: ../src/TextStrings.cs:424
+#: ../src/TextStrings.cs:422
 msgid "_View"
 msgstr "表示(_V)"
 
-#: ../src/TextStrings.cs:425
+#: ../src/TextStrings.cs:423
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: ../src/TextStrings.cs:427
+#: ../src/TextStrings.cs:425
 msgid "_Online Help"
 msgstr "オンラインヘルプ(_O)"
 
-#: ../src/TextStrings.cs:428
+#: ../src/TextStrings.cs:426
 msgid "_Create Network..."
 msgstr "ネットワーク作成...(_C)"
 
-#: ../src/TextStrings.cs:429
+#: ../src/TextStrings.cs:427
 msgid "_Join Network..."
 msgstr "ネットワークに参加...(_J)"
 
-#: ../src/TextStrings.cs:431
+#: ../src/TextStrings.cs:429
 msgid "_Go Online"
 msgstr "オンラインに(_G)"
 
-#: ../src/TextStrings.cs:432
+#: ../src/TextStrings.cs:430
 msgid "_Go Offline"
 msgstr "オフラインに(_G)"
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:431
 msgid "_Leave"
 msgstr "離脱する(_L)"
 
-#: ../src/TextStrings.cs:434
+#: ../src/TextStrings.cs:432
 msgid "_Locked"
 msgstr "ロック(_L)"
 
-#: ../src/TextStrings.cs:435
+#: ../src/TextStrings.cs:433
 msgid "_New Member Approval"
 msgstr "新規メンバー承認(_N)"
 
-#: ../src/TextStrings.cs:436
+#: ../src/TextStrings.cs:434
 msgid "_Automatically"
 msgstr "自動で設定する(_A)"
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:435
 msgid "_Manually"
 msgstr "自分で設定する(_M)"
 
-#: ../src/TextStrings.cs:438
+#: ../src/TextStrings.cs:436
 msgid "_Copy Network ID"
 msgstr "ネットワーク ID をコピー(_C)"
 
-#: ../src/TextStrings.cs:440
+#: ../src/TextStrings.cs:438
 msgid "_Browse Shares"
 msgstr "共有を見る(_B)"
 
-#: ../src/TextStrings.cs:441
+#: ../src/TextStrings.cs:439
 msgid "_Ping"
 msgstr "Ping を打つ(_P)"
 
-#: ../src/TextStrings.cs:442
+#: ../src/TextStrings.cs:440
 msgid "_View Remote Desktop"
 msgstr "リモートデスクトップを開く(_V)"
 
-#: ../src/TextStrings.cs:443
+#: ../src/TextStrings.cs:441
 msgid "_Approve"
 msgstr "承認(_A)"
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:442
 msgid "_Reject"
 msgstr "拒否(_R)"
 
 #. This action removes the selected member from the network.
-#: ../src/TextStrings.cs:445
+#: ../src/TextStrings.cs:443
 msgid "_Evict"
 msgstr "登録抹消(_E)"
 
-#: ../src/TextStrings.cs:446
+#: ../src/TextStrings.cs:444
 msgid "_Copy Address"
 msgstr "アドレスをコピー(_C)"
 
-#: ../src/TextStrings.cs:447
+#: ../src/TextStrings.cs:445
 msgid "Copy IPv_4 Address"
 msgstr "IPv4 アドレスをコピー(_4)"
 
-#: ../src/TextStrings.cs:448
+#: ../src/TextStrings.cs:446
 msgid "Copy IPv_6 Address"
 msgstr "IPv6 アドレスをコピー(_6)"
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:447
 msgid "_Copy Client ID"
 msgstr "クライアント ID をコピー(_C)"
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:449
 msgid "C_hange"
 msgstr "変更(_H)"
 
-#: ../src/TextStrings.cs:453
+#: ../src/TextStrings.cs:451
 msgid "Change _Nickname..."
 msgstr "ニックネームを変更(_N)..."
 
-#: ../src/TextStrings.cs:454
+#: ../src/TextStrings.cs:452
 msgid "Change Nickname"
 msgstr "ニックネームを変更"
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:453
 msgid "Please enter the nickname you want to use."
 msgstr "使いたいニックネームを入力してください。"
 
-#: ../src/TextStrings.cs:456
+#: ../src/TextStrings.cs:454
 msgid "Click to change your nickname"
 msgstr "クリックしてニックネームを変更"
 
-#: ../src/TextStrings.cs:458
+#: ../src/TextStrings.cs:456
 msgid "Change _Password..."
 msgstr "パスワードを変更(_P)"
 
-#: ../src/TextStrings.cs:459
+#: ../src/TextStrings.cs:457
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: ../src/TextStrings.cs:460
+#: ../src/TextStrings.cs:458
 msgid "Please enter the new password for this network."
 msgstr "このネットワーク用の新しいパスワードを入力してください。"
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:460
 msgid "_Account:"
 msgstr "アカウント(_A):"
 
-#: ../src/TextStrings.cs:465
+#: ../src/TextStrings.cs:463
 msgid "_Attach to Account..."
 msgstr "アカウントと関連付ける(_A)..."
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:464
 msgid "Attach to Account"
 msgstr "アカウントと関連付け"
 
-#: ../src/TextStrings.cs:467
+#: ../src/TextStrings.cs:465
 msgid "Please enter the account you want to attach this client to."
 msgstr "このクライアントと関連付けたいアカウントを入力してください。"
 
-#: ../src/TextStrings.cs:468
+#: ../src/TextStrings.cs:466
 msgid "_Include all networks created by this client"
 msgstr "このクライアントで作った全てのネットワークを含める(_I)"
 
-#: ../src/TextStrings.cs:469
+#: ../src/TextStrings.cs:467
 msgid "_Attach"
 msgstr "関連付け(_A)"
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:468
 msgid "Attaching..."
 msgstr "関連付けています..."
 
-#: ../src/TextStrings.cs:471
+#: ../src/TextStrings.cs:469
 msgid "Account not found"
 msgstr "アカウントが見つかりませんでした"
 
-#: ../src/TextStrings.cs:473
+#: ../src/TextStrings.cs:471
 msgid "_Join"
 msgstr "参加(_J)"
 
-#: ../src/TextStrings.cs:474
+#: ../src/TextStrings.cs:472
 msgid "Joining..."
 msgstr "参加しています..."
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:473
 msgid "Join Network"
 msgstr "ネットワークに参加"
 
-#: ../src/TextStrings.cs:476
+#: ../src/TextStrings.cs:474
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
@@ -406,19 +406,19 @@ msgstr ""
 "参加したいネットワークの名前と\n"
 "パスワードを入力してください。"
 
-#: ../src/TextStrings.cs:478
+#: ../src/TextStrings.cs:476
 msgid "C_reate"
 msgstr "作成(_R)"
 
-#: ../src/TextStrings.cs:479
+#: ../src/TextStrings.cs:477
 msgid "Creating..."
 msgstr "作成しています..."
 
-#: ../src/TextStrings.cs:480
+#: ../src/TextStrings.cs:478
 msgid "Create Network"
 msgstr "ネットワークの作成"
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:479
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
@@ -426,47 +426,43 @@ msgstr ""
 "作成したいネットワークの名前と\n"
 "パスワードを入力してください。"
 
-#: ../src/TextStrings.cs:483
-msgid "_Go directly online in the network"
-msgstr "ネットワークで直接オンラインになる(_G)"
-
-#: ../src/TextStrings.cs:485
+#: ../src/TextStrings.cs:481
 msgid "Network not found"
 msgstr "ネットワークが見つかりません"
 
-#: ../src/TextStrings.cs:486
+#: ../src/TextStrings.cs:482
 msgid "Invalid password"
 msgstr "パスワードが正しくありません"
 
-#: ../src/TextStrings.cs:487
+#: ../src/TextStrings.cs:483
 msgid "Network is full"
 msgstr "ネットワークが満員状態です"
 
-#: ../src/TextStrings.cs:488
+#: ../src/TextStrings.cs:484
 msgid "Network is locked"
 msgstr "ネットワークがロックされています"
 
-#: ../src/TextStrings.cs:489
+#: ../src/TextStrings.cs:485
 msgid "Network already joined"
 msgstr "既にネットワークに参加しています"
 
-#: ../src/TextStrings.cs:490
+#: ../src/TextStrings.cs:486
 msgid "Unknown error"
 msgstr "不明なエラーです"
 
-#: ../src/TextStrings.cs:491
+#: ../src/TextStrings.cs:487
 msgid "Network name too short"
 msgstr "ネットワーク名が短かすぎます"
 
-#: ../src/TextStrings.cs:492
+#: ../src/TextStrings.cs:488
 msgid "Network name is already taken"
 msgstr "そのネットワーク名は既に使用されています"
 
-#: ../src/TextStrings.cs:494
+#: ../src/TextStrings.cs:490
 msgid "Send join request?"
 msgstr "参加リクエストを送信しますか？"
 
-#: ../src/TextStrings.cs:495
+#: ../src/TextStrings.cs:491
 msgid ""
 "This network requires manual approval of new members by the owner. Would you "
 "like to send a join request?"
@@ -474,310 +470,310 @@ msgstr ""
 "このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参"
 "加リクエストを送信しますか？"
 
-#: ../src/TextStrings.cs:496
+#: ../src/TextStrings.cs:492
 msgid "Join request sent"
 msgstr "参加リクエストを送信しました"
 
-#: ../src/TextStrings.cs:498
+#: ../src/TextStrings.cs:494
 msgid "Preferences"
 msgstr "環境設定"
 
-#: ../src/TextStrings.cs:499
+#: ../src/TextStrings.cs:495
 msgid "Information"
 msgstr "情報"
 
-#: ../src/TextStrings.cs:501
+#: ../src/TextStrings.cs:497
 msgid "Delete network \"{0}\"?"
 msgstr "\"{0}\" ネットワークを削除しますか？"
 
-#: ../src/TextStrings.cs:502
+#: ../src/TextStrings.cs:498
 msgid "Are you sure you want to delete network \"{0}\"?"
 msgstr "本当に \"{0}\" ネットワークを削除していいですか？"
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:500
 msgid "Leave network \"{0}\"?"
 msgstr "\"{0}\" ネットワークから離脱しますか？"
 
-#: ../src/TextStrings.cs:505
+#: ../src/TextStrings.cs:501
 msgid "Are you sure you want to leave network \"{0}\"?"
 msgstr "本当に \"{0}\" ネットワークから離脱していいですか？"
 
-#: ../src/TextStrings.cs:507
+#: ../src/TextStrings.cs:503
 msgid "Evict member \"{0}\"?"
 msgstr "メンバー \"{0}\" を登録から抹消しますか？"
 
-#: ../src/TextStrings.cs:508
+#: ../src/TextStrings.cs:504
 msgid ""
 "Are you sure you want to evict member \"{0}\"\n"
 "from network \"{1}\"?"
 msgstr "本当にメンバー \"{0}\" を登録から抹消していいですか？"
 
-#: ../src/TextStrings.cs:510
+#: ../src/TextStrings.cs:506
 msgid "Failed deleting network \"{0}\""
 msgstr "\"{0}\" ネットワークの削除に失敗しました"
 
-#: ../src/TextStrings.cs:511
+#: ../src/TextStrings.cs:507
 msgid "You are not the owner of this network."
 msgstr "あなたはこのネットワークの所有者ではありません。"
 
-#: ../src/TextStrings.cs:513
+#: ../src/TextStrings.cs:509
 msgid "Failed leaving network \"{0}\""
 msgstr "\"{0}\" ネットワークからの離脱に失敗"
 
-#: ../src/TextStrings.cs:514
+#: ../src/TextStrings.cs:510
 msgid "You are the owner of this network."
 msgstr "あなたはこのネットワークの所有者です。"
 
-#: ../src/TextStrings.cs:515
+#: ../src/TextStrings.cs:511
 msgid "You don't have permission to leave this network."
 msgstr "あなたにはこのネットワークから離脱する権限がありません。"
 
-#: ../src/TextStrings.cs:517
+#: ../src/TextStrings.cs:513
 msgid "Failed evicting member \"{0}\""
 msgstr "メンバー \"{0}\" の登録抹消失敗"
 
-#: ../src/TextStrings.cs:518
+#: ../src/TextStrings.cs:514
 msgid "You are not the owner of network \"{0}\"."
 msgstr "あなたは \"{0}\" ネットワークの所有者ではありません。"
 
-#: ../src/TextStrings.cs:520
+#: ../src/TextStrings.cs:516
 msgid "General"
 msgstr "一般"
 
 #. In this context meaning "work environment".
-#: ../src/TextStrings.cs:521
+#: ../src/TextStrings.cs:517
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: ../src/TextStrings.cs:522
+#: ../src/TextStrings.cs:518
 msgid "Commands"
 msgstr "コマンド"
 
-#: ../src/TextStrings.cs:524
+#: ../src/TextStrings.cs:520
 msgid "Notification Area"
 msgstr "通知エリア"
 
-#: ../src/TextStrings.cs:525
+#: ../src/TextStrings.cs:521
 msgid "Behavior"
 msgstr "動作"
 
-#: ../src/TextStrings.cs:527
+#: ../src/TextStrings.cs:523
 msgid "_Account data folder:"
 msgstr "アカウントデータフォルダ(_A)"
 
-#: ../src/TextStrings.cs:528
+#: ../src/TextStrings.cs:524
 msgid "Choose Folder"
 msgstr "フォルダを選択して下さい"
 
-#: ../src/TextStrings.cs:530
+#: ../src/TextStrings.cs:526
 msgid "_Protocol:"
 msgstr "プロトコル(_P):"
 
-#: ../src/TextStrings.cs:531
+#: ../src/TextStrings.cs:527
 msgid "Both IPv4 and IPv6"
 msgstr "IPv4 と IPv6 の両方"
 
-#: ../src/TextStrings.cs:532
+#: ../src/TextStrings.cs:528
 msgid "IPv4 only"
 msgstr "IPv4 のみ"
 
-#: ../src/TextStrings.cs:533
+#: ../src/TextStrings.cs:529
 msgid "IPv6 only"
 msgstr "IPv6 のみ"
 
-#: ../src/TextStrings.cs:535
+#: ../src/TextStrings.cs:531
 msgid "_Update Network List"
 msgstr "ネットワーク一覧を更新(_U)"
 
-#: ../src/TextStrings.cs:536
+#: ../src/TextStrings.cs:532
 msgid "Show Alt_ernating Row Colors"
 msgstr "一行置きに色を変えて表示(_E)"
 
-#: ../src/TextStrings.cs:537
+#: ../src/TextStrings.cs:533
 msgid "_Compact Layout"
 msgstr "コンパクトなレイアウト(_C)"
 
-#: ../src/TextStrings.cs:538
+#: ../src/TextStrings.cs:534
 msgid "_Large Layout"
 msgstr "広いレイアウト(_L)"
 
-#: ../src/TextStrings.cs:539
+#: ../src/TextStrings.cs:535
 msgid "Show _Offline Members"
 msgstr "オフラインのメンバーを表示(_O)"
 
-#: ../src/TextStrings.cs:540
+#: ../src/TextStrings.cs:536
 msgid "Sort by _Name"
 msgstr "名前順で並び替え(_N)"
 
-#: ../src/TextStrings.cs:541
+#: ../src/TextStrings.cs:537
 msgid "Sort by _Status"
 msgstr "状態で並び替え(_S)"
 
-#: ../src/TextStrings.cs:542
+#: ../src/TextStrings.cs:538
 msgid "St_atusbar"
 msgstr "ステータスバー(_A)"
 
-#: ../src/TextStrings.cs:544
+#: ../src/TextStrings.cs:540
 msgid "_Show Haguichi in the notification area"
 msgstr "通知エリアで Haguichi を表示(_S)"
 
-#: ../src/TextStrings.cs:545
+#: ../src/TextStrings.cs:541
 msgid "Start Haguichi _minimized in the notification area"
 msgstr "通知エリア内で最小化して Haguichi を開始する(_M)"
 
-#: ../src/TextStrings.cs:547
+#: ../src/TextStrings.cs:543
 msgid "C_onnect automatically on startup"
 msgstr "起動時に自動で接続する(_C)"
 
-#: ../src/TextStrings.cs:548
+#: ../src/TextStrings.cs:544
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "接続が切れたら自動で再接続する(_R)"
 
-#: ../src/TextStrings.cs:549
+#: ../src/TextStrings.cs:545
 msgid "_Disconnect on quit"
 msgstr "終了時に接続を切る(_D)"
 
-#: ../src/TextStrings.cs:551
+#: ../src/TextStrings.cs:547
 msgid "Display notification when the connection is l_ost"
 msgstr "接続が切れたら通知を表示する(_O)"
 
-#: ../src/TextStrings.cs:552
+#: ../src/TextStrings.cs:548
 msgid "Display notification when a member _joins"
 msgstr "メンバーが参加したら通知を表示する(_J)"
 
-#: ../src/TextStrings.cs:553
+#: ../src/TextStrings.cs:549
 msgid "Display notification when a member _leaves"
 msgstr "メンバーが離脱したら通知を表示する(_L)"
 
-#: ../src/TextStrings.cs:554
+#: ../src/TextStrings.cs:550
 msgid "Display notification when a member comes o_nline"
 msgstr "メンバーがオンラインになったら通知を表示する(_N)"
 
-#: ../src/TextStrings.cs:555
+#: ../src/TextStrings.cs:551
 msgid "Display notification when a member goes o_ffline"
 msgstr "メンバーがオフラインになったら通知を表示する(_F)"
 
-#: ../src/TextStrings.cs:557
+#: ../src/TextStrings.cs:553
 msgid "Error connecting"
 msgstr "接続エラー"
 
-#: ../src/TextStrings.cs:558
+#: ../src/TextStrings.cs:554
 msgid "Hamachi login failed"
 msgstr "Hamachi のログインに失敗しました"
 
-#: ../src/TextStrings.cs:559
+#: ../src/TextStrings.cs:555
 msgid "No internet connection"
 msgstr "インターネットに接続できません"
 
-#: ../src/TextStrings.cs:561
+#: ../src/TextStrings.cs:557
 msgid "Hamachi lost connection"
 msgstr "Hamachi の接続が切れました"
 
-#: ../src/TextStrings.cs:562
+#: ../src/TextStrings.cs:558
 msgid "Member online"
 msgstr "オンラインのメンバー"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: ../src/TextStrings.cs:563
+#: ../src/TextStrings.cs:559
 msgid "{0} came online in the network {1}"
 msgstr "{1} ネットワークで {0} がオンラインになりました"
 
-#: ../src/TextStrings.cs:564
+#: ../src/TextStrings.cs:560
 msgid "Member offline"
 msgstr "オフラインのメンバー"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: ../src/TextStrings.cs:565
+#: ../src/TextStrings.cs:561
 msgid "{0} went offline in the network {1}"
 msgstr "{1} ネットワークで {0} がオフラインになりました"
 
-#: ../src/TextStrings.cs:566
+#: ../src/TextStrings.cs:562
 msgid "Member joined"
 msgstr "メンバーが参加しました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: ../src/TextStrings.cs:567
+#: ../src/TextStrings.cs:563
 msgid "{0} joined the network {1}"
 msgstr "{1} ネットワークに {0} が参加しました"
 
-#: ../src/TextStrings.cs:568
+#: ../src/TextStrings.cs:564
 msgid "Member left"
 msgstr "メンバーが離脱しました"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: ../src/TextStrings.cs:569
+#: ../src/TextStrings.cs:565
 msgid "{0} left the network {1}"
 msgstr "{1} ネットワークから {0} が離脱しました"
 
-#: ../src/TextStrings.cs:571
+#: ../src/TextStrings.cs:567
 msgid "A_vailable commands:"
 msgstr "利用可能なコマンド(_A):"
 
-#: ../src/TextStrings.cs:572
+#: ../src/TextStrings.cs:568
 msgid "Command"
 msgstr "コマンド"
 
-#: ../src/TextStrings.cs:573
+#: ../src/TextStrings.cs:569
 msgid "Available"
 msgstr "利用可能"
 
-#: ../src/TextStrings.cs:575
+#: ../src/TextStrings.cs:571
 msgid "Add Command"
 msgstr "コマンドを追加"
 
-#: ../src/TextStrings.cs:576
+#: ../src/TextStrings.cs:572
 msgid "Edit Command"
 msgstr "コマンドの編集"
 
-#: ../src/TextStrings.cs:577
+#: ../src/TextStrings.cs:573
 msgid "_Label:"
 msgstr "ラベル(_L):"
 
-#: ../src/TextStrings.cs:578
+#: ../src/TextStrings.cs:574
 msgid "_Command:"
 msgstr "コマンド(_C):"
 
-#: ../src/TextStrings.cs:579
+#: ../src/TextStrings.cs:575
 msgid "IPv_4 command:"
 msgstr "IPv4 コマンド(_4):"
 
-#: ../src/TextStrings.cs:580
+#: ../src/TextStrings.cs:576
 msgid "IPv_6 command:"
 msgstr "IPv6 コマンド(_6):"
 
-#: ../src/TextStrings.cs:581
+#: ../src/TextStrings.cs:577
 msgid "Use %A for address and %N for nickname"
 msgstr "アドレスとして %A を使い、ニックネームとして %N を使う"
 
-#: ../src/TextStrings.cs:582
+#: ../src/TextStrings.cs:578
 msgid "_Priority:"
 msgstr "優先度(_P):"
 
-#: ../src/TextStrings.cs:584
+#: ../src/TextStrings.cs:580
 msgid "Click to choose an icon"
 msgstr "クリックしてアイコンを選択"
 
-#: ../src/TextStrings.cs:585
+#: ../src/TextStrings.cs:581
 msgid "_No Icon"
 msgstr "アイコンなし(_N)"
 
-#: ../src/TextStrings.cs:587
+#: ../src/TextStrings.cs:583
 msgid "Default"
 msgstr "既定"
 
-#: ../src/TextStrings.cs:588
+#: ../src/TextStrings.cs:584
 msgid "_Default"
 msgstr "既定(_D)"
 
-#: ../src/TextStrings.cs:590
+#: ../src/TextStrings.cs:586
 msgid "Restore the default commands"
 msgstr "既定のコマンドに戻す"
 
-#: ../src/TextStrings.cs:591
+#: ../src/TextStrings.cs:587
 msgid "Revert changes?"
 msgstr "変更を取り消しますか？"
 
-#: ../src/TextStrings.cs:592
+#: ../src/TextStrings.cs:588
 msgid ""
 "Are you sure you wish to revert all changes\n"
 "and thereby restore the default commands?"
@@ -785,44 +781,47 @@ msgstr ""
 "本当にすべての変更を取り消し\n"
 "既定コマンドに戻してしまっていいですか？"
 
-#: ../src/TextStrings.cs:594
+#: ../src/TextStrings.cs:590
 msgid "Move up"
 msgstr "上へ"
 
-#: ../src/TextStrings.cs:595
+#: ../src/TextStrings.cs:591
 msgid "Move down"
 msgstr "下へ"
 
-#: ../src/TextStrings.cs:603
+#: ../src/TextStrings.cs:599
 msgid "_Update the network list every %S second"
 msgid_plural "_Update the network list every %S seconds"
 msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:611
+#: ../src/TextStrings.cs:607
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:619
+#: ../src/TextStrings.cs:615
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:627
+#: ../src/TextStrings.cs:623
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} が参加しました"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:635
+#: ../src/TextStrings.cs:631
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "ネットワークで直接オンラインになる(_G)"
 
 #~ msgid "Choose Icon"
 #~ msgstr "アイコンを選択"
