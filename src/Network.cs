@@ -211,6 +211,8 @@ public class Network
         }
         else if ( Hamachi.ApiVersion == 1 )
         {
+            Thread.Sleep ( new Random ().Next ( 0, 4000 ) ); // Random sleep to create some time space between multiple evict commands 
+            
             output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( this.Id ) + "\" 5.5.5.5" );
             Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
     
