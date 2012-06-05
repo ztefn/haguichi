@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-01-25 23:53:03+0100\n"
-"PO-Revision-Date: 2011-10-15 17:50+0000\n"
+"POT-Creation-Date: 2012-01-25 23:53+0100\n"
+"PO-Revision-Date: 2012-06-04 20:55+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-10-16 10:40+0000\n"
-"X-Generator: Launchpad (build 14124)\n"
+"X-Launchpad-Export-Date: 2012-06-05 17:04+0000\n"
+"X-Generator: Launchpad (build 15353)\n"
 
 #: ../src/TextStrings.cs:358
 msgid "Haguichi Website"
@@ -46,7 +46,7 @@ msgstr "Ne"
 
 #: ../src/TextStrings.cs:367
 msgid "Please enter your password to proceed."
-msgstr ""
+msgstr "Pro pokračování prosím vložte své heslo."
 
 #: ../src/TextStrings.cs:369
 msgid "_Hamachi output"
@@ -380,7 +380,7 @@ msgstr "_Připojit"
 
 #: ../src/TextStrings.cs:468
 msgid "Attaching..."
-msgstr ""
+msgstr "Připojuji..."
 
 #: ../src/TextStrings.cs:469
 msgid "Account not found"
@@ -830,12 +830,6 @@ msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
-#~ msgid "_Go directly online in the network"
-#~ msgstr "_Jít přímo online do sítě"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Vybrat ikonu"
-
 #~ msgid "Getting nicknames..."
 #~ msgstr "Získávání přezdívek..."
 
@@ -912,6 +906,12 @@ msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
 #~ msgid "Not installed"
 #~ msgstr "Nenainstalováno"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Vybrat ikonu"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Jít přímo online do sítě"
 
 #~ msgid "_Run"
 #~ msgstr "_Spustit"
