@@ -51,6 +51,7 @@ public static class Hamachi
          *  <= 0.9.9.9-20 : 1
          *  >= 2.0.0.11   : 2
          *  >= 2.1.0.17   : 3
+         *  >= 2.1.0.68   : 4
          * 
          */
         
@@ -71,7 +72,12 @@ public static class Hamachi
         
         if ( output.StartsWith ( "LogMeIn Hamachi, a zero-config virtual private networking utility" ) )
         {
-            if ( output.Contains ( "set-ip-mode" ) )
+            if ( output.Contains ( "vpn-alias" ) )
+            {
+                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "4" );
+                return 4;
+            }
+            else if ( output.Contains ( "set-ip-mode" ) )
             {
                 Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineApiVersion", "3" );
                 return 3;
@@ -665,13 +671,13 @@ public static class Hamachi
             output  = " * [" + RandomNetworkId () + "]  Contributors               \n";
             output += "       " + RandomClientId () + "   Enrico                     " + RandomAddress () + "\n";
             output += "     x " + RandomClientId () + "   Holmen                     " + RandomAddress () + "\n";
-            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + " 2620:9b::753:b470\n";
+            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 5.255.255.255  2620:9b::753:b470    direct      UDP  170.10.240.140:12345\n";
             output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
             output += "     ? " + RandomClientId () + " \n";
-            output += " * [" + RandomNetworkId () + "]  Portal Ubuntu              \n";
-            output += "     x 092-466-858   Soker                      " + RandomAddress () + "\n";
-            output += "   [" + RandomNetworkId () + "]  WebUpd8                    \n";
-            output += "       094-409-761   Andrew                     " + RandomAddress () + "\n";
+            output += " * [" + RandomNetworkId () + "]Portal Ubuntu  capacity: 2/5, subscription type: Free, owner: Soker (092-466-858)\n";
+            output += "     x 092-466-858   Soker                      " + RandomAddress () + " 2146:0d::987:a654\n";
+            output += "   [" + RandomNetworkId () + "]WebUpd8  capacity: 2/20, subscription type: Paid, owner: account@logmein.com\n";
+            output += "       094-409-761   Andrew                     " + RandomAddress () + "  alias: not set                           \n";
             output += "     * " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
         }
         else
@@ -688,8 +694,8 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "[ ]+(?<name>.*)" );
-            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?$" );
+            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+), subscription type: (?<subscription>[A-Za-z]+), owner: (?<owner>.*))?$" );
+            normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<alias>alias: ([0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
         else
