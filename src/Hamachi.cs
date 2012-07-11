@@ -756,7 +756,7 @@ public static class Hamachi
                     }
                     
                 }
-                else // Line contains normal member
+                else if ( normalMemberRegex.IsMatch ( s ) ) // Line contains normal member
                 {
                     
                     Status status = new Status ( normalMemberRegex.Match ( s ).Groups["status"].ToString () );
