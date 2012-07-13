@@ -676,7 +676,7 @@ public static class Hamachi
             output += "     ? " + RandomClientId () + " \n";
             output += " * [" + RandomNetworkId () + "]Portal Ubuntu  capacity: 2/5, subscription type: Free, owner: Soker (092-466-858)\n";
             output += "     x 092-466-858   Soker                      " + RandomAddress () + " 2146:0d::987:a654\n";
-            output += "   [" + RandomNetworkId () + "]WebUpd8  capacity: 2/20, subscription type: Paid, owner: account@logmein.com\n";
+            output += "   [" + RandomNetworkId () + "]WebUpd8  capacity: 2/20, subscription type: Multi-network, owner: account@logmein.com\n";
             output += "       094-409-761   Andrew                     " + RandomAddress () + "  alias: not set                           \n";
             output += "     * " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
         }
@@ -694,7 +694,7 @@ public static class Hamachi
         
         if ( Hamachi.ApiVersion > 1 )
         {
-            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+), subscription type: (?<subscription>[A-Za-z]+), owner: (?<owner>.*))?$" );
+            networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+), subscription type: (?<subscription>[^,]+), owner: (?<owner>.*))?$" );
             normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<alias>alias: ([0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?$" );
             unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         }
