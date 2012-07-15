@@ -34,6 +34,7 @@ public class Network
     public string OwnerId;
     public string Lock;
     public string Approve;
+    public int Capacity;
     
     public string NameSortString;
     public string StatusSortString;
@@ -49,17 +50,18 @@ public class Network
     }
     
     
-    public Network ( Status status, string id, string name )
+    public Network ( Status status, string id, string name, int capacity )
     {
         
-        this.Status  = status;
-        this.Id      = id;
-        this.Name    = name;
-        this.Members = new ArrayList();
-        this.IsOwner = -1;
-        this.OwnerId = "";
-        this.Lock    = "";
-        this.Approve = "";
+        this.Status   = status;
+        this.Id       = id;
+        this.Name     = name;
+        this.Members  = new ArrayList();
+        this.IsOwner  = -1;
+        this.OwnerId  = "";
+        this.Lock     = "";
+        this.Approve  = "";
+        this.Capacity = capacity;
         
         SetSortStrings ();
         

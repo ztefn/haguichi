@@ -44,7 +44,7 @@ public class Status
     {
         
         SetStatus ( status );
-        ConnectionType = connection;
+        SetConnectionType ( connection );
         
     }
     
@@ -80,6 +80,23 @@ public class Status
     }
     
     
+    private void SetConnectionType ( string connection )
+    {
+        
+        ConnectionType = "";
+        
+        if ( connection == "direct" )
+        {
+            ConnectionType = TextStrings.direct;
+        }
+        else if ( connection.Contains ( "via " ) )
+        {
+            ConnectionType = TextStrings.relayed;
+        }
+        
+    }
+    
+    
     public Pixbuf GetPixbuf ( int size )
     {
         
@@ -106,7 +123,7 @@ public class Status
     private Pixbuf GetPixbufOnline ( int size )
     {
         
-        if ( ConnectionType.Contains ( "via " ) )
+        if ( ConnectionType == TextStrings.relayed )
         {
             return IconTheme.Default.LoadIcon ( "haguichi-node-online-relayed", size, IconLookupFlags.UseBuiltin );
         }

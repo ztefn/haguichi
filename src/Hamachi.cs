@@ -676,7 +676,7 @@ public static class Hamachi
             output += "     ? " + RandomClientId () + " \n";
             output += " * [" + RandomNetworkId () + "]Portal Ubuntu  capacity: 2/5, subscription type: Free, owner: Soker (092-466-858)\n";
             output += "     x 092-466-858   Soker                      " + RandomAddress () + " 2146:0d::987:a654\n";
-            output += "   [" + RandomNetworkId () + "]WebUpd8  capacity: 2/20, subscription type: Multi-network, owner: account@logmein.com\n";
+            output += "   [" + RandomNetworkId () + "]WebUpd8  capacity: 2/32, subscription type: Multi-network, owner: account@logmein.com\n";
             output += "       094-409-761   Andrew                     " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   MastroPino                 " + RandomAddress () + "\n";
         }
@@ -718,6 +718,9 @@ public static class Hamachi
                     string id     = networkRegex.Match ( s ).Groups["id"].ToString ();
                     string name   = id;
                     
+                    int capacity;
+                    Int32.TryParse ( networkRegex.Match ( s ).Groups["capacity"].ToString (), out capacity );
+                    
                     try
                     {
                         name = networkRegex.Match ( s ).Groups["name"].ToString ().TrimEnd ();
@@ -732,7 +735,7 @@ public static class Hamachi
                         // No name
                     }
 
-                    Network network = new Network ( status, id, name );
+                    Network network = new Network ( status, id, name, capacity );
                     networks.Add ( network );
                     
                     curNetworkId = id;

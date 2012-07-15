@@ -210,17 +210,23 @@ public class NetworkView : TreeView
                 
                 network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
                 
-                string idString      = "";
-                string ownerString;
-                string countString   = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
-                string memberString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
-                string lockString    = "";
-                string approveString = "";
-                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
+                string idString       = "";
+                string countString    = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
+                string memberString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
+                string capacityString = "";
+                string ownerString    = "";
+                string lockString     = "";
+                string approveString  = "";
+                string statusString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
                 
                 if ( Hamachi.ApiVersion > 1 )
                 {
                     idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
+                }
+                
+                if ( network.Capacity > 0 )
+                {
+                    capacityString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.capacity, network.Capacity );
                 }
                 
                 string ownerNick = network.ReturnOwnerNick ();
@@ -262,7 +268,7 @@ public class NetworkView : TreeView
                     approveString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.approval, TextStrings.automatically );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}</span>", Markup.EscapeText ( network.Name ), idString, memberString, ownerString, approveString, lockString, statusString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}{7}</span>", Markup.EscapeText ( network.Name ), idString, memberString, capacityString, ownerString, approveString, lockString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -286,10 +292,11 @@ public class NetworkView : TreeView
             {
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
-                string clientString  = "";
-                string addressString = "";
-                string tunnelString  = "";
-                string statusString  = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
+                string clientString     = "";
+                string addressString    = "";
+                string tunnelString     = "";
+                string connectionString = "";
+                string statusString     = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
                 
                 if ( Hamachi.ApiVersion >= 2 )
                 {
@@ -318,7 +325,12 @@ public class NetworkView : TreeView
                     tunnelString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.tunnel, member.Tunnel );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}</span>", Markup.EscapeText ( member.Nick ), clientString, addressString, tunnelString, statusString );
+                if ( member.Status.ConnectionType != "" )
+                {
+                    connectionString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.connection, member.Status.ConnectionType );
+                }
+                
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}</span>", Markup.EscapeText ( member.Nick ), clientString, addressString, tunnelString, connectionString, statusString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -683,7 +695,8 @@ public class NetworkView : TreeView
             template = template.Replace ( "%S",   "{2}" );
             template = template.Replace ( "%T",   "{3}" );
             template = template.Replace ( "%O",   "{4}" );
-            template = template.Replace ( "<br>", "{5}" );
+            template = template.Replace ( "%CAP", "{5}" );
+            template = template.Replace ( "<br>", "{6}" );
             
             if ( network.IsOwner == 1 )
             {
@@ -702,8 +715,9 @@ public class NetworkView : TreeView
                                               network.Id,
                                               name,
                                               network.Status.statusString,
-                                              memberCount.ToString (),
-                                              memberOnlineCount.ToString (),
+                                              memberCount,
+                                              memberOnlineCount,
+                                              network.Capacity,
                                               "\n" );
             
             if ( network.Status.statusInt == 0 )
@@ -732,7 +746,8 @@ public class NetworkView : TreeView
             template = template.Replace ( "%IP4", "{3}" );
             template = template.Replace ( "%IP6", "{4}" );
             template = template.Replace ( "%S",   "{5}" );
-            template = template.Replace ( "<br>", "{6}" );
+            template = template.Replace ( "%CX",  "{6}" );
+            template = template.Replace ( "<br>", "{7}" );
             
             if ( network.OwnerId == member.ClientId )
             {
@@ -769,6 +784,7 @@ public class NetworkView : TreeView
                                               member.IPv4,
                                               member.IPv6,
                                               member.Status.statusString,
+                                              member.Status.ConnectionType,
                                               "\n" );
             
             if ( member.Status.statusInt == 0 )

@@ -138,6 +138,9 @@ Türkçe (tr)
     public static string networkId;
     public static string status;
     public static string tunnel;
+    public static string connection;
+    public static string direct;
+    public static string relayed;
     public static string anonymous;
     public static string nickLabel;
     public static string nick;
@@ -178,6 +181,7 @@ Türkçe (tr)
     public static string approval;
     public static string manually;
     public static string automatically;
+    public static string capacity;
     
     public static string clientLabel;
     public static string editLabel;
@@ -377,6 +381,9 @@ Türkçe (tr)
         networkId                           = Catalog.GetString ( "Network ID:" );
         status                              = Catalog.GetString ( "Status:" );
         tunnel                              = Catalog.GetString ( "Tunnel:" );
+        connection                          = Catalog.GetString ( "Connection:" );
+        direct                              = Catalog.GetString ( "Direct" );
+        relayed                             = Catalog.GetString ( "Relayed" );
         anonymous                           = Catalog.GetString ( "Anonymous" );
         nickLabel                           = Catalog.GetString ( "_Nickname:" );
         nick                                = Utilities.RemoveMnemonics ( nickLabel ); // "Nickname:"
@@ -417,6 +424,7 @@ Türkçe (tr)
         approval                            = Catalog.GetString ( "Approval:" );
         manually                            = Catalog.GetString ( "Manually" );
         automatically                       = Catalog.GetString ( "Automatically" );
+        capacity                            = Catalog.GetString ( "Capacity:" );
         
         clientLabel                         = Catalog.GetString ( "_Client" );
         editLabel                           = Catalog.GetString ( "_Edit" );

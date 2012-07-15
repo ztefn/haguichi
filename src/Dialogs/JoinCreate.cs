@@ -340,7 +340,7 @@ namespace Dialogs
             {
                 Application.Invoke ( delegate
                 {
-                    Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName );
+                    Network network = new Network ( new Status ( "*" ), Hamachi.RandomNetworkId (), this.NetworkName, 5 );
                     MainWindow.networkView.AddNetwork ( network );
                     
                     Dismiss ();
