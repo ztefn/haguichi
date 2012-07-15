@@ -242,6 +242,18 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <LogicalName>18x18.node-unreachable</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-online-relayed.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-online-relayed.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>12x12.node-online-relayed</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-online-relayed.png">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-online-relayed.png</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <LogicalName>18x18.node-online-relayed</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\Command.cs" />

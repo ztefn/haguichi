@@ -28,9 +28,28 @@ public class Status
     public int    statusInt;
     public string statusString;
     public string statusSortable;
-
+    public string ConnectionType;
+    
     
     public Status ( string status )
+    {
+        
+        SetStatus ( status );
+        ConnectionType = "";
+        
+    }
+    
+    
+    public Status ( string status, string connection )
+    {
+        
+        SetStatus ( status );
+        ConnectionType = connection;
+        
+    }
+    
+    
+    public void SetStatus ( string status )
     {
         
         if ( status == " " )
@@ -84,38 +103,22 @@ public class Status
     }
     
     
-    public static Pixbuf GetPixbuf ( int size, int statusInt )
+    private Pixbuf GetPixbufOnline ( int size )
     {
         
-        Pixbuf statusPix = GetPixbufOffline ( size );
-        
-        if ( statusInt == 1 )
+        if ( ConnectionType.Contains ( "via " ) )
         {
-            statusPix = GetPixbufOnline ( size );
+            return IconTheme.Default.LoadIcon ( "haguichi-node-online-relayed", size, IconLookupFlags.UseBuiltin );
         }
-        if ( statusInt == 2 )
+        else
         {
-            statusPix = GetPixbufUnreachable ( size );
+            return IconTheme.Default.LoadIcon ( "haguichi-node-online", size, IconLookupFlags.UseBuiltin );
         }
-        if ( statusInt == 3 )
-        {
-            statusPix = GetPixbufUnapproved ( size );
-        }
-        
-        return statusPix;
         
     }
     
     
-    public static Pixbuf GetPixbufOnline ( int size )
-    {
-        
-        return IconTheme.Default.LoadIcon ( "haguichi-node-online", size, IconLookupFlags.UseBuiltin );
-        
-    }
-    
-    
-    public static Pixbuf GetPixbufOffline ( int size )
+    private Pixbuf GetPixbufOffline ( int size )
     {
         
         return IconTheme.Default.LoadIcon ( "haguichi-node-offline", size, IconLookupFlags.UseBuiltin );
@@ -123,7 +126,7 @@ public class Status
     }
     
     
-    public static Pixbuf GetPixbufUnreachable ( int size )
+    private Pixbuf GetPixbufUnreachable ( int size )
     {
         
         return IconTheme.Default.LoadIcon ( "haguichi-node-unreachable", size, IconLookupFlags.UseBuiltin );
@@ -131,7 +134,7 @@ public class Status
     }
     
     
-    public static Pixbuf GetPixbufUnapproved ( int size )
+    private Pixbuf GetPixbufUnapproved ( int size )
     {
         
         return IconTheme.Default.LoadIcon ( "haguichi-node-unapproved", size, IconLookupFlags.UseBuiltin );

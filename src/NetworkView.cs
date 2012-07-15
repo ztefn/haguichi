@@ -1039,8 +1039,17 @@ public class NetworkView : TreeView
         
         store.Foreach( ( model, path, iter ) =>
         {
-            int statusInt = ( int ) store.GetValue ( iter, statusColumn );
-            store.SetValue ( iter, iconColumn, Status.GetPixbuf ( size, statusInt ) );
+            Network network = ( Network ) model.GetValue ( iter, networkColumn );
+            Member member = ( Member ) model.GetValue ( iter, memberColumn );
+    
+            if ( IsNetwork ( model, iter ) )
+            {
+                store.SetValue ( iter, iconColumn, network.Status.GetPixbuf ( size ) );
+            }
+            else
+            {
+                store.SetValue ( iter, iconColumn, member.Status.GetPixbuf ( size ) );
+            }
             
             return false; // Continue
         });
