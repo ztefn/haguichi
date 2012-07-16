@@ -717,6 +717,7 @@ public static class Hamachi
                     Status status = new Status ( networkRegex.Match ( s ).Groups["status"].ToString () );
                     string id     = networkRegex.Match ( s ).Groups["id"].ToString ();
                     string name   = id;
+                    string owner  = networkRegex.Match ( s ).Groups["owner"].ToString ();
                     
                     int capacity;
                     Int32.TryParse ( networkRegex.Match ( s ).Groups["capacity"].ToString (), out capacity );
@@ -735,7 +736,7 @@ public static class Hamachi
                         // No name
                     }
 
-                    Network network = new Network ( status, id, name, capacity );
+                    Network network = new Network ( status, id, name, owner, capacity );
                     networks.Add ( network );
                     
                     curNetworkId = id;

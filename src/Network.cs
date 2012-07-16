@@ -50,7 +50,7 @@ public class Network
     }
     
     
-    public Network ( Status status, string id, string name, int capacity )
+    public Network ( Status status, string id, string name, string owner, int capacity )
     {
         
         this.Status   = status;
@@ -58,7 +58,7 @@ public class Network
         this.Name     = name;
         this.Members  = new ArrayList();
         this.IsOwner  = -1;
-        this.OwnerId  = "";
+        this.OwnerId  = owner;
         this.Lock     = "";
         this.Approve  = "";
         this.Capacity = capacity;
@@ -196,7 +196,12 @@ public class Network
                 }
                 Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
                 
-                this.OwnerId = Hamachi.Retrieve ( output, "owner" );
+                string owner = Hamachi.Retrieve ( output, "owner" );
+                if ( owner != "" )
+                {
+                    this.OwnerId = owner;
+                }
+                
                 this.Lock = Hamachi.Retrieve ( output, "status" );
                 this.Approve = Hamachi.Retrieve ( output, "approve" );
                 
