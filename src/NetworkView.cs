@@ -210,6 +210,7 @@ public class NetworkView : TreeView
                 
                 network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
                 
+                string statusString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
                 string idString       = "";
                 string countString    = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
                 string memberString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
@@ -217,16 +218,10 @@ public class NetworkView : TreeView
                 string ownerString    = "";
                 string lockString     = "";
                 string approveString  = "";
-                string statusString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
                 
                 if ( Hamachi.ApiVersion > 1 )
                 {
                     idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
-                }
-                
-                if ( network.Capacity > 0 )
-                {
-                    capacityString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.capacity, network.Capacity );
                 }
                 
                 string ownerNick = network.ReturnOwnerNick ();
@@ -246,6 +241,11 @@ public class NetworkView : TreeView
                 else
                 {
                     ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
+                }
+                
+                if ( network.Capacity > 0 )
+                {
+                    capacityString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.capacity, network.Capacity );
                 }
                 
                 if ( network.Lock == "locked" )
@@ -268,7 +268,7 @@ public class NetworkView : TreeView
                     approveString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.approval, TextStrings.automatically );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}{7}</span>", Markup.EscapeText ( network.Name ), idString, memberString, capacityString, ownerString, approveString, lockString, statusString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}{6}{7}</span>", Markup.EscapeText ( network.Name ), statusString, idString, memberString, ownerString, capacityString, approveString, lockString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
@@ -292,11 +292,11 @@ public class NetworkView : TreeView
             {
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
+                string statusString     = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
                 string clientString     = "";
                 string addressString    = "";
                 string tunnelString     = "";
                 string connectionString = "";
-                string statusString     = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
                 
                 if ( Hamachi.ApiVersion >= 2 )
                 {
@@ -330,7 +330,7 @@ public class NetworkView : TreeView
                     connectionString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.connection, member.Status.ConnectionType );
                 }
                 
-                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}</span>", Markup.EscapeText ( member.Nick ), clientString, addressString, tunnelString, connectionString, statusString );
+                tipLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span><span size=\"smaller\">{1}{2}{3}{4}{5}</span>", Markup.EscapeText ( member.Nick ), statusString, clientString, addressString, tunnelString, connectionString );
                 tipLabel.Xpad   = 6;
                 tipLabel.Ypad   = 3;
                 
