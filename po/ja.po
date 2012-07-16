@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-15 20:12:36+0200\n"
-"PO-Revision-Date: 2011-10-10 00:50+0000\n"
-"Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-16 14:33+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
-"X-Generator: Launchpad (build 14123)\n"
+"X-Launchpad-Export-Date: 2012-07-16 18:36+0000\n"
+"X-Generator: Launchpad (build 15627)\n"
 
 #: ../src/TextStrings.cs:362
 msgid "Haguichi Website"
@@ -85,17 +85,16 @@ msgid "Tunnel:"
 msgstr "トンネル:"
 
 #: ../src/TextStrings.cs:383
-#, fuzzy
 msgid "Connection:"
-msgstr "接続しています..."
+msgstr "接続状態:"
 
 #: ../src/TextStrings.cs:384
 msgid "Direct"
-msgstr ""
+msgstr "直接接続"
 
 #: ../src/TextStrings.cs:385
 msgid "Relayed"
-msgstr ""
+msgstr "リレー接続"
 
 #: ../src/TextStrings.cs:386
 msgid "Anonymous"
@@ -236,7 +235,7 @@ msgstr "自動"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "最大同時接続数:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -483,9 +482,7 @@ msgstr "参加リクエストを送信しますか？"
 msgid ""
 "This network requires manual approval of new members by the owner. Would you "
 "like to send a join request?"
-msgstr ""
-"このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参"
-"加リクエストを送信しますか？"
+msgstr "このネットワークの新規メンバーになるには所有者による手動の承認が必要です。 参加リクエストを送信しますか？"
 
 #: ../src/TextStrings.cs:500
 msgid "Join request sent"
@@ -815,15 +812,13 @@ msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
 #: ../src/TextStrings.cs:615
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:623
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:631
@@ -836,12 +831,6 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} 
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
-
-#~ msgid "_Go directly online in the network"
-#~ msgstr "ネットワークで直接オンラインになる(_G)"
-
-#~ msgid "Choose Icon"
-#~ msgstr "アイコンを選択"
 
 #~ msgid "Nickname:"
 #~ msgstr "ニックネーム:"
@@ -860,6 +849,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "Changing..."
 #~ msgstr "変更しています..."
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "ネットワークで直接オンラインになる(_G)"
 
 #~ msgid "Failed deleting network '{0}'"
 #~ msgstr "'{0}' ネットワークの削除に失敗しました"
@@ -935,6 +927,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "tuncfg を実行する前に常に確認する(_A)"
+
+#~ msgid "Choose Icon"
+#~ msgstr "アイコンを選択"
 
 #~ msgid "Failed leaving network '{0}'"
 #~ msgstr "'{0}' ネットワークからの離脱に失敗"

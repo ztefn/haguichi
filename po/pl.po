@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-15 20:12:36+0200\n"
-"PO-Revision-Date: 2011-10-09 22:18+0000\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-16 14:44+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-01-02 13:56+0000\n"
-"X-Generator: Launchpad (build 14560)\n"
+"X-Launchpad-Export-Date: 2012-07-16 18:36+0000\n"
+"X-Generator: Launchpad (build 15627)\n"
 
 #: ../src/TextStrings.cs:362
 msgid "Haguichi Website"
@@ -86,17 +86,16 @@ msgid "Tunnel:"
 msgstr "Tunel:"
 
 #: ../src/TextStrings.cs:383
-#, fuzzy
 msgid "Connection:"
-msgstr "Łączenie..."
+msgstr "Połączenie:"
 
 #: ../src/TextStrings.cs:384
 msgid "Direct"
-msgstr ""
+msgstr "Bezpośrednie"
 
 #: ../src/TextStrings.cs:385
 msgid "Relayed"
-msgstr ""
+msgstr "Przekierowane"
 
 #: ../src/TextStrings.cs:386
 msgid "Anonymous"
@@ -185,7 +184,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: ../src/TextStrings.cs:412
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: ../src/TextStrings.cs:413
 msgid "_Download"
@@ -237,7 +237,7 @@ msgstr "Automatycznie"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "Pojemność:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -386,7 +386,8 @@ msgstr "Dołącz do konta"
 
 #: ../src/TextStrings.cs:473
 msgid "Please enter the account you want to attach this client to."
-msgstr "Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
+msgstr ""
+"Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
 
 #: ../src/TextStrings.cs:474
 msgid "_Include all networks created by this client"
@@ -668,11 +669,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: ../src/TextStrings.cs:558
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: ../src/TextStrings.cs:559
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:561
 msgid "Error connecting"
@@ -855,9 +858,6 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
-#~ msgid "_Go directly online in the network"
-#~ msgstr "_Przejście bezpośrednio do trybu online w sieci"
-
 #~ msgid "No internet connection."
 #~ msgstr "Brak połączenia z internetem."
 
@@ -866,6 +866,9 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "Connection refused."
 #~ msgstr "Połączenie odrzucone."
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Przejście bezpośrednio do trybu online w sieci"
 
 #~ msgid "Are you sure you want to delete network '{0}'?"
 #~ msgstr "Na pewno usunąć sieć \"{0}\"?"
