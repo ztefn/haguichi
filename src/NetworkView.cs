@@ -215,32 +215,13 @@ public class NetworkView : TreeView
                 string countString    = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
                 string memberString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
                 string capacityString = "";
-                string ownerString    = "";
+                string ownerString    = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, Markup.EscapeText ( network.ReturnOwnerString () ) );
                 string lockString     = "";
                 string approveString  = "";
                 
                 if ( Hamachi.ApiVersion > 1 )
                 {
                     idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
-                }
-                
-                string ownerNick = network.ReturnOwnerNick ();
-                
-                if ( network.IsOwner == 1 )
-                {
-                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.you );
-                }
-                else if ( ( network.OwnerId != "" ) && ( ownerNick != "" ) )
-                {
-                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, Markup.EscapeText ( ownerNick ) );
-                }
-                else if ( network.OwnerId != "" )
-                {
-                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, network.OwnerId );
-                }
-                else
-                {
-                    ownerString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, TextStrings.unknown );
                 }
                 
                 if ( network.Capacity > 0 )
@@ -749,7 +730,7 @@ public class NetworkView : TreeView
             template = template.Replace ( "%CX",  "{6}" );
             template = template.Replace ( "<br>", "{7}" );
             
-            if ( network.OwnerId == member.ClientId )
+            if ( network.Owner == member.ClientId )
             {
                 template = template.Replace ( "%*",  "✩"  );
                 template = template.Replace ( "%_*", " ✩" );

@@ -31,7 +31,7 @@ public class Network
     public string Name;
     public ArrayList Members;
     public int IsOwner;
-    public string OwnerId;
+    public string Owner;
     public string Lock;
     public string Approve;
     public int Capacity;
@@ -58,7 +58,7 @@ public class Network
         this.Name     = name;
         this.Members  = new ArrayList();
         this.IsOwner  = -1;
-        this.OwnerId  = owner;
+        this.Owner    = owner;
         this.Lock     = "";
         this.Approve  = "";
         this.Capacity = capacity;
@@ -76,7 +76,7 @@ public class Network
         this.Name    = name;
         this.Members = members;
         this.IsOwner = -1;
-        this.OwnerId = "";
+        this.Owner   = "";
         
         SetSortStrings ();
         
@@ -127,20 +127,33 @@ public class Network
     }
     
     
-    public string ReturnOwnerNick ()
+    public string ReturnOwnerString ()
     {
-
-        string nick = "";
         
-        foreach ( Member member in Members )
+        string owner;
+        
+        if ( this.IsOwner == 1 )
         {
-            if ( member.ClientId == this.OwnerId )
+            owner = TextStrings.you;
+        }
+        else if ( this.Owner != "" )
+        {
+            owner = this.Owner;
+            
+            foreach ( Member member in Members )
             {
-                nick = member.Nick;
+                if ( member.ClientId == owner )
+                {
+                    owner = member.Nick;
+                }
             }
         }
+        else
+        {
+            owner = TextStrings.unknown;
+        }
         
-        return nick;
+        return owner;
         
     }
     
@@ -199,13 +212,13 @@ public class Network
                 string owner = Hamachi.Retrieve ( output, "owner" );
                 if ( owner != "" )
                 {
-                    this.OwnerId = owner;
+                    this.Owner = owner;
                 }
                 
                 this.Lock = Hamachi.Retrieve ( output, "status" );
                 this.Approve = Hamachi.Retrieve ( output, "approve" );
                 
-                if ( this.OwnerId == "This computer" )
+                if ( this.Owner == "This computer" )
                 {
                     this.IsOwner = 1;
                 }
