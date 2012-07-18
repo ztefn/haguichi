@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-15 20:12:36+0200\n"
-"PO-Revision-Date: 2011-10-10 05:52+0000\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-18 13:28+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
-"X-Generator: Launchpad (build 14123)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2012-07-18 15:16+0000\n"
+"X-Generator: Launchpad (build 15637)\n"
 
 #: ../src/TextStrings.cs:362
 msgid "Haguichi Website"
@@ -86,17 +86,16 @@ msgid "Tunnel:"
 msgstr "Тоннель:"
 
 #: ../src/TextStrings.cs:383
-#, fuzzy
 msgid "Connection:"
-msgstr "Подключение..."
+msgstr "Подключение:"
 
 #: ../src/TextStrings.cs:384
 msgid "Direct"
-msgstr ""
+msgstr "Прямое"
 
 #: ../src/TextStrings.cs:385
 msgid "Relayed"
-msgstr ""
+msgstr "Через ретранслятор"
 
 #: ../src/TextStrings.cs:386
 msgid "Anonymous"
@@ -237,7 +236,7 @@ msgstr "Автоматически"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "Вместимость:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -399,7 +398,7 @@ msgstr "_Прикрепить"
 
 #: ../src/TextStrings.cs:476
 msgid "Attaching..."
-msgstr ""
+msgstr "Прикрепляем..."
 
 #: ../src/TextStrings.cs:477
 msgid "Account not found"
@@ -849,12 +848,6 @@ msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
-#~ msgid "_Go directly online in the network"
-#~ msgstr "С_разу установить статус \"в сети\""
-
-#~ msgid "Choose Icon"
-#~ msgstr "Выбрать иконку"
-
 #~ msgid "seconds"
 #~ msgstr "секунда;секунды;секунд"
 
@@ -882,6 +875,9 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Вы хотите запустить tuncfg?"
 
+#~ msgid "Choose Icon"
+#~ msgstr "Выбрать иконку"
+
 #~ msgid "Failed evicting member '{0}'"
 #~ msgstr "Ошибка при попытке выгнать '{0}'"
 
@@ -905,8 +901,7 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgstr "Вы не владелец сети '{0}'."
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
+#~ msgstr "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Ошибка при загрузке конфигурации"
@@ -921,8 +916,7 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ "Hamachi needs to run tuncfg to be able to connect.\n"
 #~ "Running tuncfg requires administrative privileges."
 #~ msgstr ""
-#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность "
-#~ "подключиться.\n"
+#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность подключиться.\n"
 #~ "Запуск tuncfg требует прав администратора."
 
 #~ msgid "No internet connection."
@@ -948,6 +942,9 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Статус \"в сети\""
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "С_разу установить статус \"в сети\""
 
 #~ msgid "Go O_ffline"
 #~ msgstr "C_татус \"не в сети\""

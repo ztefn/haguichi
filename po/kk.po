@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-15 20:12:36+0200\n"
-"PO-Revision-Date: 2011-10-10 05:49+0000\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-18 13:26+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
-"X-Generator: Launchpad (build 14123)\n"
+"X-Launchpad-Export-Date: 2012-07-18 15:16+0000\n"
+"X-Generator: Launchpad (build 15637)\n"
 
 #: ../src/TextStrings.cs:362
 msgid "Haguichi Website"
@@ -85,17 +85,16 @@ msgid "Tunnel:"
 msgstr "Тоннель:"
 
 #: ../src/TextStrings.cs:383
-#, fuzzy
 msgid "Connection:"
-msgstr "Қосылуда..."
+msgstr "Қосылыс:"
 
 #: ../src/TextStrings.cs:384
 msgid "Direct"
-msgstr ""
+msgstr "Тікелей"
 
 #: ../src/TextStrings.cs:385
 msgid "Relayed"
-msgstr ""
+msgstr "Ретранслятор арқылы"
 
 #: ../src/TextStrings.cs:386
 msgid "Anonymous"
@@ -236,7 +235,7 @@ msgstr "Автоматты түрде"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "Сыйымдылық:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -834,12 +833,6 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "_Go directly online in the network"
-#~ msgstr "Бірден желіге _қосылу"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Суреттемені таңдаңыз"
-
 #~ msgid "seconds"
 #~ msgstr "секунд"
 
@@ -869,6 +862,9 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 
 #~ msgid "Connection refused."
 #~ msgstr "Қосылыс қабылданбады."
+
+#~ msgid "Choose Icon"
+#~ msgstr "Суреттемені таңдаңыз"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Ник тізімін алу..."
@@ -915,6 +911,9 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 #~ msgid "Loading configuration failed"
 #~ msgstr "Баптаулама (конфигурация) ашу қатесі"
 
+#~ msgid "_Go directly online in the network"
+#~ msgstr "Бірден желіге _қосылу"
+
 #~ msgid "Not installed"
 #~ msgstr "Hamachi орнатылмаған"
 
@@ -937,5 +936,5 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
 #~ msgstr ""
-#~ "Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу "
-#~ "мүмкін емес."
+#~ "Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу мүмкін "
+#~ "емес."
