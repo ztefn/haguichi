@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-07-15 20:12:36+0200\n"
-"PO-Revision-Date: 2011-10-18 07:01+0000\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-16 19:02+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-10-18 17:16+0000\n"
-"X-Generator: Launchpad (build 14157)\n"
+"X-Launchpad-Export-Date: 2012-07-17 20:00+0000\n"
+"X-Generator: Launchpad (build 15627)\n"
 
 #: ../src/TextStrings.cs:362
 msgid "Haguichi Website"
@@ -85,17 +85,16 @@ msgid "Tunnel:"
 msgstr "Tunnel:"
 
 #: ../src/TextStrings.cs:383
-#, fuzzy
 msgid "Connection:"
-msgstr "Connessione in corso..."
+msgstr "Connessione:"
 
 #: ../src/TextStrings.cs:384
 msgid "Direct"
-msgstr ""
+msgstr "Diretta"
 
 #: ../src/TextStrings.cs:385
 msgid "Relayed"
-msgstr ""
+msgstr "Indiretta"
 
 #: ../src/TextStrings.cs:386
 msgid "Anonymous"
@@ -236,7 +235,7 @@ msgstr "Automaticamente"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "Capacità:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -842,12 +841,6 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
-#~ msgid "_Go directly online in the network"
-#~ msgstr "_Accedi direttamente in linea alla rete"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Scegli icona"
-
 #~ msgid "Nickname:"
 #~ msgstr "Nickname:"
 
@@ -865,6 +858,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "Changing..."
 #~ msgstr "Sto modificando..."
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Accedi direttamente in linea alla rete"
 
 #~ msgid ""
 #~ "Are you sure you want to evict member '{0}'\n"
@@ -950,6 +946,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 #~ msgstr ""
 #~ "Hamachi non può essere avviato a causa di un errore nel caricamento della "
 #~ "configurazione"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Scegli icona"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Vai in linea"
