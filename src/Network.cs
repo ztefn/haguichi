@@ -178,26 +178,29 @@ public class Network
             {
                 if ( Config.Settings.DemoMode )
                 {
-                    output = "hamachi network " + this.Id + @"
+                    output = @"
     id       : " + this.Id + @"
-    name     : " + this.Name;
+    name     : " + this.Name + @"
+    type     : Mesh";
                     
-                    if ( this.Name == "Portal Ubuntu" )
+                    if ( this.Name == "Artwork" )
                     {
                         output += @"
-    type     : Mesh
-    owner    : 092-466-858";
+    owner    : 090-736-821";
                     }
-                    else if ( this.Name == "WebUpd8" )
+                    else if ( this.Name == "Development" )
                     {
                         output += @"
-    type     : Mesh
+    owner    : 090-736-821";
+                    }
+                    else if ( this.Name == "Packaging" )
+                    {
+                        output += @"
     owner    : 094-409-761";
                     }
-                    else
+                    else if ( this.Owner == "" )
                     {
                         output += @"
-    type     : Mesh
     owner    : This computer
     status   : unlocked
     approve  : manual";
