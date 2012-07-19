@@ -86,6 +86,9 @@ Français (fr)
     Gabriel U. <gabriel-ull>
     Emilien Klein <emilien-klein>
 
+Bahasa Indonesia (id)
+    Fattah Rizki <galamarv>
+
 Italiano (it)
     Enrico Grassi <enricog>
 

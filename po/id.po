@@ -1,0 +1,837 @@
+# Indonesian translation for haguichi
+# Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
+# This file is distributed under the same license as the haguichi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: haguichi\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2012-07-15 20:12+0200\n"
+"PO-Revision-Date: 2012-07-19 14:23+0000\n"
+"Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
+"Language-Team: Indonesian <id@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2012-07-19 16:00+0000\n"
+"X-Generator: Launchpad (build 15644)\n"
+
+#: ../src/TextStrings.cs:362
+msgid "Haguichi Website"
+msgstr "Laman Haguichi"
+
+#. Description used in about dialog.
+#: ../src/TextStrings.cs:363
+msgid "A graphical frontend for Hamachi."
+msgstr "A graphical frontend for Hamachi."
+
+#. Description used in application launchers.
+#: ../src/TextStrings.cs:364
+msgid "Join and create local networks over the Internet"
+msgstr "Bergabung dan membuat jaringan lokal melalui Internet"
+
+#: ../src/TextStrings.cs:366
+msgid "_Show Haguichi"
+msgstr "_Tampilkan Haguichi"
+
+#: ../src/TextStrings.cs:368
+msgid "Yes"
+msgstr "Ya"
+
+#: ../src/TextStrings.cs:369
+msgid "No"
+msgstr "Tidak"
+
+#: ../src/TextStrings.cs:371
+msgid "Please enter your password to proceed."
+msgstr "Masukkan sandi anda untuk melanjutkan"
+
+#: ../src/TextStrings.cs:373
+msgid "_Hamachi output"
+msgstr "Keluaran _Hamachi"
+
+#: ../src/TextStrings.cs:375
+msgid "Address:"
+msgstr "Alamat:"
+
+#: ../src/TextStrings.cs:376
+msgid "IPv4 address:"
+msgstr "Alamat IPv4:"
+
+#: ../src/TextStrings.cs:377
+msgid "IPv6 address:"
+msgstr "Alamat IPv6:"
+
+#: ../src/TextStrings.cs:378
+msgid "ID:"
+msgstr "ID:"
+
+#: ../src/TextStrings.cs:379
+msgid "Client ID:"
+msgstr "ID Klien:"
+
+#: ../src/TextStrings.cs:380
+msgid "Network ID:"
+msgstr "ID Jaringan:"
+
+#: ../src/TextStrings.cs:381
+msgid "Status:"
+msgstr "Status:"
+
+#: ../src/TextStrings.cs:382
+msgid "Tunnel:"
+msgstr "Tunnel:"
+
+#: ../src/TextStrings.cs:383
+msgid "Connection:"
+msgstr "Koneksi:"
+
+#: ../src/TextStrings.cs:384
+msgid "Direct"
+msgstr "Langsung"
+
+#: ../src/TextStrings.cs:385
+msgid "Relayed"
+msgstr "Tidak langsung"
+
+#: ../src/TextStrings.cs:386
+msgid "Anonymous"
+msgstr "Anonim"
+
+#: ../src/TextStrings.cs:387
+msgid "_Nickname:"
+msgstr "Nama _Panggilan:"
+
+#: ../src/TextStrings.cs:389
+msgid "_Name:"
+msgstr "_Nama:"
+
+#: ../src/TextStrings.cs:390
+msgid "_Password:"
+msgstr "_Kata Sandi:"
+
+#: ../src/TextStrings.cs:391
+msgid "Version:"
+msgstr "Versi:"
+
+#: ../src/TextStrings.cs:393
+msgid "Offline"
+msgstr "Luring"
+
+#: ../src/TextStrings.cs:394
+msgid "Online"
+msgstr "Daring"
+
+#: ../src/TextStrings.cs:395
+msgid "Unreachable"
+msgstr "Tidak terjangkau"
+
+#: ../src/TextStrings.cs:396
+msgid "Connected"
+msgstr "Terhubung"
+
+#: ../src/TextStrings.cs:397
+msgid "Disconnected"
+msgstr "Koneksi terputus"
+
+#: ../src/TextStrings.cs:398
+msgid "Connecting..."
+msgstr "Menghubungkan..."
+
+#: ../src/TextStrings.cs:399
+msgid "Starting Hamachi..."
+msgstr "Memulai Hamachi..."
+
+#: ../src/TextStrings.cs:400
+msgid "Logging in..."
+msgstr "Masuk ke sistem..."
+
+#: ../src/TextStrings.cs:401
+msgid "Running tuncfg..."
+msgstr "Menjalankan tuncfg..."
+
+#: ../src/TextStrings.cs:402
+msgid "Updating..."
+msgstr "Memperbarui..."
+
+#. Please use the same text and shortcut as the stock connect button.
+#: ../src/TextStrings.cs:404
+msgid "C_onnect (%S)"
+msgstr "M_enghubungkan (%S)"
+
+#: ../src/TextStrings.cs:405
+msgid "Connect a_utomatically"
+msgstr "O_tomatis terhubung"
+
+#: ../src/TextStrings.cs:407
+msgid "Hamachi is not configured"
+msgstr "Hamachi belum di konfigurasi"
+
+#: ../src/TextStrings.cs:408
+msgid "You need to configure Hamachi before you can connect."
+msgstr "Anda harus mengkonfigurasi Hamachi sebelum anda dapat terhubung"
+
+#: ../src/TextStrings.cs:409
+msgid "C_onfigure"
+msgstr "K_onfigurasi"
+
+#: ../src/TextStrings.cs:411
+msgid "Hamachi is not installed"
+msgstr "Hamachi belum dipasang"
+
+#: ../src/TextStrings.cs:412
+msgid "Please download Hamachi and follow the installation instructions."
+msgstr "Silahkan unduh Hamachi dan ikuti intruksi penginstallan"
+
+#: ../src/TextStrings.cs:413
+msgid "_Download"
+msgstr "_Unduh"
+
+#: ../src/TextStrings.cs:415
+msgid "Members:"
+msgstr "Anggota:"
+
+#: ../src/TextStrings.cs:416
+msgid "{0} online, {1} total"
+msgstr "{0} daring, {1} total"
+
+#: ../src/TextStrings.cs:417
+msgid "Owner:"
+msgstr "Pemilik:"
+
+#: ../src/TextStrings.cs:418
+msgid "You"
+msgstr "Anda"
+
+#: ../src/TextStrings.cs:419
+msgid "Unknown"
+msgstr "Tidak Dikenal"
+
+#: ../src/TextStrings.cs:420
+msgid "Unavailable"
+msgstr "Tidak Tersedia"
+
+#: ../src/TextStrings.cs:421
+msgid "Awaiting approval"
+msgstr "Menunggu Persetujuan"
+
+#: ../src/TextStrings.cs:422
+msgid "Locked:"
+msgstr "Terkunci:"
+
+#: ../src/TextStrings.cs:423
+msgid "Approval:"
+msgstr "Persetujuan"
+
+#: ../src/TextStrings.cs:424
+msgid "Manually"
+msgstr "Secara Manual"
+
+#: ../src/TextStrings.cs:425
+msgid "Automatically"
+msgstr "Secara otomatis"
+
+#: ../src/TextStrings.cs:426
+msgid "Capacity:"
+msgstr "Kapasitas:"
+
+#: ../src/TextStrings.cs:428
+msgid "_Client"
+msgstr "_Klien"
+
+#: ../src/TextStrings.cs:429
+msgid "_Edit"
+msgstr "_Sunting"
+
+#: ../src/TextStrings.cs:430
+msgid "_View"
+msgstr "_Tinjau"
+
+#: ../src/TextStrings.cs:431
+msgid "_Help"
+msgstr "_Bantuan"
+
+#: ../src/TextStrings.cs:433
+msgid "_Online Help"
+msgstr "_Bantuan Daring"
+
+#: ../src/TextStrings.cs:434
+msgid "_Create Network..."
+msgstr "_Membuat Jaringan..."
+
+#: ../src/TextStrings.cs:435
+msgid "_Join Network..."
+msgstr "_Bergabung ke dalam Jaringan..."
+
+#: ../src/TextStrings.cs:437
+msgid "_Go Online"
+msgstr "_Kedalam Jaringan"
+
+#: ../src/TextStrings.cs:438
+msgid "_Go Offline"
+msgstr "_Keluar Jaringan"
+
+#: ../src/TextStrings.cs:439
+msgid "_Leave"
+msgstr "_Pergi"
+
+#: ../src/TextStrings.cs:440
+msgid "_Locked"
+msgstr "_Terkunci"
+
+#: ../src/TextStrings.cs:441
+msgid "_New Member Approval"
+msgstr "Persetujuan Anggota _Baru"
+
+#: ../src/TextStrings.cs:442
+msgid "_Automatically"
+msgstr "Secara _Otomatis"
+
+#: ../src/TextStrings.cs:443
+msgid "_Manually"
+msgstr "Secara _Manual"
+
+#: ../src/TextStrings.cs:444
+msgid "_Copy Network ID"
+msgstr "_Salin ID Jaringan"
+
+#: ../src/TextStrings.cs:446
+msgid "_Browse Shares"
+msgstr "_Menelusuri Shares"
+
+#: ../src/TextStrings.cs:447
+msgid "_Ping"
+msgstr "_Ping"
+
+#: ../src/TextStrings.cs:448
+msgid "_View Remote Desktop"
+msgstr "_Lihat Remote Destop"
+
+#: ../src/TextStrings.cs:449
+msgid "_Approve"
+msgstr "_Menyetujui"
+
+#: ../src/TextStrings.cs:450
+msgid "_Reject"
+msgstr "_Menolak"
+
+#. This action removes the selected member from the network.
+#: ../src/TextStrings.cs:451
+msgid "_Evict"
+msgstr "_Keluarkan"
+
+#: ../src/TextStrings.cs:452
+msgid "_Copy Address"
+msgstr "_Salin Alamat"
+
+#: ../src/TextStrings.cs:453
+msgid "Copy IPv_4 Address"
+msgstr "_Salin Alamat IPv_4"
+
+#: ../src/TextStrings.cs:454
+msgid "Copy IPv_6 Address"
+msgstr "_Salin Alamat IPv_6"
+
+#: ../src/TextStrings.cs:455
+msgid "_Copy Client ID"
+msgstr "_Salin ID Klien"
+
+#: ../src/TextStrings.cs:457
+msgid "C_hange"
+msgstr "Uba_h"
+
+#: ../src/TextStrings.cs:459
+msgid "Change _Nickname..."
+msgstr "Ganti _Nama Panggilan"
+
+#: ../src/TextStrings.cs:460
+msgid "Change Nickname"
+msgstr "Ganti Nama Panggilan"
+
+#: ../src/TextStrings.cs:461
+msgid "Please enter the nickname you want to use."
+msgstr "Masukkan nama panggilan yang anda ingin gunakan"
+
+#: ../src/TextStrings.cs:462
+msgid "Click to change your nickname"
+msgstr "Klik untuk merubah nama panggilan anda"
+
+#: ../src/TextStrings.cs:464
+msgid "Change _Password..."
+msgstr "Ubah_Sandi..."
+
+#: ../src/TextStrings.cs:465
+msgid "Change Password"
+msgstr "Ubah Sandi"
+
+#: ../src/TextStrings.cs:466
+msgid "Please enter the new password for this network."
+msgstr "Silahkan masukan sandi baru untuk jaringan ini."
+
+#: ../src/TextStrings.cs:468
+msgid "_Account:"
+msgstr "_Akun:"
+
+#: ../src/TextStrings.cs:471
+msgid "_Attach to Account..."
+msgstr "_Lampirkan ke Akun..."
+
+#: ../src/TextStrings.cs:472
+msgid "Attach to Account"
+msgstr "Lampirkan ke Akun"
+
+#: ../src/TextStrings.cs:473
+msgid "Please enter the account you want to attach this client to."
+msgstr "Masukkan akun yang anda ingin lampirkan ke klien"
+
+#: ../src/TextStrings.cs:474
+msgid "_Include all networks created by this client"
+msgstr "Sertakan seluruh jaringan yang dibuat oleh klien"
+
+#: ../src/TextStrings.cs:475
+msgid "_Attach"
+msgstr "_Melampirkan"
+
+#: ../src/TextStrings.cs:476
+msgid "Attaching..."
+msgstr "Melampirkan..."
+
+#: ../src/TextStrings.cs:477
+msgid "Account not found"
+msgstr "Akun tidak dapat ditemukan"
+
+#: ../src/TextStrings.cs:479
+msgid "_Join"
+msgstr "_Gabung"
+
+#: ../src/TextStrings.cs:480
+msgid "Joining..."
+msgstr "Menggabungkan..."
+
+#: ../src/TextStrings.cs:481
+msgid "Join Network"
+msgstr "Bergabung ke dalam jaringan"
+
+#: ../src/TextStrings.cs:482
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to join."
+msgstr ""
+"Masukan nama dan sandi untuk \n"
+"masuk ke dalam jaringan"
+
+#: ../src/TextStrings.cs:484
+msgid "C_reate"
+msgstr "B_uat"
+
+#: ../src/TextStrings.cs:485
+msgid "Creating..."
+msgstr "Membuat..."
+
+#: ../src/TextStrings.cs:486
+msgid "Create Network"
+msgstr "Buat Jaringan"
+
+#: ../src/TextStrings.cs:487
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to create."
+msgstr ""
+"Masukan nama dan sandi untuk\n"
+"jaringan yang ingin dibuat"
+
+#: ../src/TextStrings.cs:489
+msgid "Network not found"
+msgstr "Jaringan tidak ditemukan"
+
+#: ../src/TextStrings.cs:490
+msgid "Invalid password"
+msgstr "Sandi tidak tepat"
+
+#: ../src/TextStrings.cs:491
+msgid "Network is full"
+msgstr "Jaringan sedang penuh"
+
+#: ../src/TextStrings.cs:492
+msgid "Network is locked"
+msgstr "Jaringan terkunci"
+
+#: ../src/TextStrings.cs:493
+msgid "Network already joined"
+msgstr "Sudah bergabung dalam jaringan"
+
+#: ../src/TextStrings.cs:494
+msgid "Unknown error"
+msgstr "Galat tidak dikenal"
+
+#: ../src/TextStrings.cs:495
+msgid "Network name too short"
+msgstr "Nama jaringan terlalu pendek"
+
+#: ../src/TextStrings.cs:496
+msgid "Network name is already taken"
+msgstr "Nama jaringan sudah ada"
+
+#: ../src/TextStrings.cs:498
+msgid "Send join request?"
+msgstr "Kirim permintaan bergabung?"
+
+#: ../src/TextStrings.cs:499
+msgid ""
+"This network requires manual approval of new members by the owner. Would you "
+"like to send a join request?"
+msgstr ""
+"Jaringan ini memerlukan persetujan manual untuk anggota baru dari pemilik. "
+"Apakah anda ingin mengirimkan permintaan bergabung?"
+
+#: ../src/TextStrings.cs:500
+msgid "Join request sent"
+msgstr "Permintaan bergabung terkirim"
+
+#: ../src/TextStrings.cs:502
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: ../src/TextStrings.cs:503
+msgid "Information"
+msgstr "Informasi"
+
+#: ../src/TextStrings.cs:505
+msgid "Delete network \"{0}\"?"
+msgstr "Hapus jaringan \"{0}\"?"
+
+#: ../src/TextStrings.cs:506
+msgid "Are you sure you want to delete network \"{0}\"?"
+msgstr "Apakah anda yakin ingin menghapus jaringan \"{0}\"?"
+
+#: ../src/TextStrings.cs:508
+msgid "Leave network \"{0}\"?"
+msgstr "Tinggalkan jaringan \"{0}\"?"
+
+#: ../src/TextStrings.cs:509
+msgid "Are you sure you want to leave network \"{0}\"?"
+msgstr "Apakah anda yakin ingin meninggalkan jaringan \"{0}\"?"
+
+#: ../src/TextStrings.cs:511
+msgid "Evict member \"{0}\"?"
+msgstr "Keluarkan anggota \"{0}\"?"
+
+#: ../src/TextStrings.cs:512
+msgid ""
+"Are you sure you want to evict member \"{0}\"\n"
+"from network \"{1}\"?"
+msgstr ""
+"Apakah anda yakin ingin mengeluarkan anggota \"{0}\"?\n"
+"dari jaringan \"{1}\"?"
+
+#: ../src/TextStrings.cs:514
+msgid "Failed deleting network \"{0}\""
+msgstr "Gagal menghapus jaringan \"{0}\""
+
+#: ../src/TextStrings.cs:515
+msgid "You are not the owner of this network."
+msgstr "Anda bukan pemilik jaringan ini"
+
+#: ../src/TextStrings.cs:517
+msgid "Failed leaving network \"{0}\""
+msgstr "Gagal meninggalkan jaringan \"{0}\""
+
+#: ../src/TextStrings.cs:518
+msgid "You are the owner of this network."
+msgstr "Anda adalah pemilik jaringan ini"
+
+#: ../src/TextStrings.cs:519
+msgid "You don't have permission to leave this network."
+msgstr "Anda tidak memiliki izin untuk meninggalkan jaringan"
+
+#: ../src/TextStrings.cs:521
+msgid "Failed evicting member \"{0}\""
+msgstr "Gagal mengeluarkan anggota \"{0}\""
+
+#: ../src/TextStrings.cs:522
+msgid "You are not the owner of network \"{0}\"."
+msgstr "Anda bukan pemilik dari jaringan \"{0}\"."
+
+#: ../src/TextStrings.cs:524
+msgid "General"
+msgstr "Umum"
+
+#. In this context meaning "work environment".
+#: ../src/TextStrings.cs:525
+msgid "Desktop"
+msgstr "Destop"
+
+#: ../src/TextStrings.cs:526
+msgid "Commands"
+msgstr "Perintah"
+
+#: ../src/TextStrings.cs:528
+msgid "Notification Area"
+msgstr "Area Notifikasi"
+
+#: ../src/TextStrings.cs:529
+msgid "Behavior"
+msgstr "Tingkah laku"
+
+#: ../src/TextStrings.cs:531
+msgid "_Account data folder:"
+msgstr "Folder data _Akun:"
+
+#: ../src/TextStrings.cs:532
+msgid "Choose Folder"
+msgstr "Pilih Folder"
+
+#: ../src/TextStrings.cs:534
+msgid "_Protocol:"
+msgstr "_Protokol:"
+
+#: ../src/TextStrings.cs:535
+msgid "Both IPv4 and IPv6"
+msgstr "IPv4 dan IPv6"
+
+#: ../src/TextStrings.cs:536
+msgid "IPv4 only"
+msgstr "Hanya IPv4"
+
+#: ../src/TextStrings.cs:537
+msgid "IPv6 only"
+msgstr "Hanya IPv6"
+
+#: ../src/TextStrings.cs:539
+msgid "_Update Network List"
+msgstr "_Memperbarui Daftar Jaringan"
+
+#: ../src/TextStrings.cs:540
+msgid "Show Alt_ernating Row Colors"
+msgstr "Tampilkan Warna Baris _Alternatif"
+
+#: ../src/TextStrings.cs:541
+msgid "_Compact Layout"
+msgstr "Tata Letak _Rapat"
+
+#: ../src/TextStrings.cs:542
+msgid "_Large Layout"
+msgstr "Tata Letak _Luas"
+
+#: ../src/TextStrings.cs:543
+msgid "Show _Offline Members"
+msgstr "Tampilkan Anggota _Luring"
+
+#: ../src/TextStrings.cs:544
+msgid "Sort by _Name"
+msgstr "Urutkan Berdasar _Nama"
+
+#: ../src/TextStrings.cs:545
+msgid "Sort by _Status"
+msgstr "Urutkan berdasar _Status"
+
+#: ../src/TextStrings.cs:546
+msgid "St_atusbar"
+msgstr "Bil_ah status"
+
+#: ../src/TextStrings.cs:548
+msgid "_Show Haguichi in the notification area"
+msgstr "_Tampilkan Haguichi di area notifikasi"
+
+#: ../src/TextStrings.cs:549
+msgid "Start Haguichi _minimized in the notification area"
+msgstr "Mulai Haguichi dengan _diminimalkan di area notifikasi"
+
+#: ../src/TextStrings.cs:551
+msgid "C_onnect automatically on startup"
+msgstr "T_erhubung secara otomatis pada saat startup"
+
+#: ../src/TextStrings.cs:552
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "_Hubungkan kembali secara otomatis ketika koneksi terputus"
+
+#: ../src/TextStrings.cs:553
+msgid "_Disconnect on quit"
+msgstr "_Diskonek ketika keluar"
+
+#: ../src/TextStrings.cs:555
+msgid "Display notification when the connection is l_ost"
+msgstr "Tampilkan notifikasi koneksi ter_putus"
+
+#: ../src/TextStrings.cs:556
+msgid "Display notification when a member _joins"
+msgstr "Tampilkan notifikasi ketika anggota _bergabung"
+
+#: ../src/TextStrings.cs:557
+msgid "Display notification when a member _leaves"
+msgstr "Tampilkan notifikasi ketika anggota _keluar"
+
+#: ../src/TextStrings.cs:558
+msgid "Display notification when a member comes o_nline"
+msgstr "Tampilkan notifikasi ketika anggota masuk ke _daring"
+
+#: ../src/TextStrings.cs:559
+msgid "Display notification when a member goes o_ffline"
+msgstr "Tampilkan notifikasi ketika anggota keluar dari _luring"
+
+#: ../src/TextStrings.cs:561
+msgid "Error connecting"
+msgstr "Galat menyambung"
+
+#: ../src/TextStrings.cs:562
+msgid "Hamachi login failed"
+msgstr "Login Hamachi gagal"
+
+#: ../src/TextStrings.cs:563
+msgid "No internet connection"
+msgstr "Tidak ada koneksi internet"
+
+#: ../src/TextStrings.cs:565
+msgid "Hamachi lost connection"
+msgstr "Koneksi Hamachi putus"
+
+#: ../src/TextStrings.cs:566
+msgid "Member online"
+msgstr "Anggota daring"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
+#: ../src/TextStrings.cs:567
+msgid "{0} came online in the network {1}"
+msgstr "{0} menjadi daring di jaringan {1}"
+
+#: ../src/TextStrings.cs:568
+msgid "Member offline"
+msgstr "Anggota luring"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
+#: ../src/TextStrings.cs:569
+msgid "{0} went offline in the network {1}"
+msgstr "{0} pergi luring dari jaringan {1}"
+
+#: ../src/TextStrings.cs:570
+msgid "Member joined"
+msgstr "Anggota bergabung"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet".
+#: ../src/TextStrings.cs:571
+msgid "{0} joined the network {1}"
+msgstr "{0} bergabung ke jaringan {1}"
+
+#: ../src/TextStrings.cs:572
+msgid "Member left"
+msgstr "Anggota keluar"
+
+#. Notification bubble. For example: "T-800 left the network Skynet".
+#: ../src/TextStrings.cs:573
+msgid "{0} left the network {1}"
+msgstr "{0} meninggalkan jaringan {1}"
+
+#: ../src/TextStrings.cs:575
+msgid "A_vailable commands:"
+msgstr "Perintah yang _tersedia:"
+
+#: ../src/TextStrings.cs:576
+msgid "Command"
+msgstr "Perintah"
+
+#: ../src/TextStrings.cs:577
+msgid "Available"
+msgstr "Tersedia"
+
+#: ../src/TextStrings.cs:579
+msgid "Add Command"
+msgstr "Tambah Perintah"
+
+#: ../src/TextStrings.cs:580
+msgid "Edit Command"
+msgstr "Edit perintah"
+
+#: ../src/TextStrings.cs:581
+msgid "_Label:"
+msgstr "_Label:"
+
+#: ../src/TextStrings.cs:582
+msgid "_Command:"
+msgstr "_Perintah:"
+
+#: ../src/TextStrings.cs:583
+msgid "IPv_4 command:"
+msgstr "Perintah IPv_4:"
+
+#: ../src/TextStrings.cs:584
+msgid "IPv_6 command:"
+msgstr "Perintah IPv_6:"
+
+#: ../src/TextStrings.cs:585
+msgid "Use %A for address and %N for nickname"
+msgstr "Menggunakan %A untuk alamat dan %N untuk nama panggilan"
+
+#: ../src/TextStrings.cs:586
+msgid "_Priority:"
+msgstr "_Prioritas:"
+
+#: ../src/TextStrings.cs:588
+msgid "Click to choose an icon"
+msgstr "Klik untuk memilih ikon"
+
+#: ../src/TextStrings.cs:589
+msgid "_No Icon"
+msgstr "_Tidak ada ikon"
+
+#: ../src/TextStrings.cs:591
+msgid "Default"
+msgstr "Default"
+
+#: ../src/TextStrings.cs:592
+msgid "_Default"
+msgstr "_Default"
+
+#: ../src/TextStrings.cs:594
+msgid "Restore the default commands"
+msgstr "Kembalikan ke perintah awal"
+
+#: ../src/TextStrings.cs:595
+msgid "Revert changes?"
+msgstr "Kembalikan perubahan?"
+
+#: ../src/TextStrings.cs:596
+msgid ""
+"Are you sure you wish to revert all changes\n"
+"and thereby restore the default commands?"
+msgstr ""
+"Anda yakin ingin mengembalikan semua perubahan\n"
+"dan dengan demikian mengembalikan perintah awal?"
+
+#: ../src/TextStrings.cs:598
+msgid "Move up"
+msgstr "Pindah ke atas"
+
+#: ../src/TextStrings.cs:599
+msgid "Move down"
+msgstr "Pindah ke bawah"
+
+#: ../src/TextStrings.cs:607
+msgid "_Update the network list every %S second"
+msgid_plural "_Update the network list every %S seconds"
+msgstr[0] "_Perbarui daftar jaringan setiap %S detik"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:615
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} menjadi daring di jaringan {1} dan {2} jaringan lain"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:623
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} pergi ke luring dari jaringan {1} dan {2} jaringan lain"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:631
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} bergabung ke dalam jaringan {1} dan {2} jaringan lain"
+
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:639
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} meninggalkan jaringan {1} dan {2} jaringan lain"
