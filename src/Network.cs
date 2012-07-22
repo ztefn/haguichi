@@ -188,6 +188,13 @@ public class Network
                         output += @"
     owner    : 090-736-821";
                     }
+                    else if ( this.Name == "Bug Hunters" )
+                    {
+                        output += @"
+    owner    : This computer
+    status   : unlocked
+    approve  : manual";
+                    }
                     else if ( this.Name == "Development" )
                     {
                         output += @"
@@ -197,13 +204,6 @@ public class Network
                     {
                         output += @"
     owner    : 094-409-761";
-                    }
-                    else if ( this.Owner == "" )
-                    {
-                        output += @"
-    owner    : This computer
-    status   : unlocked
-    approve  : manual";
                     }
                 }
                 else

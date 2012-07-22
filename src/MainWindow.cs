@@ -154,7 +154,7 @@ public class MainWindow
         
         /* Main VBox */
         
-        VBox mainBox = new VBox ( false, 1 );
+        VBox mainBox = new VBox ( false, 0 );
         mainBox.Add ( menuBar );
         mainBox.Add ( messageBar );
         mainBox.Add ( disconnectedBox );
