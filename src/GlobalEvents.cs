@@ -80,18 +80,14 @@ public class GlobalEvents
     
     private static void StopHamachiThread ()
     {
-
+        
         if ( Config.Settings.DemoMode )
         {
             // Do nothing
         }
-        else if ( Hamachi.ApiVersion > 1 )
+        else
         {
             Hamachi.Logout ();
-        }
-        else if ( Hamachi.ApiVersion == 1 )
-        {
-            Hamachi.Stop ();
         }
         
     }
@@ -109,7 +105,7 @@ public class GlobalEvents
         
         string protocol = ( string ) Config.Client.Get ( Config.Settings.Protocol );
         
-        if ( ( Hamachi.ApiVersion >= 3 ) &&
+        if ( ( Hamachi.IpModeCapable ) &&
              ( Hamachi.IpVersion.ToLower () != protocol ) )
         {
             UpdateProtocol ( protocol );
@@ -152,15 +148,7 @@ public class GlobalEvents
         }
         
         Haguichi.connection.ClearNetworks ();
-        
-        if ( Hamachi.ApiVersion > 1 )
-        {
-            Controller.lastStatus = 4;
-        }
-        else if ( Hamachi.ApiVersion == 1 )
-        {
-            Controller.lastStatus = 3;
-        }
+        Controller.lastStatus = 4;
         
         SetAttach ();
         
@@ -272,7 +260,7 @@ public class GlobalEvents
     {
         
         if ( ( Controller.lastStatus >= 6 ) &&
-             ( Hamachi.ApiVersion >= 3 ) )
+             ( Hamachi.IpModeCapable ) )
         {
             Haguichi.preferencesWindow.ipCombo.Active = ( int ) Utilities.ProtocolToInt ( protocol );
             
@@ -361,33 +349,24 @@ public class GlobalEvents
     public static void SetAttach ()
     {
         
-        if ( Hamachi.ApiVersion > 1 )
+        string account = Hamachi.GetAccount ();
+        
+        Haguichi.informationWindow.SetAccount ( account );
+        
+        if ( ( ( account == "" ) ||
+               ( account == "-" ) ) &&
+             ( Controller.lastStatus >= 6 ) )
         {
-            string account = Hamachi.GetAccount ();
-            
-            Haguichi.informationWindow.SetAccount ( account );
-            
-            if ( ( ( account == "" ) ||
-                   ( account == "-" ) ) &&
-                 ( Controller.lastStatus >= 6 ) )
-            {
-                MainWindow.menuBar.SetAttach ( true, true );
-            }
-            else if ( ( account == "" ) ||
-                      ( account == "-" ) )
-            {
-                MainWindow.menuBar.SetAttach ( true, false );
-            }
-            else
-            {
-                MainWindow.menuBar.SetAttach ( false, false );
-            }
+            MainWindow.menuBar.SetAttach ( true, true );
+        }
+        else if ( ( account == "" ) ||
+                  ( account == "-" ) )
+        {
+            MainWindow.menuBar.SetAttach ( true, false );
         }
         else
         {
             MainWindow.menuBar.SetAttach ( false, false );
-            
-            Haguichi.informationWindow.SetAccount ( "" );
         }
         
     }
@@ -428,15 +407,9 @@ public class GlobalEvents
         
         if ( ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit ) )
         {
-            if ( ( Hamachi.ApiVersion > 1 ) &&
-                 ( Controller.lastStatus > 4 ) )
+            if ( Controller.lastStatus > 4 )
             {
                 Hamachi.Logout ();
-            }
-            else if ( ( Hamachi.ApiVersion == 1 ) &&
-                      ( Controller.lastStatus > 3 ) )
-            {
-                Hamachi.Stop ();
             }
         }
         

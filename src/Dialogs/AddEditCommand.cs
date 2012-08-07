@@ -214,7 +214,7 @@ namespace Dialogs
             
             saveButton.GrabDefault ();
             
-            if ( Hamachi.ApiVersion <= 2 )
+            if ( !Hamachi.IpModeCapable )
             {
                 commandIPv4Label.TextWithMnemonic = TextStrings.commandLabel;
                 

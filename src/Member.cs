@@ -85,9 +85,8 @@ public class Member
     public void GetLongNick ( string nick )
     {
         
-        if ( ( Hamachi.ApiVersion > 1 ) &&
-             ( ( this.Nick.Length >= 25 ) ||
-               ( this.Nick.EndsWith ( "�" ) ) ) )
+        if ( ( this.Nick.Length >= 25 ) ||
+             ( this.Nick.EndsWith ( "�" ) ) )
         {
             Thread thread = new Thread ( GetLongNickThread );
             thread.Start ();

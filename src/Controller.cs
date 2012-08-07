@@ -35,7 +35,6 @@ public static class Controller
     public  static int lastStatus = -2;
     public  static int numUpdateCycles;
     private static int numWaitForInternetCycles;
-    private static int numTuncfgRuns;
     private static string startOutput;
     
     private static Hashtable membersLeftHash;
@@ -72,11 +71,6 @@ public static class Controller
             restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
             
             MainWindow.SetMode ( "Connected" );
-            
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                Hamachi.GetNicks ();
-            }
             
             GetNetworkList ();
         }
@@ -148,7 +142,15 @@ public static class Controller
                 Command.OpenURL ( TextStrings.getHamachiURL );
             };
             
-            MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error );
+            if ( Hamachi.Version == 1 )
+            {
+                MainWindow.messageBar.SetMessage ( String.Format ( TextStrings.obsoleteHeading, Hamachi.GetVersion () ), TextStrings.obsoleteMessage, MessageType.Error );
+            }
+            else
+            {
+                MainWindow.messageBar.SetMessage ( TextStrings.notInstalledHeading, TextStrings.notInstalledMessage, MessageType.Error );
+            }
+            
             MainWindow.messageBar.AddButton ( refreshButton );
             MainWindow.messageBar.AddButton ( downloadButton );
             
@@ -198,14 +200,14 @@ public static class Controller
         
         Regex regex;
         
-        if ( output == "error" ) // 'bash: hamachi: command not found' causes exception
+        if ( ( output == "error" ) || // 'bash: hamachi: command not found' causes exception
+             ( Hamachi.Version == 1 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not installed." );
             return 0;
         }
         
-        if ( ( output.Contains ( "Cannot find configuration directory" ) ) ||
-             ( output.Contains ( "You do not have permission to control the hamachid daemon." ) ) )
+        if ( output.Contains ( "You do not have permission to control the hamachid daemon." ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not configured." );
             return 1;
@@ -301,8 +303,7 @@ public static class Controller
         
         string output = startOutput;
         
-        if ( ( Hamachi.ApiVersion > 1 ) &&
-             ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) ) )
+        if ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
         {
             /* Hamachi is starting */
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is starting." );
@@ -331,43 +332,6 @@ public static class Controller
                     GlobalEvents.ConnectionStopped ();
                 });
             }
-        }
-        else if ( ( Hamachi.ApiVersion == 1 ) &&
-                  ( ( output.Contains ( ".. ok" ) ) ||
-                    ( output == "" ) ||
-                    ( output.Contains ( "Hamachi is already started" ) ) ) )
-        {
-            /* Ok, started */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
-            
-            Application.Invoke ( delegate
-            {
-                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
-            });
-            GoLoginThread ();
-        }
-        else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
-                  ( numTuncfgRuns == 0 ) )
-        {
-            /* Not able to start, running tuncfg required */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Running tuncfg required." );
-            
-            Application.Invoke ( delegate
-            {
-                MainWindow.statusBar.Push ( 0, TextStrings.runningTuncfg );
-                GoRunTuncfgAndTryStartAgain ();
-            });
-        }
-        else if ( ( output.Contains ( "tap: connect() failed" ) ) &&
-                  ( numTuncfgRuns > 0 ) )
-        {
-            /* Running tuncfg cancelled */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Running tuncfg cancelled." );
-            
-            Application.Invoke ( delegate
-            {
-                GlobalEvents.ConnectionStopped ();
-            });
         }
         else if ( output != "" )
         {
@@ -439,20 +403,8 @@ public static class Controller
             Application.Invoke ( delegate
             {
                 MainWindow.statusBar.Push ( 0, TextStrings.starting );
-                
-                if ( Hamachi.ApiVersion > 1 )
-                {
-                    GoStart ();
-                }
+                GoStart ();
             });
-            
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                numTuncfgRuns = 0;
-                
-                startOutput = Hamachi.Start ();
-                GoStartThread ();
-            }
         }
         
     }
@@ -490,12 +442,6 @@ public static class Controller
             
             lastStatus = 6;
             
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                Hamachi.GetNicks ();
-                Hamachi.GetInfo (); // Get latest info to be able to update information dialog correcltly
-            }
-            
             Thread.Sleep ( 1000 ); // Wait a second to get an updated list
             
             Application.Invoke ( delegate
@@ -513,20 +459,6 @@ public static class Controller
                 MainWindow.messageBar.SetMessage ( TextStrings.connectErrorLoginFailed, null, MessageType.Error );
             });
         }
-        
-    }
-    
-    
-    private static void GoRunTuncfgAndTryStartAgain ()
-    {
-        
-        numTuncfgRuns ++;
-        
-        Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Running tuncfg." );
-        Hamachi.TunCfg ();
-        
-        Debug.Log ( Debug.Domain.Info, "Controller.GoRunTuncfgAndTryStartAgain", "Trying to start again." );
-        GoStart ();
         
     }
     
@@ -599,11 +531,6 @@ public static class Controller
     
         if ( lastStatus >= 6 )
         {
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                Hamachi.GetNicks ();
-            }
-            
             nNetworksList = Hamachi.ReturnList ();
         }
         

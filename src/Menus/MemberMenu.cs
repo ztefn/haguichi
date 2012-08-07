@@ -57,13 +57,13 @@ namespace Menus
             copyId = new ImageMenuItem ( TextStrings.copyClientIdLabel );
             copyId.Image = new Image ( Stock.Copy, IconSize.Menu );
             
-            if ( Hamachi.ApiVersion <= 2 )
+            if ( Hamachi.IpModeCapable )
             {
-                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressLabel );
+                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressIPv4Label );
             }
             else
             {
-                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressIPv4Label );
+                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressLabel );
             }
             copyIPv4.Image = new Image ( Stock.Copy, IconSize.Menu );
             
@@ -86,11 +86,6 @@ namespace Menus
             this.Add ( evict       );
             
             this.ShowAll ();
-            
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                copyId.Visible = false;
-            }
             
         }
         

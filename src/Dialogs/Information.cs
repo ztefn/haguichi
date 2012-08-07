@@ -294,13 +294,13 @@ namespace Dialogs
                 
                 if ( Hamachi.IpVersion == "IPv4" )
                 {
-                    if ( Hamachi.ApiVersion <= 2 )
+                    if ( Hamachi.IpModeCapable )
                     {
-                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.address ) + "  ";
+                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
                     }
                     else
                     {
-                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
+                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.address ) + "  ";
                     }
                     addressEntry.Markup = ipv4;
                 }
@@ -317,25 +317,17 @@ namespace Dialogs
         private void SetClientId ()
         {
             
-            if ( Hamachi.ApiVersion > 1 )
+            string id = Hamachi.GetClientId ();
+            
+            if ( id == "" )
             {
-                string id = Hamachi.GetClientId ();
-                
-                if ( id == "" )
-                {
-                    id = "<i>" + TextStrings.unavailable + "</i>";
-                }
-                
-                idEntry.Markup = id;
-                
-                idLabel.Show ();
-                idEntry.Show ();
+                id = "<i>" + TextStrings.unavailable + "</i>";
             }
-            else
-            {
-                idLabel.Hide ();
-                idEntry.Hide ();
-            }
+            
+            idEntry.Markup = id;
+            
+            idLabel.Show ();
+            idEntry.Show ();
             
         }
         
@@ -343,8 +335,7 @@ namespace Dialogs
         public void SetAccount ( string account )
         {
             
-            if ( ( Hamachi.ApiVersion > 1 ) &&
-                 ( account != "" ) &&
+            if ( ( account != "" ) &&
                  ( account != "-" ) )
             {
                 accountEntry.Markup = account;

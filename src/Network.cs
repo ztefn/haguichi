@@ -172,75 +172,54 @@ public class Network
         
         string output = "";
         
-        if ( Hamachi.ApiVersion > 1 )
+        try
         {
-            try
+            if ( Config.Settings.DemoMode )
             {
-                if ( Config.Settings.DemoMode )
-                {
-                    output = @"
-    id       : " + this.Id + @"
-    name     : " + this.Name + @"
-    type     : Mesh";
-                    
-                    if ( this.Name == "Artwork" )
-                    {
-                        output += @"
-    owner    : 090-736-821";
-                    }
-                    else if ( this.Name == "Bug Hunters" )
-                    {
-                        output += @"
-    owner    : This computer
-    status   : unlocked
-    approve  : manual";
-                    }
-                    else if ( this.Name == "Development" )
-                    {
-                        output += @"
-    owner    : 090-736-821";
-                    }
-                    else if ( this.Name == "Packaging" )
-                    {
-                        output += @"
-    owner    : 094-409-761";
-                    }
-                }
-                else
-                {
-                    output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
-                }
-                Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
+                output = @"
+id       : " + this.Id + @"
+name     : " + this.Name + @"
+type     : Mesh";
                 
-                string owner = Hamachi.Retrieve ( output, "owner" );
-                if ( owner != "" )
+                if ( this.Name == "Artwork" )
                 {
-                    this.Owner = owner;
+                    output += @"
+owner    : 090-736-821";
                 }
-                
-                this.Lock = Hamachi.Retrieve ( output, "status" );
-                this.Approve = Hamachi.Retrieve ( output, "approve" );
-                
-                if ( this.Owner == "This computer" )
+                else if ( this.Name == "Bug Hunters" )
                 {
-                    this.IsOwner = 1;
+                    output += @"
+owner    : This computer
+status   : unlocked
+approve  : manual";
                 }
-                else
+                else if ( this.Name == "Development" )
                 {
-                    this.IsOwner = 0;
+                    output += @"
+owner    : 090-736-821";
+                }
+                else if ( this.Name == "Packaging" )
+                {
+                    output += @"
+owner    : 094-409-761";
                 }
             }
-            catch {}
-        }
-        else if ( Hamachi.ApiVersion == 1 )
-        {
-            Thread.Sleep ( new Random ().Next ( 0, 4000 ) ); // Random sleep to create some time space between multiple evict commands 
-            
-            output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( this.Id ) + "\" 5.5.5.5" );
+            else
+            {
+                output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
+            }
             Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
-    
-            if ( ( output.IndexOf ( ".. ok" ) != -1 ) ||
-                 ( output.IndexOf ( ".. failed, [16]" ) != -1 ) )
+            
+            string owner = Hamachi.Retrieve ( output, "owner" );
+            if ( owner != "" )
+            {
+                this.Owner = owner;
+            }
+            
+            this.Lock = Hamachi.Retrieve ( output, "status" );
+            this.Approve = Hamachi.Retrieve ( output, "approve" );
+            
+            if ( this.Owner == "This computer" )
             {
                 this.IsOwner = 1;
             }
@@ -249,6 +228,7 @@ public class Network
                 this.IsOwner = 0;
             }
         }
+        catch {}
         
     }
     

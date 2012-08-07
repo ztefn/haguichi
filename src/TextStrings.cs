@@ -159,7 +159,6 @@ Türkçe (tr)
     public static string connecting;
     public static string starting;
     public static string loggingIn;
-    public static string runningTuncfg;
     public static string updating;
     
     public static string connectCountdown;
@@ -171,6 +170,8 @@ Türkçe (tr)
     
     public static string notInstalledHeading;
     public static string notInstalledMessage;
+    public static string obsoleteHeading;
+    public static string obsoleteMessage;
     public static string downloadLabel;
     
     public static string members;
@@ -289,9 +290,6 @@ Türkçe (tr)
     public static string notifyGroup;
     public static string behaviorGroup;
     
-    public static string dataPathLabel;
-    public static string chooseFolderTitle;
-    
     public static string protocolLabel;
     public static string protocolBoth;
     public static string protocolIPv4;
@@ -402,7 +400,6 @@ Türkçe (tr)
         connecting                          = Catalog.GetString ( "Connecting..." );
         starting                            = Catalog.GetString ( "Starting Hamachi..." );
         loggingIn                           = Catalog.GetString ( "Logging in..." );
-        runningTuncfg                       = Catalog.GetString ( "Running tuncfg..." );
         updating                            = Catalog.GetString ( "Updating..." );
         
         connectCountdown                    = Catalog.GetString ( "C_onnect (%S)" );
@@ -414,6 +411,8 @@ Türkçe (tr)
 
         notInstalledHeading                 = Catalog.GetString ( "Hamachi is not installed" );
         notInstalledMessage                 = Catalog.GetString ( "Please download Hamachi and follow the installation instructions." );
+        obsoleteHeading                     = Catalog.GetString ( "Hamachi version {0} is obsolete" );
+        obsoleteMessage                     = Catalog.GetString ( "Please download and install the latest Hamachi version." );
         downloadLabel                       = Catalog.GetString ( "_Download" );
         
         members                             = Catalog.GetString ( "Members:" );
@@ -531,9 +530,6 @@ Türkçe (tr)
         
         notifyGroup                         = Catalog.GetString ( "Notification Area" );
         behaviorGroup                       = Catalog.GetString ( "Behavior" );
-
-        dataPathLabel                       = Catalog.GetString ( "_Account data folder:" );
-        chooseFolderTitle                   = Catalog.GetString ( "Choose Folder" );
         
         protocolLabel                       = Catalog.GetString ( "_Protocol:" );
         protocolBoth                        = Catalog.GetString ( "Both IPv4 and IPv6" );

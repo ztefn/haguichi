@@ -99,12 +99,6 @@ namespace Menus
             
             this.ShowAll ();
             
-            if ( Hamachi.ApiVersion == 1 )
-            {
-                separator1.Visible = false;
-                copy.Visible = false;
-            }
-            
         }
         
         
@@ -179,15 +173,7 @@ namespace Menus
             {
                 leave.Visible     = false;
                 delete.Visible    = true;
-                
-                if ( Hamachi.ApiVersion > 1 )
-                {
-                    password.Visible  = true;
-                }
-                else
-                {
-                    password.Visible  = false;
-                }
+                password.Visible  = true;
             }
             else if ( network.IsOwner == 0 )
             {

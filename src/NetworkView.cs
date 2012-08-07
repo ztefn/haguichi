@@ -211,18 +211,13 @@ public class NetworkView : TreeView
                 network.ReturnMemberCount ( out memberCount, out memberOnlineCount );
                 
                 string statusString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, network.Status.statusString );
-                string idString       = "";
+                string idString       = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
                 string countString    = String.Format ( TextStrings.memberCount, memberOnlineCount, memberCount );
                 string memberString   = String.Format ( "\n{0} <i>{1}</i>", TextStrings.members, countString );
                 string capacityString = "";
                 string ownerString    = String.Format ( "\n{0} <i>{1}</i>", TextStrings.owner, Markup.EscapeText ( network.ReturnOwnerString () ) );
                 string lockString     = "";
                 string approveString  = "";
-                
-                if ( Hamachi.ApiVersion > 1 )
-                {
-                    idString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.networkId, network.Id );
-                }
                 
                 if ( network.Capacity > 0 )
                 {
@@ -274,25 +269,20 @@ public class NetworkView : TreeView
                 member = ( Member ) sortedStore.GetValue ( iter, memberColumn );
                 
                 string statusString     = String.Format ( "\n{0} <i>{1}</i>", TextStrings.status, member.Status.statusString );
-                string clientString     = "";
+                string clientString     = String.Format ( "\n{0} <i>{1}</i>", TextStrings.clientId, member.ClientId );
                 string addressString    = "";
                 string tunnelString     = "";
                 string connectionString = "";
                 
-                if ( Hamachi.ApiVersion >= 2 )
-                {
-                    clientString = String.Format ( "\n{0} <i>{1}</i>", TextStrings.clientId, member.ClientId );
-                }
-                
                 if ( member.IPv4 != "" )
                 {
-                    if ( Hamachi.ApiVersion <= 2 )
+                    if ( Hamachi.IpModeCapable )
                     {
-                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.IPv4 );
+                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv4, member.IPv4 );
                     }
                     else
                     {
-                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv4, member.IPv4 );
+                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.IPv4 );
                     }
                 }
                 

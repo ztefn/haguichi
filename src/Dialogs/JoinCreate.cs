@@ -228,11 +228,6 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                if ( Hamachi.ApiVersion == 1 )
-                {
-                    Hamachi.GoOnline ( this.NetworkName );
-                }
-                
                 Thread.Sleep ( 1000 ); // Wait a second to get an updated list
                 
                 Application.Invoke ( delegate
@@ -352,11 +347,6 @@ namespace Dialogs
             
             if ( output.Contains ( ".. ok" ) )
             {
-                if ( Hamachi.ApiVersion == 1 )
-                {
-                    Hamachi.GoOnline ( this.NetworkName );
-                }
-                
                 Thread.Sleep ( 1000 ); // Wait a second to get an updated list
                 
                 Application.Invoke ( delegate

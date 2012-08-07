@@ -73,11 +73,6 @@ namespace Config
                     GlobalEvents.UpdateProtocol ( ( string ) val );
                 }
                 
-                if ( key.Contains ( Config.Settings.HamachiDataPath.KeyName ) )
-                {
-                    Haguichi.preferencesWindow.pathButton.SetCurrentFolder ( ( string ) val );
-                }
-                
                 if ( key.Contains ( Config.Settings.UpdateInterval.KeyName ) )
                 {
                     Haguichi.preferencesWindow.intervalSpin.Value = ( int ) ( ( double ) val );
