@@ -480,20 +480,24 @@ public static class Hamachi
     public static string GetVersion ()
     {
         
-        if ( Config.Settings.DemoMode )
-        {
-            return "2.1.0.68";
-        }
-        
         string output = "";
         
-        try
+        if ( Config.Settings.DemoMode )
         {
-            output = Retrieve ( lastInfo, "version" );
-            output = output.Replace ( "hamachi-lnx-", "" );
+            output = "2.1.0.68";
         }
-        catch {}
-        
+        else if ( Version == 1 )
+        {
+            output = "0.9.9.9-20";
+        }
+        else
+        {
+            try
+            {
+                output = Retrieve ( lastInfo, "version" );
+            }
+            catch {}
+        }
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", output );
         
         return output;
