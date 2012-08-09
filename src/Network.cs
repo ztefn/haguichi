@@ -186,13 +186,6 @@ type     : Mesh";
                     output += @"
 owner    : 090-736-821";
                 }
-                else if ( this.Name == "Bug Hunters" )
-                {
-                    output += @"
-owner    : This computer
-status   : unlocked
-approve  : manual";
-                }
                 else if ( this.Name == "Development" )
                 {
                     output += @"
@@ -202,6 +195,13 @@ owner    : 090-736-821";
                 {
                     output += @"
 owner    : 094-409-761";
+                }
+                else if ( this.Name != "Translators" )
+                {
+                    output += @"
+owner    : This computer
+status   : unlocked
+approve  : manual";
                 }
             }
             else
