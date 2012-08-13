@@ -240,31 +240,44 @@ public static class Command
         
         string command = "";
         
-        if ( priority == "IPv4" )
+        if ( Hamachi.IpVersion == "Both" )
         {
-            if ( member.IPv4 != "" )
+            if ( priority == "IPv4" )
             {
-                command = commandIPv4;
-                command = command.Replace ( "%A", member.IPv4 );
+                if ( member.IPv4 != "" )
+                {
+                    command = commandIPv4;
+                    command = command.Replace ( "%A", member.IPv4 );
+                }
+                else
+                {
+                    command = commandIPv6;
+                    command = command.Replace ( "%A", member.IPv6 );
+                }
             }
-            else
+            if ( priority == "IPv6" )
             {
-                command = commandIPv6;
-                command = command.Replace ( "%A", member.IPv6 );
+                if ( member.IPv6 != "" )
+                {
+                    command = commandIPv6;
+                    command = command.Replace ( "%A", member.IPv6 );
+                }
+                else
+                {
+                    command = commandIPv4;
+                    command = command.Replace ( "%A", member.IPv4 );
+                }
             }
         }
-        if ( priority == "IPv6" )
+        else if ( Hamachi.IpVersion == "IPv4" )
         {
-            if ( member.IPv6 != "" )
-            {
-                command = commandIPv6;
-                command = command.Replace ( "%A", member.IPv6 );
-            }
-            else
-            {
-                command = commandIPv4;
-                command = command.Replace ( "%A", member.IPv4 );
-            }
+            command = commandIPv4;
+            command = command.Replace ( "%A", member.IPv4 );
+        }
+        else if ( Hamachi.IpVersion == "IPv6" )
+        {
+            command = commandIPv6;
+            command = command.Replace ( "%A", member.IPv6 );
         }
         
         command = command.Replace ( "%N",  member.Nick     );

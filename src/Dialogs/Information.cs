@@ -35,11 +35,11 @@ namespace Dialogs
         private Label versionLabel;
         private Label versionEntry;
         
-        private Label addressLabel;
-        private Label addressEntry;
+        private Label ipv4Label;
+        private Label ipv4Entry;
         
-        private Label addressLabel2;
-        private Label addressEntry2;
+        private Label ipv6Label;
+        private Label ipv6Entry;
         
         private Label idLabel;
         private Label idEntry;
@@ -94,26 +94,26 @@ namespace Dialogs
             versionLabel.ModifyFg ( StateType.Normal, labelColor );
             
             
-            addressEntry = new Label ();
-            addressEntry.Xalign = 0;
-            addressEntry.Xpad = 4;
-            addressEntry.Selectable = true;
+            ipv4Entry = new Label ();
+            ipv4Entry.Xalign = 0;
+            ipv4Entry.Xpad = 4;
+            ipv4Entry.Selectable = true;
             
-            addressLabel = new Label ();
-            addressLabel.Xalign = 1;
-            addressLabel.Ypad = 4;
-            addressLabel.ModifyFg ( StateType.Normal, labelColor );
+            ipv4Label = new Label ( Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  " );
+            ipv4Label.Xalign = 1;
+            ipv4Label.Ypad = 4;
+            ipv4Label.ModifyFg ( StateType.Normal, labelColor );
             
             
-            addressEntry2 = new Label ();
-            addressEntry2.Xalign = 0;
-            addressEntry2.Xpad = 4;
-            addressEntry2.Selectable = true;
+            ipv6Entry = new Label ();
+            ipv6Entry.Xalign = 0;
+            ipv6Entry.Xpad = 4;
+            ipv6Entry.Selectable = true;
             
-            addressLabel2 = new Label ();
-            addressLabel2.Xalign = 1;
-            addressLabel2.Ypad = 4;
-            addressLabel2.ModifyFg ( StateType.Normal, labelColor );
+            ipv6Label = new Label ( Utilities.RemoveColons ( TextStrings.addressIPv6 ) + "  " );
+            ipv6Label.Xalign = 1;
+            ipv6Label.Ypad = 4;
+            ipv6Label.ModifyFg ( StateType.Normal, labelColor );
             
             
             idEntry = new Label ();
@@ -158,10 +158,10 @@ namespace Dialogs
             table.Attach ( accountEntry,  1, 2, 2, 3 );
             table.Attach ( nickLabel,     0, 1, 3, 4 );
             table.Attach ( nickEntry,     1, 2, 3, 4 );
-            table.Attach ( addressLabel,  0, 1, 4, 5 );
-            table.Attach ( addressEntry,  1, 2, 4, 5 );
-            table.Attach ( addressLabel2, 0, 1, 5, 6 );
-            table.Attach ( addressEntry2, 1, 2, 5, 6 );
+            table.Attach ( ipv4Label,  0, 1, 4, 5 );
+            table.Attach ( ipv4Entry,  1, 2, 4, 5 );
+            table.Attach ( ipv6Label, 0, 1, 5, 6 );
+            table.Attach ( ipv6Entry, 1, 2, 5, 6 );
             
             
             HBox hbox = new HBox ();
@@ -276,40 +276,8 @@ namespace Dialogs
                 ipv6 = "<i>" + TextStrings.unavailable + "</i>";
             }
             
-            if ( Hamachi.IpVersion == "Both" )
-            {
-                addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
-                addressEntry.Markup = ipv4;
-                
-                addressLabel2.Text = Utilities.RemoveColons ( TextStrings.addressIPv6 ) + "  ";
-                addressEntry2.Markup = ipv6;
-                
-                addressLabel2.Show ();
-                addressEntry2.Show ();
-            }
-            else
-            {
-                addressLabel2.Hide ();
-                addressEntry2.Hide ();
-                
-                if ( Hamachi.IpVersion == "IPv4" )
-                {
-                    if ( Hamachi.IpModeCapable )
-                    {
-                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv4 ) + "  ";
-                    }
-                    else
-                    {
-                        addressLabel.Text = Utilities.RemoveColons ( TextStrings.address ) + "  ";
-                    }
-                    addressEntry.Markup = ipv4;
-                }
-                if ( Hamachi.IpVersion == "IPv6" )
-                {
-                    addressLabel.Text = Utilities.RemoveColons ( TextStrings.addressIPv6 ) + "  ";
-                    addressEntry.Markup = ipv6;
-                }
-            }
+            ipv4Entry.Markup = ipv4;
+            ipv6Entry.Markup = ipv6;
             
         }
         

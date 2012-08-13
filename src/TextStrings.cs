@@ -133,7 +133,6 @@ Türkçe (tr)
     
     public static string hamachiOutput;
     
-    public static string address;
     public static string addressIPv4;
     public static string addressIPv6;
     public static string id;
@@ -211,7 +210,6 @@ Türkçe (tr)
     public static string approveLabel;
     public static string rejectLabel;
     public static string evictLabel;
-    public static string copyAddressLabel;
     public static string copyAddressIPv4Label;
     public static string copyAddressIPv6Label;
     public static string copyClientIdLabel;
@@ -338,7 +336,6 @@ Türkçe (tr)
     public static string addCommandTitle;
     public static string editCommandTitle;
     public static string labelLabel;
-    public static string commandLabel;
     public static string commandIPv4Label;
     public static string commandIPv6Label;
     public static string commandInfo;
@@ -374,7 +371,6 @@ Türkçe (tr)
         
         hamachiOutput                       = Catalog.GetString ( "_Hamachi output" );
         
-        address                             = Catalog.GetString ( "Address:" );
         addressIPv4                         = Catalog.GetString ( "IPv4 address:" );
         addressIPv6                         = Catalog.GetString ( "IPv6 address:" );
         id                                  = Catalog.GetString ( "ID:" );
@@ -452,7 +448,6 @@ Türkçe (tr)
         approveLabel                        = Catalog.GetString ( "_Approve" );
         rejectLabel                         = Catalog.GetString ( "_Reject" );
         evictLabel                          = Catalog.GetString ( "_Evict" );
-        copyAddressLabel                    = Catalog.GetString ( "_Copy Address" );     
         copyAddressIPv4Label                = Catalog.GetString ( "Copy IPv_4 Address" );
         copyAddressIPv6Label                = Catalog.GetString ( "Copy IPv_6 Address" );
         copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
@@ -579,7 +574,6 @@ Türkçe (tr)
         addCommandTitle                     = Catalog.GetString ( "Add Command" );
         editCommandTitle                    = Catalog.GetString ( "Edit Command" );
         labelLabel                          = Catalog.GetString ( "_Label:" );
-        commandLabel                        = Catalog.GetString ( "_Command:" );
         commandIPv4Label                    = Catalog.GetString ( "IPv_4 command:" );
         commandIPv6Label                    = Catalog.GetString ( "IPv_6 command:" );
         commandInfo                         = Catalog.GetString ( "Use %A for address and %N for nickname" );

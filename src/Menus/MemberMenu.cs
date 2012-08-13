@@ -57,14 +57,7 @@ namespace Menus
             copyId = new ImageMenuItem ( TextStrings.copyClientIdLabel );
             copyId.Image = new Image ( Stock.Copy, IconSize.Menu );
             
-            if ( Hamachi.IpModeCapable )
-            {
-                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressIPv4Label );
-            }
-            else
-            {
-                copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressLabel );
-            }
+            copyIPv4 = new ImageMenuItem ( TextStrings.copyAddressIPv4Label );
             copyIPv4.Image = new Image ( Stock.Copy, IconSize.Menu );
             
             copyIPv6 = new ImageMenuItem ( TextStrings.copyAddressIPv6Label );

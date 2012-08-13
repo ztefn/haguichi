@@ -276,14 +276,7 @@ public class NetworkView : TreeView
                 
                 if ( member.IPv4 != "" )
                 {
-                    if ( Hamachi.IpModeCapable )
-                    {
-                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv4, member.IPv4 );
-                    }
-                    else
-                    {
-                        addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.address, member.IPv4 );
-                    }
+                    addressString += String.Format ( "\n{0} <i>{1}</i>", TextStrings.addressIPv4, member.IPv4 );
                 }
                 
                 if ( member.IPv6 != "" )

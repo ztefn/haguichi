@@ -216,8 +216,6 @@ namespace Dialogs
             
             if ( !Hamachi.IpModeCapable )
             {
-                commandIPv4Label.TextWithMnemonic = TextStrings.commandLabel;
-                
                 commandIPv6Label.Hide ();
                 commandIPv6Entry.Hide ();
                 
