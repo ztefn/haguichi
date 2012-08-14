@@ -153,6 +153,7 @@ Türkçe (tr)
     public static string offline;
     public static string online;
     public static string unreachable;
+    public static string mismatch;
     public static string connected;
     public static string disconnected;
     public static string connecting;
@@ -391,6 +392,7 @@ Türkçe (tr)
         offline                             = Catalog.GetString ( "Offline" );
         online                              = Catalog.GetString ( "Online" );
         unreachable                         = Catalog.GetString ( "Unreachable" );
+        mismatch                            = Catalog.GetString ( "Protocol mismatch" );
         connected                           = Catalog.GetString ( "Connected" );
         disconnected                        = Catalog.GetString ( "Disconnected" );
         connecting                          = Catalog.GetString ( "Connecting..." );

@@ -596,14 +596,14 @@ public static class Hamachi
             output += "     x " + RandomClientId () + "   Aytunç                     " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   Brbla                      " + RandomAddress () + "  alias: not set                             via relay\n";
             output += "       " + RandomClientId () + "   Daniel                     " + RandomAddress () + "\n";
-            output += "     * " + RandomClientId () + "   dimitrov                   " + RandomAddress () + "  alias: not set                             direct\n";
+            output += "     ! " + RandomClientId () + "   dimitrov                   " + RandomAddress () + "  alias: not set                             IP protocol mismatch between you and peer\n";
             output += "     * " + RandomClientId () + "   enricog                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   galamarv                   " + RandomAddress () + "  alias: not set                             via relay\n";
             output += "     * " + RandomClientId () + "   HeliosReds                 " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 5.353.432.328  2620:9b::753:b470    direct      UDP  170.45.240.141:43667\n";
+            output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 5.353.432.328  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  IP protocol mismatch between you and peer\n";
             output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
             output += "     x " + RandomClientId () + "   Soker                      " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
@@ -621,7 +621,7 @@ public static class Hamachi
         Regex unapprovedMemberRegex;
         
         networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+), subscription type: (?<subscription>[^,]+), owner: (?<owner>.*))?$" );
-        normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<alias>alias: ([0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ ]*)(?<connection>direct|via relay|via server)?([ a-zA-Z]+)?(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?$" );
+        normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<alias>alias: ([0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ ]*)(?<connection>direct|via relay|via server)?([ ]*)(?<transport>UDP|TCP)?([ ]*)(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?([ ]*)(?<message>[ a-zA-Z]+)?$" );
         unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         
         foreach ( string s in split )

@@ -34,8 +34,8 @@ public class Status
     public Status ( string status )
     {
         
-        SetStatus ( status );
         ConnectionType = "";
+        SetStatus ( status );
         
     }
     
@@ -43,8 +43,8 @@ public class Status
     public Status ( string status, string connection )
     {
         
-        SetStatus ( status );
         SetConnectionType ( connection );
+        SetStatus ( status );
         
     }
     
@@ -56,25 +56,39 @@ public class Status
         {
             statusInt = 0;
             statusString = TextStrings.offline;
-            statusSortable = "d";
+            statusSortable = "f";
         }
-        if ( status == "*" )
+        else if ( status == "*" )
         {
             statusInt = 1;
             statusString = TextStrings.online;
-            statusSortable = "a";
+            
+            if ( ConnectionType == TextStrings.relayed )
+            {
+                statusSortable = "b";
+            }
+            else
+            {
+                statusSortable = "a";
+            }
         }
-        if ( status == "x" )
+        else if ( status == "x" )
         {
             statusInt = 2;
             statusString = TextStrings.unreachable;
-            statusSortable = "b";
+            statusSortable = "d";
         }
-        if ( status == "?" )
+        else if ( status == "?" )
         {
             statusInt = 3;
             statusString = TextStrings.unapproved;
             statusSortable = "c";
+        }
+        else if ( status == "!" )
+        {
+            statusInt = 4;
+            statusString = TextStrings.mismatch;
+            statusSortable = "e";
         }
         
     }
@@ -106,13 +120,17 @@ public class Status
         {
             statusPix = GetPixbufOnline ( size );
         }
-        if ( this.statusInt == 2 )
+        else if ( this.statusInt == 2 )
         {
             statusPix = GetPixbufUnreachable ( size );
         }
-        if ( this.statusInt == 3 )
+        else if ( this.statusInt == 3 )
         {
             statusPix = GetPixbufUnapproved ( size );
+        }
+        else if ( this.statusInt == 4 )
+        {
+            statusPix = GetPixbufMismatch ( size );
         }
         
         return statusPix;
@@ -155,6 +173,14 @@ public class Status
     {
         
         return IconTheme.Default.LoadIcon ( "haguichi-node-unapproved", size, IconLookupFlags.UseBuiltin );
+        
+    }
+    
+    
+    private Pixbuf GetPixbufMismatch ( int size )
+    {
+        
+        return IconTheme.Default.LoadIcon ( "haguichi-node-mismatch", size, IconLookupFlags.UseBuiltin );
         
     }
     
