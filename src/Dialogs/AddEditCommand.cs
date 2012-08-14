@@ -214,15 +214,6 @@ namespace Dialogs
             
             saveButton.GrabDefault ();
             
-            if ( !Hamachi.IpModeCapable )
-            {
-                commandIPv6Label.Hide ();
-                commandIPv6Entry.Hide ();
-                
-                priorityLabel.Hide ();
-                priorityBox.Hide ();
-            }
-            
         }
         
         
@@ -325,7 +316,7 @@ namespace Dialogs
         }
         
         
-        private void Popup ( object o, EventArgs args )
+        private void Popup ( object obj, EventArgs args )
         {
             
             IconMenu.Popup ( null, null, PositionMenu, 0, Gtk.Global.CurrentEventTime );
@@ -379,7 +370,7 @@ namespace Dialogs
         }
         
         
-        private void OnDeleteEvent (object obj, DeleteEventArgs args )
+        private void OnDeleteEvent ( object obj, DeleteEventArgs args )
         {
             
             Dismiss ();

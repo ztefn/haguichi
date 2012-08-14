@@ -158,10 +158,10 @@ namespace Dialogs
             table.Attach ( accountEntry,  1, 2, 2, 3 );
             table.Attach ( nickLabel,     0, 1, 3, 4 );
             table.Attach ( nickEntry,     1, 2, 3, 4 );
-            table.Attach ( ipv4Label,  0, 1, 4, 5 );
-            table.Attach ( ipv4Entry,  1, 2, 4, 5 );
-            table.Attach ( ipv6Label, 0, 1, 5, 6 );
-            table.Attach ( ipv6Entry, 1, 2, 5, 6 );
+            table.Attach ( ipv4Label,     0, 1, 4, 5 );
+            table.Attach ( ipv4Entry,     1, 2, 4, 5 );
+            table.Attach ( ipv6Label,     0, 1, 5, 6 );
+            table.Attach ( ipv6Entry,     1, 2, 5, 6 );
             
             
             HBox hbox = new HBox ();

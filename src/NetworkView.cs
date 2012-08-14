@@ -192,7 +192,7 @@ public class NetworkView : TreeView
         
         if ( this.GetPathAtPos ( System.Convert.ToInt16 ( args.X ), System.Convert.ToInt16 ( args.Y ), out path ) )
         {
-            sortedStore.GetIter (out iter, path);
+            sortedStore.GetIter ( out iter, path );
             
             Network network;
             Member member;
