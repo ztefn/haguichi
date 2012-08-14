@@ -136,6 +136,12 @@ namespace Menus
             foreach ( CommandMenuItem item in customItems )
             {
                 item.Visible = true;
+                item.Sensitive = true;
+                
+                if ( member.Status.statusInt != 1 )
+                {
+                    item.Sensitive = false;
+                }
             }
             
         }
