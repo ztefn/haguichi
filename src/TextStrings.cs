@@ -129,8 +129,6 @@ Türkçe (tr)
     public static string yes;
     public static string no;
     
-    public static string enterPassword;
-    
     public static string hamachiOutput;
     
     public static string addressIPv4;
@@ -367,8 +365,6 @@ Türkçe (tr)
         
         yes                                 = Catalog.GetString ( "Yes" );
         no                                  = Catalog.GetString ( "No" );
-        
-        enterPassword                       = Catalog.GetString ( "Please enter your password to proceed." );
         
         hamachiOutput                       = Catalog.GetString ( "_Hamachi output" );
         

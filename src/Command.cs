@@ -115,7 +115,7 @@ public static class Command
         
         if ( sudo.StartsWith ( "gksu" ) )
         {
-            SudoArguments = "-m \"" + TextStrings.enterPassword + "\" ";
+            SudoArguments = "-D \"LogMeIn Hamachi\" ";
         }
         else if ( sudo == "beesu" )
         {
