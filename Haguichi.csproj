@@ -254,17 +254,17 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <LogicalName>18x18.node-online-relayed</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-mismatch.png">
+    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-error.png">
       <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-mismatch.png</DeployService-RelativeDeployPath>
+      <DeployService-RelativeDeployPath>icons/hicolor/12x12/status/haguichi-node-error.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>12x12.node-mismatch</LogicalName>
+      <LogicalName>12x12.node-error</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-mismatch.png">
+    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-error.png">
       <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-mismatch.png</DeployService-RelativeDeployPath>
+      <DeployService-RelativeDeployPath>icons/hicolor/18x18/status/haguichi-node-error.png</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
-      <LogicalName>18x18.node-mismatch</LogicalName>
+      <LogicalName>18x18.node-error</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

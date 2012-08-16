@@ -28,21 +28,24 @@ public class Status
     public int    statusInt;
     public string statusString;
     public string statusSortable;
+    public string Message;
     public string ConnectionType;
     
     
     public Status ( string status )
     {
         
+        Message = "";
         ConnectionType = "";
         SetStatus ( status );
         
     }
     
     
-    public Status ( string status, string connection )
+    public Status ( string status, string connection, string message )
     {
         
+        Message = message;
         SetConnectionType ( connection );
         SetStatus ( status );
         
@@ -87,8 +90,17 @@ public class Status
         else if ( status == "!" )
         {
             statusInt = 4;
-            statusString = TextStrings.mismatch;
+            statusString = TextStrings.errorUnknown;
             statusSortable = "e";
+            
+            if ( Message == "IP protocol mismatch between you and peer" )
+            {
+                statusString = TextStrings.mismatch;
+            }
+            else if ( Message == "This address is also used by another peer" )
+            {
+                statusString = TextStrings.conflict;
+            }
         }
         
     }
@@ -130,7 +142,7 @@ public class Status
         }
         else if ( this.statusInt == 4 )
         {
-            statusPix = GetPixbufMismatch ( size );
+            statusPix = GetPixbufError ( size );
         }
         
         return statusPix;
@@ -177,10 +189,10 @@ public class Status
     }
     
     
-    private Pixbuf GetPixbufMismatch ( int size )
+    private Pixbuf GetPixbufError ( int size )
     {
         
-        return IconTheme.Default.LoadIcon ( "haguichi-node-mismatch", size, IconLookupFlags.UseBuiltin );
+        return IconTheme.Default.LoadIcon ( "haguichi-node-error", size, IconLookupFlags.UseBuiltin );
         
     }
     

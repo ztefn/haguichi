@@ -66,14 +66,14 @@ public class MainWindow
         IconTheme.AddBuiltinIcon ( "haguichi-node-offline",        12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-offline"        ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable",    12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-unreachable"    ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved",     12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-unapproved"     ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-node-mismatch",       12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-mismatch"     ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-error",          12, Gdk.Pixbuf.LoadFromResource ( "12x12.node-error"          ) );
         
         IconTheme.AddBuiltinIcon ( "haguichi-node-online",         18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-online"         ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-online-relayed", 18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-online-relayed" ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-offline",        18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-offline"        ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-unreachable",    18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-unreachable"    ) );
         IconTheme.AddBuiltinIcon ( "haguichi-node-unapproved",     18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-unapproved"     ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-node-mismatch",       18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-mismatch"     ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-node-error",          18, Gdk.Pixbuf.LoadFromResource ( "18x18.node-error"          ) );
         
         appIcons [0] = IconTheme.Default.LoadIcon ( "haguichi", 16, IconLookupFlags.UseBuiltin );
         appIcons [1] = IconTheme.Default.LoadIcon ( "haguichi", 22, IconLookupFlags.UseBuiltin );

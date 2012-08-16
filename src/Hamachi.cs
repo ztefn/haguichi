@@ -600,7 +600,7 @@ public static class Hamachi
             output += "     * " + RandomClientId () + "   enricog                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   galamarv                   " + RandomAddress () + "  alias: not set                             via relay\n";
             output += "     * " + RandomClientId () + "   HeliosReds                 " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
+            output += "     ! " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 5.353.432.328  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
@@ -683,13 +683,15 @@ public static class Hamachi
                 {
                     
                     string connection = normalMemberRegex.Match ( s ).Groups["connection"].ToString ();
-                    Status status     = new Status ( normalMemberRegex.Match ( s ).Groups["status"].ToString (), connection );
                     string client     = normalMemberRegex.Match ( s ).Groups["id"].ToString ();
                     string ipv4       = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
                     string ipv6       = normalMemberRegex.Match ( s ).Groups["ipv6"].ToString ();
                     string nick       = normalMemberRegex.Match ( s ).Groups["name"].ToString ();
                     string alias      = normalMemberRegex.Match ( s ).Groups["alias"].ToString ();
                     string tunnel     = normalMemberRegex.Match ( s ).Groups["tunnel"].ToString ();
+                    string message    = normalMemberRegex.Match ( s ).Groups["message"].ToString ();
+                    
+                    Status status = new Status ( normalMemberRegex.Match ( s ).Groups["status"].ToString (), connection, message );
                     
                     if ( ( nick == "" ) ||
                          ( nick == "anonymous" ) )
