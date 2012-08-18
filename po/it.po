@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-16 19:02+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 16:31+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2012-07-17 20:00+0000\n"
-"X-Generator: Launchpad (build 15627)\n"
+"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -122,11 +122,11 @@ msgstr "Irraggiungibile"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Mancata corrispondenza del protocollo"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Indirizzo in conflitto"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -183,12 +183,11 @@ msgstr "Per favore, scarica Hamachi e segui le istruzioni di installazione."
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "La versione {0} di Hamachi è obsoleta."
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Per favore, scarica Hamachi e segui le istruzioni di installazione."
+msgstr "Per favore, scarica e installa l'ultima versione di Hamachi."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -830,26 +829,8 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha lasciato la rete {1} e {2} altra rete"
 msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Per favore, inserisci la tua password per proseguire."
-
 #~ msgid "Address:"
 #~ msgstr "Indirizzo:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Copia indirizzo"
-
-#~ msgid "_Command:"
-#~ msgstr "_Comando:"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "Avvio tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Cartella dei dati dell'account:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Scegli cartella"
 
 #~ msgid "Nickname:"
 #~ msgstr "Nickname:"
@@ -860,11 +841,17 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 #~ msgid "Not configured"
 #~ msgstr "Non configurato"
 
+#~ msgid "Running tuncfg..."
+#~ msgstr "Avvio tuncfg..."
+
 #~ msgid "Getting nicknames..."
 #~ msgstr "Richiesta nickname in corso..."
 
 #~ msgid "Not installed"
 #~ msgstr "Non installato"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Copia indirizzo"
 
 #~ msgid "Changing..."
 #~ msgstr "Sto modificando..."
@@ -906,6 +893,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Tu non sei il proprietario della rete '{0}'"
 
+#~ msgid "_Account data folder:"
+#~ msgstr "_Cartella dei dati dell'account:"
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervallo di aggiornamento (secondi):"
 
@@ -917,6 +907,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Timeout dei comandi (secondi):"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Scegli cartella"
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Vuoi avviare tuncfg?"
@@ -959,6 +952,9 @@ msgstr[1] "{0} ha lasciato la rete {1} e {2} altre reti"
 
 #~ msgid "Choose Icon"
 #~ msgstr "Scegli icona"
+
+#~ msgid "_Command:"
+#~ msgstr "_Comando:"
 
 #~ msgid "Go O_nline"
 #~ msgstr "_Vai in linea"

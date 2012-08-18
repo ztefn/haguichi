@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-16 14:44+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 16:24+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-07-16 18:36+0000\n"
-"X-Generator: Launchpad (build 15627)\n"
+"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -123,11 +123,11 @@ msgstr "Nieosiągalny"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Niezgodność protokołu"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Konflikt adresu"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -184,12 +184,11 @@ msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Wersja {0} programu Hamachi jest przestarzała"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr "Proszę pobrać i zainstalować najnowszą wersję programu Hamachi."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -843,26 +842,8 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Proszę podać hasło, aby kontynuować."
-
 #~ msgid "Address:"
 #~ msgstr "Adres:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "S_kopiuj adres"
-
-#~ msgid "_Command:"
-#~ msgstr "Pole_cenie:"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "Wykonywanie programu tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "K_atalog danych konta:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Wybór katalogu"
 
 #~ msgid "No internet connection."
 #~ msgstr "Brak połączenia z internetem."
@@ -872,6 +853,15 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "Connection refused."
 #~ msgstr "Połączenie odrzucone."
+
+#~ msgid "_Command:"
+#~ msgstr "Pole_cenie:"
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "Wykonywanie programu tuncfg..."
+
+#~ msgid "_Copy Address"
+#~ msgstr "S_kopiuj adres"
 
 #~ msgid "_Go directly online in the network"
 #~ msgstr "_Przejście bezpośrednio do trybu online w sieci"
@@ -906,6 +896,12 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "Are you sure you want to leave network '{0}'?"
 #~ msgstr "Na pewno opuścić sieć \"{0}\"?"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Wybór katalogu"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "K_atalog danych konta:"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Nie jesteś właścicielem sieci \"{0}\"."

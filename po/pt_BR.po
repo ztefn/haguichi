@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-16 11:55+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-16 18:56+0000\n"
 "Last-Translator: Rodrigo de Avila <rodrigo@avila.net.br>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2012-07-16 18:40+0000\n"
-"X-Generator: Launchpad (build 15627)\n"
+"X-Launchpad-Export-Date: 2012-08-18 14:28+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -122,11 +122,11 @@ msgstr "Inacessível"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Incompatibilidade de protocolo"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Endereço conflitante"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -184,13 +184,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "A versão {0} do Hamachi é obsoleta"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
-"Por favor efetue o download do hamachi e siga as instruções do instalador."
+msgstr "Por favor baixe e instale a última versão do Hamachi."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -832,26 +830,14 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} saiu da rede {1} e de {2} outra rede"
 msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Por favor digite sua senha para continuar."
-
 #~ msgid "Address:"
 #~ msgstr "Endereço:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Copiar Endereço"
-
-#~ msgid "_Command:"
-#~ msgstr "_Comando:"
 
 #~ msgid "Running tuncfg..."
 #~ msgstr "Executando tuncfg..."
 
-#~ msgid "_Account data folder:"
-#~ msgstr "Pasta de dados da _conta:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Escolher Pasta"
+#~ msgid "_Copy Address"
+#~ msgstr "_Copiar Endereço"
 
 #~ msgid "_Go directly online in the network"
 #~ msgstr "_Aparecer online automaticamente nesta rede"
@@ -876,6 +862,12 @@ msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Você não é o dono da rede '{0}'."
+
+#~ msgid "_Account data folder:"
+#~ msgstr "Pasta de dados da _conta:"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Escolher Pasta"
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "falha ao carregar configuração"
@@ -904,6 +896,9 @@ msgstr[1] "{0} saiu da rede {1} e de {2} outras redes"
 
 #~ msgid "Choose Icon"
 #~ msgstr "Escolher ícone"
+
+#~ msgid "_Command:"
+#~ msgstr "_Comando:"
 
 #~ msgid "Failed evicting member '{0}'"
 #~ msgstr "Falha ao expulsar o membro '{0}'"

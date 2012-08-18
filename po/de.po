@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2011-10-09 21:52+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 16:32+0000\n"
 "Last-Translator: scrawl <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-10-10 20:56+0000\n"
-"X-Generator: Launchpad (build 14123)\n"
+"X-Launchpad-Export-Date: 2012-08-18 19:40+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -77,17 +77,16 @@ msgid "Tunnel:"
 msgstr "Tunnel:"
 
 #: ../src/TextStrings.cs:378
-#, fuzzy
 msgid "Connection:"
-msgstr "Verbinde..."
+msgstr "Verbindung:"
 
 #: ../src/TextStrings.cs:379
 msgid "Direct"
-msgstr ""
+msgstr "Direkt"
 
 #: ../src/TextStrings.cs:380
 msgid "Relayed"
-msgstr ""
+msgstr "Weitergeleitet"
 
 #: ../src/TextStrings.cs:381
 msgid "Anonymous"
@@ -123,11 +122,11 @@ msgstr "Nicht erreichbar"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Protokollfehler"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Addressenkonflikt"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -185,13 +184,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi-Version {0} ist veraltet"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
-"Bitte laden Sie Hamachi herunter und folgen Sie der Installationsanleitung."
+msgstr "Bitte die neueste Version von Hamachi herunterladen und installieren."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -243,7 +240,7 @@ msgstr "Automatisch"
 
 #: ../src/TextStrings.cs:424
 msgid "Capacity:"
-msgstr ""
+msgstr "Kapazität:"
 
 #: ../src/TextStrings.cs:426
 msgid "_Client"
@@ -835,35 +832,11 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} verlässt das Netzwerk {1} und {2} anderes Netzwerk"
 msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Bitte geben Sie Ihr Passwort ein, um fortzufahren."
-
-#~ msgid "Address:"
-#~ msgstr "Adresse:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "Adresse _kopieren"
-
-#~ msgid "_Command:"
-#~ msgstr "_Befehl:"
+#~ msgid "seconds"
+#~ msgstr "Sekunden"
 
 #~ msgid "Running tuncfg..."
 #~ msgstr "Starte tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Datenordner des Kontos:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Ordner wählen"
-
-#~ msgid "_Go directly online in the network"
-#~ msgstr "_Sofort online gehen im Netzwerk"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Symbol wählen"
-
-#~ msgid "seconds"
-#~ msgstr "Sekunden"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Benutzer abrufen..."
@@ -873,6 +846,9 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 
 #~ msgid "Not installed"
 #~ msgstr "Nicht installiert"
+
+#~ msgid "_Copy Address"
+#~ msgstr "Adresse _kopieren"
 
 #~ msgid "Changing..."
 #~ msgstr "Ändere..."
@@ -911,6 +887,9 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Sie sind nicht der Eigentümer des Netzwerks '{0}'"
 
+#~ msgid "Choose Folder"
+#~ msgstr "Ordner wählen"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusleiste"
 
@@ -944,11 +923,17 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 #~ msgid "_Always ask before running tuncfg"
 #~ msgstr "Vor dem _Ausführen von tuncfg immer fragen"
 
+#~ msgid "Choose Icon"
+#~ msgstr "Symbol wählen"
+
 #~ msgid "Go O_nline"
 #~ msgstr "_Online gehen"
 
 #~ msgid "Go O_ffline"
 #~ msgstr "_Offline gehen"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Sofort online gehen im Netzwerk"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Offline-Mitglieder"
@@ -962,11 +947,20 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 #~ msgid "No internet connection."
 #~ msgstr "Keine Internetverbindung."
 
+#~ msgid "Address:"
+#~ msgstr "Adresse:"
+
 #~ msgid "Nickname:"
 #~ msgstr "Benutzername:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Datenordner des Kontos:"
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Aktualisierungsintervall (in Sekunden):"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Zeitüberschreitung für Befehle (in Sekunden):"
+
+#~ msgid "_Command:"
+#~ msgstr "_Befehl:"

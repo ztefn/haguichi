@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-18 13:28+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 17:39+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
 "10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-07-18 15:16+0000\n"
-"X-Generator: Launchpad (build 15637)\n"
+"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -123,7 +123,7 @@ msgstr "Недоступен"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Протокол не совпадает"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
@@ -187,9 +187,8 @@ msgid "Hamachi version {0} is obsolete"
 msgstr ""
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Пожалуйста, скачайте Hamachi и следуйте инструкциям установки."
+msgstr ""
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -837,29 +836,11 @@ msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Для продолжения введите свой пароль."
-
-#~ msgid "Address:"
-#~ msgstr "Адрес:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Копировать адрес"
-
-#~ msgid "_Command:"
-#~ msgstr "_Команда:"
+#~ msgid "seconds"
+#~ msgstr "секунда;секунды;секунд"
 
 #~ msgid "Running tuncfg..."
 #~ msgstr "Запуск tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Каталог учётной записи:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Выберите каталог"
-
-#~ msgid "seconds"
-#~ msgstr "секунда;секунды;секунд"
 
 #~ msgid "Not configured"
 #~ msgstr "Не настроен"
@@ -937,6 +918,12 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgid "Getting nicknames..."
 #~ msgstr "Загрузка псевдонимов..."
 
+#~ msgid "_Copy Address"
+#~ msgstr "_Копировать адрес"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Выберите каталог"
+
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "А_втоматически подключаться при потере соединения"
 
@@ -961,14 +948,23 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgid "Go O_ffline"
 #~ msgstr "C_татус \"не в сети\""
 
+#~ msgid "Address:"
+#~ msgstr "Адрес:"
+
 #~ msgid "Nickname:"
 #~ msgstr "Псевдоним:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Каталог учётной записи:"
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Частота обновления (в секундах):"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Таймаут команды (в секундах):"
+
+#~ msgid "_Command:"
+#~ msgstr "_Команда:"
 
 #~ msgid "Not installed"
 #~ msgstr "Не установлен"

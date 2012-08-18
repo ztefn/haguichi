@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-18 13:26+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 17:49+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2012-07-18 15:16+0000\n"
-"X-Generator: Launchpad (build 15637)\n"
+"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -122,7 +122,7 @@ msgstr "Қол жетімсіз"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Протокол сәйкес емес"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
@@ -183,12 +183,11 @@ msgstr "Hamachi жүктек алып, оның орнату нұсқауына 
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi {0} нұсқасы ескірген"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Hamachi жүктек алып, оның орнату нұсқауына еріңіз."
+msgstr "Hamachi соңғы нұсқасын жүктеп алып, орнатыңыз."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -822,32 +821,23 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Жалғастыру үшін, құпия сөзіңізді енгізіңіз."
-
 #~ msgid "Address:"
 #~ msgstr "Адрес:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "Адресті _көшіру"
-
-#~ msgid "_Command:"
-#~ msgstr "_Команда:"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "tuncfg орындау..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Пайдаланушы жеке бумасы:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Буманы таңдаңыз"
 
 #~ msgid "seconds"
 #~ msgstr "секунд"
 
+#~ msgid "_Copy Address"
+#~ msgstr "Адресті _көшіру"
+
 #~ msgid "Changing..."
 #~ msgstr "Өзгерту..."
+
+#~ msgid "Choose Folder"
+#~ msgstr "Буманы таңдаңыз"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Пайдаланушы жеке бумасы:"
 
 #~ msgid "S_tatusbar"
 #~ msgstr "Күй _жолағы"
@@ -873,8 +863,14 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 #~ msgid "Connection refused."
 #~ msgstr "Қосылыс қабылданбады."
 
+#~ msgid "_Command:"
+#~ msgstr "_Команда:"
+
 #~ msgid "Choose Icon"
 #~ msgstr "Суреттемені таңдаңыз"
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "tuncfg орындау..."
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Ник тізімін алу..."

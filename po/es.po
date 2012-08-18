@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2011-10-12 22:12+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-17 19:28+0000\n"
 "Last-Translator: Eduardo Parra <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-10-13 17:37+0000\n"
-"X-Generator: Launchpad (build 14124)\n"
+"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -77,17 +77,16 @@ msgid "Tunnel:"
 msgstr "Túnel:"
 
 #: ../src/TextStrings.cs:378
-#, fuzzy
 msgid "Connection:"
-msgstr "Conectando…"
+msgstr "Conexión:"
 
 #: ../src/TextStrings.cs:379
 msgid "Direct"
-msgstr ""
+msgstr "Directo"
 
 #: ../src/TextStrings.cs:380
 msgid "Relayed"
-msgstr ""
+msgstr "Retransmitido"
 
 #: ../src/TextStrings.cs:381
 msgid "Anonymous"
@@ -123,11 +122,11 @@ msgstr "Inalcanzable"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Incoherencia de protocolo"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "La dirección está en conflicto"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -184,12 +183,11 @@ msgstr "Descargue Hamachi y siga las instrucciones de instalación."
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "La versión {0} de Hamachi está obsoleta"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Descargue Hamachi y siga las instrucciones de instalación."
+msgstr "Descargue e instale la ultima versión de Hamachi."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -241,7 +239,7 @@ msgstr "Automáticamente"
 
 #: ../src/TextStrings.cs:424
 msgid "Capacity:"
-msgstr ""
+msgstr "Capacidad:"
 
 #: ../src/TextStrings.cs:426
 msgid "_Client"
@@ -831,35 +829,11 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Introduzca su contraseña para continuar."
-
-#~ msgid "Address:"
-#~ msgstr "Dirección:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Copiar dirección"
-
-#~ msgid "_Command:"
-#~ msgstr "C_omando:"
+#~ msgid "seconds"
+#~ msgstr "segundos"
 
 #~ msgid "Running tuncfg..."
 #~ msgstr "Ejecutando tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Carpeta con los datos de la cuenta:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Elija una carpeta"
-
-#~ msgid "_Go directly online in the network"
-#~ msgstr "Conectarse _automáticamente a la red"
-
-#~ msgid "Choose Icon"
-#~ msgstr "Elija un icono"
-
-#~ msgid "seconds"
-#~ msgstr "segundos"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Recibiendo apodos..."
@@ -876,11 +850,17 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "Connection refused."
 #~ msgstr "Conexión rechazada."
 
+#~ msgid "Choose Icon"
+#~ msgstr "Elija un icono"
+
 #~ msgid "_Run"
 #~ msgstr "_Ejecutar"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Miembros desconectados"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Elija una carpeta"
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
 #~ msgstr ""
@@ -909,8 +889,14 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "Go O_ffline"
 #~ msgstr "_Desconectarse"
 
+#~ msgid "_Go directly online in the network"
+#~ msgstr "Conectarse _automáticamente a la red"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "_Barra de estado"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Copiar dirección"
 
 #~ msgid "No internet connection."
 #~ msgstr "No hay conexión a Internet."
@@ -918,14 +904,23 @@ msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 #~ msgid "_Reconnect automatically when connection is lost"
 #~ msgstr "_Reconectar cuando se pierda la conexión"
 
+#~ msgid "Address:"
+#~ msgstr "Dirección:"
+
 #~ msgid "Nickname:"
 #~ msgstr "Apodo:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Carpeta con los datos de la cuenta:"
 
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervalo de actualización (segundos):"
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "_Tiempo máximo de espera (segundos):"
+
+#~ msgid "_Command:"
+#~ msgstr "C_omando:"
 
 #~ msgid "Failed deleting network '{0}'"
 #~ msgstr "No se ha podido eliminar la red «{0}»"

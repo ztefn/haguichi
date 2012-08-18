@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-16 14:33+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-18 15:46+0000\n"
+"Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2012-07-16 18:36+0000\n"
-"X-Generator: Launchpad (build 15627)\n"
+"X-Launchpad-Export-Date: 2012-08-18 19:40+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -122,11 +122,11 @@ msgstr "接続できません"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "プロトコルが一致しません"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "重複アドレス"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -183,12 +183,11 @@ msgstr "Hamachi をダウンロードして手順に従いインストールし�
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi バージョン {0} は既にサポート対象外となっています"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Hamachi をダウンロードして手順に従いインストールしてください。"
+msgstr "Hamachi の最新版をダウンロードしてインストールしてください。"
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -825,26 +824,8 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "次に進むにはパスワードを入力してください。"
-
 #~ msgid "Address:"
 #~ msgstr "アドレス:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "アドレスをコピー(_C)"
-
-#~ msgid "_Command:"
-#~ msgstr "コマンド(_C):"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "tuncfg を実行しています..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "アカウントデータフォルダ(_A)"
-
-#~ msgid "Choose Folder"
-#~ msgstr "フォルダを選択して下さい"
 
 #~ msgid "Nickname:"
 #~ msgstr "ニックネーム:"
@@ -899,6 +880,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "インターバルを更新する (秒単位) (_U):"
 
+#~ msgid "_Account data folder:"
+#~ msgstr "アカウントデータフォルダ(_A)"
+
 #~ msgid "S_tatusbar"
 #~ msgstr "ステータスバー(_T)"
 
@@ -907,6 +891,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "コマンドがタイムアウトするまでの時間 (秒単位) (_C):"
+
+#~ msgid "Choose Folder"
+#~ msgstr "フォルダを選択して下さい"
 
 #~ msgid ""
 #~ "Hamachi needs to run tuncfg to be able to connect.\n"
@@ -945,8 +932,17 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 #~ msgid "Choose Icon"
 #~ msgstr "アイコンを選択"
 
+#~ msgid "_Command:"
+#~ msgstr "コマンド(_C):"
+
 #~ msgid "Failed leaving network '{0}'"
 #~ msgstr "'{0}' ネットワークからの離脱に失敗"
 
 #~ msgid "A_sk confirmation before running tuncfg"
 #~ msgstr "tuncfg を実行する前に確認を求める(_S)"
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "tuncfg を実行しています..."
+
+#~ msgid "_Copy Address"
+#~ msgstr "アドレスをコピー(_C)"

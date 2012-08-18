@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-16 15:18:48+0200\n"
-"PO-Revision-Date: 2012-07-19 14:23+0000\n"
+"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"PO-Revision-Date: 2012-08-16 18:57+0000\n"
 "Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2012-07-19 16:00+0000\n"
-"X-Generator: Launchpad (build 15644)\n"
+"X-Launchpad-Export-Date: 2012-08-18 19:40+0000\n"
+"X-Generator: Launchpad (build 15810)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -183,12 +183,11 @@ msgstr "Silahkan unduh Hamachi dan ikuti intruksi penginstallan"
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi versi {0} sudah tidak dapat digunakan"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Silahkan unduh Hamachi dan ikuti intruksi penginstallan"
+msgstr "Silahkan Unduh dan pasang Hamachi versi terbaru."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -825,23 +824,20 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} meninggalkan jaringan {1} dan {2} jaringan lain"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Masukkan sandi anda untuk melanjutkan"
-
 #~ msgid "Address:"
 #~ msgstr "Alamat:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Salin Alamat"
-
-#~ msgid "_Command:"
-#~ msgstr "_Perintah:"
 
 #~ msgid "Running tuncfg..."
 #~ msgstr "Menjalankan tuncfg..."
 
-#~ msgid "_Account data folder:"
-#~ msgstr "Folder data _Akun:"
+#~ msgid "_Copy Address"
+#~ msgstr "_Salin Alamat"
 
 #~ msgid "Choose Folder"
 #~ msgstr "Pilih Folder"
+
+#~ msgid "_Command:"
+#~ msgstr "_Perintah:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "Folder data _Akun:"
