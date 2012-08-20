@@ -61,7 +61,7 @@ namespace Dialogs
             this.Editor          = editor;
             this.CommandIcon     = icon;
             
-            this.TransientFor    = Haguichi.preferencesWindow;
+            this.TransientFor    = Haguichi.preferencesDialog;
             this.IconList        = MainWindow.appIcons;
             this.Modal           = true;
             this.HasSeparator    = false;

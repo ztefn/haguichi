@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
 "PO-Revision-Date: 2011-10-09 20:13+0000\n"
 "Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -798,10 +798,10 @@ msgid "Move down"
 msgstr "Flytta nedåt"
 
 #: ../src/TextStrings.cs:600
-msgid "_Update the network list every %S second"
-msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "_Uppdatera nätverkslistan varje %S sekund"
-msgstr[1] "_Uppdatera nätverkslistan varje %S sekunder"
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
+msgstr[0] "_Uppdatera nätverkslistan varje %S _sekund"
+msgstr[1] "_Uppdatera nätverkslistan varje %S _sekunder"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:608

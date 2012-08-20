@@ -22,10 +22,10 @@ using Gtk;
 using Widgets;
 
 
-namespace Windows
+namespace Dialogs
 {
 
-    public class Preferences : Window
+    public class Preferences : Dialog
     {
         
         private Button closeBut;
@@ -38,6 +38,7 @@ namespace Windows
         public  CheckButton connectOnStartup;
         public  CheckButton reconnectOnConnectionLoss;
         public  CheckButton disconnectOnQuit;
+        public  CheckButton updateNetworkList;
         
         public  CheckButton notifyOnConnectionLoss;
         public  CheckButton notifyOnMemberJoin;
@@ -48,23 +49,27 @@ namespace Windows
         private HBox ipBox;
         private GroupBox hamachiBox;
         
+        private HBox intervalBox;
+        
         public  ComboBox ipCombo;
         public  SpinButton intervalSpin;
         
         private Label intervalLabel;
-        private Label intervalLabel2;
         
         
-        public Preferences ( string title ) : base ( title )
+        public Preferences ( string title ) : base ()
         {
             
+            this.Title          = title;
             this.TransientFor   = Haguichi.mainWindow.ReturnWindow ();
             this.WindowPosition = WindowPosition.CenterOnParent;
             this.IconList       = MainWindow.appIcons;
-            this.DefaultWidth   = 440;
-            this.DefaultHeight  = 360;
-            this.BorderWidth    = 12;
+            this.HasSeparator   = false;
+            this.Resizable      = false;
+            this.BorderWidth    = 10;
             this.DeleteEvent   += OnWinDelete;
+            
+            this.ActionArea.Destroy ();
             
             
             closeBut = new Button ( Stock.Close );
@@ -203,6 +208,7 @@ namespace Windows
             };
             
             intervalSpin = new SpinButton ( 0, 999, 1 );
+            intervalSpin.Sensitive = ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList );
             intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
             intervalSpin.ValueChanged += delegate
             {
@@ -214,13 +220,9 @@ namespace Windows
             intervalLabel.MnemonicWidget = intervalSpin;
             intervalLabel.Xalign = 0;
             
-            intervalLabel2 = new Label ();
-            intervalLabel2.Xalign = 0;
-            
-            HBox intervalBox = new HBox ();
-            intervalBox.Add ( intervalLabel );
+            intervalBox = new HBox ();
             intervalBox.Add ( intervalSpin );
-            intervalBox.Add ( intervalLabel2 );
+            intervalBox.Add ( intervalLabel );
             
             Box.BoxChild bc7 = ( ( Box.BoxChild ) ( intervalBox [ intervalLabel ] ) );
             bc7.Expand = false;
@@ -261,14 +263,14 @@ namespace Windows
             VBox vbox = new VBox ();
             vbox.Add ( notebook );
             vbox.Add ( buttonBox );
-            vbox.Spacing = 12;
+            vbox.Spacing = 10;
             
             
             Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
             bc2.Expand = false;
 
             
-            this.Add ( vbox );
+            this.VBox.Add ( vbox );
             vbox.ShowAll ();
             
         }
@@ -294,8 +296,24 @@ namespace Windows
             
             string [] intervalString = TextStrings.updateNetworkListInterval ( ( int ) intervalSpin.Value ).Split ( new string [] { "%S" }, StringSplitOptions.None );
             
-            intervalLabel.TextWithMnemonic = intervalString [0];
-            intervalLabel2.Text = intervalString [1];
+            if ( updateNetworkList != null )
+            {
+                intervalBox.Remove ( updateNetworkList );
+            }
+            
+            updateNetworkList = new CheckButton ( intervalString [0] + " " );
+            updateNetworkList.Active = ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList );
+            updateNetworkList.Toggled += delegate
+            {
+                Config.Client.Set ( Config.Settings.UpdateNetworkList, updateNetworkList.Active );
+                intervalSpin.Sensitive = updateNetworkList.Active;
+            };
+            
+            intervalBox.PackStart ( updateNetworkList, false, false, 0 );
+            intervalBox.ReorderChild ( updateNetworkList, 0 );
+            intervalBox.ShowAll ();
+            
+            intervalLabel.TextWithMnemonic = " " + intervalString [1];
             
         }
         

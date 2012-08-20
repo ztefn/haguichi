@@ -75,29 +75,34 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.UpdateInterval.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.intervalSpin.Value = ( int ) ( ( double ) val );
-                    Haguichi.preferencesWindow.SetIntervalString ();
+                    Haguichi.preferencesDialog.intervalSpin.Value = ( int ) ( ( double ) val );
+                    Haguichi.preferencesDialog.SetIntervalString ();
+                }
+                
+                if ( key.Contains ( Config.Settings.UpdateNetworkList.KeyName ) )
+                {
+                    Haguichi.preferencesDialog.updateNetworkList.Active = ( bool ) val;
                 }
                 
                 if ( key.Contains ( Config.Settings.ConnectOnStartup.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.connectOnStartup.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.connectOnStartup.Active = ( bool ) val;
                     MainWindow.autoconnectCheckbox.Active = ( bool ) val;
                 }
                 
                 if ( key.Contains ( Config.Settings.ReconnectOnConnectionLoss.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.reconnectOnConnectionLoss.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.reconnectOnConnectionLoss.Active = ( bool ) val;
                 }
                 
                 if ( key.Contains ( Config.Settings.DisconnectOnQuit.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.disconnectOnQuit.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.disconnectOnQuit.Active = ( bool ) val;
                 }
                 
                 if ( key.Contains ( Config.Settings.NotifyOnConnectionLoss.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.notifyOnConnectionLoss.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.notifyOnConnectionLoss.Active = ( bool ) val;
                     
                     if ( ( Config.Settings.DemoMode ) &&
                          ( ( bool ) val ) )
@@ -108,7 +113,7 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberJoin.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.notifyOnMemberJoin.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.notifyOnMemberJoin.Active = ( bool ) val;
                     
                     if ( Config.Settings.DemoMode )
                     {
@@ -118,7 +123,7 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberLeave.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.notifyOnMemberLeave.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.notifyOnMemberLeave.Active = ( bool ) val;
                     
                     if ( Config.Settings.DemoMode )
                     {
@@ -128,7 +133,7 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberOnline.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.notifyOnMemberOnline.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.notifyOnMemberOnline.Active = ( bool ) val;
                     
                     if ( Config.Settings.DemoMode )
                     {
@@ -138,7 +143,7 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.NotifyOnMemberOffline.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.notifyOnMemberOffline.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.notifyOnMemberOffline.Active = ( bool ) val;
                     
                     if ( Config.Settings.DemoMode )
                     {
@@ -148,13 +153,13 @@ namespace Config
                 
                 if ( key.Contains ( Config.Settings.ShowTrayIcon.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.showTrayIcon.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.showTrayIcon.Active = ( bool ) val;
                     MainWindow.menuBar.SetClose ( ( bool ) val );
                 }
                 
                 if ( key.Contains ( Config.Settings.StartInTray.KeyName ) )
                 {
-                    Haguichi.preferencesWindow.startInTray.Active = ( bool ) val;
+                    Haguichi.preferencesDialog.startInTray.Active = ( bool ) val;
                 }
                 
                 if ( key.Contains ( Config.Settings.ShowAlternatingRowColors.KeyName ) )

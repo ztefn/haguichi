@@ -61,8 +61,8 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
-        Haguichi.informationWindow.Update ();
-        Haguichi.preferencesWindow.Update ();
+        Haguichi.informationDialog.Update ();
+        Haguichi.preferencesDialog.Update ();
         
         StatusCheck ();
         
@@ -828,7 +828,8 @@ public static class Controller
         
         uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
         
-        if ( interval > 0 )
+        if ( ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList ) &&
+             ( interval > 0 ) )
         {
             GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnectionTimeout ) );
         }

@@ -120,6 +120,7 @@ namespace Menus
             
             preferences = new ImageMenuItem ( Stock.Preferences, MainWindow.accelGroup );
             preferences.Activated += GlobalEvents.Preferences;
+            preferences.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.P, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
 
             editMenu = new Menu ();
             editMenu.Append ( preferences );

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
-"PO-Revision-Date: 2012-08-18 21:50:45+0200\n"
+"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
+"PO-Revision-Date: 2012-08-20 16:56:32+0200\n"
 "Last-Translator: stephen\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -778,8 +778,8 @@ msgid "Move down"
 msgstr ""
 
 #: ../src/TextStrings.cs:600
-msgid "_Update the network list every %S second"
-msgid_plural "_Update the network list every %S seconds"
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
 msgstr[0] ""
 msgstr[1] ""
 

@@ -299,7 +299,7 @@
     <Compile Include="src\Menus\Quick.cs" />
     <Compile Include="src\Widgets\GroupBox.cs" />
     <Compile Include="src\Widgets\IndentHBox.cs" />
-    <Compile Include="src\Windows\Preferences.cs" />
+    <Compile Include="src\Dialogs\Preferences.cs" />
     <Compile Include="src\MainWindow.cs" />
     <Compile Include="src\Dialogs\AddEditCommand.cs" />
     <Compile Include="src\Dialogs\Information.cs" />

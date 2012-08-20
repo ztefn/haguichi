@@ -122,7 +122,7 @@ public class GlobalEvents
     {
         
         SetAttach ();
-        Haguichi.informationWindow.Update ();
+        Haguichi.informationDialog.Update ();
         
     }
     
@@ -182,7 +182,7 @@ public class GlobalEvents
     public static void Preferences ()
     {
         
-        Haguichi.preferencesWindow.Open ();
+        Haguichi.preferencesDialog.Open ();
         
     }
     
@@ -200,7 +200,7 @@ public class GlobalEvents
     {
         
         Haguichi.mainWindow.SetNick ( nick );
-        Haguichi.informationWindow.SetNick ( nick );
+        Haguichi.informationDialog.SetNick ( nick );
         
     }
     
@@ -262,7 +262,7 @@ public class GlobalEvents
         if ( ( Controller.lastStatus >= 6 ) &&
              ( Hamachi.IpModeCapable ) )
         {
-            Haguichi.preferencesWindow.ipCombo.Active = ( int ) Utilities.ProtocolToInt ( protocol );
+            Haguichi.preferencesDialog.ipCombo.Active = ( int ) Utilities.ProtocolToInt ( protocol );
             
             Thread thread = new Thread ( UpdateProtocolThread );
             thread.Start ();
@@ -290,7 +290,7 @@ public class GlobalEvents
     public static void Information ()
     {
         
-        Haguichi.informationWindow.Open ();
+        Haguichi.informationDialog.Open ();
         
     }
     
@@ -351,7 +351,7 @@ public class GlobalEvents
         
         string account = Hamachi.GetAccount ();
         
-        Haguichi.informationWindow.SetAccount ( account );
+        Haguichi.informationDialog.SetAccount ( account );
         
         if ( ( ( account == "" ) ||
                ( account == "-" ) ) &&

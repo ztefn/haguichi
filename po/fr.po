@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
 "PO-Revision-Date: 2012-02-04 23:42+0000\n"
 "Last-Translator: Mohamed SEDKI <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -800,10 +800,10 @@ msgid "Move down"
 msgstr "Déplacer vers le bas"
 
 #: ../src/TextStrings.cs:600
-msgid "_Update the network list every %S second"
-msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "_Mettre à jour la liste des réseaux chaque %S seconde"
-msgstr[1] "_Mettre à jour la liste des réseaux toutes les %S secondes"
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
+msgstr[0] "_Mettre à jour la liste des réseaux chaque %S _seconde"
+msgstr[1] "_Mettre à jour la liste des réseaux toutes les %S _secondes"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:608

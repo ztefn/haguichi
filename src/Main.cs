@@ -27,8 +27,8 @@ class Haguichi
     
     public static MainWindow mainWindow;
     public static Dialogs.About aboutDialog;
-    public static Dialogs.Information informationWindow;
-    public static Windows.Preferences preferencesWindow;
+    public static Dialogs.Information informationDialog;
+    public static Dialogs.Preferences preferencesDialog;
     
     public static Dialog modalDialog;
     
@@ -87,8 +87,8 @@ class Haguichi
         
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();
-        informationWindow   = new Dialogs.Information ( TextStrings.informationTitle );
-        preferencesWindow   = new Windows.Preferences ( TextStrings.preferencesTitle );
+        informationDialog   = new Dialogs.Information ( TextStrings.informationTitle );
+        preferencesDialog   = new Dialogs.Preferences ( TextStrings.preferencesTitle );
         
         connection          = new Connection ();
         

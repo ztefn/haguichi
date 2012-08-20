@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-18 21:50:44+0200\n"
+"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
 "PO-Revision-Date: 2012-06-04 20:55+0000\n"
 "Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -798,11 +798,11 @@ msgid "Move down"
 msgstr "Posunout dolů"
 
 #: ../src/TextStrings.cs:600
-msgid "_Update the network list every %S second"
-msgid_plural "_Update the network list every %S seconds"
-msgstr[0] "_Aktualizovat seznam sítí jednou za %S sekund"
-msgstr[1] "_Aktualizovat seznam sítí jednou za %S sekundy"
-msgstr[2] "_Aktualizovat seznam sítí jednou za %S sekund"
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
+msgstr[0] "_Aktualizovat seznam sítí jednou za %S _sekund"
+msgstr[1] "_Aktualizovat seznam sítí jednou za %S _sekundy"
+msgstr[2] "_Aktualizovat seznam sítí jednou za %S _sekund"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:608

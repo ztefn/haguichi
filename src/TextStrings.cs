@@ -598,7 +598,7 @@ Türkçe (tr)
     public static string updateNetworkListInterval ( int count )
     {
         
-        return Catalog.GetPluralString ( "_Update the network list every %S second", "_Update the network list every %S seconds", count );
+        return Catalog.GetPluralString ( "_Update the network list every %S _second", "_Update the network list every %S _seconds", count );
         
     }
 
