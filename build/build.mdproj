@@ -18,6 +18,6 @@
         </Package>
       </Packages>
     </Packages>
-    <ReleaseVersion>1.0.17</ReleaseVersion>
+    <ReleaseVersion>1.0.18</ReleaseVersion>
   </PropertyGroup>
 </Project>
