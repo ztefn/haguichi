@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
-"PO-Revision-Date: 2012-02-04 23:42+0000\n"
-"Last-Translator: Mohamed SEDKI <Unknown>\n"
+"POT-Creation-Date: 2012-09-04 22:45:27+0200\n"
+"PO-Revision-Date: 2012-09-02 14:37+0000\n"
+"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2012-06-05 17:16+0000\n"
-"X-Generator: Launchpad (build 15353)\n"
+"X-Launchpad-Export-Date: 2012-09-04 19:12+0000\n"
+"X-Generator: Launchpad (build 15901)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -77,9 +77,8 @@ msgid "Tunnel:"
 msgstr "Tunnel :"
 
 #: ../src/TextStrings.cs:378
-#, fuzzy
 msgid "Connection:"
-msgstr "Connexion en cours..."
+msgstr "Connexion :"
 
 #: ../src/TextStrings.cs:379
 msgid "Direct"
@@ -185,13 +184,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "La version {0} de Hamachi est obsolète"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
-"Merci de télécharger Hamachi et de suivre les instructions d'installation."
+msgstr "Veuillez télécharger et installer la dernière version de Hamachi."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -243,7 +240,7 @@ msgstr "Automatiquement"
 
 #: ../src/TextStrings.cs:424
 msgid "Capacity:"
-msgstr ""
+msgstr "Capacité :"
 
 #: ../src/TextStrings.cs:426
 msgid "_Client"
@@ -833,26 +830,8 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Veuillez saisir votre mot de passe pour pouvoir continuer."
-
-#~ msgid "Address:"
-#~ msgstr "Adresse :"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Copier l'adresse"
-
-#~ msgid "_Command:"
-#~ msgstr "_Commande :"
-
 #~ msgid "Running tuncfg..."
 #~ msgstr "Configuration avec tuncfg..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "Dossier des données du _compte :"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Choisir un dossier"
 
 #~ msgid "Not configured"
 #~ msgstr "Pas configuré"
@@ -897,6 +876,12 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Not installed"
 #~ msgstr "Pas installé"
 
+#~ msgid "_Copy Address"
+#~ msgstr "_Copier l'adresse"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Choisir un dossier"
+
 #~ msgid "_Run"
 #~ msgstr "_Exécuter"
 
@@ -921,6 +906,9 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "No internet connection."
 #~ msgstr "Pas de connexion Internet."
 
+#~ msgid "Address:"
+#~ msgstr "Adresse :"
+
 #~ msgid "Delete network '{0}'?"
 #~ msgstr "Supprimer le réseau '{0}' ?"
 
@@ -930,6 +918,9 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgid "Evict member '{0}'?"
 #~ msgstr "Expulser le membre '{0}' ?"
 
+#~ msgid "_Account data folder:"
+#~ msgstr "Dossier des données du _compte :"
+
 #~ msgid "_Update interval (seconds):"
 #~ msgstr "_Intervalle de mise à jour (secondes) :"
 
@@ -938,6 +929,9 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Voulez-vous exécuter tuncfg ?"
+
+#~ msgid "_Command:"
+#~ msgstr "_Commande :"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Obtention des pseudos..."
