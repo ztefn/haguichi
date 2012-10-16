@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
-"PO-Revision-Date: 2012-08-17 17:39+0000\n"
+"POT-Creation-Date: 2012-08-20 16:56+0200\n"
+"PO-Revision-Date: 2012-10-15 12:05+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
-"X-Generator: Launchpad (build 15810)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2012-10-15 21:16+0000\n"
+"X-Generator: Launchpad (build 16137)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -127,7 +127,7 @@ msgstr "Протокол не совпадает"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Конфликтующие адреса"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -184,11 +184,11 @@ msgstr "Пожалуйста, скачайте Hamachi и следуйте ин�
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Версия Hamachi {0} устарела"
 
 #: ../src/TextStrings.cs:410
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
+msgstr "Пожалуйста скачайте и установите новейшую версию."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -892,8 +892,7 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgstr "Вы не владелец сети '{0}'."
 
 #~ msgid "Hamachi could not launch due to a configuration load failure."
-#~ msgstr ""
-#~ "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
+#~ msgstr "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
 
 #~ msgid "Loading configuration failed"
 #~ msgstr "Ошибка при загрузке конфигурации"
@@ -908,8 +907,7 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ "Hamachi needs to run tuncfg to be able to connect.\n"
 #~ "Running tuncfg requires administrative privileges."
 #~ msgstr ""
-#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность "
-#~ "подключиться.\n"
+#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность подключиться.\n"
 #~ "Запуск tuncfg требует прав администратора."
 
 #~ msgid "No internet connection."
