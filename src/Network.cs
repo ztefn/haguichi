@@ -227,6 +227,11 @@ approve  : manual";
             {
                 this.IsOwner = 0;
             }
+            
+            Application.Invoke ( delegate
+            {
+                MainWindow.networkView.UpdateNetwork ( this );
+            });
         }
         catch {}
         
