@@ -699,7 +699,7 @@ public static class Hamachi
                         nick = TextStrings.anonymous;
                     }
                     
-                    if ( alias.StartsWith ( "5." ) )
+                    if ( alias.Contains ( "." ) )
                     {
                         ipv4 = alias;
                     }
