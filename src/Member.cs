@@ -50,6 +50,7 @@ public class Member
         this.ClientId = client;
         this.Tunnel   = tunnel;
         
+        GetLongNick ( nick );
         SetSortStrings ();
         
         this.IsEvicted = false;
@@ -85,8 +86,8 @@ public class Member
     public void GetLongNick ( string nick )
     {
         
-        if ( ( this.Nick.Length >= 25 ) ||
-             ( this.Nick.EndsWith ( "�" ) ) )
+        if ( ( nick.Length >= 25 ) ||
+             ( nick.EndsWith ( "�" ) ) )
         {
             Thread thread = new Thread ( GetLongNickThread );
             thread.Start ();
@@ -106,6 +107,11 @@ public class Member
         Debug.Log ( Debug.Domain.Hamachi, "Network.GetLongNickThread", output );
         
         this.Nick = Hamachi.Retrieve ( output, "nickname" );
+        
+        Application.Invoke ( delegate
+        {
+            MainWindow.networkView.UpdateMember ( this.Network, this );
+        });
         
     }
     

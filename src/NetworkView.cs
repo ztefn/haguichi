@@ -544,6 +544,14 @@ public class NetworkView : TreeView
     }
     
     
+    public void UpdateMember ( string network, Member member )
+    {
+        
+        UpdateMember ( ReturnNetworkById ( network ), member );
+        
+    }
+    
+    
     public void UpdateMember ( Network network, Member member )
     {
         
