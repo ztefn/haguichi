@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2012-08-20 16:56:32+0200\n"
-"PO-Revision-Date: 2011-12-04 10:04+0000\n"
-"Last-Translator: Aytunç <aytuncyeni@gmail.com>\n"
+"POT-Creation-Date: 2012-08-20 16:56+0200\n"
+"PO-Revision-Date: 2012-11-17 10:22+0000\n"
+"Last-Translator: Murat ikilik <muratikilik@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2011-12-04 13:36+0000\n"
-"X-Generator: Launchpad (build 14418)\n"
+"X-Launchpad-Export-Date: 2012-11-18 21:24+0000\n"
+"X-Generator: Launchpad (build 16278)\n"
 
 #: ../src/TextStrings.cs:360
 msgid "Haguichi Website"
@@ -77,13 +77,12 @@ msgid "Tunnel:"
 msgstr "Geçiş"
 
 #: ../src/TextStrings.cs:378
-#, fuzzy
 msgid "Connection:"
-msgstr "Bağlanıyor..."
+msgstr "Bağlantı:"
 
 #: ../src/TextStrings.cs:379
 msgid "Direct"
-msgstr ""
+msgstr "Direk"
 
 #: ../src/TextStrings.cs:380
 msgid "Relayed"
@@ -123,11 +122,11 @@ msgstr "Erişilemez"
 
 #: ../src/TextStrings.cs:391
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Protokol Uygun değil"
 
 #: ../src/TextStrings.cs:392
 msgid "Conflicting address"
-msgstr ""
+msgstr "Konfigrasyon adresi"
 
 #: ../src/TextStrings.cs:393
 msgid "Connected"
@@ -184,12 +183,11 @@ msgstr "Lütfen Hamachi'yi indirin ve kurulum yönergelerini takip edin."
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi sürümü {0} uygun değil"
 
 #: ../src/TextStrings.cs:410
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Lütfen Hamachi'yi indirin ve kurulum yönergelerini takip edin."
+msgstr "Lütfen son Hamachi sürümünü kurun."
 
 #: ../src/TextStrings.cs:411
 msgid "_Download"
@@ -241,7 +239,7 @@ msgstr "Otomatik"
 
 #: ../src/TextStrings.cs:424
 msgid "Capacity:"
-msgstr ""
+msgstr "Kapasite:"
 
 #: ../src/TextStrings.cs:426
 msgid "_Client"
@@ -398,7 +396,7 @@ msgstr "_Ekle"
 
 #: ../src/TextStrings.cs:473
 msgid "Attaching..."
-msgstr ""
+msgstr "Ekleniyo..."
 
 #: ../src/TextStrings.cs:474
 msgid "Account not found"
@@ -826,35 +824,17 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
-#~ msgid "Please enter your password to proceed."
-#~ msgstr "Devam etmek için lütfen parolanızı giriniz."
-
 #~ msgid "Address:"
 #~ msgstr "Adres:"
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Adresi Kopyala"
-
-#~ msgid "_Command:"
-#~ msgstr "_Komut:"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "tuncfg çalıştırılıyor..."
-
-#~ msgid "_Account data folder:"
-#~ msgstr "_Hesap veri dizini:"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Dizin seç"
-
-#~ msgid "_Go directly online in the network"
-#~ msgstr "_Direkt çevrimiçi ol"
 
 #~ msgid "seconds"
 #~ msgstr "saniye"
 
 #~ msgid "Getting nicknames..."
 #~ msgstr "Takma ad alın..."
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "tuncfg çalıştırılıyor..."
 
 #~ msgid "Changing..."
 #~ msgstr "Değiştiriliyor..."
@@ -864,6 +844,9 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "Not installed"
 #~ msgstr "Kurulmamış"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Adresi Kopyala"
 
 #~ msgid "Failed leaving network '{0}'"
 #~ msgstr "'{0}' ağından ayrılmada hata oluştu"
@@ -882,6 +865,12 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "Delete network '{0}'?"
 #~ msgstr "'{0}' ağını sil?"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Direkt çevrimiçi ol"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Hesap veri dizini:"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "'{0}' ağının sahibi değilsiniz."
@@ -922,6 +911,9 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 #~ msgid "Connection refused."
 #~ msgstr "Bağlantı reddedildi."
 
+#~ msgid "_Command:"
+#~ msgstr "_Komut:"
+
 #~ msgid "Choose Icon"
 #~ msgstr "Simge Seç"
 
@@ -937,6 +929,9 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
 #~ msgid "Failed evicting member '{0}'"
 #~ msgstr "'{0}' üyesi atılırken hata oluştu"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Dizin seç"
 
 #~ msgid ""
 #~ "Hamachi needs to run tuncfg to be able to connect.\n"
