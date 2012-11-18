@@ -113,7 +113,7 @@ public class Network
         totalCount  = 0;
         onlineCount = 0;
 
-        foreach ( Member member in Members )
+        foreach ( Member member in this.Members )
         {
             totalCount ++;
                 
@@ -140,7 +140,7 @@ public class Network
         {
             owner = this.Owner;
             
-            foreach ( Member member in Members )
+            foreach ( Member member in this.Members )
             {
                 if ( member.ClientId == owner )
                 {
@@ -231,6 +231,14 @@ approve  : manual";
             Application.Invoke ( delegate
             {
                 MainWindow.networkView.UpdateNetwork ( this );
+                
+                foreach ( Member member in this.Members )
+                {
+                    if ( member.ClientId == this.Owner )
+                    {
+                        MainWindow.networkView.UpdateMember ( this, member );
+                    }
+                }
             });
         }
         catch {}
@@ -241,7 +249,7 @@ approve  : manual";
     public void AddMember ( Member member )
     {
         
-        Members.Add ( member );
+        this.Members.Add ( member );
         
     }
     
@@ -249,7 +257,7 @@ approve  : manual";
     public void RemoveMember ( Member member )
     {
         
-        Members.Remove ( member );
+        this.Members.Remove ( member );
         
     }
     
