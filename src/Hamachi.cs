@@ -702,6 +702,7 @@ public static class Hamachi
                     if ( alias.Contains ( "." ) )
                     {
                         ipv4 = alias;
+                        ipv6 = ""; // IPv6 address doesn't work when the alias is set, therefore clearing it
                     }
                     
                     Member member = new Member ( status, curNetworkId, ipv4, ipv6, nick, client, tunnel );

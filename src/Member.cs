@@ -19,6 +19,7 @@
 
 using System;
 using System.Threading;
+using System.Text.RegularExpressions;
 using Gtk;
 
     
@@ -50,8 +51,9 @@ public class Member
         this.ClientId = client;
         this.Tunnel   = tunnel;
         
-        GetLongNick ( nick );
         SetSortStrings ();
+        GetLongNick ( nick );
+        GetCompleteAddresses ( ipv4, ipv6 );
         
         this.IsEvicted = false;
         
@@ -63,13 +65,11 @@ public class Member
         
         this.Status   = status;
         this.Network  = network;
-        this.IPv4     = ipv4;
-        this.IPv6     = ipv6;
         this.ClientId = client;
         this.Tunnel   = tunnel;
         
         GetLongNick ( nick );
-        SetSortStrings ();
+        GetCompleteAddresses ( ipv4, ipv6 );
         
     }
     
@@ -77,8 +77,8 @@ public class Member
     private void SetSortStrings ()
     {
         
-        NameSortString = this.Nick + this.ClientId;
-        StatusSortString = this.Status.statusSortable + this.Nick + this.ClientId;
+        this.NameSortString = this.Nick + this.ClientId;
+        this.StatusSortString = this.Status.statusSortable + this.Nick + this.ClientId;
         
     }
     
@@ -95,6 +95,7 @@ public class Member
         else
         {
             this.Nick = nick;
+            SetSortStrings ();
         }
         
     }
@@ -104,9 +105,63 @@ public class Member
     {
         
         string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
-        Debug.Log ( Debug.Domain.Hamachi, "Network.GetLongNickThread", output );
+        Debug.Log ( Debug.Domain.Hamachi, "Member.GetLongNickThread", output );
         
         this.Nick = Hamachi.Retrieve ( output, "nickname" );
+        SetSortStrings ();
+        
+        Application.Invoke ( delegate
+        {
+            MainWindow.networkView.UpdateMember ( this.Network, this );
+        });
+        
+    }
+    
+    
+    public void GetCompleteAddresses ( string ipv4, string ipv6 )
+    {
+        
+        if ( Config.Settings.DemoMode )
+        {
+            // Nothing
+        }
+        else if ( this.Status.statusInt == 1 )
+        {
+            Thread thread = new Thread ( GetCompleteAddressesThread );
+            thread.Start ();
+        }
+        else
+        {
+            this.IPv4 = ipv4;
+            this.IPv6 = ipv6;
+        }
+        
+    }
+    
+    
+    private void GetCompleteAddressesThread ()
+    {
+        
+        string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
+        Debug.Log ( Debug.Domain.Hamachi, "Member.GetCompleteAddressesThread", output );
+        
+        string alias     = Hamachi.Retrieve ( output, "VPN alias"   );
+        string addresses = Hamachi.Retrieve ( output, "VIP address" );
+        
+        Regex regex = new Regex ( "(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
+        string ipv4 = regex.Match ( addresses ).Groups["ipv4"].ToString ();
+        string ipv6 = regex.Match ( addresses ).Groups["ipv6"].ToString ();
+        
+        if ( alias.Contains ( "." ) )
+        {
+            this.IPv4 = alias;
+            this.IPv6 = ""; // IPv6 address doesn't work when the alias is set, therefore clearing it
+        }
+        else
+        {
+            this.IPv4 = ipv4;
+            this.IPv6 = ipv6;
+        }
         
         Application.Invoke ( delegate
         {

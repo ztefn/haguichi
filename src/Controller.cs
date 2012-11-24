@@ -697,12 +697,12 @@ public static class Controller
                             if ( ( oMember.Status.statusInt == 0 ) &&
                                  ( nMember.Status.statusInt == 1 ) )
                             {
-                                AddMemberToHash ( membersOnlineHash, nMember, oNetwork );
+                                AddMemberToHash ( membersOnlineHash, oMember, oNetwork );
                             }
                             if ( ( oMember.Status.statusInt == 1 ) &&
                                  ( nMember.Status.statusInt == 0 ) )
                             {
-                                AddMemberToHash ( membersOfflineHash, nMember, oNetwork );
+                                AddMemberToHash ( membersOfflineHash, oMember, oNetwork );
                             }
                             
                             oMember.Update ( nMember.Status, nMember.Network, nMember.IPv4, nMember.IPv6, nMember.Nick, nMember.ClientId, nMember.Tunnel );
