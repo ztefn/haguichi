@@ -19,7 +19,7 @@
 
 using System;
 using System.Collections;
-using System.Net.Sockets;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Gtk;
@@ -257,9 +257,7 @@ public static class Controller
         
         try
         {
-            TcpClient client = new TcpClient ( "www.google.com", 80 );
-            client.Close ();
-            
+            Dns.GetHostAddresses ( "www.google.com" );
             return true;
         }
         catch
