@@ -667,7 +667,7 @@ public class CommandsEditor : VBox
         if ( priority == "IPv4" )
         {
             command = ( string ) model.GetValue ( iter, commandIPv4Column );
-            command = command.Replace ( "%A", "5.123.456.789" );
+            command = command.Replace ( "%A", "25.123.456.78" );
         }
         if ( priority == "IPv6" )
         {

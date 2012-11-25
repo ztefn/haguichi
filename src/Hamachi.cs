@@ -265,7 +265,7 @@ public static class Hamachi
         if ( Config.Settings.DemoMode )
         {
             IpVersion = "Both";
-            return new string [] { "5.123.456.789", "2620:9b::56d:f78e" };
+            return new string [] { "25.123.456.78", "2620:9b::56d:f78e" };
         }
         
         string [] output = new string [] { "", "" };
@@ -484,7 +484,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            output = "2.1.0.68";
+            output = "2.1.0.81";
         }
         else if ( Version == 1 )
         {
@@ -527,12 +527,12 @@ public static class Hamachi
     public static string RandomAddress ()
     {
         
-        string address  = "5.";
-               address += random.Next ( 100, 255 );
+        string address  = "25.";
+               address += random.Next ( 0, 255 );
                address += ".";
-               address += random.Next ( 100, 255 );
+               address += random.Next ( 0, 255 );
                address += ".";
-               address += random.Next ( 100, 255 );
+               address += random.Next ( 0, 255 );
         
         return address;
         
@@ -543,7 +543,7 @@ public static class Hamachi
     {
         
         string id  = "0";
-               id += random.Next ( 90, 95 );
+               id += random.Next ( 80, 99 );
                id += "-";
                id += random.Next ( 100, 999 );
                id += "-";
@@ -603,7 +603,7 @@ public static class Hamachi
             output += "     ! " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 5.353.432.328  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
+            output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
             output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
             output += "     x " + RandomClientId () + "   Soker                      " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
