@@ -39,6 +39,8 @@ public class Member
     
     public bool IsEvicted;
     
+    private bool HasCompleteAddresses;
+    
     
     public Member ( Status status, string network, string ipv4, string ipv6, string nick, string client, string tunnel )
     {
@@ -52,10 +54,17 @@ public class Member
         this.Tunnel   = tunnel;
         
         SetSortStrings ();
-        GetLongNick ( nick );
-        GetCompleteAddresses ( ipv4, ipv6 );
         
         this.IsEvicted = false;
+        
+    }
+    
+    
+    public void Init ()
+    {
+        
+        GetLongNick ( this.Nick );
+        GetCompleteAddresses ( this.IPv4, this.IPv6 );
         
     }
     
@@ -121,9 +130,26 @@ public class Member
     public void GetCompleteAddresses ( string ipv4, string ipv6 )
     {
         
+        if ( ( !this.IPv4.StartsWith ( ipv4 ) ) ||
+             ( !this.IPv6.StartsWith ( ipv6 ) ) )
+        {
+            this.HasCompleteAddresses = false;
+        }
+        
         if ( Config.Settings.DemoMode )
         {
             // Nothing
+        }
+        else if ( this.HasCompleteAddresses == true )
+        {
+            if ( ipv4 == "" )
+            {
+                this.IPv4 = ipv4;
+            }
+            if ( ipv6 == "" )
+            {
+                this.IPv6 = ipv6;
+            }
         }
         else if ( this.Status.statusInt == 1 )
         {
@@ -162,6 +188,8 @@ public class Member
             this.IPv4 = ipv4;
             this.IPv6 = ipv6;
         }
+        
+        this.HasCompleteAddresses = true;
         
         Application.Invoke ( delegate
         {

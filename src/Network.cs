@@ -83,6 +83,14 @@ public class Network
     }
     
     
+    public void Init ()
+    {
+        
+        DetermineOwnership ();
+        
+    }
+    
+    
     private void SetSortStrings ()
     {
         

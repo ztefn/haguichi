@@ -395,7 +395,7 @@ public class NetworkView : TreeView
             AddMember ( network, member );
         }
         
-        network.DetermineOwnership ();
+        network.Init ();
         
         CollapseOrExpandNetwork ( network );
         
@@ -540,6 +540,8 @@ public class NetworkView : TreeView
                              member,
                              member.NameSortString,
                              member.StatusSortString );
+        
+        member.Init ();
         
     }
     
