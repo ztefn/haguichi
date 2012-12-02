@@ -150,11 +150,9 @@ namespace Dialogs
                 startInTray.Sensitive = false;
             }
             
-            GroupBox spaceBox1 = new GroupBox ( "" );
-            
             VBox appearanceBox = new VBox ();
             appearanceBox.Add ( trayBox );
-            appearanceBox.Add ( spaceBox1 );
+            appearanceBox.Add ( new SpaceBox () );
             
             Box.BoxChild trayBoxC = ( ( Box.BoxChild ) ( appearanceBox [ trayBox ] ) );
             trayBoxC.Expand = false;
@@ -236,12 +234,10 @@ namespace Dialogs
             behaviorBox.AddWidget ( disconnectOnQuit );
             behaviorBox.AddWidget ( intervalBox );
             
-            GroupBox spaceBox2 = new GroupBox ( "" );
-            
             VBox systemBox = new VBox ();
             systemBox.Add ( hamachiBox );
             systemBox.Add ( behaviorBox );
-            systemBox.Add ( spaceBox2 );
+            systemBox.Add ( new SpaceBox () );
             
             Box.BoxChild hamachiBoxC = ( ( Box.BoxChild ) ( systemBox [ hamachiBox ] ) );
             hamachiBoxC.Expand = false; 

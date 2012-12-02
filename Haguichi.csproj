@@ -310,6 +310,7 @@
     <Compile Include="src\Session.cs" />
     <Compile Include="src\Widgets\WrapLabel.cs" />
     <Compile Include="src\Widgets\MessageBar.cs" />
+    <Compile Include="src\Widgets\SpaceBox.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
