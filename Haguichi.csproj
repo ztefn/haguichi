@@ -647,13 +647,13 @@
   <ItemGroup>
     <Content Include="haguichi-autostart.desktop">
       <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>../etc/xdg/autostart/haguichi.desktop</DeployService-RelativeDeployPath>
+      <DeployService-RelativeDeployPath>gnome/autostart/haguichi.desktop</DeployService-RelativeDeployPath>
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
     </Content>
     <Content Include="haguichi-menu.desktop">
       <DeployService-Deploy>true</DeployService-Deploy>
-      <DeployService-RelativeDeployPath>applications/haguichi.desktop</DeployService-RelativeDeployPath>
-      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-RelativeDeployPath>haguichi.desktop</DeployService-RelativeDeployPath>
+      <DeployService-TargetDirectoryId>Linux.DesktopApplications</DeployService-TargetDirectoryId>
     </Content>
   </ItemGroup>
   <ItemGroup>
