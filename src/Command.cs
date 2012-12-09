@@ -28,7 +28,7 @@ public static class Command
     private static int timeout;
     private static bool inProgress = false;
     
-    public static string SudoArguments    = "";
+    public static string SudoArgs  = "";
     public static string SudoStart = "-- ";
     public static string SudoEnd   = "";
     
@@ -128,7 +128,7 @@ public static class Command
         
         if ( sudo.StartsWith ( "gksu" ) )
         {
-            SudoArguments = "-D \"LogMeIn Hamachi\" ";
+            SudoArgs = "-D \"LogMeIn Hamachi\" ";
         }
         else if ( sudo == "beesu" )
         {
