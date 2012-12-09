@@ -29,15 +29,19 @@ public static class Command
     private static bool inProgress = false;
     
     public static string SudoArguments    = "";
-    public static string SudoCommandStart = "-- ";
-    public static string SudoCommandEnd   = "";
+    public static string SudoStart = "-- ";
+    public static string SudoEnd   = "";
+    
+    public static string Terminal;
+    public static string FileManager;
+    public static string RemoteDesktop;
     
     
     public static void Init ()
     {
         
         SetTimeout ();
-        DetermineSudo ();
+        DetermineCommands ();
         
     }
     
@@ -58,11 +62,20 @@ public static class Command
     }
     
     
-    public static void DetermineSudo ()
+    public static void DetermineCommands ()
     {
         
-        Thread thread = new Thread ( DetermineSudoThread );
-        thread.Start ();
+        Thread sudoThread = new Thread ( DetermineSudoThread );
+        sudoThread.Start ();
+        
+        Thread terminalThread = new Thread ( DetermineTerminalThread );
+        terminalThread.Start ();
+        
+        Thread fileManagerThread = new Thread ( DetermineFileManagerThread );
+        fileManagerThread.Start ();
+        
+        Thread remoteDesktopThread = new Thread ( DetermineRemoteDesktopThread );
+        remoteDesktopThread.Start ();
         
     }
     
@@ -119,11 +132,92 @@ public static class Command
         }
         else if ( sudo == "beesu" )
         {
-            SudoCommandStart = "-c '";
-            SudoCommandEnd   = "'";
+            SudoStart = "-c '";
+            SudoEnd   = "'";
         }
         
-        Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Command for sudo: " + sudo );
+        Debug.Log ( Debug.Domain.Environment, "Command.DetermineSudoThread", "Command for sudo: " + sudo );
+        
+    }
+    
+    
+    private static void DetermineTerminalThread ()
+    {
+        
+        Terminal = "gnome-terminal -x";
+        
+        if ( Exists ( "gnome-terminal" ) )
+        {
+            // Keep
+        }
+        else if ( Exists ( "mate-terminal" ) )
+        {
+            Terminal = "mate-terminal -x";
+        }
+        else if ( Exists ( "xfce4-terminal" ) )
+        {
+            Terminal = "xfce4-terminal -x";
+        }
+        else if ( Exists ( "konsole" ) )
+        {
+            Terminal = "konsole -e";
+        }
+        else if ( Exists ( "xterm" ) )
+        {
+            Terminal = "xterm -e";
+        }
+        
+        Debug.Log ( Debug.Domain.Environment, "Command.DetermineTerminalThread", "Command for terminal: " + Terminal );
+        
+    }
+    
+    
+    private static void DetermineFileManagerThread ()
+    {
+        
+        FileManager = "nautilus";
+        
+        if ( Exists ( "nautilus" ) )
+        {
+            // Keep
+        }
+        else if ( Exists ( "caja" ) )
+        {
+            FileManager = "caja";
+        }
+        else if ( Exists ( "nemo" ) )
+        {
+            FileManager = "nemo";
+        }
+        else if ( Exists ( "thunar" ) )
+        {
+            FileManager = "thunar";
+        }
+        else if ( Exists ( "dolphin" ) )
+        {
+            FileManager = "dolphin";
+        }
+        
+        Debug.Log ( Debug.Domain.Environment, "Command.DetermineFileManagerThread", "Command for file manager: " + FileManager );
+        
+    }
+    
+    
+    private static void DetermineRemoteDesktopThread ()
+    {
+        
+        RemoteDesktop = "vinagre";
+        
+        if ( Exists ( "vinagre" ) )
+        {
+            // Keep
+        }
+        else if ( Exists ( "krdc" ) )
+        {
+            RemoteDesktop = "krdc";
+        }
+        
+        Debug.Log ( Debug.Domain.Environment, "Command.DetermineRemoteDesktopThread", "Command for remote desktop: " + RemoteDesktop );
         
     }
     
@@ -280,8 +374,12 @@ public static class Command
             command = command.Replace ( "%A", member.IPv6 );
         }
         
-        command = command.Replace ( "%N",  member.Nick     );
+        command = command.Replace ( "%N", member.Nick );
         command = command.Replace ( "%ID", member.ClientId );
+        
+        command = command.Replace ( "%TERMINAL", Command.Terminal );
+        command = command.Replace ( "%FILEMANAGER", Command.FileManager );
+        command = command.Replace ( "%REMOTEDESKTOP", Command.RemoteDesktop );
         
         command = command.Replace ( "{COLON}", ";" );
         

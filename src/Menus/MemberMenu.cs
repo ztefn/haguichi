@@ -88,11 +88,6 @@ namespace Menus
          
             string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
             
-            if ( Utilities.AsString ( commands ) == Utilities.AsString ( Config.Settings.DefaultCommands ) )
-            {
-                commands = Config.Settings.SessionDefaultCommands;
-            }
-            
             foreach ( string c in commands )
             {
                 

@@ -459,12 +459,21 @@ public class CommandsEditor : VBox
         
         string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
         
-        if ( Utilities.AsString ( commands ) == Utilities.AsString ( Config.Settings.DefaultCommands ) )
-        {
-            commands = Config.Settings.SessionDefaultCommands;
-        }
+        string [] legacyCommands1 = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
+                                      "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A",
+                                      "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A" };
+        string [] legacyCommands2 = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/;nautilus smb://[%A]/;IPv4",
+                                      "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A;vinagre [%A];IPv4",
+                                      "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A;gnome-terminal -x ping6 %A;IPv4" };
         
         bool needsUpdate = false;
+        
+        if ( ( Utilities.AsString ( commands ) == Utilities.AsString ( legacyCommands1 ) ) ||
+             ( Utilities.AsString ( commands ) == Utilities.AsString ( legacyCommands2 ) ) )
+        {
+            commands = Config.Settings.DefaultCommands;
+            needsUpdate = true;
+        }
         
         foreach ( string c in commands )
         {
@@ -486,25 +495,11 @@ public class CommandsEditor : VBox
                 
                 string commandIPv4 = cArray [4];
                 string commandIPv6 = "";
-                string priority    = "";
+                string priority    = "IPv4";
                 
                 if ( cArray.GetLength ( 0 ) == 5 )
                 {
                     needsUpdate = true;
-                    
-                    if ( cArray [4] == "nautilus smb://%A/" )
-                    {
-                        commandIPv6 = "nautilus smb://[%A]/";
-                    }
-                    if ( cArray [4] == "vinagre %A" )
-                    {
-                        commandIPv6 = "vinagre [%A]";
-                    }
-                    if ( cArray [4] == "gnome-terminal -x ping %A" )
-                    {
-                        commandIPv6 = "gnome-terminal -x ping6 %A";
-                    }
-                    priority = "IPv4";
                 }
                 else if ( cArray.GetLength ( 0 ) == 7 )
                 {
@@ -558,11 +553,6 @@ public class CommandsEditor : VBox
         SetButtonSensitivity ();
         
         string [] commands = ComposeCommandsString ();
-        
-        if ( Utilities.AsString ( commands ) == Utilities.AsString ( Config.Settings.SessionDefaultCommands ) )
-        {
-            commands = Config.Settings.DefaultCommands;
-        }
         
         Config.Client.Set ( Config.Settings.CustomCommands, commands );
         
@@ -678,6 +668,10 @@ public class CommandsEditor : VBox
         command = command.Replace ( "%N", "Nick" );
         command = command.Replace ( "%ID", "090-123-456" );
         
+        command = command.Replace ( "%TERMINAL", Command.Terminal );
+        command = command.Replace ( "%FILEMANAGER", Command.FileManager );
+        command = command.Replace ( "%REMOTEDESKTOP", Command.RemoteDesktop );
+        
         textCell.Markup = String.Format ( "<b>{0}</b>{1}\n<span size=\"smaller\">{2}</span>",
                                           Markup.EscapeText ( title ),
                                           isDefault,
@@ -697,7 +691,7 @@ public class CommandsEditor : VBox
     private void SetButtonSensitivity ()
     {
         
-        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", Config.Settings.SessionDefaultCommands ) )
+        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", Config.Settings.DefaultCommands ) )
         {
             revertBut.Sensitive = false;
         }

@@ -35,11 +35,9 @@ namespace Config
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
         
-        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/;nautilus smb://[%A]/;IPv4",
-                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A;vinagre [%A];IPv4",
-                                                                "true;false;utilities-terminal;_Ping;gnome-terminal -x ping %A;gnome-terminal -x ping6 %A;IPv4" };
-        
-        public static string [] SessionDefaultCommands;
+        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4",
+                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4",
+                                                                "true;false;utilities-terminal;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4" };
         
         public static Key ConnectOnStartup                  = new Key ( "behavior/connect_on_startup", false );
         public static Key ReconnectOnConnectionLoss         = new Key ( "behavior/reconnect_on_connection_loss", true );
@@ -75,27 +73,6 @@ namespace Config
         public static Key NotifyOnMemberLeave               = new Key ( "notifications/member_leave", true );
         public static Key NotifyOnMemberOffline             = new Key ( "notifications/member_offline", true );
         public static Key NotifyOnMemberOnline              = new Key ( "notifications/member_online", true );
-        
-        
-        public static void Init ()
-        {
-            
-            if ( Environment.GetEnvironmentVariable ( "KDE_FULL_SESSION" ) == "true" )
-            {
-                SessionDefaultCommands = new string [] { "true;true;folder-remote;_Browse Shares;dolphin smb://%A/;dolphin smb://[%A]/;IPv4",
-                                                         "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;krdc %A;krdc [%A];IPv4",
-                                                         "true;false;utilities-terminal;_Ping;konsole -e ping %A;konsole -e ping6 %A;IPv4" };
-                
-                Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: KDE" );
-            }
-            else
-            {
-                SessionDefaultCommands = DefaultCommands;
-                
-                Debug.Log ( Debug.Domain.Environment, "Settings.Init", "Default commands for this session: GNOME" );
-            }
-            
-        }
         
     }
 

@@ -81,7 +81,6 @@ class Haguichi
         
         TextStrings.Init ();
         Config.Client.Init ();
-        Config.Settings.Init ();
         Command.Init ();
         Hamachi.Init ();
         
