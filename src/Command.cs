@@ -154,6 +154,10 @@ public static class Command
         {
             Terminal = "mate-terminal -x";
         }
+        else if ( Exists ( "pantheon-terminal" ) )
+        {
+            Terminal = "pantheon-terminal -x";
+        }
         else if ( Exists ( "xfce4-terminal" ) )
         {
             Terminal = "xfce4-terminal -x";
@@ -188,6 +192,10 @@ public static class Command
         else if ( Exists ( "nemo" ) )
         {
             FileManager = "nemo";
+        }
+        else if ( Exists ( "pantheon-files" ) )
+        {
+            FileManager = "pantheon-files";
         }
         else if ( Exists ( "thunar" ) )
         {
