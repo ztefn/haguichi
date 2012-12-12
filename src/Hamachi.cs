@@ -27,7 +27,8 @@ using System.Text.RegularExpressions;
 public static class Hamachi
 {
     
-    public  static int Version;
+    public  static int MajorVersion;
+    public  static string Version;
     public  static bool VpnAliasCapable = false;
     public  static bool IpModeCapable = false;
     public  static string IpVersion = "IPv4";
@@ -40,7 +41,8 @@ public static class Hamachi
     {
         
         GetInfo ();
-        Version = DetermineVersionAndCapabilities ();
+        GetVersion ();
+        MajorVersion = DetermineVersionAndCapabilities ();
         ScriptDirectory = DetermineScriptDirectory ();
         
     }
@@ -477,30 +479,27 @@ public static class Hamachi
     }
     
     
-    public static string GetVersion ()
+    private static void GetVersion ()
     {
-        
-        string output = "";
         
         if ( Config.Settings.DemoMode )
         {
-            output = "2.1.0.81";
+            Version = "2.1.0.84";
         }
-        else if ( Version == 1 )
+        else if ( MajorVersion == 1 )
         {
-            output = "0.9.9.9-20";
+            Version = "0.9.9.9-20";
         }
         else
         {
             try
             {
-                output = Retrieve ( lastInfo, "version" );
+                Version = Retrieve ( lastInfo, "version" );
             }
             catch {}
         }
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", output );
         
-        return output;
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", Version );
         
     }
     

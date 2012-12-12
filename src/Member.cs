@@ -130,31 +130,44 @@ public class Member
     public void GetCompleteAddresses ( string ipv4, string ipv6 )
     {
         
-        if ( ( !this.IPv4.StartsWith ( ipv4 ) ) ||
-             ( !this.IPv6.StartsWith ( ipv6 ) ) )
+        if ( ( Hamachi.Version == "2.0.0.11" ) ||
+             ( Hamachi.Version == "2.0.0.12" ) ||
+             ( Hamachi.Version == "2.0.1.13" ) ||
+             ( Hamachi.Version == "2.0.1.15" ) ||
+             ( Hamachi.Version == "2.1.0.17" ) ||
+             ( Hamachi.Version == "2.1.0.18" ) ||
+             ( Hamachi.Version == "2.1.0.68" ) ||
+             ( Hamachi.Version == "2.1.0.76" ) ||
+             ( Hamachi.Version == "2.1.0.80" ) ||
+             ( Hamachi.Version == "2.1.0.81" ) )
         {
-            this.HasCompleteAddresses = false;
-        }
-        
-        if ( Config.Settings.DemoMode )
-        {
-            // Nothing
-        }
-        else if ( this.HasCompleteAddresses == true )
-        {
-            if ( ipv4 == "" )
+            if ( ( !this.IPv4.StartsWith ( ipv4 ) ) ||
+                 ( !this.IPv6.StartsWith ( ipv6 ) ) )
+            {
+                this.HasCompleteAddresses = false;
+            }
+            
+            if ( this.HasCompleteAddresses == true )
+            {
+                if ( ipv4 == "" )
+                {
+                    this.IPv4 = ipv4;
+                }
+                if ( ipv6 == "" )
+                {
+                    this.IPv6 = ipv6;
+                }
+            }
+            else if ( this.Status.statusInt == 1 )
+            {
+                Thread thread = new Thread ( GetCompleteAddressesThread );
+                thread.Start ();
+            }
+            else
             {
                 this.IPv4 = ipv4;
-            }
-            if ( ipv6 == "" )
-            {
                 this.IPv6 = ipv6;
             }
-        }
-        else if ( this.Status.statusInt == 1 )
-        {
-            Thread thread = new Thread ( GetCompleteAddressesThread );
-            thread.Start ();
         }
         else
         {

@@ -142,9 +142,9 @@ public static class Controller
                 Command.OpenURL ( TextStrings.getHamachiURL );
             };
             
-            if ( Hamachi.Version == 1 )
+            if ( Hamachi.MajorVersion == 1 )
             {
-                MainWindow.messageBar.SetMessage ( String.Format ( TextStrings.obsoleteHeading, Hamachi.GetVersion () ), TextStrings.obsoleteMessage, MessageType.Error );
+                MainWindow.messageBar.SetMessage ( String.Format ( TextStrings.obsoleteHeading, Hamachi.Version ), TextStrings.obsoleteMessage, MessageType.Error );
             }
             else
             {
@@ -201,7 +201,7 @@ public static class Controller
         Regex regex;
         
         if ( ( output == "error" ) || // 'bash: hamachi: command not found' causes exception
-             ( Hamachi.Version == 1 ) )
+             ( Hamachi.MajorVersion == 1 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not installed." );
             return 0;

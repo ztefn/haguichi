@@ -248,7 +248,7 @@ namespace Dialogs
         private void SetVersion ()
         {
             
-            string version = Hamachi.GetVersion ();
+            string version = Hamachi.Version;
             
             if ( version == "" )
             {
