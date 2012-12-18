@@ -208,34 +208,15 @@ public class GlobalEvents
     public static void UpdateNick ()
     {
         
-        string nick = ( string ) Config.Client.Get ( Config.Settings.Nickname );
-        
         if ( Config.Settings.DemoMode )
         {
             UpdateNick ( "Joe Demo" );
         }
-        else if ( nick.Length > 0 )
-        {
-            UpdateNick ( nick );
-        }
         else
         {
-            Thread thread = new Thread ( UpdateNickThread );
-            thread.Start ();
+            UpdateNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) );
         }
         
-    }
-    
-    
-    private static void UpdateNickThread ()
-    {
-        
-        string nick = Hamachi.GetNick ();
-        
-        Config.Client.Set ( Config.Settings.Nickname, nick );
-        
-        UpdateNick ( nick );
-         
     }
     
     

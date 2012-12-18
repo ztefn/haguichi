@@ -82,7 +82,7 @@ namespace Dialogs
             buttonBox.Spacing = 6;
             
             nickEntry = new Entry ();
-            nickEntry.Text = ( string ) Config.Client.Get ( Config.Settings.Nickname );
+            nickEntry.Text = Config.Settings.DemoMode ? "Joe Demo" : ( string ) Config.Client.Get ( Config.Settings.Nickname );
             nickEntry.ActivatesDefault = true;
             nickEntry.MaxLength = 64;
             
@@ -143,7 +143,10 @@ namespace Dialogs
             
             this.Nick = nickEntry.GetChars ( 0, -1 );
             
-            Config.Client.Set ( Config.Settings.Nickname, this.Nick );
+            if ( !Config.Settings.DemoMode )
+            {
+                Config.Client.Set ( Config.Settings.Nickname, this.Nick );
+            }
             
             GlobalEvents.UpdateNick ( this.Nick );
             

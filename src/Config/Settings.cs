@@ -27,7 +27,7 @@ namespace Config
     public static class Settings
     {
         
-        public static string LocalePath                     = System.AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
+        public static string LocalePath                     = AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
         public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower ();
         
         public static bool Debugging                        = false;
@@ -46,7 +46,7 @@ namespace Config
         public static Key StartInTray                       = new Key ( "behavior/start_in_tray", false );
         public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
-        public static Key Nickname                          = new Key ( "config/nickname", "" );
+        public static Key Nickname                          = new Key ( "config/nickname", Environment.UserName );
         public static Key Protocol                          = new Key ( "config/protocol", "both" );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 60.0 );
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
