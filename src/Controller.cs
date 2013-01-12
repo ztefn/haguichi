@@ -301,39 +301,23 @@ public static class Controller
         
         string output = startOutput;
         
-        if ( output.Contains ( "Starting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
+        Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi should be started now, let's check..." );
+        
+        StatusCheck ();
+        
+        if ( lastStatus >= 4 )
         {
-            /* Hamachi is starting */
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is starting." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is succesfully started, now go login." );
             
-            /* Wait a moment hoping Hamachi will be fully started by then */
-            Thread.Sleep ( 2000 );
-            
-            StatusCheck ();
-            
-            if ( lastStatus >= 4 )
+            Application.Invoke ( delegate
             {
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Started, now go login." );
-                
-                Application.Invoke ( delegate
-                {
-                    MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
-                });
-                GoLoginThread ();
-            }
-            else
-            {
-                Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Still not finished starting, stopping now." );
-                
-                Application.Invoke ( delegate
-                {
-                    GlobalEvents.ConnectionStopped ();
-                });
-            }
+                MainWindow.statusBar.Push ( 0, TextStrings.loggingIn );
+            });
+            GoLoginThread ();
         }
         else if ( output != "" )
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason, showing output." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start Hamachi, showing output." );
             
             Application.Invoke ( delegate
             {
@@ -347,11 +331,12 @@ public static class Controller
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start for unknown reason, no output to show." );
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start Hamachi, no output to show. User might have cancelled sudo dialog." );
             
             Application.Invoke ( delegate
             {
                 GlobalEvents.ConnectionStopped ();
+                MainWindow.messageBar.SetMessage ( TextStrings.connectErrorHeading, null, MessageType.Error );
             });
         }
         
@@ -432,6 +417,12 @@ public static class Controller
     {
         
         string output = Hamachi.Login ();
+        
+        while ( output.Contains ( ".. failed, busy" ) ) // Keep trying until it's not busy anymore
+        {
+            Thread.Sleep ( 100 );
+            output = Hamachi.Login ();
+        }
         
         if ( ( output.Contains ( ".. ok" ) ) ||
              ( output.Contains ( "Already logged in" ) ) ) // Ok, logged in.

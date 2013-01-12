@@ -160,14 +160,10 @@ public static class Hamachi
     public static void Configure ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart --skip-redirect\"" + Command.SudoEnd );
-        
-        if ( output.Contains ( "Restarting LogMeIn Hamachi VPN tunneling engine logmein-hamachi" ) )
-        {
-            Controller.Init ();
-        }
-        
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
+        
+        Controller.Init ();
         
     }
     
@@ -175,19 +171,8 @@ public static class Hamachi
     public static string Start ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi start --skip-redirect" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi start" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );
-        
-        return output;
-        
-    }
-    
-    
-    public static string Stop ()
-    {
-        
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi stop --skip-redirect" + Command.SudoEnd );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Stop", output );
         
         return output;
         
