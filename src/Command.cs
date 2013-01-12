@@ -123,12 +123,11 @@ public static class Command
         else if ( Exists ( "sudo" ) )
         {
             sudo = "sudo";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
         }
         
         if ( sudo.StartsWith ( "gksu" ) )
         {
-            SudoArgs = "-D \"LogMeIn Hamachi\" ";
+            SudoArgs = "--sudo-mode -D \"LogMeIn Hamachi\" ";
         }
         else if ( sudo == "beesu" )
         {
