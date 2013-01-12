@@ -220,47 +220,36 @@ namespace Dialogs
         private void Fill ()
         {
             
-            uint columns     = 6;
+            uint columns     = 5;
             uint countLeft   = 0;
             uint countRight  = 1;
             uint countTop    = 0;
             uint countBottom = 1;
             
-            string [] iconNames = { "folder-remote",
-                                    "network-workgroup",
+            string [] iconNames = { "user-home",
+                                    "folder-remote",
                                     "network-server",
-                                    "printer",
                                     "preferences-desktop-remote-desktop",
-                                    "application-x-remote-connection",
-                                    "applications-internet",
                                     "computer",
-                                    "go-home",
-                                    "user-home",
-                                    "folder-open",
+                                    "applications-internet",
                                     "utilities-terminal",
                                     "utilities-system-monitor",
-                                    "dialog-password",
                                     "system-search",
                                     "audio-x-generic",
                                     "video-x-generic",
                                     "x-office-address-book",
-                                    "package-x-generic",
-                                    "input-gaming",
-                                    "system-users",
+                                    "printer",
                                     "drive-harddisk",
                                     "drive-optical",
                                     "drive-removable-media",
                                     "camera-web",
-                                    "audio-input-microphone",
-                                    "network-wired",
-                                    "network-wireless",
-                                    "modem",
-                                    "call-start",
-                                    "call-stop",
-                                    "document-send",
+                                    "mail-send",
+                                    "package-x-generic",
+                                    "dialog-password",
+                                    "input-gaming",
+                                    "system-users",
                                     "face-cool",
-                                    "face-devilish",
-                                    "system-shutdown" };
+                                    "face-devilish" };
             
             foreach ( string iconName in iconNames )
             {
@@ -309,8 +298,8 @@ namespace Dialogs
                 SetIcon ( "none" );
             };
             
-            IconMenu.Attach ( new SeparatorMenuItem (), 0, 7, 5, 6 );
-            IconMenu.Attach ( none, 0, 7, 6, 7 );
+            IconMenu.Attach ( new SeparatorMenuItem (), 0, 6, 4, 5 );
+            IconMenu.Attach ( none, 0, 6, 5, 6 );
             IconMenu.ShowAll ();
             
         }
