@@ -566,9 +566,9 @@ public static class Hamachi
             output += " * [Artwork]\n";
             output += "       " + RandomClientId () + "   Lapo                       " + RandomAddress () + "  alias: not set                             direct\n";
             output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
-            output += "   [Bug Hunters]  capacity: 4/5, subscription type: Free, owner: This computer\n";
-            output += "     * " + RandomClientId () + "   Conrad                     " + RandomAddress () + "  alias: not set                             via relay\n";
-            output += "     * " + RandomClientId () + "   war59312                   " + RandomAddress () + "  alias: not set                             direct\n";
+            output += "   [Bug Hunters]  capacity: 4/5,   [192.168.155.24/24]  subscription type: Free, owner: This computer\n";
+            output += "     * " + RandomClientId () + "   Conrad                     192.168.155.20  alias: not set                             via relay\n";
+            output += "     * " + RandomClientId () + "   war59312                   192.168.155.22  alias: not set                             direct\n";
             output += "     ? " + RandomClientId () + " \n";
             output += " * [" + RandomNetworkId () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
             output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
@@ -604,7 +604,7 @@ public static class Hamachi
         Regex normalMemberRegex;
         Regex unapprovedMemberRegex;
         
-        networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+), subscription type: (?<subscription>[^,]+), owner: (?<owner>.*))?$" );
+        networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+?)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+),)?([ ]*)(" + Regex.Escape ("[") + "(?<subnet>[0-9" + Regex.Escape (".") + "/]{9,19})" + Regex.Escape ("]") + ")?([ ]*)( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$" );
         normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(alias: (?<alias>[0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ ]*)(?<connection>direct|via relay|via server)?([ ]*)(?<transport>UDP|TCP)?([ ]*)(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?([ ]*)(?<message>[ a-zA-Z]+)?$" );
         unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
         
