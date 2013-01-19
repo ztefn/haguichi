@@ -418,12 +418,6 @@ public static class Controller
         
         string output = Hamachi.Login ();
         
-        while ( output.Contains ( ".. failed, busy" ) ) // Keep trying until it's not busy anymore
-        {
-            Thread.Sleep ( 100 );
-            output = Hamachi.Login ();
-        }
-        
         if ( ( output.Contains ( ".. ok" ) ) ||
              ( output.Contains ( "Already logged in" ) ) ) // Ok, logged in.
         {

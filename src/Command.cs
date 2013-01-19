@@ -289,7 +289,7 @@ public static class Command
     public static string ReturnOutput ( string filename, string args )
     {
         
-        string val = "error";
+        string output = "error";
         
         if ( filename == "hamachi" )
         {
@@ -311,11 +311,11 @@ public static class Command
             {
                 if ( p.WaitForExit ( 1000 * timeout ) )
                 {
-                    val = p.StandardOutput.ReadToEnd ();
+                    output = p.StandardOutput.ReadToEnd ();
                 }
                 else
                 {
-                    val = "timeout";
+                    output = "timeout";
                 }
                 p.Close ();
                 p.Dispose ();
@@ -329,9 +329,17 @@ public static class Command
         if ( filename == "hamachi" )
         {
             inProgress = false;
+            
+            while ( output.Contains ( ".. failed, busy" ) ) // Keep trying until it's not busy anymore
+            {
+                Debug.Log ( Debug.Domain.Hamachi, "Command.ReturnOutput", "Hamachi is busy, waiting to try again..." );
+                
+                Thread.Sleep ( 100 );
+                output = ReturnOutput ( filename, args );
+            }
         }
         
-        return val;
+        return output;
         
     }
     
