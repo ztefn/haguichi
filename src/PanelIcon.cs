@@ -56,6 +56,12 @@ public class PanelIcon : StatusIcon
         IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-3" ) );
         IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.disconnected" ) );
         
+        IconTheme.AddBuiltinIcon ( "haguichi-connected",    48, Gdk.Pixbuf.LoadFromResource ( "48x48.connected"    ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.disconnected" ) );
+        
         this.IconName = disconnected;
         
     }
