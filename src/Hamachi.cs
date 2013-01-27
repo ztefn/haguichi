@@ -317,50 +317,62 @@ public static class Hamachi
     }
     
     
-    public static string GoOnline ( string id )
+    public static bool GoOnline ( Network network )
     {
         
-        string output = "";
+        bool success = true;
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "go-online \"" + Utilities.CleanString ( id ) + "\"" );
+            string output = Command.ReturnOutput ( "hamachi", "go-online \"" + Utilities.CleanString ( network.Id ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOnline", output );
+            
+            if ( ( output.Contains ( ".. failed" ) ) &&
+                 ( !output.Contains ( ".. failed, already online" ) ) )
+            {
+                success = false;
+                
+                string heading = String.Format ( TextStrings.failedGoOnlineHeading, network.Name );
+                string message = TextStrings.seeOutput;
+                
+                Application.Invoke ( delegate
+                {
+                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                });
+            }
         }
         
-        return output;
+        return success;
         
     }
     
     
-    public static string GoOnline ( Network network )
+    public static bool GoOffline ( Network network )
     {
         
-        return GoOnline ( network.Id );
-        
-    }
-    
-    
-    public static string GoOffline ( string id )
-    {
-        
-        string output = "";
+        bool success = true;
         
         if ( !Config.Settings.DemoMode )
         {
-            output = Command.ReturnOutput ( "hamachi", "go-offline \"" + Utilities.CleanString ( id ) + "\"" );
+            string output = Command.ReturnOutput ( "hamachi", "go-offline \"" + Utilities.CleanString ( network.Id ) + "\"" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GoOffline", output );
+            
+            if ( ( output.Contains ( ".. failed" ) ) &&
+                 ( !output.Contains ( ".. failed, already offline" ) ) )
+            {
+                success = false;
+                
+                string heading = String.Format ( TextStrings.failedGoOfflineHeading, network.Name );
+                string message = TextStrings.seeOutput;
+                
+                Application.Invoke ( delegate
+                {
+                    new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
+                });
+            }
         }
         
-        return output;
-        
-    }
-    
-    
-    public static string GoOffline ( Network network )
-    {
-        
-        return GoOffline ( network.Id );
+        return success;
         
     }
     
@@ -371,10 +383,10 @@ public static class Hamachi
         string output = Command.ReturnOutput ( "hamachi", "delete \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Delete", output );
 
-        if ( output.Contains ( ".. failed, you are not an owner" ) )
+        if ( output.Contains ( ".. failed" ) )
         {
             string heading = String.Format ( TextStrings.failedDeleteNetworkHeading, network.Name );
-            string message = TextStrings.failedDeleteNetworkMessage;
+            string message = TextStrings.seeOutput;
             
             Application.Invoke ( delegate
             {
@@ -390,21 +402,11 @@ public static class Hamachi
         
         string output = Command.ReturnOutput ( "hamachi", "leave \"" + Utilities.CleanString ( network.Id ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Leave", output );
-
-        if ( output.Contains ( ".. failed, you are an owner" ) )
+        
+        if ( output.Contains ( ".. failed" ) )
         {
             string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
-            string message = TextStrings.failedLeaveNetworkMessageIsOwner;
-            
-            Application.Invoke ( delegate
-            {
-                new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
-            });
-        }
-        else if ( output.Contains ( ".. failed, denied" ) )
-        {
-            string heading = String.Format ( TextStrings.failedLeaveNetworkHeading, network.Name );
-            string message = TextStrings.failedLeaveNetworkMessageDenied;
+            string message = TextStrings.seeOutput;
             
             Application.Invoke ( delegate
             {
@@ -439,10 +441,10 @@ public static class Hamachi
         string output = Command.ReturnOutput ( "hamachi", "evict \"" + Utilities.CleanString ( member.Network ) + "\" " + member.ClientId );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Evict", output );
 
-        if ( output.Contains ( ".. failed, denied" ) )
+        if ( output.Contains ( ".. failed" ) )
         {
             string heading = String.Format ( TextStrings.failedEvictMemberHeading, member.Nick );
-            string message = String.Format ( TextStrings.failedEvictMemberMessage, member.Network );
+            string message = String.Format ( TextStrings.seeOutput, member.Network );
             
             Application.Invoke ( delegate
             {
@@ -762,26 +764,10 @@ public static class Hamachi
     }
     
     
-    public static string SendJoinRequest ( string name, string password )
-    {
-        
-        string output = "";
-        
-        if ( !Config.Settings.DemoMode )
-        {
-            output = Command.ReturnOutput ( "hamachi", "do-join \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
-            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.SendJoinRequest", output );
-        }
-        
-        return output;
-        
-    }
-    
-    
     public static string JoinNetwork ( string name, string password )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "join \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
+        string output = Command.ReturnOutput ( "hamachi", "do-join \"" + Utilities.CleanString ( name ) + "\" \"" + Utilities.CleanString ( password ) + "\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.JoinNetwork", output );
         
         return output;

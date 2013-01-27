@@ -324,7 +324,7 @@ public static class Controller
                 GlobalEvents.ConnectionStopped ();
                 new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (),
                                       TextStrings.connectErrorHeading,
-                                      TextStrings.errorUnknown,
+                                      TextStrings.seeOutput,
                                       "Error",
                                       output );
             });
@@ -385,7 +385,6 @@ public static class Controller
             
             Application.Invoke ( delegate
             {
-                MainWindow.statusBar.Push ( 0, TextStrings.starting );
                 GoStart ();
             });
         }

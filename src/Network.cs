@@ -280,8 +280,6 @@ approve  : manual";
         
         this.Status = new Status ( "*" );
         
-        SetSortStrings ();
-        
         MainWindow.networkView.UpdateNetwork ( this );
         
     }
@@ -290,7 +288,19 @@ approve  : manual";
     private void GoOnlineThread ()
     {
         
-        Hamachi.GoOnline ( this );
+        bool success = Hamachi.GoOnline ( this );
+        
+        if ( !success )
+        {
+            this.Status = new Status ( " " );
+        }
+        
+        SetSortStrings ();
+        
+        Application.Invoke ( delegate
+        {
+            MainWindow.networkView.UpdateNetwork ( this );
+        });
         
         updating = false;
         
@@ -307,8 +317,6 @@ approve  : manual";
         
         this.Status = new Status ( " " );
         
-        SetSortStrings ();
-        
         MainWindow.networkView.UpdateNetwork ( this );
         
     }
@@ -317,7 +325,19 @@ approve  : manual";
     private void GoOfflineThread ()
     {
         
-        Hamachi.GoOffline ( this );
+        bool success = Hamachi.GoOffline ( this );
+        
+        if ( !success )
+        {
+            this.Status = new Status ( "*" );
+        }
+        
+        SetSortStrings ();
+        
+        Application.Invoke ( delegate
+        {
+            MainWindow.networkView.UpdateNetwork ( this );
+        });
         
         updating = false;
         

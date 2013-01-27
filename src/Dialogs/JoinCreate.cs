@@ -219,14 +219,22 @@ namespace Dialogs
             
             if ( Config.Settings.DemoMode )
             {
-                output = ".. failed, manual approval required";
+                output = ".. ok, request sent";
             }
             else
             {
                 output = Hamachi.JoinNetwork ( this.NetworkName, this.NetworkPassword );
             }
             
-            if ( output.Contains ( ".. ok" ) )
+            if ( output.Contains ( ".. ok, request sent" ) )
+            {
+                Application.Invoke ( delegate
+                {
+                    Dismiss ();
+                    MainWindow.messageBar.SetMessage ( TextStrings.requestSentMessage, null, MessageType.Info, 3000 );
+                });
+            }
+            else if ( output.Contains ( ".. ok" ) )
             {
                 Thread.Sleep ( 1000 ); // Wait a second to get an updated list
                 
@@ -238,73 +246,31 @@ namespace Dialogs
                 
                 Thread.Sleep ( 2000 );
                 Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
-                
-                return;
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkNotFound );
-                return;
             }
             else if ( output.Contains ( ".. failed, invalid password" ) )
             {
                 ShowMessage ( output, TextStrings.errorInvalidPassword );
-                return;
             }
             else if ( output.Contains ( ".. failed, the network is full" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkFull );
-                return;
             }
             else if ( output.Contains ( ".. failed, network is locked" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkLocked );
-                return;
             }
-            else if ( output.Contains ( ".. failed, you are already a member" ) )
+            else if ( output.Contains ( ".. failed, you are already a member" ) ||
+                      output.Contains ( "failed, you are an owner" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkAlreadyJoined );
-                return;
-            }
-            else if ( output.Contains ( ".. failed, manual approval required" ) )
-            {
-                Application.Invoke ( delegate
-                {
-                    Button noButton = new Button ( Stock.No );
-                    noButton.Clicked += delegate
-                    {
-                        HideMessage ();
-                        SetMode ( "Normal" );
-                        nameEntry.GrabFocus ();
-                    };
-                    
-                    Button yesButton = new Button ( Stock.Yes );
-                    yesButton.Clicked += delegate
-                    {
-                        output = Hamachi.SendJoinRequest ( this.NetworkName, this.NetworkPassword );
-                        if ( ( output.Contains ( ".. ok, request sent, waiting for approval" ) ) ||
-                             ( Config.Settings.DemoMode ) )
-                        {
-                            MainWindow.messageBar.SetMessage ( TextStrings.requestSentMessage, null, MessageType.Info, 3000 );
-                        }
-                        
-                        Dismiss ();
-                    };
-                    
-                    messageBar.SetMessage ( TextStrings.sendRequestTitle, TextStrings.sendRequestMessage, MessageType.Question );
-                    messageBar.AddButton ( noButton );
-                    messageBar.AddButton ( yesButton );
-                    
-                    yesButton.CanDefault = true;
-                    yesButton.GrabDefault ();
-                    yesButton.GrabFocus ();
-                });
-                return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
                 ShowMessage ( output, TextStrings.errorUnknown );
-                return;
             }
             else
             {
@@ -357,23 +323,18 @@ namespace Dialogs
                 
                 Thread.Sleep ( 2000 );
                 Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
-                
-                return;
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkNameTooShort );
-                return;
             }
             else if ( output.Contains ( ".. failed, network name is already taken" ) )
             {
                 ShowMessage ( output, TextStrings.errorNetworkNameTaken );
-                return;
             }
             else if ( output.Contains ( ".. failed" ) )
             {
                 ShowMessage ( output, TextStrings.errorUnknown );
-                return;
             }
             else
             {

@@ -30,7 +30,8 @@ namespace Dialogs
         public Message ( Window parent, string header, string message, string icon, string output ) : base ( parent, "", header, message, icon )
         {
             
-            this.AddButton ( Stock.Ok, ResponseType.Ok );
+            Button okBut = ( Button ) this.AddButton ( Stock.Ok, ResponseType.Ok );
+            okBut.GrabDefault ();
             
             if ( output != null )
             {

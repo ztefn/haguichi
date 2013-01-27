@@ -45,6 +45,7 @@ namespace Dialogs
             Button okBut = ( Button ) this.AddButton ( Stock.Ok, ResponseType.Ok );
             okBut.Label = label;
             okBut.Image = new Image ( stock, IconSize.Button );
+            okBut.GrabDefault ();
             
             this.Run ();
             this.Destroy ();

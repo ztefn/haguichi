@@ -27,7 +27,7 @@ public static class TextStrings
     public const  string appName                = "Haguichi";
     public const  string appVersion             = "1.0.20";
     public const  string appWebsite             = "http://www.haguichi.net/";
-    public static string appWebsiteLabel;
+    public const  string appWebsiteLabel        = "www.haguichi.net";
     public static string appComments;
     public static string appDescription;
     public static string appCopyright           = "Copyright © 2007-2013 Stephen Brandt";
@@ -156,7 +156,6 @@ Türkçe (tr)
     public static string connected;
     public static string disconnected;
     public static string connecting;
-    public static string starting;
     public static string loggingIn;
     public static string updating;
     
@@ -255,8 +254,6 @@ Türkçe (tr)
     public static string errorNetworkNameTooShort;
     public static string errorNetworkNameTaken;
     
-    public static string sendRequestTitle;
-    public static string sendRequestMessage;
     public static string requestSentMessage;
     
     public static string preferencesTitle;
@@ -272,14 +269,12 @@ Türkçe (tr)
     public static string confirmEvictMemberMessage;
     
     public static string failedDeleteNetworkHeading;
-    public static string failedDeleteNetworkMessage;
-    
-    public static string failedLeaveNetworkHeading;
-    public static string failedLeaveNetworkMessageIsOwner;
-    public static string failedLeaveNetworkMessageDenied;
-    
+    public static string failedLeaveNetworkHeading;    
     public static string failedEvictMemberHeading;
-    public static string failedEvictMemberMessage;
+    public static string failedGoOnlineHeading;
+    public static string failedGoOfflineHeading;
+    
+    public static string seeOutput;
     
     public static string generalTab;
     public static string commandsTab;
@@ -357,8 +352,7 @@ Türkçe (tr)
     
     public static void Init ()
     {
-
-        appWebsiteLabel                     = Catalog.GetString ( "Haguichi Website" );
+        
         appComments                         = Catalog.GetString ( "A graphical frontend for Hamachi." );
         appDescription                      = Catalog.GetString ( "Join and create local networks over the Internet" );
         
@@ -394,7 +388,6 @@ Türkçe (tr)
         connected                           = Catalog.GetString ( "Connected" );
         disconnected                        = Catalog.GetString ( "Disconnected" );
         connecting                          = Catalog.GetString ( "Connecting..." );
-        starting                            = Catalog.GetString ( "Starting Hamachi..." );
         loggingIn                           = Catalog.GetString ( "Logging in..." );
         updating                            = Catalog.GetString ( "Updating..." );
         
@@ -493,8 +486,6 @@ Türkçe (tr)
         errorNetworkNameTooShort            = Catalog.GetString ( "Network name too short" );
         errorNetworkNameTaken               = Catalog.GetString ( "Network name is already taken" );
         
-        sendRequestTitle                    = Catalog.GetString ( "Send join request?" );
-        sendRequestMessage                  = Catalog.GetString ( "This network requires manual approval of new members by the owner. Would you like to send a join request?" );
         requestSentMessage                  = Catalog.GetString ( "Join request sent" );
         
         preferencesTitle                    = Catalog.GetString ( "Preferences" );
@@ -509,15 +500,13 @@ Türkçe (tr)
         confirmEvictMemberHeading           = Catalog.GetString ( "Evict member \"{0}\"?" );
         confirmEvictMemberMessage           = Catalog.GetString ( "Are you sure you want to evict member \"{0}\"\nfrom network \"{1}\"?" );
         
-        failedDeleteNetworkHeading          = Catalog.GetString ( "Failed deleting network \"{0}\"" );
-        failedDeleteNetworkMessage          = Catalog.GetString ( "You are not the owner of this network." );
+        failedDeleteNetworkHeading          = Catalog.GetString ( "Could not delete network \"{0}\"" );
+        failedLeaveNetworkHeading           = Catalog.GetString ( "Could not leave network \"{0}\"" );        
+        failedEvictMemberHeading            = Catalog.GetString ( "Could not evict member \"{0}\"" );
+        failedGoOnlineHeading               = Catalog.GetString ( "Could not go online in the\nnetwork \"{0}\"" );
+        failedGoOfflineHeading              = Catalog.GetString ( "Could not go offline in the\nnetwork \"{0}\"" );
         
-        failedLeaveNetworkHeading           = Catalog.GetString ( "Failed leaving network \"{0}\"" );
-        failedLeaveNetworkMessageIsOwner    = Catalog.GetString ( "You are the owner of this network." );
-        failedLeaveNetworkMessageDenied     = Catalog.GetString ( "You don't have permission to leave this network." );
-        
-        failedEvictMemberHeading            = Catalog.GetString ( "Failed evicting member \"{0}\"" );
-        failedEvictMemberMessage            = Catalog.GetString ( "You are not the owner of network \"{0}\"." );
+        seeOutput                           = Catalog.GetString ( "See output for details." );
         
         generalTab                          = Catalog.GetString ( "General" );
         desktopTab                          = Catalog.GetString ( "Desktop" );
@@ -601,7 +590,7 @@ Türkçe (tr)
         return Catalog.GetPluralString ( "_Update the network list every %S _second", "_Update the network list every %S _seconds", count );
         
     }
-
+    
     
     public static string notifyMemberOnlineMessagePlural ( int count )
     {
