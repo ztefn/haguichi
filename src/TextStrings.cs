@@ -342,7 +342,6 @@ Türkçe (tr)
     public static string isDefault;
     public static string defaultLabel;
     
-    public static string revertTip;
     public static string revertHeading;
     public static string revertMessage;
     
@@ -491,14 +490,14 @@ Türkçe (tr)
         preferencesTitle                    = Catalog.GetString ( "Preferences" );
         informationTitle                    = Catalog.GetString ( "Information" );
         
-        confirmDeleteNetworkHeading         = Catalog.GetString ( "Delete network \"{0}\"?" );
-        confirmDeleteNetworkMessage         = Catalog.GetString ( "Are you sure you want to delete network \"{0}\"?" );
+        confirmDeleteNetworkHeading         = Catalog.GetString ( "Are you sure you want to delete the\nnetwork \"{0}\"?" );
+        confirmDeleteNetworkMessage         = Catalog.GetString ( "If you delete a network, it will be permanently lost." );
         
-        confirmLeaveNetworkHeading          = Catalog.GetString ( "Leave network \"{0}\"?" );
-        confirmLeaveNetworkMessage          = Catalog.GetString ( "Are you sure you want to leave network \"{0}\"?" );
+        confirmLeaveNetworkHeading          = Catalog.GetString ( "Are you sure you want to leave the\nnetwork \"{0}\"?" );
+        confirmLeaveNetworkMessage          = Catalog.GetString ( "If admitted, you can rejoin the network at any later time." );
         
-        confirmEvictMemberHeading           = Catalog.GetString ( "Evict member \"{0}\"?" );
-        confirmEvictMemberMessage           = Catalog.GetString ( "Are you sure you want to evict member \"{0}\"\nfrom network \"{1}\"?" );
+        confirmEvictMemberHeading           = Catalog.GetString ( "Are you sure you want to evict member \"{0}\"\nfrom network \"{1}\"?" );
+        confirmEvictMemberMessage           = Catalog.GetString ( "If admitted, evicted members can rejoin the network at any later time." );
         
         failedDeleteNetworkHeading          = Catalog.GetString ( "Could not delete network \"{0}\"" );
         failedLeaveNetworkHeading           = Catalog.GetString ( "Could not leave network \"{0}\"" );        
@@ -574,9 +573,8 @@ Türkçe (tr)
         isDefault                           = Catalog.GetString ( "Default" );
         defaultLabel                        = Catalog.GetString ( "_Default" );
         
-        revertTip                           = Catalog.GetString ( "Restore the default commands" );
-        revertHeading                       = Catalog.GetString ( "Revert changes?" );
-        revertMessage                       = Catalog.GetString ( "Are you sure you wish to revert all changes\nand thereby restore the default commands?" );
+        revertHeading                       = Catalog.GetString ( "Are you sure you want to revert all changes?" );
+        revertMessage                       = Catalog.GetString ( "If you revert all changes, the default commands will be restored." );
         
         moveUpTip                           = Catalog.GetString ( "Move up" );
         moveDownTip                         = Catalog.GetString ( "Move down" );

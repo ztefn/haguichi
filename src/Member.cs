@@ -309,8 +309,8 @@ public class Member
         Network network = MainWindow.networkView.ReturnNetworkById ( this.Network );
         
         string label   = TextStrings.evictLabel;
-        string heading = String.Format ( TextStrings.confirmEvictMemberHeading, this.Nick );
-        string message = String.Format ( TextStrings.confirmEvictMemberMessage, this.Nick, network.Name );
+        string heading = String.Format ( TextStrings.confirmEvictMemberHeading, this.Nick, network.Name  );
+        string message = String.Format ( TextStrings.confirmEvictMemberMessage );
             
         Dialogs.Confirm dlg = new Dialogs.Confirm ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Warning", label, null );
         

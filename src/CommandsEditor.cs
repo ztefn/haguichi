@@ -136,8 +136,7 @@ public class CommandsEditor : VBox
         sw.Show ();
         
         
-        revertBut = new Button ( Stock.RevertToSaved ); 
-        revertBut.TooltipText = TextStrings.revertTip;
+        revertBut = new Button ( Stock.RevertToSaved );
         revertBut.Clicked += RevertCommands;
         
         defaultBut = new Button ( TextStrings.defaultLabel );

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-01-27 18:36:18+0100\n"
+"POT-Creation-Date: 2013-02-10 21:56:08+0100\n"
 "PO-Revision-Date: 2012-08-17 17:49+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
@@ -19,482 +19,484 @@ msgstr ""
 "X-Generator: Launchpad (build 15810)\n"
 
 #. Description used in about dialog.
-#: ../src/TextStrings.cs:355
+#: ../src/TextStrings.cs:354
 msgid "A graphical frontend for Hamachi."
 msgstr "Hamachi бағдарламасы үшін графикалық қабықша."
 
 #. Description used in application launchers.
-#: ../src/TextStrings.cs:356
+#: ../src/TextStrings.cs:355
 msgid "Join and create local networks over the Internet"
 msgstr "Интернет арқылы локальды желілерге кіріңіз, әрі оларды құрыңыз"
 
-#: ../src/TextStrings.cs:358
+#: ../src/TextStrings.cs:357
 msgid "_Show Haguichi"
 msgstr "Haguichi _көрсету"
 
-#: ../src/TextStrings.cs:360
+#: ../src/TextStrings.cs:359
 msgid "Yes"
 msgstr "Иә"
 
-#: ../src/TextStrings.cs:361
+#: ../src/TextStrings.cs:360
 msgid "No"
 msgstr "Жоқ"
 
-#: ../src/TextStrings.cs:363
+#: ../src/TextStrings.cs:362
 msgid "_Hamachi output"
 msgstr "_Hamachi шығаруы (output)"
 
-#: ../src/TextStrings.cs:365
+#: ../src/TextStrings.cs:364
 msgid "IPv4 address:"
 msgstr "IPv4 адрес:"
 
-#: ../src/TextStrings.cs:366
+#: ../src/TextStrings.cs:365
 msgid "IPv6 address:"
 msgstr "IPv6 адрес:"
 
-#: ../src/TextStrings.cs:367
+#: ../src/TextStrings.cs:366
 msgid "ID:"
 msgstr "ID:"
 
-#: ../src/TextStrings.cs:368
+#: ../src/TextStrings.cs:367
 msgid "Client ID:"
 msgstr "Клиент ID-і:"
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:368
 msgid "Network ID:"
 msgstr "Желінің ID-і:"
 
-#: ../src/TextStrings.cs:370
+#: ../src/TextStrings.cs:369
 msgid "Status:"
 msgstr "Күйі:"
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:370
 msgid "Tunnel:"
 msgstr "Тоннель:"
 
-#: ../src/TextStrings.cs:372
+#: ../src/TextStrings.cs:371
 msgid "Connection:"
 msgstr "Қосылыс:"
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:372
 msgid "Direct"
 msgstr "Тікелей"
 
-#: ../src/TextStrings.cs:374
+#: ../src/TextStrings.cs:373
 msgid "Relayed"
 msgstr "Ретранслятор арқылы"
 
-#: ../src/TextStrings.cs:375
+#: ../src/TextStrings.cs:374
 msgid "Anonymous"
 msgstr "Анонимды"
 
-#: ../src/TextStrings.cs:376
+#: ../src/TextStrings.cs:375
 msgid "_Nickname:"
 msgstr "_Ник:"
 
-#: ../src/TextStrings.cs:378
+#: ../src/TextStrings.cs:377
 msgid "_Name:"
 msgstr "_Аты:"
 
-#: ../src/TextStrings.cs:379
+#: ../src/TextStrings.cs:378
 msgid "_Password:"
 msgstr "_Құпия сөз:"
 
-#: ../src/TextStrings.cs:380
+#: ../src/TextStrings.cs:379
 msgid "Version:"
 msgstr "Нұсқа:"
 
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:381
 msgid "Offline"
 msgstr "Желіге қосылмаған"
 
-#: ../src/TextStrings.cs:383
+#: ../src/TextStrings.cs:382
 msgid "Online"
 msgstr "Желіге қосылған"
 
-#: ../src/TextStrings.cs:384
+#: ../src/TextStrings.cs:383
 msgid "Unreachable"
 msgstr "Қол жетімсіз"
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:384
 msgid "Protocol mismatch"
 msgstr "Протокол сәйкес емес"
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:385
 msgid "Conflicting address"
 msgstr ""
 
-#: ../src/TextStrings.cs:387
+#: ../src/TextStrings.cs:386
 msgid "Connected"
 msgstr "Қосылған"
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:387
 msgid "Disconnected"
 msgstr "Ажыратылған"
 
-#: ../src/TextStrings.cs:389
+#: ../src/TextStrings.cs:388
 msgid "Connecting..."
 msgstr "Қосылуда..."
 
-#: ../src/TextStrings.cs:390
+#: ../src/TextStrings.cs:389
 msgid "Logging in..."
 msgstr "Кіру..."
 
-#: ../src/TextStrings.cs:391
+#: ../src/TextStrings.cs:390
 msgid "Updating..."
 msgstr "Жаңарту..."
 
 #. Please use the same text and shortcut as the stock connect button.
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:392
 msgid "C_onnect (%S)"
 msgstr "_Қосылу (%S)"
 
-#: ../src/TextStrings.cs:394
+#: ../src/TextStrings.cs:393
 msgid "Connect a_utomatically"
 msgstr "_Автоматты түрде қосылу"
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:395
 msgid "Hamachi is not configured"
 msgstr "Hamachi қалыпқа келтірілмеген"
 
-#: ../src/TextStrings.cs:397
+#: ../src/TextStrings.cs:396
 msgid "You need to configure Hamachi before you can connect."
 msgstr "Қосылу үшін сіз Hamachi қалыпқа келтіруіңіз қажет."
 
-#: ../src/TextStrings.cs:398
+#: ../src/TextStrings.cs:397
 msgid "C_onfigure"
 msgstr "Қалыпқа _келтіру"
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:399
 msgid "Hamachi is not installed"
 msgstr "Hamachi орнатылмаған"
 
-#: ../src/TextStrings.cs:401
+#: ../src/TextStrings.cs:400
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Hamachi жүктек алып, оның орнату нұсқауына еріңіз."
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:401
 msgid "Hamachi version {0} is obsolete"
 msgstr "Hamachi {0} нұсқасы ескірген"
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:402
 msgid "Please download and install the latest Hamachi version."
 msgstr "Hamachi соңғы нұсқасын жүктеп алып, орнатыңыз."
 
-#: ../src/TextStrings.cs:404
+#: ../src/TextStrings.cs:403
 msgid "_Download"
 msgstr "_Жүктеп алу"
 
-#: ../src/TextStrings.cs:406
+#: ../src/TextStrings.cs:405
 msgid "Members:"
 msgstr "Мүшелері:"
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:406
 msgid "{0} online, {1} total"
 msgstr "{0} желіге қосылған, барлығы {1}"
 
-#: ../src/TextStrings.cs:408
+#: ../src/TextStrings.cs:407
 msgid "Owner:"
 msgstr "Иесі:"
 
-#: ../src/TextStrings.cs:409
+#: ../src/TextStrings.cs:408
 msgid "You"
 msgstr "Сіз"
 
-#: ../src/TextStrings.cs:410
+#: ../src/TextStrings.cs:409
 msgid "Unknown"
 msgstr "Белгісіз"
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:410
 msgid "Unavailable"
 msgstr "Жетімсіз"
 
-#: ../src/TextStrings.cs:412
+#: ../src/TextStrings.cs:411
 msgid "Awaiting approval"
 msgstr "Мақұлдауды күту"
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:412
 msgid "Locked:"
 msgstr "Жабық:"
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:413
 msgid "Approval:"
 msgstr "Мақұлдау:"
 
-#: ../src/TextStrings.cs:415
+#: ../src/TextStrings.cs:414
 msgid "Manually"
 msgstr "Қалауыңызша (вручную)"
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:415
 msgid "Automatically"
 msgstr "Автоматты түрде"
 
-#: ../src/TextStrings.cs:417
+#: ../src/TextStrings.cs:416
 msgid "Capacity:"
 msgstr "Сыйымдылық:"
 
-#: ../src/TextStrings.cs:419
+#: ../src/TextStrings.cs:418
 msgid "_Client"
 msgstr "_Клиент"
 
-#: ../src/TextStrings.cs:420
+#: ../src/TextStrings.cs:419
 msgid "_Edit"
 msgstr "_Өзгерту"
 
-#: ../src/TextStrings.cs:421
+#: ../src/TextStrings.cs:420
 msgid "_View"
 msgstr "Сырт _көрініс"
 
-#: ../src/TextStrings.cs:422
+#: ../src/TextStrings.cs:421
 msgid "_Help"
 msgstr "_Көмек"
 
-#: ../src/TextStrings.cs:424
+#: ../src/TextStrings.cs:423
 msgid "_Online Help"
 msgstr "_Интернетте көмек алу"
 
-#: ../src/TextStrings.cs:425
+#: ../src/TextStrings.cs:424
 msgid "_Create Network..."
 msgstr "Желі _құру..."
 
-#: ../src/TextStrings.cs:426
+#: ../src/TextStrings.cs:425
 msgid "_Join Network..."
 msgstr "Желіге _кіру..."
 
-#: ../src/TextStrings.cs:428
+#: ../src/TextStrings.cs:427
 msgid "_Go Online"
 msgstr "Желіге _қосылу"
 
-#: ../src/TextStrings.cs:429
+#: ../src/TextStrings.cs:428
 msgid "_Go Offline"
 msgstr "Желіден _ажырату"
 
-#: ../src/TextStrings.cs:430
+#: ../src/TextStrings.cs:429
 msgid "_Leave"
 msgstr "_Шығу"
 
-#: ../src/TextStrings.cs:431
+#: ../src/TextStrings.cs:430
 msgid "_Locked"
 msgstr "_Жабық"
 
-#: ../src/TextStrings.cs:432
+#: ../src/TextStrings.cs:431
 msgid "_New Member Approval"
 msgstr "_Жаңа мүшені мақұлдау"
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:432
 msgid "_Automatically"
 msgstr "_Автоматты түрде"
 
-#: ../src/TextStrings.cs:434
+#: ../src/TextStrings.cs:433
 msgid "_Manually"
 msgstr "_Қалауыңызша (вручную)"
 
-#: ../src/TextStrings.cs:435
+#: ../src/TextStrings.cs:434
 msgid "_Copy Network ID"
 msgstr "Желі ID-ін _көшіру"
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:436
 msgid "_Browse Shares"
 msgstr "Жарияланған бумаларды _қарап шығу"
 
-#: ../src/TextStrings.cs:438
+#: ../src/TextStrings.cs:437
 msgid "_Ping"
 msgstr "_Пинг"
 
-#: ../src/TextStrings.cs:439
+#: ../src/TextStrings.cs:438
 msgid "_View Remote Desktop"
 msgstr "Қашықтаған жұмыс үстелді _қарау"
 
-#: ../src/TextStrings.cs:440
+#: ../src/TextStrings.cs:439
 msgid "_Approve"
 msgstr "_Мақұлдау"
 
-#: ../src/TextStrings.cs:441
+#: ../src/TextStrings.cs:440
 msgid "_Reject"
 msgstr "_Қабылдамау"
 
 #. This action removes the selected member from the network.
-#: ../src/TextStrings.cs:442
+#: ../src/TextStrings.cs:441
 msgid "_Evict"
 msgstr "_Шығарып тастау"
 
-#: ../src/TextStrings.cs:443
+#: ../src/TextStrings.cs:442
 msgid "Copy IPv_4 Address"
 msgstr "IPv_4 адресін көшіру"
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:443
 msgid "Copy IPv_6 Address"
 msgstr "IPv_6 адресін көшіру"
 
-#: ../src/TextStrings.cs:445
+#: ../src/TextStrings.cs:444
 msgid "_Copy Client ID"
 msgstr "Клиент ID-ін _көшіру"
 
-#: ../src/TextStrings.cs:447
+#: ../src/TextStrings.cs:446
 msgid "C_hange"
 msgstr "_Өзгерту"
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:448
 msgid "Change _Nickname..."
 msgstr "_Ник өзгерту..."
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:449
 msgid "Change Nickname"
 msgstr "Ник өзгерту"
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:450
 msgid "Please enter the nickname you want to use."
 msgstr "Өзіңізге ник ойластырып қойыңыз."
 
-#: ../src/TextStrings.cs:452
+#: ../src/TextStrings.cs:451
 msgid "Click to change your nickname"
 msgstr "Никты өзгерту үшін басыңыз"
 
-#: ../src/TextStrings.cs:454
+#: ../src/TextStrings.cs:453
 msgid "Change _Password..."
 msgstr "_Құпия сөзді өзгерту..."
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:454
 msgid "Change Password"
 msgstr "Құпия сөзді өзгерту"
 
-#: ../src/TextStrings.cs:456
+#: ../src/TextStrings.cs:455
 msgid "Please enter the new password for this network."
 msgstr "Осы желі үшін жаңа құпия сөзін енгізіңіз."
 
-#: ../src/TextStrings.cs:458
+#: ../src/TextStrings.cs:457
 msgid "_Account:"
 msgstr "_Пайдаланушы аты (логин):"
 
-#: ../src/TextStrings.cs:461
+#: ../src/TextStrings.cs:460
 msgid "_Attach to Account..."
 msgstr "Пайдаланушы атына _бекіту..."
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:461
 msgid "Attach to Account"
 msgstr "Пайдаланушы атына бекіту"
 
-#: ../src/TextStrings.cs:463
+#: ../src/TextStrings.cs:462
 msgid "Please enter the account you want to attach this client to."
 msgstr "Осы клиентті келесі тіркемеге (пайдаланушы атына) бекіту."
 
-#: ../src/TextStrings.cs:464
+#: ../src/TextStrings.cs:463
 msgid "_Include all networks created by this client"
 msgstr "Осы клиентпен құрылған барлық желілерді _қарастыру"
 
-#: ../src/TextStrings.cs:465
+#: ../src/TextStrings.cs:464
 msgid "_Attach"
 msgstr "_Бекіту"
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:465
 msgid "Attaching..."
 msgstr "Бекітілуде..."
 
-#: ../src/TextStrings.cs:467
+#: ../src/TextStrings.cs:466
 msgid "Account not found"
 msgstr "Пайдаланушы аты табылмады"
 
-#: ../src/TextStrings.cs:469
+#: ../src/TextStrings.cs:468
 msgid "_Join"
 msgstr "_Кіру"
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:469
 msgid "Joining..."
 msgstr "Кіру..."
 
-#: ../src/TextStrings.cs:471
+#: ../src/TextStrings.cs:470
 msgid "Join Network"
 msgstr "Желіге кіру"
 
-#: ../src/TextStrings.cs:472
+#: ../src/TextStrings.cs:471
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
 msgstr "Қосыламын деген желінің атын және құпия сөзін енгізіңіз."
 
-#: ../src/TextStrings.cs:474
+#: ../src/TextStrings.cs:473
 msgid "C_reate"
 msgstr "_Құру"
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:474
 msgid "Creating..."
 msgstr "Құру..."
 
-#: ../src/TextStrings.cs:476
+#: ../src/TextStrings.cs:475
 msgid "Create Network"
 msgstr "Желі құру"
 
-#: ../src/TextStrings.cs:477
+#: ../src/TextStrings.cs:476
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
 msgstr "Құрамын деген желінің атын және құпия сөзін енгізіңіз."
 
-#: ../src/TextStrings.cs:479
+#: ../src/TextStrings.cs:478
 msgid "Network not found"
 msgstr "Желі табылмады"
 
-#: ../src/TextStrings.cs:480
+#: ../src/TextStrings.cs:479
 msgid "Invalid password"
 msgstr "Құпия сөз дұрыс емес"
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:480
 msgid "Network is full"
 msgstr "Желі толып тұр"
 
-#: ../src/TextStrings.cs:482
+#: ../src/TextStrings.cs:481
 msgid "Network is locked"
 msgstr "Желі жабық"
 
-#: ../src/TextStrings.cs:483
+#: ../src/TextStrings.cs:482
 msgid "Network already joined"
 msgstr "Осы желіге қосылыс бар болып тұр"
 
-#: ../src/TextStrings.cs:484
+#: ../src/TextStrings.cs:483
 msgid "Unknown error"
 msgstr "Белгісіз қате"
 
-#: ../src/TextStrings.cs:485
+#: ../src/TextStrings.cs:484
 msgid "Network name too short"
 msgstr "Желі аты тым қысқа"
 
-#: ../src/TextStrings.cs:486
+#: ../src/TextStrings.cs:485
 msgid "Network name is already taken"
 msgstr "Желі аты бос емес"
 
-#: ../src/TextStrings.cs:488
+#: ../src/TextStrings.cs:487
 msgid "Join request sent"
 msgstr "Кіру сұранысы жіберілді"
 
-#: ../src/TextStrings.cs:490
+#: ../src/TextStrings.cs:489
 msgid "Preferences"
 msgstr "Баптаулар"
 
-#: ../src/TextStrings.cs:491
+#: ../src/TextStrings.cs:490
 msgid "Information"
 msgstr "Мәлімет"
 
-#: ../src/TextStrings.cs:493
-msgid "Delete network \"{0}\"?"
-msgstr "\"{0}\" желісін жою қажет пе?"
-
-#: ../src/TextStrings.cs:494
-msgid "Are you sure you want to delete network \"{0}\"?"
+#: ../src/TextStrings.cs:492
+#, fuzzy
+msgid ""
+"Are you sure you want to delete the\n"
+"network \"{0}\"?"
 msgstr "\"{0}\" желісін жоюға сенімдісіз бе?"
 
-#: ../src/TextStrings.cs:496
-msgid "Leave network \"{0}\"?"
-msgstr "\"{0}\" желіден шығу қажет пе?"
+#: ../src/TextStrings.cs:493
+msgid "If you delete a network, it will be permanently lost."
+msgstr ""
 
-#: ../src/TextStrings.cs:497
-msgid "Are you sure you want to leave network \"{0}\"?"
+#: ../src/TextStrings.cs:495
+#, fuzzy
+msgid ""
+"Are you sure you want to leave the\n"
+"network \"{0}\"?"
 msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
 
-#: ../src/TextStrings.cs:499
-msgid "Evict member \"{0}\"?"
-msgstr "\"{0}\" мүшені шығарып тастау қажет пе?"
+#: ../src/TextStrings.cs:496
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr ""
 
-#: ../src/TextStrings.cs:500
+#: ../src/TextStrings.cs:498
 msgid ""
 "Are you sure you want to evict member \"{0}\"\n"
 "from network \"{1}\"?"
@@ -502,303 +504,322 @@ msgstr ""
 "\"{1}\" желісінен \"{0}\" мүшені шығарып\n"
 "тастауға сенімдісіз бе?"
 
-#: ../src/TextStrings.cs:502
+#: ../src/TextStrings.cs:499
+msgid "If admitted, evicted members can rejoin the network at any later time."
+msgstr ""
+
+#: ../src/TextStrings.cs:501
 msgid "Could not delete network \"{0}\""
 msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
 
-#: ../src/TextStrings.cs:503
+#: ../src/TextStrings.cs:502
 msgid "Could not leave network \"{0}\""
 msgstr "\"{0}\" желісінен шығу сәтсіз аяқталды"
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:503
 msgid "Could not evict member \"{0}\""
 msgstr "\"{0}\" желісінен мүшені шығарып тастау сәтсіз аяқталды"
 
-#: ../src/TextStrings.cs:505
+#: ../src/TextStrings.cs:504
 #, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
 msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
 
-#: ../src/TextStrings.cs:506
+#: ../src/TextStrings.cs:505
 #, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
 msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
 
-#: ../src/TextStrings.cs:508
+#: ../src/TextStrings.cs:507
 msgid "See output for details."
 msgstr ""
 
-#: ../src/TextStrings.cs:510
+#: ../src/TextStrings.cs:509
 msgid "General"
 msgstr "Негізгі"
 
 #. In this context meaning "work environment".
-#: ../src/TextStrings.cs:511
+#: ../src/TextStrings.cs:510
 msgid "Desktop"
 msgstr "Жұмыс ортасы"
 
-#: ../src/TextStrings.cs:512
+#: ../src/TextStrings.cs:511
 msgid "Commands"
 msgstr "Командалар"
 
-#: ../src/TextStrings.cs:514
+#: ../src/TextStrings.cs:513
 msgid "Notification Area"
 msgstr "Мәлімдеме аумағы"
 
-#: ../src/TextStrings.cs:515
+#: ../src/TextStrings.cs:514
 msgid "Behavior"
 msgstr "Қасиеттері"
 
-#: ../src/TextStrings.cs:517
+#: ../src/TextStrings.cs:516
 msgid "_Protocol:"
 msgstr "_Протокол:"
 
-#: ../src/TextStrings.cs:518
+#: ../src/TextStrings.cs:517
 msgid "Both IPv4 and IPv6"
 msgstr "IPv4 мен IPv6 бірге"
 
-#: ../src/TextStrings.cs:519
+#: ../src/TextStrings.cs:518
 msgid "IPv4 only"
 msgstr "тек IPv4"
 
-#: ../src/TextStrings.cs:520
+#: ../src/TextStrings.cs:519
 msgid "IPv6 only"
 msgstr "тек IPv6"
 
-#: ../src/TextStrings.cs:522
+#: ../src/TextStrings.cs:521
 msgid "_Update Network List"
 msgstr "Желілер тізімін _жаңарту"
 
-#: ../src/TextStrings.cs:523
+#: ../src/TextStrings.cs:522
 msgid "Show Alt_ernating Row Colors"
 msgstr "Ба_лама жол түстерін көрсету"
 
-#: ../src/TextStrings.cs:524
+#: ../src/TextStrings.cs:523
 msgid "_Compact Layout"
 msgstr "_Ықшам көрініс"
 
-#: ../src/TextStrings.cs:525
+#: ../src/TextStrings.cs:524
 msgid "_Large Layout"
 msgstr "І_рі көрініс"
 
-#: ../src/TextStrings.cs:526
+#: ../src/TextStrings.cs:525
 msgid "Show _Offline Members"
 msgstr "Желіге _қосылмаған мүшелерді көрсету"
 
-#: ../src/TextStrings.cs:527
+#: ../src/TextStrings.cs:526
 msgid "Sort by _Name"
 msgstr "_Аты бойынша реттеу"
 
-#: ../src/TextStrings.cs:528
+#: ../src/TextStrings.cs:527
 msgid "Sort by _Status"
 msgstr "_Күйі бойынша реттеу"
 
-#: ../src/TextStrings.cs:529
+#: ../src/TextStrings.cs:528
 msgid "St_atusbar"
 msgstr "Күй _жолағы"
 
-#: ../src/TextStrings.cs:531
+#: ../src/TextStrings.cs:530
 msgid "_Show Haguichi in the notification area"
 msgstr "Haguichi бағдарламасын мәлімдеу аумағында к_өрсету"
 
-#: ../src/TextStrings.cs:532
+#: ../src/TextStrings.cs:531
 msgid "Start Haguichi _minimized in the notification area"
 msgstr ""
 "Haguichi бағдарламасын ашу кезінде, тек мәлімдеу аумағында ғана к_өрсету"
 
-#: ../src/TextStrings.cs:534
+#: ../src/TextStrings.cs:533
 msgid "C_onnect automatically on startup"
 msgstr "Бағдарлама ашылатын кезде автоматты түрде _қосылу"
 
-#: ../src/TextStrings.cs:535
+#: ../src/TextStrings.cs:534
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "Қосылыс үзілгенде автоматты түрде _қайта қосылу"
 
-#: ../src/TextStrings.cs:536
+#: ../src/TextStrings.cs:535
 msgid "_Disconnect on quit"
 msgstr "Бағдарлама жабу кезінде желіден _ажыратылу"
 
-#: ../src/TextStrings.cs:538
+#: ../src/TextStrings.cs:537
 msgid "Display notification when the connection is l_ost"
 msgstr "Қосылыс үзілгені жайлы мәлімдеу"
 
-#: ../src/TextStrings.cs:539
+#: ../src/TextStrings.cs:538
 msgid "Display notification when a member _joins"
 msgstr "Мүше желіге _кірген кезде (join) мәлімдеу"
 
-#: ../src/TextStrings.cs:540
+#: ../src/TextStrings.cs:539
 msgid "Display notification when a member _leaves"
 msgstr "Мүше желіден _шығып кететін кезде (leave) мәлімдеу"
 
-#: ../src/TextStrings.cs:541
+#: ../src/TextStrings.cs:540
 msgid "Display notification when a member comes o_nline"
 msgstr "Мүше желіге _қосылған кезде (online) мәлімдеу"
 
-#: ../src/TextStrings.cs:542
+#: ../src/TextStrings.cs:541
 msgid "Display notification when a member goes o_ffline"
 msgstr "Мүше желіден _ажыратылатын кезде (offline) мәлімдеу"
 
-#: ../src/TextStrings.cs:544
+#: ../src/TextStrings.cs:543
 msgid "Error connecting"
 msgstr "Қосылу қатесі"
 
-#: ../src/TextStrings.cs:545
+#: ../src/TextStrings.cs:544
 msgid "Hamachi login failed"
 msgstr "Hamachi кіру қатесі"
 
-#: ../src/TextStrings.cs:546
+#: ../src/TextStrings.cs:545
 msgid "No internet connection"
 msgstr "Интернетпен қосылыс жоқ"
 
-#: ../src/TextStrings.cs:548
+#: ../src/TextStrings.cs:547
 msgid "Hamachi lost connection"
 msgstr "Hamachi қосылысы үзілді"
 
-#: ../src/TextStrings.cs:549
+#: ../src/TextStrings.cs:548
 msgid "Member online"
 msgstr "Мүше желіге қосылды"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: ../src/TextStrings.cs:550
+#: ../src/TextStrings.cs:549
 msgid "{0} came online in the network {1}"
 msgstr "{0} {1} желісіне қосылды"
 
-#: ../src/TextStrings.cs:551
+#: ../src/TextStrings.cs:550
 msgid "Member offline"
 msgstr "Мүше желіден ажыратылды"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: ../src/TextStrings.cs:552
+#: ../src/TextStrings.cs:551
 msgid "{0} went offline in the network {1}"
 msgstr "{0} {1} желісінен ажыратылды"
 
-#: ../src/TextStrings.cs:553
+#: ../src/TextStrings.cs:552
 msgid "Member joined"
 msgstr "Мүше желіге кірді"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: ../src/TextStrings.cs:554
+#: ../src/TextStrings.cs:553
 msgid "{0} joined the network {1}"
 msgstr "{0} {1} желісіне кірді"
 
-#: ../src/TextStrings.cs:555
+#: ../src/TextStrings.cs:554
 msgid "Member left"
 msgstr "Мүше желіден шығып кетті"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: ../src/TextStrings.cs:556
+#: ../src/TextStrings.cs:555
 msgid "{0} left the network {1}"
 msgstr "{0} {1} желісінен шығып кетті"
 
-#: ../src/TextStrings.cs:558
+#: ../src/TextStrings.cs:557
 msgid "A_vailable commands:"
 msgstr "_Жетімді командалар:"
 
-#: ../src/TextStrings.cs:559
+#: ../src/TextStrings.cs:558
 msgid "Command"
 msgstr "Команда"
 
-#: ../src/TextStrings.cs:560
+#: ../src/TextStrings.cs:559
 msgid "Available"
 msgstr "Жетімді"
 
-#: ../src/TextStrings.cs:562
+#: ../src/TextStrings.cs:561
 msgid "Add Command"
 msgstr "Команданы қосу"
 
-#: ../src/TextStrings.cs:563
+#: ../src/TextStrings.cs:562
 msgid "Edit Command"
 msgstr "Команданы өзгерту"
 
-#: ../src/TextStrings.cs:564
+#: ../src/TextStrings.cs:563
 msgid "_Label:"
 msgstr "Көрсетілетін _жазу:"
 
-#: ../src/TextStrings.cs:565
+#: ../src/TextStrings.cs:564
 msgid "IPv_4 command:"
 msgstr "IPv_4 команда:"
 
-#: ../src/TextStrings.cs:566
+#: ../src/TextStrings.cs:565
 msgid "IPv_6 command:"
 msgstr "IPv_6 команда:"
 
-#: ../src/TextStrings.cs:567
+#: ../src/TextStrings.cs:566
 msgid "Use %A for address and %N for nickname"
 msgstr "%A адрес үшін және %N ник үшін қолданыңыз"
 
-#: ../src/TextStrings.cs:568
+#: ../src/TextStrings.cs:567
 msgid "_Priority:"
 msgstr "Ба_сымдылық:"
 
-#: ../src/TextStrings.cs:570
+#: ../src/TextStrings.cs:569
 msgid "Click to choose an icon"
 msgstr "Суреттеме таңдау үшін басыңыз"
 
-#: ../src/TextStrings.cs:571
+#: ../src/TextStrings.cs:570
 msgid "_No Icon"
 msgstr "Суреттеме қажет _емес"
 
-#: ../src/TextStrings.cs:573
+#: ../src/TextStrings.cs:572
 msgid "Default"
 msgstr "Қалыпты"
 
-#: ../src/TextStrings.cs:574
+#: ../src/TextStrings.cs:573
 msgid "_Default"
 msgstr "_Қалыпты"
 
-#: ../src/TextStrings.cs:576
-msgid "Restore the default commands"
-msgstr "Командаларды бастапқы, қалыпты қалпына келтіру"
+#: ../src/TextStrings.cs:575
+#, fuzzy
+msgid "Are you sure you want to revert all changes?"
+msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
 
-#: ../src/TextStrings.cs:577
-msgid "Revert changes?"
-msgstr "Өзгертулерді кері қайтару қажет пе?"
+#: ../src/TextStrings.cs:576
+msgid "If you revert all changes, the default commands will be restored."
+msgstr ""
 
 #: ../src/TextStrings.cs:578
-msgid ""
-"Are you sure you wish to revert all changes\n"
-"and thereby restore the default commands?"
-msgstr ""
-"Командаларды бастапқы, қалыпты қалпына келтіріп,\n"
-"өзгертулерді кері қайтару қажет пе?"
-
-#: ../src/TextStrings.cs:580
 msgid "Move up"
 msgstr "Жоғары жылжыту"
 
-#: ../src/TextStrings.cs:581
+#: ../src/TextStrings.cs:579
 msgid "Move down"
 msgstr "Төмен жылжыту"
 
-#: ../src/TextStrings.cs:589
+#: ../src/TextStrings.cs:587
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
 msgstr[0] "_Желілер тізімін әрбір %S _секунд сайын жаңарту"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:597
+#: ../src/TextStrings.cs:595
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілеріне қосылды"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:605
+#: ../src/TextStrings.cs:603
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен ажыратылды"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:613
+#: ../src/TextStrings.cs:611
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілеріне кірді"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:621
+#: ../src/TextStrings.cs:619
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
+
+#~ msgid "Delete network \"{0}\"?"
+#~ msgstr "\"{0}\" желісін жою қажет пе?"
+
+#~ msgid "Leave network \"{0}\"?"
+#~ msgstr "\"{0}\" желіден шығу қажет пе?"
+
+#~ msgid "Evict member \"{0}\"?"
+#~ msgstr "\"{0}\" мүшені шығарып тастау қажет пе?"
+
+#~ msgid "Restore the default commands"
+#~ msgstr "Командаларды бастапқы, қалыпты қалпына келтіру"
+
+#~ msgid "Revert changes?"
+#~ msgstr "Өзгертулерді кері қайтару қажет пе?"
+
+#~ msgid ""
+#~ "Are you sure you wish to revert all changes\n"
+#~ "and thereby restore the default commands?"
+#~ msgstr ""
+#~ "Командаларды бастапқы, қалыпты қалпына келтіріп,\n"
+#~ "өзгертулерді кері қайтару қажет пе?"

@@ -450,7 +450,7 @@ approve  : manual";
     {
         
         Hamachi.Leave ( this );
-
+        
         Application.Invoke ( delegate
         {
             Controller.UpdateConnection (); // Update list
@@ -488,7 +488,7 @@ approve  : manual";
     {
         
         Hamachi.Delete ( this );
-
+        
         Application.Invoke ( delegate
         {
             Controller.UpdateConnection (); // Update list
