@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-10 21:56:08+0100\n"
-"PO-Revision-Date: 2012-06-04 20:55+0000\n"
-"Last-Translator: Jan Bažant aka Brbla <brbla@brbla.net>\n"
+"POT-Creation-Date: 2013-02-10 21:56+0100\n"
+"PO-Revision-Date: 2013-02-16 00:38+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-06-05 17:04+0000\n"
-"X-Generator: Launchpad (build 15353)\n"
+"X-Launchpad-Export-Date: 2013-02-16 00:47+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:354
@@ -73,17 +73,16 @@ msgid "Tunnel:"
 msgstr "Tunel:"
 
 #: ../src/TextStrings.cs:371
-#, fuzzy
 msgid "Connection:"
-msgstr "Připojuje se..."
+msgstr "Spojení:"
 
 #: ../src/TextStrings.cs:372
 msgid "Direct"
-msgstr ""
+msgstr "Přímý"
 
 #: ../src/TextStrings.cs:373
 msgid "Relayed"
-msgstr ""
+msgstr "Předáno"
 
 #: ../src/TextStrings.cs:374
 msgid "Anonymous"
@@ -119,11 +118,11 @@ msgstr "Nedostupný"
 
 #: ../src/TextStrings.cs:384
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Chyba v protokolu"
 
 #: ../src/TextStrings.cs:385
 msgid "Conflicting address"
-msgstr ""
+msgstr "Konflikt adres"
 
 #: ../src/TextStrings.cs:386
 msgid "Connected"
@@ -176,12 +175,11 @@ msgstr "Stáhněte si Hamachi a postupujte dle instalačních instrukcí."
 
 #: ../src/TextStrings.cs:401
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi verze {0} je zastaralá"
 
 #: ../src/TextStrings.cs:402
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Stáhněte si Hamachi a postupujte dle instalačních instrukcí."
+msgstr "Prosím, stáhněte a nainstalujte si poslední verzi Hamachi."
 
 #: ../src/TextStrings.cs:403
 msgid "_Download"
@@ -233,7 +231,7 @@ msgstr "Automaticky"
 
 #: ../src/TextStrings.cs:416
 msgid "Capacity:"
-msgstr ""
+msgstr "Kapacita:"
 
 #: ../src/TextStrings.cs:418
 msgid "_Client"
@@ -322,11 +320,11 @@ msgstr "_Vyhodit"
 
 #: ../src/TextStrings.cs:442
 msgid "Copy IPv_4 Address"
-msgstr ""
+msgstr "Kopírovat IPv_4 adresu:"
 
 #: ../src/TextStrings.cs:443
 msgid "Copy IPv_6 Address"
-msgstr ""
+msgstr "Kopírovat IPv_6 adresu:"
 
 #: ../src/TextStrings.cs:444
 msgid "_Copy Client ID"
@@ -481,26 +479,24 @@ msgid "Information"
 msgstr "Informace"
 
 #: ../src/TextStrings.cs:492
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "Opravdu smazat síť „{0}“?"
+msgstr "Opravdu chcete smazat síť „{0}“?"
 
 #: ../src/TextStrings.cs:493
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Pokud síť odstraníte, bude nenávratně ztracena."
 
 #: ../src/TextStrings.cs:495
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "Opravdu opustit síť „{0}“?"
+msgstr "Opravdu chcete opustit síť „{0}“?"
 
 #: ../src/TextStrings.cs:496
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
+msgstr "Pokud potvrdíte, můžete se opět připojit kdykoliv později."
 
 #: ../src/TextStrings.cs:498
 msgid ""
@@ -511,8 +507,9 @@ msgstr ""
 "ze sítě „{1}“?"
 
 #: ../src/TextStrings.cs:499
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr "Pokud potvrdíte, mohou se vyloučení členi později opět připojit."
 
 #: ../src/TextStrings.cs:501
 msgid "Could not delete network \"{0}\""
@@ -527,22 +524,24 @@ msgid "Could not evict member \"{0}\""
 msgstr "Selhalo vyhození člena „{0}“"
 
 #: ../src/TextStrings.cs:504
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "Selhalo smazání sítě „{0}“"
+msgstr ""
+"Nelze přejít do režimu online\n"
+"v síti „{0}“"
 
 #: ../src/TextStrings.cs:505
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "Selhalo smazání sítě „{0}“"
+msgstr ""
+"Nelze přejít do režimu offline\n"
+"v síti „{0}“"
 
 #: ../src/TextStrings.cs:507
 msgid "See output for details."
-msgstr ""
+msgstr "Pro podrobnosti zobrazte výstup."
 
 #: ../src/TextStrings.cs:509
 msgid "General"
@@ -571,7 +570,7 @@ msgstr "_Protokol:"
 
 #: ../src/TextStrings.cs:517
 msgid "Both IPv4 and IPv6"
-msgstr ""
+msgstr "Oba IPv4 a IPv6"
 
 #: ../src/TextStrings.cs:518
 msgid "IPv4 only"
@@ -731,11 +730,11 @@ msgstr "Pop_is:"
 
 #: ../src/TextStrings.cs:564
 msgid "IPv_4 command:"
-msgstr ""
+msgstr "IPv_4 příkaz:"
 
 #: ../src/TextStrings.cs:565
 msgid "IPv_6 command:"
-msgstr ""
+msgstr "IPv_6 příkaz:"
 
 #: ../src/TextStrings.cs:566
 msgid "Use %A for address and %N for nickname"
@@ -762,13 +761,12 @@ msgid "_Default"
 msgstr "_Výchozí"
 
 #: ../src/TextStrings.cs:575
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "Opravdu opustit síť „{0}“?"
+msgstr "Opravdu chcete vrátit všechny změny?"
 
 #: ../src/TextStrings.cs:576
 msgid "If you revert all changes, the default commands will be restored."
-msgstr ""
+msgstr "Pokud vrátíte všechny změny, budou obnoveny výchozí příkazy."
 
 #: ../src/TextStrings.cs:578
 msgid "Move up"
@@ -817,14 +815,97 @@ msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "Smazat síť „{0}“?"
+#~ msgid "Haguichi Website"
+#~ msgstr "Webové stránky Haguichi"
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "Opustit síť „{0}“?"
+#~ msgid "Running tuncfg..."
+#~ msgstr "Spouštění tuncfg..."
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "Vyhodit člena „{0}“?"
+#~ msgid "Getting nicknames..."
+#~ msgstr "Získávání přezdívek..."
+
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Startování Hamachi..."
+
+#~ msgid "Not configured"
+#~ msgstr "Nekonfigurováno"
+
+#~ msgid "Changing..."
+#~ msgstr "Mění se..."
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Selhalo smazání sítě '{0}'"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Opravdu vyhodit člena '{0}'\n"
+#~ "ze sítě '{1}'?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Selhalo opuštění sítě '{0}'"
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Nejste majitelem této sítě."
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Opustit síť '{0}'?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Opravdu smazat síť '{0}'?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Vyhodit člena '{0}'?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Opravdu opustit síť '{0}'?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Smazat síť '{0}'?"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "Složka dat účtu:"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Selhalo vyhození člena '{0}'"
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Jste majitelem této sítě."
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Nejste majitelem sítě  '{0}'."
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Odpojení členové"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "Automatiky obnovit spojení, pokud bylo ztraceno"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "Dotázat se před spuštěním tuncfg"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Opravdu spustit tuncfg?"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi vyžaduje spuštění tuncfg, aby bylo možné se připojit.\n"
+#~ "Spuštění tuncfg vyžaduje administrátorská práva."
+
+#~ msgid "No internet connection."
+#~ msgstr "Žádné připojení k internetu."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "Hamachi nemohlo být spuštěno z důvodu selhání načtení nastavení."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Načtení nastavení selhalo"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Přihlášení Hamachi selhalo."
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Obnovit výchozí příkazy"
@@ -838,3 +919,33 @@ msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 #~ msgstr ""
 #~ "Opravdu vrátit všechny změny\n"
 #~ "čímž se obnoví výchozí příkazy?"
+
+#~ msgid "Address:"
+#~ msgstr "Adresa:"
+
+#~ msgid "Not installed"
+#~ msgstr "Nenainstalováno"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Kopírovat adresu"
+
+#~ msgid "_Command:"
+#~ msgstr "_Příkaz:"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Vybrat ikonu"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Jít přímo online do sítě"
+
+#~ msgid "_Run"
+#~ msgstr "_Spustit"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Zvolit složku"
+
+#~ msgid "Connection refused."
+#~ msgstr "Spojení odmítnuto."
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Vždy se dotázat před spuštěním tuncfg"

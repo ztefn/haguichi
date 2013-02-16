@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-10 21:56:08+0100\n"
-"PO-Revision-Date: 2012-08-17 16:24+0000\n"
+"POT-Creation-Date: 2013-02-10 21:56+0100\n"
+"PO-Revision-Date: 2013-02-16 13:40+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
-"X-Generator: Launchpad (build 15810)\n"
+"X-Launchpad-Export-Date: 2013-02-16 18:00+0000\n"
+"X-Generator: Launchpad (build 16491)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:354
@@ -172,7 +172,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: ../src/TextStrings.cs:400
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: ../src/TextStrings.cs:401
 msgid "Hamachi version {0} is obsolete"
@@ -377,7 +378,8 @@ msgstr "Dołącz do konta"
 
 #: ../src/TextStrings.cs:462
 msgid "Please enter the account you want to attach this client to."
-msgstr "Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
+msgstr ""
+"Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
 
 #: ../src/TextStrings.cs:463
 msgid "_Include all networks created by this client"
@@ -480,26 +482,30 @@ msgid "Information"
 msgstr "Informacje"
 
 #: ../src/TextStrings.cs:492
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "Na pewno usunąć sieć \"{0}\"?"
+msgstr ""
+"Na pewno usunąć\n"
+"sieć \"{0}\"?"
 
 #: ../src/TextStrings.cs:493
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Jeśli sieć zostanie usunięta, to zostanie ona trwale utracona."
 
 #: ../src/TextStrings.cs:495
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "Na pewno opuścić sieć \"{0}\"?"
+msgstr ""
+"Na pewno opuścić\n"
+"sieć \"{0}\"?"
 
 #: ../src/TextStrings.cs:496
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
+"Jeśli zostanie przyjęte, to można ponownie dołączyć do sieci w dowolnym "
+"czasie."
 
 #: ../src/TextStrings.cs:498
 msgid ""
@@ -510,8 +516,11 @@ msgstr ""
 "z sieci \"{1}\"?"
 
 #: ../src/TextStrings.cs:499
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
+"Jeśli zostanie przyjęte, to wyrzuceni członkowie mogą ponownie dołączyć do "
+"sieci w dowolnym czasie."
 
 #: ../src/TextStrings.cs:501
 msgid "Could not delete network \"{0}\""
@@ -526,22 +535,24 @@ msgid "Could not evict member \"{0}\""
 msgstr "Wykluczenie członka \"{0}\" się nie powiodło"
 
 #: ../src/TextStrings.cs:504
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "Usunięcie sieci \"{0}\" się nie powiodło"
+msgstr ""
+"Nie można przejść do trybu online w\n"
+"sieci \"{0}\""
 
 #: ../src/TextStrings.cs:505
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "Usunięcie sieci \"{0}\" się nie powiodło"
+msgstr ""
+"Nie można przejść do trybu offline w\n"
+"sieci \"{0}\""
 
 #: ../src/TextStrings.cs:507
 msgid "See output for details."
-msgstr ""
+msgstr "Na wyjściu wyświetlono więcej informacji."
 
 #: ../src/TextStrings.cs:509
 msgid "General"
@@ -647,11 +658,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: ../src/TextStrings.cs:540
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: ../src/TextStrings.cs:541
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:543
 msgid "Error connecting"
@@ -762,13 +775,14 @@ msgid "_Default"
 msgstr "_Domyślna"
 
 #: ../src/TextStrings.cs:575
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "Na pewno opuścić sieć \"{0}\"?"
+msgstr "Na pewno cofnąć wszystkie zmiany?"
 
 #: ../src/TextStrings.cs:576
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
+"Jeśli wszystkie zmiany zostaną cofnięte, to domyślne polecenia zostaną "
+"przywrócone."
 
 #: ../src/TextStrings.cs:578
 msgid "Move up"
@@ -823,20 +837,117 @@ msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
 msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
 msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "Usunąć sieć \"{0}\"?"
+#~ msgid "Address:"
+#~ msgstr "Adres:"
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "Opuścić sieć \"{0}\"?"
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Uruchamianie Hamachi..."
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "Wykluczyć członka \"{0}\"?"
+#~ msgid "You are the owner of this network."
+#~ msgstr "Jesteś właścicielem sieci."
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Nie jesteś właścicielem sieci."
+
+#~ msgid "No internet connection."
+#~ msgstr "Brak połączenia z internetem."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Nie udane logowanie do Hamachi."
+
+#~ msgid "Connection refused."
+#~ msgstr "Połączenie odrzucone."
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Przywróć domyślne polecenia"
 
 #~ msgid "Revert changes?"
 #~ msgstr "Przywrócić zmiany?"
+
+#~ msgid "_Command:"
+#~ msgstr "Pole_cenie:"
+
+#~ msgid "Haguichi Website"
+#~ msgstr "Witryna programu Haguichi"
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "Wykonywanie programu tuncfg..."
+
+#~ msgid "_Copy Address"
+#~ msgstr "S_kopiuj adres"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Przejście bezpośrednio do trybu online w sieci"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Na pewno usunąć sieć \"{0}\"?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Usunąć sieć \"{0}\"?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Wykluczenie członka \"{0}\" się nie powiodło"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Usunięcie sieci \"{0}\" się nie powiodło"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Na pewno wykluczyć członka \"{0}\"\n"
+#~ "z sieci \"{1}\"?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Opuszczenie sieci \"{0}\" się nie powiodło."
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Opuścić sieć \"{0}\"?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Wykluczyć członka \"{0}\"?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Na pewno opuścić sieć \"{0}\"?"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Wybór katalogu"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "K_atalog danych konta:"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Nie jesteś właścicielem sieci \"{0}\"."
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Wykonać program tuncfg?"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi wymaga wykonania programu tuncfg do połączenia.\n"
+#~ "Wykonanie programu tuncfg wymaga uprawnień administratora."
+
+#~ msgid "_Run"
+#~ msgstr "_Wykonaj"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Pytanie przed wykonaniem programu tuncfg"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi nie może zostać uruchomione z powodu niepowodzenia wczytania "
+#~ "konfiguracji."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Wczytanie konfiguracji się nie powiodło"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "_Pytanie o potwierdzenie przed wykonaniem programu tuncfg"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Wybór ikony"
 
 #~ msgid ""
 #~ "Are you sure you wish to revert all changes\n"
