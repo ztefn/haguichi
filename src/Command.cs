@@ -155,7 +155,7 @@ public static class Command
         }
         else if ( Exists ( "pantheon-terminal" ) )
         {
-            Terminal = "pantheon-terminal -x";
+            Terminal = "pantheon-terminal -e";
         }
         else if ( Exists ( "xfce4-terminal" ) )
         {
