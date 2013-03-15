@@ -471,7 +471,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            Version = "2.1.0.84";
+            Version = "2.1.0.86";
         }
         else if ( MajorVersion == 1 )
         {
@@ -577,7 +577,7 @@ public static class Hamachi
             output += "   [" + RandomNetworkId () + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
             output += "     * " + RandomClientId () + "   AndreasBWagner             " + RandomAddress () + "  alias: not set                             via relay\n";
             output += "     * 094-409-761   Andrew                     " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   etamPL                     " + RandomAddress () + "  alias: not set                             direct\n";
+            output += "       " + RandomClientId () + "   etamPL                     " + RandomAddress () + "\n";
             output += " * [" + RandomNetworkId () + "]Translators  capacity: 15/256, subscription type: Multi-network, owner: translators@haguichi.net\n";
             output += "     x " + RandomClientId () + "   Aytunç                     " + RandomAddress () + "\n";
             output += "     * " + RandomClientId () + "   Brbla                      " + RandomAddress () + "  alias: not set                             via relay\n";
