@@ -32,7 +32,7 @@ public static class Controller
     public  static bool manualUpdate;
     public  static bool restoreConnection;
     public  static int restoreCountdown;
-    public  static int lastStatus = -2;
+    public  static int lastStatus;
     public  static int numUpdateCycles;
     private static int numWaitForInternetCycles;
     private static string startOutput;
@@ -61,9 +61,12 @@ public static class Controller
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
         
+        Hamachi.Init ();
+        
         Haguichi.informationDialog.Update ();
         Haguichi.preferencesDialog.Update ();
         
+        lastStatus = -2;
         StatusCheck ();
         
         if ( lastStatus >= 6 )
@@ -115,6 +118,7 @@ public static class Controller
             configureButton.Clicked += delegate
             {
                 Hamachi.Configure ();
+                Controller.Init ();
             };
             
             MainWindow.messageBar.SetMessage ( TextStrings.notConfiguredHeading, TextStrings.notConfiguredMessage, MessageType.Warning );
@@ -132,7 +136,6 @@ public static class Controller
             Button refreshButton = new Button ( Stock.Refresh );
             refreshButton.Clicked += delegate
             {
-                Hamachi.Init (); // If hamachi was installed in the meantime, we want to know what version
                 Controller.Init ();
             };
             

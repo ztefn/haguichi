@@ -82,7 +82,6 @@ class Haguichi
         TextStrings.Init ();
         Config.Client.Init ();
         Command.Init ();
-        Hamachi.Init ();
         
         mainWindow          = new MainWindow ();
         aboutDialog         = new Dialogs.About ();

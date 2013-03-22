@@ -163,8 +163,6 @@ public static class Hamachi
         string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
         
-        Controller.Init ();
-        
     }
     
     
