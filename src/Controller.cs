@@ -58,10 +58,10 @@ public static class Controller
         oNetworksList = new ArrayList ();
         nNetworksList = new ArrayList ();
         
+        Hamachi.Init ();
+        
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
-        
-        Hamachi.Init ();
         
         Haguichi.informationDialog.Update ();
         Haguichi.preferencesDialog.Update ();
