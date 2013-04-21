@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-10 21:56:08+0100\n"
-"PO-Revision-Date: 2012-11-17 10:22+0000\n"
+"POT-Creation-Date: 2013-02-10 21:56+0100\n"
+"PO-Revision-Date: 2013-04-02 16:36+0000\n"
 "Last-Translator: Murat ikilik <muratikilik@gmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2012-11-18 21:24+0000\n"
-"X-Generator: Launchpad (build 16278)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2013-04-21 10:40+0000\n"
+"X-Generator: Launchpad (build 16567)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:354
@@ -30,7 +30,7 @@ msgstr "İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun"
 
 #: ../src/TextStrings.cs:357
 msgid "_Show Haguichi"
-msgstr "Haguichi'yi Gö_ster"
+msgstr "Haguichi'yi _Göster"
 
 #: ../src/TextStrings.cs:359
 msgid "Yes"
@@ -479,22 +479,20 @@ msgid "Information"
 msgstr "Bilgi"
 
 #: ../src/TextStrings.cs:492
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "\"{0}\" ağını silmek istediğinize emin misiniz?"
+msgstr ""
 
 #: ../src/TextStrings.cs:493
 msgid "If you delete a network, it will be permanently lost."
 msgstr ""
 
 #: ../src/TextStrings.cs:495
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "\"{0}\" ağından ayrılmak istediğinize emin misiniz?"
+msgstr ""
 
 #: ../src/TextStrings.cs:496
 msgid "If admitted, you can rejoin the network at any later time."
@@ -509,7 +507,8 @@ msgstr ""
 "emin misiniz?"
 
 #: ../src/TextStrings.cs:499
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: ../src/TextStrings.cs:501
@@ -525,18 +524,16 @@ msgid "Could not evict member \"{0}\""
 msgstr "\"{0}\" üyesi atılırken hata oluştu"
 
 #: ../src/TextStrings.cs:504
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "\"{0}\" ağını silmede hata oluştu"
+msgstr ""
 
 #: ../src/TextStrings.cs:505
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "\"{0}\" ağını silmede hata oluştu"
+msgstr ""
 
 #: ../src/TextStrings.cs:507
 msgid "See output for details."
@@ -760,9 +757,8 @@ msgid "_Default"
 msgstr "_Öntanımlı"
 
 #: ../src/TextStrings.cs:575
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "\"{0}\" ağından ayrılmak istediğinize emin misiniz?"
+msgstr ""
 
 #: ../src/TextStrings.cs:576
 msgid "If you revert all changes, the default commands will be restored."
@@ -805,14 +801,107 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "\"{0}\" ağını sil?"
+#~ msgid "Address:"
+#~ msgstr "Adres:"
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "\"{0}\" ağından ayrıl?"
+#~ msgid "seconds"
+#~ msgstr "saniye"
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "\"{0}\" üyesini at?"
+#~ msgid "Haguichi Website"
+#~ msgstr "Haguichi Sitesi"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Takma ad alın..."
+
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Hamachi başlatılıyor..."
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "tuncfg çalıştırılıyor..."
+
+#~ msgid "Changing..."
+#~ msgstr "Değiştiriliyor..."
+
+#~ msgid "Not configured"
+#~ msgstr "Yapılandırılmamış"
+
+#~ msgid "Not installed"
+#~ msgstr "Kurulmamış"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Adresi Kopyala"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "'{0}' ağından ayrılmada hata oluştu"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "'{0}' ağından ayrıl?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "'{0}' ağını silmek istediğinize emin misiniz?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "'{0}' ağından ayrılmak istediğinize emin misiniz?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "'{0}' ağını silmede hata oluştu"
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Bu ağın sahibi değilsiniz"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "'{0}' ağını sil?"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Direkt çevrimiçi ol"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Hesap veri dizini:"
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Bu ağın sahibisiniz."
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "'{0}' ağının sahibi değilsiniz."
+
+#~ msgid "S_tatusbar"
+#~ msgstr "D_urum Çubuğu"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Çevrimdışı üyeler"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "tuncfg'yi çalıştırmak istiyor musunuz?"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "tuncfg'yi çalıştırmadan önce yapılandırılmasını sor"
+
+#~ msgid "_Run"
+#~ msgstr "_Çalıştır"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_tuncfg'yi çalıştırmadan önce sor"
+
+#~ msgid "No internet connection."
+#~ msgstr "İnternet bağlantısı yok."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "Hamachi bir yapılandırma yükleme hatası nedeniyle başlatılamadı."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Yapılandırma yüklemesi başarısız oldu"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi girişi başarısız oldu."
+
+#~ msgid "Connection refused."
+#~ msgstr "Bağlantı reddedildi."
+
+#~ msgid "_Command:"
+#~ msgstr "_Komut:"
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Öntanımlı komutları eski haline getir"
@@ -826,3 +915,29 @@ msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 #~ msgstr ""
 #~ "Bütün değişiklikleri geri alarak öntanımlı komutlara\n"
 #~ "geri dönmek istediğinize emin misiniz?"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Simge Seç"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "'{0}' üyesini '{1}' ağından atmak istediğinize\n"
+#~ "emin misiniz?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "'{0}' üyesini at?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "'{0}' üyesi atılırken hata oluştu"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Dizin seç"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi bağlanmak için tuncfg'yi çalıştırmak istiyor.\n"
+#~ "tuncfg'yi çalıştırmak yönetici ayrıcalıkları ister."
