@@ -52,6 +52,7 @@ public static class Controller
     {
         
         MainWindow.messageBar.Hide ();
+        MainWindow.menuBar.SetConfig ();
         
         notifyIcon = MainWindow.appIcons [4];
         

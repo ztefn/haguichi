@@ -227,13 +227,24 @@ Türkçe (tr)
     public static string accountLabel;
     public static string account;
     
-    public static string attachMenuLabel;
+    public static string attachLabel;
     public static string attachTitle;
     public static string attachMessage;
     public static string attachWithNetworksCheckbox;
     public static string attachButtonLabel;
     public static string attachingLabel;
     public static string attachErrorAccountNotFound;
+    
+    public static string configLabel;
+    public static string configFolderLabel;
+    public static string configSaveLabel;
+    public static string configSaveTitle;
+    public static string configRestoreLabel;
+    public static string configRestoreTitle;
+    public static string configRestoreButtonLabel;
+    public static string configRestoreErrorTitle;
+    public static string configRestoreErrorMessage;
+    public static string configFileFilterTitle;
     
     public static string joinLabel;
     public static string joiningLabel;
@@ -458,13 +469,24 @@ Türkçe (tr)
         accountLabel                        = Catalog.GetString ( "_Account:" );
         account                             = Utilities.RemoveMnemonics ( accountLabel ); // "Account:"
         
-        attachMenuLabel                     = Catalog.GetString ( "_Attach to Account..." );
+        attachLabel                         = Catalog.GetString ( "_Attach to Account..." );
         attachTitle                         = Catalog.GetString ( "Attach to Account" );
         attachMessage                       = Catalog.GetString ( "Please enter the account you want to attach this client to." );
         attachWithNetworksCheckbox          = Catalog.GetString ( "_Include all networks created by this client" );
         attachButtonLabel                   = Catalog.GetString ( "_Attach" );
         attachingLabel                      = Catalog.GetString ( "Attaching..." );
         attachErrorAccountNotFound          = Catalog.GetString ( "Account not found" );
+        
+        configLabel                         = Catalog.GetString ( "Config_uration" );
+        configFolderLabel                   = Catalog.GetString ( "_Open Folder" );
+        configSaveLabel                     = Catalog.GetString ( "_Save a Backup..." );
+        configSaveTitle                     = Catalog.GetString ( "Save a Backup" );
+        configRestoreLabel                  = Catalog.GetString ( "_Restore from Backup..." );
+        configRestoreTitle                  = Catalog.GetString ( "Restore from Backup" );
+        configRestoreButtonLabel            = Catalog.GetString ( "_Restore" );
+        configRestoreErrorTitle             = Catalog.GetString ( "Could not restore configuration" );
+        configRestoreErrorMessage           = Catalog.GetString ( "Archive does not contain expected files." );
+        configFileFilterTitle               = Catalog.GetString ( "All supported archives" );
         
         joinLabel                           = Catalog.GetString ( "_Join" );
         joiningLabel                        = Catalog.GetString ( "Joining..." );

@@ -27,6 +27,7 @@ using System.Text.RegularExpressions;
 public static class Hamachi
 {
     
+    public  const  string DataPath = "/var/lib/logmein-hamachi";
     public  static int MajorVersion;
     public  static string Version;
     public  static bool VpnAliasCapable = false;
@@ -160,7 +161,7 @@ public static class Hamachi
     public static void Configure ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> /var/lib/logmein-hamachi/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart\"" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> " + DataPath + "/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart; sleep 1\"" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
         
     }
@@ -169,7 +170,7 @@ public static class Hamachi
     public static string Start ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi start" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );
         
         return output;
@@ -812,6 +813,39 @@ public static class Hamachi
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.CreateNetwork", output );
         
         return output;
+        
+    }
+    
+    
+    public static void SaveBackup ( string filename )
+    {
+        
+        string output = Command.ReturnOutput ( "tar", "-cavPf '" + filename + "' " + Hamachi.DataPath );
+        Debug.Log ( Debug.Domain.Info, "Hamachi.SaveBackup", output );
+        
+    }
+    
+    
+    public static void RestoreBackup ( string filename )
+    {
+        
+        string output = Command.ReturnOutput ( "tar", "-tvf '" + filename + "'" );
+        Debug.Log ( Debug.Domain.Info, "Hamachi.RestoreBackup", "Listing archive contents...\n" + output );
+        
+        if ( output.Contains ( Hamachi.DataPath ) )
+        {
+            GlobalEvents.StopHamachi ();
+            
+            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi stop; sleep 1; rm " + Hamachi.DataPath + "/*; tar -xavf '" + filename + "' -C /; " + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
+            Debug.Log ( Debug.Domain.Info, "Hamachi.RestoreBackup", output );
+            
+            Controller.Init ();
+        }
+        else
+        {
+            Debug.Log ( Debug.Domain.Info, "Hamachi.RestoreBackup", "Archive doesn't contain " + Hamachi.DataPath );
+            new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), TextStrings.configRestoreErrorTitle, TextStrings.configRestoreErrorMessage, "Error", null );
+        }
         
     }
     

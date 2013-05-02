@@ -28,6 +28,7 @@ namespace Menus
     {
         
         private Menu clientMenu;
+        private Menu configMenu;
         private Menu editMenu;
         private Menu viewMenu;
         private Menu helpMenu;
@@ -41,9 +42,13 @@ namespace Menus
         
         private ImageMenuItem connect;
         private ImageMenuItem disconnect;
-        private ImageMenuItem change;
+        private ImageMenuItem config;
+        private ImageMenuItem open;
+        private ImageMenuItem save;
+        private ImageMenuItem restore;
         private ImageMenuItem join;
         private ImageMenuItem create;
+        private ImageMenuItem change;
         private ImageMenuItem attach;
         private ImageMenuItem info;
         private ImageMenuItem close;
@@ -66,8 +71,21 @@ namespace Menus
         private ImageMenuItem about;
         
         
+        private FileFilter tar;
+        private FileChooserDialog chooser;
+        
+        
         public Menubar ()
         {
+            
+            tar = new FileFilter ();
+            tar.Name = TextStrings.configFileFilterTitle;
+            tar.AddMimeType ( "application/x-tar" );
+            tar.AddMimeType ( "application/x-compressed-tar" );
+            tar.AddMimeType ( "application/x-bzip-compressed-tar" );
+            tar.AddMimeType ( "application/x-lzma-compressed-tar" );
+            tar.AddMimeType ( "application/x-xz-compressed-tar" );
+            
             
             connect = new ImageMenuItem ( Stock.Connect, MainWindow.accelGroup );
             connect.Activated += GlobalEvents.StartHamachi;
@@ -77,8 +95,26 @@ namespace Menus
             disconnect.Activated += GlobalEvents.StopHamachi;
             disconnect.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.D, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
-            change = new ImageMenuItem ( TextStrings.changeNickLabel );
-            change.Activated += GlobalEvents.ChangeNick;
+            open = new ImageMenuItem ( TextStrings.configFolderLabel );
+            open.Activated += delegate
+            {
+                Command.Execute ( Command.FileManager, Hamachi.DataPath );
+            };
+            
+            save = new ImageMenuItem ( TextStrings.configSaveLabel );
+            save.Activated += SaveBackup;
+            
+            restore = new ImageMenuItem ( TextStrings.configRestoreLabel );
+            restore.Activated += RestoreBackup;
+            
+            configMenu = new Menu ();
+            configMenu.Add ( open );
+            configMenu.Add ( new SeparatorMenuItem () );
+            configMenu.Add ( save );
+            configMenu.Add ( restore );
+            
+            config = new ImageMenuItem ( TextStrings.configLabel );
+            config.Submenu = configMenu;
             
             join = new ImageMenuItem ( TextStrings.joinNetworkLabel );
             join.Activated += GlobalEvents.JoinNetwork;
@@ -86,7 +122,10 @@ namespace Menus
             create = new ImageMenuItem ( TextStrings.createNetworkLabel );
             create.Activated += GlobalEvents.CreateNetwork;
             
-            attach = new ImageMenuItem ( TextStrings.attachMenuLabel );
+            change = new ImageMenuItem ( TextStrings.changeNickLabel );
+            change.Activated += GlobalEvents.ChangeNick;
+            
+            attach = new ImageMenuItem ( TextStrings.attachLabel );
             attach.Activated += GlobalEvents.Attach;
             
             info = new ImageMenuItem ( Stock.Info, MainWindow.accelGroup );
@@ -104,11 +143,14 @@ namespace Menus
             clientMenu.Append ( connect );
             clientMenu.Append ( disconnect );
             clientMenu.Add    ( new SeparatorMenuItem () );
-            clientMenu.Append ( change );
+            clientMenu.Append ( config );
+            clientMenu.Add    ( new SeparatorMenuItem () );
             clientMenu.Append ( join );
             clientMenu.Append ( create );
-            clientMenu.Append ( attach );
             clientMenu.Add    ( new SeparatorMenuItem () );
+            clientMenu.Append ( change );
+            clientMenu.Append ( attach );
+            clientMenu.Add    ( new SeparatorMenuItem() );
             clientMenu.Append ( info );
             clientMenu.Add    ( new SeparatorMenuItem() );
             clientMenu.Append ( close );
@@ -243,6 +285,23 @@ namespace Menus
         }
         
         
+        public void SetConfig ()
+        {
+            
+            if ( System.IO.Directory.Exists ( Hamachi.DataPath ) )
+            {
+                open.Sensitive = true;
+                save.Sensitive = true;
+            }
+            else
+            {
+                open.Sensitive = false;
+                save.Sensitive = false;
+            }
+            
+        }
+        
+        
         public void SetMode ( string mode )
         {
             
@@ -299,6 +358,54 @@ namespace Menus
                     break;
                 
             }
+            
+        }
+        
+        
+        private void SaveBackup ( object obj, EventArgs args )
+        {
+            
+            chooser = new FileChooserDialog ( TextStrings.configSaveTitle, Haguichi.mainWindow.ReturnWindow (), FileChooserAction.Save, Stock.Cancel, ResponseType.Cancel, Stock.Save, ResponseType.Accept );
+            chooser.Modal = true;
+            chooser.DoOverwriteConfirmation = true;
+            chooser.AddFilter ( tar );
+            chooser.SetCurrentFolder ( Environment.GetFolderPath ( Environment.SpecialFolder.Personal ) );
+            chooser.CurrentName = "logmein-hamachi-config_" + DateTime.Now.ToString("yyyy-MM-dd") + ".tar.gz";
+            chooser.ShowAll ();
+            
+            chooser.Response += delegate ( object o, ResponseArgs a)
+            {
+                if ( a.ResponseId == ResponseType.Accept )
+                {
+                    Hamachi.SaveBackup ( chooser.Filename );
+                }
+                
+                chooser.Destroy ();
+            };
+            
+        }
+        
+        
+        private void RestoreBackup ( object obj, EventArgs args )
+        {
+            
+            chooser = new FileChooserDialog ( TextStrings.configRestoreTitle, Haguichi.mainWindow.ReturnWindow (), FileChooserAction.Open, Stock.Cancel, ResponseType.Cancel, TextStrings.configRestoreButtonLabel, ResponseType.Accept );
+            chooser.Modal = true;
+            chooser.AddFilter ( tar );
+            chooser.SetCurrentFolder ( Environment.GetFolderPath ( Environment.SpecialFolder.Personal ) );
+            chooser.ShowAll ();
+            
+            chooser.Response += delegate ( object o, ResponseArgs a)
+            {
+                chooser.Hide ();
+                
+                if ( a.ResponseId == ResponseType.Accept )
+                {
+                    Hamachi.RestoreBackup ( chooser.Filename );
+                }
+                
+                chooser.Destroy ();
+            };
             
         }
         
