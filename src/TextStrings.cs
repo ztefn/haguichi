@@ -191,8 +191,6 @@ Türkçe (tr)
     public static string helpLabel;
     
     public static string onlineHelpLabel;
-    public static string createNetworkLabel;
-    public static string joinNetworkLabel;
     
     public static string goOnlineLabel;
     public static string goOfflineLabel;
@@ -213,11 +211,10 @@ Türkçe (tr)
     public static string copyAddressIPv6Label;
     public static string copyClientIdLabel;
     
-    public static string changeLabel;
-    
     public static string changeNickLabel;
     public static string changeNickTitle;
     public static string changeNickMessage;
+    public static string changeLabel;
     public static string changeNicknameTooltip;
     
     public static string changePasswordLabel;
@@ -246,15 +243,17 @@ Türkçe (tr)
     public static string configRestoreErrorMessage;
     public static string configFileFilterTitle;
     
-    public static string joinLabel;
-    public static string joiningLabel;
+    public static string joinNetworkLabel;
     public static string joinNetworkTitle;
     public static string joinNetworkMessage;
+    public static string joinLabel;
+    public static string joiningLabel;
     
-    public static string createLabel;
-    public static string creatingLabel;
+    public static string createNetworkLabel;
     public static string createNetworkTitle;
     public static string createNetworkMessage;
+    public static string createLabel;
+    public static string creatingLabel;
     
     public static string errorNetworkNotFound;
     public static string errorInvalidPassword;
@@ -433,8 +432,6 @@ Türkçe (tr)
         helpLabel                           = Catalog.GetString ( "_Help" );
         
         onlineHelpLabel                     = Catalog.GetString ( "_Online Help" );
-        createNetworkLabel                  = Catalog.GetString ( "_Create Network..." );
-        joinNetworkLabel                    = Catalog.GetString ( "_Join Network..." );
         
         goOnlineLabel                       = Catalog.GetString ( "_Go Online" );
         goOfflineLabel                      = Catalog.GetString ( "_Go Offline" );
@@ -455,11 +452,10 @@ Türkçe (tr)
         copyAddressIPv6Label                = Catalog.GetString ( "Copy IPv_6 Address" );
         copyClientIdLabel                   = Catalog.GetString ( "_Copy Client ID" );
         
-        changeLabel                         = Catalog.GetString ( "C_hange" );
-        
         changeNickLabel                     = Catalog.GetString ( "Change _Nickname..." );
         changeNickTitle                     = Catalog.GetString ( "Change Nickname" );
         changeNickMessage                   = Catalog.GetString ( "Please enter the nickname you want to use." );
+        changeLabel                         = Catalog.GetString ( "C_hange" );
         changeNicknameTooltip               = Catalog.GetString ( "Click to change your nickname" );
         
         changePasswordLabel                 = Catalog.GetString ( "Change _Password..." );
@@ -488,15 +484,17 @@ Türkçe (tr)
         configRestoreErrorMessage           = Catalog.GetString ( "Archive does not contain expected files." );
         configFileFilterTitle               = Catalog.GetString ( "All supported archives" );
         
-        joinLabel                           = Catalog.GetString ( "_Join" );
-        joiningLabel                        = Catalog.GetString ( "Joining..." );
+        joinNetworkLabel                    = Catalog.GetString ( "_Join Network..." );
         joinNetworkTitle                    = Catalog.GetString ( "Join Network" );
         joinNetworkMessage                  = Catalog.GetString ( "Please enter the name and password for the\nnetwork you want to join." );
-                
-        createLabel                         = Catalog.GetString ( "C_reate" );
-        creatingLabel                       = Catalog.GetString ( "Creating..." );
+        joinLabel                           = Catalog.GetString ( "_Join" );
+        joiningLabel                        = Catalog.GetString ( "Joining..." );
+        
+        createNetworkLabel                  = Catalog.GetString ( "_Create Network..." );
         createNetworkTitle                  = Catalog.GetString ( "Create Network" );
         createNetworkMessage                = Catalog.GetString ( "Please enter the name and password for the\nnetwork you want to create." );
+        createLabel                         = Catalog.GetString ( "C_reate" );
+        creatingLabel                       = Catalog.GetString ( "Creating..." );
         
         errorNetworkNotFound                = Catalog.GetString ( "Network not found" );
         errorInvalidPassword                = Catalog.GetString ( "Invalid password" );

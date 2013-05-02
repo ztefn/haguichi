@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-02-10 21:56+0100\n"
+"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
 "PO-Revision-Date: 2013-02-16 00:38+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -19,394 +19,424 @@ msgstr ""
 "X-Generator: Launchpad (build 16491)\n"
 
 #. Description used in about dialog.
-#: ../src/TextStrings.cs:354
+#: ../src/TextStrings.cs:364
 msgid "A graphical frontend for Hamachi."
 msgstr "Grafické rozhraní pro Hamachi."
 
 #. Description used in application launchers.
-#: ../src/TextStrings.cs:355
+#: ../src/TextStrings.cs:365
 msgid "Join and create local networks over the Internet"
 msgstr "Připojení a vytváření lokálních sítí po internetu"
 
-#: ../src/TextStrings.cs:357
+#: ../src/TextStrings.cs:367
 msgid "_Show Haguichi"
 msgstr "_Zobrazit Haguichi"
 
-#: ../src/TextStrings.cs:359
+#: ../src/TextStrings.cs:369
 msgid "Yes"
 msgstr "Ano"
 
-#: ../src/TextStrings.cs:360
+#: ../src/TextStrings.cs:370
 msgid "No"
 msgstr "Ne"
 
-#: ../src/TextStrings.cs:362
+#: ../src/TextStrings.cs:372
 msgid "_Hamachi output"
 msgstr "_Hamachi výstup"
 
-#: ../src/TextStrings.cs:364
+#: ../src/TextStrings.cs:374
 msgid "IPv4 address:"
 msgstr "IPv4 adresa:"
 
-#: ../src/TextStrings.cs:365
+#: ../src/TextStrings.cs:375
 msgid "IPv6 address:"
 msgstr "IPv6 adresa:"
 
-#: ../src/TextStrings.cs:366
+#: ../src/TextStrings.cs:376
 msgid "ID:"
 msgstr "ID:"
 
-#: ../src/TextStrings.cs:367
+#: ../src/TextStrings.cs:377
 msgid "Client ID:"
 msgstr "ID klienta:"
 
-#: ../src/TextStrings.cs:368
+#: ../src/TextStrings.cs:378
 msgid "Network ID:"
 msgstr "ID sítě:"
 
-#: ../src/TextStrings.cs:369
+#: ../src/TextStrings.cs:379
 msgid "Status:"
 msgstr "Stav:"
 
-#: ../src/TextStrings.cs:370
+#: ../src/TextStrings.cs:380
 msgid "Tunnel:"
 msgstr "Tunel:"
 
-#: ../src/TextStrings.cs:371
+#: ../src/TextStrings.cs:381
 msgid "Connection:"
 msgstr "Spojení:"
 
-#: ../src/TextStrings.cs:372
+#: ../src/TextStrings.cs:382
 msgid "Direct"
 msgstr "Přímý"
 
-#: ../src/TextStrings.cs:373
+#: ../src/TextStrings.cs:383
 msgid "Relayed"
 msgstr "Předáno"
 
-#: ../src/TextStrings.cs:374
+#: ../src/TextStrings.cs:384
 msgid "Anonymous"
 msgstr "Anonymní"
 
-#: ../src/TextStrings.cs:375
+#: ../src/TextStrings.cs:385
 msgid "_Nickname:"
 msgstr "_Přezdívka:"
 
-#: ../src/TextStrings.cs:377
+#: ../src/TextStrings.cs:387
 msgid "_Name:"
 msgstr "Jmé_no:"
 
-#: ../src/TextStrings.cs:378
+#: ../src/TextStrings.cs:388
 msgid "_Password:"
 msgstr "_Heslo:"
 
-#: ../src/TextStrings.cs:379
+#: ../src/TextStrings.cs:389
 msgid "Version:"
 msgstr "Verze:"
 
-#: ../src/TextStrings.cs:381
+#: ../src/TextStrings.cs:391
 msgid "Offline"
 msgstr "Offline"
 
-#: ../src/TextStrings.cs:382
+#: ../src/TextStrings.cs:392
 msgid "Online"
 msgstr "Online"
 
-#: ../src/TextStrings.cs:383
+#: ../src/TextStrings.cs:393
 msgid "Unreachable"
 msgstr "Nedostupný"
 
-#: ../src/TextStrings.cs:384
+#: ../src/TextStrings.cs:394
 msgid "Protocol mismatch"
 msgstr "Chyba v protokolu"
 
-#: ../src/TextStrings.cs:385
+#: ../src/TextStrings.cs:395
 msgid "Conflicting address"
 msgstr "Konflikt adres"
 
-#: ../src/TextStrings.cs:386
+#: ../src/TextStrings.cs:396
 msgid "Connected"
 msgstr "Připojen"
 
-#: ../src/TextStrings.cs:387
+#: ../src/TextStrings.cs:397
 msgid "Disconnected"
 msgstr "Odpojen"
 
-#: ../src/TextStrings.cs:388
+#: ../src/TextStrings.cs:398
 msgid "Connecting..."
 msgstr "Připojuje se..."
 
-#: ../src/TextStrings.cs:389
+#: ../src/TextStrings.cs:399
 msgid "Logging in..."
 msgstr "Přihlašuje se..."
 
-#: ../src/TextStrings.cs:390
+#: ../src/TextStrings.cs:400
 msgid "Updating..."
 msgstr "Aktualizuje se..."
 
 #. Please use the same text and shortcut as the stock connect button.
-#: ../src/TextStrings.cs:392
+#: ../src/TextStrings.cs:402
 msgid "C_onnect (%S)"
 msgstr "Přip_ojit (%S)"
 
-#: ../src/TextStrings.cs:393
+#: ../src/TextStrings.cs:403
 msgid "Connect a_utomatically"
 msgstr "Připojit a_utomaticky"
 
-#: ../src/TextStrings.cs:395
+#: ../src/TextStrings.cs:405
 msgid "Hamachi is not configured"
 msgstr "Hamachi není nastaveno"
 
-#: ../src/TextStrings.cs:396
+#: ../src/TextStrings.cs:406
 msgid "You need to configure Hamachi before you can connect."
 msgstr "Před připojením je třeba Hamachi nastavit."
 
-#: ../src/TextStrings.cs:397
+#: ../src/TextStrings.cs:407
 msgid "C_onfigure"
 msgstr "_Nastavit"
 
-#: ../src/TextStrings.cs:399
+#: ../src/TextStrings.cs:409
 msgid "Hamachi is not installed"
 msgstr "Hamachi není nainstalováno"
 
-#: ../src/TextStrings.cs:400
+#: ../src/TextStrings.cs:410
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Stáhněte si Hamachi a postupujte dle instalačních instrukcí."
 
-#: ../src/TextStrings.cs:401
+#: ../src/TextStrings.cs:411
 msgid "Hamachi version {0} is obsolete"
 msgstr "Hamachi verze {0} je zastaralá"
 
-#: ../src/TextStrings.cs:402
+#: ../src/TextStrings.cs:412
 msgid "Please download and install the latest Hamachi version."
 msgstr "Prosím, stáhněte a nainstalujte si poslední verzi Hamachi."
 
-#: ../src/TextStrings.cs:403
+#: ../src/TextStrings.cs:413
 msgid "_Download"
 msgstr "_Stáhnout"
 
-#: ../src/TextStrings.cs:405
+#: ../src/TextStrings.cs:415
 msgid "Members:"
 msgstr "Členové:"
 
-#: ../src/TextStrings.cs:406
+#: ../src/TextStrings.cs:416
 msgid "{0} online, {1} total"
 msgstr "{0} připojeno, {1} celkem"
 
-#: ../src/TextStrings.cs:407
+#: ../src/TextStrings.cs:417
 msgid "Owner:"
 msgstr "Vlastník:"
 
-#: ../src/TextStrings.cs:408
+#: ../src/TextStrings.cs:418
 msgid "You"
 msgstr "Vy"
 
-#: ../src/TextStrings.cs:409
+#: ../src/TextStrings.cs:419
 msgid "Unknown"
 msgstr "Neznámý"
 
-#: ../src/TextStrings.cs:410
+#: ../src/TextStrings.cs:420
 msgid "Unavailable"
 msgstr "Nedostupný"
 
-#: ../src/TextStrings.cs:411
+#: ../src/TextStrings.cs:421
 msgid "Awaiting approval"
 msgstr "Čeká na schválení"
 
-#: ../src/TextStrings.cs:412
+#: ../src/TextStrings.cs:422
 msgid "Locked:"
 msgstr "Uzamčeno:"
 
-#: ../src/TextStrings.cs:413
+#: ../src/TextStrings.cs:423
 msgid "Approval:"
 msgstr "Schválení:"
 
-#: ../src/TextStrings.cs:414
+#: ../src/TextStrings.cs:424
 msgid "Manually"
 msgstr "Ručně"
 
-#: ../src/TextStrings.cs:415
+#: ../src/TextStrings.cs:425
 msgid "Automatically"
 msgstr "Automaticky"
 
-#: ../src/TextStrings.cs:416
+#: ../src/TextStrings.cs:426
 msgid "Capacity:"
 msgstr "Kapacita:"
 
-#: ../src/TextStrings.cs:418
+#: ../src/TextStrings.cs:428
 msgid "_Client"
 msgstr "_Klient"
 
-#: ../src/TextStrings.cs:419
+#: ../src/TextStrings.cs:429
 msgid "_Edit"
 msgstr "_Upravit"
 
-#: ../src/TextStrings.cs:420
+#: ../src/TextStrings.cs:430
 msgid "_View"
 msgstr "_Zobrazit"
 
-#: ../src/TextStrings.cs:421
+#: ../src/TextStrings.cs:431
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/TextStrings.cs:423
+#: ../src/TextStrings.cs:433
 msgid "_Online Help"
 msgstr "_Online nápověda"
 
-#: ../src/TextStrings.cs:424
-msgid "_Create Network..."
-msgstr "_Vytvořit síť"
-
-#: ../src/TextStrings.cs:425
-msgid "_Join Network..."
-msgstr "_Připojit síť"
-
-#: ../src/TextStrings.cs:427
+#: ../src/TextStrings.cs:435
 msgid "_Go Online"
 msgstr "_Jít online"
 
-#: ../src/TextStrings.cs:428
+#: ../src/TextStrings.cs:436
 msgid "_Go Offline"
 msgstr "_Jít offline"
 
-#: ../src/TextStrings.cs:429
+#: ../src/TextStrings.cs:437
 msgid "_Leave"
 msgstr "_Opustit"
 
-#: ../src/TextStrings.cs:430
+#: ../src/TextStrings.cs:438
 msgid "_Locked"
 msgstr "_Uzamčeno"
 
-#: ../src/TextStrings.cs:431
+#: ../src/TextStrings.cs:439
 msgid "_New Member Approval"
 msgstr "Schválení _nového člena"
 
-#: ../src/TextStrings.cs:432
+#: ../src/TextStrings.cs:440
 msgid "_Automatically"
 msgstr "_Automaticky"
 
-#: ../src/TextStrings.cs:433
+#: ../src/TextStrings.cs:441
 msgid "_Manually"
 msgstr "_Ručně"
 
-#: ../src/TextStrings.cs:434
+#: ../src/TextStrings.cs:442
 msgid "_Copy Network ID"
 msgstr "_Kopírovat ID sítě"
 
-#: ../src/TextStrings.cs:436
+#: ../src/TextStrings.cs:444
 msgid "_Browse Shares"
 msgstr "P_rocházet sdílené"
 
-#: ../src/TextStrings.cs:437
+#: ../src/TextStrings.cs:445
 msgid "_Ping"
 msgstr "_Ping"
 
-#: ../src/TextStrings.cs:438
+#: ../src/TextStrings.cs:446
 msgid "_View Remote Desktop"
 msgstr "_Zobrazit vzdálenou plochu"
 
-#: ../src/TextStrings.cs:439
+#: ../src/TextStrings.cs:447
 msgid "_Approve"
 msgstr "_Schválit"
 
-#: ../src/TextStrings.cs:440
+#: ../src/TextStrings.cs:448
 msgid "_Reject"
 msgstr "O_dmítnout"
 
 #. This action removes the selected member from the network.
-#: ../src/TextStrings.cs:441
+#: ../src/TextStrings.cs:449
 msgid "_Evict"
 msgstr "_Vyhodit"
 
-#: ../src/TextStrings.cs:442
+#: ../src/TextStrings.cs:450
 msgid "Copy IPv_4 Address"
 msgstr "Kopírovat IPv_4 adresu:"
 
-#: ../src/TextStrings.cs:443
+#: ../src/TextStrings.cs:451
 msgid "Copy IPv_6 Address"
 msgstr "Kopírovat IPv_6 adresu:"
 
-#: ../src/TextStrings.cs:444
+#: ../src/TextStrings.cs:452
 msgid "_Copy Client ID"
 msgstr "_Kopírovat ID klienta"
 
-#: ../src/TextStrings.cs:446
-msgid "C_hange"
-msgstr "_Změnit"
-
-#: ../src/TextStrings.cs:448
+#: ../src/TextStrings.cs:454
 msgid "Change _Nickname..."
 msgstr "Změ_nit přezdívku"
 
-#: ../src/TextStrings.cs:449
+#: ../src/TextStrings.cs:455
 msgid "Change Nickname"
 msgstr "Změnit přezdívku"
 
-#: ../src/TextStrings.cs:450
+#: ../src/TextStrings.cs:456
 msgid "Please enter the nickname you want to use."
 msgstr "Zadejte přezdívku, kterou chcete používat."
 
-#: ../src/TextStrings.cs:451
+#: ../src/TextStrings.cs:457
+msgid "C_hange"
+msgstr "_Změnit"
+
+#: ../src/TextStrings.cs:458
 msgid "Click to change your nickname"
 msgstr "Klikněte pro změnu přezdívky"
 
-#: ../src/TextStrings.cs:453
+#: ../src/TextStrings.cs:460
 msgid "Change _Password..."
 msgstr "Změnit _heslo"
 
-#: ../src/TextStrings.cs:454
+#: ../src/TextStrings.cs:461
 msgid "Change Password"
 msgstr "Změnit heslo"
 
-#: ../src/TextStrings.cs:455
+#: ../src/TextStrings.cs:462
 msgid "Please enter the new password for this network."
 msgstr "Zadejte prosím nové heslo pro tuto síť."
 
-#: ../src/TextStrings.cs:457
+#: ../src/TextStrings.cs:464
 msgid "_Account:"
 msgstr "Úče_t:"
 
-#: ../src/TextStrings.cs:460
+#: ../src/TextStrings.cs:467
 msgid "_Attach to Account..."
 msgstr "Připo_jit k účtu"
 
-#: ../src/TextStrings.cs:461
+#: ../src/TextStrings.cs:468
 msgid "Attach to Account"
 msgstr "Připojit k účtu"
 
-#: ../src/TextStrings.cs:462
+#: ../src/TextStrings.cs:469
 msgid "Please enter the account you want to attach this client to."
 msgstr "Vložte prosím účet, který chcete připojit k tomuto klientu."
 
-#: ../src/TextStrings.cs:463
+#: ../src/TextStrings.cs:470
 msgid "_Include all networks created by this client"
 msgstr "_Zahrnout všechny sítě vytvořené tímto klientem"
 
-#: ../src/TextStrings.cs:464
+#: ../src/TextStrings.cs:471
 msgid "_Attach"
 msgstr "_Připojit"
 
-#: ../src/TextStrings.cs:465
+#: ../src/TextStrings.cs:472
 msgid "Attaching..."
 msgstr "Připojuji..."
 
-#: ../src/TextStrings.cs:466
+#: ../src/TextStrings.cs:473
 msgid "Account not found"
 msgstr "Účet nenalezen"
 
-#: ../src/TextStrings.cs:468
-msgid "_Join"
-msgstr "Připo_jit"
+#: ../src/TextStrings.cs:475
+#, fuzzy
+msgid "Config_uration"
+msgstr "_Nastavit"
 
-#: ../src/TextStrings.cs:469
-msgid "Joining..."
-msgstr "Spojuji..."
+#: ../src/TextStrings.cs:476
+#, fuzzy
+msgid "_Open Folder"
+msgstr "Zvolit složku"
 
-#: ../src/TextStrings.cs:470
+#: ../src/TextStrings.cs:477
+msgid "_Save a Backup..."
+msgstr ""
+
+#: ../src/TextStrings.cs:478
+msgid "Save a Backup"
+msgstr ""
+
+#: ../src/TextStrings.cs:479
+msgid "_Restore from Backup..."
+msgstr ""
+
+#: ../src/TextStrings.cs:480
+msgid "Restore from Backup"
+msgstr ""
+
+#: ../src/TextStrings.cs:481
+msgid "_Restore"
+msgstr ""
+
+#: ../src/TextStrings.cs:482
+msgid "Could not restore configuration"
+msgstr ""
+
+#: ../src/TextStrings.cs:483
+msgid "Archive does not contain expected files."
+msgstr ""
+
+#: ../src/TextStrings.cs:484
+msgid "All supported archives"
+msgstr ""
+
+#: ../src/TextStrings.cs:486
+msgid "_Join Network..."
+msgstr "_Připojit síť"
+
+#: ../src/TextStrings.cs:487
 msgid "Join Network"
 msgstr "Připojit síť"
 
-#: ../src/TextStrings.cs:471
+#: ../src/TextStrings.cs:488
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
@@ -414,19 +444,23 @@ msgstr ""
 "Zadejte prosím jméno a heslo sítě,\n"
 "ke které se chcete připojit."
 
-#: ../src/TextStrings.cs:473
-msgid "C_reate"
-msgstr "V_ytvořit"
+#: ../src/TextStrings.cs:489
+msgid "_Join"
+msgstr "Připo_jit"
 
-#: ../src/TextStrings.cs:474
-msgid "Creating..."
-msgstr "Vytváření..."
+#: ../src/TextStrings.cs:490
+msgid "Joining..."
+msgstr "Spojuji..."
 
-#: ../src/TextStrings.cs:475
+#: ../src/TextStrings.cs:492
+msgid "_Create Network..."
+msgstr "_Vytvořit síť"
+
+#: ../src/TextStrings.cs:493
 msgid "Create Network"
 msgstr "Vytvořit síť"
 
-#: ../src/TextStrings.cs:476
+#: ../src/TextStrings.cs:494
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
@@ -434,71 +468,79 @@ msgstr ""
 "Zadejte prosím jméno a heslo sítě,\n"
 "kterou chcete vytvořit."
 
-#: ../src/TextStrings.cs:478
+#: ../src/TextStrings.cs:495
+msgid "C_reate"
+msgstr "V_ytvořit"
+
+#: ../src/TextStrings.cs:496
+msgid "Creating..."
+msgstr "Vytváření..."
+
+#: ../src/TextStrings.cs:498
 msgid "Network not found"
 msgstr "Síť nenalezena"
 
-#: ../src/TextStrings.cs:479
+#: ../src/TextStrings.cs:499
 msgid "Invalid password"
 msgstr "Neplatné heslo"
 
-#: ../src/TextStrings.cs:480
+#: ../src/TextStrings.cs:500
 msgid "Network is full"
 msgstr "Síť je plná"
 
-#: ../src/TextStrings.cs:481
+#: ../src/TextStrings.cs:501
 msgid "Network is locked"
 msgstr "Síť je zamčená"
 
-#: ../src/TextStrings.cs:482
+#: ../src/TextStrings.cs:502
 msgid "Network already joined"
 msgstr "Síť je již připojena"
 
-#: ../src/TextStrings.cs:483
+#: ../src/TextStrings.cs:503
 msgid "Unknown error"
 msgstr "Neznámá chyba"
 
-#: ../src/TextStrings.cs:484
+#: ../src/TextStrings.cs:504
 msgid "Network name too short"
 msgstr "Jméno sítě je příliš krátké"
 
-#: ../src/TextStrings.cs:485
+#: ../src/TextStrings.cs:505
 msgid "Network name is already taken"
 msgstr "Jméno sítě je již obsazeno"
 
-#: ../src/TextStrings.cs:487
+#: ../src/TextStrings.cs:507
 msgid "Join request sent"
 msgstr "Žádost o připojení zaslána"
 
-#: ../src/TextStrings.cs:489
+#: ../src/TextStrings.cs:509
 msgid "Preferences"
 msgstr "Nastavení"
 
-#: ../src/TextStrings.cs:490
+#: ../src/TextStrings.cs:510
 msgid "Information"
 msgstr "Informace"
 
-#: ../src/TextStrings.cs:492
+#: ../src/TextStrings.cs:512
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
 msgstr "Opravdu chcete smazat síť „{0}“?"
 
-#: ../src/TextStrings.cs:493
+#: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Pokud síť odstraníte, bude nenávratně ztracena."
 
-#: ../src/TextStrings.cs:495
+#: ../src/TextStrings.cs:515
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
 msgstr "Opravdu chcete opustit síť „{0}“?"
 
-#: ../src/TextStrings.cs:496
+#: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Pokud potvrdíte, můžete se opět připojit kdykoliv později."
 
-#: ../src/TextStrings.cs:498
+#: ../src/TextStrings.cs:518
 msgid ""
 "Are you sure you want to evict member \"{0}\"\n"
 "from network \"{1}\"?"
@@ -506,24 +548,23 @@ msgstr ""
 "Opravdu vyhodit člena „{0}“\n"
 "ze sítě „{1}“?"
 
-#: ../src/TextStrings.cs:499
-msgid ""
-"If admitted, evicted members can rejoin the network at any later time."
+#: ../src/TextStrings.cs:519
+msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Pokud potvrdíte, mohou se vyloučení členi později opět připojit."
 
-#: ../src/TextStrings.cs:501
+#: ../src/TextStrings.cs:521
 msgid "Could not delete network \"{0}\""
 msgstr "Selhalo smazání sítě „{0}“"
 
-#: ../src/TextStrings.cs:502
+#: ../src/TextStrings.cs:522
 msgid "Could not leave network \"{0}\""
 msgstr "Selhalo opuštění sítě „{0}“"
 
-#: ../src/TextStrings.cs:503
+#: ../src/TextStrings.cs:523
 msgid "Could not evict member \"{0}\""
 msgstr "Selhalo vyhození člena „{0}“"
 
-#: ../src/TextStrings.cs:504
+#: ../src/TextStrings.cs:524
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
@@ -531,7 +572,7 @@ msgstr ""
 "Nelze přejít do režimu online\n"
 "v síti „{0}“"
 
-#: ../src/TextStrings.cs:505
+#: ../src/TextStrings.cs:525
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
@@ -539,244 +580,244 @@ msgstr ""
 "Nelze přejít do režimu offline\n"
 "v síti „{0}“"
 
-#: ../src/TextStrings.cs:507
+#: ../src/TextStrings.cs:527
 msgid "See output for details."
 msgstr "Pro podrobnosti zobrazte výstup."
 
-#: ../src/TextStrings.cs:509
+#: ../src/TextStrings.cs:529
 msgid "General"
 msgstr "Obecné"
 
 #. In this context meaning "work environment".
-#: ../src/TextStrings.cs:510
+#: ../src/TextStrings.cs:530
 msgid "Desktop"
 msgstr "Plocha"
 
-#: ../src/TextStrings.cs:511
+#: ../src/TextStrings.cs:531
 msgid "Commands"
 msgstr "Příkazy"
 
-#: ../src/TextStrings.cs:513
+#: ../src/TextStrings.cs:533
 msgid "Notification Area"
 msgstr "Oznamovací oblast"
 
-#: ../src/TextStrings.cs:514
+#: ../src/TextStrings.cs:534
 msgid "Behavior"
 msgstr "Chování"
 
-#: ../src/TextStrings.cs:516
+#: ../src/TextStrings.cs:536
 msgid "_Protocol:"
 msgstr "_Protokol:"
 
-#: ../src/TextStrings.cs:517
+#: ../src/TextStrings.cs:537
 msgid "Both IPv4 and IPv6"
 msgstr "Oba IPv4 a IPv6"
 
-#: ../src/TextStrings.cs:518
+#: ../src/TextStrings.cs:538
 msgid "IPv4 only"
 msgstr "Pouze IPv4"
 
-#: ../src/TextStrings.cs:519
+#: ../src/TextStrings.cs:539
 msgid "IPv6 only"
 msgstr "Pouze IPv6"
 
-#: ../src/TextStrings.cs:521
+#: ../src/TextStrings.cs:541
 msgid "_Update Network List"
 msgstr "_Aktualizovat seznam sítí"
 
-#: ../src/TextStrings.cs:522
+#: ../src/TextStrings.cs:542
 msgid "Show Alt_ernating Row Colors"
 msgstr "Zobrazit střídající se barvy řádků"
 
-#: ../src/TextStrings.cs:523
+#: ../src/TextStrings.cs:543
 msgid "_Compact Layout"
 msgstr "_Kompaktní rozvržení"
 
-#: ../src/TextStrings.cs:524
+#: ../src/TextStrings.cs:544
 msgid "_Large Layout"
 msgstr "_Podrobné rozvržení"
 
-#: ../src/TextStrings.cs:525
+#: ../src/TextStrings.cs:545
 msgid "Show _Offline Members"
 msgstr "Zobrazit členy _offline"
 
-#: ../src/TextStrings.cs:526
+#: ../src/TextStrings.cs:546
 msgid "Sort by _Name"
 msgstr "Řadit dle _jména"
 
-#: ../src/TextStrings.cs:527
+#: ../src/TextStrings.cs:547
 msgid "Sort by _Status"
 msgstr "Řadit dle _stavu"
 
-#: ../src/TextStrings.cs:528
+#: ../src/TextStrings.cs:548
 msgid "St_atusbar"
 msgstr "_Stavový řádek"
 
-#: ../src/TextStrings.cs:530
+#: ../src/TextStrings.cs:550
 msgid "_Show Haguichi in the notification area"
 msgstr "_Zobrazit Haguichi v oznamovací oblasti"
 
-#: ../src/TextStrings.cs:531
+#: ../src/TextStrings.cs:551
 msgid "Start Haguichi _minimized in the notification area"
 msgstr "Spustit Haguichi _minimalizovaný v oznamovací oblasti"
 
-#: ../src/TextStrings.cs:533
+#: ../src/TextStrings.cs:553
 msgid "C_onnect automatically on startup"
 msgstr "_Připojit automaticky při spuštění"
 
-#: ../src/TextStrings.cs:534
+#: ../src/TextStrings.cs:554
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "Automatiky obnovit spojení, pokud bylo ztraceno"
 
-#: ../src/TextStrings.cs:535
+#: ../src/TextStrings.cs:555
 msgid "_Disconnect on quit"
 msgstr "_Odpojit při ukončení"
 
-#: ../src/TextStrings.cs:537
+#: ../src/TextStrings.cs:557
 msgid "Display notification when the connection is l_ost"
 msgstr "Zobrazit upozornění, když je spojení _ztraceno"
 
-#: ../src/TextStrings.cs:538
+#: ../src/TextStrings.cs:558
 msgid "Display notification when a member _joins"
 msgstr "Zobrazit upozornění, když se člen připojí"
 
-#: ../src/TextStrings.cs:539
+#: ../src/TextStrings.cs:559
 msgid "Display notification when a member _leaves"
 msgstr "Zobrazit upozornění, když se člen odpojí"
 
-#: ../src/TextStrings.cs:540
+#: ../src/TextStrings.cs:560
 msgid "Display notification when a member comes o_nline"
 msgstr "Zobrazit upozornění, když člen změní stav na o_nline"
 
-#: ../src/TextStrings.cs:541
+#: ../src/TextStrings.cs:561
 msgid "Display notification when a member goes o_ffline"
 msgstr "Zobrazit upozornění, když člen změní stav na o_ffline"
 
-#: ../src/TextStrings.cs:543
+#: ../src/TextStrings.cs:563
 msgid "Error connecting"
 msgstr "Chyba při připojování"
 
-#: ../src/TextStrings.cs:544
+#: ../src/TextStrings.cs:564
 msgid "Hamachi login failed"
 msgstr "Přihlášení Hamachi selhalo"
 
-#: ../src/TextStrings.cs:545
+#: ../src/TextStrings.cs:565
 msgid "No internet connection"
 msgstr "Žádné připojení k internetu"
 
-#: ../src/TextStrings.cs:547
+#: ../src/TextStrings.cs:567
 msgid "Hamachi lost connection"
 msgstr "Hamachi spojení ztraceno"
 
-#: ../src/TextStrings.cs:548
+#: ../src/TextStrings.cs:568
 msgid "Member online"
 msgstr "Člen online"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: ../src/TextStrings.cs:549
+#: ../src/TextStrings.cs:569
 msgid "{0} came online in the network {1}"
 msgstr "{0} je online v síti {1}"
 
-#: ../src/TextStrings.cs:550
+#: ../src/TextStrings.cs:570
 msgid "Member offline"
 msgstr "Člen offline"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: ../src/TextStrings.cs:551
+#: ../src/TextStrings.cs:571
 msgid "{0} went offline in the network {1}"
 msgstr "{0} je offline ze sítě {1}"
 
-#: ../src/TextStrings.cs:552
+#: ../src/TextStrings.cs:572
 msgid "Member joined"
 msgstr "Člen přidán"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: ../src/TextStrings.cs:553
+#: ../src/TextStrings.cs:573
 msgid "{0} joined the network {1}"
 msgstr "{0} přidán do sítě {1}"
 
-#: ../src/TextStrings.cs:554
+#: ../src/TextStrings.cs:574
 msgid "Member left"
 msgstr "Člen odešel"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: ../src/TextStrings.cs:555
+#: ../src/TextStrings.cs:575
 msgid "{0} left the network {1}"
 msgstr "{0} opustil síť {1}"
 
-#: ../src/TextStrings.cs:557
+#: ../src/TextStrings.cs:577
 msgid "A_vailable commands:"
 msgstr "_Dostupné příkazy:"
 
-#: ../src/TextStrings.cs:558
+#: ../src/TextStrings.cs:578
 msgid "Command"
 msgstr "Příkaz"
 
-#: ../src/TextStrings.cs:559
+#: ../src/TextStrings.cs:579
 msgid "Available"
 msgstr "K dispozici"
 
-#: ../src/TextStrings.cs:561
+#: ../src/TextStrings.cs:581
 msgid "Add Command"
 msgstr "Přidat příkaz"
 
-#: ../src/TextStrings.cs:562
+#: ../src/TextStrings.cs:582
 msgid "Edit Command"
 msgstr "Upravit příkaz"
 
-#: ../src/TextStrings.cs:563
+#: ../src/TextStrings.cs:583
 msgid "_Label:"
 msgstr "Pop_is:"
 
-#: ../src/TextStrings.cs:564
+#: ../src/TextStrings.cs:584
 msgid "IPv_4 command:"
 msgstr "IPv_4 příkaz:"
 
-#: ../src/TextStrings.cs:565
+#: ../src/TextStrings.cs:585
 msgid "IPv_6 command:"
 msgstr "IPv_6 příkaz:"
 
-#: ../src/TextStrings.cs:566
+#: ../src/TextStrings.cs:586
 msgid "Use %A for address and %N for nickname"
 msgstr "Použijte %A pro adresu a %N pro přezdívku"
 
-#: ../src/TextStrings.cs:567
+#: ../src/TextStrings.cs:587
 msgid "_Priority:"
 msgstr "_Priorita:"
 
-#: ../src/TextStrings.cs:569
+#: ../src/TextStrings.cs:589
 msgid "Click to choose an icon"
 msgstr "Klikněte pro výběr ikony"
 
-#: ../src/TextStrings.cs:570
+#: ../src/TextStrings.cs:590
 msgid "_No Icon"
 msgstr "_Bez ikony"
 
-#: ../src/TextStrings.cs:572
+#: ../src/TextStrings.cs:592
 msgid "Default"
 msgstr "Výchozí"
 
-#: ../src/TextStrings.cs:573
+#: ../src/TextStrings.cs:593
 msgid "_Default"
 msgstr "_Výchozí"
 
-#: ../src/TextStrings.cs:575
+#: ../src/TextStrings.cs:595
 msgid "Are you sure you want to revert all changes?"
 msgstr "Opravdu chcete vrátit všechny změny?"
 
-#: ../src/TextStrings.cs:576
+#: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
 msgstr "Pokud vrátíte všechny změny, budou obnoveny výchozí příkazy."
 
-#: ../src/TextStrings.cs:578
+#: ../src/TextStrings.cs:598
 msgid "Move up"
 msgstr "Posunout nahoru"
 
-#: ../src/TextStrings.cs:579
+#: ../src/TextStrings.cs:599
 msgid "Move down"
 msgstr "Posunout dolů"
 
-#: ../src/TextStrings.cs:587
+#: ../src/TextStrings.cs:607
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
 msgstr[0] "_Aktualizovat seznam sítí jednou za %S _sekund"
@@ -784,7 +825,7 @@ msgstr[1] "_Aktualizovat seznam sítí jednou za %S _sekundy"
 msgstr[2] "_Aktualizovat seznam sítí jednou za %S _sekund"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:595
+#: ../src/TextStrings.cs:615
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} je online v síti {1} a {2} další síti"
@@ -792,7 +833,7 @@ msgstr[1] "{0} je online v síti {1} a {2} dalších sítí"
 msgstr[2] "{0} je online v síti {1} a {2} dalších sítí"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:603
+#: ../src/TextStrings.cs:623
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} je offline v síti {1} a {2} další síti"
@@ -800,7 +841,7 @@ msgstr[1] "{0} je offline v síti {1} a {2} dalších sítí"
 msgstr[2] "{0} je offline v síti {1} a {2} dalších sítí"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:611
+#: ../src/TextStrings.cs:631
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} se připojil do sítě {1} a {2} další sítě"
@@ -808,7 +849,7 @@ msgstr[1] "{0} se připojil do sítě {1} a {2} dalších sítí"
 msgstr[2] "{0} se připojil do sítě {1} a {2} dalších sítí"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: ../src/TextStrings.cs:619
+#: ../src/TextStrings.cs:639
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} opustil síť {1} a {2} další síť"
@@ -940,9 +981,6 @@ msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
 #~ msgid "_Run"
 #~ msgstr "_Spustit"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Zvolit složku"
 
 #~ msgid "Connection refused."
 #~ msgstr "Spojení odmítnuto."
