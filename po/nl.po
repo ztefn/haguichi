@@ -2,16 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2013-02-11 07:58+0000\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-05-02 22:42+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-02-13 19:00+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-05-02 22:44+0000\n"
+"X-Generator: Launchpad (build 16598)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -386,46 +386,44 @@ msgid "Account not found"
 msgstr "Account niet gevonden"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "_Configureren"
+msgstr "_Configuratie"
 
 #: ../src/TextStrings.cs:476
-#, fuzzy
 msgid "_Open Folder"
-msgstr "Map kiezen"
+msgstr "Map _openen"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "Reservekopie _maken..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Reservekopie maken"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "Reservekopie _terugzetten..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Reservekopie terugzetten"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "_Terugzetten"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Kon de reservekopie niet terugzetten"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Het archief bevat niet de verwachte bestanden."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Alle ondersteunde archieven"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -554,7 +552,8 @@ msgstr ""
 "het netwerk ‘{1}’ wilt verwijderen?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Indien toegestaan kunnen verwijderde leden op een later moment opnieuw tot "
 "het netwerk toetreden."
@@ -934,6 +933,9 @@ msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "U bent niet de eigenaar van netwerk '{0}'."
+
+#~ msgid "Choose Folder"
+#~ msgstr "Map kiezen"
 
 #~ msgid "_Offline Members"
 #~ msgstr "_Offline leden tonen"
