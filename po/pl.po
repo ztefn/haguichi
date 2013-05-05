@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2013-02-16 13:40+0000\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-05-05 00:19+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2013-02-16 18:00+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-05-05 12:01+0000\n"
+"X-Generator: Launchpad (build 16598)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -172,7 +172,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: ../src/TextStrings.cs:410
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: ../src/TextStrings.cs:411
 msgid "Hamachi version {0} is obsolete"
@@ -369,7 +370,8 @@ msgstr "Dołącz do konta"
 
 #: ../src/TextStrings.cs:469
 msgid "Please enter the account you want to attach this client to."
-msgstr "Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
+msgstr ""
+"Proszę wpisać nazwę konta, do którego ma zostać dołączony ten klient."
 
 #: ../src/TextStrings.cs:470
 msgid "_Include all networks created by this client"
@@ -388,46 +390,44 @@ msgid "Account not found"
 msgstr "Nie odnaleziono konta"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "Sk_onfiguruj"
+msgstr "Konfig_uracja"
 
 #: ../src/TextStrings.cs:476
-#, fuzzy
 msgid "_Open Folder"
-msgstr "Wybór katalogu"
+msgstr "_Otwórz katalog"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "Zapisz _kopię zapasową..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Zapisz kopię zapasową"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "P_rzywróć z kopii zapasowej..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Przywróć z kopii zapasowej"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "P_rzywróć"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Nie można przywrócić konfiguracji"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Archiwum nie zawiera oczekiwanych plików."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Wszystkie obsługiwane archiwa"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -556,7 +556,8 @@ msgstr ""
 "z sieci \"{1}\"?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jeśli zostanie przyjęte, to wyrzuceni członkowie mogą ponownie dołączyć do "
 "sieci w dowolnym czasie."
@@ -697,11 +698,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: ../src/TextStrings.cs:560
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: ../src/TextStrings.cs:561
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: ../src/TextStrings.cs:563
 msgid "Error connecting"
@@ -946,6 +949,9 @@ msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
 
 #~ msgid "Are you sure you want to leave network '{0}'?"
 #~ msgstr "Na pewno opuścić sieć \"{0}\"?"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Wybór katalogu"
 
 #~ msgid "_Account data folder:"
 #~ msgstr "K_atalog danych konta:"
