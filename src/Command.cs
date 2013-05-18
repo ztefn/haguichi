@@ -28,9 +28,10 @@ public static class Command
     private static int timeout;
     private static bool inProgress = false;
     
-    public static string SudoArgs  = "";
-    public static string SudoStart = "-- ";
-    public static string SudoEnd   = "";
+    public static string Sudo;
+    public static string SudoArgs;
+    public static string SudoStart;
+    public static string SudoEnd;
     
     public static string Terminal;
     public static string FileManager;
@@ -41,7 +42,11 @@ public static class Command
     {
         
         SetTimeout ();
-        DetermineCommands ();
+        
+        DetermineSudo ();
+        DetermineTerminal ();
+        DetermineFileManager ();
+        DetermineRemoteDesktop ();
         
     }
     
@@ -62,20 +67,11 @@ public static class Command
     }
     
     
-    public static void DetermineCommands ()
+    public static void DetermineSudo ()
     {
         
-        Thread sudoThread = new Thread ( DetermineSudoThread );
-        sudoThread.Start ();
-        
-        Thread terminalThread = new Thread ( DetermineTerminalThread );
-        terminalThread.Start ();
-        
-        Thread fileManagerThread = new Thread ( DetermineFileManagerThread );
-        fileManagerThread.Start ();
-        
-        Thread remoteDesktopThread = new Thread ( DetermineRemoteDesktopThread );
-        remoteDesktopThread.Start ();
+        Thread thread = new Thread ( DetermineSudoThread );
+        thread.Start ();
         
     }
     
@@ -83,59 +79,55 @@ public static class Command
     private static void DetermineSudoThread ()
     {
         
-        string sudo    = "";
-        string curSudo = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
+        Sudo      = "";
+        SudoArgs  = "";
+        SudoStart = "-- ";
+        SudoEnd   = "";
         
-        if ( Exists ( curSudo ) )
+        string sudoCommand     = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
+        string [] sudoCommands = { "pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "beesu", "sudo" };
+        
+        if ( ( Array.Exists ( sudoCommands, delegate ( string s ) { return s.Equals ( sudoCommand ); } ) ) &&
+             ( Exists ( sudoCommand ) ) )
         {
-            sudo = curSudo;
+            Sudo = sudoCommand;
         }
-        else if ( Exists ( "gksudo" ) )
+        else
         {
-            sudo = "gksudo";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "gksu" ) )
-        {
-            sudo = "gksu";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "gnomesu" ) )
-        {
-            sudo = "gnomesu";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "kdesudo" ) )
-        {
-            sudo = "kdesudo";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "kdesu" ) )
-        {
-            sudo = "kdesu";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "beesu" ) )
-        {
-            sudo = "beesu";
-            Config.Client.Set ( Config.Settings.CommandForSuperUser, sudo );
-        }
-        else if ( Exists ( "sudo" ) )
-        {
-            sudo = "sudo";
+            foreach ( string c in sudoCommands )
+            {
+                if ( ( Sudo == "" ) &&
+                     ( Exists ( c ) ) )
+                {
+                    Sudo = c;
+                }
+            }
         }
         
-        if ( sudo.StartsWith ( "gksu" ) )
+        if ( Sudo == "pkexec" )
         {
-            SudoArgs = "--sudo-mode -D \"LogMeIn Hamachi\" ";
+            SudoStart = "";
         }
-        else if ( sudo == "beesu" )
+        else if ( Sudo.StartsWith ( "gksu" ) )
+        {
+            SudoArgs = "--sudo-mode -D \"" + TextStrings.appName + "\" ";
+        }
+        else if ( Sudo == "beesu" )
         {
             SudoStart = "-c '";
             SudoEnd   = "'";
         }
         
-        Debug.Log ( Debug.Domain.Environment, "Command.DetermineSudoThread", "Command for sudo: " + sudo );
+        Debug.Log ( Debug.Domain.Environment, "Command.DetermineSudoThread", "Command for sudo: " + Sudo );
+        
+    }
+    
+    
+    public static void DetermineTerminal ()
+    {
+        
+        Thread thread = new Thread ( DetermineTerminalThread );
+        thread.Start ();
         
     }
     
@@ -175,6 +167,15 @@ public static class Command
     }
     
     
+    public static void DetermineFileManager ()
+    {
+        
+        Thread thread = new Thread ( DetermineFileManagerThread );
+        thread.Start ();
+        
+    }
+    
+    
     private static void DetermineFileManagerThread ()
     {
         
@@ -206,6 +207,15 @@ public static class Command
         }
         
         Debug.Log ( Debug.Domain.Environment, "Command.DetermineFileManagerThread", "Command for file manager: " + FileManager );
+        
+    }
+    
+    
+    public static void DetermineRemoteDesktop ()
+    {
+        
+        Thread thread = new Thread ( DetermineRemoteDesktopThread );
+        thread.Start ();
         
     }
     

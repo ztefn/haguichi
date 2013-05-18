@@ -45,7 +45,7 @@ namespace Config
         public static Key UpdateNetworkList                 = new Key ( "behavior/update_network_list", true );
         public static Key StartInTray                       = new Key ( "behavior/start_in_tray", false );
         public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
-        public static Key CommandForSuperUser               = new Key ( "commands/super_user", "gksudo" );
+        public static Key CommandForSuperUser               = new Key ( "commands/super_user", "auto" );
         public static Key Nickname                          = new Key ( "config/nickname", Environment.UserName );
         public static Key Protocol                          = new Key ( "config/protocol", "both" );
         public static Key CommandTimeout                    = new Key ( "config/command_timeout", 60.0 );

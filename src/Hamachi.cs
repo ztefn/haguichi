@@ -22,6 +22,7 @@ using System;
 using System.Collections;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 
 public static class Hamachi
@@ -161,7 +162,7 @@ public static class Hamachi
     public static void Configure ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> " + DataPath + "/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart; sleep 1\"" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> " + DataPath + "/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart; sleep 1\"" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
         
     }
@@ -170,8 +171,10 @@ public static class Hamachi
     public static string Start ()
     {
         
-        string output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi start" + Command.SudoEnd );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );
+        
+        Thread.Sleep ( 1000 );
         
         return output;
         
@@ -836,7 +839,7 @@ public static class Hamachi
         {
             GlobalEvents.StopHamachi ();
             
-            output = Command.ReturnOutput ( ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser ), Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi stop; sleep 1; rm " + Hamachi.DataPath + "/*; tar -xavf '" + filename + "' -C /; " + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
+            output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi stop; sleep 1; rm " + Hamachi.DataPath + "/*; tar -xavf '" + filename + "' -C /; " + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
             Debug.Log ( Debug.Domain.Info, "Hamachi.RestoreBackup", output );
             
             Controller.Init ();

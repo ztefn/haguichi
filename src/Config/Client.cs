@@ -217,6 +217,11 @@ namespace Config
                     Command.SetTimeout ();
                 }
                 
+                if ( key.Contains ( Config.Settings.CommandForSuperUser.KeyName ) )
+                {
+                    Command.DetermineSudo ();
+                }
+                
             }
             catch
             {
