@@ -24,10 +24,10 @@ using GConf;
 
 namespace Config
 {
-
+    
     public class Key
     {
-    
+        
         public readonly string KeyName;
         public readonly object DefaultValue;
         public object Value;
@@ -141,7 +141,7 @@ namespace Config
                 if ( ( Config.Settings.DemoMode ) &&
                      ( ( bool ) Value ) )
                 {
-                    new Notify ( TextStrings.notifyConnectionLost, "", MainWindow.appIcons [4] );
+                    new Notify ( TextStrings.notifyConnectionLost, "" );
                 }
             }
             else if ( key == Config.Settings.NotifyOnMemberJoin.KeyName )

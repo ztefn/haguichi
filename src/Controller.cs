@@ -45,16 +45,12 @@ public static class Controller
     private static ArrayList oNetworksList;
     private static ArrayList nNetworksList;
     
-    private static Gdk.Pixbuf notifyIcon;
-    
     
     public static void Init ()
     {
         
         MainWindow.messageBar.Hide ();
         MainWindow.menuBar.SetConfig ();
-        
-        notifyIcon = MainWindow.appIcons [4];
         
         oNetworksList = new ArrayList ();
         nNetworksList = new ArrayList ();
@@ -572,7 +568,7 @@ public static class Controller
             
             if ( ( bool ) Config.Settings.NotifyOnConnectionLoss.Value )
             {
-                new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
+                new Notify ( TextStrings.notifyConnectionLost, "" );
             }
             
             GlobalEvents.ConnectionStopped ();
@@ -853,7 +849,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            new Notify ( TextStrings.notifyMemberJoinedHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberJoinedHeading, body );
         }
         
     }
@@ -883,7 +879,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            new Notify ( TextStrings.notifyMemberLeftHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberLeftHeading, body );
         }
         
     }
@@ -913,7 +909,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            new Notify ( TextStrings.notifyMemberOnlineHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberOnlineHeading, body );
         }
         
     }
@@ -943,7 +939,7 @@ public static class Controller
             }
             
             string body = String.Format ( message, nick, network, more );
-            new Notify ( TextStrings.notifyMemberOfflineHeading, body, notifyIcon );
+            new Notify ( TextStrings.notifyMemberOfflineHeading, body );
         }
         
     }

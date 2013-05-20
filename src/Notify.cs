@@ -29,19 +29,10 @@ public class Notify
     private Notification notification;
     
     
-    public Notify ( string summary, string body, string icon )
+    public Notify ( string summary, string body )
     {
         
-        notification = new Notification ( summary, body, icon );
-        notification.Show ();
-        
-    }
-    
-    
-    public Notify ( string summary, string body, Pixbuf icon )
-    {
-        
-        notification = new Notification ( summary, body, icon );
+        notification = new Notification ( summary, body, MainWindow.appIcons [4] );
         notification.Show ();
         
     }

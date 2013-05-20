@@ -251,7 +251,7 @@ public class MainWindow
         
         // Getting and setting window size and position values when changed (only in normal window state)
         
-        if ( window.GdkWindow.State == 0 ) 
+        if ( window.GdkWindow.State == 0 )
         {
             window.GetSize ( out width, out height );
             window.GetPosition ( out x, out y );
