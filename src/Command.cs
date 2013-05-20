@@ -54,12 +54,12 @@ public static class Command
     public static void SetTimeout ()
     {
         
-        double dTimeout = ( double ) Config.Client.Get ( Config.Settings.CommandTimeout );
+        double dTimeout = ( double ) Config.Settings.CommandTimeout.Value;
         
         if ( dTimeout < 30.0 )
         {
             dTimeout = 60.0;
-            Config.Client.Set ( Config.Settings.CommandTimeout, dTimeout );
+            Config.Settings.CommandTimeout.SetValue ( dTimeout );
         }
         
         timeout = ( int ) dTimeout;
@@ -84,7 +84,7 @@ public static class Command
         SudoStart = "-- ";
         SudoEnd   = "";
         
-        string sudoCommand     = ( string ) Config.Client.Get ( Config.Settings.CommandForSuperUser );
+        string sudoCommand     = ( string ) Config.Settings.CommandForSuperUser.Value;
         string [] sudoCommands = { "pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "beesu", "sudo" };
         
         if ( ( Array.Exists ( sudoCommands, delegate ( string s ) { return s.Equals ( sudoCommand ); } ) ) &&
@@ -417,7 +417,7 @@ public static class Command
     {
         
         string [] command  = new string [] { "" };
-        string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
+        string [] commands = ( string [] ) Config.Settings.CustomCommands.Value;
         
         foreach ( string c in commands )
         {

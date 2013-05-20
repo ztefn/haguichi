@@ -28,7 +28,7 @@ namespace Config
     {
         
         public static string LocalePath                     = AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
-        public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower ();
+        public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower () + "/";
         
         public static bool Debugging                        = false;
         public static bool DemoMode                         = false;

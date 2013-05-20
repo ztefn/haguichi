@@ -37,6 +37,7 @@ public class MainWindow
     public  static Widgets.MessageBar messageBar;
     
     private static Window window;
+    private static int x, y, width, height;
     
     public  static NetworkView networkView;
 
@@ -126,10 +127,10 @@ public class MainWindow
         connectButton.Clicked += GlobalEvents.StartHamachi;
         
         autoconnectCheckbox = new CheckButton ( TextStrings.connectAutomatically );
-        autoconnectCheckbox.Active = ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup );
+        autoconnectCheckbox.Active = ( bool ) Config.Settings.ConnectOnStartup.Value;
         autoconnectCheckbox.Toggled += delegate
         {
-            Config.Client.Set ( Config.Settings.ConnectOnStartup, autoconnectCheckbox.Active );       
+            Config.Settings.ConnectOnStartup.SetValue ( autoconnectCheckbox.Active );       
         };
         
         
@@ -190,8 +191,8 @@ public class MainWindow
         window.ConfigureEvent += OnMoveResize;
         window.DeleteEvent += OnWinDelete;
 
-        window.SetDefaultSize ( ( int ) Config.Client.Get ( Config.Settings.WinWidth ), ( int ) Config.Client.Get ( Config.Settings.WinHeight ) );
-        window.Move ( ( int ) Config.Client.Get ( Config.Settings.WinX ), ( int ) Config.Client.Get ( Config.Settings.WinY ) );
+        window.SetDefaultSize ( ( int ) Config.Settings.WinWidth.Value, ( int ) Config.Settings.WinHeight.Value );
+        window.Move ( ( int ) Config.Settings.WinX.Value, ( int ) Config.Settings.WinY.Value );
         window.AllowShrink = true;
         window.IconList = appIcons;
         window.Add ( mainBox );
@@ -201,13 +202,13 @@ public class MainWindow
         
         connectButton.GrabFocus ();
         
-        statusBar.Visible = ( bool ) Config.Client.Get ( Config.Settings.ShowStatusbar );
+        statusBar.Visible = ( bool ) Config.Settings.ShowStatusbar.Value;
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) )
+        if ( ( bool ) Config.Settings.ShowTrayIcon.Value )
         {
             ShowTrayIcon ( true );
             
-            if ( ( bool ) Config.Client.Get ( Config.Settings.StartInTray ) )
+            if ( ( bool ) Config.Settings.StartInTray.Value )
             {
                 window.Hide ();
                 
@@ -251,17 +252,21 @@ public class MainWindow
         // Getting and setting window size and position values when changed (only in normal window state)
         
         if ( window.GdkWindow.State == 0 ) 
-        {    
-            int x, y, width, height;
-            
+        {
             window.GetSize ( out width, out height );
             window.GetPosition ( out x, out y );
-            
-            Config.Client.Set ( Config.Settings.WinX, x );
-            Config.Client.Set ( Config.Settings.WinY, y );
-            Config.Client.Set ( Config.Settings.WinWidth, width );
-            Config.Client.Set ( Config.Settings.WinHeight, height );
         }
+        
+    }
+    
+    
+    public static void SaveGeometry ()
+    {
+        
+        Config.Settings.WinX.SetValue ( x );
+        Config.Settings.WinY.SetValue ( y );
+        Config.Settings.WinWidth.SetValue ( width );
+        Config.Settings.WinHeight.SetValue ( height );
         
     }
     
@@ -298,7 +303,7 @@ public class MainWindow
     private void OnWinDelete ( object obj, DeleteEventArgs args )
     {
         
-        if ( !( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) )
+        if ( !( bool ) Config.Settings.ShowTrayIcon.Value )
         {
             GlobalEvents.QuitApp ( obj, args );
         }
@@ -395,8 +400,8 @@ public class MainWindow
         /*
          * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
          */
-        int x = ( int ) Config.Client.Get ( Config.Settings.WinX );
-        int y = ( int ) Config.Client.Get ( Config.Settings.WinY );
+        int x = ( int ) Config.Settings.WinX.Value;
+        int y = ( int ) Config.Settings.WinY.Value;
         
         window.Present ();
         
@@ -449,6 +454,8 @@ public class MainWindow
     
     public static void Hide ()
     {
+        
+        SaveGeometry ();
         
         window.Hide ();
         

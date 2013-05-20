@@ -72,7 +72,7 @@ public static class Controller
         
         if ( lastStatus >= 6 )
         {
-            restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+            restoreConnection = ( bool ) Config.Settings.ReconnectOnConnectionLoss.Value;
             
             MainWindow.SetMode ( "Connected" );
             
@@ -80,13 +80,13 @@ public static class Controller
         }
         else if ( lastStatus >= 5 )
         {
-            restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+            restoreConnection = ( bool ) Config.Settings.ReconnectOnConnectionLoss.Value;
             
             MainWindow.SetMode ( "Connecting" );
             GoConnect ();
         }
         else if ( ( lastStatus >= 3 ) &&
-                  ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+                  ( ( bool ) Config.Settings.ConnectOnStartup.Value ) )
         {
             restoreConnection = true;
             
@@ -94,7 +94,7 @@ public static class Controller
             GoConnect ();
         }
         else if ( ( lastStatus >= 2 ) &&
-                  ( ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup ) ) )
+                  ( ( bool ) Config.Settings.ConnectOnStartup.Value ) )
         {
             restoreConnection = true;
             
@@ -570,7 +570,7 @@ public static class Controller
             
             Debug.Log ( Debug.Domain.Info, "Controller.UpdateList", "Hamachi connection lost." );
             
-            if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss ) )
+            if ( ( bool ) Config.Settings.NotifyOnConnectionLoss.Value )
             {
                 new Notify ( TextStrings.notifyConnectionLost, "", notifyIcon );
             }
@@ -775,7 +775,7 @@ public static class Controller
         
         Debug.Log ( Debug.Domain.Info, "Controller.RestoreConnectionCycle", "Trying to reconnect..." );
         
-        restoreCountdown = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.ReconnectInterval ) );
+        restoreCountdown = ( int ) ( ( double ) Config.Settings.ReconnectInterval.Value );
         MainWindow.SetMode ( "Countdown" );
         
         uint interval = ( uint ) ( 1000 );
@@ -812,9 +812,9 @@ public static class Controller
         
         continueUpdate = true;
         
-        uint interval = ( uint ) ( 1000 * ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
+        uint interval = ( uint ) ( 1000 * ( double ) Config.Settings.UpdateInterval.Value );
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList ) &&
+        if ( ( bool ) Config.Settings.UpdateNetworkList.Value &&
              ( interval > 0 ) )
         {
             GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( UpdateConnectionTimeout ) );
@@ -844,7 +844,7 @@ public static class Controller
     public static void NotifyMemberJoined ( string nick, string network, int more )
     {
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin ) )
+        if ( ( bool ) Config.Settings.NotifyOnMemberJoin.Value )
         {
             string message = TextStrings.notifyMemberJoinedMessage;
             if ( more > 0 )
@@ -874,7 +874,7 @@ public static class Controller
     public static void NotifyMemberLeft ( string nick, string network, int more )
     {
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave ) )
+        if ( ( bool ) Config.Settings.NotifyOnMemberLeave.Value )
         {
             string message = TextStrings.notifyMemberLeftMessage;
             if ( more > 0 )
@@ -904,7 +904,7 @@ public static class Controller
     public static void NotifyMemberOnline ( string nick, string network, int more )
     {
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline ) )
+        if ( ( bool ) Config.Settings.NotifyOnMemberOnline.Value )
         {
             string message = TextStrings.notifyMemberOnlineMessage;
             if ( more > 0 )
@@ -934,7 +934,7 @@ public static class Controller
     public static void NotifyMemberOffline ( string nick, string network, int more )
     {
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline ) )
+        if ( ( bool ) Config.Settings.NotifyOnMemberOffline.Value )
         {
             string message = TextStrings.notifyMemberOfflineMessage;
             if ( more > 0 )

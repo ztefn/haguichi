@@ -313,7 +313,6 @@
     <Compile Include="src\PanelIcon.cs" />
     <Compile Include="src\Status.cs" />
     <Compile Include="src\TextStrings.cs" />
-    <Compile Include="src\Config\Client.cs" />
     <Compile Include="src\Config\Key.cs" />
     <Compile Include="src\Config\Settings.cs" />
     <Compile Include="src\Dialogs\About.cs" />

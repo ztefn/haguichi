@@ -284,25 +284,12 @@ public class CommandsEditor : VBox
         
         if ( dlg.response == "Ok" )
         {
-            Config.Client.Set ( Config.Settings.CustomCommands, Config.Settings.DefaultCommands );
+            Config.Settings.CustomCommands.SetValue ( Config.Settings.DefaultCommands );
             
-            /*
-             * Giving GConf some time to update before we refill the list
-             */
-            GLib.Timeout.Add ( 100, new GLib.TimeoutHandler ( FillAfterTimeout ) );
+            store.Clear ();
+            Fill ();
+            UpdateCommands ();
         }
-        
-    }
-    
-    
-    private bool FillAfterTimeout ()
-    {
-        
-        store.Clear ();
-        Fill ();
-        UpdateCommands ();
-        
-        return false;
         
     }
     
@@ -456,7 +443,7 @@ public class CommandsEditor : VBox
     public void Fill ()
     {
         
-        string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
+        string [] commands = ( string [] ) Config.Settings.CustomCommands.Value;
         
         string [] legacyCommands1 = { "true;true;folder-remote;_Browse Shares;nautilus smb://%A/",
                                       "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;vinagre %A",
@@ -551,14 +538,9 @@ public class CommandsEditor : VBox
         
         SetButtonSensitivity ();
         
-        string [] commands = ComposeCommandsString ();
+        Config.Settings.CustomCommands.SetValue ( ComposeCommandsString () );
         
-        Config.Client.Set ( Config.Settings.CustomCommands, commands );
-        
-        /*
-         * Giving GConf some time to update before we change the menu
-         */
-        GLib.Timeout.Add ( 100, new GLib.TimeoutHandler ( UpdatePopupMenu ) );
+        MainWindow.networkView.GeneratePopupMenus ();
         
     }
     

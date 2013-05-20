@@ -80,60 +80,60 @@ namespace Dialogs
             
             
             showTrayIcon = new CheckButton ( TextStrings.checkboxShowTrayIcon );
-            showTrayIcon.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon );
+            showTrayIcon.Active = ( bool ) Config.Settings.ShowTrayIcon.Value;
             showTrayIcon.Toggled += delegate
             {
                 bool active = showTrayIcon.Active;
                 
-                Config.Client.Set ( Config.Settings.ShowTrayIcon, active );
+                Config.Settings.ShowTrayIcon.SetValue ( active );
                 MainWindow.ShowTrayIcon ( active );
                 
                 startInTray.Sensitive = active;
             };
             
             startInTray = new CheckButton ( TextStrings.checkboxStartInTray );
-            startInTray.Active = ( bool ) Config.Client.Get ( Config.Settings.StartInTray );
+            startInTray.Active = ( bool ) Config.Settings.StartInTray.Value;
             startInTray.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.StartInTray, startInTray.Active );
+                Config.Settings.StartInTray.SetValue ( startInTray.Active );
             };
             
             IndentHBox hbox1 = new IndentHBox ();
             hbox1.AddWidget ( startInTray );
             
             notifyOnConnectionLoss = new CheckButton ( TextStrings.checkboxNotifyConnectionLost );
-            notifyOnConnectionLoss.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnConnectionLoss );
+            notifyOnConnectionLoss.Active = ( bool ) Config.Settings.NotifyOnConnectionLoss.Value;
             notifyOnConnectionLoss.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.NotifyOnConnectionLoss, notifyOnConnectionLoss.Active );
+                Config.Settings.NotifyOnConnectionLoss.SetValue ( notifyOnConnectionLoss.Active );
             };
             
             notifyOnMemberJoin = new CheckButton ( TextStrings.checkboxNotifyMemberJoin );
-            notifyOnMemberJoin.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberJoin );
+            notifyOnMemberJoin.Active = ( bool ) Config.Settings.NotifyOnMemberJoin.Value;
             notifyOnMemberJoin.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.NotifyOnMemberJoin, notifyOnMemberJoin.Active );
+                Config.Settings.NotifyOnMemberJoin.SetValue ( notifyOnMemberJoin.Active );
             };
             
             notifyOnMemberLeave = new CheckButton ( TextStrings.checkboxNotifyMemberLeave );
-            notifyOnMemberLeave.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberLeave );
+            notifyOnMemberLeave.Active = ( bool ) Config.Settings.NotifyOnMemberLeave.Value;
             notifyOnMemberLeave.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.NotifyOnMemberLeave, notifyOnMemberLeave.Active );
+                Config.Settings.NotifyOnMemberLeave.SetValue ( notifyOnMemberLeave.Active );
             };
             
             notifyOnMemberOnline = new CheckButton ( TextStrings.checkboxNotifyMemberOnline );
-            notifyOnMemberOnline.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOnline );
+            notifyOnMemberOnline.Active = ( bool ) Config.Settings.NotifyOnMemberOnline.Value;
             notifyOnMemberOnline.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.NotifyOnMemberOnline, notifyOnMemberOnline.Active );
+                Config.Settings.NotifyOnMemberOnline.SetValue ( notifyOnMemberOnline.Active );
             };
             
             notifyOnMemberOffline = new CheckButton ( TextStrings.checkboxNotifyMemberOffline );
-            notifyOnMemberOffline.Active = ( bool ) Config.Client.Get ( Config.Settings.NotifyOnMemberOffline );
+            notifyOnMemberOffline.Active = ( bool ) Config.Settings.NotifyOnMemberOffline.Value;
             notifyOnMemberOffline.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.NotifyOnMemberOffline, notifyOnMemberOffline.Active );
+                Config.Settings.NotifyOnMemberOffline.SetValue ( notifyOnMemberOffline.Active );
             };
             
             GroupBox trayBox = new GroupBox ( TextStrings.notifyGroup );
@@ -145,7 +145,7 @@ namespace Dialogs
             trayBox.AddWidget ( notifyOnMemberOnline );
             trayBox.AddWidget ( notifyOnMemberOffline );
             
-            if ( !( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) )
+            if ( !( bool ) Config.Settings.ShowTrayIcon.Value )
             {
                 startInTray.Sensitive = false;
             }
@@ -161,10 +161,10 @@ namespace Dialogs
             commandsEditor = new CommandsEditor ();
             
             ipCombo = new ComboBox ( new string [] { TextStrings.protocolBoth, TextStrings.protocolIPv4, TextStrings.protocolIPv6 } );
-            ipCombo.Active = ( int ) Utilities.ProtocolToInt ( ( string ) Config.Client.Get ( Config.Settings.Protocol ) );
+            ipCombo.Active = ( int ) Utilities.ProtocolToInt ( ( string ) Config.Settings.Protocol.Value );
             ipCombo.Changed += delegate
             {
-                Config.Client.Set ( Config.Settings.Protocol, Utilities.ProtocolToString ( ipCombo.Active ) );            
+                Config.Settings.Protocol.SetValue ( Utilities.ProtocolToString ( ipCombo.Active ) );            
             };
             
             Label ipLabel = new Label ();
@@ -185,32 +185,32 @@ namespace Dialogs
             hamachiBox.AddWidget ( ipBox );
             
             connectOnStartup = new CheckButton ( TextStrings.connectOnStartup );
-            connectOnStartup.Active = ( bool ) Config.Client.Get ( Config.Settings.ConnectOnStartup );
+            connectOnStartup.Active = ( bool ) Config.Settings.ConnectOnStartup.Value;
             connectOnStartup.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.ConnectOnStartup, connectOnStartup.Active );       
+                Config.Settings.ConnectOnStartup.SetValue ( connectOnStartup.Active );       
             };
             
             reconnectOnConnectionLoss = new CheckButton ( TextStrings.reconnectOnConnectionLoss );
-            reconnectOnConnectionLoss.Active = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+            reconnectOnConnectionLoss.Active = ( bool ) Config.Settings.ReconnectOnConnectionLoss.Value;
             reconnectOnConnectionLoss.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.ReconnectOnConnectionLoss, reconnectOnConnectionLoss.Active );       
+                Config.Settings.ReconnectOnConnectionLoss.SetValue ( reconnectOnConnectionLoss.Active );       
             };
             
             disconnectOnQuit = new CheckButton ( TextStrings.disconnectOnQuit );
-            disconnectOnQuit.Active = ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit );
+            disconnectOnQuit.Active = ( bool ) Config.Settings.DisconnectOnQuit.Value;
             disconnectOnQuit.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.DisconnectOnQuit, disconnectOnQuit.Active );
+                Config.Settings.DisconnectOnQuit.SetValue ( disconnectOnQuit.Active );
             };
             
             intervalSpin = new SpinButton ( 0, 999, 1 );
-            intervalSpin.Sensitive = ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList );
-            intervalSpin.Value = ( int ) ( ( double ) Config.Client.Get ( Config.Settings.UpdateInterval ) );
+            intervalSpin.Sensitive = ( bool ) Config.Settings.UpdateNetworkList.Value;
+            intervalSpin.Value = ( int ) ( ( double ) Config.Settings.UpdateInterval.Value );
             intervalSpin.ValueChanged += delegate
             {
-                Config.Client.Set ( Config.Settings.UpdateInterval, ( double ) intervalSpin.Value );
+                Config.Settings.UpdateInterval.SetValue ( ( double ) intervalSpin.Value );
             };
             intervalSpin.MaxLength = 3;
             
@@ -266,6 +266,7 @@ namespace Dialogs
             bc2.Expand = false;
 
             
+            this.SetIntervalString ();
             this.VBox.Add ( vbox );
             vbox.ShowAll ();
             
@@ -298,10 +299,10 @@ namespace Dialogs
             }
             
             updateNetworkList = new CheckButton ( intervalString [0] + " " );
-            updateNetworkList.Active = ( bool ) Config.Client.Get ( Config.Settings.UpdateNetworkList );
+            updateNetworkList.Active = ( bool ) Config.Settings.UpdateNetworkList.Value;
             updateNetworkList.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.UpdateNetworkList, updateNetworkList.Active );
+                Config.Settings.UpdateNetworkList.SetValue ( updateNetworkList.Active );
                 intervalSpin.Sensitive = updateNetworkList.Active;
             };
             
@@ -317,7 +318,6 @@ namespace Dialogs
         public void Open ()
         {
             
-            this.SetIntervalString ();
             this.Show ();
             this.Present ();
             

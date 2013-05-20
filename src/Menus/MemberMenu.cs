@@ -86,7 +86,7 @@ namespace Menus
         private void AddCustomCommands ()
         {
          
-            string [] commands = ( string [] ) Config.Client.Get ( Config.Settings.CustomCommands );
+            string [] commands = ( string [] ) Config.Settings.CustomCommands.Value;
             
             foreach ( string c in commands )
             {

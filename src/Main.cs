@@ -74,13 +74,13 @@ class Haguichi
         
         Debug.Log ( Debug.Domain.Info, "Main", "Greetings, I am " + TextStrings.appName + " " + TextStrings.appVersion );
         
+        GLib.GType.Init ();
         Platform.Init ();
         
         Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );
         Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );
         
         TextStrings.Init ();
-        Config.Client.Init ();
         Command.Init ();
         
         mainWindow          = new MainWindow ();

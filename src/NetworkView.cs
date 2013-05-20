@@ -96,22 +96,22 @@ public class NetworkView : TreeView
         this.CursorChanged    += RowHandler;
         
         this.HeadersVisible    = false;
-        this.RulesHint         = ( bool ) Config.Client.Get ( Config.Settings.ShowAlternatingRowColors  );
+        this.RulesHint         = ( bool ) Config.Settings.ShowAlternatingRowColors.Value;
         
-        currentLayout = ( string ) Config.Client.Get ( Config.Settings.NetworkListLayout );
+        currentLayout = ( string ) Config.Settings.NetworkListLayout.Value;
         if ( currentLayout == "large" )
         {
-            iconCell.Width = ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge ) + 4;
+            iconCell.Width = ( int ) Config.Settings.NetworkListIconSizeLarge.Value + 4;
             
-            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateLarge );
-            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateLarge  );
+            networkTemplate = ( string ) Config.Settings.NetworkTemplateLarge.Value;
+            memberTemplate  = ( string ) Config.Settings.MemberTemplateLarge.Value;
         }
         else
         {
-            iconCell.Width = ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall ) + 4;
+            iconCell.Width = ( int ) Config.Settings.NetworkListIconSizeSmall.Value + 4;
             
-            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateSmall );
-            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateSmall  );
+            networkTemplate = ( string ) Config.Settings.NetworkTemplateSmall.Value;
+            memberTemplate  = ( string ) Config.Settings.MemberTemplateSmall.Value;
         }
         
         InitStore ();
@@ -134,7 +134,7 @@ public class NetworkView : TreeView
         filter = new TreeModelFilter ( store , null );
         filter.VisibleFunc = new Gtk.TreeModelFilterVisibleFunc ( FilterOfflineMembers );
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.ShowOfflineMembers ) )
+        if ( ( bool ) Config.Settings.ShowOfflineMembers.Value )
         {
             sortedStore = new Gtk.TreeModelSort ( store );
         }
@@ -350,7 +350,7 @@ public class NetworkView : TreeView
         }
         
         /* Go sort tree. Doing this after the tree is filled, because otherwise things get messy... */
-        GoSort ( ( string ) Config.Client.Get ( Config.Settings.SortNetworkListBy ) );
+        GoSort ( ( string ) Config.Settings.SortNetworkListBy.Value );
         
         filter.Refilter ();
         
@@ -364,11 +364,11 @@ public class NetworkView : TreeView
         
         if ( currentLayout == "large" )
         {
-            return ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge );
+            return ( int ) Config.Settings.NetworkListIconSizeLarge.Value;
         }
         else
         {
-            return ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall );
+            return ( int ) Config.Settings.NetworkListIconSizeSmall.Value;
         }
         
     }
@@ -593,7 +593,7 @@ public class NetworkView : TreeView
         
         this.Model = sortedStore;
         
-        GoSort ( ( string ) Config.Client.Get ( Config.Settings.SortNetworkListBy ) );
+        GoSort ( ( string ) Config.Settings.SortNetworkListBy.Value );
         
         CollapseOrExpandNetworks ();
         
@@ -866,7 +866,7 @@ public class NetworkView : TreeView
             
             Network network = ( Network ) sortedStore.GetValue ( iter, networkColumn );
             
-            string [] curNetworks = ( string [] ) Config.Client.Get ( Config.Settings.CollapsedNetworks );
+            string [] curNetworks = ( string [] ) Config.Settings.CollapsedNetworks.Value;
             
             ArrayList arrayList = new ArrayList ();
             foreach ( string s in curNetworks )
@@ -884,7 +884,7 @@ public class NetworkView : TreeView
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                     
-                    Config.Client.Set ( Config.Settings.CollapsedNetworks, newNetworks );
+                    Config.Settings.CollapsedNetworks.SetValue ( newNetworks );
                 }
                 
             }
@@ -898,7 +898,7 @@ public class NetworkView : TreeView
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                                                      
-                    Config.Client.Set ( Config.Settings.CollapsedNetworks, newNetworks );
+                    Config.Settings.CollapsedNetworks.SetValue ( newNetworks );
                 }
                 
             }
@@ -968,7 +968,7 @@ public class NetworkView : TreeView
     private bool IsCollapsed ( Network network )
     {
         
-        string [] collapsed = ( string [] ) Config.Client.Get ( Config.Settings.CollapsedNetworks );
+        string [] collapsed = ( string [] ) Config.Settings.CollapsedNetworks.Value;
             
         foreach ( string s in collapsed )
         {
@@ -1062,23 +1062,23 @@ public class NetworkView : TreeView
         {
             currentLayout = "large";
             
-            Config.Client.Set ( Config.Settings.NetworkListLayout, "large" );
+            Config.Settings.NetworkListLayout.SetValue ( "large" );
             
-            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateLarge );
-            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateLarge  );
+            networkTemplate = ( string ) Config.Settings.NetworkTemplateLarge.Value;
+            memberTemplate  = ( string ) Config.Settings.MemberTemplateLarge.Value;
             
-            SetNetworkListIconSize ( ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeLarge ) );
+            SetNetworkListIconSize ( ( int ) Config.Settings.NetworkListIconSizeLarge.Value );
         }
         else
         {
             currentLayout = "normal";
             
-            Config.Client.Set ( Config.Settings.NetworkListLayout, "normal" );
+            Config.Settings.NetworkListLayout.SetValue ( "normal" );
             
-            networkTemplate = ( string ) Config.Client.Get ( Config.Settings.NetworkTemplateSmall );
-            memberTemplate  = ( string ) Config.Client.Get ( Config.Settings.MemberTemplateSmall  );
+            networkTemplate = ( string ) Config.Settings.NetworkTemplateSmall.Value;
+            memberTemplate  = ( string ) Config.Settings.MemberTemplateSmall.Value;
             
-            SetNetworkListIconSize ( ( int ) Config.Client.Get ( Config.Settings.NetworkListIconSizeSmall ) );
+            SetNetworkListIconSize ( ( int ) Config.Settings.NetworkListIconSizeSmall.Value );
         }
         
     }

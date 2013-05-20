@@ -177,31 +177,31 @@ namespace Menus
             update.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F5, Gdk.ModifierType.None, AccelFlags.Visible ) );
             
             showStatusbar = new CheckMenuItem ( TextStrings.checkboxShowStatusbar );
-            showStatusbar.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowStatusbar );
+            showStatusbar.Active = ( bool ) Config.Settings.ShowStatusbar.Value;
             showStatusbar.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.ShowStatusbar, showStatusbar.Active );
+                Config.Settings.ShowStatusbar.SetValue ( showStatusbar.Active );
             };
             
             showAlternatingRowColors = new CheckMenuItem ( TextStrings.checkboxShowAlternatingRowColors );
-            showAlternatingRowColors.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowAlternatingRowColors );
+            showAlternatingRowColors.Active = ( bool ) Config.Settings.ShowAlternatingRowColors.Value;
             showAlternatingRowColors.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.ShowAlternatingRowColors, showAlternatingRowColors.Active );
+                Config.Settings.ShowAlternatingRowColors.SetValue ( showAlternatingRowColors.Active );
             };
             
             showOfflineMembers = new CheckMenuItem ( TextStrings.checkboxShowOfflineMembers );
-            showOfflineMembers.Active = ( bool ) Config.Client.Get ( Config.Settings.ShowOfflineMembers );
+            showOfflineMembers.Active = ( bool ) Config.Settings.ShowOfflineMembers.Value;
             showOfflineMembers.Toggled += delegate
             {
-                Config.Client.Set ( Config.Settings.ShowOfflineMembers, showOfflineMembers.Active );
+                Config.Settings.ShowOfflineMembers.SetValue ( showOfflineMembers.Active );
             };
             
             sortGroup = new RadioMenuItem ( "sort" );
             
             sortByName = new RadioMenuItem ( sortGroup, TextStrings.sortByName );
             sortByStatus = new RadioMenuItem ( sortGroup, TextStrings.sortByStatus );
-            if ( ( string ) Config.Client.Get( Config.Settings.SortNetworkListBy ) == "status" )
+            if ( ( string ) Config.Settings.SortNetworkListBy.Value == "status" )
             {
                 sortByStatus.Active = true;
             }
@@ -215,7 +215,7 @@ namespace Menus
             
             layoutNormal = new RadioMenuItem ( layoutGroup, TextStrings.layoutNormal );
             layoutLarge = new RadioMenuItem ( layoutGroup, TextStrings.layoutLarge );
-            if ( ( string ) Config.Client.Get( Config.Settings.NetworkListLayout ) == "large" )
+            if ( ( string ) Config.Settings.NetworkListLayout.Value == "large" )
             {
                 layoutLarge.Active = true;
             }
@@ -305,7 +305,7 @@ namespace Menus
         public void SetMode ( string mode )
         {
             
-            SetClose ( ( bool ) Config.Client.Get ( Config.Settings.ShowTrayIcon ) );
+            SetClose ( ( bool ) Config.Settings.ShowTrayIcon.Value );
             
             switch ( mode )
             {
@@ -415,11 +415,11 @@ namespace Menus
             
             if ( sortByStatus.Active )
             {
-                Config.Client.Set ( Config.Settings.SortNetworkListBy, "status" );
+                Config.Settings.SortNetworkListBy.SetValue ( "status" );
             }
             else
             {
-                Config.Client.Set ( Config.Settings.SortNetworkListBy, "name" );
+                Config.Settings.SortNetworkListBy.SetValue ( "name" );
             }
             
         }
@@ -430,11 +430,11 @@ namespace Menus
             
             if ( layoutLarge.Active )
             {
-                Config.Client.Set ( Config.Settings.NetworkListLayout, "large" );
+                Config.Settings.NetworkListLayout.SetValue ( "large" );
             }
             else
             {
-                Config.Client.Set ( Config.Settings.NetworkListLayout, "normal" );
+                Config.Settings.NetworkListLayout.SetValue ( "normal" );
             }
             
         }

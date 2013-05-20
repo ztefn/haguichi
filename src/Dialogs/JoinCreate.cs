@@ -245,7 +245,7 @@ namespace Dialogs
                 });
                 
                 Thread.Sleep ( 2000 );
-                Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
+                Hamachi.SetNick ( ( string ) Config.Settings.Nickname.Value ); // Set nick to make sure any clients in this network will see it
             }
             else if ( output.Contains ( ".. failed, network not found" ) )
             {
@@ -322,7 +322,7 @@ namespace Dialogs
                 });
                 
                 Thread.Sleep ( 2000 );
-                Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) ); // Set nick to make sure any clients in this network will see it
+                Hamachi.SetNick ( ( string ) Config.Settings.Nickname.Value ); // Set nick to make sure any clients in this network will see it
             }
             else if ( output.Contains ( "Network name must be between 4 and 64 characters long" ) )
             {

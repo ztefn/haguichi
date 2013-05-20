@@ -103,7 +103,7 @@ public class GlobalEvents
         
         ConnectionUpdated ();
         
-        string protocol = ( string ) Config.Client.Get ( Config.Settings.Protocol );
+        string protocol = ( string ) Config.Settings.Protocol.Value;
         
         if ( ( Hamachi.IpModeCapable ) &&
              ( Hamachi.IpVersion.ToLower () != protocol ) )
@@ -111,7 +111,7 @@ public class GlobalEvents
             UpdateProtocol ( protocol );
         }
         
-        Controller.restoreConnection = ( bool ) Config.Client.Get ( Config.Settings.ReconnectOnConnectionLoss );
+        Controller.restoreConnection = ( bool ) Config.Settings.ReconnectOnConnectionLoss.Value;
         Controller.numUpdateCycles ++;
         Controller.UpdateCycle ();
         
@@ -191,7 +191,7 @@ public class GlobalEvents
     {
         
         Thread.Sleep ( 2000 );
-        Hamachi.SetNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) );
+        Hamachi.SetNick ( ( string ) Config.Settings.Nickname.Value );
         
     }
     
@@ -214,7 +214,7 @@ public class GlobalEvents
         }
         else
         {
-            UpdateNick ( ( string ) Config.Client.Get ( Config.Settings.Nickname ) );
+            UpdateNick ( ( string ) Config.Settings.Nickname.Value );
         }
         
     }
@@ -255,7 +255,7 @@ public class GlobalEvents
     private static void UpdateProtocolThread ()
     {
         
-        Hamachi.SetProtocol ( ( string ) Config.Client.Get ( Config.Settings.Protocol ) );
+        Hamachi.SetProtocol ( ( string ) Config.Settings.Protocol.Value );
         
     }
     
@@ -386,7 +386,7 @@ public class GlobalEvents
             Platform.IndicatorSession.QuitApp ();
         }
         
-        if ( ( bool ) Config.Client.Get ( Config.Settings.DisconnectOnQuit ) )
+        if ( ( bool ) Config.Settings.DisconnectOnQuit.Value )
         {
             if ( Controller.lastStatus > 4 )
             {
