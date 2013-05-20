@@ -545,16 +545,6 @@ public class CommandsEditor : VBox
     }
     
     
-    private static bool UpdatePopupMenu ()
-    {
-        
-        MainWindow.networkView.GeneratePopupMenus ();
-        
-        return false;
-        
-    }
-    
-    
     private string [] ComposeCommandsString ()
     {
         
