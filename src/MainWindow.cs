@@ -130,7 +130,7 @@ public class MainWindow
         autoconnectCheckbox.Active = ( bool ) Config.Settings.ConnectOnStartup.Value;
         autoconnectCheckbox.Toggled += delegate
         {
-            Config.Settings.ConnectOnStartup.SetValue ( autoconnectCheckbox.Active );       
+            Config.Settings.ConnectOnStartup.Value = autoconnectCheckbox.Active;       
         };
         
         
@@ -263,10 +263,10 @@ public class MainWindow
     public static void SaveGeometry ()
     {
         
-        Config.Settings.WinX.SetValue ( x );
-        Config.Settings.WinY.SetValue ( y );
-        Config.Settings.WinWidth.SetValue ( width );
-        Config.Settings.WinHeight.SetValue ( height );
+        Config.Settings.WinX.Value = x;
+        Config.Settings.WinY.Value = y;
+        Config.Settings.WinWidth.Value = width;
+        Config.Settings.WinHeight.Value = height;
         
     }
     

@@ -284,7 +284,7 @@ public class CommandsEditor : VBox
         
         if ( dlg.response == "Ok" )
         {
-            Config.Settings.CustomCommands.SetValue ( Config.Settings.DefaultCommands );
+            Config.Settings.CustomCommands.Value = Config.Settings.DefaultCommands;
             
             store.Clear ();
             Fill ();
@@ -538,7 +538,7 @@ public class CommandsEditor : VBox
         
         SetButtonSensitivity ();
         
-        Config.Settings.CustomCommands.SetValue ( ComposeCommandsString () );
+        Config.Settings.CustomCommands.Value = ComposeCommandsString ();
         
         MainWindow.networkView.GeneratePopupMenus ();
         

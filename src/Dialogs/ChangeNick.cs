@@ -145,7 +145,7 @@ namespace Dialogs
             
             if ( !Config.Settings.DemoMode )
             {
-                Config.Settings.Nickname.SetValue ( this.Nick );
+                Config.Settings.Nickname.Value = this.Nick;
             }
             
             GlobalEvents.UpdateNick ( this.Nick );

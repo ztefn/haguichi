@@ -884,7 +884,7 @@ public class NetworkView : TreeView
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                     
-                    Config.Settings.CollapsedNetworks.SetValue ( newNetworks );
+                    Config.Settings.CollapsedNetworks.Value = newNetworks;
                 }
                 
             }
@@ -898,7 +898,7 @@ public class NetworkView : TreeView
                     
                     string [] newNetworks = arrayList.ToArray ( typeof ( string ) ) as string [];
                                                      
-                    Config.Settings.CollapsedNetworks.SetValue ( newNetworks );
+                    Config.Settings.CollapsedNetworks.Value = newNetworks;
                 }
                 
             }
@@ -1062,8 +1062,6 @@ public class NetworkView : TreeView
         {
             currentLayout = "large";
             
-            Config.Settings.NetworkListLayout.SetValue ( "large" );
-            
             networkTemplate = ( string ) Config.Settings.NetworkTemplateLarge.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateLarge.Value;
             
@@ -1072,8 +1070,6 @@ public class NetworkView : TreeView
         else
         {
             currentLayout = "normal";
-            
-            Config.Settings.NetworkListLayout.SetValue ( "normal" );
             
             networkTemplate = ( string ) Config.Settings.NetworkTemplateSmall.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateSmall.Value;

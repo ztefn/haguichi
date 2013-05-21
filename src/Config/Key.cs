@@ -28,11 +28,11 @@ namespace Config
     public class Key
     {
         
+        private Client client;
+        private object _value;
+        
         public readonly string KeyName;
         public readonly object DefaultValue;
-        public object Value;
-        
-        private Client client;
         
         
         public Key ( string keyName, object defaultValue )
@@ -49,12 +49,26 @@ namespace Config
         }
         
         
-        public void SetValue ( object val )
+        public object Value
+        {
+            
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = value;
+                SetValue ( value );
+            }
+            
+        }
+        
+        
+        private void SetValue ( object val )
         {
             
             Debug.Log ( Debug.Domain.Info, "Config.Key.SetValue", "Setting value for GConf key " + KeyName + "..." );
-            
-            Value = val;
             
             try
             {
@@ -68,20 +82,19 @@ namespace Config
         }
         
         
-        public void GetValue ()
+        private void GetValue ()
         {
             
             Debug.Log ( Debug.Domain.Info, "Config.Key.GetValue", "Getting value for GConf key " + KeyName + "..." );
             
             try
             {
-                Value = ( object ) client.Get ( Config.Settings.ConfPath + KeyName );
+                _value = ( object ) client.Get ( Config.Settings.ConfPath + KeyName );
             }
             catch
             {
                 Debug.Log ( Debug.Domain.Error, "Config.Key.GetValue", "Failed getting value for GConf key " + KeyName + ", falling back to default" );
-                
-                Value = DefaultValue;
+                _value = DefaultValue;
             }
             
         }
@@ -90,7 +103,7 @@ namespace Config
         private void ValueChanged ( object sender, NotifyEventArgs args )
         {
             
-            Value = args.Value;
+            _value = args.Value;
             string key = args.Key.Replace ( Config.Settings.ConfPath, "" );
             
             Debug.Log ( Debug.Domain.Info, "Config.Key.ValueChanged", "Value for GConf key " + key + " has been changed" );
@@ -106,47 +119,47 @@ namespace Config
             }
             else if ( key == Config.Settings.Nickname.KeyName )
             {
-                GlobalEvents.UpdateNick ( ( string ) Value );
+                GlobalEvents.UpdateNick ( ( string ) _value );
             }
             else if ( key == Config.Settings.Protocol.KeyName )
             {
-                GlobalEvents.UpdateProtocol ( ( string ) Value );
+                GlobalEvents.UpdateProtocol ( ( string ) _value );
             }
             else if ( key == Config.Settings.UpdateInterval.KeyName )
             {
-                Haguichi.preferencesDialog.intervalSpin.Value = ( int ) Value;
+                Haguichi.preferencesDialog.intervalSpin.Value = ( int ) _value;
                 Haguichi.preferencesDialog.SetIntervalString ();
             }
             else if ( key == Config.Settings.UpdateNetworkList.KeyName )
             {
-                Haguichi.preferencesDialog.updateNetworkList.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.updateNetworkList.Active = ( bool ) _value;
             }
             else if ( key == Config.Settings.ConnectOnStartup.KeyName )
             {
-                Haguichi.preferencesDialog.connectOnStartup.Active = ( bool ) Value;
-                MainWindow.autoconnectCheckbox.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.connectOnStartup.Active = ( bool ) _value;
+                MainWindow.autoconnectCheckbox.Active = ( bool ) _value;
             }
             else if ( key == Config.Settings.ReconnectOnConnectionLoss.KeyName )
             {
-                Haguichi.preferencesDialog.reconnectOnConnectionLoss.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.reconnectOnConnectionLoss.Active = ( bool ) _value;
             }
             else if ( key == Config.Settings.DisconnectOnQuit.KeyName )
             {
-                Haguichi.preferencesDialog.disconnectOnQuit.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.disconnectOnQuit.Active = ( bool ) _value;
             }
             else if ( key == Config.Settings.NotifyOnConnectionLoss.KeyName )
             {
-                Haguichi.preferencesDialog.notifyOnConnectionLoss.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.notifyOnConnectionLoss.Active = ( bool ) _value;
                 
                 if ( ( Config.Settings.DemoMode ) &&
-                     ( ( bool ) Value ) )
+                     ( ( bool ) _value ) )
                 {
                     new Notify ( TextStrings.notifyConnectionLost, "" );
                 }
             }
             else if ( key == Config.Settings.NotifyOnMemberJoin.KeyName )
             {
-                Haguichi.preferencesDialog.notifyOnMemberJoin.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.notifyOnMemberJoin.Active = ( bool ) _value;
                 
                 if ( Config.Settings.DemoMode )
                 {
@@ -155,7 +168,7 @@ namespace Config
             }
             else if ( key == Config.Settings.NotifyOnMemberLeave.KeyName )
             {
-                Haguichi.preferencesDialog.notifyOnMemberLeave.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.notifyOnMemberLeave.Active = ( bool ) _value;
                 
                 if ( Config.Settings.DemoMode )
                 {
@@ -164,7 +177,7 @@ namespace Config
             }
             else if ( key == Config.Settings.NotifyOnMemberOnline.KeyName )
             {
-                Haguichi.preferencesDialog.notifyOnMemberOnline.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.notifyOnMemberOnline.Active = ( bool ) _value;
                 
                 if ( Config.Settings.DemoMode )
                 {
@@ -173,7 +186,7 @@ namespace Config
             }
             else if ( key == Config.Settings.NotifyOnMemberOffline.KeyName )
             {
-                Haguichi.preferencesDialog.notifyOnMemberOffline.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.notifyOnMemberOffline.Active = ( bool ) _value;
                 
                 if ( Config.Settings.DemoMode )
                 {
@@ -182,31 +195,31 @@ namespace Config
             }
             else if ( key == Config.Settings.ShowTrayIcon.KeyName )
             {
-                Haguichi.preferencesDialog.showTrayIcon.Active = ( bool ) Value;
-                MainWindow.menuBar.SetClose ( ( bool ) Value );
+                Haguichi.preferencesDialog.showTrayIcon.Active = ( bool ) _value;
+                MainWindow.menuBar.SetClose ( ( bool ) _value );
             }
             else if ( key == Config.Settings.StartInTray.KeyName )
             {
-                Haguichi.preferencesDialog.startInTray.Active = ( bool ) Value;
+                Haguichi.preferencesDialog.startInTray.Active = ( bool ) _value;
             }
             else if ( key == Config.Settings.ShowAlternatingRowColors.KeyName )
             {
-                MainWindow.menuBar.showAlternatingRowColors.Active = ( bool ) Value;
-                MainWindow.networkView.RulesHint = ( bool ) Value;
+                MainWindow.menuBar.showAlternatingRowColors.Active = ( bool ) _value;
+                MainWindow.networkView.RulesHint = ( bool ) _value;
             }
             else if ( key == Config.Settings.ShowStatusbar.KeyName )
             {
-                MainWindow.menuBar.showStatusbar.Active = ( bool ) Value;
-                MainWindow.ShowStatusbar ( ( bool ) Value );
+                MainWindow.menuBar.showStatusbar.Active = ( bool ) _value;
+                MainWindow.ShowStatusbar ( ( bool ) _value );
             }
             else if ( key == Config.Settings.ShowOfflineMembers.KeyName )
             {
-                MainWindow.menuBar.showOfflineMembers.Active = ( bool ) Value;
-                MainWindow.ShowOfflineMembers ( ( bool ) Value );
+                MainWindow.menuBar.showOfflineMembers.Active = ( bool ) _value;
+                MainWindow.ShowOfflineMembers ( ( bool ) _value );
             }
             else if ( key == Config.Settings.SortNetworkListBy.KeyName )
             {
-                if ( ( string ) Value == "status" )
+                if ( ( string ) _value == "status" )
                 {
                     MainWindow.menuBar.sortByStatus.Active = true;
                     MainWindow.menuBar.sortByName.Active   = false;
@@ -217,11 +230,11 @@ namespace Config
                     MainWindow.menuBar.sortByName.Active   = true;
                 }
                 
-                MainWindow.networkView.GoSort ( ( string ) Value );
+                MainWindow.networkView.GoSort ( ( string ) _value );
             }
             else if ( key == Config.Settings.NetworkListLayout.KeyName )
             {
-                if ( ( string ) Value == "large" )
+                if ( ( string ) _value == "large" )
                 {
                     MainWindow.menuBar.layoutLarge.Active  = true;
                     MainWindow.menuBar.layoutNormal.Active = false;
@@ -232,7 +245,7 @@ namespace Config
                     MainWindow.menuBar.layoutNormal.Active = true;
                 }
                 
-                MainWindow.networkView.SetLayout ( ( string ) Value );
+                MainWindow.networkView.SetLayout ( ( string ) _value );
             }
             else if ( key == Config.Settings.CommandTimeout.KeyName )
             {

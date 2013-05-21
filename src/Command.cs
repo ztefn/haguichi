@@ -59,7 +59,7 @@ public static class Command
         if ( dTimeout < 30.0 )
         {
             dTimeout = 60.0;
-            Config.Settings.CommandTimeout.SetValue ( dTimeout );
+            Config.Settings.CommandTimeout.Value = dTimeout;
         }
         
         timeout = ( int ) dTimeout;

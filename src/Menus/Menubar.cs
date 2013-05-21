@@ -180,21 +180,21 @@ namespace Menus
             showStatusbar.Active = ( bool ) Config.Settings.ShowStatusbar.Value;
             showStatusbar.Toggled += delegate
             {
-                Config.Settings.ShowStatusbar.SetValue ( showStatusbar.Active );
+                Config.Settings.ShowStatusbar.Value = showStatusbar.Active;
             };
             
             showAlternatingRowColors = new CheckMenuItem ( TextStrings.checkboxShowAlternatingRowColors );
             showAlternatingRowColors.Active = ( bool ) Config.Settings.ShowAlternatingRowColors.Value;
             showAlternatingRowColors.Toggled += delegate
             {
-                Config.Settings.ShowAlternatingRowColors.SetValue ( showAlternatingRowColors.Active );
+                Config.Settings.ShowAlternatingRowColors.Value = showAlternatingRowColors.Active;
             };
             
             showOfflineMembers = new CheckMenuItem ( TextStrings.checkboxShowOfflineMembers );
             showOfflineMembers.Active = ( bool ) Config.Settings.ShowOfflineMembers.Value;
             showOfflineMembers.Toggled += delegate
             {
-                Config.Settings.ShowOfflineMembers.SetValue ( showOfflineMembers.Active );
+                Config.Settings.ShowOfflineMembers.Value = showOfflineMembers.Active;
             };
             
             sortGroup = new RadioMenuItem ( "sort" );
@@ -415,11 +415,11 @@ namespace Menus
             
             if ( sortByStatus.Active )
             {
-                Config.Settings.SortNetworkListBy.SetValue ( "status" );
+                Config.Settings.SortNetworkListBy.Value = "status";
             }
             else
             {
-                Config.Settings.SortNetworkListBy.SetValue ( "name" );
+                Config.Settings.SortNetworkListBy.Value = "name";
             }
             
         }
@@ -430,11 +430,11 @@ namespace Menus
             
             if ( layoutLarge.Active )
             {
-                Config.Settings.NetworkListLayout.SetValue ( "large" );
+                Config.Settings.NetworkListLayout.Value = "large";
             }
             else
             {
-                Config.Settings.NetworkListLayout.SetValue ( "normal" );
+                Config.Settings.NetworkListLayout.Value = "normal";
             }
             
         }
