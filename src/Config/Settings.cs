@@ -35,16 +35,14 @@ namespace Config
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
         
-        public static string [] DefaultCommands             = { "true;true;folder-remote;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4",
-                                                                "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4",
-                                                                "true;false;utilities-terminal;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4" };
-        
         public static Key ConnectOnStartup                  = new Key ( "behavior/connect_on_startup", false );
         public static Key ReconnectOnConnectionLoss         = new Key ( "behavior/reconnect_on_connection_loss", true );
         public static Key DisconnectOnQuit                  = new Key ( "behavior/disconnect_on_quit", true );
         public static Key UpdateNetworkList                 = new Key ( "behavior/update_network_list", true );
         public static Key StartInTray                       = new Key ( "behavior/start_in_tray", false );
-        public static Key CustomCommands                    = new Key ( "commands/customizable", DefaultCommands );
+        public static Key CustomCommands                    = new Key ( "commands/customizable", new string [] { "true;true;folder-remote;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4",
+                                                                                                                 "true;false;preferences-desktop-remote-desktop;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4",
+                                                                                                                 "true;false;utilities-terminal;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4" } );
         public static Key CommandForSuperUser               = new Key ( "commands/super_user", "auto" );
         public static Key Nickname                          = new Key ( "config/nickname", Environment.UserName );
         public static Key Protocol                          = new Key ( "config/protocol", "both" );

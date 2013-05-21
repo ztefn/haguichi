@@ -284,7 +284,7 @@ public class CommandsEditor : VBox
         
         if ( dlg.response == "Ok" )
         {
-            Config.Settings.CustomCommands.Value = Config.Settings.DefaultCommands;
+            Config.Settings.CustomCommands.Value = Config.Settings.CustomCommands.DefaultValue;
             
             store.Clear ();
             Fill ();
@@ -457,7 +457,7 @@ public class CommandsEditor : VBox
         if ( ( Utilities.AsString ( commands ) == Utilities.AsString ( legacyCommands1 ) ) ||
              ( Utilities.AsString ( commands ) == Utilities.AsString ( legacyCommands2 ) ) )
         {
-            commands = Config.Settings.DefaultCommands;
+            commands = ( string [] ) Config.Settings.CustomCommands.DefaultValue;
             needsUpdate = true;
         }
         
@@ -662,7 +662,7 @@ public class CommandsEditor : VBox
     private void SetButtonSensitivity ()
     {
         
-        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", Config.Settings.DefaultCommands ) )
+        if ( String.Join ( "", ComposeCommandsString () ) == String.Join ( "", ( string [] ) Config.Settings.CustomCommands.DefaultValue ) )
         {
             revertBut.Sensitive = false;
         }
