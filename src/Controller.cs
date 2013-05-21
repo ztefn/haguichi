@@ -32,7 +32,7 @@ public static class Controller
     public  static bool manualUpdate;
     public  static bool restoreConnection;
     public  static int restoreCountdown;
-    public  static int lastStatus;
+    public  static int lastStatus = -3;
     public  static int numUpdateCycles;
     private static int numWaitForInternetCycles;
     private static string startOutput;
@@ -55,7 +55,10 @@ public static class Controller
         oNetworksList = new ArrayList ();
         nNetworksList = new ArrayList ();
         
-        Hamachi.Init ();
+        if ( lastStatus != -3 )
+        {
+            Hamachi.Init ();
+        }
         
         GlobalEvents.UpdateNick ();
         GlobalEvents.SetAttach ();
@@ -191,7 +194,7 @@ public static class Controller
         
         if ( lastStatus == -2 )
         {
-            output = Hamachi.lastInfo; // Reuse last info requested by Hamachi.Init when launching to increase startup speed
+            output = Hamachi.lastInfo; // Reuse last info requested by Hamachi.Init when (re)initializing to increase startup speed
         }
         else
         {
