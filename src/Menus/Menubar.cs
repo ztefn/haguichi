@@ -319,7 +319,6 @@ namespace Menus
                     disconnect.Show ();
                     join.Sensitive = true;
                     create.Sensitive = true;
-                    info.Sensitive = true;
                     update.Sensitive = true;
                 
                     break;
@@ -330,7 +329,6 @@ namespace Menus
                     disconnect.Hide ();
                     join.Sensitive = false;
                     create.Sensitive = false;
-                    info.Sensitive = true;
                     update.Sensitive = false;
                 
                     break;
@@ -341,7 +339,6 @@ namespace Menus
                     disconnect.Hide ();
                     join.Sensitive = false;
                     create.Sensitive = false;
-                    info.Sensitive = true;
                     update.Sensitive = false;
                 
                     break;
@@ -352,7 +349,6 @@ namespace Menus
                     disconnect.Hide ();
                     join.Sensitive = false;
                     create.Sensitive = false;
-                    info.Sensitive = true;
                     update.Sensitive = false;
                 
                     break;

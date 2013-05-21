@@ -512,6 +512,8 @@ public class MainWindow
                 
             case "Connecting":
                 
+                SetMode ( "Disconnected" );
+                
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
