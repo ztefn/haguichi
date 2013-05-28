@@ -74,7 +74,6 @@ class Haguichi
         
         Debug.Log ( Debug.Domain.Info, "Main", "Greetings, I am " + TextStrings.appName + " " + TextStrings.appVersion );
         
-        GLib.GType.Init ();
         Platform.Init ();
         
         Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );

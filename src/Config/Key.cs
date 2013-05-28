@@ -41,6 +41,8 @@ namespace Config
             KeyName = keyName;
             DefaultValue = defaultValue;
             
+            GLib.GType.Init ();
+            
             client = new Client ();
             client.AddNotify ( Config.Settings.ConfPath + keyName, new NotifyEventHandler ( ValueChanged ) );
             
