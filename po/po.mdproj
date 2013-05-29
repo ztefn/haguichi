@@ -22,6 +22,7 @@
         <Translation isoCode="ru" />
         <Translation isoCode="sv" />
         <Translation isoCode="tr" />
+        <Translation isoCode="uk" />
       </translations>
     </translations>
     <packageName>haguichi</packageName>

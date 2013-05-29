@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2013-02-13 18:55+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-05-29 00:15+0000\n"
+"Last-Translator: scrawl <Unknown>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-02-13 19:00+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-05-29 18:52+0000\n"
+"X-Generator: Launchpad (build 16652)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -180,7 +180,8 @@ msgstr "Hamachi-Version {0} ist veraltet"
 
 #: ../src/TextStrings.cs:412
 msgid "Please download and install the latest Hamachi version."
-msgstr "Bitte die neueste Version von Hamachi herunterladen und installieren."
+msgstr ""
+"Bitte die neueste Version von Hamachi herunterladen und installieren."
 
 #: ../src/TextStrings.cs:413
 msgid "_Download"
@@ -390,46 +391,44 @@ msgid "Account not found"
 msgstr "Konto wurde nicht gefunden"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "_Konfigurieren"
+msgstr "Konfig_uration"
 
 #: ../src/TextStrings.cs:476
-#, fuzzy
 msgid "_Open Folder"
-msgstr "Ordner wählen"
+msgstr "_Ordner öffnen"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "Backup er_stellen..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Backup erstellen"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "Backup wiede_rherstellen..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Backup wiederherstellen"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "_Wiederherstellen"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Konfiguration konnte nicht wiederhergestellt werden"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Archiv enthält die erwarteten Dateien nicht."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Alle unterstützten Archive"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -556,7 +555,8 @@ msgstr ""
 "aus dem Netzwerk »{1}« hinauswerfen möchten?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Falls erlaubt, können hinausgeworfene Mitglieder das Netzwerk zu jeder Zeit "
 "wieder betreten."
@@ -928,6 +928,9 @@ msgstr[1] "{0} verlässt das Netzwerk {1} und {2} andere Netzwerke"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Sie sind nicht der Eigentümer des Netzwerks '{0}'"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Ordner wählen"
 
 #~ msgid "S_tatusbar"
 #~ msgstr "S_tatusleiste"

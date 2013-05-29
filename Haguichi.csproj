@@ -422,6 +422,11 @@
       <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
       <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
     </None>
+    <None Include="locale\uk\LC_MESSAGES\haguichi.mo">
+      <DeployService-Deploy>true</DeployService-Deploy>
+      <DeployService-TargetDirectoryId>CommonApplicationDataRoot</DeployService-TargetDirectoryId>
+      <DeployService-UseProjectRelativePath>true</DeployService-UseProjectRelativePath>
+    </None>
     <None Include="data\icons\hicolor\256x256\haguichi.png">
       <DeployService-Deploy>true</DeployService-Deploy>
       <DeployService-RelativeDeployPath>icons/hicolor/256x256/apps/haguichi.png</DeployService-RelativeDeployPath>

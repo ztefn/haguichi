@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2013-02-13 08:26+0000\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-05-29 14:53+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2013-02-13 19:00+0000\n"
-"X-Generator: Launchpad (build 16491)\n"
+"X-Launchpad-Export-Date: 2013-05-29 18:56+0000\n"
+"X-Generator: Launchpad (build 16652)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -344,7 +344,7 @@ msgstr "クリックしてニックネームを変更"
 
 #: ../src/TextStrings.cs:460
 msgid "Change _Password..."
-msgstr "パスワードを変更(_P)"
+msgstr "パスワードを変更(_P)..."
 
 #: ../src/TextStrings.cs:461
 msgid "Change Password"
@@ -387,50 +387,48 @@ msgid "Account not found"
 msgstr "アカウントが見つかりませんでした"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "設定(_O)"
+msgstr "設定(_u)"
 
 #: ../src/TextStrings.cs:476
-#, fuzzy
 msgid "_Open Folder"
-msgstr "フォルダを選択して下さい"
+msgstr "フォルダを開く(_O)"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "バックアップ保存(_S)..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "バックアップ保存"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "バックアップからリストア(_R)..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "バックアップからリストア"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "リストア(_R)"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "設定をリストアできませんでした"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "求めているファイルがアーカイブ内に見当たりません。"
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "サポートしている全アーカイブ"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
-msgstr "ネットワークに参加...(_J)"
+msgstr "ネットワークに参加(_J)..."
 
 #: ../src/TextStrings.cs:487
 msgid "Join Network"
@@ -454,7 +452,7 @@ msgstr "参加しています..."
 
 #: ../src/TextStrings.cs:492
 msgid "_Create Network..."
-msgstr "ネットワーク作成...(_C)"
+msgstr "ネットワーク作成(_C)..."
 
 #: ../src/TextStrings.cs:493
 msgid "Create Network"
@@ -551,10 +549,9 @@ msgid ""
 msgstr "本当にメンバー \"{0}\" を登録から抹消していいですか？"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"登録を抹消しても、そのメンバーは後でいつでもネットワークに再参加することがで"
-"きます。"
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr "登録を抹消しても、そのメンバーは後でいつでもネットワークに再参加することができます。"
 
 #: ../src/TextStrings.cs:521
 msgid "Could not delete network \"{0}\""
@@ -830,15 +827,13 @@ msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
 #: ../src/TextStrings.cs:615
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:623
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:631
@@ -928,6 +923,9 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 
 #~ msgid "_Command timeout (seconds):"
 #~ msgstr "コマンドがタイムアウトするまでの時間 (秒単位) (_C):"
+
+#~ msgid "Choose Folder"
+#~ msgstr "フォルダを選択して下さい"
 
 #~ msgid ""
 #~ "Hamachi needs to run tuncfg to be able to connect.\n"

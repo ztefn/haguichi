@@ -119,6 +119,9 @@ Svenska (sv)
 
 Türkçe (tr)
     Aytunç Yeni <aytuncyeni>
+
+Українська (uk)
+    Fedir Zinchuk <fedikw>
 ";
     
     public const  string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";

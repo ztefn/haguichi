@@ -1,4 +1,4 @@
-# Indonesian translation for haguichi
+# Ukrainian translation for haguichi
 # Copyright (c) 2012 Rosetta Contributors and Canonical Ltd 2012
 # This file is distributed under the same license as the haguichi package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2012.
@@ -8,890 +8,853 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-02 23:51+0200\n"
-"PO-Revision-Date: 2013-05-29 03:41+0000\n"
-"Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"PO-Revision-Date: 2013-05-29 16:44+0000\n"
+"Last-Translator: Fedik <Unknown>\n"
+"Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2013-05-29 18:52+0000\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2013-05-29 18:56+0000\n"
 "X-Generator: Launchpad (build 16652)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
 msgid "A graphical frontend for Hamachi."
-msgstr "A graphical frontend for Hamachi."
+msgstr "Графічна оболонка Hamachi."
 
 #. Description used in application launchers.
 #: ../src/TextStrings.cs:365
 msgid "Join and create local networks over the Internet"
-msgstr "Bergabung dan membuat jaringan lokal melalui Internet"
+msgstr "Приєднуйтесь та стоврюйте локальну мережу через Інтернет"
 
 #: ../src/TextStrings.cs:367
 msgid "_Show Haguichi"
-msgstr "_Tampilkan Haguichi"
+msgstr "_Показати Haguichi"
 
 #: ../src/TextStrings.cs:369
 msgid "Yes"
-msgstr "Ya"
+msgstr "Так"
 
 #: ../src/TextStrings.cs:370
 msgid "No"
-msgstr "Tidak"
+msgstr "Ні"
 
 #: ../src/TextStrings.cs:372
 msgid "_Hamachi output"
-msgstr "Keluaran _Hamachi"
+msgstr "_Hamachi вивід"
 
 #: ../src/TextStrings.cs:374
 msgid "IPv4 address:"
-msgstr "Alamat IPv4:"
+msgstr "Адреса IPv4:"
 
 #: ../src/TextStrings.cs:375
 msgid "IPv6 address:"
-msgstr "Alamat IPv6:"
+msgstr "Адреса IPv6:"
 
 #: ../src/TextStrings.cs:376
 msgid "ID:"
-msgstr "ID:"
+msgstr "ІД:"
 
 #: ../src/TextStrings.cs:377
 msgid "Client ID:"
-msgstr "ID Klien:"
+msgstr "ІД клієнта:"
 
 #: ../src/TextStrings.cs:378
 msgid "Network ID:"
-msgstr "ID Jaringan:"
+msgstr "ІД мережі:"
 
 #: ../src/TextStrings.cs:379
 msgid "Status:"
-msgstr "Status:"
+msgstr "Статус:"
 
 #: ../src/TextStrings.cs:380
 msgid "Tunnel:"
-msgstr "Tunnel:"
+msgstr "Тунель:"
 
 #: ../src/TextStrings.cs:381
 msgid "Connection:"
-msgstr "Koneksi:"
+msgstr "З'єднання:"
 
 #: ../src/TextStrings.cs:382
 msgid "Direct"
-msgstr "Langsung"
+msgstr "Безпосередній"
 
 #: ../src/TextStrings.cs:383
 msgid "Relayed"
-msgstr "Tidak langsung"
+msgstr "Через ретранслятор"
 
 #: ../src/TextStrings.cs:384
 msgid "Anonymous"
-msgstr "Anonim"
+msgstr "Анонімний"
 
 #: ../src/TextStrings.cs:385
 msgid "_Nickname:"
-msgstr "Nama _Panggilan:"
+msgstr "_Псевдонім:"
 
 #: ../src/TextStrings.cs:387
 msgid "_Name:"
-msgstr "_Nama:"
+msgstr "_Ім'я:"
 
 #: ../src/TextStrings.cs:388
 msgid "_Password:"
-msgstr "_Kata Sandi:"
+msgstr "_Пароль:"
 
 #: ../src/TextStrings.cs:389
 msgid "Version:"
-msgstr "Versi:"
+msgstr "Версія:"
 
 #: ../src/TextStrings.cs:391
 msgid "Offline"
-msgstr "Luring"
+msgstr "Поза мережею"
 
 #: ../src/TextStrings.cs:392
 msgid "Online"
-msgstr "Daring"
+msgstr "В мережі"
 
 #: ../src/TextStrings.cs:393
 msgid "Unreachable"
-msgstr "Tidak terjangkau"
+msgstr "Недосяжний"
 
 #: ../src/TextStrings.cs:394
 msgid "Protocol mismatch"
-msgstr "Protokol tidak sesuai"
+msgstr "Протокол не збігається"
 
 #: ../src/TextStrings.cs:395
 msgid "Conflicting address"
-msgstr "Alamat bertentangan"
+msgstr "Конфліктуючі адреси"
 
 #: ../src/TextStrings.cs:396
 msgid "Connected"
-msgstr "Terhubung"
+msgstr "З'єднано"
 
 #: ../src/TextStrings.cs:397
 msgid "Disconnected"
-msgstr "Koneksi terputus"
+msgstr "Роз’єднано"
 
 #: ../src/TextStrings.cs:398
 msgid "Connecting..."
-msgstr "Menghubungkan..."
+msgstr "З’єднання…"
 
 #: ../src/TextStrings.cs:399
 msgid "Logging in..."
-msgstr "Masuk ke sistem..."
+msgstr "Вхід..."
 
 #: ../src/TextStrings.cs:400
 msgid "Updating..."
-msgstr "Memperbarui..."
+msgstr "Оновлення..."
 
 #. Please use the same text and shortcut as the stock connect button.
 #: ../src/TextStrings.cs:402
 msgid "C_onnect (%S)"
-msgstr "M_enghubungkan (%S)"
+msgstr "З_’єднати (%S)"
 
 #: ../src/TextStrings.cs:403
 msgid "Connect a_utomatically"
-msgstr "O_tomatis terhubung"
+msgstr "З’єднати автоматично"
 
 #: ../src/TextStrings.cs:405
 msgid "Hamachi is not configured"
-msgstr "Hamachi belum di konfigurasi"
+msgstr "Hamachi не налаштовано"
 
 #: ../src/TextStrings.cs:406
 msgid "You need to configure Hamachi before you can connect."
-msgstr "Anda harus mengkonfigurasi Hamachi sebelum anda dapat terhubung"
+msgstr "Спершу потрібно налаштувати Hamachi."
 
 #: ../src/TextStrings.cs:407
 msgid "C_onfigure"
-msgstr "K_onfigurasi"
+msgstr "На_лаштувати"
 
 #: ../src/TextStrings.cs:409
 msgid "Hamachi is not installed"
-msgstr "Hamachi belum dipasang"
+msgstr "Hamachi не встановлено"
 
 #: ../src/TextStrings.cs:410
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Silahkan unduh Hamachi dan ikuti intruksi penginstallan"
+msgstr ""
+"Будь ласка, завантажте Hamachi та слідуйте інструкції зі встановлення."
 
 #: ../src/TextStrings.cs:411
 msgid "Hamachi version {0} is obsolete"
-msgstr "Hamachi versi {0} sudah tidak dapat digunakan"
+msgstr "Версія {0} Hamachi є застарілою"
 
 #: ../src/TextStrings.cs:412
 msgid "Please download and install the latest Hamachi version."
-msgstr "Silahkan Unduh dan pasang Hamachi versi terbaru."
+msgstr "Будь ласка, завантажте та встановіть останню версію Hamachi."
 
 #: ../src/TextStrings.cs:413
 msgid "_Download"
-msgstr "_Unduh"
+msgstr "_Звантажити"
 
 #: ../src/TextStrings.cs:415
 msgid "Members:"
-msgstr "Anggota:"
+msgstr "Учасники:"
 
 #: ../src/TextStrings.cs:416
 msgid "{0} online, {1} total"
-msgstr "{0} daring, {1} total"
+msgstr "{0} в мережі, {1} загалом"
 
 #: ../src/TextStrings.cs:417
 msgid "Owner:"
-msgstr "Pemilik:"
+msgstr "Власник:"
 
 #: ../src/TextStrings.cs:418
 msgid "You"
-msgstr "Anda"
+msgstr "Ви"
 
 #: ../src/TextStrings.cs:419
 msgid "Unknown"
-msgstr "Tidak Dikenal"
+msgstr "Невідомо"
 
 #: ../src/TextStrings.cs:420
 msgid "Unavailable"
-msgstr "Tidak Tersedia"
+msgstr "Недоступно"
 
 #: ../src/TextStrings.cs:421
 msgid "Awaiting approval"
-msgstr "Menunggu Persetujuan"
+msgstr "В очікуванні затвердження"
 
 #: ../src/TextStrings.cs:422
 msgid "Locked:"
-msgstr "Terkunci:"
+msgstr "Блоковано:"
 
 #: ../src/TextStrings.cs:423
 msgid "Approval:"
-msgstr "Persetujuan"
+msgstr "Підтверджено:"
 
 #: ../src/TextStrings.cs:424
 msgid "Manually"
-msgstr "Secara Manual"
+msgstr "Власноруч"
 
 #: ../src/TextStrings.cs:425
 msgid "Automatically"
-msgstr "Secara otomatis"
+msgstr "Автоматично"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr "Kapasitas:"
+msgstr "Місткість:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
-msgstr "_Klien"
+msgstr "_Клієнт"
 
 #: ../src/TextStrings.cs:429
 msgid "_Edit"
-msgstr "_Sunting"
+msgstr "_Редагувати"
 
 #: ../src/TextStrings.cs:430
 msgid "_View"
-msgstr "_Tinjau"
+msgstr "_Вигляд"
 
 #: ../src/TextStrings.cs:431
 msgid "_Help"
-msgstr "_Bantuan"
+msgstr "_Довідка"
 
 #: ../src/TextStrings.cs:433
 msgid "_Online Help"
-msgstr "_Bantuan Daring"
+msgstr "_Довідка в мережі"
 
 #: ../src/TextStrings.cs:435
 msgid "_Go Online"
-msgstr "_Kedalam Jaringan"
+msgstr "_Статус в мережі"
 
 #: ../src/TextStrings.cs:436
 msgid "_Go Offline"
-msgstr "_Keluar Jaringan"
+msgstr "_Статус поза мережею"
 
 #: ../src/TextStrings.cs:437
 msgid "_Leave"
-msgstr "_Pergi"
+msgstr "_Залишити"
 
 #: ../src/TextStrings.cs:438
 msgid "_Locked"
-msgstr "_Terkunci"
+msgstr "_Блоковано"
 
 #: ../src/TextStrings.cs:439
 msgid "_New Member Approval"
-msgstr "Persetujuan Anggota _Baru"
+msgstr "_Підтвердження нового користувача"
 
 #: ../src/TextStrings.cs:440
 msgid "_Automatically"
-msgstr "Secara _Otomatis"
+msgstr "_Автоматично"
 
 #: ../src/TextStrings.cs:441
 msgid "_Manually"
-msgstr "Secara _Manual"
+msgstr "В_ласноруч"
 
 #: ../src/TextStrings.cs:442
 msgid "_Copy Network ID"
-msgstr "_Salin ID Jaringan"
+msgstr "_Копіювати ІД Мережі"
 
 #: ../src/TextStrings.cs:444
 msgid "_Browse Shares"
-msgstr "_Menelusuri Shares"
+msgstr "_Перегланути спільне"
 
 #: ../src/TextStrings.cs:445
 msgid "_Ping"
-msgstr "_Ping"
+msgstr "_Пінг"
 
 #: ../src/TextStrings.cs:446
 msgid "_View Remote Desktop"
-msgstr "_Lihat Remote Destop"
+msgstr "_Перегляд Віддаленої Стільниці"
 
 #: ../src/TextStrings.cs:447
 msgid "_Approve"
-msgstr "_Menyetujui"
+msgstr "_Підтвердити"
 
 #: ../src/TextStrings.cs:448
 msgid "_Reject"
-msgstr "_Menolak"
+msgstr "_Відхилити"
 
 #. This action removes the selected member from the network.
 #: ../src/TextStrings.cs:449
 msgid "_Evict"
-msgstr "_Keluarkan"
+msgstr "_Виселити"
 
 #: ../src/TextStrings.cs:450
 msgid "Copy IPv_4 Address"
-msgstr "_Salin Alamat IPv_4"
+msgstr "Копіювати IPv_4 адресу"
 
 #: ../src/TextStrings.cs:451
 msgid "Copy IPv_6 Address"
-msgstr "_Salin Alamat IPv_6"
+msgstr "Копіювати IPv_6 адресу"
 
 #: ../src/TextStrings.cs:452
 msgid "_Copy Client ID"
-msgstr "_Salin ID Klien"
+msgstr "_Копіювати ІД клієнта"
 
 #: ../src/TextStrings.cs:454
 msgid "Change _Nickname..."
-msgstr "Ganti _Nama Panggilan"
+msgstr "Змінити _псевдонім..."
 
 #: ../src/TextStrings.cs:455
 msgid "Change Nickname"
-msgstr "Ganti Nama Panggilan"
+msgstr "Змінити псевдонім"
 
 #: ../src/TextStrings.cs:456
 msgid "Please enter the nickname you want to use."
-msgstr "Masukkan nama panggilan yang anda ingin gunakan"
+msgstr "Будь ласка введіть бажаний псевдонім."
 
 #: ../src/TextStrings.cs:457
 msgid "C_hange"
-msgstr "Uba_h"
+msgstr "_Змінити"
 
 #: ../src/TextStrings.cs:458
 msgid "Click to change your nickname"
-msgstr "Klik untuk merubah nama panggilan anda"
+msgstr "Натисніть щоб змінити псевдонім"
 
 #: ../src/TextStrings.cs:460
 msgid "Change _Password..."
-msgstr "Ubah_Sandi..."
+msgstr "Змінити _Пароль..."
 
 #: ../src/TextStrings.cs:461
 msgid "Change Password"
-msgstr "Ubah Sandi"
+msgstr "Змінити пароль"
 
 #: ../src/TextStrings.cs:462
 msgid "Please enter the new password for this network."
-msgstr "Silahkan masukan sandi baru untuk jaringan ini."
+msgstr "Будь ласка введіть новий пароль для цієї мережі."
 
 #: ../src/TextStrings.cs:464
 msgid "_Account:"
-msgstr "_Akun:"
+msgstr "_Обліковий запис:"
 
 #: ../src/TextStrings.cs:467
 msgid "_Attach to Account..."
-msgstr "_Lampirkan ke Akun..."
+msgstr "_Приєднати до облікового запису..."
 
 #: ../src/TextStrings.cs:468
 msgid "Attach to Account"
-msgstr "Lampirkan ke Akun"
+msgstr "Приєднати до облікового запису"
 
 #: ../src/TextStrings.cs:469
 msgid "Please enter the account you want to attach this client to."
-msgstr "Masukkan akun yang anda ingin lampirkan ke klien"
+msgstr "Будь ласка введіть назву облікового запису щоб приєднати цей клієнт."
 
 #: ../src/TextStrings.cs:470
 msgid "_Include all networks created by this client"
-msgstr "Sertakan seluruh jaringan yang dibuat oleh klien"
+msgstr "_Включно всі мережі створені цим клієнтом"
 
 #: ../src/TextStrings.cs:471
 msgid "_Attach"
-msgstr "_Melampirkan"
+msgstr "_Приєднати"
 
 #: ../src/TextStrings.cs:472
 msgid "Attaching..."
-msgstr "Melampirkan..."
+msgstr "Приєднання..."
 
 #: ../src/TextStrings.cs:473
 msgid "Account not found"
-msgstr "Akun tidak dapat ditemukan"
+msgstr "Обліковий запис не знайдено"
 
 #: ../src/TextStrings.cs:475
 msgid "Config_uration"
-msgstr "Konfig_urasi"
+msgstr "Налаштування"
 
 #: ../src/TextStrings.cs:476
 msgid "_Open Folder"
-msgstr "Buka F_older"
+msgstr "_Відкрити теку"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr "_Simpan data cadangan..."
+msgstr "_Зберегти резервну копію..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr "Simpan data cadangan"
+msgstr "Зберегти резервну копію"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr "_Kembalikan dari data cadangan..."
+msgstr "_Відновити з резервної копії..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr "Kembalikan dari data cadangan"
+msgstr "Відновити з резервної копії"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr "_Kembalikan"
+msgstr "_Відновити"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr "Tidak dapat mengembalikan konfigurasi"
+msgstr "Неможливо відновити налаштування"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr "Arsip tidak berisi file yang sesuai."
+msgstr "Архів не містить очікуваних файлів."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr "Semua arsip yang didukung"
+msgstr "Усі підтримувані архіви"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
-msgstr "_Bergabung ke dalam Jaringan..."
+msgstr "_Приєднати Мережу..."
 
 #: ../src/TextStrings.cs:487
 msgid "Join Network"
-msgstr "Bergabung ke dalam jaringan"
+msgstr "Приєднати мережу"
 
 #: ../src/TextStrings.cs:488
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to join."
 msgstr ""
-"Masukan nama dan sandi untuk \n"
-"masuk ke dalam jaringan"
+"Будь ласка, вкажіть назву та пароль\n"
+"для мережі, яку бажаєте приєднати."
 
 #: ../src/TextStrings.cs:489
 msgid "_Join"
-msgstr "_Gabung"
+msgstr "При_єднати"
 
 #: ../src/TextStrings.cs:490
 msgid "Joining..."
-msgstr "Menggabungkan..."
+msgstr "Приєднання..."
 
 #: ../src/TextStrings.cs:492
 msgid "_Create Network..."
-msgstr "_Membuat Jaringan..."
+msgstr "_Створити Мережу..."
 
 #: ../src/TextStrings.cs:493
 msgid "Create Network"
-msgstr "Buat Jaringan"
+msgstr "Створити мережу"
 
 #: ../src/TextStrings.cs:494
 msgid ""
 "Please enter the name and password for the\n"
 "network you want to create."
 msgstr ""
-"Masukan nama dan sandi untuk\n"
-"jaringan yang ingin dibuat"
+"Будь ласка, вкажіть назву та пароль\n"
+"для мережі, яку бажаєте створити."
 
 #: ../src/TextStrings.cs:495
 msgid "C_reate"
-msgstr "B_uat"
+msgstr "С_творити"
 
 #: ../src/TextStrings.cs:496
 msgid "Creating..."
-msgstr "Membuat..."
+msgstr "Створення..."
 
 #: ../src/TextStrings.cs:498
 msgid "Network not found"
-msgstr "Jaringan tidak ditemukan"
+msgstr "Мережу не знайдено"
 
 #: ../src/TextStrings.cs:499
 msgid "Invalid password"
-msgstr "Sandi tidak tepat"
+msgstr "Хибний пароль"
 
 #: ../src/TextStrings.cs:500
 msgid "Network is full"
-msgstr "Jaringan sedang penuh"
+msgstr "Мережа немає вільних місць"
 
 #: ../src/TextStrings.cs:501
 msgid "Network is locked"
-msgstr "Jaringan terkunci"
+msgstr "Мережа заблокована"
 
 #: ../src/TextStrings.cs:502
 msgid "Network already joined"
-msgstr "Sudah bergabung dalam jaringan"
+msgstr "Мережа вже приєднана"
 
 #: ../src/TextStrings.cs:503
 msgid "Unknown error"
-msgstr "Galat tidak dikenal"
+msgstr "Невідома помилка"
 
 #: ../src/TextStrings.cs:504
 msgid "Network name too short"
-msgstr "Nama jaringan terlalu pendek"
+msgstr "Занадто коротка назва мережі"
 
 #: ../src/TextStrings.cs:505
 msgid "Network name is already taken"
-msgstr "Nama jaringan sudah ada"
+msgstr "Назва мережі вже використовується"
 
 #: ../src/TextStrings.cs:507
 msgid "Join request sent"
-msgstr "Permintaan bergabung terkirim"
+msgstr "Запит на приєднання надіслано"
 
 #: ../src/TextStrings.cs:509
 msgid "Preferences"
-msgstr "Preferensi"
+msgstr "Налаштування"
 
 #: ../src/TextStrings.cs:510
 msgid "Information"
-msgstr "Informasi"
+msgstr "Інформація"
 
 #: ../src/TextStrings.cs:512
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
 msgstr ""
-"Apakah anda yakin untuk menghapus\n"
-"jaringan \"{0}\"?"
+"Впевнені, що бажаєте вилучити\n"
+"мережу \"{0}\"?"
 
 #: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
-msgstr "Jika anda menghapus jaringan, maka akan hilang secara permanen."
+msgstr "Після вилучення, мережу буде втрачено."
 
 #: ../src/TextStrings.cs:515
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
 msgstr ""
-"Apakah anda yakin untuk meninggalkan\n"
-"jaringan \"{0}\"?"
+"Впевнені, що бажаєте покинути\n"
+"мережу \"{0}\"?"
 
 #: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
-"Jika diijinkan, anda dapat bergabung kembali ke jaringan ini kapanpun."
+msgstr "Якщо обрано, то ви можете приєднатись до мережі пізніше знову."
 
 #: ../src/TextStrings.cs:518
 msgid ""
 "Are you sure you want to evict member \"{0}\"\n"
 "from network \"{1}\"?"
 msgstr ""
-"Apakah anda yakin ingin mengeluarkan anggota \"{0}\"?\n"
-"dari jaringan \"{1}\"?"
+"Впевнені, що бажаєте виселити користувача\"{0}\"\n"
+"з мережі \"{1}\"?"
 
 #: ../src/TextStrings.cs:519
 msgid ""
 "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"Jika diijinkan, anggota yang dikeluarkan dapat bergabung kembali ke jaringan "
-"ini kapanpun."
+msgstr "Якщо обрано, то користувач може приєднатись до мережі пізніше знову."
 
 #: ../src/TextStrings.cs:521
 msgid "Could not delete network \"{0}\""
-msgstr "Gagal menghapus jaringan \"{0}\""
+msgstr "Неможливо вилучити мережу \"{0}\""
 
 #: ../src/TextStrings.cs:522
 msgid "Could not leave network \"{0}\""
-msgstr "Gagal meninggalkan jaringan \"{0}\""
+msgstr "Неможливо покинути мережу \"{0}\""
 
 #: ../src/TextStrings.cs:523
 msgid "Could not evict member \"{0}\""
-msgstr "Gagal mengeluarkan anggota \"{0}\""
+msgstr "Неможливо виселити учасника \"{0}\""
 
 #: ../src/TextStrings.cs:524
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
 msgstr ""
-"Tidak dapat masuk daring dalam\n"
-"jaringan \"{0}\""
 
 #: ../src/TextStrings.cs:525
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
 msgstr ""
-"Tidak dapat pergi luring dalam\n"
-"jaringan \"{0}\""
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
-msgstr "Lihat keluaran untuk penjelasan."
+msgstr "Перегляньте вивід, для отримання детальної інформації."
 
 #: ../src/TextStrings.cs:529
 msgid "General"
-msgstr "Umum"
+msgstr "Загальне"
 
 #. In this context meaning "work environment".
 #: ../src/TextStrings.cs:530
 msgid "Desktop"
-msgstr "Destop"
+msgstr "Стільниця"
 
 #: ../src/TextStrings.cs:531
 msgid "Commands"
-msgstr "Perintah"
+msgstr "Команди"
 
 #: ../src/TextStrings.cs:533
 msgid "Notification Area"
-msgstr "Area Notifikasi"
+msgstr "Область сповіщення"
 
 #: ../src/TextStrings.cs:534
 msgid "Behavior"
-msgstr "Tingkah laku"
+msgstr "Поведінка"
 
 #: ../src/TextStrings.cs:536
 msgid "_Protocol:"
-msgstr "_Protokol:"
+msgstr "_Протокол:"
 
 #: ../src/TextStrings.cs:537
 msgid "Both IPv4 and IPv6"
-msgstr "IPv4 dan IPv6"
+msgstr "Обидві, IPv4 та IPv6"
 
 #: ../src/TextStrings.cs:538
 msgid "IPv4 only"
-msgstr "Hanya IPv4"
+msgstr "лише IPv4"
 
 #: ../src/TextStrings.cs:539
 msgid "IPv6 only"
-msgstr "Hanya IPv6"
+msgstr "лише IPv6"
 
 #: ../src/TextStrings.cs:541
 msgid "_Update Network List"
-msgstr "_Memperbarui Daftar Jaringan"
+msgstr "_Оновити список мереж"
 
 #: ../src/TextStrings.cs:542
 msgid "Show Alt_ernating Row Colors"
-msgstr "Tampilkan Warna Baris _Alternatif"
+msgstr "Показати аль_тернативні кольори для рядків"
 
 #: ../src/TextStrings.cs:543
 msgid "_Compact Layout"
-msgstr "Tata Letak _Rapat"
+msgstr "_Компактний вигляд"
 
 #: ../src/TextStrings.cs:544
 msgid "_Large Layout"
-msgstr "Tata Letak _Luas"
+msgstr "_Великикй вигляд"
 
 #: ../src/TextStrings.cs:545
 msgid "Show _Offline Members"
-msgstr "Tampilkan Anggota _Luring"
+msgstr "_Показати учасників, що поза мережею"
 
 #: ../src/TextStrings.cs:546
 msgid "Sort by _Name"
-msgstr "Urutkan Berdasar _Nama"
+msgstr "Впорядкувати за _назвою"
 
 #: ../src/TextStrings.cs:547
 msgid "Sort by _Status"
-msgstr "Urutkan berdasar _Status"
+msgstr "Впорядкувати за _статусом"
 
 #: ../src/TextStrings.cs:548
 msgid "St_atusbar"
-msgstr "Bil_ah status"
+msgstr "Рядок с_тану"
 
 #: ../src/TextStrings.cs:550
 msgid "_Show Haguichi in the notification area"
-msgstr "_Tampilkan Haguichi di area notifikasi"
+msgstr "_Показувати Haguichi в області сповіщень"
 
 #: ../src/TextStrings.cs:551
 msgid "Start Haguichi _minimized in the notification area"
-msgstr "Mulai Haguichi dengan _diminimalkan di area notifikasi"
+msgstr "_Запускати Haguichi мінімізованим в області сповщень"
 
 #: ../src/TextStrings.cs:553
 msgid "C_onnect automatically on startup"
-msgstr "T_erhubung secara otomatis pada saat startup"
+msgstr "П_риєднуватись автоматично, при старті"
 
 #: ../src/TextStrings.cs:554
 msgid "_Reconnect automatically when the connection is lost"
-msgstr "_Hubungkan kembali secara otomatis ketika koneksi terputus"
+msgstr "П_ере-підключатись автоматично, коли з'єднання втрачено"
 
 #: ../src/TextStrings.cs:555
 msgid "_Disconnect on quit"
-msgstr "_Diskonek ketika keluar"
+msgstr "_Відключатись при виході"
 
 #: ../src/TextStrings.cs:557
 msgid "Display notification when the connection is l_ost"
-msgstr "Tampilkan notifikasi koneksi ter_putus"
+msgstr "Показувати повідомлення про втрату _з'єднання"
 
 #: ../src/TextStrings.cs:558
 msgid "Display notification when a member _joins"
-msgstr "Tampilkan notifikasi ketika anggota _bergabung"
+msgstr "Показувати повідомлення коли учасник _приєднується"
 
 #: ../src/TextStrings.cs:559
 msgid "Display notification when a member _leaves"
-msgstr "Tampilkan notifikasi ketika anggota _keluar"
+msgstr "Показувати повідомлення коли учасник _від'єднується"
 
 #: ../src/TextStrings.cs:560
 msgid "Display notification when a member comes o_nline"
-msgstr "Tampilkan notifikasi ketika anggota masuk ke _daring"
+msgstr "Показувати повідомлення коли користувач стає _доступним"
 
 #: ../src/TextStrings.cs:561
 msgid "Display notification when a member goes o_ffline"
-msgstr "Tampilkan notifikasi ketika anggota keluar dari _luring"
+msgstr "Показувати повідомлення коли користувач стає _недоступним"
 
 #: ../src/TextStrings.cs:563
 msgid "Error connecting"
-msgstr "Galat menyambung"
+msgstr "Помилка з'єднання"
 
 #: ../src/TextStrings.cs:564
 msgid "Hamachi login failed"
-msgstr "Login Hamachi gagal"
+msgstr "Помилка входу Hamachi"
 
 #: ../src/TextStrings.cs:565
 msgid "No internet connection"
-msgstr "Tidak ada koneksi internet"
+msgstr "Відсутнє під'єднання до Інтернету"
 
 #: ../src/TextStrings.cs:567
 msgid "Hamachi lost connection"
-msgstr "Koneksi Hamachi putus"
+msgstr "Hamachi втратив підключення"
 
 #: ../src/TextStrings.cs:568
 msgid "Member online"
-msgstr "Anggota daring"
+msgstr "Учасники в мережі"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: ../src/TextStrings.cs:569
 msgid "{0} came online in the network {1}"
-msgstr "{0} menjadi daring di jaringan {1}"
+msgstr "{0} з’єявився в мережі {1}"
 
 #: ../src/TextStrings.cs:570
 msgid "Member offline"
-msgstr "Anggota luring"
+msgstr "Користувач відключився"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: ../src/TextStrings.cs:571
 msgid "{0} went offline in the network {1}"
-msgstr "{0} pergi luring dari jaringan {1}"
+msgstr "{0} покинув  мережу {1}"
 
 #: ../src/TextStrings.cs:572
 msgid "Member joined"
-msgstr "Anggota bergabung"
+msgstr "Користувач підключився"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
 #: ../src/TextStrings.cs:573
 msgid "{0} joined the network {1}"
-msgstr "{0} bergabung ke jaringan {1}"
+msgstr "{0} підключився до мережі {1}"
 
 #: ../src/TextStrings.cs:574
 msgid "Member left"
-msgstr "Anggota keluar"
+msgstr "Користувач покинув мережу"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
 #: ../src/TextStrings.cs:575
 msgid "{0} left the network {1}"
-msgstr "{0} meninggalkan jaringan {1}"
+msgstr "{0} покинув мережу {1}"
 
 #: ../src/TextStrings.cs:577
 msgid "A_vailable commands:"
-msgstr "Perintah yang _tersedia:"
+msgstr "Доступні команди:"
 
 #: ../src/TextStrings.cs:578
 msgid "Command"
-msgstr "Perintah"
+msgstr "Команда"
 
 #: ../src/TextStrings.cs:579
 msgid "Available"
-msgstr "Tersedia"
+msgstr "Доступно"
 
 #: ../src/TextStrings.cs:581
 msgid "Add Command"
-msgstr "Tambah Perintah"
+msgstr "Додати команду"
 
 #: ../src/TextStrings.cs:582
 msgid "Edit Command"
-msgstr "Edit perintah"
+msgstr "Змінити команду"
 
 #: ../src/TextStrings.cs:583
 msgid "_Label:"
-msgstr "_Label:"
+msgstr "_Мітка:"
 
 #: ../src/TextStrings.cs:584
 msgid "IPv_4 command:"
-msgstr "Perintah IPv_4:"
+msgstr "IPv_4 команда:"
 
 #: ../src/TextStrings.cs:585
 msgid "IPv_6 command:"
-msgstr "Perintah IPv_6:"
+msgstr "IPv_6 команда:"
 
 #: ../src/TextStrings.cs:586
 msgid "Use %A for address and %N for nickname"
-msgstr "Menggunakan %A untuk alamat dan %N untuk nama panggilan"
+msgstr "Використовувати %A для адреси та %N для псевдоніму"
 
 #: ../src/TextStrings.cs:587
 msgid "_Priority:"
-msgstr "_Prioritas:"
+msgstr "_Пріоритет:"
 
 #: ../src/TextStrings.cs:589
 msgid "Click to choose an icon"
-msgstr "Klik untuk memilih ikon"
+msgstr "Натисніть, щоб обрати іконку"
 
 #: ../src/TextStrings.cs:590
 msgid "_No Icon"
-msgstr "_Tidak ada ikon"
+msgstr "_Без іконки"
 
 #: ../src/TextStrings.cs:592
 msgid "Default"
-msgstr "Default"
+msgstr "Типово"
 
 #: ../src/TextStrings.cs:593
 msgid "_Default"
-msgstr "_Default"
+msgstr "_Типово"
 
 #: ../src/TextStrings.cs:595
 msgid "Are you sure you want to revert all changes?"
-msgstr "Apakah anda yakin untuk mengembalikan semua perubahan?"
+msgstr "Впевнені, що бажаєте скасувати всі зміни?"
 
 #: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
-msgstr ""
-"Jika anda mengembalikan semua perubahan, perintah awal akan dikembalikan."
+msgstr "Якщо ви скасуєте всі зміни, то буде відновлено всі типові команди."
 
 #: ../src/TextStrings.cs:598
 msgid "Move up"
-msgstr "Pindah ke atas"
+msgstr "Перемістити  вгору"
 
 #: ../src/TextStrings.cs:599
 msgid "Move down"
-msgstr "Pindah ke bawah"
+msgstr "Перемістити  вниз"
 
 #: ../src/TextStrings.cs:607
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
-msgstr[0] "_Perbarui daftar jaringan setiap %S _detik"
+msgstr[0] "_Оновлювати список мереж кожну %S _секунду"
+msgstr[1] "_Оновлювати список мереж кожні %S _секунди"
+msgstr[2] "_Оновлювати список мереж кожні %S _секунд"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:615
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} menjadi daring di jaringan {1} dan {2} jaringan lain"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:623
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} pergi ke luring dari jaringan {1} dan {2} jaringan lain"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:631
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} bergabung ke dalam jaringan {1} dan {2} jaringan lain"
+msgstr[0] ""
+msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:639
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} meninggalkan jaringan {1} dan {2} jaringan lain"
-
-#~ msgid "Address:"
-#~ msgstr "Alamat:"
-
-#~ msgid "Running tuncfg..."
-#~ msgstr "Menjalankan tuncfg..."
-
-#~ msgid "Starting Hamachi..."
-#~ msgstr "Memulai Hamachi..."
-
-#~ msgid "_Copy Address"
-#~ msgstr "_Salin Alamat"
-
-#~ msgid "You are not the owner of this network."
-#~ msgstr "Anda bukan pemilik jaringan ini"
-
-#~ msgid "You are the owner of this network."
-#~ msgstr "Anda adalah pemilik jaringan ini"
-
-#~ msgid "Choose Folder"
-#~ msgstr "Pilih Folder"
-
-#~ msgid "_Command:"
-#~ msgstr "_Perintah:"
+msgstr[0] ""
+msgstr[1] ""
 
 #~ msgid "Haguichi Website"
-#~ msgstr "Laman Haguichi"
+#~ msgstr "Сайт Haguichi"
 
-#~ msgid "_Account data folder:"
-#~ msgstr "Folder data _Akun:"
-
-#~ msgid "Restore the default commands"
-#~ msgstr "Kembalikan ke perintah awal"
-
-#~ msgid "Revert changes?"
-#~ msgstr "Kembalikan perubahan?"
-
-#~ msgid ""
-#~ "Are you sure you wish to revert all changes\n"
-#~ "and thereby restore the default commands?"
-#~ msgstr ""
-#~ "Anda yakin ingin mengembalikan semua perubahan\n"
-#~ "dan dengan demikian mengembalikan perintah awal?"
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Запуск Hamachi..."
