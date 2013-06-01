@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2013-05-02 23:51+0200\n"
-"PO-Revision-Date: 2013-05-29 16:44+0000\n"
+"PO-Revision-Date: 2013-06-01 20:15+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2013-05-29 18:56+0000\n"
-"X-Generator: Launchpad (build 16652)\n"
+"X-Launchpad-Export-Date: 2013-06-01 21:24+0000\n"
+"X-Generator: Launchpad (build 16660)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -574,12 +574,16 @@ msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
 msgstr ""
+"Неможливо увійти до \n"
+"мережі \"{0}\""
 
 #: ../src/TextStrings.cs:525
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
 msgstr ""
+"Неможливо покинути \n"
+"мережу \"{0}\""
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
@@ -829,29 +833,33 @@ msgstr[2] "_Оновлювати список мереж кожні %S _секу
 #: ../src/TextStrings.cs:615
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} з’явився в мережі {1} та в мережі {2}"
+msgstr[1] "{0} з’явився в мережі {1} та в {2} інших мережах"
+msgstr[2] "{0} з’явився в мережі {1} та в {2} інших мережах"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:623
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} покинув мережу {1} та в мережу {2}"
+msgstr[1] "{0} покинув мережу {1} та інші мережі {2}"
+msgstr[2] "{0} покинув мережу {1} та інші мережі {2}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:631
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} під’єднався до мережі {1} та до мережі {2}"
+msgstr[1] "{0} під’єднався до мережі {1} та до інших мереж {2}"
+msgstr[2] "{0} під’єднався до мережі {1} та до інших мереж {2}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
 #: ../src/TextStrings.cs:639
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "{0} від’єднався від мережі {1} та від мережі {2}"
+msgstr[1] "{0} від’єднався від мережі {1} та від інших мереж {2}"
+msgstr[2] "{0} від’єднався від мережі {1} та від інших мереж {2}"
 
 #~ msgid "Haguichi Website"
 #~ msgstr "Сайт Haguichi"
