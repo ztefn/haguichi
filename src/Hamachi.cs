@@ -574,6 +574,7 @@ public static class Hamachi
             output += "     * " + RandomClientId () + "   Conrad                     192.168.155.20  alias: not set                             via relay\n";
             output += "     * " + RandomClientId () + "   war59312                   192.168.155.22  alias: not set                             direct\n";
             output += "     ? " + RandomClientId () + " \n";
+            output += "       You are approaching your member limit and may soon have to upgrade your network.\n";
             output += " * [" + RandomNetworkId () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
             output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
             output += "   [" + RandomNetworkId () + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
@@ -604,13 +605,9 @@ public static class Hamachi
         string [] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetworkId = "";
         
-        Regex networkRegex;
-        Regex normalMemberRegex;
-        Regex unapprovedMemberRegex;
-        
-        networkRegex          = new Regex ( "[ ]+(?<status>.{1}) " + Regex.Escape ("[") + "(?<id>.+?)" + Regex.Escape ("]") + "([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+),)?([ ]*)(" + Regex.Escape ("[") + "(?<subnet>[0-9" + Regex.Escape (".") + "/]{9,19})" + Regex.Escape ("]") + ")?([ ]*)( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$" );
-        normalMemberRegex     = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(alias: (?<alias>[0-9" + Regex.Escape (".") + "]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f" + Regex.Escape (":") + "]+" + Regex.Escape (":") + "[0-9a-f" + Regex.Escape (":") + "]+)?([ ]*)(?<connection>direct|via relay|via server)?([ ]*)(?<transport>UDP|TCP)?([ ]*)(?<tunnel>[0-9" + Regex.Escape (".") + "]+" + Regex.Escape (":") + "[0-9]+)?([ ]*)(?<message>[ a-zA-Z]+)?$" );
-        unapprovedMemberRegex = new Regex ( "[ ]+(?<status>.{1}) (?<id>[0-9-]{11})" );
+        Regex networkRegex          = new Regex ( @"^ (?<status>.{1}) \[(?<id>.+?)\]([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+),)?([ ]*)(\[(?<subnet>[0-9\./]{9,19})\])?([ ]*)( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$" );
+        Regex normalMemberRegex     = new Regex ( @"^     (?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9\.]{7,15})?([ ]*)(alias: (?<alias>[0-9\.]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f\:]+\:[0-9a-f\:]+)?([ ]*)(?<connection>direct|via relay|via server)?([ ]*)(?<transport>UDP|TCP)?([ ]*)(?<tunnel>[0-9\.]+\:[0-9]+)?([ ]*)(?<message>[ a-zA-Z]+)?$" );
+        Regex unapprovedMemberRegex = new Regex ( @"^     \? (?<id>[0-9-]{11})([ ]*)$" );
         
         foreach ( string s in split )
         {
@@ -621,17 +618,19 @@ public static class Hamachi
                 if ( s.IndexOf ( "[" ) == 3 ) // Line contains network
                 {
                     
-                    Status status = new Status ( networkRegex.Match ( s ).Groups["status"].ToString () );
-                    string id     = networkRegex.Match ( s ).Groups["id"].ToString ();
+                    Match match = networkRegex.Match ( s );
+                    
+                    Status status = new Status ( match.Groups["status"].ToString () );
+                    string id     = match.Groups["id"].ToString ();
                     string name   = id;
-                    string owner  = networkRegex.Match ( s ).Groups["owner"].ToString ();
+                    string owner  = match.Groups["owner"].ToString ();
                     
                     int capacity;
-                    Int32.TryParse ( networkRegex.Match ( s ).Groups["capacity"].ToString (), out capacity );
+                    Int32.TryParse ( match.Groups["capacity"].ToString (), out capacity );
                     
                     try
                     {
-                        name = networkRegex.Match ( s ).Groups["name"].ToString ().TrimEnd ();
+                        name = match.Groups["name"].ToString ().TrimEnd ();
                         
                         if ( name.Length == 0 )
                         {
@@ -652,8 +651,10 @@ public static class Hamachi
                 else if ( s.IndexOf ( "?" ) == 5 ) // Line contains unapproved member
                 {
                     
-                    Status status = new Status ( unapprovedMemberRegex.Match ( s ).Groups["status"].ToString () );
-                    string client = unapprovedMemberRegex.Match ( s ).Groups["id"].ToString ();
+                    Match match = unapprovedMemberRegex.Match ( s );
+                    
+                    Status status = new Status ( "?" );
+                    string client = match.Groups["id"].ToString ();
                     string nick   = TextStrings.unknown;
                     
                     Member member = new Member ( status, curNetworkId, "", "", nick, client, "" );
@@ -667,19 +668,21 @@ public static class Hamachi
                     }
                     
                 }
-                else if ( normalMemberRegex.IsMatch ( s ) ) // Line contains normal member
+                else if ( s.IndexOf ( "-" ) == 10 ) // Line contains normal member
                 {
                     
-                    string connection = normalMemberRegex.Match ( s ).Groups["connection"].ToString ();
-                    string client     = normalMemberRegex.Match ( s ).Groups["id"].ToString ();
-                    string ipv4       = normalMemberRegex.Match ( s ).Groups["ipv4"].ToString ();
-                    string ipv6       = normalMemberRegex.Match ( s ).Groups["ipv6"].ToString ();
-                    string nick       = normalMemberRegex.Match ( s ).Groups["name"].ToString ();
-                    string alias      = normalMemberRegex.Match ( s ).Groups["alias"].ToString ();
-                    string tunnel     = normalMemberRegex.Match ( s ).Groups["tunnel"].ToString ();
-                    string message    = normalMemberRegex.Match ( s ).Groups["message"].ToString ();
+                    Match match = normalMemberRegex.Match ( s );
                     
-                    Status status = new Status ( normalMemberRegex.Match ( s ).Groups["status"].ToString (), connection, message );
+                    string connection = match.Groups["connection"].ToString ();
+                    string client     = match.Groups["id"].ToString ();
+                    string ipv4       = match.Groups["ipv4"].ToString ();
+                    string ipv6       = match.Groups["ipv6"].ToString ();
+                    string nick       = match.Groups["name"].ToString ();
+                    string alias      = match.Groups["alias"].ToString ();
+                    string tunnel     = match.Groups["tunnel"].ToString ();
+                    string message    = match.Groups["message"].ToString ();
+                    
+                    Status status = new Status ( match.Groups["status"].ToString (), connection, message );
                     
                     if ( ( nick == "" ) ||
                          ( nick == "anonymous" ) )
