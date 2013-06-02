@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2012-09-02 14:37+0000\n"
-"Last-Translator: Pierre Slamich <pierre.slamich@gmail.com>\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-06-02 19:06+0000\n"
+"Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2012-09-04 19:12+0000\n"
-"X-Generator: Launchpad (build 15901)\n"
+"X-Launchpad-Export-Date: 2013-06-02 21:04+0000\n"
+"X-Generator: Launchpad (build 16660)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -78,11 +78,11 @@ msgstr "Connexion :"
 
 #: ../src/TextStrings.cs:382
 msgid "Direct"
-msgstr ""
+msgstr "Direct"
 
 #: ../src/TextStrings.cs:383
 msgid "Relayed"
-msgstr ""
+msgstr "Relayé"
 
 #: ../src/TextStrings.cs:384
 msgid "Anonymous"
@@ -118,11 +118,11 @@ msgstr "Inaccessible"
 
 #: ../src/TextStrings.cs:394
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Protocole inadéquat"
 
 #: ../src/TextStrings.cs:395
 msgid "Conflicting address"
-msgstr ""
+msgstr "Conflit d'adresse"
 
 #: ../src/TextStrings.cs:396
 msgid "Connected"
@@ -388,45 +388,44 @@ msgid "Account not found"
 msgstr "Compte introuvable"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "C_onfigurer"
+msgstr "Config_uration"
 
 #: ../src/TextStrings.cs:476
 msgid "_Open Folder"
-msgstr ""
+msgstr "_Ouvrir un dossier"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "Enregistrer une _sauvegarde..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Enregistrer une sauvegarde"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "_Restaurer depuis une sauvegarde..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Restaurer depuis une sauvegarde"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "_Restaurer"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Impossible de restaurer la configuration"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "L'archive ne contient pas les fichiers attendus."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Toutes les archives prises en charge"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -521,26 +520,28 @@ msgid "Information"
 msgstr "Information"
 
 #: ../src/TextStrings.cs:512
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "Êtes-vous sûr de vouloir supprimer le réseau « {0} » ?"
+msgstr ""
+"Êtes-vous sûr de vouloir effacer le\n"
+"réseau « {0} » ?"
 
 #: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Si vous supprimez un réseau, il sera définitivement perdu."
 
 #: ../src/TextStrings.cs:515
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "Êtes-vous sûr de vouloir quitter le réseau « {0} » ?"
+msgstr ""
+"Êtes-vous sûr de vouloir quitter le\n"
+"réseau « {0} » ?"
 
 #: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
+msgstr "Si admis, vous pourrez rejoindre le réseau à tout moment ultérieur."
 
 #: ../src/TextStrings.cs:518
 msgid ""
@@ -551,8 +552,11 @@ msgstr ""
 "du réseau « {1} » ?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
+"Si admis, les membres expulsés peuvent rejoindre le réseau à tout moment "
+"ultérieur."
 
 #: ../src/TextStrings.cs:521
 msgid "Could not delete network \"{0}\""
@@ -567,22 +571,24 @@ msgid "Could not evict member \"{0}\""
 msgstr "Echec de l'expulsion du membre « {0} »"
 
 #: ../src/TextStrings.cs:524
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "Échec de la suppression du réseau « {0} »"
+msgstr ""
+"Impossible d'aller en ligne sur le\n"
+"réseau « {0} »"
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "Échec de la suppression du réseau « {0} »"
+msgstr ""
+"Impossible de se déconnecter dans le\n"
+"réseau « {0} »"
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
-msgstr ""
+msgstr "Voir les messages de sortie pour plus de détails."
 
 #: ../src/TextStrings.cs:529
 msgid "General"
@@ -802,13 +808,14 @@ msgid "_Default"
 msgstr "Par _défaut"
 
 #: ../src/TextStrings.cs:595
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "Êtes-vous sûr de vouloir quitter le réseau « {0} » ?"
+msgstr "Êtes-vous sûr de vouloir annuler tous les changements ?"
 
 #: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
+"Si vous annulez tous les changements, les commandes par défaut seront "
+"restaurées."
 
 #: ../src/TextStrings.cs:598
 msgid "Move up"
@@ -852,17 +859,114 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} a quitté le réseau {1} et {2} autre réseau"
 msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "Supprimer le réseau « {0} » ?"
+#~ msgid "Running tuncfg..."
+#~ msgstr "Configuration avec tuncfg..."
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "Quitter le réseau « {0} » ?"
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Lancement d'Hamachi..."
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "Expulser le membre « {0} » ?"
+#~ msgid "Not configured"
+#~ msgstr "Pas configuré"
+
+#~ msgid "Go O_nline"
+#~ msgstr "Se c_onnecter"
+
+#~ msgid "Changing..."
+#~ msgstr "Changement..."
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Se connecter dès maintenant au réseau"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Echec de l'expulsion du membre '{0}'"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Echec de la sortie du réseau '{0}'"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Vous n'êtes pas le propriétaire du réseau '{0}'."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Echec du chargement de la configuration"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Echec de l'ouverture de la session Hamachi."
+
+#~ msgid "Connection refused."
+#~ msgstr "Connexion refusée."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi a besoin d'exécuter tuncfg pour être capable de se connecter.\n"
+#~ "Exécutez tuncfg requière les droits d'administration."
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Restaurer les commandes par défaut"
+
+#~ msgid "seconds"
+#~ msgstr "secondes"
+
+#~ msgid "Not installed"
+#~ msgstr "Pas installé"
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Copier l'adresse"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Choisir un dossier"
+
+#~ msgid "_Run"
+#~ msgstr "_Exécuter"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Choisissez une icône"
+
+#~ msgid "Go O_ffline"
+#~ msgstr "Se _déconnecter"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "Demande une confirmation avant d'exécuter _tuncfg"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Toujours demander avant d'exécuter tuncfg"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Membres hors ligne"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "_Barre d'état"
+
+#~ msgid "No internet connection."
+#~ msgstr "Pas de connexion Internet."
+
+#~ msgid "Address:"
+#~ msgstr "Adresse :"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Supprimer le réseau '{0}' ?"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Quitter le réseau '{0}' ?"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Expulser le membre '{0}' ?"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "Dossier des données du _compte :"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Intervalle de mise à jour (secondes) :"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "Délai d'_attente de la commande (secondes) :"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Voulez-vous exécuter tuncfg ?"
+
+#~ msgid "_Command:"
+#~ msgstr "_Commande :"
 
 #~ msgid "Revert changes?"
 #~ msgstr "Annuler les changements ?"
@@ -873,3 +977,41 @@ msgstr[1] "{0} a quitté le réseau {1} et {2} autres réseaux"
 #~ msgstr ""
 #~ "Etes-vous sûr de vouloir annuler les changements\n"
 #~ "et ainsi restaurer les commandes par défaut ?"
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Obtention des pseudos..."
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Échec de la suppression du réseau '{0}'"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Êtes-vous sûr de vouloir expulser le membre '{0}'\n"
+#~ "du réseau '{1}' ?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Êtes-vous sûr de vouloir supprimer le réseau '{0}' ?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Êtes-vous sûr de vouloir quitter le réseau '{0}' ?"
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Vous êtes le propriétaire de ce réseau."
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Vous n'êtes pas le propriétaire de ce réseau."
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "Se _reconnecter automatiquement lorsque la connexion a été perdue"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi n'a pas pu se lancer du a l'échec du chargement de la configuration."
+
+#~ msgid "Nickname:"
+#~ msgstr "Pseudo :"
+
+#~ msgid "Haguichi Website"
+#~ msgstr "Site web d'Haguichi"
