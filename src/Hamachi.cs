@@ -152,9 +152,9 @@ public static class Hamachi
     public static string Retrieve ( string output, string nfo )
     {
         
-        Regex regex = new Regex ( nfo + "([ ]*):([ ]+)(.+)" );
+        Regex regex = new Regex ( nfo + "[ ]*:[ ]+(.+)" );
         
-        return regex.Match ( output ).Groups[3].ToString ();
+        return regex.Match ( output ).Groups[1].ToString ();
         
     }
     
@@ -265,7 +265,7 @@ public static class Hamachi
             {
                 string rawOuput = Retrieve ( lastInfo, "address" );
                 
-                Regex regex = new Regex ( "(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
+                Regex regex = new Regex ( @"^(?<ipv4>[0-9\.]{7,15})?[ ]*(?<ipv6>[0-9a-z\:]+)?$" );
                 string IPv4 = regex.Match ( rawOuput ).Groups["ipv4"].ToString ();
                 string IPv6 = regex.Match ( rawOuput ).Groups["ipv6"].ToString ();
                 
@@ -605,9 +605,9 @@ public static class Hamachi
         string [] split = output.Split ( Environment.NewLine.ToCharArray () );
         string curNetworkId = "";
         
-        Regex networkRegex          = new Regex ( @"^ (?<status>.{1}) \[(?<id>.+?)\]([ ]*)(?<name>.*?)([ ]*)(capacity: [0-9]+/(?<capacity>[0-9]+),)?([ ]*)(\[(?<subnet>[0-9\./]{9,19})\])?([ ]*)( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$" );
-        Regex normalMemberRegex     = new Regex ( @"^     (?<status>.{1}) (?<id>[0-9-]{11})([ ]+)(?<name>.*?)([ ]*)(?<ipv4>[0-9\.]{7,15})?([ ]*)(alias: (?<alias>[0-9\.]{7,15}|not set))?([ ]*)(?<ipv6>[0-9a-f\:]+\:[0-9a-f\:]+)?([ ]*)(?<connection>direct|via relay|via server)?([ ]*)(?<transport>UDP|TCP)?([ ]*)(?<tunnel>[0-9\.]+\:[0-9]+)?([ ]*)(?<message>[ a-zA-Z]+)?$" );
-        Regex unapprovedMemberRegex = new Regex ( @"^     \? (?<id>[0-9-]{11})([ ]*)$" );
+        Regex networkRegex          = new Regex ( @"^ (?<status>.{1}) \[(?<id>.+?)\][ ]*(?<name>.*?)[ ]*(capacity: [0-9]+/(?<capacity>[0-9]+),)?[ ]*(\[(?<subnet>[0-9\./]{9,19})\])?[ ]*( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$" );
+        Regex normalMemberRegex     = new Regex ( @"^     (?<status>.{1}) (?<id>[0-9-]{11})[ ]+(?<name>.*?)[ ]*(?<ipv4>[0-9\.]{7,15})?[ ]*(alias: (?<alias>[0-9\.]{7,15}|not set))?[ ]*(?<ipv6>[0-9a-f\:]+\:[0-9a-f\:]+)?[ ]*(?<connection>direct|via relay|via server)?[ ]*(?<transport>UDP|TCP)?[ ]*(?<tunnel>[0-9\.]+\:[0-9]+)?[ ]*(?<message>[ a-zA-Z]+)?$" );
+        Regex unapprovedMemberRegex = new Regex ( @"^     \? (?<id>[0-9-]{11})[ ]*$" );
         
         foreach ( string s in split )
         {
