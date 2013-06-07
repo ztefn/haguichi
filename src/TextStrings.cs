@@ -55,11 +55,12 @@ Copyright © 2007-2013 Stephen Brandt <stephen@stephenbrandt.com>";
   haguichi [options]
 
 Options:
-  -h, --help              Show this help
-  -d, --debug             Show debug information
-  -v, --version           Show version information
-  --license               Show license information
+  -h, --help              Show this help and exit
+  -v, --version           Show version information and exit
+  --license               Show license information and exit
+  -d, --debug             Print debug messages
   --demo                  Run in demo mode
+  --list=FILE             Use a text file as list in demo mode
 
 " + appInfo + "\n";
     

@@ -64,6 +64,10 @@ class Haguichi
             {
                 Config.Settings.DemoMode = true;
             }
+            else if ( s.StartsWith ( "--list=" ) )
+            {
+                Config.Settings.DemoListPath = s.Replace ( "--list=", "" );
+            }
             else
             {
                 Console.WriteLine ( "Unknown option " + s + "\n" );

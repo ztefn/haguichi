@@ -565,37 +565,44 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            random = new Random ();
-            
-            output += " * [Artwork]\n";
-            output += "       " + RandomClientId () + "   Lapo                       " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
-            output += "   [Bug Hunters]  capacity: 4/5,   [192.168.155.24/24]  subscription type: Free, owner: This computer\n";
-            output += "     * " + RandomClientId () + "   Conrad                     192.168.155.20  alias: not set                             via relay\n";
-            output += "     * " + RandomClientId () + "   war59312                   192.168.155.22  alias: not set                             direct\n";
-            output += "     ? " + RandomClientId () + " \n";
-            output += "       You are approaching your member limit and may soon have to upgrade your network.\n";
-            output += " * [" + RandomNetworkId () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
-            output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
-            output += "   [" + RandomNetworkId () + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
-            output += "     * " + RandomClientId () + "   AndreasBWagner             " + RandomAddress () + "  alias: not set                             via relay\n";
-            output += "     * 094-409-761   Andrew                     " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "       " + RandomClientId () + "   etamPL                     " + RandomAddress () + "\n";
-            output += " * [" + RandomNetworkId () + "]Translators  capacity: 15/256, subscription type: Multi-network, owner: translators@haguichi.net\n";
-            output += "     x " + RandomClientId () + "   Aytunç                     " + RandomAddress () + "\n";
-            output += "     * " + RandomClientId () + "   Brbla                      " + RandomAddress () + "  alias: not set                             via relay\n";
-            output += "       " + RandomClientId () + "   Daniel                     " + RandomAddress () + "\n";
-            output += "     ! " + RandomClientId () + "   dimitrov                   " + RandomAddress () + "  alias: not set                             IP protocol mismatch between you and peer\n";
-            output += "     * " + RandomClientId () + "   enricog                    " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   galamarv                   " + RandomAddress () + "  alias: not set                             via relay\n";
-            output += "     * " + RandomClientId () + "   HeliosReds                 " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     ! " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
-            output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
-            output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
-            output += "     x " + RandomClientId () + "   Soker                      " + RandomAddress () + "\n";
-            output += "     * " + RandomClientId () + "   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
+            if ( Config.Settings.DemoListPath != null )
+            {
+                output = Command.ReturnOutput ( "cat", Config.Settings.DemoListPath );
+            }
+            else
+            {
+                random = new Random ();
+                
+                output += " * [Artwork]\n";
+                output += "       " + RandomClientId () + "   Lapo                       " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
+                output += "   [Bug Hunters]  capacity: 4/5,   [192.168.155.24/24]  subscription type: Free, owner: This computer\n";
+                output += "     * " + RandomClientId () + "   Conrad                     192.168.155.20  alias: not set                             via relay\n";
+                output += "     * " + RandomClientId () + "   war59312                   192.168.155.22  alias: not set                             direct\n";
+                output += "     ? " + RandomClientId () + " \n";
+                output += "       You are approaching your member limit and may soon have to upgrade your network.\n";
+                output += " * [" + RandomNetworkId () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
+                output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
+                output += "   [" + RandomNetworkId () + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
+                output += "     * " + RandomClientId () + "   AndreasBWagner             " + RandomAddress () + "  alias: not set                             via relay\n";
+                output += "     * 094-409-761   Andrew                     " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "       " + RandomClientId () + "   etamPL                     " + RandomAddress () + "\n";
+                output += " * [" + RandomNetworkId () + "]Translators  capacity: 15/256, subscription type: Multi-network, owner: translators@haguichi.net\n";
+                output += "     x " + RandomClientId () + "   Aytunç                     " + RandomAddress () + "\n";
+                output += "     * " + RandomClientId () + "   Brbla                      " + RandomAddress () + "  alias: not set                             via relay\n";
+                output += "       " + RandomClientId () + "   Daniel                     " + RandomAddress () + "\n";
+                output += "     ! " + RandomClientId () + "   dimitrov                   " + RandomAddress () + "  alias: not set                             IP protocol mismatch between you and peer\n";
+                output += "     * " + RandomClientId () + "   enricog                    " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   galamarv                   " + RandomAddress () + "  alias: not set                             via relay\n";
+                output += "     * " + RandomClientId () + "   HeliosReds                 " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     ! " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
+                output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
+                output += "     x " + RandomClientId () + "   Soker                      " + RandomAddress () + "\n";
+                output += "     * " + RandomClientId () + "   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
+            }
         }
         else
         {
