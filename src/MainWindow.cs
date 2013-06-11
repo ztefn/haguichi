@@ -184,7 +184,7 @@ public class MainWindow
         bc8.Expand = false;
         
         
-        window = new Window ( TextStrings.appName);
+        window = new Window ( TextStrings.appName );
         window.AddAccelGroup( accelGroup );
 
         window.WindowStateEvent += OnStateChanged;
@@ -203,6 +203,9 @@ public class MainWindow
         connectButton.GrabFocus ();
         
         statusBar.Visible = ( bool ) Config.Settings.ShowStatusbar.Value;
+        
+        x = ( int ) Config.Settings.WinX.Value;
+        y = ( int ) Config.Settings.WinY.Value;
         
         if ( ( bool ) Config.Settings.ShowTrayIcon.Value )
         {
@@ -249,7 +252,7 @@ public class MainWindow
     private void OnMoveResize ( object o, ConfigureEventArgs args )
     {
         
-        // Getting and setting window size and position values when changed (only in normal window state)
+        // Getting window size and position values when changed (only in normal window state)
         
         if ( window.GdkWindow.State == 0 )
         {
@@ -271,11 +274,10 @@ public class MainWindow
     }
     
     
-    private void OnStateChanged ( object sender, WindowStateEventArgs a )
+    private void OnStateChanged ( object o, WindowStateEventArgs args )
     {
         
-        Gdk.EventWindowState ews = a.Event;
-        Gdk.WindowState ws = ews.NewWindowState;
+        Gdk.WindowState ws = args.Event.NewWindowState;
         
         Debug.Log ( Debug.Domain.Gui, "MainWindow", "State changed: " + ws.ToString () );    
         
@@ -300,12 +302,12 @@ public class MainWindow
     }
 
     
-    private void OnWinDelete ( object obj, DeleteEventArgs args )
+    private void OnWinDelete ( object o, DeleteEventArgs args )
     {
         
         if ( !( bool ) Config.Settings.ShowTrayIcon.Value )
         {
-            GlobalEvents.QuitApp ( obj, args );
+            GlobalEvents.QuitApp ( o, args );
         }
         else
         {
@@ -397,12 +399,6 @@ public class MainWindow
     public static void Show ()
     {
         
-        /*
-         * Correcting window decorator deviation by requiring the last position ourself before showing, and then move the window.
-         */
-        int x = ( int ) Config.Settings.WinX.Value;
-        int y = ( int ) Config.Settings.WinY.Value;
-        
         window.Present ();
         
         if ( Config.Settings.WinMinimized )
@@ -417,9 +413,8 @@ public class MainWindow
             Platform.IndicatorSession.SetVisibility ( true );    
         }
         
-        /*
-         * Move window to the current desktop.
-         */
+        
+        // Move window to the current desktop and correct for any desktop compositor deviation
         
         while ( x < 0 )
         {
