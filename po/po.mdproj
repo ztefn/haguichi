@@ -28,6 +28,6 @@
     <packageName>haguichi</packageName>
     <outputType>RelativeToOutput</outputType>
     <relPath>../../locale</relPath>
-    <ReleaseVersion>1.0.21</ReleaseVersion>
+    <ReleaseVersion>1.0.22</ReleaseVersion>
   </PropertyGroup>
 </Project>
