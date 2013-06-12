@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2012-10-15 12:05+0000\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-06-09 06:15+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
-"10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2012-10-15 21:16+0000\n"
-"X-Generator: Launchpad (build 16137)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2013-06-12 17:24+0000\n"
+"X-Generator: Launchpad (build 16667)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -389,13 +389,12 @@ msgid "Account not found"
 msgstr "Учётная запись не найдена"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "_Настроить"
+msgstr ""
 
 #: ../src/TextStrings.cs:476
 msgid "_Open Folder"
-msgstr ""
+msgstr "_Открыть папку"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
@@ -411,11 +410,11 @@ msgstr ""
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Восстановить из резервной копии"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "_Восстановить"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
@@ -427,7 +426,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Все поддерживаемые архивы"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -522,22 +521,20 @@ msgid "Information"
 msgstr "Сведения"
 
 #: ../src/TextStrings.cs:512
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "Вы уверены, что хотите удалить сеть «{0}»?"
+msgstr ""
 
 #: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
 msgstr ""
 
 #: ../src/TextStrings.cs:515
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "Вы уверены, что хотите покинуть сеть «{0}»?"
+msgstr ""
 
 #: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
@@ -552,7 +549,8 @@ msgstr ""
 "из сети «{1}»?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: ../src/TextStrings.cs:521
@@ -568,18 +566,16 @@ msgid "Could not evict member \"{0}\""
 msgstr "Ошибка при попытке выгнать «{0}»"
 
 #: ../src/TextStrings.cs:524
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "Ошибка при удалении сети «{0}»"
+msgstr ""
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "Ошибка при удалении сети «{0}»"
+msgstr ""
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
@@ -803,9 +799,8 @@ msgid "_Default"
 msgstr "По у_молчанию"
 
 #: ../src/TextStrings.cs:595
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "Вы уверены, что хотите покинуть сеть «{0}»?"
+msgstr ""
 
 #: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
@@ -858,14 +853,41 @@ msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
 msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
 msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "Удалить сеть «{0}»?"
+#~ msgid "seconds"
+#~ msgstr "секунда;секунды;секунд"
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "Покинуть сеть «{0}»?"
+#~ msgid "Running tuncfg..."
+#~ msgstr "Запуск tuncfg..."
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "Выгнать «{0}»?"
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Запуск Hamachi..."
+
+#~ msgid "Not configured"
+#~ msgstr "Не настроен"
+
+#~ msgid "Changing..."
+#~ msgstr "Изменение..."
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "Покинуть сеть '{0}'?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Вы уверены, что хотите удалить сеть '{0}'?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Вы уверены, что хотите покинуть сеть '{0}'?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Удалить сеть '{0}'?"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "_Строка состояния"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Вы хотите запустить tuncfg?"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Выбрать иконку"
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Восстановить исходные команды"
@@ -879,3 +901,110 @@ msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
 #~ msgstr ""
 #~ "Вы уверены, что хотите отменить все изменения\n"
 #~ "и восстановить исходные команды?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Ошибка при попытке выгнать '{0}'"
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Вы владелец этой сети."
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Ошибка при удалении сети '{0}'"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Вы уверены, что хотите выгнать '{0}'\n"
+#~ "из сети '{1}'?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Ошибка при попытке покинуть сеть '{0}'"
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Вы не владелец этой сети."
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "Выгнать '{0}'?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Вы не владелец сети '{0}'."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr "Hamachi не может запуститься из-за ошибки при загрузке конфигурации."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Ошибка при загрузке конфигурации"
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Ошибка при подключении Hamachi."
+
+#~ msgid "Connection refused."
+#~ msgstr "Подключение отклонено."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi требуется запустить tuncfg, чтобы иметь возможность подключиться.\n"
+#~ "Запуск tuncfg требует прав администратора."
+
+#~ msgid "No internet connection."
+#~ msgstr "Отсутствует соединение с интернет."
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Загрузка псевдонимов..."
+
+#~ msgid "_Copy Address"
+#~ msgstr "_Копировать адрес"
+
+#~ msgid "Choose Folder"
+#~ msgstr "Выберите каталог"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "А_втоматически подключаться при потере соединения"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "З_апрашивать подтверждение перед запуском tuncfg"
+
+#~ msgid "_Run"
+#~ msgstr "_Запустить"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "_Всегда спрашивать перед запуском tuncfg"
+
+#~ msgid "Haguichi Website"
+#~ msgstr "Сайт Haguichi"
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Показывать тех, кто \"не в сети\""
+
+#~ msgid "Go O_nline"
+#~ msgstr "_Статус \"в сети\""
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "С_разу установить статус \"в сети\""
+
+#~ msgid "Go O_ffline"
+#~ msgstr "C_татус \"не в сети\""
+
+#~ msgid "Address:"
+#~ msgstr "Адрес:"
+
+#~ msgid "Nickname:"
+#~ msgstr "Псевдоним:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Каталог учётной записи:"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Частота обновления (в секундах):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Таймаут команды (в секундах):"
+
+#~ msgid "_Command:"
+#~ msgstr "_Команда:"
+
+#~ msgid "Not installed"
+#~ msgstr "Не установлен"

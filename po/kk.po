@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2012-08-17 17:49+0000\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-06-09 08:28+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2012-08-18 10:04+0000\n"
-"X-Generator: Launchpad (build 15810)\n"
+"X-Launchpad-Export-Date: 2013-06-12 17:24+0000\n"
+"X-Generator: Launchpad (build 16667)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -387,45 +387,44 @@ msgid "Account not found"
 msgstr "Пайдаланушы аты табылмады"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "Қалыпқа _келтіру"
+msgstr "Баптау_лама"
 
 #: ../src/TextStrings.cs:476
 msgid "_Open Folder"
-msgstr ""
+msgstr "Буманы _ашу"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "Резервті көшірмені _сақтау..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Резервті көшірмені сақтау"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "Резерті көшірмеден қайта _орнына қайтару..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Резерті көшірмеден қайта орнына қайтару"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "Қайта орнына қай_тару"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Баптауламаны қайта орнына қайтару мүмкін емес"
 
 #: ../src/TextStrings.cs:483
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Архивте қажетті мәлімет жоқ."
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Қолдауы бар архивтер"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -516,22 +515,20 @@ msgid "Information"
 msgstr "Мәлімет"
 
 #: ../src/TextStrings.cs:512
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "\"{0}\" желісін жоюға сенімдісіз бе?"
+msgstr ""
 
 #: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
 msgstr ""
 
 #: ../src/TextStrings.cs:515
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
+msgstr ""
 
 #: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
@@ -546,7 +543,8 @@ msgstr ""
 "тастауға сенімдісіз бе?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: ../src/TextStrings.cs:521
@@ -562,18 +560,16 @@ msgid "Could not evict member \"{0}\""
 msgstr "\"{0}\" желісінен мүшені шығарып тастау сәтсіз аяқталды"
 
 #: ../src/TextStrings.cs:524
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
+msgstr ""
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
+msgstr ""
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
@@ -798,9 +794,8 @@ msgid "_Default"
 msgstr "_Қалыпты"
 
 #: ../src/TextStrings.cs:595
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
+msgstr "Барлық өзгертулерді кері қайтаруға сенімдісіз бе?"
 
 #: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
@@ -843,20 +838,113 @@ msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "\"{0}\" желісін жою қажет пе?"
+#~ msgid "Haguichi Website"
+#~ msgstr "Haguichi веб сайты"
 
-#~ msgid "Leave network \"{0}\"?"
-#~ msgstr "\"{0}\" желіден шығу қажет пе?"
+#~ msgid "Address:"
+#~ msgstr "Адрес:"
 
-#~ msgid "Evict member \"{0}\"?"
-#~ msgstr "\"{0}\" мүшені шығарып тастау қажет пе?"
+#~ msgid "seconds"
+#~ msgstr "секунд"
 
-#~ msgid "Restore the default commands"
-#~ msgstr "Командаларды бастапқы, қалыпты қалпына келтіру"
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Hamachi ашу..."
+
+#~ msgid "_Copy Address"
+#~ msgstr "Адресті _көшіру"
+
+#~ msgid "Changing..."
+#~ msgstr "Өзгерту..."
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Сіз осы желінің иесі боласыз."
+
+#~ msgid "Choose Folder"
+#~ msgstr "Буманы таңдаңыз"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Пайдаланушы жеке бумасы:"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "Күй _жолағы"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "tuncfg орындауын қалайсыз ба?"
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "tuncfg орындау кезінде растауды сұрау"
+
+#~ msgid "_Run"
+#~ msgstr "О_рындау"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "tuncfg _әрбір орындау кезінде сұрау"
+
+#~ msgid "No internet connection."
+#~ msgstr "Интернетпен қосылыс жоқ."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Hamachi кіру қатесі."
+
+#~ msgid "Connection refused."
+#~ msgstr "Қосылыс қабылданбады."
+
+#~ msgid "_Command:"
+#~ msgstr "_Команда:"
 
 #~ msgid "Revert changes?"
 #~ msgstr "Өзгертулерді кері қайтару қажет пе?"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Суреттемені таңдаңыз"
+
+#~ msgid "Running tuncfg..."
+#~ msgstr "tuncfg орындау..."
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Ник тізімін алу..."
+
+#~ msgid "Not configured"
+#~ msgstr "Қалыпқа келтірілмеген"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "\"{0}\" желісін жою қажет пе?"
+
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "\"{0}\" желісін жоюға сенімдісіз бе?"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "\"{0}\" желісінен мүшені шығарып тастау сәтсіз аяқталды"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "\"{0}\" желісін жою сәтсіз аяқталды"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "\"{0}\" желісінен шығу сәтсіз аяқталды"
+
+#~ msgid "Evict member '{0}'?"
+#~ msgstr "\"{0}\" мүшені шығарып тастау қажет пе?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "\"{0}\" желіден шығуға сенімдісіз бе?"
+
+#~ msgid "Leave network '{0}'?"
+#~ msgstr "\"{0}\" желіден шығу қажет пе?"
+
+#~ msgid "_Offline Members"
+#~ msgstr "Желіге _қосылмаған мүшелерді көрсету"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Жаңарту жиілігі (секундпен):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Команда таймауты (секундпен):"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "Қосылыс үзілгенде автоматты түрде _қайта қосылу"
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Баптаулама (конфигурация) ашу қатесі"
 
 #~ msgid ""
 #~ "Are you sure you wish to revert all changes\n"
@@ -864,3 +952,37 @@ msgstr[0] "{0} {1} және {2} басқа желілерінен шығып к�
 #~ msgstr ""
 #~ "Командаларды бастапқы, қалыпты қалпына келтіріп,\n"
 #~ "өзгертулерді кері қайтару қажет пе?"
+
+#~ msgid "Restore the default commands"
+#~ msgstr "Командаларды бастапқы, қалыпты қалпына келтіру"
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "Бірден желіге _қосылу"
+
+#~ msgid "Not installed"
+#~ msgstr "Hamachi орнатылмаған"
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "\"{1}\" желісінен \"{0}\" мүшені шығарып\n"
+#~ "тастауға сенімдісіз бе?"
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Осы желінің иесі сіз емес боласыз."
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "\"{0}\" желінің иеcі сіз емес боласыз."
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Қосылу үшін, Hamachi tuncfg орындауын талап етеді.\n"
+#~ "tuncfg ашылуы әкімшілік құқықтарды қажет етеді."
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Баптаулама (конфигурация) ашу кезіндегі қате кесірінен, Hamachi ашу мүмкін "
+#~ "емес."
