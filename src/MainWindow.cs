@@ -492,7 +492,6 @@ public class MainWindow
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
-                autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = true;
                 connectButton.Label = TextStrings.connectCountdown.Replace ( "%S", Controller.restoreCountdown.ToString () );
                 connectButton.Image = new Image ( Stock.Connect, IconSize.Button );
@@ -512,7 +511,6 @@ public class MainWindow
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
-                autoconnectCheckbox.Sensitive = false;
                 connectButton.Sensitive = false;
                 connectButton.Label = TextStrings.connecting;
                 
@@ -542,7 +540,6 @@ public class MainWindow
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
-                autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = true;
                 connectButton.Label = Stock.Connect;
                 
@@ -559,7 +556,6 @@ public class MainWindow
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
-                autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
                 
@@ -576,7 +572,6 @@ public class MainWindow
                 disconnectedBox.Show ();
                 connectedBox.Hide ();
                 
-                autoconnectCheckbox.Sensitive = true;
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
                 
