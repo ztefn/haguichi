@@ -207,7 +207,7 @@ namespace Dialogs
             
             intervalSpin = new SpinButton ( 0, 999, 1 );
             intervalSpin.Sensitive = ( bool ) Config.Settings.UpdateNetworkList.Value;
-            intervalSpin.Value = ( int ) ( ( double ) Config.Settings.UpdateInterval.Value );
+            intervalSpin.Value = ( double ) Config.Settings.UpdateInterval.Value;
             intervalSpin.ValueChanged += delegate
             {
                 Config.Settings.UpdateInterval.Value = ( double ) intervalSpin.Value;

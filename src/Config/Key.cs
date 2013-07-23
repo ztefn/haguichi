@@ -129,7 +129,7 @@ namespace Config
             }
             else if ( key == Config.Settings.UpdateInterval.KeyName )
             {
-                Haguichi.preferencesDialog.intervalSpin.Value = ( int ) _value;
+                Haguichi.preferencesDialog.intervalSpin.Value = ( double ) _value;
                 Haguichi.preferencesDialog.SetIntervalString ();
             }
             else if ( key == Config.Settings.UpdateNetworkList.KeyName )
