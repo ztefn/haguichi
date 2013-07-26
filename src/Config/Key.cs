@@ -96,7 +96,7 @@ namespace Config
             catch
             {
                 Debug.Log ( Debug.Domain.Error, "Config.Key.GetValue", "Failed getting value for GConf key " + KeyName + ", falling back to default" );
-                _value = DefaultValue;
+                Value = DefaultValue;
             }
             
         }
