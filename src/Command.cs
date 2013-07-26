@@ -278,15 +278,13 @@ public static class Command
         
         try
         {
-            ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
-            ps.UseShellExecute = false;
-            ps.RedirectStandardOutput = true;
-            
-            using ( Process p = Process.Start ( ps ) )
-            {
-                p.Close ();
-                p.Dispose ();
-            }
+            Process p = new Process ();
+            p.StartInfo.FileName = filename;
+            p.StartInfo.Arguments = args;
+            p.StartInfo.UseShellExecute = false;
+            p.Start ();
+            p.Close ();
+            p.Dispose ();
         }
         catch
         {
@@ -313,23 +311,25 @@ public static class Command
         
         try
         {
-            ProcessStartInfo ps = new ProcessStartInfo ( filename, args );
-            ps.UseShellExecute = false;
-            ps.RedirectStandardOutput = true;
+            output = "";
             
-            using ( Process p = Process.Start ( ps ) )
+            Process p = new Process ();
+            p.StartInfo.FileName = filename;
+            p.StartInfo.Arguments = args;
+            p.StartInfo.UseShellExecute = false;
+            p.StartInfo.RedirectStandardOutput = true;
+            p.OutputDataReceived += ( o, e ) => { output += e.Data + "\n"; };    
+            p.Start ();
+            p.BeginOutputReadLine ();
+            
+            if ( !p.WaitForExit ( 1000 * timeout ) )
             {
-                if ( p.WaitForExit ( 1000 * timeout ) )
-                {
-                    output = p.StandardOutput.ReadToEnd ();
-                }
-                else
-                {
-                    output = "timeout";
-                }
-                p.Close ();
-                p.Dispose ();
+                output = "timeout";
+                p.Kill ();
             }
+            
+            p.Close ();
+            p.Dispose ();
         }
         catch
         {
