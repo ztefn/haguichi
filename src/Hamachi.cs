@@ -28,12 +28,12 @@ using System.Threading;
 public static class Hamachi
 {
     
-    public  const  string DataPath = "/var/lib/logmein-hamachi";
-    public  static int MajorVersion;
-    public  static string Version;
-    public  static bool VpnAliasCapable = false;
-    public  static bool IpModeCapable = false;
-    public  static string IpVersion = "IPv4";
+    public  const  string DataPath        = "/var/lib/logmein-hamachi";
+    public  static int    MajorVersion;
+    public  static string Version         = "";
+    public  static bool   VpnAliasCapable = false;
+    public  static bool   IpModeCapable   = false;
+    public  static string IpVersion       = "IPv4";
     public  static string lastInfo;
     private static string ScriptDirectory;
     private static Random random;
@@ -42,10 +42,13 @@ public static class Hamachi
     public static void Init ()
     {
         
-        GetInfo ();
-        GetVersion ();
-        MajorVersion = DetermineVersionAndCapabilities ();
-        ScriptDirectory = DetermineScriptDirectory ();
+        if ( Command.Exists ( "hamachi" ) )
+        {
+            GetInfo ();
+            GetVersion ();
+            MajorVersion = DetermineVersionAndCapabilities ();
+            ScriptDirectory = DetermineScriptDirectory ();
+        }
         
     }
     
@@ -64,7 +67,7 @@ public static class Hamachi
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", output );
         
         if ( ( output == "timeout" ) ||
-             ( output == "error" ) ) // 'bash: hamachi: command not found' causes exception
+             ( output == "error" ) )
         {
             Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "Timeout or error" );
             return 0;
@@ -481,11 +484,7 @@ public static class Hamachi
         }
         else
         {
-            try
-            {
-                Version = Retrieve ( lastInfo, "version" );
-            }
-            catch {}
+            Version = Retrieve ( lastInfo, "version" );
         }
         
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", Version );

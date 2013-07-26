@@ -203,7 +203,7 @@ public static class Controller
         
         Regex regex;
         
-        if ( ( output == "error" ) || // 'bash: hamachi: command not found' causes exception
+        if ( ( !Command.Exists ( "hamachi" ) ) ||
              ( Hamachi.MajorVersion == 1 ) )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.StatusCheck", "Not installed." );
