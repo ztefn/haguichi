@@ -30,11 +30,11 @@ public static class Hamachi
     
     public  const  string DataPath        = "/var/lib/logmein-hamachi";
     public  static int    MajorVersion;
-    public  static string Version         = "";
+    public  static string Version;
     public  static bool   VpnAliasCapable = false;
     public  static bool   IpModeCapable   = false;
     public  static string IpVersion       = "IPv4";
-    public  static string lastInfo;
+    public  static string lastInfo        = "";
     private static string ScriptDirectory;
     private static Random random;
     
@@ -42,13 +42,10 @@ public static class Hamachi
     public static void Init ()
     {
         
-        if ( Command.Exists ( "hamachi" ) )
-        {
-            GetInfo ();
-            GetVersion ();
-            MajorVersion = DetermineVersionAndCapabilities ();
-            ScriptDirectory = DetermineScriptDirectory ();
-        }
+        GetInfo ();
+        GetVersion ();
+        MajorVersion = DetermineVersionAndCapabilities ();
+        ScriptDirectory = DetermineScriptDirectory ();
         
     }
     
@@ -61,6 +58,11 @@ public static class Hamachi
             VpnAliasCapable = true;
             IpModeCapable = true;
             return 2;
+        }
+        
+        if ( !Command.Exists ( "hamachi" ) )
+        {
+            return 0;
         }
         
         string output = Command.ReturnOutput ( "hamachi", "-h" );
@@ -311,7 +313,8 @@ public static class Hamachi
     public static string GetInfo ()
     {
         
-        if ( !Config.Settings.DemoMode )
+        if ( ( !Config.Settings.DemoMode ) &&
+             ( Command.Exists ( "hamachi" ) ) )
         {
             lastInfo = Command.ReturnOutput ( "hamachi", "" );
             Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetInfo", lastInfo );
@@ -476,7 +479,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            Version = "2.1.0.86";
+            Version = "2.1.0.101";
         }
         else if ( MajorVersion == 1 )
         {
