@@ -26,7 +26,6 @@ public static class Command
 {
     
     private static int timeout;
-    private static bool inProgress = false;
     
     public static string Sudo;
     public static string SudoArgs;
@@ -299,16 +298,6 @@ public static class Command
         
         string output = "error";
         
-        if ( filename == "hamachi" )
-        {
-            while ( inProgress )
-            {
-                // Wait
-            }
-            
-            inProgress = true;
-        }
-        
         try
         {
             output = "";
@@ -336,17 +325,12 @@ public static class Command
             // Nothing
         }
         
-        if ( filename == "hamachi" )
+        if ( output.Contains ( ".. failed, busy" ) ) // Keep trying until it's not busy anymore
         {
-            inProgress = false;
+            Debug.Log ( Debug.Domain.Hamachi, "Command.ReturnOutput", "Hamachi is busy, waiting to try again..." );
             
-            while ( output.Contains ( ".. failed, busy" ) ) // Keep trying until it's not busy anymore
-            {
-                Debug.Log ( Debug.Domain.Hamachi, "Command.ReturnOutput", "Hamachi is busy, waiting to try again..." );
-                
-                Thread.Sleep ( 100 );
-                output = ReturnOutput ( filename, args );
-            }
+            Thread.Sleep ( 100 );
+            output = ReturnOutput ( filename, args );
         }
         
         return output;
