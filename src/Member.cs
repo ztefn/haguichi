@@ -187,7 +187,7 @@ public class Member
         string alias     = Hamachi.Retrieve ( output, "VPN alias"   );
         string addresses = Hamachi.Retrieve ( output, "VIP address" );
         
-        Regex regex = new Regex ( "(?<ipv4>[0-9" + Regex.Escape (".") + "]{7,15})?([ ]*)(?<ipv6>[0-9a-z" + Regex.Escape (":") + "]+)?$" );
+        Regex regex = new Regex ( @"^(?<ipv4>[0-9\.]{7,15})?[ ]*(?<ipv6>[0-9a-z\:]+)?$" );
         string ipv4 = regex.Match ( addresses ).Groups["ipv4"].ToString ();
         string ipv6 = regex.Match ( addresses ).Groups["ipv6"].ToString ();
         
@@ -245,7 +245,7 @@ public class Member
         if ( Config.Settings.DemoMode )
         {
             this.Nick    = "Nick";
-            this.IPv4    = "5.092.112.049";
+            this.IPv4    = Hamachi.RandomAddress ();
             this.Status  = new Status ( "*" );
         
             SetSortStrings ();

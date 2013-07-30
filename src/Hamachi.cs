@@ -518,11 +518,11 @@ public static class Hamachi
     {
         
         string address  = "25.";
-               address += random.Next ( 0, 255 );
+               address += random.Next ( 1, 255 );
                address += ".";
-               address += random.Next ( 0, 255 );
+               address += random.Next ( 1, 255 );
                address += ".";
-               address += random.Next ( 0, 255 );
+               address += random.Next ( 1, 255 );
         
         return address;
         
