@@ -169,13 +169,12 @@ public class Network
     public void DetermineOwnership ()
     {
         
-        Thread thread = new Thread ( DetermineOwnershipThread );
-        thread.Start ();
+        ThreadPool.QueueUserWorkItem ( new WaitCallback ( DetermineOwnershipThread ) );
         
     }
     
     
-    private void DetermineOwnershipThread ()
+    private void DetermineOwnershipThread ( object o )
     {
         
         string output = "";
@@ -216,7 +215,7 @@ approve  : manual";
             {
                 output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
             }
-            Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnership", output );
+            Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnershipThread", output );
             
             string owner = Hamachi.Retrieve ( output, "owner" );
             if ( owner != "" )

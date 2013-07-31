@@ -98,8 +98,7 @@ public class Member
         if ( ( nick.Length >= 25 ) ||
              ( nick.EndsWith ( "�" ) ) )
         {
-            Thread thread = new Thread ( GetLongNickThread );
-            thread.Start ();
+            ThreadPool.QueueUserWorkItem ( new WaitCallback ( GetLongNickThread ) );
         }
         else
         {
@@ -110,7 +109,7 @@ public class Member
     }
     
     
-    private void GetLongNickThread ()
+    private void GetLongNickThread ( object o )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
@@ -160,8 +159,7 @@ public class Member
             }
             else if ( this.Status.statusInt == 1 )
             {
-                Thread thread = new Thread ( GetCompleteAddressesThread );
-                thread.Start ();
+                ThreadPool.QueueUserWorkItem ( new WaitCallback ( GetCompleteAddressesThread ) );
             }
             else
             {
@@ -178,7 +176,7 @@ public class Member
     }
     
     
-    private void GetCompleteAddressesThread ()
+    private void GetCompleteAddressesThread ( object o )
     {
         
         string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
