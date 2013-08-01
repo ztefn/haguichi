@@ -95,13 +95,21 @@ public class Member
     public void GetLongNick ( string nick )
     {
         
-        if ( ( nick.Length >= 25 ) ||
-             ( nick.EndsWith ( "�" ) ) )
+        if ( ( nick.Length >= 25 ) &&
+             ( this.Nick.Length > 25 ) &&
+             ( this.Nick.StartsWith ( nick ) ) )
         {
+            // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
+        }
+        else if ( ( nick.Length >= 25 ) ||
+                  ( nick.EndsWith ( "�" ) ) )
+        {
+            // Retrieve long nick
             ThreadPool.QueueUserWorkItem ( new WaitCallback ( GetLongNickThread ) );
         }
         else
         {
+            // Save passed nick
             this.Nick = nick;
             SetSortStrings ();
         }
