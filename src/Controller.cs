@@ -20,6 +20,7 @@
 using System;
 using System.Collections;
 using System.Net;
+using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Gtk;
@@ -258,15 +259,10 @@ public static class Controller
     public static bool HasInternetConnection ()
     {
         
-        try
-        {
-            Dns.GetHostAddresses ( "www.google.com" );
-            return true;
-        }
-        catch
-        {
-            return false;
-        }
+        bool success = new Ping ().Send ( IPAddress.Parse( "8.8.8.8" ) ).Status == IPStatus.Success;
+        
+        Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", success.ToString () );
+        return success;
         
     }
     
