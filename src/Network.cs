@@ -20,6 +20,7 @@
 using System;
 using System.Collections;
 using System.Threading;
+using System.Text.RegularExpressions;
 using Gtk;
 
 
@@ -62,21 +63,6 @@ public class Network
         this.Lock     = "";
         this.Approve  = "";
         this.Capacity = capacity;
-        
-        SetSortStrings ();
-        
-    }
-    
-    
-    public Network ( Status status, string id, string name, ArrayList members )
-    {
-        
-        this.Status  = status;
-        this.Id      = id;
-        this.Name    = name;
-        this.Members = members;
-        this.IsOwner = -1;
-        this.Owner   = "";
         
         SetSortStrings ();
         
@@ -211,29 +197,48 @@ status   : unlocked
 approve  : manual";
                 }
             }
-            else
-            {
-                output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
-            }
-            Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnershipThread", output );
             
-            string owner = Hamachi.Retrieve ( output, "owner" );
-            if ( owner != "" )
+            if ( this.Owner != "" ) // Using hamachi version 2.1.0.68 and newer the owner is directly passed from the network list as "[nick] ([id])"
             {
-                this.Owner = owner;
+                Regex regex = new Regex ( @"^.*? \((?<id>[0-9-]{11})\)$" );
+                string id = regex.Match ( this.Owner ).Groups["id"].ToString ();
+               
+                if ( id != "" )
+                {
+                    this.Owner = id;
+                }
             }
             
-            this.Lock = Hamachi.Retrieve ( output, "status" );
-            this.Approve = Hamachi.Retrieve ( output, "approve" );
+            if ( this.Owner == "" ) // Using any older hamachi version the owner can only be determined by calling "hamachi network [id]"
+            {
+                if ( !Config.Settings.DemoMode )
+                {
+                    output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
+                    Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnershipThread", output );
+                }
+                
+                this.Owner = Hamachi.Retrieve ( output, "owner" );;
+            }
             
             if ( this.Owner == "This computer" )
             {
                 this.IsOwner = 1;
+                
+                if ( output == "" )
+                {
+                    output = Command.ReturnOutput ( "hamachi", "network \"" + Utilities.CleanString ( this.Id ) + "\"" );
+                    Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnershipThread", output );
+                }
+                
+                this.Lock = Hamachi.Retrieve ( output, "status" );
+                this.Approve = Hamachi.Retrieve ( output, "approve" );
             }
             else
             {
                 this.IsOwner = 0;
             }
+            
+            Debug.Log ( Debug.Domain.Hamachi, "Network.DetermineOwnershipThread", "Owner: " + this.Owner );
             
             Application.Invoke ( delegate
             {
