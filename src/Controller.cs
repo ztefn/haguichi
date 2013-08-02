@@ -259,7 +259,7 @@ public static class Controller
     public static bool HasInternetConnection ()
     {
         
-        bool success = new Ping ().Send ( IPAddress.Parse( "8.8.8.8" ) ).Status == IPStatus.Success;
+        bool success = new Ping ().Send ( IPAddress.Parse ( "8.8.8.8" ) ).Status == IPStatus.Success;
         
         Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", success.ToString () );
         return success;

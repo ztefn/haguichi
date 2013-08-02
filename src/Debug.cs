@@ -32,8 +32,7 @@ public class Debug
             string domainString = Enum.GetName ( typeof ( Domain ), domain );
             
             Console.ForegroundColor = ( ConsoleColor ) domain;
-            DateTime datetime = DateTime.Now;
-            Console.Write ( "[{0} {1}] [{2}]", datetime.TimeOfDay, domainString.ToUpper (), reporter );
+            Console.Write ( "[{0} {1}] [{2}]", DateTime.Now.TimeOfDay, domainString.ToUpper (), reporter );
             Console.Write ( " " );
             Console.ResetColor ();
             Console.WriteLine ( output );
