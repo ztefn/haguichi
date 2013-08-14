@@ -322,7 +322,7 @@ public class MainWindow
     private void OnKeyPress ( object o, KeyPressEventArgs args )
     {
         
-        if ( args.Event.State == Gdk.ModifierType.ControlMask )
+        if ( args.Event.State.ToString ().Contains ( Gdk.ModifierType.ControlMask.ToString () ) )
         {
             if ( args.Event.Key == Gdk.Key.bracketleft )
             {
