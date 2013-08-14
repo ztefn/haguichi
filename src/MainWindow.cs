@@ -186,11 +186,12 @@ public class MainWindow
         
         window = new Window ( TextStrings.appName );
         window.AddAccelGroup( accelGroup );
-
+        
         window.WindowStateEvent += OnStateChanged;
         window.ConfigureEvent += OnMoveResize;
         window.DeleteEvent += OnWinDelete;
-
+        window.KeyPressEvent += OnKeyPress;
+        
         window.SetDefaultSize ( ( int ) Config.Settings.WinWidth.Value, ( int ) Config.Settings.WinHeight.Value );
         window.Move ( ( int ) Config.Settings.WinX.Value, ( int ) Config.Settings.WinY.Value );
         window.AllowShrink = true;
@@ -300,7 +301,7 @@ public class MainWindow
         }        
         
     }
-
+    
     
     private void OnWinDelete ( object o, DeleteEventArgs args )
     {
@@ -316,7 +317,25 @@ public class MainWindow
         }
         
     }
-     
+    
+    
+    private void OnKeyPress ( object o, KeyPressEventArgs args )
+    {
+        
+        if ( args.Event.State == Gdk.ModifierType.ControlMask )
+        {
+            if ( args.Event.Key == Gdk.Key.bracketleft )
+            {
+                networkView.ExpandAll ();
+            }
+            if ( args.Event.Key == Gdk.Key.bracketright )
+            {
+                networkView.CollapseAll ();
+            }
+        }
+        
+    }
+    
     
     public static void ShowOfflineMembers ( bool show )
     {
