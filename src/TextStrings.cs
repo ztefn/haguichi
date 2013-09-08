@@ -25,7 +25,7 @@ public static class TextStrings
 {
     
     public const  string appName                = "Haguichi";
-    public const  string appVersion             = "1.0.22";
+    public const  string appVersion             = "1.0.23";
     public const  string appWebsite             = "http://www.haguichi.net/";
     public const  string appWebsiteLabel        = "www.haguichi.net";
     public static string appComments;
