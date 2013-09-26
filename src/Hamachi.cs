@@ -71,7 +71,7 @@ public static class Hamachi
         if ( ( output == "timeout" ) ||
              ( output == "error" ) )
         {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "Timeout or error" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "Timeout or error" );
             return 0;
         }
         
@@ -80,26 +80,26 @@ public static class Hamachi
             if ( output.Contains ( "vpn-alias" ) ) // Since version 2.1.0.68
             {
                 VpnAliasCapable = true;
-                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "VPN alias capable" );
+                Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "VPN alias capable" );
             }
             if ( output.Contains ( "set-ip-mode" ) ) // Since version 2.1.0.17
             {
                 IpModeCapable = true;
-                Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "IP mode capable" );
+                Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "IP mode capable" );
             }
             
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "LogMeIn Hamachi detected" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "LogMeIn Hamachi detected" );
             return 2;
         }
         
         if ( ( output.StartsWith ( "Hamachi, a zero-config virtual private networking utility" ) ) ||
              ( output == "" ) )
         {
-            Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "Hamachi legacy detected" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "Hamachi legacy detected" );
             return 1;
         }
         
-        Debug.Log ( Debug.Domain.Info, "Hamachi.DetermineVersionAndCapabilities", "Unknown" );
+        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "Unknown" );
         return -1;
         
     }
