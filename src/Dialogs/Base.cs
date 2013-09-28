@@ -42,7 +42,7 @@ namespace Dialogs
             this.BorderWidth     = 5;
             this.Response       += SetResponseText;
             
-            Image img = new Image ( "", IconSize.Dialog );
+            Image img = new Image ();
             img.SetFromIconName ( "dialog-" + icon.ToLower (), IconSize.Dialog );
             img.Yalign = 0;
             img.Xpad = 6;
