@@ -33,7 +33,7 @@ namespace Dialogs
         
         public Base ( Window parent, string title, string header, string message, string icon ) : base ()
         {
-        
+            
             this.Title           = title;
             this.TransientFor    = parent;
             this.IconList        = MainWindow.appIcons;
@@ -43,28 +43,10 @@ namespace Dialogs
             this.Response       += SetResponseText;
             
             Image img = new Image ( "", IconSize.Dialog );
+            img.SetFromIconName ( "dialog-" + icon.ToLower (), IconSize.Dialog );
             img.Yalign = 0;
             img.Xpad = 6;
             
-            switch ( icon )
-            {
-                case "Authentication":  
-                    img.Stock = Stock.DialogAuthentication;
-                    break;
-                case "Error":  
-                    img.Stock = Stock.DialogError;
-                    break;
-                case "Info":  
-                    img.Stock = Stock.DialogInfo;
-                    break;
-                case "Question":  
-                    img.Stock = Stock.DialogQuestion;
-                    break;
-                case "Warning":  
-                    img.Stock = Stock.DialogWarning;
-                    break;
-            }
-
             Label headerLabel = new Label ();
             headerLabel.Markup = String.Format ( "<span size=\"large\" weight=\"bold\">{0}</span>", header );
             headerLabel.Xalign = 0;
@@ -75,35 +57,35 @@ namespace Dialogs
             messageLabel.Xalign = 0;
             messageLabel.Ypad = 12;
             messageLabel.Selectable = true;
-           
+            
             Contents = new VBox ();
             Contents.Add ( headerLabel );
             Contents.Add ( messageLabel );
             
             Box.BoxChild bc0 = ( ( Box.BoxChild ) ( Contents [ headerLabel ] ) );
             bc0.Expand = false;
-
+            
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( Contents [ messageLabel ] ) );
             bc4.Expand = false;
             
             HBox hbox = new HBox ();
             hbox.Add ( img );
             hbox.Add ( Contents );
-           
+            
             Box.BoxChild bc1 = ( ( Box.BoxChild ) ( hbox [ img ] ) );
             bc1.Expand = false;
-           
+            
             Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ Contents ] ) );
             bc2.Padding = 6;
             bc2.Expand = false;
-           
+            
             this.VBox.Add ( hbox );
             
             Box.BoxChild bc3 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
             bc3.Padding = 5;
             
             this.VBox.ShowAll ();
-
+            
         }
         
         
