@@ -479,7 +479,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            Version = "2.1.0.101";
+            Version = "2.1.0.119";
         }
         else if ( MajorVersion == 1 )
         {
