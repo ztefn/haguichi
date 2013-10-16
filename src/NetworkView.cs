@@ -132,15 +132,15 @@ public class NetworkView : TreeView
                                 typeof ( string ) );    // Sortable status
         
         filter = new TreeModelFilter ( store , null );
-        filter.VisibleFunc = new Gtk.TreeModelFilterVisibleFunc ( FilterOfflineMembers );
+        filter.VisibleFunc = new TreeModelFilterVisibleFunc ( FilterOfflineMembers );
         
         if ( ( bool ) Config.Settings.ShowOfflineMembers.Value )
         {
-            sortedStore = new Gtk.TreeModelSort ( store );
+            sortedStore = new TreeModelSort ( store );
         }
         else
         {
-            sortedStore = new Gtk.TreeModelSort ( filter );
+            sortedStore = new TreeModelSort ( filter );
         }
         
         this.Model = sortedStore;
@@ -584,11 +584,11 @@ public class NetworkView : TreeView
         
         if ( boolean )
         {
-            sortedStore = new Gtk.TreeModelSort ( filter );
+            sortedStore = new TreeModelSort ( filter );
         }
         else
         {
-            sortedStore = new Gtk.TreeModelSort ( store );
+            sortedStore = new TreeModelSort ( store );
         }
         
         this.Model = sortedStore;
@@ -615,7 +615,7 @@ public class NetworkView : TreeView
     }
     
     
-    private bool FilterOfflineMembers ( Gtk.TreeModel model, Gtk.TreeIter iter )
+    private bool FilterOfflineMembers ( TreeModel model, TreeIter iter )
     {
 
         int status = ( int ) model.GetValue ( iter, statusColumn );
