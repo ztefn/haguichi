@@ -77,17 +77,16 @@ public class CommandsEditor : VBox
                                 typeof ( string     ),     // IPv6 command
                                 typeof ( string     ),     // Priority
                                 typeof ( string     ) );   // View
-
+        
         tv = new TreeView (store);
-
+        
         iconCell = new CellRendererPixbuf ();
         
         textCell = new CellRendererText ();
-
+        
         toggleCell = new CellRendererToggle ();
         toggleCell.Activatable = true;
         toggleCell.Xpad = 6;
-        //toggleCell.Ypad = 6;
         toggleCell.Toggled += EnableCommandToggled;
         
         
@@ -108,7 +107,8 @@ public class CommandsEditor : VBox
         
         column2.AddAttribute ( iconCell, "pixbuf", iconPixColumn );
         column2.AddAttribute ( textCell, "text", labelColumn );
- 
+
+        
         Label label = new Label ( TextStrings.customizeCommands + "  " );
         label.Xalign = 0;
         label.Xpad = 3;
@@ -117,7 +117,7 @@ public class CommandsEditor : VBox
         
         tv.AppendColumn ( column1 );
         tv.AppendColumn ( column2 );
-
+        
         tv.HeadersVisible = false;
         tv.RulesHint = true;
         tv.Reorderable = true;
@@ -129,10 +129,10 @@ public class CommandsEditor : VBox
         tv.RowActivated += OnRowActivate;
         
         ScrolledWindow sw = new ScrolledWindow ();
-           
-        //sw.BorderWidth = 6;
-        sw.ShadowType = ShadowType.Out;
-        sw.Add (tv);
+        sw.HscrollbarPolicy = PolicyType.Never;
+        sw.VscrollbarPolicy = PolicyType.Automatic;
+        sw.ShadowType = ShadowType.In;
+        sw.Add ( tv );
         sw.Show ();
         
         
@@ -159,23 +159,14 @@ public class CommandsEditor : VBox
         downBut.TooltipText = TextStrings.moveDownTip;
         downBut.Clicked += MoveDown;
         
-        HButtonBox buttonBox = new HButtonBox ();
-        //buttonBox.Add ( defaultBut );
-        buttonBox.Add ( revertBut );
-        buttonBox.Layout = ButtonBoxStyle.Start;
-        buttonBox.Spacing = 6;
+        HButtonBox hbutBox = new HButtonBox ();
+        hbutBox.Add ( revertBut );
+        hbutBox.Layout = ButtonBoxStyle.Start;
+        hbutBox.Spacing = 6;
         
         vbox = new VBox ();
-        //vbox.Add ( label );
-        vbox.Add ( sw );
-        vbox.Add ( buttonBox );
-        
-        //Box.BoxChild bc1 = ( ( Box.BoxChild ) ( vbox [ sw ] ) );
-        //bc1.Padding = 6;
-        
-        Box.BoxChild bc2 = ( ( Box.BoxChild ) ( vbox [ buttonBox ] ) );
-        bc2.Padding = 6;
-        bc2.Expand = false;
+        vbox.PackStart ( sw, true, true, 0 );
+        vbox.PackStart ( hbutBox, false, false, 6 );
         
         
         HBox updown = new HBox ();
@@ -183,33 +174,21 @@ public class CommandsEditor : VBox
         updown.Add ( downBut );
         updown.Spacing = 6;
         
-        VButtonBox updownBox = new VButtonBox ();
-        updownBox.Add ( addBut );
-        updownBox.Add ( editBut );
-        updownBox.Add ( removeBut );
-        updownBox.Add ( defaultBut );
-        updownBox.Add ( updown );
-        updownBox.Layout = ButtonBoxStyle.Start;
-        updownBox.Spacing = 6;
+        VButtonBox vbutBox = new VButtonBox ();
+        vbutBox.Add ( addBut );
+        vbutBox.Add ( editBut );
+        vbutBox.Add ( removeBut );
+        vbutBox.Add ( defaultBut );
+        vbutBox.Add ( updown );
+        vbutBox.Layout = ButtonBoxStyle.Start;
+        vbutBox.Spacing = 6;
         
         HBox hbox = new HBox ();
+        hbox.PackStart ( vbox, true, true, 3 );
+        hbox.PackStart ( vbutBox, false, false, 3 );
         
-        hbox.Add ( vbox );
-        hbox.Add ( updownBox );
-        
-        Box.BoxChild bc5 = ( ( Box.BoxChild ) ( hbox [ vbox ] ) );
-        bc5.Padding = 3;
-        
-        this.Add ( label );
-        this.Add ( hbox );
-        
-        Box.BoxChild bc3 = ( ( Box.BoxChild ) ( this [ label ] ) );
-        bc3.Expand = false;
-        
-        Box.BoxChild bc4 = ( ( Box.BoxChild ) ( hbox [ updownBox ] ) );
-        bc4.Padding = 3;
-        bc4.Expand = false;
-        
+        this.PackStart ( label, false, false, 0 );
+        this.PackStart ( hbox, true, true, 0 );
         this.BorderWidth = 9;
         
         Fill ();
