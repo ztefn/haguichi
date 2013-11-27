@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2013-03-13 19:34+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-11-23 10:36+0000\n"
+"Last-Translator: Atanas Kovachki <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-03-14 19:41+0000\n"
-"X-Generator: Launchpad (build 16532)\n"
+"X-Launchpad-Export-Date: 2013-11-27 19:56+0000\n"
+"X-Generator: Launchpad (build 16847)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -387,34 +387,32 @@ msgid "Account not found"
 msgstr "Акаунтът не е намерен"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "Н_астройки"
+msgstr "Ко_нфигурация"
 
 #: ../src/TextStrings.cs:476
-#, fuzzy
 msgid "_Open Folder"
-msgstr "Избор на папка"
+msgstr "_Отвори папката"
 
 #: ../src/TextStrings.cs:477
 msgid "_Save a Backup..."
-msgstr ""
+msgstr "_Запиши резервно копие..."
 
 #: ../src/TextStrings.cs:478
 msgid "Save a Backup"
-msgstr ""
+msgstr "Запиши резервно копие"
 
 #: ../src/TextStrings.cs:479
 msgid "_Restore from Backup..."
-msgstr ""
+msgstr "_Възстанови от резервно копие..."
 
 #: ../src/TextStrings.cs:480
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Възстанови от резервно копие"
 
 #: ../src/TextStrings.cs:481
 msgid "_Restore"
-msgstr ""
+msgstr "_Възстанови"
 
 #: ../src/TextStrings.cs:482
 msgid "Could not restore configuration"
@@ -426,7 +424,7 @@ msgstr ""
 
 #: ../src/TextStrings.cs:484
 msgid "All supported archives"
-msgstr ""
+msgstr "Всички поддържани архиви"
 
 #: ../src/TextStrings.cs:486
 msgid "_Join Network..."
@@ -553,7 +551,8 @@ msgstr ""
 "от мрежата „{1}“?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: ../src/TextStrings.cs:521
@@ -880,6 +879,9 @@ msgstr[1] "{0} напусна мрежата {1} и {2} други мрежи"
 
 #~ msgid "You are not the owner of network '{0}'."
 #~ msgstr "Вие не сте собственикът на мрежата '{0}'."
+
+#~ msgid "Choose Folder"
+#~ msgstr "Избор на папка"
 
 #~ msgid "Do you want to run tuncfg?"
 #~ msgstr "Искате ли да стартирате tuncfg?"
