@@ -69,6 +69,9 @@ Options:
     public static string [] appDocumenters       = new string [] { "" };
     public const  string    appTranslatorCredits =
 @"
+Asturianu (ast)
+    Tornes Llume <l-lumex03-tornes>
+
 Български (bg)
     Dimitar Dimitrov <dimitrov>
 

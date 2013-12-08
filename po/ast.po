@@ -1,0 +1,856 @@
+# Asturian translation for haguichi
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the haguichi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: haguichi\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2013-12-06 21:48+0000\n"
+"Last-Translator: Ḷḷumex03 <l.lumex03.tornes@gmail.com>\n"
+"Language-Team: Asturian <ast@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2013-12-08 14:24+0000\n"
+"X-Generator: Launchpad (build 16869)\n"
+
+#. Description used in about dialog.
+#: ../src/TextStrings.cs:364
+msgid "A graphical frontend for Hamachi."
+msgstr "Una interfaz gráfica p'Hamachi."
+
+#. Description used in application launchers.
+#: ../src/TextStrings.cs:365
+msgid "Join and create local networks over the Internet"
+msgstr "Xúnite ya cria redes llocales na rede"
+
+#: ../src/TextStrings.cs:367
+msgid "_Show Haguichi"
+msgstr "_Amosar Haguichi"
+
+#: ../src/TextStrings.cs:369
+msgid "Yes"
+msgstr "Sí"
+
+#: ../src/TextStrings.cs:370
+msgid "No"
+msgstr "Non"
+
+#: ../src/TextStrings.cs:372
+msgid "_Hamachi output"
+msgstr "_Salida de Hamachi"
+
+#: ../src/TextStrings.cs:374
+msgid "IPv4 address:"
+msgstr "Direición IPv4:"
+
+#: ../src/TextStrings.cs:375
+msgid "IPv6 address:"
+msgstr "Direición IPv6:"
+
+#: ../src/TextStrings.cs:376
+msgid "ID:"
+msgstr "ID:"
+
+#: ../src/TextStrings.cs:377
+msgid "Client ID:"
+msgstr "ID veceru:"
+
+#: ../src/TextStrings.cs:378
+msgid "Network ID:"
+msgstr "ID rede:"
+
+#: ../src/TextStrings.cs:379
+msgid "Status:"
+msgstr "Estáu:"
+
+#: ../src/TextStrings.cs:380
+msgid "Tunnel:"
+msgstr "Túnel:"
+
+#: ../src/TextStrings.cs:381
+msgid "Connection:"
+msgstr "Conexón:"
+
+#: ../src/TextStrings.cs:382
+msgid "Direct"
+msgstr "Direutu"
+
+#: ../src/TextStrings.cs:383
+msgid "Relayed"
+msgstr "Retresmitíu"
+
+#: ../src/TextStrings.cs:384
+msgid "Anonymous"
+msgstr "Anónimu"
+
+#: ../src/TextStrings.cs:385
+msgid "_Nickname:"
+msgstr "_Alcuñu"
+
+#: ../src/TextStrings.cs:387
+msgid "_Name:"
+msgstr "_Nome:"
+
+#: ../src/TextStrings.cs:388
+msgid "_Password:"
+msgstr "_Conseña"
+
+#: ../src/TextStrings.cs:389
+msgid "Version:"
+msgstr "Versión:"
+
+#: ../src/TextStrings.cs:391
+msgid "Offline"
+msgstr "Fuera llinia"
+
+#: ../src/TextStrings.cs:392
+msgid "Online"
+msgstr "En llinia"
+
+#: ../src/TextStrings.cs:393
+msgid "Unreachable"
+msgstr "Nun pue algamase"
+
+#: ../src/TextStrings.cs:394
+msgid "Protocol mismatch"
+msgstr "Incoherencia de protocolu"
+
+#: ../src/TextStrings.cs:395
+msgid "Conflicting address"
+msgstr "Direición en conflictu"
+
+#: ../src/TextStrings.cs:396
+msgid "Connected"
+msgstr "Coneutáu"
+
+#: ../src/TextStrings.cs:397
+msgid "Disconnected"
+msgstr "Desconectáu"
+
+#: ../src/TextStrings.cs:398
+msgid "Connecting..."
+msgstr "En coneutando..."
+
+#: ../src/TextStrings.cs:399
+msgid "Logging in..."
+msgstr "N'aniciando sesión..."
+
+#: ../src/TextStrings.cs:400
+msgid "Updating..."
+msgstr "N'anovando..."
+
+#. Please use the same text and shortcut as the stock connect button.
+#: ../src/TextStrings.cs:402
+msgid "C_onnect (%S)"
+msgstr "C_oneutar (%S)"
+
+#: ../src/TextStrings.cs:403
+msgid "Connect a_utomatically"
+msgstr "Coneutar a_utomáticamente"
+
+#: ../src/TextStrings.cs:405
+msgid "Hamachi is not configured"
+msgstr "Hamachi nun ta configuráu"
+
+#: ../src/TextStrings.cs:406
+msgid "You need to configure Hamachi before you can connect."
+msgstr "Necesites configurar Hamachi enantes de poder coneutate."
+
+#: ../src/TextStrings.cs:407
+msgid "C_onfigure"
+msgstr "C_onfigurar"
+
+#: ../src/TextStrings.cs:409
+msgid "Hamachi is not installed"
+msgstr "Hamachi nun ta instaláu"
+
+#: ../src/TextStrings.cs:410
+msgid "Please download Hamachi and follow the installation instructions."
+msgstr "Por favor, baxa Hamachi ya sigui les intrucciones d'instalación."
+
+#: ../src/TextStrings.cs:411
+msgid "Hamachi version {0} is obsolete"
+msgstr "La version {0} de Hamachi ye pervieya"
+
+#: ../src/TextStrings.cs:412
+msgid "Please download and install the latest Hamachi version."
+msgstr "Por favor, baxa ya instala la cabera versión de Hamachi."
+
+#: ../src/TextStrings.cs:413
+msgid "_Download"
+msgstr "_Baxar"
+
+#: ../src/TextStrings.cs:415
+msgid "Members:"
+msgstr "Miembros:"
+
+#: ../src/TextStrings.cs:416
+msgid "{0} online, {1} total"
+msgstr "{0} en llinia, {1} en total"
+
+#: ../src/TextStrings.cs:417
+msgid "Owner:"
+msgstr "Propietariu:"
+
+#: ../src/TextStrings.cs:418
+msgid "You"
+msgstr "Tu"
+
+#: ../src/TextStrings.cs:419
+msgid "Unknown"
+msgstr "Desconocíu"
+
+#: ../src/TextStrings.cs:420
+msgid "Unavailable"
+msgstr "Non disponible"
+
+#: ../src/TextStrings.cs:421
+msgid "Awaiting approval"
+msgstr "N'asperando pola aprobación"
+
+#: ../src/TextStrings.cs:422
+msgid "Locked:"
+msgstr "Peslláu"
+
+#: ../src/TextStrings.cs:423
+msgid "Approval:"
+msgstr "Aprobación:"
+
+#: ../src/TextStrings.cs:424
+msgid "Manually"
+msgstr "Manualmente"
+
+#: ../src/TextStrings.cs:425
+msgid "Automatically"
+msgstr "Automáticamente"
+
+#: ../src/TextStrings.cs:426
+msgid "Capacity:"
+msgstr "Capacidá:"
+
+#: ../src/TextStrings.cs:428
+msgid "_Client"
+msgstr "_Veceru"
+
+#: ../src/TextStrings.cs:429
+msgid "_Edit"
+msgstr "_Editar"
+
+#: ../src/TextStrings.cs:430
+msgid "_View"
+msgstr "_Ver"
+
+#: ../src/TextStrings.cs:431
+msgid "_Help"
+msgstr "_Aida"
+
+#: ../src/TextStrings.cs:433
+msgid "_Online Help"
+msgstr "_Aida en llinia"
+
+#: ../src/TextStrings.cs:435
+msgid "_Go Online"
+msgstr "_Ponese en llinia"
+
+#: ../src/TextStrings.cs:436
+msgid "_Go Offline"
+msgstr "_Ponese fuera de llinia"
+
+#: ../src/TextStrings.cs:437
+msgid "_Leave"
+msgstr "_Colar"
+
+#: ../src/TextStrings.cs:438
+msgid "_Locked"
+msgstr "_Bloquiáu"
+
+#: ../src/TextStrings.cs:439
+msgid "_New Member Approval"
+msgstr "_aprobación de miembru nuevu"
+
+#: ../src/TextStrings.cs:440
+msgid "_Automatically"
+msgstr "_Automáticamente"
+
+#: ../src/TextStrings.cs:441
+msgid "_Manually"
+msgstr "_Manualmente"
+
+#: ../src/TextStrings.cs:442
+msgid "_Copy Network ID"
+msgstr "Copiar ID de rede"
+
+#: ../src/TextStrings.cs:444
+msgid "_Browse Shares"
+msgstr "_Restolar compartíos"
+
+#: ../src/TextStrings.cs:445
+msgid "_Ping"
+msgstr "_Ping"
+
+#: ../src/TextStrings.cs:446
+msgid "_View Remote Desktop"
+msgstr "_Ver escritoriu remotu"
+
+#: ../src/TextStrings.cs:447
+msgid "_Approve"
+msgstr "_Aprovar"
+
+#: ../src/TextStrings.cs:448
+msgid "_Reject"
+msgstr "_Refugar"
+
+#. This action removes the selected member from the network.
+#: ../src/TextStrings.cs:449
+msgid "_Evict"
+msgstr "_Desallugar"
+
+#: ../src/TextStrings.cs:450
+msgid "Copy IPv_4 Address"
+msgstr "Copiar direición IPv_4"
+
+#: ../src/TextStrings.cs:451
+msgid "Copy IPv_6 Address"
+msgstr "Copiar direición IPv_6"
+
+#: ../src/TextStrings.cs:452
+msgid "_Copy Client ID"
+msgstr "_Copiar ID de veceru"
+
+#: ../src/TextStrings.cs:454
+msgid "Change _Nickname..."
+msgstr "Camudar _alcuñu"
+
+#: ../src/TextStrings.cs:455
+msgid "Change Nickname"
+msgstr "Camudar alcuñu"
+
+#: ../src/TextStrings.cs:456
+msgid "Please enter the nickname you want to use."
+msgstr "Por favor, introduz l'alcuñu que quieras usar."
+
+#: ../src/TextStrings.cs:457
+msgid "C_hange"
+msgstr "C_amudar"
+
+#: ../src/TextStrings.cs:458
+msgid "Click to change your nickname"
+msgstr "Primi pa camudar l'alcuñu to"
+
+#: ../src/TextStrings.cs:460
+msgid "Change _Password..."
+msgstr "Camudar _conseña..."
+
+#: ../src/TextStrings.cs:461
+msgid "Change Password"
+msgstr "Camudar conseña"
+
+#: ../src/TextStrings.cs:462
+msgid "Please enter the new password for this network."
+msgstr "Por favor, introduz una conseña nueva pa esta rede."
+
+#: ../src/TextStrings.cs:464
+msgid "_Account:"
+msgstr "_Cuenta:"
+
+#: ../src/TextStrings.cs:467
+msgid "_Attach to Account..."
+msgstr "_Axuntar a la cuenta..."
+
+#: ../src/TextStrings.cs:468
+msgid "Attach to Account"
+msgstr "Axuntar a la cuenta"
+
+#: ../src/TextStrings.cs:469
+msgid "Please enter the account you want to attach this client to."
+msgstr "Por favor introduz la cuenta que quies axuntar a esti veceru."
+
+#: ../src/TextStrings.cs:470
+msgid "_Include all networks created by this client"
+msgstr "_Incluyir toles redes creaes per esti veceru"
+
+#: ../src/TextStrings.cs:471
+msgid "_Attach"
+msgstr "_Axuntar"
+
+#: ../src/TextStrings.cs:472
+msgid "Attaching..."
+msgstr "N'axuntando..."
+
+#: ../src/TextStrings.cs:473
+msgid "Account not found"
+msgstr "Cuenta non alcontrada"
+
+#: ../src/TextStrings.cs:475
+msgid "Config_uration"
+msgstr "Config_uración"
+
+#: ../src/TextStrings.cs:476
+msgid "_Open Folder"
+msgstr "_Abrir Carpeta"
+
+#: ../src/TextStrings.cs:477
+msgid "_Save a Backup..."
+msgstr "_Atroxar una copia de seguranza..."
+
+#: ../src/TextStrings.cs:478
+msgid "Save a Backup"
+msgstr "Atroxar una copia de seguranza"
+
+#: ../src/TextStrings.cs:479
+msgid "_Restore from Backup..."
+msgstr "_Restaurar dende una copia de seguranza..."
+
+#: ../src/TextStrings.cs:480
+msgid "Restore from Backup"
+msgstr "Restaurar dende una copia de seguranza"
+
+#: ../src/TextStrings.cs:481
+msgid "_Restore"
+msgstr "_Restaurar"
+
+#: ../src/TextStrings.cs:482
+msgid "Could not restore configuration"
+msgstr "Nun pudo restaurase la configuración"
+
+#: ../src/TextStrings.cs:483
+msgid "Archive does not contain expected files."
+msgstr "L'archivu nun caltién los ficheros asperaos."
+
+#: ../src/TextStrings.cs:484
+msgid "All supported archives"
+msgstr "Tolos ficheros sofitaos"
+
+#: ../src/TextStrings.cs:486
+msgid "_Join Network..."
+msgstr "_Xunise a la rede..."
+
+#: ../src/TextStrings.cs:487
+msgid "Join Network"
+msgstr "Xunise a la rede"
+
+#: ../src/TextStrings.cs:488
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to join."
+msgstr ""
+"Por favor, introduz el nome ya conseña pa la\n"
+"rede a la que quies xunite."
+
+#: ../src/TextStrings.cs:489
+msgid "_Join"
+msgstr "_Xunise"
+
+#: ../src/TextStrings.cs:490
+msgid "Joining..."
+msgstr "En xuniendose..."
+
+#: ../src/TextStrings.cs:492
+msgid "_Create Network..."
+msgstr "_Crear rede..."
+
+#: ../src/TextStrings.cs:493
+msgid "Create Network"
+msgstr "Crear Rede"
+
+#: ../src/TextStrings.cs:494
+msgid ""
+"Please enter the name and password for the\n"
+"network you want to create."
+msgstr ""
+"Por favor, introduz el nome ya conseña pa la\n"
+"rede que quies crear."
+
+#: ../src/TextStrings.cs:495
+msgid "C_reate"
+msgstr "C_rear"
+
+#: ../src/TextStrings.cs:496
+msgid "Creating..."
+msgstr "En creando..."
+
+#: ../src/TextStrings.cs:498
+msgid "Network not found"
+msgstr "Rede non alcontrada"
+
+#: ../src/TextStrings.cs:499
+msgid "Invalid password"
+msgstr "Conseña inválida"
+
+#: ../src/TextStrings.cs:500
+msgid "Network is full"
+msgstr "La rede ta enllena"
+
+#: ../src/TextStrings.cs:501
+msgid "Network is locked"
+msgstr "La rede ta bloquiada"
+
+#: ../src/TextStrings.cs:502
+msgid "Network already joined"
+msgstr "Rede xá xunida"
+
+#: ../src/TextStrings.cs:503
+msgid "Unknown error"
+msgstr "Erru desconocíu"
+
+#: ../src/TextStrings.cs:504
+msgid "Network name too short"
+msgstr "El viesu la rede ye percurtiu"
+
+#: ../src/TextStrings.cs:505
+msgid "Network name is already taken"
+msgstr "El viesu la rede xá ta coyíu"
+
+#: ../src/TextStrings.cs:507
+msgid "Join request sent"
+msgstr "Petición de xunión dunviada"
+
+#: ../src/TextStrings.cs:509
+msgid "Preferences"
+msgstr "Preferencies"
+
+#: ../src/TextStrings.cs:510
+msgid "Information"
+msgstr "Información"
+
+#: ../src/TextStrings.cs:512
+msgid ""
+"Are you sure you want to delete the\n"
+"network \"{0}\"?"
+msgstr "¿De xuru quies esniciar la rede {0}?"
+
+#: ../src/TextStrings.cs:513
+msgid "If you delete a network, it will be permanently lost."
+msgstr "Si esnicies una rede, perderáse dafechu."
+
+#: ../src/TextStrings.cs:515
+msgid ""
+"Are you sure you want to leave the\n"
+"network \"{0}\"?"
+msgstr ""
+"¿De xuru quies colar de la rede\n"
+"{0}?"
+
+#: ../src/TextStrings.cs:516
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr "Si t'almiten, pues xunite otra vegada cuando te pete."
+
+#: ../src/TextStrings.cs:518
+msgid ""
+"Are you sure you want to evict member \"{0}\"\n"
+"from network \"{1}\"?"
+msgstr ""
+"¿De xuru quies desallugar al miembru \"{0}\"\n"
+"de la rede \"{1}\"?"
+
+#: ../src/TextStrings.cs:519
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr ""
+"Si s'almite, los miembros desallugaos puen xunise otra vegada a la rede "
+"cuando-yos pete."
+
+#: ../src/TextStrings.cs:521
+msgid "Could not delete network \"{0}\""
+msgstr "Nun pue esniciase la rede \"{0}\""
+
+#: ../src/TextStrings.cs:522
+msgid "Could not leave network \"{0}\""
+msgstr "Nun pue colase de la rede \"{0}\""
+
+#: ../src/TextStrings.cs:523
+msgid "Could not evict member \"{0}\""
+msgstr "Nun pue desallugase'l miembru \"{0}\""
+
+#: ../src/TextStrings.cs:524
+msgid ""
+"Could not go online in the\n"
+"network \"{0}\""
+msgstr ""
+"Nun pudo ponese en llinia\n"
+"na rede \"{0}\""
+
+#: ../src/TextStrings.cs:525
+msgid ""
+"Could not go offline in the\n"
+"network \"{0}\""
+msgstr ""
+"Nun pudo ponese fuera llinia\n"
+"na rede \"{0}\""
+
+#: ../src/TextStrings.cs:527
+msgid "See output for details."
+msgstr "Ver salida pa más detalles."
+
+#: ../src/TextStrings.cs:529
+msgid "General"
+msgstr "Xeneral"
+
+#. In this context meaning "work environment".
+#: ../src/TextStrings.cs:530
+msgid "Desktop"
+msgstr "Escritoriu"
+
+#: ../src/TextStrings.cs:531
+msgid "Commands"
+msgstr "Comandos"
+
+#: ../src/TextStrings.cs:533
+msgid "Notification Area"
+msgstr "Estaya de notificación"
+
+#: ../src/TextStrings.cs:534
+msgid "Behavior"
+msgstr "Comportamientu"
+
+#: ../src/TextStrings.cs:536
+msgid "_Protocol:"
+msgstr "_Protocolu:"
+
+#: ../src/TextStrings.cs:537
+msgid "Both IPv4 and IPv6"
+msgstr "Entrambos IPv4 ya IPv6"
+
+#: ../src/TextStrings.cs:538
+msgid "IPv4 only"
+msgstr "Solo IPv4"
+
+#: ../src/TextStrings.cs:539
+msgid "IPv6 only"
+msgstr "Solo IPv6"
+
+#: ../src/TextStrings.cs:541
+msgid "_Update Network List"
+msgstr "_Anovar llista de redes"
+
+#: ../src/TextStrings.cs:542
+msgid "Show Alt_ernating Row Colors"
+msgstr "Amosar fil_era de colores alternante"
+
+#: ../src/TextStrings.cs:543
+msgid "_Compact Layout"
+msgstr "Diseñu _compautu"
+
+#: ../src/TextStrings.cs:544
+msgid "_Large Layout"
+msgstr "Diseñu _estendíu"
+
+#: ../src/TextStrings.cs:545
+msgid "Show _Offline Members"
+msgstr "Amosar _miembros fuera de llinia"
+
+#: ../src/TextStrings.cs:546
+msgid "Sort by _Name"
+msgstr "Ordenar per _Nome"
+
+#: ../src/TextStrings.cs:547
+msgid "Sort by _Status"
+msgstr "Ordenar per _estáu"
+
+#: ../src/TextStrings.cs:548
+msgid "St_atusbar"
+msgstr "B_arra d'estáu"
+
+#: ../src/TextStrings.cs:550
+msgid "_Show Haguichi in the notification area"
+msgstr "_Amosar Haguichi na estaya de notificación"
+
+#: ../src/TextStrings.cs:551
+msgid "Start Haguichi _minimized in the notification area"
+msgstr "Aniciar Haguichi _minimizáu na estaya de notificación"
+
+#: ../src/TextStrings.cs:553
+msgid "C_onnect automatically on startup"
+msgstr "C_oneutase automáticamente"
+
+#: ../src/TextStrings.cs:554
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "_Reconeutase automáticamente cuando se pierda la conexón"
+
+#: ../src/TextStrings.cs:555
+msgid "_Disconnect on quit"
+msgstr "_Desconeutase al colar"
+
+#: ../src/TextStrings.cs:557
+msgid "Display notification when the connection is l_ost"
+msgstr "Amosar notificación cuando se pierda la c_onexón"
+
+#: ../src/TextStrings.cs:558
+msgid "Display notification when a member _joins"
+msgstr "Amosar notificación cuando se xuna un m_iembru"
+
+#: ../src/TextStrings.cs:559
+msgid "Display notification when a member _leaves"
+msgstr "Amosar notificación cuando cole un m_iembru"
+
+#: ../src/TextStrings.cs:560
+msgid "Display notification when a member comes o_nline"
+msgstr "Amosar notificación cuando tea en llinia un m_iembru"
+
+#: ../src/TextStrings.cs:561
+msgid "Display notification when a member goes o_ffline"
+msgstr "Amosar notificación cuando tea fuera de llinia un m_iembru"
+
+#: ../src/TextStrings.cs:563
+msgid "Error connecting"
+msgstr "Erru al coneutar"
+
+#: ../src/TextStrings.cs:564
+msgid "Hamachi login failed"
+msgstr "Fallu d'aniciu de sesión d'Hamachi"
+
+#: ../src/TextStrings.cs:565
+msgid "No internet connection"
+msgstr "Ensin conexóna internet"
+
+#: ../src/TextStrings.cs:567
+msgid "Hamachi lost connection"
+msgstr "Hamachi perdió la conexón"
+
+#: ../src/TextStrings.cs:568
+msgid "Member online"
+msgstr "Miembru en llinia"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
+#: ../src/TextStrings.cs:569
+msgid "{0} came online in the network {1}"
+msgstr "{0} púsose en llinia na rede {1}"
+
+#: ../src/TextStrings.cs:570
+msgid "Member offline"
+msgstr "Miembru fuera de llinia"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
+#: ../src/TextStrings.cs:571
+msgid "{0} went offline in the network {1}"
+msgstr "{0} púsose fuera de llinia na rede {1}"
+
+#: ../src/TextStrings.cs:572
+msgid "Member joined"
+msgstr "Miembru xuníu"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet".
+#: ../src/TextStrings.cs:573
+msgid "{0} joined the network {1}"
+msgstr "{0} xunióse a la rede {1}"
+
+#: ../src/TextStrings.cs:574
+msgid "Member left"
+msgstr "El miembru coló"
+
+#. Notification bubble. For example: "T-800 left the network Skynet".
+#: ../src/TextStrings.cs:575
+msgid "{0} left the network {1}"
+msgstr "{0} colo de la rede {1}"
+
+#: ../src/TextStrings.cs:577
+msgid "A_vailable commands:"
+msgstr "C_omandos disponibles:"
+
+#: ../src/TextStrings.cs:578
+msgid "Command"
+msgstr "Comandu"
+
+#: ../src/TextStrings.cs:579
+msgid "Available"
+msgstr "Disponible"
+
+#: ../src/TextStrings.cs:581
+msgid "Add Command"
+msgstr "Amestar comandu"
+
+#: ../src/TextStrings.cs:582
+msgid "Edit Command"
+msgstr "Editar comandu"
+
+#: ../src/TextStrings.cs:583
+msgid "_Label:"
+msgstr "_Etiqueta"
+
+#: ../src/TextStrings.cs:584
+msgid "IPv_4 command:"
+msgstr "Comandu IPv_4:"
+
+#: ../src/TextStrings.cs:585
+msgid "IPv_6 command:"
+msgstr "Comandu IPv_6:"
+
+#: ../src/TextStrings.cs:586
+msgid "Use %A for address and %N for nickname"
+msgstr "Usa %A pa la direición ya %N pal alcuñu"
+
+#: ../src/TextStrings.cs:587
+msgid "_Priority:"
+msgstr "_Prioridá:"
+
+#: ../src/TextStrings.cs:589
+msgid "Click to choose an icon"
+msgstr "Primi pa esbillar un iconu"
+
+#: ../src/TextStrings.cs:590
+msgid "_No Icon"
+msgstr "_Ensin iconu"
+
+#: ../src/TextStrings.cs:592
+msgid "Default"
+msgstr "Per defeutu"
+
+#: ../src/TextStrings.cs:593
+msgid "_Default"
+msgstr "_Per defeutu"
+
+#: ../src/TextStrings.cs:595
+msgid "Are you sure you want to revert all changes?"
+msgstr "¿De xuru quies reaniciar toles camudancies?"
+
+#: ../src/TextStrings.cs:596
+msgid "If you revert all changes, the default commands will be restored."
+msgstr ""
+"Si reanicies toles camudancies, restauraránse tolos comandos per defeutu."
+
+#: ../src/TextStrings.cs:598
+msgid "Move up"
+msgstr "Xubir"
+
+#: ../src/TextStrings.cs:599
+msgid "Move down"
+msgstr "Baxar"
+
+#: ../src/TextStrings.cs:607
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
+msgstr[0] "_Anovar la llista de rede cada _segundu"
+msgstr[1] "_Anovar la llista de rede cada %S _segundos"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:615
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} púnxose en llinia na rede {1} ya {1} rede más"
+msgstr[1] "{0} púnxose en llinia na rede {1} ya {1} redes más"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:623
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} púnxose en llinia na rede {1} ya {1} rede más"
+msgstr[1] "{0} púnxose fuera de llinia na rede {1} ya {1} redes más"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:631
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} xunióse a la rede {1} ya {2} rede más"
+msgstr[1] "{0} xunióse a la rede {1} ya {2} redes más"
+
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+#: ../src/TextStrings.cs:639
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} coló de la rede {1} ya {2} rede más"
+msgstr[1] "{0} coló de la rede {1} ya {2} redes más"
