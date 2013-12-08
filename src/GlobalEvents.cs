@@ -390,7 +390,7 @@ public class GlobalEvents
         {
             if ( Controller.lastStatus > 4 )
             {
-                Hamachi.Logout ();
+                StopHamachi ();
             }
         }
         

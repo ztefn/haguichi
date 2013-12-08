@@ -267,34 +267,6 @@ public static class Controller
     }
     
     
-    private static bool WaitForInternet ()
-    {
-        
-        if ( numWaitForInternetCycles > 1 )
-        {
-            numWaitForInternetCycles --;
-            return false;
-        }
-        else if ( !restoreConnection )
-        {
-            numWaitForInternetCycles --;
-            return false;
-        }
-        else if ( HasInternetConnection () )
-        {
-            numWaitForInternetCycles --;
-            GlobalEvents.StartHamachi ();
-            return false;
-        }
-        else
-        {
-            Debug.Log ( Debug.Domain.Info, "Controller.WaitForInternet", "Waiting for internet connection" );
-            return true;   
-        }
-        
-    }
-    
-    
     public static void GoStartThread ()
     {
         
@@ -759,8 +731,43 @@ public static class Controller
         
         numWaitForInternetCycles ++;
         
-        uint interval = ( uint ) ( 1000 );
-        GLib.Timeout.Add ( interval, new GLib.TimeoutHandler ( WaitForInternet ) );
+        Thread thread = new Thread ( WaitForInternetCycleThread );
+        thread.Start ();
+        
+    }
+    
+    
+    private static void WaitForInternetCycleThread ()
+    {
+        
+        Thread.Sleep ( 1000 );
+        
+        if ( numWaitForInternetCycles > 1 )
+        {
+            // Do nothing
+        }
+        else if ( !restoreConnection )
+        {
+            // Do nothing
+        }
+        else if ( HasInternetConnection () )
+        {
+            Application.Invoke ( delegate
+            {
+                GlobalEvents.StartHamachi ();
+            });
+        }
+        else
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.WaitForInternetCycle", "Waiting for internet connection" );
+            
+            Application.Invoke ( delegate
+            {
+                WaitForInternetCycle ();
+            });
+        }
+        
+        numWaitForInternetCycles --;
         
     }
     
