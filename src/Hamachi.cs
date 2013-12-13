@@ -595,9 +595,11 @@ public static class Hamachi
                 output += "       " + RandomClientId () + "   Daniel                     " + RandomAddress () + "\n";
                 output += "     ! " + RandomClientId () + "   dimitrov                   " + RandomAddress () + "  alias: not set                             IP protocol mismatch between you and peer\n";
                 output += "     * " + RandomClientId () + "   enricog                    " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   Fedik                      " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     * " + RandomClientId () + "   galamarv                   " + RandomAddress () + "  alias: not set                             via relay\n";
                 output += "     * " + RandomClientId () + "   HeliosReds                 " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     ! " + RandomClientId () + "   jmb_kz                     " + RandomAddress () + "  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   Ḷḷumex03                   " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     * " + RandomClientId () + "   Raven46                    " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     * " + RandomClientId () + "   Rodrigo                    " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
