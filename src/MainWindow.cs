@@ -31,7 +31,7 @@ public class MainWindow
     public  static PanelIcon panelIcon;
     public  static Statusbar statusBar;
     
-    public  static Menus.Quick quickMenu;
+    public  static Menus.QuickMenu quickMenu;
     public  static Menus.Menubar menuBar;
     
     public  static Widgets.MessageBar messageBar;
@@ -92,7 +92,7 @@ public class MainWindow
         statusBar = new Statusbar ();
         statusBar.HasResizeGrip = true;
         
-        quickMenu = new Menus.Quick ();
+        quickMenu = new Menus.QuickMenu ();
         menuBar = new Menus.Menubar ();
         
         messageBar = new Widgets.MessageBar ();

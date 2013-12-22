@@ -325,7 +325,7 @@
     <Compile Include="src\Menus\MemberMenu.cs" />
     <Compile Include="src\Menus\Menubar.cs" />
     <Compile Include="src\Menus\NetworkMenu.cs" />
-    <Compile Include="src\Menus\Quick.cs" />
+    <Compile Include="src\Menus\QuickMenu.cs" />
     <Compile Include="src\Widgets\GroupBox.cs" />
     <Compile Include="src\Widgets\IndentHBox.cs" />
     <Compile Include="src\Dialogs\Preferences.cs" />

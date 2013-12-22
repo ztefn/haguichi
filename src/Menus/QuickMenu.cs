@@ -24,7 +24,7 @@ using Gtk;
 namespace Menus
 {
 
-    public class Quick : Menu
+    public class QuickMenu : Menu
     {
     
         private string lastMode;
@@ -40,7 +40,7 @@ namespace Menus
         private ImageMenuItem quit;
         
         
-        public Quick ()
+        public QuickMenu ()
         {
             
             accelGroup = new AccelGroup ();
