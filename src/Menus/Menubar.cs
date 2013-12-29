@@ -96,12 +96,14 @@ namespace Menus
             disconnect.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.D, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             open = new ImageMenuItem ( TextStrings.configFolderLabel );
+            open.Image = new Image ( Stock.Open, IconSize.Menu );
             open.Activated += delegate
             {
                 Command.Execute ( Command.FileManager, Hamachi.DataPath );
             };
             
             save = new ImageMenuItem ( TextStrings.configSaveLabel );
+            save.Image = new Image ( Stock.Save, IconSize.Menu );
             save.Activated += SaveBackup;
             
             restore = new ImageMenuItem ( TextStrings.configRestoreLabel );

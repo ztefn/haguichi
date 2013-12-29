@@ -28,19 +28,14 @@ namespace Menus
     public class CommandMenuItem : ImageMenuItem
     {
         
-        private string CommandIPv4;
-        private string CommandIPv6;
-        private string Priority;
-        
-        
         public CommandMenuItem ( string icon, string label, string commandIPv4, string commandIPv6, string priority ) : base ( Catalog.GetString ( label ) )
         {
             
-            this.CommandIPv4 = commandIPv4;
-            this.CommandIPv6 = commandIPv6;
-            this.Priority    = priority;
-            
-            this.Activated += new EventHandler ( Execute );
+            this.Activated += delegate
+            {
+                Member lastMember = MainWindow.networkView.lastMember;
+                Command.Execute ( Command.ReturnCustom ( lastMember, commandIPv4, commandIPv6, priority ) );            
+            };
             
             if ( icon != "none" )
             {
@@ -49,16 +44,6 @@ namespace Menus
                 
                 this.Image = img;
             }
-            
-        }
-        
-        
-        private void Execute ( object o, EventArgs args )
-        {
-            
-            Member lastMember = MainWindow.networkView.lastMember;
-            
-            Command.Execute ( Command.ReturnCustom ( lastMember, CommandIPv4, CommandIPv6, Priority ) );
             
         }
         
