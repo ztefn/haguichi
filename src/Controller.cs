@@ -259,10 +259,35 @@ public static class Controller
     public static bool HasInternetConnection ()
     {
         
-        bool success = new Ping ().Send ( IPAddress.Parse ( "8.8.8.8" ) ).Status == IPStatus.Success;
+        Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Trying ping..." );
+        bool success = new Ping ().Send ( IPAddress.Parse ( "8.8.8.8" ), 1000 ).Status == IPStatus.Success;
         
-        Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", success.ToString () );
-        return success;
+        if ( !success )
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Ping failed. Trying netcat..." );
+            success = Command.ReturnOutput ( "bash", "-c \"nc -v -w 1 8.8.8.8 53 2>&1\"" ).Contains ( "succeeded" );
+        }
+        
+        if ( !success )
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Netcat failed. Trying web request..." );
+            
+            var request = WebRequest.Create ( "http://www.google.com" );
+            request.Timeout = 1000;
+            
+            try
+            {
+                using ( var response = request.GetResponse () ) {}
+            }
+            catch
+            {
+                Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Web request failed." );
+                return false;
+            }
+        }
+        
+        Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Success." );
+        return true;
         
     }
     
@@ -740,7 +765,7 @@ public static class Controller
     private static void WaitForInternetCycleThread ()
     {
         
-        Thread.Sleep ( 1000 );
+        Thread.Sleep ( 2000 );
         
         if ( numWaitForInternetCycles > 1 )
         {
@@ -759,7 +784,7 @@ public static class Controller
         }
         else
         {
-            Debug.Log ( Debug.Domain.Info, "Controller.WaitForInternetCycle", "Waiting for internet connection" );
+            Debug.Log ( Debug.Domain.Info, "Controller.WaitForInternetCycle", "Waiting for internet connection..." );
             
             Application.Invoke ( delegate
             {
