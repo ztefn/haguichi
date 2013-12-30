@@ -136,7 +136,6 @@ namespace Menus
             
             close = new ImageMenuItem ( Stock.Close, MainWindow.accelGroup );
             close.Activated += MainWindow.Hide;
-            close.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.W, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             quit = new ImageMenuItem ( Stock.Quit, MainWindow.accelGroup );
             quit.Activated += GlobalEvents.QuitApp;
@@ -248,7 +247,7 @@ namespace Menus
             help.Image = new Image ( Stock.Help, IconSize.Menu );
             help.Activated += GlobalEvents.Help;
             help.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.F1, Gdk.ModifierType.None, AccelFlags.Visible ) );
-                    
+            
             about = new ImageMenuItem ( Stock.About, MainWindow.accelGroup );
             about.Activated += GlobalEvents.About;
             
