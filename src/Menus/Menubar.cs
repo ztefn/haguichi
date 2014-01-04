@@ -99,7 +99,7 @@ namespace Menus
             open.Image = new Image ( Stock.Open, IconSize.Menu );
             open.Activated += delegate
             {
-                Command.Execute ( Command.FileManager, Hamachi.DataPath );
+                Command.OpenURL ( Hamachi.DataPath );
             };
             
             save = new ImageMenuItem ( TextStrings.configSaveLabel );
