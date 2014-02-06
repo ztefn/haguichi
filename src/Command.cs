@@ -30,7 +30,6 @@ public static class Command
     public static string Sudo;
     public static string SudoArgs;
     public static string SudoStart;
-    public static string SudoEnd;
     
     public static string Terminal;
     public static string FileManager;
@@ -81,7 +80,6 @@ public static class Command
         Sudo      = "";
         SudoArgs  = "";
         SudoStart = "-- ";
-        SudoEnd   = "";
         
         string sudoCommand     = ( string ) Config.Settings.CommandForSuperUser.Value;
         string [] sudoCommands = { "pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "beesu", "sudo" };
@@ -110,11 +108,6 @@ public static class Command
         else if ( Sudo.StartsWith ( "gksu" ) )
         {
             SudoArgs = "--sudo-mode -D \"" + TextStrings.appName + "\" ";
-        }
-        else if ( Sudo == "beesu" )
-        {
-            SudoStart = "-c '";
-            SudoEnd   = "'";
         }
         
         Debug.Log ( Debug.Domain.Environment, "Command.DetermineSudoThread", "Command for sudo: " + Sudo );

@@ -35,7 +35,7 @@ public static class Hamachi
     public  static bool   IpModeCapable   = false;
     public  static string IpVersion       = "IPv4";
     public  static string lastInfo        = "";
-    private static string ScriptDirectory;
+    private static string Service;
     private static Random random;
     
     
@@ -45,7 +45,7 @@ public static class Hamachi
         GetInfo ();
         GetVersion ();
         MajorVersion = DetermineVersionAndCapabilities ();
-        ScriptDirectory = DetermineScriptDirectory ();
+        Service = DetermineService ();
         
     }
     
@@ -105,26 +105,30 @@ public static class Hamachi
     }
     
     
-    private static string DetermineScriptDirectory ()
+    private static string DetermineService ()
     {
         
-        ScriptDirectory = "/etc/init.d"; // Standard for most distro's
+        string service = "";
         
-        if ( Directory.Exists ( "/etc/init.d" ) )
+        if ( Command.Exists ( "systemctl" ) )
         {
-            // Ok, keep it
+            service = "systemctl {0} logmein-hamachi"; // systemd
         }
-        else if ( Directory.Exists ( "/etc/rc.d/init.d" ) )
+        else if ( Command.Exists ( "service" ) )
         {
-            ScriptDirectory = "/etc/rc.d/init.d"; // Red Hat based distro's
+            service = "service logmein-hamachi {0}"; // Upstart
         }
-        else if ( Directory.Exists ( "/etc/rc.d" ) )
+        else if ( File.Exists ( "/etc/init.d/logmein-hamachi" ) )
         {
-            ScriptDirectory = "/etc/rc.d"; // Arch, Slackware
+            service = "/etc/init.d/logmein-hamachi {0}"; // SysVinit
+        }
+        else if ( File.Exists ( "/etc/rc.d/logmein-hamachi" ) )
+        {
+            service = "/etc/rc.d/logmein-hamachi {0}"; // BSD style init
         }
         
-        Debug.Log ( Debug.Domain.Environment, "Hamachi.DetermineScriptDirectory", ScriptDirectory );
-        return ScriptDirectory;
+        Debug.Log ( Debug.Domain.Environment, "Hamachi.DetermineService", service );
+        return service;
         
     }
     
@@ -167,7 +171,7 @@ public static class Hamachi
     public static void Configure ()
     {
         
-        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> " + DataPath + "/h2-engine-override.cfg; " + ScriptDirectory + "/logmein-hamachi restart; sleep 1\"" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"echo \'Ipc.User      " + System.Environment.UserName + "\' >> " + DataPath + "/h2-engine-override.cfg; " + String.Format ( Service, "restart" ) + "; sleep 1\"" );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Configure", output );
         
     }
@@ -176,7 +180,7 @@ public static class Hamachi
     public static string Start ()
     {
         
-        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + ScriptDirectory + "/logmein-hamachi start" + Command.SudoEnd );
+        string output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + String.Format ( Service, "start" ) );
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.Start", output );
         
         Thread.Sleep ( 1000 );
@@ -853,7 +857,7 @@ public static class Hamachi
         {
             GlobalEvents.StopHamachi ();
             
-            output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"" + ScriptDirectory + "/logmein-hamachi stop; sleep 1; rm " + Hamachi.DataPath + "/*; tar -xavf '" + filename + "' -C /; " + ScriptDirectory + "/logmein-hamachi start; sleep 1\"" + Command.SudoEnd );
+            output = Command.ReturnOutput ( Command.Sudo, Command.SudoArgs + Command.SudoStart + "bash -c \"" + String.Format ( Service, "stop" ) + "; sleep 1; rm " + Hamachi.DataPath + "/*; tar -xavf '" + filename + "' -C /; " + String.Format ( Service, "start" ) + "; sleep 1\"" );
             Debug.Log ( Debug.Domain.Info, "Hamachi.RestoreBackup", output );
             
             Controller.Init ();
