@@ -311,6 +311,16 @@ public static class Controller
             });
             GoLoginThread ();
         }
+        else if ( lastStatus == 1 )
+        {
+            Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Hamachi is succesfully started, but not configured." );
+            
+            Application.Invoke ( delegate
+            {
+                GlobalEvents.ConnectionStopped ();
+                Controller.Init ();
+            });
+        }
         else if ( output != "" )
         {
             Debug.Log ( Debug.Domain.Info, "Controller.GoStartThread", "Failed to start Hamachi, showing output." );
