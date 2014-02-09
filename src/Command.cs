@@ -82,7 +82,7 @@ public static class Command
         SudoStart = "-- ";
         
         string sudoCommand     = ( string ) Config.Settings.CommandForSuperUser.Value;
-        string [] sudoCommands = { "pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "beesu", "sudo" };
+        string [] sudoCommands = { "pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "sudo" };
         
         if ( ( Array.Exists ( sudoCommands, delegate ( string s ) { return s.Equals ( sudoCommand ); } ) ) &&
              ( Exists ( sudoCommand ) ) )
