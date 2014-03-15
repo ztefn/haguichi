@@ -493,16 +493,22 @@ public class MainWindow
         nameLabel.Markup = String.Format ( "<span size=\"larger\" weight=\"bold\">{0}</span>", Markup.EscapeText ( nick ) );
         
     }
+
+
+    private static void SetIndicatorMode ( string mode )
+    {
+
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.SetMode ( mode );
+        }
+
+    }
     
     
     public static void SetMode ( string mode )
     {
-        
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.SetMode ( mode );    
-        }
-        
+
         switch ( mode )
         {
             
@@ -515,11 +521,12 @@ public class MainWindow
                 connectButton.Label = TextStrings.connectCountdown.Replace ( "%S", Controller.restoreCountdown.ToString () );
                 connectButton.Image = new Image ( Stock.Connect, IconSize.Button );
                 
+                SetIndicatorMode  ( "Disconnected" );
                 panelIcon.SetMode ( "Disconnected" );
-                statusBar.Push ( 0, TextStrings.disconnected );
-                
-                menuBar.SetMode ( "Disconnected" );
+                menuBar.SetMode   ( "Disconnected" );
                 quickMenu.SetMode ( "Disconnected" );
+                
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 break;
                 
@@ -533,11 +540,12 @@ public class MainWindow
                 connectButton.Sensitive = false;
                 connectButton.Label = TextStrings.connecting;
                 
+                SetIndicatorMode  ( mode );
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.connecting );
-                
-                menuBar.SetMode ( mode );
+                menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                statusBar.Push ( 0, TextStrings.connecting );
                 
                 break;
                 
@@ -546,11 +554,12 @@ public class MainWindow
                 disconnectedBox.Hide ();
                 connectedBox.Show ();
                 
+                SetIndicatorMode  ( mode );
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.connected );
-                
-                menuBar.SetMode ( mode );
+                menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                statusBar.Push ( 0, TextStrings.connected );
                 
                 break;
                 
@@ -562,11 +571,12 @@ public class MainWindow
                 connectButton.Sensitive = true;
                 connectButton.Label = Stock.Connect;
                 
+                SetIndicatorMode  ( mode );
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.disconnected );
-                
-                menuBar.SetMode ( mode );
+                menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 break;
                 
@@ -578,11 +588,12 @@ public class MainWindow
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
                 
+                SetIndicatorMode  ( mode );
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.disconnected );
-                
-                menuBar.SetMode ( mode );
+                menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 break;
                 
@@ -594,11 +605,12 @@ public class MainWindow
                 connectButton.Sensitive = false;
                 connectButton.Label = Stock.Connect;
                 
+                SetIndicatorMode  ( mode );
                 panelIcon.SetMode ( mode );
-                statusBar.Push ( 0, TextStrings.disconnected );
-                
-                menuBar.SetMode ( mode );
+                menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                statusBar.Push ( 0, TextStrings.disconnected );
                 
                 break;
                 

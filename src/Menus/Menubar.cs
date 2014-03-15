@@ -310,6 +310,7 @@ namespace Menus
             
             switch ( mode )
             {
+
                 case "Connecting":
                     connect.Sensitive = false;
                 
