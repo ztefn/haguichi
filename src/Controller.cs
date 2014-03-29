@@ -487,7 +487,7 @@ public static class Controller
         
         Debug.Log ( Debug.Domain.Info, "Controller.UpdateConnectionTimeout", "Number of active update cycles: " + numUpdateCycles );
         
-        if ( numUpdateCycles > 1 )
+        if ( !manualUpdate && numUpdateCycles > 1 )
         {
             numUpdateCycles --;
             return false;
@@ -549,11 +549,10 @@ public static class Controller
             if ( manualUpdate )
             {
                 manualUpdate = false;
+                numUpdateCycles ++;
             }
-            else
-            {
-                UpdateCycle (); // Continue update interval
-            }
+            
+            UpdateCycle (); // Continue update interval
             
             MainWindow.statusBar.Pop ( 0 );
             
@@ -730,11 +729,10 @@ public static class Controller
             if ( manualUpdate )
             {
                 manualUpdate = false;
+                numUpdateCycles ++;
             }
-            else
-            {
-                UpdateCycle (); // Continue update interval
-            }
+            
+            UpdateCycle (); // Continue update interval
             
             MainWindow.statusBar.Pop ( 0 );
             
