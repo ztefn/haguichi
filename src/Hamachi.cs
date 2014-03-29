@@ -43,7 +43,6 @@ public static class Hamachi
     {
         
         GetInfo ();
-        GetVersion ();
         MajorVersion = DetermineVersionAndCapabilities ();
         Service = DetermineService ();
         
@@ -55,6 +54,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
+            Version = "2.1.0.119";
             VpnAliasCapable = true;
             IpModeCapable = true;
             return 2;
@@ -77,11 +77,13 @@ public static class Hamachi
         
         if ( output.StartsWith ( "LogMeIn Hamachi, a zero-config virtual private networking utility" ) )
         {
+            Version = Retrieve ( lastInfo, "version" );
+            
             if ( Version == "" ) // Version has not been retreived from info, go extract from help
             {
                 Version = new Regex ( "LogMeIn Hamachi, a zero-config virtual private networking utility, ver (.+)" ).Match ( output ).Groups[1].ToString ();
             }
-
+            
             if ( output.Contains ( "vpn-alias" ) ) // Since version 2.1.0.68
             {
                 VpnAliasCapable = true;
@@ -93,14 +95,16 @@ public static class Hamachi
                 Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "IP mode capable" );
             }
             
-            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "LogMeIn Hamachi detected" );
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "LogMeIn Hamachi " + Version + " detected" );
             return 2;
         }
         
         if ( ( output.StartsWith ( "Hamachi, a zero-config virtual private networking utility" ) ) ||
              ( output == "" ) )
         {
-            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "Hamachi legacy detected" );
+            Version = "0.9.9.9-20";
+            
+            Debug.Log ( Debug.Domain.Hamachi, "Hamachi.DetermineVersionAndCapabilities", "Hamachi " + Version + " detected" );
             return 1;
         }
         
@@ -479,27 +483,6 @@ public static class Hamachi
         Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetNick", nick );
         
         return nick;
-        
-    }
-    
-    
-    private static void GetVersion ()
-    {
-        
-        if ( Config.Settings.DemoMode )
-        {
-            Version = "2.1.0.119";
-        }
-        else if ( MajorVersion == 1 )
-        {
-            Version = "0.9.9.9-20";
-        }
-        else
-        {
-            Version = Retrieve ( lastInfo, "version" );
-        }
-        
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetVersion", Version );
         
     }
     
