@@ -77,6 +77,11 @@ public static class Hamachi
         
         if ( output.StartsWith ( "LogMeIn Hamachi, a zero-config virtual private networking utility" ) )
         {
+            if ( Version == "" ) // Version has not been retreived from info, go extract from help
+            {
+                Version = new Regex ( "LogMeIn Hamachi, a zero-config virtual private networking utility, ver (.+)" ).Match ( output ).Groups[1].ToString ();
+            }
+
             if ( output.Contains ( "vpn-alias" ) ) // Since version 2.1.0.68
             {
                 VpnAliasCapable = true;
