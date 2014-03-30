@@ -59,30 +59,14 @@ namespace Dialogs
             messageLabel.Selectable = true;
             
             Contents = new VBox ();
-            Contents.Add ( headerLabel );
-            Contents.Add ( messageLabel );
-            
-            Box.BoxChild bc0 = ( ( Box.BoxChild ) ( Contents [ headerLabel ] ) );
-            bc0.Expand = false;
-            
-            Box.BoxChild bc4 = ( ( Box.BoxChild ) ( Contents [ messageLabel ] ) );
-            bc4.Expand = false;
+            Contents.PackStart ( headerLabel, false, false, 0 );
+            Contents.PackStart ( messageLabel, false, false, 0 );
             
             HBox hbox = new HBox ();
-            hbox.Add ( img );
-            hbox.Add ( Contents );
+            hbox.PackStart ( img, false, false, 0 );
+            hbox.PackStart ( Contents, false, false, 6 );
             
-            Box.BoxChild bc1 = ( ( Box.BoxChild ) ( hbox [ img ] ) );
-            bc1.Expand = false;
-            
-            Box.BoxChild bc2 = ( ( Box.BoxChild ) ( hbox [ Contents ] ) );
-            bc2.Padding = 6;
-            bc2.Expand = false;
-            
-            this.VBox.Add ( hbox );
-            
-            Box.BoxChild bc3 = ( ( Box.BoxChild ) ( this.VBox [ hbox ] ) );
-            bc3.Padding = 5;
+            this.VBox.PackStart ( hbox, true, true, 5 );
             
             this.VBox.ShowAll ();
             
