@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2013-05-02 23:51:59+0200\n"
-"PO-Revision-Date: 2011-10-09 20:13+0000\n"
-"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
+"POT-Creation-Date: 2013-05-02 23:51+0200\n"
+"PO-Revision-Date: 2014-03-19 00:09+0000\n"
+"Last-Translator: Erik Simmesgård <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2011-10-09 21:28+0000\n"
-"X-Generator: Launchpad (build 14110)\n"
+"X-Launchpad-Export-Date: 2014-03-30 20:36+0000\n"
+"X-Generator: Launchpad (build 16967)\n"
 
 #. Description used in about dialog.
 #: ../src/TextStrings.cs:364
@@ -73,13 +73,12 @@ msgid "Tunnel:"
 msgstr "Tunnel:"
 
 #: ../src/TextStrings.cs:381
-#, fuzzy
 msgid "Connection:"
-msgstr "Ansluter..."
+msgstr "Anslutning:"
 
 #: ../src/TextStrings.cs:382
 msgid "Direct"
-msgstr ""
+msgstr "Direkt"
 
 #: ../src/TextStrings.cs:383
 msgid "Relayed"
@@ -179,9 +178,8 @@ msgid "Hamachi version {0} is obsolete"
 msgstr ""
 
 #: ../src/TextStrings.cs:412
-#, fuzzy
 msgid "Please download and install the latest Hamachi version."
-msgstr "Hämta ner Hamachi och följ installationsinstruktionerna."
+msgstr ""
 
 #: ../src/TextStrings.cs:413
 msgid "_Download"
@@ -233,7 +231,7 @@ msgstr "Automatiskt"
 
 #: ../src/TextStrings.cs:426
 msgid "Capacity:"
-msgstr ""
+msgstr "Kapacitet:"
 
 #: ../src/TextStrings.cs:428
 msgid "_Client"
@@ -389,9 +387,8 @@ msgid "Account not found"
 msgstr "Kontot hittades inte"
 
 #: ../src/TextStrings.cs:475
-#, fuzzy
 msgid "Config_uration"
-msgstr "K_onfigurera"
+msgstr ""
 
 #: ../src/TextStrings.cs:476
 msgid "_Open Folder"
@@ -522,22 +519,24 @@ msgid "Information"
 msgstr "Information"
 
 #: ../src/TextStrings.cs:512
-#, fuzzy
 msgid ""
 "Are you sure you want to delete the\n"
 "network \"{0}\"?"
-msgstr "Vill du verkligen ta bort nätverket \"{0}\"?"
+msgstr ""
+"Vill du verkligen ta bort\n"
+"nätverket \"{0}\"?"
 
 #: ../src/TextStrings.cs:513
 msgid "If you delete a network, it will be permanently lost."
 msgstr ""
 
 #: ../src/TextStrings.cs:515
-#, fuzzy
 msgid ""
 "Are you sure you want to leave the\n"
 "network \"{0}\"?"
-msgstr "Vill du verkligen lämna nätverket \"{0}\"?"
+msgstr ""
+"Vill du verkligen lämna\n"
+"nätverket \"{0}\"?"
 
 #: ../src/TextStrings.cs:516
 msgid "If admitted, you can rejoin the network at any later time."
@@ -552,7 +551,8 @@ msgstr ""
 "från nätverket \"{1}\"?"
 
 #: ../src/TextStrings.cs:519
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: ../src/TextStrings.cs:521
@@ -568,18 +568,16 @@ msgid "Could not evict member \"{0}\""
 msgstr "Det gick inte att kasta ut medlemmen \"{0}\""
 
 #: ../src/TextStrings.cs:524
-#, fuzzy
 msgid ""
 "Could not go online in the\n"
 "network \"{0}\""
-msgstr "Det gick inte att ta bort nätverket \"{0}\""
+msgstr ""
 
 #: ../src/TextStrings.cs:525
-#, fuzzy
 msgid ""
 "Could not go offline in the\n"
 "network \"{0}\""
-msgstr "Det gick inte att ta bort nätverket \"{0}\""
+msgstr ""
 
 #: ../src/TextStrings.cs:527
 msgid "See output for details."
@@ -803,9 +801,8 @@ msgid "_Default"
 msgstr "_Standard"
 
 #: ../src/TextStrings.cs:595
-#, fuzzy
 msgid "Are you sure you want to revert all changes?"
-msgstr "Vill du verkligen lämna nätverket \"{0}\"?"
+msgstr ""
 
 #: ../src/TextStrings.cs:596
 msgid "If you revert all changes, the default commands will be restored."
@@ -853,14 +850,126 @@ msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
-#~ msgid "Delete network \"{0}\"?"
-#~ msgstr "Ta bort nätverket \"{0}\"?"
+#~ msgid "seconds"
+#~ msgstr "sekunder"
 
-#~ msgid "Leave network \"{0}\"?"
+#~ msgid "Running tuncfg..."
+#~ msgstr "Kör tuncfg..."
+
+#~ msgid "Getting nicknames..."
+#~ msgstr "Hämtar smeknamn..."
+
+#~ msgid "Starting Hamachi..."
+#~ msgstr "Startar Hamachi..."
+
+#~ msgid "Not configured"
+#~ msgstr "Inte konfiguerad"
+
+#~ msgid "Changing..."
+#~ msgstr "Ändrar..."
+
+#~ msgid "_Go directly online in the network"
+#~ msgstr "_Gå online direkt i detta nätverk"
+
+#~ msgid "_Copy Address"
+#~ msgstr "K_opiera adress"
+
+#~ msgid "You are the owner of this network."
+#~ msgstr "Du är ägaren av detta nätverk."
+
+#~ msgid "You are not the owner of this network."
+#~ msgstr "Du är inte ägare av detta nätverk."
+
+#~ msgid "Choose Folder"
+#~ msgstr "Välj mapp"
+
+#~ msgid "S_tatusbar"
+#~ msgstr "S_tatusrad"
+
+#~ msgid "Do you want to run tuncfg?"
+#~ msgstr "Vill du köra tuncfg?"
+
+#~ msgid ""
+#~ "Hamachi needs to run tuncfg to be able to connect.\n"
+#~ "Running tuncfg requires administrative privileges."
+#~ msgstr ""
+#~ "Hamachi måste köra tuncfg för att kunna koppla upp sig.\n"
+#~ "För att köra tuncfg behövs administrativa rättigheter."
+
+#~ msgid "_Run"
+#~ msgstr "_Kör"
+
+#~ msgid "_Always ask before running tuncfg"
+#~ msgstr "Fråga alltid _innan tuncfg ska köras"
+
+#~ msgid "Choose Icon"
+#~ msgstr "Välj ikon"
+
+#~ msgid "Go O_nline"
+#~ msgstr "Koppla _upp"
+
+#~ msgid "Go O_ffline"
+#~ msgstr "Koppla _ner"
+
+#~ msgid "Not installed"
+#~ msgstr "Inte installerad"
+
+#~ msgid "Leave network '{0}'?"
 #~ msgstr "Lämna nätverket \"{0}\"?"
 
-#~ msgid "Evict member \"{0}\"?"
+#~ msgid "Are you sure you want to delete network '{0}'?"
+#~ msgstr "Vill du verkligen ta bort nätverket \"{0}\"?"
+
+#~ msgid "Delete network '{0}'?"
+#~ msgstr "Ta bort nätverket \"{0}\"?"
+
+#~ msgid "Failed deleting network '{0}'"
+#~ msgstr "Det gick inte att ta bort nätverket \"{0}\""
+
+#~ msgid ""
+#~ "Are you sure you want to evict member '{0}'\n"
+#~ "from network '{1}'?"
+#~ msgstr ""
+#~ "Vill du verkligen kasta ut medlemmen \"{0}\"\n"
+#~ "från nätverket \"{1}\"?"
+
+#~ msgid "Failed leaving network '{0}'"
+#~ msgstr "Det gick inte att lämna nätverket \"{0}\""
+
+#~ msgid "Evict member '{0}'?"
 #~ msgstr "Kasta ut medlemmen \"{0}\"?"
+
+#~ msgid "Are you sure you want to leave network '{0}'?"
+#~ msgstr "Vill du verkligen lämna nätverket \"{0}\"?"
+
+#~ msgid "You are not the owner of network '{0}'."
+#~ msgstr "Du är inte ägare av nätverket \"{0}\""
+
+#~ msgid "_Offline Members"
+#~ msgstr "_Frånkopplade användare"
+
+#~ msgid "_Reconnect automatically when connection is lost"
+#~ msgstr "_Återanslut automatiskt när anslutningen avbrutits"
+
+#~ msgid "No internet connection."
+#~ msgstr "Ingen internetanslutning."
+
+#~ msgid "Hamachi login failed."
+#~ msgstr "Fel vid Hamachi-inloggning."
+
+#~ msgid "Connection refused."
+#~ msgstr "Anslutningen nekades."
+
+#~ msgid "A_sk confirmation before running tuncfg"
+#~ msgstr "_Fråga efter bekräftelse innan tuncfg körs"
+
+#~ msgid "Hamachi could not launch due to a configuration load failure."
+#~ msgstr ""
+#~ "Hamachi kunde inte öppnas på grund av att det inte gick att läsa in "
+#~ "konfigurationen."
+
+#~ msgid "Loading configuration failed"
+#~ msgstr "Misslyckades med att läsa in konfigurationen"
 
 #~ msgid "Restore the default commands"
 #~ msgstr "Återställ standardkommandon"
@@ -874,3 +983,27 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 #~ msgstr ""
 #~ "Är du säker på att du vill återställa alla ändringar\n"
 #~ "och därmed återställa standardkommandona?"
+
+#~ msgid "Address:"
+#~ msgstr "Adress:"
+
+#~ msgid "Nickname:"
+#~ msgstr "Smeknamn:"
+
+#~ msgid "_Account data folder:"
+#~ msgstr "_Datamapp för konto:"
+
+#~ msgid "_Update interval (seconds):"
+#~ msgstr "_Uppdateringsintervall (sekunder):"
+
+#~ msgid "_Command timeout (seconds):"
+#~ msgstr "_Tidsgräns för kommando (sekunder):"
+
+#~ msgid "_Command:"
+#~ msgstr "_Kommando:"
+
+#~ msgid "Haguichi Website"
+#~ msgstr "Webbplats för Haguichi"
+
+#~ msgid "Failed evicting member '{0}'"
+#~ msgstr "Det gick inte att kasta ut medlemmen \"{0}\""
