@@ -297,13 +297,18 @@ approve  : manual";
         if ( !success )
         {
             this.Status = new Status ( " " );
+            
+            Application.Invoke ( delegate
+            {
+                MainWindow.networkView.UpdateNetwork ( this );
+            });
         }
         
-        SetSortStrings ();
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
         
         Application.Invoke ( delegate
         {
-            MainWindow.networkView.UpdateNetwork ( this );
+            Controller.UpdateConnection (); // Update list
         });
         
         updating = false;
@@ -334,13 +339,18 @@ approve  : manual";
         if ( !success )
         {
             this.Status = new Status ( "*" );
+            
+            Application.Invoke ( delegate
+            {
+                MainWindow.networkView.UpdateNetwork ( this );
+            });
         }
         
-        SetSortStrings ();
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
         
         Application.Invoke ( delegate
         {
-            MainWindow.networkView.UpdateNetwork ( this );
+            Controller.UpdateConnection (); // Update list
         });
         
         updating = false;
@@ -455,6 +465,8 @@ approve  : manual";
         
         Hamachi.Leave ( this );
         
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
+        
         Application.Invoke ( delegate
         {
             Controller.UpdateConnection (); // Update list
@@ -492,6 +504,8 @@ approve  : manual";
     {
         
         Hamachi.Delete ( this );
+        
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
         
         Application.Invoke ( delegate
         {

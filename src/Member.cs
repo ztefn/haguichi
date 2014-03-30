@@ -272,6 +272,8 @@ public class Member
         
         Hamachi.Approve ( this );
         
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
+        
         Application.Invoke ( delegate
         {
             Controller.UpdateConnection (); // Update list
@@ -300,6 +302,8 @@ public class Member
     {
         
         Hamachi.Reject ( this );
+        
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
         
         Application.Invoke ( delegate
         {
@@ -342,6 +346,8 @@ public class Member
     {
         
         Hamachi.Evict ( this );
+        
+        Thread.Sleep ( 1000 ); // Wait a second to get an updated list
         
         Application.Invoke ( delegate
         {
