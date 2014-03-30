@@ -59,6 +59,14 @@ public class Connection
     }
     
     
+    public bool HasNetwork ( Network network )
+    {
+        
+        return Networks.Contains ( network );
+        
+    }
+    
+    
     public void ClearNetworks ()
     {
         
