@@ -41,6 +41,6 @@ Global
 		$0.TextStylePolicy = $4
 		$4.inheritsSet = null
 		$4.scope = application/x-desktop
-		version = 1.0.24
+		version = 1.0.25
 	EndGlobalSection
 EndGlobal
