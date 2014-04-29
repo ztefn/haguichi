@@ -30,7 +30,7 @@ public static class Hamachi
     
     public  const  string DataPath        = "/var/lib/logmein-hamachi";
     public  static int    MajorVersion;
-    public  static string Version;
+    public  static string Version         = "";
     public  static bool   VpnAliasCapable = false;
     public  static bool   IpModeCapable   = false;
     public  static string IpVersion       = "IPv4";
