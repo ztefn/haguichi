@@ -19,9 +19,10 @@
 
 using System;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 using System.Threading;
 
-    
+
 public static class Command
 {
     
@@ -127,7 +128,7 @@ public static class Command
     private static void DetermineTerminalThread ()
     {
         
-        Terminal = "gnome-terminal -x";
+        Terminal = "gnome-terminal";
         
         if ( Exists ( "gnome-terminal" ) )
         {
@@ -135,23 +136,23 @@ public static class Command
         }
         else if ( Exists ( "mate-terminal" ) )
         {
-            Terminal = "mate-terminal -x";
+            Terminal = "mate-terminal";
         }
         else if ( Exists ( "pantheon-terminal" ) )
         {
-            Terminal = "pantheon-terminal -e";
+            Terminal = "pantheon-terminal";
         }
         else if ( Exists ( "xfce4-terminal" ) )
         {
-            Terminal = "xfce4-terminal -x";
+            Terminal = "xfce4-terminal";
         }
         else if ( Exists ( "konsole" ) )
         {
-            Terminal = "konsole -e";
+            Terminal = "konsole";
         }
         else if ( Exists ( "xterm" ) )
         {
-            Terminal = "xterm -e";
+            Terminal = "xterm";
         }
         
         Debug.Log ( Debug.Domain.Environment, "Command.DetermineTerminalThread", "Command for terminal: " + Terminal );
@@ -379,9 +380,17 @@ public static class Command
         command = command.Replace ( "%N", member.Nick );
         command = command.Replace ( "%ID", member.ClientId );
         
-        command = command.Replace ( "%TERMINAL", Command.Terminal );
-        command = command.Replace ( "%FILEMANAGER", Command.FileManager );
-        command = command.Replace ( "%REMOTEDESKTOP", Command.RemoteDesktop );
+        string quote = "\"";
+        
+        if ( Terminal == "konsole" )
+        {
+            quote = "";   
+        }
+        
+        command = Regex.Replace ( command, "%TERMINAL (.*)", Terminal + " -e " + quote + "$1" + quote, RegexOptions.Singleline );
+        
+        command = command.Replace ( "%FILEMANAGER", FileManager );
+        command = command.Replace ( "%REMOTEDESKTOP", RemoteDesktop );
         
         command = command.Replace ( "{COLON}", ";" );
         

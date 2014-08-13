@@ -19,11 +19,12 @@
 
 using System;
 using System.Collections;
+using System.Text.RegularExpressions;
 using Gtk;
 using GLib;
 using Mono.Unix;
 
-    
+
 public class CommandsEditor : VBox
 {
     
@@ -618,7 +619,15 @@ public class CommandsEditor : VBox
         command = command.Replace ( "%N", "Nick" );
         command = command.Replace ( "%ID", "090-123-456" );
         
-        command = command.Replace ( "%TERMINAL", Command.Terminal );
+        string quote = "\"";
+        
+        if ( Command.Terminal == "konsole" )
+        {
+            quote = "";   
+        }
+        
+        command = Regex.Replace ( command, "%TERMINAL (.*)", Command.Terminal + " -e " + quote + "$1" + quote, RegexOptions.Singleline );
+        
         command = command.Replace ( "%FILEMANAGER", Command.FileManager );
         command = command.Replace ( "%REMOTEDESKTOP", Command.RemoteDesktop );
         
