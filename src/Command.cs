@@ -336,6 +336,7 @@ public static class Command
     {
         
         string command = "";
+        string address = "";
         
         if ( Hamachi.IpVersion == "Both" )
         {
@@ -344,12 +345,12 @@ public static class Command
                 if ( member.IPv4 != "" )
                 {
                     command = commandIPv4;
-                    command = command.Replace ( "%A", member.IPv4 );
+                    address = member.IPv4;
                 }
                 else
                 {
                     command = commandIPv6;
-                    command = command.Replace ( "%A", member.IPv6 );
+                    address = member.IPv6;
                 }
             }
             if ( priority == "IPv6" )
@@ -357,28 +358,37 @@ public static class Command
                 if ( member.IPv6 != "" )
                 {
                     command = commandIPv6;
-                    command = command.Replace ( "%A", member.IPv6 );
+                    address = member.IPv6;
                 }
                 else
                 {
                     command = commandIPv4;
-                    command = command.Replace ( "%A", member.IPv4 );
+                    address = member.IPv4;
                 }
             }
         }
         else if ( Hamachi.IpVersion == "IPv4" )
         {
             command = commandIPv4;
-            command = command.Replace ( "%A", member.IPv4 );
+            address = member.IPv4;
         }
         else if ( Hamachi.IpVersion == "IPv6" )
         {
             command = commandIPv6;
-            command = command.Replace ( "%A", member.IPv6 );
+            address = member.IPv6;
         }
         
-        command = command.Replace ( "%N", member.Nick );
-        command = command.Replace ( "%ID", member.ClientId );
+        return ReplaceVariables ( command, address, member.Nick, member.ClientId );
+        
+    }
+    
+    
+    public static string ReplaceVariables ( string command, string address, string nick, string id )
+    {
+        
+        command = command.Replace ( "%A",  address );
+        command = command.Replace ( "%N",  nick    );
+        command = command.Replace ( "%ID", id      );
         
         string quote = "\"";
         
@@ -389,7 +399,7 @@ public static class Command
         
         command = Regex.Replace ( command, "%TERMINAL (.*)", Terminal + " -e " + quote + "$1" + quote, RegexOptions.Singleline );
         
-        command = command.Replace ( "%FILEMANAGER", FileManager );
+        command = command.Replace ( "%FILEMANAGER",   FileManager   );
         command = command.Replace ( "%REMOTEDESKTOP", RemoteDesktop );
         
         command = command.Replace ( "{COLON}", ";" );

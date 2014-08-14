@@ -599,37 +599,23 @@ public class CommandsEditor : VBox
             textCell.ForegroundGdk = lightTxtColor;
         }
         
-        string title = ( string ) model.GetValue ( iter, viewColumn );
-        title = title.Replace ( "_", "" );
-        
-        string command = "";
+        string title    = ( ( string ) model.GetValue ( iter, viewColumn ) ).Replace ( "_", "" );
+        string command  = "";
+        string address  = "";
         string priority = ( string ) model.GetValue ( iter, priorityColumn );
         
         if ( priority == "IPv4" )
         {
             command = ( string ) model.GetValue ( iter, commandIPv4Column );
-            command = command.Replace ( "%A", "25.123.456.78" );
+            address = "25.123.456.78";
         }
         if ( priority == "IPv6" )
         {
             command = ( string ) model.GetValue ( iter, commandIPv6Column );
-            command = command.Replace ( "%A", "2620:9b::56d:f78e" );
+            address = "2620:9b::56d:f78e";
         }
         
-        command = command.Replace ( "%N", "Nick" );
-        command = command.Replace ( "%ID", "090-123-456" );
-        
-        string quote = "\"";
-        
-        if ( Command.Terminal == "konsole" )
-        {
-            quote = "";   
-        }
-        
-        command = Regex.Replace ( command, "%TERMINAL (.*)", Command.Terminal + " -e " + quote + "$1" + quote, RegexOptions.Singleline );
-        
-        command = command.Replace ( "%FILEMANAGER", Command.FileManager );
-        command = command.Replace ( "%REMOTEDESKTOP", Command.RemoteDesktop );
+        command = Command.ReplaceVariables ( command, address, "Nick", "090-123-456" );
         
         textCell.Markup = String.Format ( "<b>{0}</b>{1}\n<span size=\"smaller\">{2}</span>",
                                           Markup.EscapeText ( title ),
