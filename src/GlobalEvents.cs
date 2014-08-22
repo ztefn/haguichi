@@ -381,17 +381,17 @@ public class GlobalEvents
         
         MainWindow.Hide ();
         
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.QuitApp ();
-        }
-        
         if ( ( bool ) Config.Settings.DisconnectOnQuit.Value )
         {
             if ( Controller.lastStatus > 4 )
             {
                 StopHamachi ();
             }
+        }
+        
+        if ( Platform.IndicatorSession != null )
+        {
+            Platform.IndicatorSession.QuitApp ();
         }
         
         Debug.Log ( Debug.Domain.Environment, "GlobalEvents.QuitApp", "Unregistering process" );
