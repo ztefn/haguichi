@@ -54,7 +54,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            Version = "2.1.0.119";
+            Version = "2.1.0.130";
             VpnAliasCapable = true;
             IpModeCapable = true;
             return 2;
@@ -572,7 +572,8 @@ public static class Hamachi
                 output += "     * 090-736-821   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
                 output += "   [Bug Hunters]  capacity: 4/5,   [192.168.155.24/24]  subscription type: Free, owner: This computer\n";
                 output += "     * " + RandomClientId () + "   Conrad                     192.168.155.20  alias: not set                             via relay\n";
-                output += "     * " + RandomClientId () + "   war59312                   192.168.155.22  alias: not set                             direct\n";
+                output += "     * " + RandomClientId () + "   Eduardo                    192.168.155.21  alias: not set                             direct\n";
+                output += "       " + RandomClientId () + "   war59312                   192.168.155.22\n";
                 output += "     ? " + RandomClientId () + " \n";
                 output += "       You are approaching your member limit and may soon have to upgrade your network.\n";
                 output += " * [" + RandomNetworkId () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";

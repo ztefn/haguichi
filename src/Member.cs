@@ -251,7 +251,7 @@ public class Member
         if ( Config.Settings.DemoMode )
         {
             this.Nick    = "Nick";
-            this.IPv4    = Hamachi.RandomAddress ();
+            this.IPv4    = "192.168.155.23";
             this.Status  = new Status ( "*" );
         
             SetSortStrings ();
