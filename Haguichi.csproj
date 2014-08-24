@@ -9,7 +9,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>Haguichi</AssemblyName>
     <RootNamespace>Haguichi</RootNamespace>
-    <ReleaseVersion>1.0.25</ReleaseVersion>
+    <ReleaseVersion>1.0.26</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
