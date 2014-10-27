@@ -116,6 +116,9 @@ Português do Brasil (pt-BR)
     Sergey Korolev <slipped-on-blade>
     Sergey Sedov <serg-sedov>
 
+Slovenčina (sk)
+    Zdeněk Kopš <zdenekkops>
+
 Svenska (sv)
     Daniel Holm <danielholm>
     Daniel Nylander <yeager>

@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-@locales = ('ast', 'bg', 'cs', 'de', 'es', 'fr', 'id', 'it', 'ja', 'kk', 'nl', 'pl', 'pt_BR', 'ru', 'sv', 'tr', 'uk');
+@locales = ('ast', 'bg', 'cs', 'de', 'es', 'fr', 'id', 'it', 'ja', 'kk', 'nl', 'pl', 'pt_BR', 'ru', 'sk', 'sv', 'tr', 'uk');
 
 foreach $locale (@locales)
 {

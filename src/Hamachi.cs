@@ -598,6 +598,7 @@ public static class Hamachi
                 output += "     ! " + RandomClientId () + "   scrawl                     " + RandomAddress () + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";
                 output += "       " + RandomClientId () + "   Sergey                     " + RandomAddress () + "\n";
                 output += "     x " + RandomClientId () + "   Soker                      " + RandomAddress () + "\n";
+                output += "     * " + RandomClientId () + "   Zdeněk                     " + RandomAddress () + "  alias: not set                             direct\n";
                 output += "     * " + RandomClientId () + "   ztefn                      " + RandomAddress () + "  alias: not set        2146:0d::987:a654    direct\n";
             }
         }
