@@ -132,16 +132,9 @@ public class NetworkView : TreeView
                                 typeof ( string ) );    // Sortable status
         
         filter = new TreeModelFilter ( store , null );
-        filter.VisibleFunc = new TreeModelFilterVisibleFunc ( FilterOfflineMembers );
+        filter.VisibleFunc = new TreeModelFilterVisibleFunc ( FilterTree );
         
-        if ( ( bool ) Config.Settings.ShowOfflineMembers.Value )
-        {
-            sortedStore = new TreeModelSort ( store );
-        }
-        else
-        {
-            sortedStore = new TreeModelSort ( filter );
-        }
+        sortedStore = new TreeModelSort ( filter );
         
         this.Model = sortedStore;
         
@@ -349,12 +342,7 @@ public class NetworkView : TreeView
             AddNetwork ( network );
         }
         
-        /* Go sort tree. Doing this after the tree is filled, because otherwise things get messy... */
-        GoSort ( ( string ) Config.Settings.SortNetworkListBy.Value );
-        
-        filter.Refilter ();
-        
-        CollapseOrExpandNetworks ();
+        Refilter ();
         
     }
     
@@ -579,21 +567,12 @@ public class NetworkView : TreeView
     }
     
     
-    public void GoFilterOfflineMembers ( bool boolean )
+    public void Refilter ()
     {
         
-        if ( boolean )
-        {
-            sortedStore = new TreeModelSort ( filter );
-        }
-        else
-        {
-            sortedStore = new TreeModelSort ( store );
-        }
-        
-        this.Model = sortedStore;
-        
         GoSort ( ( string ) Config.Settings.SortNetworkListBy.Value );
+        
+        filter.Refilter ();
         
         CollapseOrExpandNetworks ();
         
@@ -615,26 +594,23 @@ public class NetworkView : TreeView
     }
     
     
-    private bool FilterOfflineMembers ( TreeModel model, TreeIter iter )
+    private bool FilterTree ( TreeModel model, TreeIter iter )
     {
-
-        int status = ( int ) model.GetValue ( iter, statusColumn );
         
-        if ( IsNetwork ( model, iter ) )
+        bool showOfflineMembers = ( bool ) Config.Settings.ShowOfflineMembers.Value;
+        
+        if ( !showOfflineMembers )
         {
-            return true;
-        }
-        else
-        {
-            if ( status == 0 )
+            int status = ( int ) model.GetValue ( iter, statusColumn );
+            
+            if ( ( !IsNetwork ( model, iter ) ) &&
+                 ( status == 0 ) )
             {
                 return false;
             }
-            else
-            {
-                return true;
-            }
         }
+        
+        return true;
         
     }
     

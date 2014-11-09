@@ -217,7 +217,7 @@ namespace Config
             else if ( key == Config.Settings.ShowOfflineMembers.KeyName )
             {
                 MainWindow.menuBar.showOfflineMembers.Active = ( bool ) _value;
-                MainWindow.ShowOfflineMembers ( ( bool ) _value );
+                MainWindow.networkView.Refilter ();
             }
             else if ( key == Config.Settings.SortNetworkListBy.KeyName )
             {

@@ -337,14 +337,6 @@ public class MainWindow
     }
     
     
-    public static void ShowOfflineMembers ( bool show )
-    {
-        
-        networkView.GoFilterOfflineMembers ( !show );
-        
-    }
-    
-    
     public static void ShowStatusbar ( bool show )
     {
         
