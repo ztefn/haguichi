@@ -94,8 +94,8 @@ public class NetworkView : TreeView
         this.QueryTooltip     += OnQueryTooltip;
         this.LevelIndentation  = 0;
         this.CursorChanged    += RowHandler;
-        
         this.HeadersVisible    = false;
+        this.SearchEntry       = MainWindow.searchEntry;
         this.RulesHint         = ( bool ) Config.Settings.ShowAlternatingRowColors.Value;
         
         currentLayout = ( string ) Config.Settings.NetworkListLayout.Value;
@@ -605,6 +605,46 @@ public class NetworkView : TreeView
             
             if ( ( !IsNetwork ( model, iter ) ) &&
                  ( status == 0 ) )
+            {
+                return false;
+            }
+        }
+        
+        string filterText = MainWindow.searchEntry.Text.ToLower ();
+        
+        if ( filterText != "" )
+        {
+            Network network = ( Network ) model.GetValue ( iter, networkColumn );
+            
+            if ( network == null )
+            {
+                return false; // Prevent "Object reference not set to an instance of an object" exception
+            }
+            
+            string matchText = network.Name + " " + network.Id;
+            
+            if ( IsNetwork ( model, iter ) )
+            {
+                foreach ( Member member in network.Members )
+                {
+                    if ( ( showOfflineMembers ) ||
+                         ( member.Status.statusInt != 0 ) )
+                    {
+                        matchText += " " + member.Nick + " " + member.ClientId + " " + member.IPv4 + " " + member.IPv6;
+                    }
+                }
+            }
+            else
+            {
+                Member member = ( Member ) model.GetValue ( iter, memberColumn );
+                
+                if ( member != null )
+                {
+                    matchText += " " + member.Nick + " " + member.ClientId + " " + member.IPv4 + " " + member.IPv6;
+                }
+            }
+            
+            if ( !matchText.ToLower().Contains ( filterText ) )
             {
                 return false;
             }

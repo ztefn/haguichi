@@ -54,6 +54,7 @@ namespace Menus
         private ImageMenuItem close;
         private ImageMenuItem quit;
         
+        private ImageMenuItem find;
         private ImageMenuItem preferences;
         
         private ImageMenuItem update;
@@ -161,11 +162,20 @@ namespace Menus
             clientMenuItem.Submenu = clientMenu;
             
             
+            find = new ImageMenuItem ( Stock.Find, MainWindow.accelGroup );
+            find.Activated += delegate
+            {
+                MainWindow.searchBar.Show ();
+                MainWindow.searchEntry.GrabFocus ();
+            };
+            
             preferences = new ImageMenuItem ( Stock.Preferences, MainWindow.accelGroup );
             preferences.Activated += GlobalEvents.Preferences;
             preferences.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.P, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
-
+            
             editMenu = new Menu ();
+            editMenu.Append ( find );
+            editMenu.Add    ( new SeparatorMenuItem () );
             editMenu.Append ( preferences );
             
             editMenuItem = new MenuItem ( TextStrings.editLabel );
@@ -308,53 +318,57 @@ namespace Menus
             
             SetClose ( ( bool ) Config.Settings.ShowTrayIcon.Value );
             
+            join.Sensitive   = false;
+            create.Sensitive = false;
+            find.Sensitive   = false;
+            update.Sensitive = false;
+            
+            
             switch ( mode )
             {
-
-                case "Connecting":
-                    connect.Sensitive = false;
                 
+                case "Connecting":
+                    
+                    connect.Sensitive = false;
+                    
                     break;
                     
                 case "Connected":
+                    
                     connect.Hide ();
                     disconnect.Show ();
-                    join.Sensitive = true;
+                    
+                    join.Sensitive   = true;
                     create.Sensitive = true;
+                    find.Sensitive   = true;
                     update.Sensitive = true;
-                
+                    
                     break;
                     
                 case "Disconnected":
+                    
                     connect.Show ();
                     connect.Sensitive = true;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    update.Sensitive = false;
-                
+                    
                     break;
-                
+                    
                 case "Not configured":
+                    
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    update.Sensitive = false;
-                
+                    
                     break;
-                
+                    
                 case "Not installed":
+                    
                     connect.Show ();
                     connect.Sensitive = false;
                     disconnect.Hide ();
-                    join.Sensitive = false;
-                    create.Sensitive = false;
-                    update.Sensitive = false;
-                
+                    
                     break;
-                
+                    
             }
             
         }

@@ -36,6 +36,10 @@ public class MainWindow
     
     public  static Widgets.MessageBar messageBar;
     
+    public  static Entry searchEntry;
+    public  static Toolbar searchBar;
+    public  static ToolButton closeButton;
+    
     private static Window window;
     private static int x, y, width, height;
     
@@ -97,6 +101,28 @@ public class MainWindow
         
         messageBar = new Widgets.MessageBar ();
         
+        searchEntry = new Entry ();
+        searchEntry.Changed += delegate
+        {
+            networkView.Refilter ();
+        };
+        
+        ToolItem searchItem = new ToolItem ();
+        searchItem.Add ( searchEntry );
+        searchItem.Expand = true;
+    
+        closeButton = new ToolButton ( Stock.Close );
+        closeButton.Clicked += delegate
+        {
+            searchEntry.Text = "";
+            searchBar.Hide ();
+        };
+        
+        searchBar = new Toolbar ();
+        searchBar.IconSize = IconSize.Menu;
+        searchBar.Add ( searchItem );
+        searchBar.Add ( closeButton );
+        
         
         
         /* Connected Box */
@@ -142,9 +168,9 @@ public class MainWindow
         vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( nameButton );
         vbDisonnected.Add ( new VBox () );
-        vbDisonnected.Add ( connectButton );
+        vbDisonnected.PackStart ( connectButton, false, false, 0 );
         vbDisonnected.Add ( new VBox () );
-        vbDisonnected.Add ( autoconnectCheckbox );
+        vbDisonnected.PackStart ( autoconnectCheckbox, false, false, 0 );
         vbDisonnected.Add ( new VBox () );
         vbDisonnected.Add ( new VBox () );
         
@@ -158,30 +184,12 @@ public class MainWindow
         /* Main VBox */
         
         VBox mainBox = new VBox ( false, 0 );
-        mainBox.Add ( menuBar );
-        mainBox.Add ( messageBar );
-        mainBox.Add ( disconnectedBox );
-        mainBox.Add ( connectedBox );
-        mainBox.Add ( statusBar );
-        
-        
-        Box.BoxChild bc1 = ( ( Box.BoxChild ) ( mainBox [ menuBar ] ) );
-        bc1.Expand = false;
-        
-        Box.BoxChild bc4 = ( ( Box.BoxChild ) ( vbDisonnected [ connectButton ] ) );
-        bc4.Expand = false;
-        
-        Box.BoxChild bc6 = ( ( Box.BoxChild ) ( vbDisonnected [ autoconnectCheckbox ] ) );
-        bc6.Expand = false;
-        
-        //Box.BoxChild bc7 = ( ( Box.BoxChild ) ( vbDisonnected [ nameButton ] ) );
-        //bc7.Expand = false;
-        
-        Box.BoxChild bc3 = ( ( Box.BoxChild ) ( mainBox [ statusBar ] ) );
-        bc3.Expand = false;
-        
-        Box.BoxChild bc8 = ( ( Box.BoxChild ) ( mainBox [ messageBar ] ) );
-        bc8.Expand = false;
+        mainBox.PackStart ( menuBar,         false, false, 0 );
+        mainBox.PackStart ( messageBar,      false, false, 0 );
+        mainBox.PackStart ( disconnectedBox, true,  true,  0 );
+        mainBox.PackStart ( connectedBox,    true,  true,  0 );
+        mainBox.PackStart ( searchBar,       false, false, 0 );
+        mainBox.PackStart ( statusBar,       false, false, 0 );
         
         
         window = new Window ( TextStrings.appName );
@@ -200,6 +208,7 @@ public class MainWindow
         window.ShowAll ();
         
         messageBar.Hide ();
+        searchBar.Hide ();
         
         connectButton.GrabFocus ();
         
@@ -332,6 +341,22 @@ public class MainWindow
             {
                 networkView.CollapseAll ();
             }
+        }
+        else if ( ( args.Event.State.ToString ().Contains ( Gdk.ModifierType.None.ToString () ) ) &&
+                  ( args.Event.KeyValue >= 48 ) &&   // "0"
+                  ( args.Event.KeyValue <= 122 ) )   // "z"
+        {
+            if ( !MainWindow.searchBar.Visible )
+            {
+                MainWindow.searchBar.Show ();
+                MainWindow.searchEntry.GrabFocus ();
+            }
+            else
+            {
+                MainWindow.searchEntry.GrabFocus ();
+            }
+            
+            MainWindow.searchEntry.ProcessEvent ( args.Event );
         }
         
     }
@@ -567,6 +592,9 @@ public class MainWindow
                 panelIcon.SetMode ( mode );
                 menuBar.SetMode   ( mode );
                 quickMenu.SetMode ( mode );
+                
+                searchEntry.Text = "";
+                searchBar.Hide ();
                 
                 statusBar.Push ( 0, TextStrings.disconnected );
                 
