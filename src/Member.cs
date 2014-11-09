@@ -120,16 +120,23 @@ public class Member
     private void GetLongNickThread ( object o )
     {
         
-        string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
-        Debug.Log ( Debug.Domain.Hamachi, "Member.GetLongNickThread", output );
-        
-        this.Nick = Hamachi.Retrieve ( output, "nickname" );
-        SetSortStrings ();
-        
-        Application.Invoke ( delegate
+        if ( Config.Settings.DemoMode )
         {
-            MainWindow.networkView.UpdateMember ( this.Network, this );
-        });
+            Debug.Log ( Debug.Domain.Hamachi, "Member.GetLongNickThread", "Demo mode, keeping nick "+ this.Nick );
+        }
+        else
+        {
+            string output = Command.ReturnOutput ( "hamachi", "peer " + this.ClientId );
+            Debug.Log ( Debug.Domain.Hamachi, "Member.GetLongNickThread", output );
+            
+            this.Nick = Hamachi.Retrieve ( output, "nickname" );
+            SetSortStrings ();
+            
+            Application.Invoke ( delegate
+            {
+                MainWindow.networkView.UpdateMember ( this.Network, this );
+            });
+        }
         
     }
     
