@@ -331,7 +331,7 @@ public class MainWindow
     private void OnKeyPress ( object o, KeyPressEventArgs args )
     {
         
-        if ( args.Event.State.ToString ().Contains ( Gdk.ModifierType.ControlMask.ToString () ) )
+        if ( args.Event.State.ToString().Contains ( Gdk.ModifierType.ControlMask.ToString() ) == true )
         {
             if ( args.Event.Key == Gdk.Key.bracketleft )
             {
@@ -342,7 +342,8 @@ public class MainWindow
                 networkView.CollapseAll ();
             }
         }
-        else if ( ( args.Event.State.ToString ().Contains ( Gdk.ModifierType.None.ToString () ) ) &&
+        else if ( ( args.Event.State.ToString().Contains ( Gdk.ModifierType.SuperMask.ToString() ) == false ) &&
+                  ( args.Event.State.ToString().Contains ( Gdk.ModifierType.Mod1Mask.ToString() ) == false ) &&
                   ( args.Event.KeyValue >= 48 ) &&   // "0"
                   ( args.Event.KeyValue <= 122 ) )   // "z"
         {
