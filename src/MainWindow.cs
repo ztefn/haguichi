@@ -343,21 +343,25 @@ public class MainWindow
             }
         }
         else if ( ( args.Event.State.ToString().Contains ( Gdk.ModifierType.SuperMask.ToString() ) == false ) &&
-                  ( args.Event.State.ToString().Contains ( Gdk.ModifierType.Mod1Mask.ToString() ) == false ) &&
-                  ( args.Event.KeyValue >= 48 ) &&   // "0"
-                  ( args.Event.KeyValue <= 122 ) )   // "z"
+                  ( args.Event.State.ToString().Contains ( Gdk.ModifierType.Mod1Mask.ToString() ) == false ) )
         {
-            if ( !MainWindow.searchBar.Visible )
+            if ( ( ( args.Event.KeyValue >= 48 ) &&         // "0"
+                   ( args.Event.KeyValue <= 122 ) ) ||      // "z"
+                 ( ( args.Event.KeyValue >= 65456 ) &&      // "0" - NumPad
+                   ( args.Event.KeyValue <= 65465 ) ) )     // "9" - NumPad
             {
-                MainWindow.searchBar.Show ();
-                MainWindow.searchEntry.GrabFocus ();
+                if ( !MainWindow.searchBar.Visible )
+                {
+                    MainWindow.searchBar.Show ();
+                    MainWindow.searchEntry.GrabFocus ();
+                }
+                else
+                {
+                    MainWindow.searchEntry.GrabFocus ();
+                }
+                
+                MainWindow.searchEntry.ProcessEvent ( args.Event );
             }
-            else
-            {
-                MainWindow.searchEntry.GrabFocus ();
-            }
-            
-            MainWindow.searchEntry.ProcessEvent ( args.Event );
         }
         
     }
