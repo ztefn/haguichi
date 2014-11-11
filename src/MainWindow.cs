@@ -362,6 +362,11 @@ public class MainWindow
                 
                 MainWindow.searchEntry.ProcessEvent ( args.Event );
             }
+            else if ( args.Event.Key == Gdk.Key.Escape )
+            {
+                searchEntry.Text = "";
+                searchBar.Hide ();
+            }
         }
         
     }
