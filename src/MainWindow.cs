@@ -110,7 +110,6 @@ public class MainWindow
         {
             if ( args.Event.Key == Gdk.Key.Return )
             {
-                MainWindow.networkView.GrabFocus ();
                 MainWindow.networkView.ActivateSelectedRow ();
             }
         };

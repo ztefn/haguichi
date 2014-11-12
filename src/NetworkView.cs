@@ -823,7 +823,13 @@ public class NetworkView : TreeView
     public void ActivateSelectedRow ()
     {
         
-        ActivateRow ( lastPath, column );
+        TreeIter iter;
+        
+        if ( this.Selection.GetSelected ( out iter ) )
+        {
+            lastPath = sortedStore.GetPath ( iter );
+            ActivateRow ( lastPath, column );
+        }
         
     }
     
