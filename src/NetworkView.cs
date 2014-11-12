@@ -820,6 +820,14 @@ public class NetworkView : TreeView
     }
     
     
+    public void ActivateSelectedRow ()
+    {
+        
+        ActivateRow ( lastPath, column );
+        
+    }
+    
+    
     private void OnRowActivate ( object o, RowActivatedArgs args )
     {
         
@@ -841,7 +849,7 @@ public class NetworkView : TreeView
         }
         else
         {
-            if ( lastMember.Status.statusInt != 3 )
+            if ( lastMember.Status.statusInt == 1 )
             {
                 string [] command = Command.ReturnDefault ();
                 

@@ -106,6 +106,14 @@ public class MainWindow
         {
             networkView.Refilter ();
         };
+        searchEntry.KeyReleaseEvent += delegate ( object o, KeyReleaseEventArgs args )
+        {
+            if ( args.Event.Key == Gdk.Key.Return )
+            {
+                MainWindow.networkView.GrabFocus ();
+                MainWindow.networkView.ActivateSelectedRow ();
+            }
+        };
         
         ToolItem searchItem = new ToolItem ();
         searchItem.Add ( searchEntry );
