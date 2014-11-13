@@ -108,7 +108,10 @@ public class MainWindow
         };
         searchEntry.KeyReleaseEvent += delegate ( object o, KeyReleaseEventArgs args )
         {
-            if ( args.Event.Key == Gdk.Key.Return )
+            if ( ( args.Event.Key == Gdk.Key.Return ) ||
+                 ( args.Event.Key == Gdk.Key.ISO_Enter ) ||
+                 ( args.Event.Key == Gdk.Key.Key_3270_Enter ) ||
+                 ( args.Event.Key == Gdk.Key.KP_Enter ) )
             {
                 MainWindow.networkView.ActivateSelectedRow ();
             }
