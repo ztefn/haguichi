@@ -96,6 +96,7 @@ public class NetworkView : TreeView
         this.CursorChanged    += RowHandler;
         this.HeadersVisible    = false;
         this.SearchEntry       = MainWindow.searchEntry;
+        this.SearchEqualFunc   = new TreeViewSearchEqualFunc ( OnSearchEqualFunc );
         this.RulesHint         = ( bool ) Config.Settings.ShowAlternatingRowColors.Value;
         
         currentLayout = ( string ) Config.Settings.NetworkListLayout.Value;
@@ -648,6 +649,30 @@ public class NetworkView : TreeView
             {
                 return false;
             }
+        }
+        
+        return true;
+        
+    }
+    
+    
+    private bool OnSearchEqualFunc ( TreeModel model, int column, string filterText, TreeIter iter )
+    {
+        
+        Network network = ( Network ) model.GetValue ( iter, networkColumn );
+        
+        string matchText = network.Name + " " + network.Id;
+        
+        if ( !IsNetwork ( model, iter ) )
+        {
+            Member member = ( Member ) model.GetValue ( iter, memberColumn );
+            
+            matchText += " " + member.Nick + " " + member.ClientId + " " + member.IPv4 + " " + member.IPv6;
+        }
+        
+        if ( matchText.ToLower().Contains ( filterText ) )
+        {
+            return false;
         }
         
         return true;
