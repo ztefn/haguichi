@@ -661,13 +661,17 @@ public class NetworkView : TreeView
         
         Network network = ( Network ) model.GetValue ( iter, networkColumn );
         
-        string matchText = network.Name + " " + network.Id;
+        string matchText;
         
-        if ( !IsNetwork ( model, iter ) )
+        if ( IsNetwork ( model, iter ) )
+        {
+            matchText = network.Name + " " + network.Id;
+        }
+        else
         {
             Member member = ( Member ) model.GetValue ( iter, memberColumn );
             
-            matchText += " " + member.Nick + " " + member.ClientId + " " + member.IPv4 + " " + member.IPv6;
+            matchText = member.Nick + " " + member.ClientId + " " + member.IPv4 + " " + member.IPv6;
         }
         
         if ( matchText.ToLower().Contains ( filterText ) )
