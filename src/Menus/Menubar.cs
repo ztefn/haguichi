@@ -121,9 +121,11 @@ namespace Menus
             
             join = new ImageMenuItem ( TextStrings.joinNetworkLabel );
             join.Activated += GlobalEvents.JoinNetwork;
+            join.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.J, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             create = new ImageMenuItem ( TextStrings.createNetworkLabel );
             create.Activated += GlobalEvents.CreateNetwork;
+            create.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.N, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             
             change = new ImageMenuItem ( TextStrings.changeNickLabel );
             change.Activated += GlobalEvents.ChangeNick;
@@ -203,6 +205,7 @@ namespace Menus
             
             showOfflineMembers = new CheckMenuItem ( TextStrings.checkboxShowOfflineMembers );
             showOfflineMembers.Active = ( bool ) Config.Settings.ShowOfflineMembers.Value;
+            showOfflineMembers.AddAccelerator ( "activate", MainWindow.accelGroup, new AccelKey ( Gdk.Key.M, Gdk.ModifierType.ControlMask, AccelFlags.Visible ) );
             showOfflineMembers.Toggled += delegate
             {
                 Config.Settings.ShowOfflineMembers.Value = showOfflineMembers.Active;
