@@ -54,7 +54,7 @@ public static class Hamachi
         
         if ( Config.Settings.DemoMode )
         {
-            Version = "2.1.0.130";
+            Version = "2.1.0.136";
             VpnAliasCapable = true;
             IpModeCapable = true;
             return 2;
