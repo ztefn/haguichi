@@ -18,7 +18,7 @@
  */
 
 using System;
-using NDesk.DBus;
+using DBus;
 
 
 [Interface ( Platform.appBusName )]

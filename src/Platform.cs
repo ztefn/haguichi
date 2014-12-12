@@ -20,7 +20,7 @@
 using System;
 using System.Text;
 using System.Runtime.InteropServices;
-using NDesk.DBus;
+using DBus;
 
 
 public static class Platform
