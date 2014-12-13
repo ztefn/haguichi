@@ -1,5 +1,5 @@
 #!/bin/sh
 set -e
 if which update-icon-caches >/dev/null 2>&1 ; then
-	update-icon-caches /usr/share/icons/Humanity /usr/share/icons/ubuntu-mono-light /usr/share/icons/ubuntu-mono-dark
+	update-icon-caches /usr/share/icons/ubuntu-mono-light /usr/share/icons/ubuntu-mono-dark
 fi
