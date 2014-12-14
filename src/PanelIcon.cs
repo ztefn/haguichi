@@ -25,7 +25,7 @@ using Gdk;
 public class PanelIcon : StatusIcon
 {
     
-    private int    animIcon = 0;    
+    private int    animIcon = 0;
     private string lastMode;
     
     private string connected    = "haguichi-connected";
@@ -38,29 +38,29 @@ public class PanelIcon : StatusIcon
     public PanelIcon ()
     {
         
-        IconTheme.AddBuiltinIcon ( "haguichi-connected",    16, Gdk.Pixbuf.LoadFromResource ( "16x16.connected"    ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-1" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-2" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-3" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.disconnected" ) );
+        IconTheme.AddBuiltinIcon ( connected,    16, Gdk.Pixbuf.LoadFromResource ( "16x16.connected"    ) );
+        IconTheme.AddBuiltinIcon ( connecting1,  16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( connecting2,  16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( connecting3,  16, Gdk.Pixbuf.LoadFromResource ( "16x16.connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( disconnected, 16, Gdk.Pixbuf.LoadFromResource ( "16x16.disconnected" ) );
         
-        IconTheme.AddBuiltinIcon ( "haguichi-connected",    22, Gdk.Pixbuf.LoadFromResource ( "22x22.connected"    ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-1" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-2" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-3" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.disconnected" ) );
+        IconTheme.AddBuiltinIcon ( connected,    22, Gdk.Pixbuf.LoadFromResource ( "22x22.connected"    ) );
+        IconTheme.AddBuiltinIcon ( connecting1,  22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( connecting2,  22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( connecting3,  22, Gdk.Pixbuf.LoadFromResource ( "22x22.connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( disconnected, 22, Gdk.Pixbuf.LoadFromResource ( "22x22.disconnected" ) );
         
-        IconTheme.AddBuiltinIcon ( "haguichi-connected",    24, Gdk.Pixbuf.LoadFromResource ( "24x24.connected"    ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-1" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-2" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-3" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.disconnected" ) );
+        IconTheme.AddBuiltinIcon ( connected,    24, Gdk.Pixbuf.LoadFromResource ( "24x24.connected"    ) );
+        IconTheme.AddBuiltinIcon ( connecting1,  24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( connecting2,  24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( connecting3,  24, Gdk.Pixbuf.LoadFromResource ( "24x24.connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( disconnected, 24, Gdk.Pixbuf.LoadFromResource ( "24x24.disconnected" ) );
         
-        IconTheme.AddBuiltinIcon ( "haguichi-connected",    48, Gdk.Pixbuf.LoadFromResource ( "48x48.connected"    ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-1", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-1" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-2", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-2" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-connecting-3", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-3" ) );
-        IconTheme.AddBuiltinIcon ( "haguichi-disconnected", 48, Gdk.Pixbuf.LoadFromResource ( "48x48.disconnected" ) );
+        IconTheme.AddBuiltinIcon ( connected,    48, Gdk.Pixbuf.LoadFromResource ( "48x48.connected"    ) );
+        IconTheme.AddBuiltinIcon ( connecting1,  48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-1" ) );
+        IconTheme.AddBuiltinIcon ( connecting2,  48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-2" ) );
+        IconTheme.AddBuiltinIcon ( connecting3,  48, Gdk.Pixbuf.LoadFromResource ( "48x48.connecting-3" ) );
+        IconTheme.AddBuiltinIcon ( disconnected, 48, Gdk.Pixbuf.LoadFromResource ( "48x48.disconnected" ) );
         
         this.IconName = disconnected;
         
