@@ -141,31 +141,6 @@ public static class Hamachi
         
     }
     
-
-    public static string Retrieve ( string filename, string args, string nfo, int cut )
-    {
-        
-        string rawOutput = Command.ReturnOutput ( filename, args );
-        
-        int startIndex = rawOutput.LastIndexOf ( nfo );
-        string nfoOutput = rawOutput.Substring ( startIndex );
-        
-        int endIndex = nfoOutput.IndexOf ( "\n" ) - cut;
-            
-        return nfoOutput.Substring ( cut, endIndex );
-        
-    }
-    
-    
-    public static string Retrieve ( string filename, string args, string nfo )
-    {
-        
-        string output = Command.ReturnOutput ( filename, args );
-        
-        return Retrieve ( output, nfo );
-        
-    }
-    
     
     public static string Retrieve ( string output, string nfo )
     {
@@ -465,32 +440,13 @@ public static class Hamachi
         if ( output.Contains ( ".. failed" ) )
         {
             string heading = String.Format ( TextStrings.failedEvictMemberHeading, member.Nick );
-            string message = String.Format ( TextStrings.seeOutput, member.Network );
+            string message = TextStrings.seeOutput;
             
             Application.Invoke ( delegate
             {
                 new Dialogs.Message ( Haguichi.mainWindow.ReturnWindow (), heading, message, "Error", output );
             });
         }
-        
-    }
-    
-    
-    public static string GetNick ()
-    {
-        
-        string nick = Retrieve ( "hamachi", "", "nickname" );
-        Debug.Log ( Debug.Domain.Hamachi, "Hamachi.GetNick", nick );
-        
-        return nick;
-        
-    }
-    
-    
-    public static string GetStatus ()
-    {
-        
-        return Retrieve ( "hamachi", "", "status" );
         
     }
     
