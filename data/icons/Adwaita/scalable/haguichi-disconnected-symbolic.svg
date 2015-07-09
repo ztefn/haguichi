@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg6001"
+   height="16"
+   width="16"
+   version="1.1">
+  <metadata
+     id="metadata14">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6003" />
+  <g
+     id="layer1"
+     transform="translate(1.000002,-1.0000048)">
+    <g
+       style="display:inline;enable-background:new"
+       id="g5552"
+       transform="translate(221.00001,-293.00001)">
+      <g
+         style="display:inline;enable-background:new"
+         id="g4942"
+         transform="matrix(0.07812498,0,0,0.07812498,-224.75025,289.84377)">
+        <path
+           id="rect4985"
+           transform="matrix(12.800003,0,0,12.800003,35.203055,53.199947)"
+           d="M 7.5585938 8.9746094 L 4.5214844 11.123047 L 9 16 L 10 16 L 10 11.626953 L 7.5585938 8.9746094 z "
+           style="opacity:0.35;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new" />
+        <path
+           style="opacity:0.35;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+           id="rect4985-6"
+           d="m 150.40307,66 64.33449,0 -88.40307,96 L 93.19047,195.68752 62,162 z" />
+        <path
+           d="m 176.00309,193.99999 17.60001,0 14.4,14.00064 14.00064,-14.00064 17.99937,0 0,18.80064 -14.00065,13.6 14.00065,13.60001 0,17.99936 -18.40001,0 -13.6,-13.6 -13.6,13.6 -18.40001,0 0,-17.99936 13.60001,-13.60001 -13.60001,-13.6 0,-18.80064 z"
+           style="color:#bebebe;fill:#bebebe"
+           id="path3761-2-3-5-4-8-9-8-0-1-7" />
+      </g>
+    </g>
+  </g>
+</svg>

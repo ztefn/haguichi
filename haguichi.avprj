@@ -1,0 +1,137 @@
+### AutoVala Project ###
+autovala_version: 16
+project_name: haguichi
+*vala_version: 0.26
+
+
+vala_binary: src/haguichi
+version: 1.3.0
+compile_options: --target-glib 2.32
+compile_options: --thread
+*vala_check_package: atk
+*vala_check_package: cairo
+*vala_check_package: gdk-3.0
+*vala_check_package: gdk-pixbuf-2.0
+*vala_check_package: gio-2.0
+*vala_check_package: glib-2.0
+*vala_check_package: gobject-2.0
+*vala_check_package: gtk+-3.0
+*vala_check_package: libnotify
+*vala_check_package: pango
+*vala_check_package: x11
+c_library: notify
+*vala_source: bubble.vala
+*vala_source: command.vala
+*vala_source: connection.vala
+*vala_source: controller.vala
+*vala_source: debug.vala
+*vala_source: dialogs/add-edit-command.vala
+*vala_source: dialogs/attach.vala
+*vala_source: dialogs/base.vala
+*vala_source: dialogs/change-nick.vala
+*vala_source: dialogs/change-password.vala
+*vala_source: dialogs/confirm.vala
+*vala_source: dialogs/join-create-network.vala
+*vala_source: dialogs/message.vala
+*vala_source: global-actions.vala
+*vala_source: global-events.vala
+*vala_source: haguichi.vala
+*vala_source: hamachi.vala
+*vala_source: headerbar.vala
+*vala_source: key.vala
+*vala_source: member-event.vala
+*vala_source: member.vala
+*vala_source: menus/command-menu-item.vala
+*vala_source: menus/member-menu.vala
+*vala_source: menus/network-menu.vala
+*vala_source: network-view.vala
+*vala_source: network.vala
+*vala_source: preferences.vala
+*vala_source: session.vala
+*vala_source: settings.vala
+*vala_source: sidebar.vala
+*vala_source: status.vala
+*vala_source: text.vala
+*vala_source: utils.vala
+*vala_source: widgets/command-button.vala
+*vala_source: widgets/commands-editor.vala
+*vala_source: widgets/group-box.vala
+*vala_source: widgets/message-bar.vala
+*vala_source: widgets/message-box.vala
+*vala_source: widgets/sidebar-entry.vala
+*vala_source: widgets/sidebar-label.vala
+*vala_source: window.vala
+
+*po: po
+
+*desktop: data/haguichi.desktop
+
+*autostart: data/haguichi-autostart.desktop
+
+*scheme: data/haguichi.gschema.xml
+
+full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connected-symbolic.svg
+full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-1-symbolic.svg
+full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-2-symbolic.svg
+full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-3-symbolic.svg
+full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-disconnected-symbolic.svg
+full_icon: Adwaita Applications data/icons/Adwaita/scalable/haguichi-symbolic.svg
+full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connected.png
+full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connecting-1.png
+full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connecting-2.png
+full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connecting-3.png
+full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-disconnected.png
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-error.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-offline.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-online-relayed.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-online.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-unapproved.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/16x16/haguichi-node-unreachable.svg
+full_icon: hicolor Applications data/icons/hicolor/16x16/haguichi.png
+full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connected.png
+full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connecting-1.png
+full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connecting-2.png
+full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connecting-3.png
+full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-disconnected.png
+full_icon: hicolor Applications data/icons/hicolor/22x22/haguichi.png
+full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connected.png
+full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-1.png
+full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-2.png
+full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-3.png
+full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-disconnected.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-error.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-offline.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-online-relayed.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-online.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-unapproved.svg
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-unreachable.svg
+full_icon: hicolor Applications data/icons/hicolor/24x24/haguichi.png
+full_icon: hicolor Applications data/icons/hicolor/256x256/haguichi.png
+full_icon: hicolor Applications data/icons/hicolor/32x32/haguichi.png
+full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connected.png
+full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connecting-1.png
+full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connecting-2.png
+full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connecting-3.png
+full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-disconnected.png
+full_icon: hicolor Applications data/icons/hicolor/48x48/haguichi.png
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connected.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connecting-1.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connecting-2.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connecting-3.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-disconnected.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/24x24/haguichi-connected.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/24x24/haguichi-connecting-1.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/24x24/haguichi-connecting-2.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/24x24/haguichi-connecting-3.svg
+fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/24x24/haguichi-disconnected.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/22x22/haguichi-connected.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/22x22/haguichi-connecting-1.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/22x22/haguichi-connecting-2.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/22x22/haguichi-connecting-3.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/22x22/haguichi-disconnected.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/24x24/haguichi-connected.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/24x24/haguichi-connecting-1.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/24x24/haguichi-connecting-2.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/24x24/haguichi-connecting-3.svg
+fixed_size_icon: ubuntu-mono-light Status data/icons/ubuntu-mono-light/24x24/haguichi-disconnected.svg
+

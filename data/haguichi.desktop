@@ -1,0 +1,27 @@
+[Desktop Entry]
+Type=Application
+Name=Haguichi
+GenericName=Zero Configuration VPN
+Exec=haguichi
+Terminal=false
+Comment=Join and create local networks over the Internet
+Comment[ast]=Xúnite ya cria redes llocales na rede
+Comment[bg]=Влизайте и създавайте локални мрежи през Интернет
+Comment[cs]=Připojení a vytváření lokálních sítí po internetu
+Comment[de]=Lokale Netzwerke im Internet erstellen und diesen beitreten
+Comment[es]=Únase y cree redes locales a través de Internet
+Comment[fr]=Rejoindre et créer des réseaux locaux sur Internet
+Comment[id]=Bergabung dan membuat jaringan lokal melalui Internet
+Comment[it]=Crea ed unisciti a reti locali attraverso Internet
+Comment[ja]=インターネット越しのローカルネットワークを作ったり参加してみよう
+Comment[kk]=Интернет арқылы локальды желілерге кіріңіз, әрі оларды құрыңыз
+Comment[nl]=Maak en treedt toe tot lokale netwerken via het internet
+Comment[pl]=Dołączaj i twórz lokalne sieci po przez internet
+Comment[pt_BR]=Crie e junte-se a redes locais via internet
+Comment[ru]=Создавайте и подключайтесь к локальным сетям в интернете
+Comment[sk]=Pripojenie a vytváranie lokálnych sietí po internete
+Comment[sv]=Anslut och skapa lokala nätverk över internet
+Comment[tr]=İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun
+Comment[uk]=Приєднуйтесь та стоврюйте локальну мережу через Інтернет
+Icon=haguichi
+Categories=Network;P2P;GTK;GNOME;

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+
+  <enum id="org.haguichi.commands.super-user">
+    <value value="0" nick="auto"/>
+    <value value="1" nick="pkexec"/>
+    <value value="2" nick="gksudo"/>
+    <value value="3" nick="gksu"/>
+    <value value="4" nick="gnomesu"/>
+    <value value="5" nick="kdesudo"/>
+    <value value="6" nick="kdesu"/>
+    <value value="8" nick="sudo"/>
+  </enum>
+
+  <enum id="org.haguichi.config.protocol">
+    <value value="0" nick="both"/>
+    <value value="1" nick="ipv4"/>
+    <value value="2" nick="ipv6"/>
+  </enum>
+
+  <enum id="org.haguichi.network-list.sort-by">
+    <value value="0" nick="name"/>
+    <value value="1" nick="status"/>
+  </enum>
+
+  <schema path="/org/haguichi/" id="org.haguichi" gettext-domain="haguichi">
+    <child schema="org.haguichi.behavior" name="behavior"/>
+    <child schema="org.haguichi.commands" name="commands"/>
+    <child schema="org.haguichi.config" name="config"/>
+    <child schema="org.haguichi.network-list" name="network-list"/>
+    <child schema="org.haguichi.notifications" name="notifications"/>
+    <child schema="org.haguichi.ui" name="ui"/>
+  </schema>
+
+  <schema path="/org/haguichi/behavior/" id="org.haguichi.behavior" gettext-domain="haguichi">
+    <key type="b" name="connect-on-startup">
+      <default>true</default>
+    </key>
+    <key type="b" name="disconnect-on-quit">
+      <default>true</default>
+    </key>
+    <key type="b" name="reconnect-on-connection-loss">
+      <default>true</default>
+    </key>
+    <key type="b" name="update-network-list">
+      <default>true</default>
+    </key>
+  </schema>
+
+  <schema path="/org/haguichi/commands/" id="org.haguichi.commands" gettext-domain="haguichi">
+    <key type="as" name="customizable">
+      <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4']</default>
+    </key>
+    <key name="super-user" enum="org.haguichi.commands.super-user">
+      <default>'auto'</default>
+    </key>
+  </schema>
+
+  <schema path="/org/haguichi/config/" id="org.haguichi.config" gettext-domain="haguichi">
+    <key type="s" name="check-internet-hostname">
+      <default>'www.google.com'</default>
+    </key>
+    <key type="s" name="check-internet-ip">
+      <default>'8.8.8.8'</default>
+    </key>
+    <key type="s" name="nickname">
+      <default>'%USERNAME'</default>
+    </key>
+    <key name="protocol" enum="org.haguichi.config.protocol">
+      <default>'both'</default>
+    </key>
+    <key type="i" name="reconnect-interval">
+      <default>30</default>
+      <range min="15" max="3600"/>
+    </key>
+    <key type="i" name="update-interval">
+      <default>15</default>
+      <range min="0" max="999"/>
+    </key>
+  </schema>
+
+  <schema path="/org/haguichi/network-list/" id="org.haguichi.network-list" gettext-domain="haguichi">
+    <key type="as" name="collapsed-networks">
+      <default>[]</default>
+    </key>
+    <key type="s" name="member-template-large">
+      <default><![CDATA['%N%_*<br><span size="smaller">%S <i>%A</i></span>']]></default>
+    </key>
+    <key type="s" name="member-template-small">
+      <default><![CDATA['%N%_*']]></default>
+    </key>
+    <key type="s" name="network-template-large">
+      <default><![CDATA['<b>%N</b> (%O/%T)%_*<br><span size="smaller">%S</span>']]></default>
+    </key>
+    <key type="s" name="network-template-small">
+      <default><![CDATA['<b>%N</b> (%O/%T)%_*']]></default>
+    </key>
+    <key type="b" name="show-offline-members">
+      <default>true</default>
+    </key>
+    <key name="sort-by" enum="org.haguichi.network-list.sort-by">
+      <default>'name'</default>
+    </key>
+  </schema>
+
+  <schema path="/org/haguichi/notifications/" id="org.haguichi.notifications" gettext-domain="haguichi">
+    <key type="b" name="connection-loss">
+      <default>true</default>
+    </key>
+    <key type="b" name="member-join">
+      <default>true</default>
+    </key>
+    <key type="b" name="member-leave">
+      <default>true</default>
+    </key>
+    <key type="b" name="member-offline">
+      <default>true</default>
+    </key>
+    <key type="b" name="member-online">
+      <default>true</default>
+    </key>
+  </schema>
+
+  <schema path="/org/haguichi/ui/" id="org.haguichi.ui" gettext-domain="haguichi">
+    <key type="i" name="height">
+      <default>565</default>
+    </key>
+    <key type="b" name="maximized">
+      <default>false</default>
+    </key>
+    <key type="i" name="position-x">
+      <default>100</default>
+    </key>
+    <key type="i" name="position-y">
+      <default>80</default>
+    </key>
+    <key type="b" name="prefer-dark-theme">
+      <default>true</default>
+    </key>
+    <key type="i" name="sidebar-position">
+      <default>305</default>
+    </key>
+    <key type="i" name="width">
+      <default>580</default>
+    </key>
+  </schema>
+
+</schemalist>

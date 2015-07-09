@@ -1,0 +1,779 @@
+# Slovak translation for haguichi
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# This file is distributed under the same license as the haguichi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: haguichi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-18 22:26+0200\n"
+"PO-Revision-Date: 2014-10-27 22:02+0000\n"
+"Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
+"Language-Team: Slovak <sk@li.org>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Launchpad-Export-Date: 2014-10-27 22:20+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
+
+#: src/text.vala:341
+msgid "A graphical frontend for Hamachi."
+msgstr "Grafické rozhranie pre Hamachi."
+
+#: src/text.vala:342
+msgid "Join and create local networks over the Internet"
+msgstr "Pripojenie a vytváranie lokálnych sietí po internete"
+
+#: src/text.vala:347
+msgid "_OK"
+msgstr "_Ok"
+
+#: src/text.vala:348
+msgid "_Cancel"
+msgstr "_Zrušiť"
+
+#: src/text.vala:349
+msgid "_Save"
+msgstr "_Uložiť"
+
+#: src/text.vala:350
+msgid "_Refresh"
+msgstr "_Obnoviť"
+
+#: src/text.vala:351
+msgid "_Revert"
+msgstr "Vrá_tiť"
+
+#: src/text.vala:352
+msgid "_Delete"
+msgstr "O_dstrániť"
+
+#: src/text.vala:353
+msgid "_Information"
+msgstr "_Informácie"
+
+#: src/text.vala:354
+msgid "_Donate"
+msgstr ""
+
+#: src/text.vala:355
+msgid "_Preferences"
+msgstr "_Predvoľby"
+
+#: src/text.vala:356
+msgid "_Help"
+msgstr "_Nápoveda"
+
+#: src/text.vala:357
+msgid "_About"
+msgstr "_O programe"
+
+#: src/text.vala:358
+msgid "_Quit"
+msgstr "_Koniec"
+
+#: src/text.vala:360
+msgid "_Show Haguichi"
+msgstr "_Zobraziť Haguichi"
+
+#: src/text.vala:362
+msgid "Yes"
+msgstr "Áno"
+
+#: src/text.vala:363
+msgid "No"
+msgstr "Nie"
+
+#: src/text.vala:365
+msgid "_Hamachi output"
+msgstr "_Hamachi výstup"
+
+#: src/text.vala:367
+msgid "IPv4 address:"
+msgstr "IPv4 adresa:"
+
+#: src/text.vala:368
+msgid "IPv6 address:"
+msgstr "IPv6 adresa:"
+
+#: src/text.vala:369
+msgid "Client ID:"
+msgstr "ID klienta:"
+
+#: src/text.vala:370
+msgid "Status:"
+msgstr "Stav:"
+
+#: src/text.vala:371
+msgid "Tunnel:"
+msgstr "Tunel:"
+
+#: src/text.vala:372
+msgid "Connection:"
+msgstr "Spojenie:"
+
+#: src/text.vala:373
+msgid "Direct"
+msgstr "Priamy"
+
+#: src/text.vala:374
+msgid "Relayed"
+msgstr "Postúpené"
+
+#: src/text.vala:375
+msgid "Anonymous"
+msgstr "Anonymný"
+
+#: src/text.vala:376
+msgid "_Network ID:"
+msgstr "_ID siete:"
+
+#: src/text.vala:378
+msgid "_Password:"
+msgstr "_Heslo:"
+
+#: src/text.vala:379
+msgid "_Nickname:"
+msgstr "_Prezývka:"
+
+#: src/text.vala:382
+msgid "Offline"
+msgstr "Offline"
+
+#: src/text.vala:383
+msgid "Online"
+msgstr "Online"
+
+#: src/text.vala:384
+msgid "Unreachable"
+msgstr "Nedostupný"
+
+#: src/text.vala:385
+msgid "Protocol mismatch"
+msgstr "Chyba v protokole"
+
+#: src/text.vala:386
+msgid "Conflicting address"
+msgstr "Konflikt adries"
+
+#: src/text.vala:387
+msgid "Connected"
+msgstr "Pripojený"
+
+#: src/text.vala:388
+msgid "Disconnected"
+msgstr "Odpojený"
+
+#: src/text.vala:389
+msgid "Connecting…"
+msgstr "Pripája sa…"
+
+#: src/text.vala:390
+msgid "Logging in…"
+msgstr "Prihlasovanie…"
+
+#: src/text.vala:391
+msgid "Updating…"
+msgstr "Aktualizacia…"
+
+#: src/text.vala:393
+msgid "Hamachi is not configured"
+msgstr "Hamachi nie je nastavené"
+
+#: src/text.vala:394
+msgid "You need to configure Hamachi before you can connect."
+msgstr "Pred pripojením je potrebné Hamachi nastaviť."
+
+#: src/text.vala:395
+msgid "C_onfigure"
+msgstr "_Nastaviť"
+
+#: src/text.vala:397
+msgid "Hamachi is not installed"
+msgstr "Hamachi nie je nainštalované"
+
+#: src/text.vala:398
+msgid "Please download Hamachi and follow the installation instructions."
+msgstr "Stiahnite si Hamachi a postupujte podľa inštalačných inštrukcií."
+
+#: src/text.vala:399
+msgid "Hamachi version {0} is obsolete"
+msgstr "Verze Hamachi {0} je zastaraná"
+
+#: src/text.vala:400
+msgid "Please download and install the latest Hamachi version."
+msgstr "Stiahnite a nainštalujte si prosím najnovšiu verziu Hamachi."
+
+#: src/text.vala:401
+msgid "_Download"
+msgstr "_Stiahnuť"
+
+#: src/text.vala:403
+#, fuzzy
+msgid "You are connected!"
+msgstr "Odpojený"
+
+#: src/text.vala:404
+msgid "Click on the + button to add a network."
+msgstr ""
+
+#: src/text.vala:406
+msgid "Members:"
+msgstr "Členovia:"
+
+#: src/text.vala:407
+msgid "{0} online, {1} total"
+msgstr "{0} online, {1} celkovo"
+
+#: src/text.vala:408
+msgid "Owner:"
+msgstr "Vlastník:"
+
+#: src/text.vala:409
+msgid "You"
+msgstr "Vy"
+
+#: src/text.vala:410
+msgid "Unknown"
+msgstr "Neznámy"
+
+#: src/text.vala:411
+msgid "Unavailable"
+msgstr "Nedostupný"
+
+#: src/text.vala:412
+msgid "Awaiting approval"
+msgstr "Čaká na schválenie"
+
+#: src/text.vala:413
+msgid "Locked:"
+msgstr "Uzamknuté:"
+
+#: src/text.vala:414
+msgid "Approval:"
+msgstr "Schválenie:"
+
+#: src/text.vala:415
+msgid "Manually"
+msgstr "Ručne"
+
+#: src/text.vala:416
+msgid "Automatically"
+msgstr "Automaticky"
+
+#: src/text.vala:417
+msgid "Capacity:"
+msgstr "Kapacita:"
+
+#: src/text.vala:419
+msgid "_Go Online"
+msgstr "Ísť o_nline"
+
+#: src/text.vala:420
+msgid "_Go Offline"
+msgstr "Ísť o_ffline"
+
+#: src/text.vala:421
+msgid "_Leave"
+msgstr "_Odísť"
+
+#: src/text.vala:422
+msgid "_Locked"
+msgstr "_Uzamknuté"
+
+#: src/text.vala:423
+msgid "_New Member Approval"
+msgstr "Schválenie _nového člena"
+
+#: src/text.vala:424
+msgid "_Automatically"
+msgstr "_Automaticky"
+
+#: src/text.vala:425
+msgid "_Manually"
+msgstr "_Ručne"
+
+#: src/text.vala:426
+msgid "_Copy Network ID"
+msgstr "_Kopírovať ID siete"
+
+#: src/text.vala:428
+msgid "_Browse Shares"
+msgstr "P_rechádzať zdieľané"
+
+#: src/text.vala:429
+msgid "_Ping"
+msgstr "_Ping"
+
+#: src/text.vala:430
+msgid "_View Remote Desktop"
+msgstr "_Zobraziť vzdialenú plochu"
+
+#: src/text.vala:431
+msgid "_Approve"
+msgstr "_Schváliť"
+
+#: src/text.vala:432
+msgid "_Reject"
+msgstr "_Odmietnuť"
+
+#: src/text.vala:433
+msgid "_Evict"
+msgstr "_Vyhodiť"
+
+#: src/text.vala:434
+msgid "Copy IPv_4 Address"
+msgstr "Kopírovať IPv_4 adresu"
+
+#: src/text.vala:435
+msgid "Copy IPv_6 Address"
+msgstr "Kopírovať IPv_6 adresu"
+
+#: src/text.vala:436
+msgid "_Copy Client ID"
+msgstr "_Kopírovať ID klienta"
+
+#: src/text.vala:438
+msgid "Change _Nickname…"
+msgstr "Zmeniť p_rezývku…"
+
+#: src/text.vala:439
+msgid "Change Nickname"
+msgstr "Zmeniť prezývku"
+
+#: src/text.vala:440
+msgid "C_hange"
+msgstr "_Zmeniť"
+
+#: src/text.vala:442
+msgid "Change _Password…"
+msgstr "Zmeniť _heslo…"
+
+#: src/text.vala:443
+msgid "Change Password"
+msgstr "Zmeniť heslo"
+
+#: src/text.vala:444
+#, fuzzy
+msgid "_New password:"
+msgstr "_Heslo:"
+
+#: src/text.vala:446
+msgid "_Account:"
+msgstr "Úče_t:"
+
+#: src/text.vala:449
+msgid "_Attach to Account…"
+msgstr "Pripo_jiť k účtu…"
+
+#: src/text.vala:450
+msgid "Attach to Account"
+msgstr "Pričleniť k účtu"
+
+#: src/text.vala:451
+msgid "_Include all networks created by this client"
+msgstr "_Zahrnúť všetky siete vytvorené týmto klientom"
+
+#: src/text.vala:452
+msgid "_Attach"
+msgstr "_Pričleniť"
+
+#: src/text.vala:453
+msgid "Account not found"
+msgstr "Účet sa nenašiel"
+
+#: src/text.vala:455
+msgid "Config_uration"
+msgstr "Konfig_urácia"
+
+#: src/text.vala:456
+msgid "_Open Folder"
+msgstr "_Otvoriť zložku"
+
+#: src/text.vala:457
+msgid "_Save a Backup…"
+msgstr "_Uložiť zálohu…"
+
+#: src/text.vala:458
+msgid "Save a Backup"
+msgstr "Uložiť zálohu"
+
+#: src/text.vala:459
+msgid "_Restore from Backup…"
+msgstr "_Obnoviť zo zálohy…"
+
+#: src/text.vala:460
+msgid "Restore from Backup"
+msgstr "Obnoviť zo zálohy"
+
+#: src/text.vala:461
+msgid "_Restore"
+msgstr "O_bnoviť"
+
+#: src/text.vala:462
+msgid "Could not restore configuration"
+msgstr "Konfigurácia sa nedá obnoviť"
+
+#: src/text.vala:463
+msgid "Archive does not contain expected files."
+msgstr "Archív neobsahuje očakávané súbory."
+
+#: src/text.vala:464
+msgid "All supported archives"
+msgstr "Všetky podporované archívy"
+
+#: src/text.vala:466
+msgid "_Join Network…"
+msgstr "_Vstúpiť do siete…"
+
+#: src/text.vala:467
+msgid "Join Network"
+msgstr "Vstúpiť do siete"
+
+#: src/text.vala:468
+msgid "_Join"
+msgstr "Vstú_piť"
+
+#: src/text.vala:470
+msgid "_Create Network…"
+msgstr "_Vytvoriť sieť…"
+
+#: src/text.vala:471
+msgid "Create Network"
+msgstr "Vytvoriť sieť"
+
+#: src/text.vala:472
+msgid "C_reate"
+msgstr "V_ytvoriť"
+
+#: src/text.vala:474
+msgid "Network not found"
+msgstr "Sieť nebola nájdená"
+
+#: src/text.vala:475
+msgid "Invalid password"
+msgstr "Neplatné heslo"
+
+#: src/text.vala:476
+msgid "Network is full"
+msgstr "Sieť je plná"
+
+#: src/text.vala:477
+msgid "Network is locked"
+msgstr "Sieť je zamknutá"
+
+#: src/text.vala:478
+msgid "Network already joined"
+msgstr "Sieť je už pripojená"
+
+#: src/text.vala:479
+#, fuzzy
+msgid "Network ID is already taken"
+msgstr "Meno siete je už obsadené"
+
+#: src/text.vala:480
+msgid "Unknown error"
+msgstr "Neznáma chyba"
+
+#: src/text.vala:482
+msgid "Join request sent"
+msgstr "Žiadosť o pripojenie zaslaná"
+
+#: src/text.vala:484
+msgid "Preferences"
+msgstr "Predvoľby"
+
+#: src/text.vala:485
+msgid "Information"
+msgstr "Informácie"
+
+#: src/text.vala:487
+msgid "Are you sure you want to delete the network “{0}”?"
+msgstr "Naozaj chcete zmazať sieť „{0}“?"
+
+#: src/text.vala:488
+msgid "If you delete a network, it will be permanently lost."
+msgstr "Ak sieť odstránite, bude nenávratne stratená."
+
+#: src/text.vala:490
+msgid "Are you sure you want to leave the network “{0}”?"
+msgstr "Naozaj chcete opustiť sieť „{0}“?"
+
+#: src/text.vala:491
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr "Ak potvrdíte, môžete sa opäť pripojiť kedykoľvek neskôr."
+
+#: src/text.vala:493
+msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
+msgstr "Naozaj chcete vyhodiť člena „{0}“ zo siete „{1}“?"
+
+#: src/text.vala:494
+msgid "If admitted, evicted members can rejoin the network at any later time."
+msgstr "Ak potvrdíte, môžu sa vylúčenie členi neskôr opäť pripojiť."
+
+#: src/text.vala:496
+msgid "Could not delete network “{0}”"
+msgstr "Nemožno zmazať sieť „{0}“"
+
+#: src/text.vala:497
+msgid "Could not leave network “{0}”"
+msgstr "Nemožno opustiť sieť „{0}“"
+
+#: src/text.vala:498
+msgid "Could not evict member “{0}”"
+msgstr "Nemožno vyhodiť člena „{0}“"
+
+#: src/text.vala:499
+msgid "Could not go online in the network “{0}”"
+msgstr "Nemožno prejsť do režimu online v sieti „{0}“"
+
+#: src/text.vala:500
+msgid "Could not go offline in the network “{0}”"
+msgstr "Nemožno prejsť do režimu offline v sieti „{0}“"
+
+#: src/text.vala:502
+msgid "See output for details."
+msgstr "Pre podrobnosti zobrazte výstup."
+
+#: src/text.vala:504
+msgid "General"
+msgstr "Obecné"
+
+#: src/text.vala:505
+msgid "Desktop"
+msgstr "Plocha"
+
+#: src/text.vala:506
+msgid "Commands"
+msgstr "Príkazy"
+
+#: src/text.vala:508
+#, fuzzy
+msgid "Notifications"
+msgstr "Oznamovacia oblasť"
+
+#: src/text.vala:509
+msgid "Behavior"
+msgstr "Chovanie"
+
+#: src/text.vala:511
+msgid "_Protocol:"
+msgstr "_Protokol:"
+
+#: src/text.vala:512
+msgid "Both IPv4 and IPv6"
+msgstr "Obaja IPv4 a IPv6"
+
+#: src/text.vala:513
+msgid "IPv4 only"
+msgstr "Iba IPv4"
+
+#: src/text.vala:514
+msgid "IPv6 only"
+msgstr "Iba IPv6"
+
+#: src/text.vala:516
+msgid "Show _Offline Members"
+msgstr "Zobraziť _offline členov"
+
+#: src/text.vala:517
+msgid "Sort by _Name"
+msgstr "Radiť podľa me_na"
+
+#: src/text.vala:518
+msgid "Sort by _Status"
+msgstr "Radiť podľa _stavu"
+
+#: src/text.vala:520
+msgid "C_onnect automatically on startup"
+msgstr "Prip_ojiť automaticky pri spustení"
+
+#: src/text.vala:521
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "Automaticky obnoviť spojenie, ak bolo st_ratené"
+
+#: src/text.vala:522
+msgid "_Disconnect on quit"
+msgstr "O_dpojiť pri ukončení"
+
+#: src/text.vala:524
+msgid "Display notification when the connection is l_ost"
+msgstr "Z_obraziť upozornenie, keď je spojenie stratené"
+
+#: src/text.vala:525
+msgid "Display notification when a member _joins"
+msgstr "Zobraziť upozornenie, keď sa člen pripo_jí"
+
+#: src/text.vala:526
+msgid "Display notification when a member _leaves"
+msgstr "Zobraziť upozornenie, keď sa č_len odpojí"
+
+#: src/text.vala:527
+msgid "Display notification when a member comes o_nline"
+msgstr "Zobraziť upozornenie, keď člen zmení stav na o_nline"
+
+#: src/text.vala:528
+msgid "Display notification when a member goes o_ffline"
+msgstr "Zobraziť upozornenie, keď člen zmení stav na o_ffline"
+
+#: src/text.vala:530
+msgid "Error connecting"
+msgstr "Chyba pri pripájaní"
+
+#: src/text.vala:531
+msgid "Hamachi login failed"
+msgstr "Prihlásenie Hamachi zlyhalo"
+
+#: src/text.vala:532
+msgid "No internet connection"
+msgstr "Žiadne pripojenie k internetu"
+
+#: src/text.vala:534
+msgid "Hamachi lost connection"
+msgstr "Strata Hamachi spojenia"
+
+#: src/text.vala:535
+msgid "Member online"
+msgstr "Člen online"
+
+#: src/text.vala:536
+msgid "{0} came online in the network {1}"
+msgstr "{0} je online v sieti {1}"
+
+#: src/text.vala:537
+msgid "Member offline"
+msgstr "Člen offline"
+
+#: src/text.vala:538
+msgid "{0} went offline in the network {1}"
+msgstr "{0} je offline zo siete {1}"
+
+#: src/text.vala:539
+msgid "Member joined"
+msgstr "Člen bol pridaný"
+
+#: src/text.vala:540
+msgid "{0} joined the network {1}"
+msgstr "{0} bol pridaný do siete {1}"
+
+#: src/text.vala:541
+msgid "Member left"
+msgstr "Člen odišiel"
+
+#: src/text.vala:542
+msgid "{0} left the network {1}"
+msgstr "{0} opustil sieť {1}"
+
+#: src/text.vala:544
+msgid "Add"
+msgstr "Pridať"
+
+#: src/text.vala:545
+msgid "Add Command"
+msgstr "Pridať príkaz"
+
+#: src/text.vala:546
+msgid "_Add"
+msgstr "P_ridať"
+
+#: src/text.vala:547
+msgid "Edit"
+msgstr "Upraviť"
+
+#: src/text.vala:548
+msgid "Edit Command"
+msgstr "Upraviť príkaz"
+
+#: src/text.vala:549
+msgid "_Label:"
+msgstr "Ští_tok:"
+
+#: src/text.vala:550
+msgid "IPv_4 command:"
+msgstr "IPv_4 príkaz:"
+
+#: src/text.vala:551
+msgid "IPv_6 command:"
+msgstr "IPv_6 príkaz"
+
+#: src/text.vala:552
+msgid "Use %A for address and %N for nickname"
+msgstr "Použite %A pre adresu a %N pre prezývku"
+
+#: src/text.vala:553
+msgid "_Priority:"
+msgstr "_Priorita:"
+
+#: src/text.vala:555
+msgid "Remove"
+msgstr "Odstrániť"
+
+#: src/text.vala:556
+msgid "Move up"
+msgstr "Posunúť vyššie"
+
+#: src/text.vala:557
+msgid "Move down"
+msgstr "Posunúť nižšie"
+
+#: src/text.vala:558
+msgid "Set as default action"
+msgstr ""
+
+#: src/text.vala:560
+msgid "Revert all changes"
+msgstr ""
+
+#: src/text.vala:561
+msgid "Are you sure you want to revert all changes?"
+msgstr "Skutočne chcete vrátiť všetky zmeny?"
+
+#: src/text.vala:562
+msgid "If you revert all changes, the default commands will be restored."
+msgstr "Ak vrátite všetky zmeny, budú obnovené východzí príkazy."
+
+#: src/text.vala:567
+msgid "Reconnecting in {0} second"
+msgid_plural "Reconnecting in {0} seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/text.vala:572
+#, c-format
+msgid "_Update the network list every %S _second"
+msgid_plural "_Update the network list every %S _seconds"
+msgstr[0] "_Aktualizovať zoznam sietí raz za %S _sekundu"
+msgstr[1] "_Aktualizovať zoznam sietí raz za %S _sekundy"
+msgstr[2] "_Aktualizovať zoznam sietí raz za %S _sekúnd"
+
+#: src/text.vala:577
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} je online v sieti {1} a {2} ďalšej sieti"
+msgstr[1] "{0} je online v sieti {1} a {2} ďalších sietí"
+msgstr[2] "{0} je online v sieti {1} a {2} ďalších sietí"
+
+#: src/text.vala:582
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} je offline v sieti {1} a {2} ďalšej sieti"
+msgstr[1] "{0} je offline v sieti {1} a {2} ďalších sietí"
+msgstr[2] "{0} je offline v sieti {1} a {2} ďalších sietí"
+
+#: src/text.vala:587
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} sa pripojil do siete {1} a {2} ďalší siete"
+msgstr[1] "{0} sa pripojil do siete {1} a {2} ďalších sietí"
+msgstr[2] "{0} sa pripojil do siete {1} a {2} ďalších sietí"
+
+#: src/text.vala:592
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} opustil sieť {1} a {2} ďalší sieť"
+msgstr[1] "{0} opustil sieť {1} a {2} ďalšie siete"
+msgstr[2] "{0} opustil sieť {1} a {2} ďalších sietí"
