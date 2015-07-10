@@ -26,3 +26,4 @@ Comment[uk]=Приєднуйтесь та стоврюйте локальну м
 Icon=haguichi
 Categories=Network;P2P;GTK;GNOME;
 X-GNOME-Autostart-enabled=false
+X-MATE-Autostart-enabled=false
