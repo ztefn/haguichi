@@ -711,7 +711,7 @@ msgstr "優先度(_P):"
 
 #: src/text.vala:555
 msgid "Remove"
-msgstr ""
+msgstr "削除"
 
 #: src/text.vala:556
 msgid "Move up"

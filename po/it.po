@@ -69,7 +69,7 @@ msgstr "A_iuto"
 
 #: src/text.vala:357
 msgid "_About"
-msgstr ""
+msgstr "I_nformazioni"
 
 #: src/text.vala:358
 msgid "_Quit"
@@ -711,7 +711,7 @@ msgstr "_Priorità:"
 
 #: src/text.vala:555
 msgid "Remove"
-msgstr ""
+msgstr "Rimuovi"
 
 #: src/text.vala:556
 msgid "Move up"

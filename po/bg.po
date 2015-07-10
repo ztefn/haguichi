@@ -710,7 +710,7 @@ msgstr "_Приоритет:"
 
 #: src/text.vala:555
 msgid "Remove"
-msgstr ""
+msgstr "Премахване"
 
 #: src/text.vala:556
 msgid "Move up"

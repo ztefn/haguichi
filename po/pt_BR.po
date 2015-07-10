@@ -730,7 +730,7 @@ msgstr "Voltar às configurações padrão"
 
 #: src/text.vala:560
 msgid "Revert all changes"
-msgstr "Reverter alterações"
+msgstr "Reverter todas as alterações"
 
 #: src/text.vala:561
 msgid "Are you sure you want to revert all changes?"

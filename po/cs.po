@@ -709,7 +709,7 @@ msgstr "_Priorita:"
 
 #: src/text.vala:555
 msgid "Remove"
-msgstr ""
+msgstr "Odstranit"
 
 #: src/text.vala:556
 msgid "Move up"
