@@ -47,6 +47,8 @@ namespace Dialogs
                     resizable: false,
                     border_width: 0);
             
+            set_icon_list (HaguichiWindow.app_icons);
+            
             if (Haguichi.window_use_header_bar)
             {
                 var titlebar = new HeaderBar();
