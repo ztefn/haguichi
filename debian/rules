@@ -19,6 +19,7 @@ binary-arch:
 	make install -C $(BUILDDIR) DESTDIR=./debian/tmp
 	mkdir -p ./debian/tmp/DEBIAN
 	mv $(BUILDDIR)/debian/tmp/* ./debian/tmp
+	install -m 755 debian/postinst debian/postrm debian/tmp/DEBIAN
 	dpkg-gencontrol -phaguichi;
 	dpkg --build debian/tmp ..
 

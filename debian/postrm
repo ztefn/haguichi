@@ -1,9 +1,4 @@
 #!/bin/sh
-
 set -e
-
 glib-compile-schemas /usr/share/glib-2.0/schemas
-
-if which update-icon-caches >/dev/null 2>&1 ; then
-	update-icon-caches /usr/share/icons/ubuntu-mono-dark /usr/share/icons/ubuntu-mono-light
-fi
+gtk-update-icon-cache /usr/share/icons/hicolor /usr/share/icons/Adwaita /usr/share/icons/ubuntu-mono-dark /usr/share/icons/ubuntu-mono-light
