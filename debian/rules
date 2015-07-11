@@ -20,8 +20,6 @@ binary-arch:
 	mkdir -p ./debian/tmp/DEBIAN
 	mv $(BUILDDIR)/debian/tmp/* ./debian/tmp
 	install -m 755 debian/postinst debian/postrm debian/tmp/DEBIAN
-	install -d debian/tmp/usr/share/doc/haguichi
-	install -m 644 debian/changelog debian/tmp/usr/share/doc/haguichi/changelog.Debian
 	dpkg-gencontrol -phaguichi;
 	dpkg --build debian/tmp ..
 
