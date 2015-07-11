@@ -2,7 +2,7 @@
 Type=Application
 Name=Haguichi
 GenericName=Zero Configuration VPN
-Exec=haguichi
+Exec=haguichi --hidden
 Terminal=false
 Comment=Join and create local networks over the Internet
 Comment[ast]=Xúnite ya cria redes llocales na rede
