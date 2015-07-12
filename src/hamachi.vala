@@ -457,7 +457,7 @@ public class Hamachi : Object
                 output += " * [" + random_network_id() + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
                 output += "     * 090-736-821   ztefn                      " + random_address() + "  alias: not set        2146:0d::987:a654    direct\n";
                 output += "   [" + random_network_id() + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
-                output += "     * " + random_client_id() + "   AndreasBWagner             " + random_address() + "  alias: not set                             via relay\n";
+                output += "     * " + random_client_id() + "   lowfatcomputing            " + random_address() + "  alias: not set                             via relay\n";
                 output += "     * 094-409-761   Andrew                     " + random_address() + "  alias: not set                             direct\n";
                 output += "       " + random_client_id() + "   etamPL                     " + random_address() + "\n";
                 output += " * [" + random_network_id() + "]Translators  capacity: 18/256, subscription type: Multi-network, owner: translators@haguichi.net\n";

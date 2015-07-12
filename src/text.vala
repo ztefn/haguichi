@@ -61,6 +61,7 @@ Options:
 
 Čeština (cs)
     Jan Bažant https://launchpad.net/~brbla
+    Zdeněk Kopš https://launchpad.net/~zdenekkops
 
 Deutsch (de)
     Jannik Heller https://launchpad.net/~scrawl
