@@ -7,7 +7,7 @@ Homepage: https://www.haguichi.net/
 
 Package: haguichi
 Architecture: any
-Depends: libglib2.0-0 (>= 2.42), libgtk-3-0 (>= 3.14), libnotify4 (>= 0.7.6)
+Depends: libglib2.0-0 (>= 2.42), libgtk-3-0 (>= 3.14), libnotify4 (>= 0.7.6), adwaita-icon-theme (>= 3.14)
 Recommends: haguichi-indicator
 Description: Graphical frontend for Hamachi
  Haguichi provides a graphical frontend for Hamachi on Linux. It
