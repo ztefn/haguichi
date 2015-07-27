@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-18 22:26+0200\n"
-"PO-Revision-Date: 2013-05-29 00:15+0000\n"
-"Last-Translator: scrawl <Unknown>\n"
+"PO-Revision-Date: 2015-07-27 15:33+0000\n"
+"Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
-"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-05-29 18:52+0000\n"
-"X-Generator: Launchpad (build 16652)\n"
+"X-Launchpad-Export-Date: 2015-07-27 17:44+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
+"Language: de\n"
 
 #: src/text.vala:341
 msgid "A graphical frontend for Hamachi."
@@ -57,7 +57,7 @@ msgstr "_Informationen"
 
 #: src/text.vala:354
 msgid "_Donate"
-msgstr ""
+msgstr "_Spenden"
 
 #: src/text.vala:355
 msgid "_Preferences"
@@ -157,7 +157,7 @@ msgstr "Protokollfehler"
 
 #: src/text.vala:386
 msgid "Conflicting address"
-msgstr "Addressenkonflikt"
+msgstr "Adressenkonflikt"
 
 #: src/text.vala:387
 msgid "Connected"
@@ -206,20 +206,20 @@ msgstr "Hamachi-Version {0} ist veraltet"
 
 #: src/text.vala:400
 msgid "Please download and install the latest Hamachi version."
-msgstr "Bitte die neueste Version von Hamachi herunterladen und installieren."
+msgstr ""
+"Bitte die neueste Version von Hamachi herunterladen und installieren."
 
 #: src/text.vala:401
 msgid "_Download"
 msgstr "_Herunterladen"
 
 #: src/text.vala:403
-#, fuzzy
 msgid "You are connected!"
-msgstr "Getrennt"
+msgstr "Sie sind verbunden!"
 
 #: src/text.vala:404
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Klicken Sie auf den + Button, um ein Netzwerk hinzuzufügen."
 
 #: src/text.vala:406
 msgid "Members:"
@@ -358,9 +358,8 @@ msgid "Change Password"
 msgstr "Passwort ändern"
 
 #: src/text.vala:444
-#, fuzzy
 msgid "_New password:"
-msgstr "_Passwort:"
+msgstr "_Neues Passwort:"
 
 #: src/text.vala:446
 msgid "_Account:"
@@ -471,9 +470,8 @@ msgid "Network already joined"
 msgstr "Sie sind diesem Netzwerk bereits beigetreten"
 
 #: src/text.vala:479
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "Name des Netzwerks wird schon benutzt"
+msgstr "Netzwerk-Kennung ist bereits vergeben"
 
 #: src/text.vala:480
 msgid "Unknown error"
@@ -514,7 +512,8 @@ msgstr ""
 "hinauswerfen möchten?"
 
 #: src/text.vala:494
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Falls erlaubt, können hinausgeworfene Mitglieder das Netzwerk zu jeder Zeit "
 "wieder betreten."
@@ -556,9 +555,8 @@ msgid "Commands"
 msgstr "Befehle"
 
 #: src/text.vala:508
-#, fuzzy
 msgid "Notifications"
-msgstr "Benachrichtigungsfeld"
+msgstr "Benach­rich­ti­gungen"
 
 #: src/text.vala:509
 msgid "Behavior"
@@ -725,9 +723,8 @@ msgid "Move down"
 msgstr "Nach unten"
 
 #: src/text.vala:558
-#, fuzzy
 msgid "Set as default action"
-msgstr "Standardbefehle wiederherstellen"
+msgstr "Als Standard-Aktion festlegen"
 
 #: src/text.vala:560
 msgid "Revert all changes"
@@ -746,8 +743,8 @@ msgstr ""
 #: src/text.vala:567
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Wiederverbindung in {0} Sekunde"
+msgstr[1] "Wiederverbindung in {0} Sekunden"
 
 #: src/text.vala:572
 #, c-format
