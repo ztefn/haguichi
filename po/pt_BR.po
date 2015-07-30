@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-06-18 22:26+0200\n"
-"PO-Revision-Date: 2015-07-27 15:33+0000\n"
+"PO-Revision-Date: 2015-07-29 10:25+0000\n"
 "Last-Translator: Rodrigo de Avila <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-07-27 17:44+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-07-30 14:40+0000\n"
+"X-Generator: Launchpad (build 17656)\n"
 "Language: pt_BR\n"
 
 #: src/text.vala:341
@@ -726,7 +726,7 @@ msgstr "Definir como ação padrão"
 
 #: src/text.vala:560
 msgid "Revert all changes"
-msgstr "Reverter alterações"
+msgstr "Reverter todas as alterações"
 
 #: src/text.vala:561
 msgid "Are you sure you want to revert all changes?"
