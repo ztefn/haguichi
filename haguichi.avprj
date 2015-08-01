@@ -68,7 +68,7 @@ c_library: notify
 
 *autostart: data/haguichi-autostart.desktop
 
-*scheme: data/haguichi.gschema.xml
+*scheme: data/org.haguichi.gschema.xml
 
 full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connected-symbolic.svg
 full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-1-symbolic.svg
