@@ -136,7 +136,7 @@ public class GlobalEvents
     public static void start_search ()
     {
         HaguichiWindow.header_bar.search_but.active = true;
-        HaguichiWindow.search_bar.show();
+        HaguichiWindow.search_bar_revealer.set_reveal_child (true);
         HaguichiWindow.search_entry.grab_focus();
         
         search_active = true;
@@ -145,7 +145,7 @@ public class GlobalEvents
     public static void stop_search ()
     {
         HaguichiWindow.header_bar.search_but.active = false;
-        HaguichiWindow.search_bar.hide();
+        HaguichiWindow.search_bar_revealer.set_reveal_child (false);
         HaguichiWindow.search_entry.text = "";
         
         search_active = false;

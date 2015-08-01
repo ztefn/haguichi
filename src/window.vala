@@ -22,6 +22,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     
     public static SearchEntry search_entry;
     public static Toolbar search_bar;
+    public static Revealer search_bar_revealer;
     
     public static int minimum_width;
     
@@ -84,6 +85,9 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         search_bar.add (search_item);
         search_bar.get_style_context().add_class ("search-bar");
         
+        search_bar_revealer = new Revealer();
+        search_bar_revealer.add (search_bar);
+        
         
         // Connected Box
         
@@ -125,10 +129,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         // Content Box
         
         Box left_box = new Box (Orientation.VERTICAL, 0);
-        left_box.pack_start (message_bar,      false, false, 0);
-        left_box.pack_start (search_bar,       false, false, 0);
-        left_box.pack_start (disconnected_box, true,  true,  0);
-        left_box.pack_start (connected_box,    true,  true,  0);
+        left_box.pack_start (message_bar,         false, false, 0);
+        left_box.pack_start (search_bar_revealer, false, false, 0);
+        left_box.pack_start (disconnected_box,    true,  true,  0);
+        left_box.pack_start (connected_box,       true,  true,  0);
         
         content_box = new Paned (Orientation.HORIZONTAL);
         content_box.pack1 (left_box, false, false);
@@ -192,7 +196,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         move (x, y);
         
         message_bar.hide();
-        search_bar.hide();
         
         if (Haguichi.hidden == false)
         {
