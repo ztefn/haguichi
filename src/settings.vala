@@ -67,7 +67,7 @@ public class Settings : Object
         command_for_super_user        = new Key ("commands", "super-user");
         check_internet_hostname       = new Key ("config", "check-internet-hostname");
         check_internet_ip             = new Key ("config", "check-internet-ip");
-        nickname                      = new Key ("config", "nickname");//Environment.UserName
+        nickname                      = new Key ("config", "nickname");
         protocol                      = new Key ("config", "protocol");
         reconnect_interval            = new Key ("config", "reconnect-interval");
         update_interval               = new Key ("config", "update-interval");
