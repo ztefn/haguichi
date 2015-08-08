@@ -5,10 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg6001"
-   height="24"
+   version="1.1"
    width="24"
-   version="1.1">
+   height="24"
+   id="svg6001">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -24,44 +24,23 @@
   <defs
      id="defs6003" />
   <g
-     transform="matrix(0.06747194,0,0,0.06747194,2.6557397,2.5472348)"
-     id="g4942-8"
-     style="display:inline;enable-background:new" />
-  <g
-     transform="translate(4.9999997,3.999995)"
-     id="g4222"
-     style="opacity:0.3">
-    <g
-       transform="matrix(1.1644268,0,0,1.1578887,-1.1413809,-1.4741103)"
-       id="g3364">
-      <path
-         transform="matrix(0.06747194,0,0,0.06747194,-2.34426,-1.4527602)"
-         d="m 150.40307,258 64.33449,0 -82.78595,-89.92394 -38.872406,27.49384 z"
-         id="rect4985-3"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
-      <path
-         transform="matrix(0.06747194,0,0,0.06747194,-2.34426,-1.4527602)"
-         d="m 150.40307,66 64.33449,0 -88.40307,96 L 93.19047,195.68752 62,162 Z"
-         id="rect4985-6-3"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
-    </g>
-    <g
-       style="display:inline;enable-background:new"
-       id="g5552"
-       transform="matrix(1.1644268,0,0,1.1578887,256.19664,-340.5772)">
-      <g
-         style="display:inline;enable-background:new"
-         id="g4942"
-         transform="matrix(0.06747194,0,0,0.06747194,-223.344,290.54687)">
-        <path
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-           id="rect4985"
-           d="m 150.40307,258 64.33449,0 -82.78595,-89.92394 -38.872406,27.49384 z" />
-        <path
-           style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-           id="rect4985-6"
-           d="m 150.40307,66 64.33449,0 -88.40307,96 L 93.19047,195.68752 62,162 Z" />
-      </g>
-    </g>
+     style="opacity:0.3"
+     id="g4176">
+    <path
+       d="m 12.945488,6.0000001 5.054513,0 L 11.054513,13.5 8.4505151,16.131838 6.0000003,13.5 Z"
+       id="rect4985-6-3"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+    <path
+       d="m 12.945488,21 5.054513,0 -6.504173,-7.025308 -3.0540546,2.147957 z"
+       id="rect4985-3"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+    <path
+       d="m 12.945489,4.9999876 5.054513,0 -6.945488,7.5000004 -2.6039977,2.631837 -2.4505148,-2.631837 z"
+       id="rect4985-6"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+    <path
+       d="m 12.945489,19.999988 5.054513,0 -6.504173,-7.025308 -3.0540544,2.147956 z"
+       id="rect4985"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
   </g>
 </svg>

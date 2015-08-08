@@ -5,10 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="22"
+   id="svg6001"
    height="22"
-   id="svg6001">
+   width="22"
+   version="1.1">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -23,27 +23,24 @@
   </metadata>
   <defs
      id="defs6003" />
+  <path
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
+     id="rect4985-6-3"
+     d="M 11.945488,5 17.000001,5 10.054513,12.5 7.450515,15.131838 5.0000002,12.5 Z" />
+  <path
+     d="m 11.945489,3.9999876 5.054513,0 -6.945488,7.5000004 -2.6039977,2.631837 -2.4505148,-2.631837 z"
+     id="rect4985-6"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
   <g
-     id="g5249">
+     id="g5245"
+     style="opacity:0.3">
     <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-       id="rect4985-6-3"
-       d="M 11.945488,5 17.000001,5 10.054513,12.5 7.450515,15.131838 5.0000002,12.5 Z" />
-    <path
-       d="m 11.945489,3.9999876 5.054513,0 -6.945488,7.5000004 -2.6039977,2.631837 -2.4505148,-2.631837 z"
-       id="rect4985-6"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
-  </g>
-  <g
-     style="opacity:0.3"
-     id="g5245">
-    <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
+       d="m 11.945488,20 5.054513,0 -6.504173,-7.025308 -3.0540547,2.147956 z"
        id="rect4985-3"
-       d="m 11.945488,20 5.054513,0 -6.504173,-7.025308 -3.0540547,2.147956 z" />
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
     <path
-       d="m 11.945489,18.999988 5.054513,0 -6.504173,-7.025308 -3.0540544,2.147956 z"
+       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
        id="rect4985"
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#3c3c3c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+       d="m 11.945489,18.999988 5.054513,0 -6.504173,-7.025308 -3.0540544,2.147956 z" />
   </g>
 </svg>

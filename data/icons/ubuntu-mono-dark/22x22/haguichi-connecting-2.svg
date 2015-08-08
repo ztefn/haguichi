@@ -23,33 +23,24 @@
   </metadata>
   <defs
      id="defs6003" />
-  <g
-     transform="matrix(0.06747194,0,0,0.06747194,1.6557397,1.5472348)"
-     id="g4942-8"
-     style="display:inline;enable-background:new" />
-  <g
-     transform="translate(3.9999997,2.999995)"
-     id="g4225">
-    <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-       id="rect4985-6-3"
-       d="m 7.9454886,2.0000051 5.0545124,0 -6.9454879,7.5 L 3.4505154,12.131843 1.0000006,9.5000051 Z" />
-    <path
-       style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#dfdbd2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-       id="rect4985-6"
-       d="m 7.9454895,0.9999876 5.0545125,0 -6.945488,7.5 L 3.4505163,11.131825 1.0000015,8.4999876 Z" />
-  </g>
+  <path
+     d="m 11.945488,5.0000001 5.054513,0 L 10.054513,12.5 7.4505151,15.131838 5.0000003,12.5 Z"
+     id="rect4985-6-3"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+  <path
+     d="m 11.945489,3.9999826 5.054513,0 -6.945488,7.5000004 -2.603998,2.631837 -2.4505148,-2.631837 z"
+     id="rect4985-6"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#dfdbd2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
   <g
      style="opacity:0.4"
-     transform="translate(3.9999997,2.999995)"
-     id="g4221">
+     id="g4140">
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.3;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
        id="rect4985-3"
-       d="m 7.9454886,17.000005 5.0545124,0 L 6.4958286,9.9746973 3.4417737,12.122654 Z" />
+       d="m 11.945488,20 5.054513,0 -6.504173,-7.025308 -3.0540546,2.147957 z" />
     <path
        style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#dfdbd2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
        id="rect4985"
-       d="m 7.9454895,15.999988 5.0545125,0 L 6.4958295,8.9746798 3.4417746,11.122636 Z" />
+       d="m 11.945489,18.999983 5.054513,0 -6.504173,-7.025308 -3.0540547,2.147956 z" />
   </g>
 </svg>
