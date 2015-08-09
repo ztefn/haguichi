@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="16"
+   id="svg6001"
    height="16"
-   id="svg6001">
+   width="16"
+   version="1.1">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -25,26 +23,12 @@
   </metadata>
   <defs
      id="defs6003" />
-  <g
-     transform="translate(1.000002,-1.0000048)"
-     id="layer1">
-    <g
-       transform="translate(221.00001,-293.00001)"
-       id="g5552"
-       style="display:inline;enable-background:new">
-      <g
-         transform="matrix(0.07812498,0,0,0.07812498,-224.75025,289.84377)"
-         id="g4942"
-         style="display:inline;enable-background:new">
-        <path
-           d="m 150.40307,258 64.33449,0 -82.78595,-89.92394 -38.872406,27.49384 z"
-           id="rect4985"
-           style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new" />
-        <path
-           d="m 150.40307,66 64.33449,0 -88.40307,96 L 93.19047,195.68752 62,162 z"
-           id="rect4985-6"
-           style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new" />
-      </g>
-    </g>
-  </g>
+  <path
+     d="m 8.9999968,16.000005 5.0261312,0 L 7.5584769,8.9746988 4.521571,11.122655 Z"
+     id="rect4985"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
+  <path
+     d="m 8.9999968,1.0000087 5.0261312,0 L 7.1196395,8.5000068 4.5302636,11.131844 2.0935088,8.5000068 Z"
+     id="rect4985-6"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
 </svg>
