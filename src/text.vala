@@ -67,9 +67,8 @@ Deutsch (de)
     Jannik Heller https://launchpad.net/~scrawl
 
 Español (es)
-    Eduardo Parra https://launchpad.net/~soker
-    David Fernández https://launchpad.net/~dgvalde
     Adolfo Jayme https://launchpad.net/~fitoschido
+    Eduardo Parra https://launchpad.net/~soker
 
 Français (fr)
     Gabriel U. https://launchpad.net/~gabriel-ull

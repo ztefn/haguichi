@@ -466,6 +466,7 @@ public class Hamachi : Object
                 output += "       " + random_client_id() + "   Daniel                     " + random_address() + "\n";
                 output += "     ! " + random_client_id() + "   dimitrov                   " + random_address() + "  alias: not set                             IP protocol mismatch between you and peer\n";
                 output += "     * " + random_client_id() + "   enricog                    " + random_address() + "  alias: not set                             direct\n";
+                output += "     * " + random_client_id() + "   fitoschido                 " + random_address() + "\n";
                 output += "     * " + random_client_id() + "   Fedik                      " + random_address() + "  alias: not set                             direct\n";
                 output += "     * " + random_client_id() + "   galamarv                   " + random_address() + "  alias: not set                             via relay\n";
                 output += "     * " + random_client_id() + "   HeliosReds                 " + random_address() + "  alias: not set                             direct\n";
