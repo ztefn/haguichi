@@ -5,7 +5,7 @@ project_name: haguichi
 
 
 vala_binary: src/haguichi
-version: 1.3.0
+version: 1.3.1
 compile_options: --target-glib 2.32
 compile_options: --thread
 *vala_check_package: atk
