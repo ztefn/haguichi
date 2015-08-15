@@ -172,6 +172,10 @@ public class Command : Object
         {
             terminal = "konsole";
         }
+        else if (exists ("lxterminal"))
+        {
+            terminal = "lxterminal";
+        }
         else if (exists ("xterm"))
         {
             terminal = "xterm";
@@ -213,6 +217,10 @@ public class Command : Object
         else if (exists ("dolphin"))
         {
             file_manager = "dolphin";
+        }
+        else if (exists ("pcmanfm"))
+        {
+            file_manager = "pcmanfm";
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager_thread", "Command for file manager: " + file_manager);
