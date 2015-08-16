@@ -1,10 +1,15 @@
 ### CMakeLists automatically created with AutoVala
 ### Do not edit
 
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connected-symbolic.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connected.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-1-symbolic.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-1.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-2-symbolic.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-2.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-3-symbolic.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-connecting-3.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-disconnected-symbolic.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-disconnected.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-node-error.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)
 install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/haguichi-node-offline.svg DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/24x24/status/)

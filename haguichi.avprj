@@ -70,12 +70,6 @@ c_library: notify
 
 *scheme: data/org.haguichi.gschema.xml
 
-full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connected-symbolic.svg
-full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-1-symbolic.svg
-full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-2-symbolic.svg
-full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-connecting-3-symbolic.svg
-full_icon: Adwaita Status data/icons/Adwaita/scalable/haguichi-disconnected-symbolic.svg
-full_icon: Adwaita Applications data/icons/Adwaita/scalable/haguichi-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connected.png
 full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connecting-1.png
 full_icon: hicolor Status data/icons/hicolor/16x16/haguichi-connecting-2.png
@@ -94,10 +88,15 @@ full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connecting-2.png
 full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-connecting-3.png
 full_icon: hicolor Status data/icons/hicolor/22x22/haguichi-disconnected.png
 full_icon: hicolor Applications data/icons/hicolor/22x22/haguichi.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connected-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connected.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-1-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-1.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-2-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-2.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-3-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-connecting-3.png
+fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-disconnected-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/24x24/haguichi-disconnected.png
 fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-error.svg
 fixed_size_icon: hicolor Status data/icons/hicolor/24x24/haguichi-node-offline.svg
@@ -114,6 +113,12 @@ full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connecting-2.png
 full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-connecting-3.png
 full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-disconnected.png
 full_icon: hicolor Applications data/icons/hicolor/48x48/haguichi.png
+full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connected-symbolic.svg
+full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connecting-1-symbolic.svg
+full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connecting-2-symbolic.svg
+full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connecting-3-symbolic.svg
+full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-disconnected-symbolic.svg
+full_icon: hicolor Applications data/icons/hicolor/scalable/haguichi-symbolic.svg
 fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connected.svg
 fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connecting-1.svg
 fixed_size_icon: ubuntu-mono-dark Status data/icons/ubuntu-mono-dark/22x22/haguichi-connecting-2.svg
