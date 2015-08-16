@@ -5,10 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   id="svg6001"
-   height="16"
+   version="1.1"
    width="16"
-   version="1.1">
+   height="16"
+   id="svg6001">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -24,23 +24,11 @@
   <defs
      id="defs6003" />
   <path
-     style="opacity:0.35;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
-     id="path3785"
-     d="M 4.53125,11.125 9,16 14.03125,16 9.4375,11 4.71875,11 4.53125,11.125 z" />
-  <path
-     style="opacity:0.35;color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:new"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
      id="rect4985"
-     d="M 9,1 4.40625,6 9.4375,6 14.03125,1 9,1 z" />
+     d="m 8.9999968,16.000005 5.0261312,0 L 7.5584769,8.9746988 4.521571,11.122655 Z" />
   <path
-     style="fill:#bebebe"
-     id="path4955-1-15"
-     d="m 5,8.5 a 1.5,1.5 0 0 1 -3,0 1.5,1.5 0 1 1 3,0 z" />
-  <path
-     style="fill:#bebebe"
-     id="path4957-2-8"
-     d="m 9,8.5 a 1.5,1.5 0 0 1 -3,0 1.5,1.5 0 1 1 3,0 z" />
-  <path
-     style="fill:#bebebe"
-     id="path4959-4-0"
-     d="m 13,8.5 a 1.5,1.5 0 0 1 -3,0 1.5,1.5 0 1 1 3,0 z" />
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new;opacity:0.35"
+     id="rect4985-6"
+     d="m 8.9999968,1.0000087 5.0261312,0 L 7.1196395,8.5000068 4.5302636,11.131844 2.0935088,8.5000068 Z" />
 </svg>

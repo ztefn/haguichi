@@ -5,10 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.1"
-   width="24"
+   id="svg6001"
    height="24"
-   id="svg6001">
+   width="24"
+   version="1.1">
   <metadata
      id="metadata14">
     <rdf:RDF>
@@ -24,11 +24,7 @@
   <defs
      id="defs6003" />
   <path
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
      id="rect4985"
-     d="m 13.000488,20 5.026131,0 -6.467651,-7.025306 -3.0369058,2.147956 z" />
-  <path
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-     id="rect4985-6"
-     d="m 13.000488,5.0000037 5.026131,0 L 11.120131,12.500002 8.5307548,15.131839 6.094,12.500002 Z" />
+     d="M 13 5 L 6.09375 12.5 L 8.5214844 15.123047 L 8.53125 15.132812 L 13 20 L 18.027344 20 L 11.558594 12.974609 L 8.5859375 15.078125 L 11.121094 12.5 L 18.027344 5 L 13 5 z "
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
 </svg>

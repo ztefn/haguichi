@@ -25,14 +25,6 @@
      id="defs6003" />
   <path
      id="rect4985"
-     d="m 7.5585918,8.9746142 -3.0371094,2.1484378 4.4785156,4.876953 1,0 0,-4.373047 -2.4414062,-2.6523438 z"
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.35;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new" />
-  <path
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:0.35;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new"
-     id="rect4985-6"
-     d="m 8.9999968,1.0000087 5.0261312,0 L 7.1196395,8.5000068 4.5302636,11.131844 2.0935088,8.5000068 Z" />
-  <path
-     d="m 10.999998,11.000005 1.375,0 1.125,1.0938 1.0938,-1.0938 1.4062,0 0,1.4688 -1.0938,1.0625 1.0938,1.0625 0,1.4062 -1.4375,0 -1.0625,-1.0625 -1.0625,1.0625 -1.4375,0 0,-1.4062 1.0625,-1.0625 -1.0625,-1.0625 0,-1.4688 z"
-     style="color:#bebebe;fill:#bebebe"
-     id="path3761-2-3-5-4-8-9-8-0-1-7" />
+     d="M 9 1 L 2.09375 8.5 L 4.5214844 11.123047 L 4.5292969 11.132812 L 9 16 L 14.025391 16 L 7.5585938 8.9746094 L 4.578125 11.082031 L 7.1191406 8.5 L 14.025391 1 L 9 1 z "
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;enable-background:new;opacity:0.35" />
 </svg>
