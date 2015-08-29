@@ -227,10 +227,7 @@ public class Headerbar : HeaderBar
         hide_all_buttons();
         
         int current = minimum + connect_but_width;
-        if (allocated > current)
-        {
-            connect_but.show();
-        }
+        connect_but.show();
         
         current += gear_but_width;
         if (allocated > current)
