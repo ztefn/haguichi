@@ -181,7 +181,8 @@ public class Controller : Object
                 return 0;
             }
             
-            if (output.contains ("You do not have permission to control the hamachid daemon."))
+            if ((output.contains ("You do not have permission to control the hamachid daemon.")) ||
+                (!FileUtils.test (Hamachi.config_path, GLib.FileTest.EXISTS)))
             {
                 Debug.log (Debug.domain.INFO, "Controller.status_check", "Not configured.");
                 return 1;

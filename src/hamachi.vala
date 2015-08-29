@@ -11,6 +11,7 @@
 public class Hamachi : Object
 {
     public  static string data_path;
+    public  static string config_path;
     public  static string version;
     public  static string ip_version;
     public  static string last_info;
@@ -18,8 +19,9 @@ public class Hamachi : Object
     
     public static void init ()
     {
-        data_path  = "/var/lib/logmein-hamachi";
-        ip_version = "IPv4";
+        data_path   = "/var/lib/logmein-hamachi";
+        config_path = data_path + "/h2-engine-override.cfg";
+        ip_version  = "IPv4";
         
         get_info();
         determine_version();
@@ -152,7 +154,7 @@ public class Hamachi : Object
     
     public static void configure ()
     {
-        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"echo \'Ipc.User      " + GLib.Environment.get_user_name() + "\' >> " + data_path + "/h2-engine-override.cfg; " + Utils.format (service, "restart", null, null) + "; sleep 1\"");
+        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"echo \'Ipc.User      " + GLib.Environment.get_user_name() + "\' >> " + config_path + "; " + Utils.format (service, "restart", null, null) + "; sleep 1\"");
         Debug.log (Debug.domain.HAMACHI, "Hamachi.configure", output);
     }
     
