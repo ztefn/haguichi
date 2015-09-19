@@ -125,6 +125,7 @@ full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-node-online.png
 full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-node-unapproved.png
 full_icon: hicolor Status data/icons/hicolor/48x48/haguichi-node-unreachable.png
 full_icon: hicolor Applications data/icons/hicolor/48x48/haguichi.png
+full_icon: hicolor Applications data/icons/hicolor/512x512/haguichi.png
 full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connected-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connecting-1-symbolic.svg
 full_icon: hicolor Status data/icons/hicolor/scalable/haguichi-connecting-2-symbolic.svg
