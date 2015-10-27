@@ -305,6 +305,8 @@ public class Controller : Object
         {
             Debug.log (Debug.domain.INFO, "Controller.go_start_thread", "Failed to start Hamachi, showing output.");
             
+            restore = false;
+            
             Idle.add_full (Priority.HIGH_IDLE, () =>
             {
                 GlobalEvents.connection_stopped();
@@ -319,6 +321,8 @@ public class Controller : Object
         else
         {
             Debug.log (Debug.domain.INFO, "Controller.go_start_thread", "Failed to start Hamachi, no output to show. User might have cancelled sudo dialog.");
+            
+            restore = false;
             
             Idle.add_full (Priority.HIGH_IDLE, () =>
             {
