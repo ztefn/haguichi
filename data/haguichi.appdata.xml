@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <id type="desktop">haguichi.desktop</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Haguichi</name>
+  <description>
+    <p>Haguichi provides a graphical frontend for Hamachi on Linux. It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
+    <screenshot>https://www.haguichi.net/appdata/screenshot-2.png</screenshot>
+    <screenshot>https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
+  </screenshots>
+  <url type="homepage">https://www.haguichi.net/</url>
+  <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
+</application>

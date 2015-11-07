@@ -133,7 +133,7 @@ macro(vala_precompile output target_name)
     set(${output} "")
 
     foreach(src ${ARGS_DEFAULT_ARGS})
-        string(REGEX MATCH "^/" IS_MATCHED ${src})
+        string(REGEX MATCH "^([a-zA-Z]:)?/" IS_MATCHED ${src})
         if(${IS_MATCHED} MATCHES "/")
             set(src_file_path ${src})
         else()
@@ -197,6 +197,11 @@ macro(vala_precompile output target_name)
         list(APPEND out_files_display "${ARGS_GENERATE_SYMBOLS}.symbols")
         set(symbols_arguments "--symbols=${ARGS_GENERATE_SYMBOLS}.symbols")
     endif(ARGS_GENERATE_SYMBOLS)
+	
+    set(os_defines "")
+    if(WIN32)
+        list(APPEND os_defines "-D \"G_OS_WIN32\"")
+    endif(WIN32)
 
     # Workaround for a bug that would make valac run twice. This file is written
     # after the vala compiler generates C source code.
@@ -216,6 +221,7 @@ macro(vala_precompile output target_name)
         ${symbols_arguments} 
         "-b" ${CMAKE_CURRENT_SOURCE_DIR} 
         "-d" ${DIRECTORY} 
+		${os_defines}
         ${vala_pkg_opts} 
         ${ARGS_OPTIONS} 
         ${in_files} 

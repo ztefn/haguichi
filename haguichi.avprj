@@ -3,6 +3,8 @@ autovala_version: 16
 project_name: haguichi
 *vala_version: 0.26
 
+custom: data/haguichi.appdata.xml share/appdata/
+
 
 vala_binary: src/haguichi
 version: 1.3.1
