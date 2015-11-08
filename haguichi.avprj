@@ -1,9 +1,7 @@
 ### AutoVala Project ###
-autovala_version: 16
+autovala_version: 17
 project_name: haguichi
 *vala_version: 0.26
-
-custom: data/haguichi.appdata.xml share/appdata/
 
 
 vala_binary: src/haguichi
@@ -65,6 +63,8 @@ c_library: notify
 *vala_source: window.vala
 
 *po: po
+
+*appdata: data/haguichi.appdata.xml
 
 *desktop: data/haguichi.desktop
 
