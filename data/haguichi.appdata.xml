@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<application>
-  <id type="desktop">haguichi.desktop</id>
+<component type="desktop">
+  <id>haguichi.desktop</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Haguichi</name>
+  <summary>Graphical frontend for Hamachi</summary>
   <description>
     <p>Haguichi provides a graphical frontend for Hamachi on Linux. It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list.</p>
   </description>
   <screenshots>
-    <screenshot type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
-    <screenshot>https://www.haguichi.net/appdata/screenshot-2.png</screenshot>
-    <screenshot>https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
+    <screenshot width="1248" height="702" type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
+    <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-2.png</screenshot>
+    <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
   </screenshots>
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>HighContrast</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
   <url type="homepage">https://www.haguichi.net/</url>
+  <url type="bugtracker">https://bugs.launchpad.net/haguichi</url>
+  <url type="faq">https://www.haguichi.net/faq/</url>
+  <url type="help">https://www.haguichi.net/tips-and-tricks/</url>
+  <url type="donation">https://www.haguichi.net/donate/</url>
+  <developer_name>Stephen Brandt</developer_name>
   <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
-</application>
+</component>
