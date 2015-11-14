@@ -110,7 +110,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         spinner = new Spinner();
         spinner.height_request = 20;
         spinner.width_request  = 20;
-        spinner.active = true;
         
         disconnected_box = new Box (Orientation.VERTICAL, 0);
         disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
@@ -370,7 +369,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
     }
     
-    public new void show ()
+    public override void show ()
     {
         base.show();
         
@@ -400,7 +399,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         present();
     }    
     
-    public new void hide ()
+    public override void hide ()
     {
         save_geometry();
         
