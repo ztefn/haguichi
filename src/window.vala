@@ -110,6 +110,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         spinner = new Spinner();
         spinner.height_request = 20;
         spinner.width_request  = 20;
+        spinner.active = true;
         
         disconnected_box = new Box (Orientation.VERTICAL, 0);
         disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
