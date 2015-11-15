@@ -44,7 +44,7 @@ class Haguichi : Gtk.Application
         if (activate_count > 1)
         {
             Debug.log (Debug.domain.ENVIRONMENT, "Haguichi.activate", "Received activate signal, presenting window");
-            Haguichi.window.show();
+            Haguichi.window.present();
         }
     }
     

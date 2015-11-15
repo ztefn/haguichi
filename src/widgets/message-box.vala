@@ -80,7 +80,7 @@ namespace Widgets
             show();
         }
         
-        public new void add_button (Button button)
+        public void add_button (Button button)
         {
             button_box.add (button);
             button.show();

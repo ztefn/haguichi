@@ -13,7 +13,7 @@ public class AppSession : Object
 {
     public void show ()
     {
-        Haguichi.window.show();
+        Haguichi.window.present();
     }
     
     public void hide ()

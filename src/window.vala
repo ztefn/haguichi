@@ -396,7 +396,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
         
         move (x, y);
-        present();
     }    
     
     public override void hide ()
