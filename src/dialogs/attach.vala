@@ -45,6 +45,7 @@ namespace Dialogs
             
             account_entry = new Entry();
             account_entry.activates_default = true;
+            account_entry.width_chars = 30;
             account_entry.changed.connect (check_entry_length);
             account_entry.changed.connect (hide_message);
             

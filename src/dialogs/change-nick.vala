@@ -41,6 +41,7 @@ namespace Dialogs
             nick_entry.text = Haguichi.demo_mode ? "Joe Demo" : (string) Settings.nickname.val;
             nick_entry.activates_default = true;
             nick_entry.max_length = 64;
+            nick_entry.width_chars = 25;
             
             nick_label = new Label.with_mnemonic (Utils.remove_colons (Text.nick_label) + "  ");
             nick_label.halign = Align.END;

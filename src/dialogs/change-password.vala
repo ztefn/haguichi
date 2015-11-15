@@ -46,6 +46,7 @@ namespace Dialogs
             password_entry = new Entry();
             password_entry.activates_default = true;
             password_entry.visibility = false;
+            password_entry.width_chars = 25;
             
             password_label = new Label.with_mnemonic (Utils.remove_colons (Text.new_password_label) + "  ");
             password_label.halign = Align.END;
