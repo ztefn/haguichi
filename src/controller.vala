@@ -235,7 +235,7 @@ public class Controller : Object
         string stderr;
         int status;
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", "Trying to ping '" + (string) Settings.check_internet_ip.val + "'...");
+        Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", "Trying to ping " + (string) Settings.check_internet_ip.val + "...");
         
         try
         {
@@ -252,7 +252,7 @@ public class Controller : Object
         
         if (!success)
         {
-            Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", "Ping failed. Trying to resolve hostname '" + (string) Settings.check_internet_hostname.val + "'...");
+            Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", "Ping failed. Trying to resolve hostname " + (string) Settings.check_internet_hostname.val + " using dig...");
             
             try
             {
@@ -267,6 +267,26 @@ public class Controller : Object
                 Debug.log (Debug.domain.ERROR, "Controller.has_internet_connection", e.message);
             }
         }
+        
+        if (!success && !Command.exists ("dig"))
+        {
+            Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", "Dig not available. Trying to connect to " + (string) Settings.check_internet_ip.val + " on port 53...");
+            
+            try
+            {
+                SocketClient client = new SocketClient();
+                client.timeout = 1;
+                client.connect_to_host ((string) Settings.check_internet_ip.val, 53);
+                
+                success = true;
+            }
+            catch (Error e)
+            {
+                Debug.log (Debug.domain.ERROR, "Controller.has_internet_connection", e.message);
+            }
+        }
+        
+        Debug.log (Debug.domain.ENVIRONMENT, "Controller.has_internet_connection", success ? "Success!" : "No success.");
         
         return success;
     }
