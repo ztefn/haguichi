@@ -188,10 +188,13 @@ public class Controller : Object
                 return 1;
             }
             
-            if (!has_internet_connection())
+            if (last_status <= 1)
             {
-                Debug.log (Debug.domain.INFO, "Controller.status_check", "No internet connection.");
-                return 2;
+                if (!has_internet_connection())
+                {
+                    Debug.log (Debug.domain.INFO, "Controller.status_check", "No internet connection.");
+                    return 2;
+                }
             }
             
             if (output.contains ("Hamachi does not seem to be running."))
