@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-10 21:58+0200\n"
-"PO-Revision-Date: 2013-06-02 19:06+0000\n"
-"Last-Translator: Emilien Klein <emilien+ubuntu@klein.st>\n"
+"PO-Revision-Date: 2015-11-21 14:26+0000\n"
+"Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2013-06-02 21:04+0000\n"
-"X-Generator: Launchpad (build 16660)\n"
+"X-Launchpad-Export-Date: 2015-11-26 22:44+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
+"Language: fr\n"
 
 #: src/text.vala:341
 msgid "A graphical frontend for Hamachi."
@@ -57,7 +57,7 @@ msgstr "_Information"
 
 #: src/text.vala:354
 msgid "_Donate"
-msgstr ""
+msgstr "_Faire un don"
 
 #: src/text.vala:355
 msgid "_Preferences"
@@ -213,13 +213,12 @@ msgid "_Download"
 msgstr "_Télécharger"
 
 #: src/text.vala:403
-#, fuzzy
 msgid "You are connected!"
-msgstr "Déconnecté"
+msgstr "Vous êtes connecté !"
 
 #: src/text.vala:404
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Cliquez sur le bouton + pour ajouter un réseau."
 
 #: src/text.vala:406
 msgid "Members:"
@@ -358,9 +357,8 @@ msgid "Change Password"
 msgstr "Changer de mot de passe"
 
 #: src/text.vala:444
-#, fuzzy
 msgid "_New password:"
-msgstr "Mot de _passe :"
+msgstr "_Nouveau mot de passe :"
 
 #: src/text.vala:446
 msgid "_Account:"
@@ -471,9 +469,8 @@ msgid "Network already joined"
 msgstr "Vous avez déjà rejoint ce réseau"
 
 #: src/text.vala:479
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "Le nom du réseau est déjà utilisé"
+msgstr "Le identifiant du réseau est déjà utilisé"
 
 #: src/text.vala:480
 msgid "Unknown error"
@@ -513,7 +510,8 @@ msgstr ""
 "Êtes-vous sûr de vouloir expulser le membre « {0} » du réseau « {1} » ?"
 
 #: src/text.vala:494
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si admis, les membres expulsés peuvent rejoindre le réseau à tout moment "
 "ultérieur."
@@ -555,9 +553,8 @@ msgid "Commands"
 msgstr "Commandes"
 
 #: src/text.vala:508
-#, fuzzy
 msgid "Notifications"
-msgstr "Zone de notification"
+msgstr "Notifications"
 
 #: src/text.vala:509
 msgid "Behavior"
@@ -724,9 +721,8 @@ msgid "Move down"
 msgstr "Déplacer vers le bas"
 
 #: src/text.vala:558
-#, fuzzy
 msgid "Set as default action"
-msgstr "Restaurer les commandes par défaut"
+msgstr "Définir comme action par défaut"
 
 #: src/text.vala:560
 msgid "Revert all changes"
@@ -745,8 +741,8 @@ msgstr ""
 #: src/text.vala:567
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Reconnexion dans {0} seconde"
+msgstr[1] "Reconnexion dans {0} secondes"
 
 #: src/text.vala:572
 #, c-format
