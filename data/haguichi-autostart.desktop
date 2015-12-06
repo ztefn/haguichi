@@ -24,6 +24,6 @@ Comment[sv]=Anslut och skapa lokala nätverk över internet
 Comment[tr]=İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun
 Comment[uk]=Приєднуйтесь та стоврюйте локальну мережу через Інтернет
 Icon=haguichi
-Categories=Network;P2P;GTK;GNOME;
+Categories=GNOME;GTK;Network;P2P;
 X-GNOME-Autostart-enabled=false
 X-MATE-Autostart-enabled=false

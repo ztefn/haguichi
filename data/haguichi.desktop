@@ -24,5 +24,5 @@ Comment[sv]=Anslut och skapa lokala nätverk över internet
 Comment[tr]=İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun
 Comment[uk]=Приєднуйтесь та стоврюйте локальну мережу через Інтернет
 Icon=haguichi
-Categories=Network;P2P;GTK;GNOME;
-Keywords=Network;P2P;VPN;LAN;Internet;LogMeIn Hamachi;
+Categories=GNOME;GTK;Network;P2P;
+Keywords=LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;
