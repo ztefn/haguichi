@@ -192,6 +192,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         y = (int) Settings.win_y.val;
         
         add (main_box);
+        set_size_request (200, 200);
         set_default_size (width, height);
         move (x, y);
         
