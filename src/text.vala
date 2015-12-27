@@ -76,6 +76,7 @@ Français (fr)
 
 Bahasa Indonesia (id)
     Fattah Rizki https://launchpad.net/~galamarv
+    Hertatijanto Hartono https://launchpad.net/~dvertx
 
 Italiano (it)
     Enrico Grassi https://launchpad.net/~enricog

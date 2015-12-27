@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-08-10 21:58+0200\n"
-"PO-Revision-Date: 2013-05-29 03:41+0000\n"
-"Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
+"PO-Revision-Date: 2015-12-25 09:45+0000\n"
+"Last-Translator: Hertatijanto Hartono <dvertx@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2013-05-29 18:52+0000\n"
-"X-Generator: Launchpad (build 16652)\n"
+"X-Launchpad-Export-Date: 2015-12-27 12:40+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
+"Language: id\n"
 
 #: src/text.vala:341
 msgid "A graphical frontend for Hamachi."
-msgstr "A graphical frontend for Hamachi."
+msgstr "Tampilan grafis bagi Hamachi."
 
 #: src/text.vala:342
 msgid "Join and create local networks over the Internet"
@@ -29,7 +29,7 @@ msgstr "Bergabung dan membuat jaringan lokal melalui Internet"
 
 #: src/text.vala:347
 msgid "_OK"
-msgstr ""
+msgstr "_OK"
 
 #: src/text.vala:348
 msgid "_Cancel"
@@ -41,7 +41,7 @@ msgstr "_Simpan"
 
 #: src/text.vala:350
 msgid "_Refresh"
-msgstr ""
+msgstr "Sega_rkan"
 
 #: src/text.vala:351
 msgid "_Revert"
@@ -57,7 +57,7 @@ msgstr "_Informasi"
 
 #: src/text.vala:354
 msgid "_Donate"
-msgstr ""
+msgstr "_Donasi"
 
 #: src/text.vala:355
 msgid "_Preferences"
@@ -69,7 +69,7 @@ msgstr "_Bantuan"
 
 #: src/text.vala:357
 msgid "_About"
-msgstr ""
+msgstr "Tent_ang"
 
 #: src/text.vala:358
 msgid "_Quit"
@@ -197,28 +197,27 @@ msgstr "Hamachi belum dipasang"
 
 #: src/text.vala:398
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Silahkan unduh Hamachi dan ikuti intruksi penginstallan"
+msgstr "Silahkan unduh Hamachi dan ikuti intruksi instalasi."
 
 #: src/text.vala:399
 msgid "Hamachi version {0} is obsolete"
-msgstr "Hamachi versi {0} sudah tidak dapat digunakan"
+msgstr "Hamachi versi {0} sudah kedaluwarsa"
 
 #: src/text.vala:400
 msgid "Please download and install the latest Hamachi version."
-msgstr "Silahkan Unduh dan pasang Hamachi versi terbaru."
+msgstr "Silahkan unduh dan pasang Hamachi versi terbaru."
 
 #: src/text.vala:401
 msgid "_Download"
 msgstr "_Unduh"
 
 #: src/text.vala:403
-#, fuzzy
 msgid "You are connected!"
-msgstr "Koneksi terputus"
+msgstr "Anda terhubung!"
 
 #: src/text.vala:404
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Klik tombol + untuk menambah jaringan."
 
 #: src/text.vala:406
 msgid "Members:"
@@ -270,7 +269,7 @@ msgstr "Kapasitas:"
 
 #: src/text.vala:419
 msgid "_Go Online"
-msgstr "_Kedalam Jaringan"
+msgstr "_Masuk Jaringan"
 
 #: src/text.vala:420
 msgid "_Go Offline"
@@ -314,11 +313,11 @@ msgstr "_Lihat Remote Destop"
 
 #: src/text.vala:431
 msgid "_Approve"
-msgstr "_Menyetujui"
+msgstr "_Setujui"
 
 #: src/text.vala:432
 msgid "_Reject"
-msgstr "_Menolak"
+msgstr "_Tolak"
 
 #: src/text.vala:433
 msgid "_Evict"
@@ -326,11 +325,11 @@ msgstr "_Keluarkan"
 
 #: src/text.vala:434
 msgid "Copy IPv_4 Address"
-msgstr "_Salin Alamat IPv_4"
+msgstr "Salin Alamat IPv_4"
 
 #: src/text.vala:435
 msgid "Copy IPv_6 Address"
-msgstr "_Salin Alamat IPv_6"
+msgstr "Salin Alamat IPv_6"
 
 #: src/text.vala:436
 msgid "_Copy Client ID"
@@ -350,16 +349,15 @@ msgstr "Uba_h"
 
 #: src/text.vala:442
 msgid "Change _Password…"
-msgstr "Ubah_Sandi…"
+msgstr "Ubah _Sandi…"
 
 #: src/text.vala:443
 msgid "Change Password"
 msgstr "Ubah Sandi"
 
 #: src/text.vala:444
-#, fuzzy
 msgid "_New password:"
-msgstr "_Kata Sandi:"
+msgstr "Sa_ndi baru:"
 
 #: src/text.vala:446
 msgid "_Account:"
@@ -379,11 +377,11 @@ msgstr "Sertakan seluruh jaringan yang dibuat oleh klien"
 
 #: src/text.vala:452
 msgid "_Attach"
-msgstr "_Melampirkan"
+msgstr "L_ampirkan"
 
 #: src/text.vala:453
 msgid "Account not found"
-msgstr "Akun tidak dapat ditemukan"
+msgstr "Akun tidak ditemukan"
 
 #: src/text.vala:455
 msgid "Config_uration"
@@ -403,19 +401,19 @@ msgstr "Simpan data cadangan"
 
 #: src/text.vala:459
 msgid "_Restore from Backup…"
-msgstr "_Kembalikan dari data cadangan…"
+msgstr "_Pulihkan dari data cadangan…"
 
 #: src/text.vala:460
 msgid "Restore from Backup"
-msgstr "Kembalikan dari data cadangan"
+msgstr "Pulihkan dari data cadangan"
 
 #: src/text.vala:461
 msgid "_Restore"
-msgstr "_Kembalikan"
+msgstr "_Pulihkan"
 
 #: src/text.vala:462
 msgid "Could not restore configuration"
-msgstr "Tidak dapat mengembalikan konfigurasi"
+msgstr "Tidak dapat memulihkan konfigurasi"
 
 #: src/text.vala:463
 msgid "Archive does not contain expected files."
@@ -439,7 +437,7 @@ msgstr "_Gabung"
 
 #: src/text.vala:470
 msgid "_Create Network…"
-msgstr "_Membuat Jaringan…"
+msgstr "_Buat Jaringan…"
 
 #: src/text.vala:471
 msgid "Create Network"
@@ -470,9 +468,8 @@ msgid "Network already joined"
 msgstr "Sudah bergabung dalam jaringan"
 
 #: src/text.vala:479
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "Nama jaringan sudah ada"
+msgstr "ID jaringan telah digunakan"
 
 #: src/text.vala:480
 msgid "Unknown error"
@@ -504,7 +501,7 @@ msgstr "Apakah anda yakin untuk meninggalkan jaringan “{0}”?"
 
 #: src/text.vala:491
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr "Jika diijinkan, anda dapat bergabung kembali ke jaringan ini kapanpun."
+msgstr "Jika diijinkan, anda dapat bergabung kembali ke jaringan ini."
 
 #: src/text.vala:493
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
@@ -512,10 +509,11 @@ msgstr ""
 "Apakah anda yakin ingin mengeluarkan anggota “{0}”? dari jaringan “{1}”?"
 
 #: src/text.vala:494
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jika diijinkan, anggota yang dikeluarkan dapat bergabung kembali ke jaringan "
-"ini kapanpun."
+"ini."
 
 #: src/text.vala:496
 msgid "Could not delete network “{0}”"
@@ -547,20 +545,19 @@ msgstr "Umum"
 
 #: src/text.vala:505
 msgid "Desktop"
-msgstr "Destop"
+msgstr "Desktop"
 
 #: src/text.vala:506
 msgid "Commands"
 msgstr "Perintah"
 
 #: src/text.vala:508
-#, fuzzy
 msgid "Notifications"
-msgstr "Area Notifikasi"
+msgstr "Notifikasi"
 
 #: src/text.vala:509
 msgid "Behavior"
-msgstr "Tingkah laku"
+msgstr "Perilaku"
 
 #: src/text.vala:511
 msgid "_Protocol:"
@@ -723,9 +720,8 @@ msgid "Move down"
 msgstr "Pindah ke bawah"
 
 #: src/text.vala:558
-#, fuzzy
 msgid "Set as default action"
-msgstr "Kembalikan ke perintah awal"
+msgstr "Set sebagai tindakan default"
 
 #: src/text.vala:560
 msgid "Revert all changes"
@@ -743,7 +739,7 @@ msgstr ""
 #: src/text.vala:567
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
+msgstr[0] "Mencoba koneksi ulang dalam {0} detik"
 
 #: src/text.vala:572
 #, c-format
