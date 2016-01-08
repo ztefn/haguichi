@@ -30,6 +30,9 @@ public class NetworkView : TreeView
     private int name_sort_column;
     private int status_sort_column;
     
+    private Gdk.RGBA dark_txt_color;
+    private Gdk.RGBA light_txt_color;
+    
     private CellRendererText text_cell;
     private CellRendererPixbuf icon_cell;
     
@@ -83,6 +86,12 @@ public class NetworkView : TreeView
         init_store();
         set_layout_from_string ("small");
         generate_popup_menus();
+    }
+    
+    public void get_colors ()
+    {
+        dark_txt_color  = get_style_context().get_color (StateFlags.NORMAL);
+        light_txt_color = get_style_context().get_color (StateFlags.INSENSITIVE);
     }
     
     private void init_store ()
@@ -579,9 +588,6 @@ public class NetworkView : TreeView
     private void text_cell_layout (CellLayout layout, CellRenderer cell, TreeModel _model, TreeIter _iter)
     {
         CellRendererText text_cell = (cell as CellRendererText);
-        
-        Gdk.RGBA dark_txt_color  = get_style_context().get_color (StateFlags.NORMAL);
-        Gdk.RGBA light_txt_color = get_style_context().get_color (StateFlags.INSENSITIVE);
         
         Value network_val;
         _model.get_value (_iter, network_column, out network_val);

@@ -208,6 +208,8 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     {
         connected_box.override_background_color (StateFlags.NORMAL, new TreeView().get_style_context().get_background_color (StateFlags.NORMAL));
         disconnected_box.override_background_color (StateFlags.NORMAL, new TextView().get_style_context().get_background_color (StateFlags.INSENSITIVE));
+        
+        network_view.get_colors();
     }
     
     private bool on_configure (Gdk.EventConfigure event)
