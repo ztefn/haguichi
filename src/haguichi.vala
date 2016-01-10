@@ -82,9 +82,10 @@ class Haguichi : Gtk.Application
         
         Settings.init();
         
-        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP").has_prefix ("GNOME")) ||
+        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE"))
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP").has_suffix (":GNOME"))) // Any GNOME based desktop, for example "Budgie:GNOME"
         {
             window_use_header_bar = true;
             Settings.decorator_offset = 52;
