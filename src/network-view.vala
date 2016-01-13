@@ -30,8 +30,8 @@ public class NetworkView : TreeView
     private int name_sort_column;
     private int status_sort_column;
     
-    private Gdk.RGBA dark_txt_color;
-    private Gdk.RGBA light_txt_color;
+    public  Gdk.RGBA online_txt_color;
+    public  Gdk.RGBA offline_txt_color;
     
     private CellRendererText text_cell;
     private CellRendererPixbuf icon_cell;
@@ -86,12 +86,6 @@ public class NetworkView : TreeView
         init_store();
         set_layout_from_string ("small");
         generate_popup_menus();
-    }
-    
-    public void get_colors ()
-    {
-        dark_txt_color  = get_style_context().get_color (StateFlags.NORMAL);
-        light_txt_color = get_style_context().get_color (StateFlags.INSENSITIVE);
     }
     
     private void init_store ()
@@ -635,11 +629,11 @@ public class NetworkView : TreeView
             
             if (network.status.status_int == 0)
             {
-                text_cell.foreground_rgba = light_txt_color;
+                text_cell.foreground_rgba = offline_txt_color;
             }
             else
             {
-                text_cell.foreground_rgba = dark_txt_color;
+                text_cell.foreground_rgba = online_txt_color;
             }
         }
         else
@@ -692,11 +686,11 @@ public class NetworkView : TreeView
             
             if (member.status.status_int == 0)
             {
-                text_cell.foreground_rgba = light_txt_color;
+                text_cell.foreground_rgba = offline_txt_color;
             }
             else
             {
-                text_cell.foreground_rgba = dark_txt_color;
+                text_cell.foreground_rgba = online_txt_color;
             }
         }
     }

@@ -163,13 +163,13 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         Gtk.Settings.get_default().notify["gtk-theme-name"].connect ((sender, property) =>
         {
-            override_colors();
+            set_colors();
         });
         Gtk.Settings.get_default().notify["gtk-application-prefer-dark-theme"].connect ((sender, property) =>
         {
-            override_colors();
+            set_colors();
         });
-        override_colors();
+        set_colors();
         
         add_accel_group(accel_group);
         
@@ -204,12 +204,31 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
     }
     
-    private void override_colors ()
+    private void set_colors ()
     {
-        connected_box.override_background_color (StateFlags.NORMAL, new TreeView().get_style_context().get_background_color (StateFlags.NORMAL));
-        disconnected_box.override_background_color (StateFlags.NORMAL, new TextView().get_style_context().get_background_color (StateFlags.INSENSITIVE));
+        // Extracting colors from treeview
+        TreeView tree_view = new TreeView();
+        StyleContext tree_context = tree_view.get_style_context();
+        tree_context.save();
         
-        network_view.get_colors();
+        // Normal state
+        tree_context.set_state (StateFlags.NORMAL);
+        network_view.online_txt_color = tree_context.get_color (tree_context.get_state());
+        connected_box.override_background_color (StateFlags.NORMAL, tree_context.get_background_color(tree_context.get_state()));
+        
+        // Insensitive state
+        tree_context.set_state (StateFlags.INSENSITIVE);
+        network_view.offline_txt_color = tree_context.get_color (tree_context.get_state());
+        
+        
+        // Extracting colors from textview
+        TextView text_view = new TextView();
+        StyleContext text_context = text_view.get_style_context();
+        text_context.save();
+        
+        // Insensitive state
+        text_context.set_state (StateFlags.INSENSITIVE);
+        disconnected_box.override_background_color (StateFlags.NORMAL, text_context.get_background_color(text_context.get_state()));
     }
     
     private bool on_configure (Gdk.EventConfigure event)
