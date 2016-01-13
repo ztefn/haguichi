@@ -497,19 +497,27 @@ public class CommandsEditor : Box
     {
         CellRendererText text_cell = (cell as CellRendererText);
         
-        Gdk.RGBA dark_txt_color  = get_style_context().get_color (StateFlags.NORMAL);
-        Gdk.RGBA light_txt_color = get_style_context().get_color (StateFlags.INSENSITIVE);
+        StyleContext context = tv.get_style_context();
+        context.save();
+        
+        context.set_state (StateFlags.NORMAL);
+        Gdk.RGBA active_txt_color = context.get_color (context.get_state());
+        
+        context.set_state (StateFlags.INSENSITIVE);
+        Gdk.RGBA inactive_txt_color = context.get_color (context.get_state());
+        
+        context.restore();
         
         Value active_val;
         model.get_value (iter, active_column, out active_val);
         
         if ((bool) active_val)
         {
-            text_cell.foreground_rgba = dark_txt_color;
+            text_cell.foreground_rgba = active_txt_color;
         }
         else
         {
-            text_cell.foreground_rgba = light_txt_color;
+            text_cell.foreground_rgba = inactive_txt_color;
         }
         
         Value title_val;
