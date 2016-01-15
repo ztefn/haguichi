@@ -187,7 +187,7 @@ public class NetworkView : TreeView
                 string lock_string     = "";
                 string approve_string  = "";
                 
-                if (network.capacity > 0 )
+                if (network.capacity > 0)
                 {
                     capacity_string = Utils.format ("\n{0} <i>{1}</i>", Text.capacity, network.capacity.to_string(), null);
                 }
@@ -838,11 +838,11 @@ public class NetworkView : TreeView
             
             if (is_collapsed (network))
             {
-                collapse_row (sorted_store.get_path (network_iter ));
+                collapse_row (sorted_store.get_path (network_iter));
             }
             else
             {
-                expand_row (sorted_store.get_path (network_iter ), false);
+                expand_row (sorted_store.get_path (network_iter), false);
             }
             
             while (sorted_store.iter_next (ref network_iter))                      // All other networks
@@ -940,7 +940,11 @@ public class NetworkView : TreeView
     
     public void set_layout_from_string (string layout)
     {
-        if (layout == "large")
+        if (layout == current_layout)
+        {
+            // Layout already set
+        }
+        else if (layout == "large")
         {
             current_layout = "large";
             

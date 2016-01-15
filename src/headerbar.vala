@@ -24,6 +24,7 @@ public class Headerbar : HeaderBar
     public Box box;
     
     private int minimum_width;
+    private int last_allocated;
     
     private int connect_but_width;
     private int client_but_width;
@@ -224,6 +225,12 @@ public class Headerbar : HeaderBar
     
     public void show_hide_buttons (int allocated, int minimum)
     {
+        if (allocated == last_allocated)
+        {
+            return;
+        }
+        last_allocated = allocated;
+        
         hide_all_buttons();
         
         int current = minimum + connect_but_width;

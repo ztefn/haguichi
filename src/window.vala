@@ -255,7 +255,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
         else
         {
-            network_view.set_layout_from_string ("normal");
+            network_view.set_layout_from_string ("small");
         }
         
         if (width > Settings.switch_sidebar_threshold)
