@@ -206,29 +206,21 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     
     private void set_colors ()
     {
-        // Extracting colors from treeview
+        // Extracting normal background color from treeview for connected box
         TreeView tree_view = new TreeView();
         StyleContext tree_context = tree_view.get_style_context();
         tree_context.save();
-        
-        // Normal state
         tree_context.set_state (StateFlags.NORMAL);
-        network_view.online_txt_color = tree_context.get_color (tree_context.get_state());
         connected_box.override_background_color (StateFlags.NORMAL, tree_context.get_background_color(tree_context.get_state()));
+        tree_context.restore();
         
-        // Insensitive state
-        tree_context.set_state (StateFlags.INSENSITIVE);
-        network_view.offline_txt_color = tree_context.get_color (tree_context.get_state());
-        
-        
-        // Extracting colors from textview
+        // Extracting insensitive background color from textview for disconnected box
         TextView text_view = new TextView();
         StyleContext text_context = text_view.get_style_context();
         text_context.save();
-        
-        // Insensitive state
         text_context.set_state (StateFlags.INSENSITIVE);
         disconnected_box.override_background_color (StateFlags.NORMAL, text_context.get_background_color(text_context.get_state()));
+        text_context.restore();
     }
     
     private bool on_configure (Gdk.EventConfigure event)
