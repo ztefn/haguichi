@@ -192,7 +192,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         y = (int) Settings.win_y.val;
         
         add (main_box);
-        set_size_request (210, 210);
         set_default_size (width, height);
         move (x, y);
         
@@ -271,6 +270,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         {
             get_preferred_width (out minimum_width, null);
             minimum_width -= Settings.decorator_offset;
+            
+            if (Gtk.check_version(3, 18, 0) == null)
+            {
+                minimum_width += 50;
+            }
         }
         header_bar.show_hide_buttons (width, minimum_width);
     }

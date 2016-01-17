@@ -271,6 +271,11 @@ public class Headerbar : HeaderBar
         else if (HaguichiWindow.minimum_width > 0)
         {
             minimum_width = HaguichiWindow.minimum_width;
+            
+            if (Gtk.check_version(3, 18, 0) == null)
+            {
+                minimum_width += 50;
+            }
         }
         else
         {
