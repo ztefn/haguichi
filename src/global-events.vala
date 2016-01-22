@@ -124,8 +124,7 @@ public class GlobalEvents
                                "website", Text.app_website,
                                "website-label", Text.app_website_label,
                                "authors", Text.app_authors,
-                               "translator-credits", Text.app_translator_credits,
-                               "artists", Text.app_artists);
+                               "translator-credits", Text.app_translator_credits);
     }
     
     public static void preferences ()

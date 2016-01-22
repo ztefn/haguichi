@@ -51,7 +51,6 @@ Options:
 " + app_info + "\n";
     
     public static string[] app_authors;
-    public static string[] app_artists;
     public const  string   app_translator_credits  =
 @"Asturianu (ast)
     Tornes Llume https://launchpad.net/~l-lumex03-tornes
@@ -343,7 +342,6 @@ Türkçe (tr)
         app_description                            = _("Join and create local networks over the Internet");
         
         app_authors                                = {"Stephen Brandt https://launchpad.net/~ztefn", ""};
-        app_artists                                = {"Stephen Brandt https://launchpad.net/~ztefn", "Lapo Calamandrei https://launchpad.net/~calamandrei", ""};
         
         ok_label                                   = _("_OK");
         cancel_label                               = _("_Cancel");
