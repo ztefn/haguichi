@@ -473,6 +473,7 @@ public class Hamachi : Object
                 output += "     * " + random_client_id() + "   HeliosReds                 " + random_address() + "  alias: not set                             direct\n";
                 output += "     ! " + random_client_id() + "   jmb_kz                     " + random_address() + "  alias: not set                             direct\n";
                 output += "     * " + random_client_id() + "   Ḷḷumex03                   " + random_address() + "  alias: not set                             direct\n";
+                output += "     * " + random_client_id() + "   Moo                        " + random_address() + "  alias: not set                             direct\n";
                 output += "     * " + random_client_id() + "   Raven46                    " + random_address() + "  alias: not set                             direct\n";
                 output += "     * " + random_client_id() + "   Rodrigo                    " + random_address() + "  alias: not set                             direct\n";
                 output += "     ! " + random_client_id() + "   scrawl                     " + random_address() + "  alias: 25.353.432.28  2620:9b::753:b470    direct      UDP  170.45.240.141:43667  This address is also used by another peer\n";

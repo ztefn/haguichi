@@ -86,6 +86,9 @@ Italiano (it)
 Қазақ (kk)
     jmb_kz https://launchpad.net/~jmb-kz
 
+lietuvių kalba (lt)
+    Moo https://launchpad.net/~mooo
+
 Nederlands (nl)
     Stephen Brandt https://launchpad.net/~ztefn
 
