@@ -27,4 +27,5 @@
   <url type="donation">https://www.haguichi.net/donate/</url>
   <developer_name>Stephen Brandt</developer_name>
   <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
+  <translation type="gettext">haguichi</translation>
 </component>
