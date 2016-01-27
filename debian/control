@@ -10,6 +10,8 @@ Architecture: any
 Depends: libglib2.0-0 (>= 2.42), libgtk-3-0 (>= 3.14), libnotify4 (>= 0.7.6)
 Recommends: haguichi-indicator, dnsutils, adwaita-icon-theme (>= 3.14) | elementary-icon-theme (>= 3.2)
 Description: Graphical frontend for Hamachi
- Haguichi provides a graphical frontend for Hamachi on Linux. It
- features fully customizable commands, notification bubbles, rich tooltips,
- along with a searchable, sortable and collapsible network list.
+ Haguichi provides a graphical frontend for Hamachi on Linux.
+ .
+ It features fully customizable commands, notification bubbles, rich tooltips,
+ along with a searchable, sortable and collapsible network list. Also, it lets
+ you easily backup and restore your Hamachi configuration folder.

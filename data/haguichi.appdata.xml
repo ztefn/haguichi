@@ -6,7 +6,8 @@
   <name>Haguichi</name>
   <summary>Graphical frontend for Hamachi</summary>
   <description>
-    <p>Haguichi provides a graphical frontend for Hamachi on Linux. It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list.</p>
+    <p>Haguichi provides a graphical frontend for Hamachi on Linux.</p>
+    <p>It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list. Also, it lets you easily backup and restore your Hamachi configuration folder.</p>
   </description>
   <screenshots>
     <screenshot width="1248" height="702" type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
