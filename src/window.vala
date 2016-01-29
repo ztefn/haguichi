@@ -178,13 +178,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         delete_event.connect (on_win_delete);
         key_press_event.connect (on_key_press);
         
-        maximized = (bool) Settings.win_maximized.val;
-        
-        if (maximized)
-        {
-            maximize();
-        }
-        
         width  = (int) Settings.win_width.val + Settings.decorator_offset;
         height = (int) Settings.win_height.val + Settings.decorator_offset;
         
@@ -200,6 +193,13 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         if (Haguichi.hidden == false)
         {
             show();
+        }
+        
+        maximized = (bool) Settings.win_maximized.val;
+        
+        if (maximized)
+        {
+            maximize();
         }
     }
     
