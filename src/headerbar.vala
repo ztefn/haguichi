@@ -207,6 +207,8 @@ public class Headerbar : HeaderBar
     
     public void show_all_buttons ()
     {
+        last_allocated = 0;
+        
         connect_but.show();
         client_but.show();
         box.show();
