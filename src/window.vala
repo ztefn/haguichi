@@ -35,6 +35,8 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     private bool minimized;
     private bool maximized;
     
+    public string mode;
+    
     public Paned content_box;
     public NetworkView network_view;
     
@@ -451,8 +453,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         sidebar.update();
     }
     
-    public void set_mode (string mode)
+    public void set_mode (string _mode)
     {
+        mode = _mode;
+        
         message_box.hide();
         content_box.hide();
         
@@ -470,6 +474,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 
             case "Connecting":
                 set_mode ("Disconnected");
+                mode = _mode;
                 
                 spinner.sensitive = true;
                 spinner.start();

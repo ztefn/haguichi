@@ -66,6 +66,21 @@ public class AppSession : Object
         GlobalEvents.quit_app();
     }
     
+    public string get_mode ()
+    {
+        return Haguichi.window.mode;
+    }
+    
+    public bool get_modality ()
+    {
+        return  (Haguichi.modal_dialog != null);
+    }
+    
+    public bool get_visibility ()
+    {
+        return Haguichi.window.visible;
+    }
+    
     public signal void mode_changed (string mode);
     public signal void modality_changed (bool modal);
     public signal void visibility_changed (bool visible);
