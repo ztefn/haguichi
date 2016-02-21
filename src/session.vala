@@ -33,21 +33,25 @@ public class AppSession : Object
     
     public void change_nick ()
     {
+        Haguichi.window.present();
         GlobalEvents.change_nick();
     }
     
     public void join_network ()
     {
+        Haguichi.window.present();
         GlobalEvents.join_network();
     }
     
     public void create_network ()
     {
+        Haguichi.window.present();
         GlobalEvents.create_network();
     }
     
     public void information ()
     {
+        Haguichi.window.present();
         GlobalEvents.information();
     }
     

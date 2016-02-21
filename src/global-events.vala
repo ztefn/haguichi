@@ -182,7 +182,6 @@ public class GlobalEvents
     
     public static void change_nick ()
     {
-        Haguichi.window.present();
         new Dialogs.ChangeNick();
     }
     
@@ -226,19 +225,16 @@ public class GlobalEvents
     
     public static void join_network ()
     {
-        Haguichi.window.present();
         new Dialogs.JoinCreateNetwork ("Join", Text.join_network_title);
     }
     
     public static void create_network ()
     {
-        Haguichi.window.present();
         new Dialogs.JoinCreateNetwork ("Create", Text.create_network_title);
     }
     
     public static void attach ()
     {
-        Haguichi.window.present();
         new Dialogs.Attach();
     }
     
