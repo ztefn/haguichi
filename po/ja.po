@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-25 22:29+0100\n"
+"POT-Creation-Date: 2016-02-22 19:54+0100\n"
 "PO-Revision-Date: 2013-05-29 14:53+0000\n"
 "Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -19,754 +19,762 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-05-29 18:56+0000\n"
 "X-Generator: Launchpad (build 16652)\n"
 
-#: src/text.vala:344
+#: src/text.vala:346
 msgid "A graphical frontend for Hamachi."
 msgstr "Hamachi 用のグラフィカルフロントエンド"
 
-#: src/text.vala:345
+#: src/text.vala:347
 msgid "Join and create local networks over the Internet"
 msgstr "インターネット越しのローカルネットワークを作ったり参加してみよう"
 
-#: src/text.vala:349
+#: src/text.vala:351
 msgid "_OK"
 msgstr "OK(_O)"
 
-#: src/text.vala:350
+#: src/text.vala:352
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
-#: src/text.vala:351
+#: src/text.vala:353
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: src/text.vala:352
+#: src/text.vala:354
 msgid "_Refresh"
 msgstr "更新(_R)"
 
-#: src/text.vala:353
+#: src/text.vala:355
 msgid "_Revert"
 msgstr "元に戻す(_R)"
 
-#: src/text.vala:354
+#: src/text.vala:356
 msgid "_Delete"
 msgstr "削除(_D)"
 
-#: src/text.vala:355
+#: src/text.vala:357
 msgid "_Information"
 msgstr "情報(_I)"
 
-#: src/text.vala:356
+#: src/text.vala:358
 msgid "_Donate"
 msgstr ""
 
-#: src/text.vala:357
+#: src/text.vala:359
 msgid "_Preferences"
 msgstr "設定(_P)"
 
-#: src/text.vala:358
+#: src/text.vala:360
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: src/text.vala:359
+#: src/text.vala:361
 msgid "_About"
 msgstr "情報(_A)"
 
-#: src/text.vala:360
+#: src/text.vala:362
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: src/text.vala:362
+#: src/text.vala:364
 msgid "_Show Haguichi"
 msgstr "Haguichi を表示(_S)"
 
-#: src/text.vala:364
+#: src/text.vala:366
 msgid "Yes"
 msgstr "はい"
 
-#: src/text.vala:365
+#: src/text.vala:367
 msgid "No"
 msgstr "いいえ"
 
-#: src/text.vala:367
+#: src/text.vala:369
 msgid "_Hamachi output"
 msgstr "Hamachi から出力されたログ"
 
-#: src/text.vala:369
+#: src/text.vala:371
 msgid "IPv4 address:"
 msgstr "IPv4 アドレス:"
 
-#: src/text.vala:370
+#: src/text.vala:372
 msgid "IPv6 address:"
 msgstr "IPv6 アドレス:"
 
-#: src/text.vala:371
+#: src/text.vala:373
 msgid "Client ID:"
 msgstr "クライアント ID:"
 
-#: src/text.vala:372
+#: src/text.vala:374
 msgid "Status:"
 msgstr "状態:"
 
-#: src/text.vala:373
+#: src/text.vala:375
 msgid "Tunnel:"
 msgstr "トンネル:"
 
-#: src/text.vala:374
+#: src/text.vala:376
 msgid "Connection:"
 msgstr "接続状態:"
 
-#: src/text.vala:375
+#: src/text.vala:377
 msgid "Direct"
 msgstr "直接接続"
 
-#: src/text.vala:376
+#: src/text.vala:378
 msgid "Relayed"
 msgstr "リレー接続"
 
-#: src/text.vala:377
+#: src/text.vala:379
 msgid "Anonymous"
 msgstr "匿名"
 
-#: src/text.vala:378
+#: src/text.vala:380
 msgid "_Network ID:"
 msgstr "ネットワーク ID(_N):"
 
-#: src/text.vala:380
+#: src/text.vala:382
 msgid "_Password:"
 msgstr "パスワード(_P)："
 
-#: src/text.vala:381
+#: src/text.vala:383
 msgid "_Nickname:"
 msgstr "ニックネーム(_N):"
 
-#: src/text.vala:384
+#: src/text.vala:386
 msgid "Offline"
 msgstr "オフライン"
 
-#: src/text.vala:385
+#: src/text.vala:387
 msgid "Online"
 msgstr "オンライン"
 
-#: src/text.vala:386
+#: src/text.vala:388
 msgid "Unreachable"
 msgstr "接続できません"
 
-#: src/text.vala:387
+#: src/text.vala:389
 msgid "Protocol mismatch"
 msgstr "プロトコルが一致しません"
 
-#: src/text.vala:388
+#: src/text.vala:390
 msgid "Conflicting address"
 msgstr "重複アドレス"
 
-#: src/text.vala:389
+#: src/text.vala:391
+msgid "C_onnect"
+msgstr "接続(_O)"
+
+#: src/text.vala:392
+msgid "_Disconnect"
+msgstr "切断(_D)"
+
+#: src/text.vala:393
 msgid "Connected"
 msgstr "接続しました"
 
-#: src/text.vala:390
+#: src/text.vala:394
 msgid "Disconnected"
 msgstr "切断しました"
 
-#: src/text.vala:391
+#: src/text.vala:395
 msgid "Connecting…"
 msgstr "接続しています…"
 
-#: src/text.vala:392
+#: src/text.vala:396
 msgid "Logging in…"
 msgstr "ログインしています…"
 
-#: src/text.vala:393
+#: src/text.vala:397
 msgid "Updating…"
 msgstr "更新しています…"
 
-#: src/text.vala:395
+#: src/text.vala:399
 msgid "Hamachi is not configured"
 msgstr "Hamachi が未設定です"
 
-#: src/text.vala:396
+#: src/text.vala:400
 msgid "You need to configure Hamachi before you can connect."
 msgstr "接続する前に Hamachi を設定する必要があります。"
 
-#: src/text.vala:397
+#: src/text.vala:401
 msgid "C_onfigure"
 msgstr "設定(_O)"
 
-#: src/text.vala:399
+#: src/text.vala:403
 msgid "Hamachi is not installed"
 msgstr "Hamachi がインストールされていません"
 
-#: src/text.vala:400
+#: src/text.vala:404
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Hamachi をダウンロードして手順に従いインストールしてください。"
 
-#: src/text.vala:401
+#: src/text.vala:405
 msgid "Hamachi version {0} is obsolete"
 msgstr "Hamachi バージョン {0} は既にサポート対象外となっています"
 
-#: src/text.vala:402
+#: src/text.vala:406
 msgid "Please download and install the latest Hamachi version."
 msgstr "Hamachi の最新版をダウンロードしてインストールしてください。"
 
-#: src/text.vala:403
+#: src/text.vala:407
 msgid "_Download"
 msgstr "ダウンロード(_D)"
 
-#: src/text.vala:405
+#: src/text.vala:409
 #, fuzzy
 msgid "You are connected!"
 msgstr "切断しました"
 
-#: src/text.vala:406
+#: src/text.vala:410
 msgid "Click on the + button to add a network."
 msgstr ""
 
-#: src/text.vala:408
+#: src/text.vala:412
 msgid "Members:"
 msgstr "メンバー:"
 
-#: src/text.vala:409
+#: src/text.vala:413
 msgid "{0} online, {1} total"
 msgstr "オンライン {0}, トータル {1}"
 
-#: src/text.vala:410
+#: src/text.vala:414
 msgid "Owner:"
 msgstr "所有者:"
 
-#: src/text.vala:411
+#: src/text.vala:415
 msgid "You"
 msgstr "あなた"
 
-#: src/text.vala:412
+#: src/text.vala:416
 msgid "Unknown"
 msgstr "不明"
 
-#: src/text.vala:413
+#: src/text.vala:417
 msgid "Unavailable"
 msgstr "利用不可"
 
-#: src/text.vala:414
+#: src/text.vala:418
 msgid "Awaiting approval"
 msgstr "承認待ち"
 
-#: src/text.vala:415
+#: src/text.vala:419
 msgid "Locked:"
 msgstr "ロック:"
 
-#: src/text.vala:416
+#: src/text.vala:420
 msgid "Approval:"
 msgstr "承認:"
 
-#: src/text.vala:417
+#: src/text.vala:421
 msgid "Manually"
 msgstr "手動"
 
-#: src/text.vala:418
+#: src/text.vala:422
 msgid "Automatically"
 msgstr "自動"
 
-#: src/text.vala:419
+#: src/text.vala:423
 msgid "Capacity:"
 msgstr "最大同時接続数:"
 
-#: src/text.vala:421
+#: src/text.vala:425
 msgid "_Go Online"
 msgstr "オンラインに(_G)"
 
-#: src/text.vala:422
+#: src/text.vala:426
 msgid "_Go Offline"
 msgstr "オフラインに(_G)"
 
-#: src/text.vala:423
+#: src/text.vala:427
 msgid "_Leave"
 msgstr "離脱する(_L)"
 
-#: src/text.vala:424
+#: src/text.vala:428
 msgid "_Locked"
 msgstr "ロック(_L)"
 
-#: src/text.vala:425
+#: src/text.vala:429
 msgid "_New Member Approval"
 msgstr "新規メンバー承認(_N)"
 
-#: src/text.vala:426
+#: src/text.vala:430
 msgid "_Automatically"
 msgstr "自動で設定する(_A)"
 
-#: src/text.vala:427
+#: src/text.vala:431
 msgid "_Manually"
 msgstr "自分で設定する(_M)"
 
-#: src/text.vala:428
+#: src/text.vala:432
 msgid "_Copy Network ID"
 msgstr "ネットワーク ID をコピー(_C)"
 
-#: src/text.vala:430
+#: src/text.vala:434
 msgid "_Browse Shares"
 msgstr "共有を見る(_B)"
 
-#: src/text.vala:431
+#: src/text.vala:435
 msgid "_Ping"
 msgstr "Ping を打つ(_P)"
 
-#: src/text.vala:432
+#: src/text.vala:436
 msgid "_View Remote Desktop"
 msgstr "リモートデスクトップを開く(_V)"
 
-#: src/text.vala:433
+#: src/text.vala:437
 msgid "_Approve"
 msgstr "承認(_A)"
 
-#: src/text.vala:434
+#: src/text.vala:438
 msgid "_Reject"
 msgstr "拒否(_R)"
 
-#: src/text.vala:435
+#: src/text.vala:439
 msgid "_Evict"
 msgstr "登録抹消(_E)"
 
-#: src/text.vala:436
+#: src/text.vala:440
 msgid "Copy IPv_4 Address"
 msgstr "IPv4 アドレスをコピー(_4)"
 
-#: src/text.vala:437
+#: src/text.vala:441
 msgid "Copy IPv_6 Address"
 msgstr "IPv6 アドレスをコピー(_6)"
 
-#: src/text.vala:438
+#: src/text.vala:442
 msgid "_Copy Client ID"
 msgstr "クライアント ID をコピー(_C)"
 
-#: src/text.vala:440
+#: src/text.vala:444
 msgid "Change _Nickname…"
 msgstr "ニックネームを変更(_N)…"
 
-#: src/text.vala:441
+#: src/text.vala:445
 msgid "Change Nickname"
 msgstr "ニックネームを変更"
 
-#: src/text.vala:442
+#: src/text.vala:446
 msgid "C_hange"
 msgstr "変更(_H)"
 
-#: src/text.vala:444
+#: src/text.vala:448
 msgid "Change _Password…"
 msgstr "パスワードを変更(_P)…"
 
-#: src/text.vala:445
+#: src/text.vala:449
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: src/text.vala:446
+#: src/text.vala:450
 #, fuzzy
 msgid "_New password:"
 msgstr "パスワード(_P)："
 
-#: src/text.vala:448
+#: src/text.vala:452
 msgid "_Account:"
 msgstr "アカウント(_A):"
 
-#: src/text.vala:451
+#: src/text.vala:455
 msgid "_Attach to Account…"
 msgstr "アカウントと関連付ける(_A)…"
 
-#: src/text.vala:452
+#: src/text.vala:456
 msgid "Attach to Account"
 msgstr "アカウントと関連付け"
 
-#: src/text.vala:453
+#: src/text.vala:457
 msgid "_Include all networks created by this client"
 msgstr "このクライアントで作った全てのネットワークを含める(_I)"
 
-#: src/text.vala:454
+#: src/text.vala:458
 msgid "_Attach"
 msgstr "関連付け(_A)"
 
-#: src/text.vala:455
+#: src/text.vala:459
 msgid "Account not found"
 msgstr "アカウントが見つかりませんでした"
 
-#: src/text.vala:457
+#: src/text.vala:461
 msgid "Config_uration"
 msgstr "設定(_u)"
 
-#: src/text.vala:458
+#: src/text.vala:462
 msgid "_Open Folder"
 msgstr "フォルダを開く(_O)"
 
-#: src/text.vala:459
+#: src/text.vala:463
 msgid "_Save a Backup…"
 msgstr "バックアップ保存(_S)…"
 
-#: src/text.vala:460
+#: src/text.vala:464
 msgid "Save a Backup"
 msgstr "バックアップ保存"
 
-#: src/text.vala:461
+#: src/text.vala:465
 msgid "_Restore from Backup…"
 msgstr "バックアップからリストア(_R)…"
 
-#: src/text.vala:462
+#: src/text.vala:466
 msgid "Restore from Backup"
 msgstr "バックアップからリストア"
 
-#: src/text.vala:463
+#: src/text.vala:467
 msgid "_Restore"
 msgstr "リストア(_R)"
 
-#: src/text.vala:464
+#: src/text.vala:468
 msgid "Could not restore configuration"
 msgstr "設定をリストアできませんでした"
 
-#: src/text.vala:465
+#: src/text.vala:469
 msgid "Archive does not contain expected files."
 msgstr "求めているファイルがアーカイブ内に見当たりません。"
 
-#: src/text.vala:466
+#: src/text.vala:470
 msgid "All supported archives"
 msgstr "サポートしている全アーカイブ"
 
-#: src/text.vala:468
+#: src/text.vala:472
 msgid "_Join Network…"
 msgstr "ネットワークに参加(_J)…"
 
-#: src/text.vala:469
+#: src/text.vala:473
 msgid "Join Network"
 msgstr "ネットワークに参加"
 
-#: src/text.vala:470
+#: src/text.vala:474
 msgid "_Join"
 msgstr "参加(_J)"
 
-#: src/text.vala:472
+#: src/text.vala:476
 msgid "_Create Network…"
 msgstr "ネットワーク作成(_C)…"
 
-#: src/text.vala:473
+#: src/text.vala:477
 msgid "Create Network"
 msgstr "ネットワークの作成"
 
-#: src/text.vala:474
+#: src/text.vala:478
 msgid "C_reate"
 msgstr "作成(_R)"
 
-#: src/text.vala:476
+#: src/text.vala:480
 msgid "Network not found"
 msgstr "ネットワークが見つかりません"
 
-#: src/text.vala:477
+#: src/text.vala:481
 msgid "Invalid password"
 msgstr "パスワードが正しくありません"
 
-#: src/text.vala:478
+#: src/text.vala:482
 msgid "Network is full"
 msgstr "ネットワークが満員状態です"
 
-#: src/text.vala:479
+#: src/text.vala:483
 msgid "Network is locked"
 msgstr "ネットワークがロックされています"
 
-#: src/text.vala:480
+#: src/text.vala:484
 msgid "Network already joined"
 msgstr "既にネットワークに参加しています"
 
-#: src/text.vala:481
+#: src/text.vala:485
 #, fuzzy
 msgid "Network ID is already taken"
 msgstr "そのネットワーク名は既に使用されています"
 
-#: src/text.vala:482
+#: src/text.vala:486
 msgid "Unknown error"
 msgstr "不明なエラーです"
 
-#: src/text.vala:484
+#: src/text.vala:488
 msgid "Join request sent"
 msgstr "参加リクエストを送信しました"
 
-#: src/text.vala:486
+#: src/text.vala:490
 msgid "Preferences"
 msgstr "環境設定"
 
-#: src/text.vala:487
+#: src/text.vala:491
 msgid "Information"
 msgstr "情報"
 
-#: src/text.vala:489
+#: src/text.vala:493
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "ネットワーク “{0}” を 本当に削除してもいいですか？"
 
-#: src/text.vala:490
+#: src/text.vala:494
 msgid "If you delete a network, it will be permanently lost."
 msgstr "ネットワークを削除すると、そのネットワークは元に戻せなくなります。"
 
-#: src/text.vala:492
+#: src/text.vala:496
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "ネットワーク “{0}” から 本当に離脱してもいいですか？"
 
-#: src/text.vala:493
+#: src/text.vala:497
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "離脱しても、後でいつでもネットワークに再参加することができます。"
 
-#: src/text.vala:495
+#: src/text.vala:499
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "本当にメンバー “{0}” を登録から抹消していいですか？"
 
-#: src/text.vala:496
+#: src/text.vala:500
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "登録を抹消しても、そのメンバーは後でいつでもネットワークに再参加することがで"
 "きます。"
 
-#: src/text.vala:498
+#: src/text.vala:502
 msgid "Could not delete network “{0}”"
 msgstr "ネットワーク “{0}” の削除に失敗しました"
 
-#: src/text.vala:499
+#: src/text.vala:503
 msgid "Could not leave network “{0}”"
 msgstr "ネットワーク “{0}” からの離脱に失敗"
 
-#: src/text.vala:500
+#: src/text.vala:504
 msgid "Could not evict member “{0}”"
 msgstr "メンバー “{0}” の登録抹消失敗"
 
-#: src/text.vala:501
+#: src/text.vala:505
 msgid "Could not go online in the network “{0}”"
 msgstr "ネットワーク “{0}” で オンラインになれません"
 
-#: src/text.vala:502
+#: src/text.vala:506
 msgid "Could not go offline in the network “{0}”"
 msgstr "ネットワーク “{0}” で オフラインになれません"
 
-#: src/text.vala:504
+#: src/text.vala:508
 msgid "See output for details."
 msgstr "詳細については出力されたログを確認してください。"
 
-#: src/text.vala:506
+#: src/text.vala:510
 msgid "General"
 msgstr "一般"
 
-#: src/text.vala:507
+#: src/text.vala:511
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: src/text.vala:508
+#: src/text.vala:512
 msgid "Commands"
 msgstr "コマンド"
 
-#: src/text.vala:510
+#: src/text.vala:514
 #, fuzzy
 msgid "Notifications"
 msgstr "通知エリア"
 
-#: src/text.vala:511
+#: src/text.vala:515
 msgid "Behavior"
 msgstr "動作"
 
-#: src/text.vala:513
+#: src/text.vala:517
 msgid "_Protocol:"
 msgstr "プロトコル(_P):"
 
-#: src/text.vala:514
+#: src/text.vala:518
 msgid "Both IPv4 and IPv6"
 msgstr "IPv4 と IPv6 の両方"
 
-#: src/text.vala:515
+#: src/text.vala:519
 msgid "IPv4 only"
 msgstr "IPv4 のみ"
 
-#: src/text.vala:516
+#: src/text.vala:520
 msgid "IPv6 only"
 msgstr "IPv6 のみ"
 
-#: src/text.vala:518
+#: src/text.vala:522
 msgid "Show _Offline Members"
 msgstr "オフラインのメンバーを表示(_O)"
 
-#: src/text.vala:519
+#: src/text.vala:523
 msgid "Sort by _Name"
 msgstr "名前順で並び替え(_N)"
 
-#: src/text.vala:520
+#: src/text.vala:524
 msgid "Sort by _Status"
 msgstr "状態で並び替え(_S)"
 
-#: src/text.vala:522
+#: src/text.vala:526
 msgid "C_onnect automatically on startup"
 msgstr "起動時に自動で接続する(_C)"
 
-#: src/text.vala:523
+#: src/text.vala:527
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "接続が切れたら自動で再接続する(_R)"
 
-#: src/text.vala:524
+#: src/text.vala:528
 msgid "_Disconnect on quit"
 msgstr "終了時に接続を切る(_D)"
 
-#: src/text.vala:526
+#: src/text.vala:530
 msgid "Display notification when the connection is l_ost"
 msgstr "接続が切れたら通知を表示する(_O)"
 
-#: src/text.vala:527
+#: src/text.vala:531
 msgid "Display notification when a member _joins"
 msgstr "メンバーが参加したら通知を表示する(_J)"
 
-#: src/text.vala:528
+#: src/text.vala:532
 msgid "Display notification when a member _leaves"
 msgstr "メンバーが離脱したら通知を表示する(_L)"
 
-#: src/text.vala:529
+#: src/text.vala:533
 msgid "Display notification when a member comes o_nline"
 msgstr "メンバーがオンラインになったら通知を表示する(_N)"
 
-#: src/text.vala:530
+#: src/text.vala:534
 msgid "Display notification when a member goes o_ffline"
 msgstr "メンバーがオフラインになったら通知を表示する(_F)"
 
-#: src/text.vala:532
+#: src/text.vala:536
 msgid "Error connecting"
 msgstr "接続エラー"
 
-#: src/text.vala:533
+#: src/text.vala:537
 msgid "Hamachi login failed"
 msgstr "Hamachi のログインに失敗しました"
 
-#: src/text.vala:534
+#: src/text.vala:538
 msgid "No internet connection"
 msgstr "インターネットに接続できません"
 
-#: src/text.vala:536
+#: src/text.vala:540
 msgid "Hamachi lost connection"
 msgstr "Hamachi の接続が切れました"
 
-#: src/text.vala:537
+#: src/text.vala:541
 msgid "Member online"
 msgstr "オンラインのメンバー"
 
-#: src/text.vala:538
+#: src/text.vala:542
 msgid "{0} came online in the network {1}"
 msgstr "ネットワーク {1} で {0} がオンラインになりました"
 
-#: src/text.vala:539
+#: src/text.vala:543
 msgid "Member offline"
 msgstr "オフラインのメンバー"
 
-#: src/text.vala:540
+#: src/text.vala:544
 msgid "{0} went offline in the network {1}"
 msgstr "ネットワーク {1} で {0} がオフラインになりました"
 
-#: src/text.vala:541
+#: src/text.vala:545
 msgid "Member joined"
 msgstr "メンバーが参加しました"
 
-#: src/text.vala:542
+#: src/text.vala:546
 msgid "{0} joined the network {1}"
 msgstr "ネットワーク {1} に {0} が参加しました"
 
-#: src/text.vala:543
+#: src/text.vala:547
 msgid "Member left"
 msgstr "メンバーが離脱しました"
 
-#: src/text.vala:544
+#: src/text.vala:548
 msgid "{0} left the network {1}"
 msgstr "ネットワーク {1} から {0} が離脱しました"
 
-#: src/text.vala:546
+#: src/text.vala:550
 msgid "Add"
 msgstr "追加"
 
-#: src/text.vala:547
+#: src/text.vala:551
 msgid "Add Command"
 msgstr "コマンドを追加"
 
-#: src/text.vala:548
+#: src/text.vala:552
 msgid "_Add"
 msgstr "追加(_A)"
 
-#: src/text.vala:549
+#: src/text.vala:553
 msgid "Edit"
 msgstr "編集"
 
-#: src/text.vala:550
+#: src/text.vala:554
 msgid "Edit Command"
 msgstr "コマンドの編集"
 
-#: src/text.vala:551
+#: src/text.vala:555
 msgid "_Label:"
 msgstr "ラベル(_L):"
 
-#: src/text.vala:552
+#: src/text.vala:556
 msgid "IPv_4 command:"
 msgstr "IPv4 コマンド(_4):"
 
-#: src/text.vala:553
+#: src/text.vala:557
 msgid "IPv_6 command:"
 msgstr "IPv6 コマンド(_6):"
 
-#: src/text.vala:554
+#: src/text.vala:558
 msgid "Use %A for address and %N for nickname"
 msgstr "アドレスとして %A を使い、ニックネームとして %N を使う"
 
-#: src/text.vala:555
+#: src/text.vala:559
 msgid "_Priority:"
 msgstr "優先度(_P):"
 
-#: src/text.vala:557
+#: src/text.vala:561
 msgid "Remove"
 msgstr "削除"
 
-#: src/text.vala:558
+#: src/text.vala:562
 msgid "Move up"
 msgstr "上へ"
 
-#: src/text.vala:559
+#: src/text.vala:563
 msgid "Move down"
 msgstr "下へ"
 
-#: src/text.vala:560
+#: src/text.vala:564
 #, fuzzy
 msgid "Set as default action"
 msgstr "既定のコマンドに戻す"
 
-#: src/text.vala:562
+#: src/text.vala:566
 msgid "Revert all changes"
 msgstr "変更を取り消しますか"
 
-#: src/text.vala:563
+#: src/text.vala:567
 msgid "Are you sure you want to revert all changes?"
 msgstr "変更点をすべて元に戻してしまっていいですか？"
 
-#: src/text.vala:564
+#: src/text.vala:568
 msgid "If you revert all changes, the default commands will be restored."
 msgstr "変更点をすべて元に戻すと、既定のコマンドがリストアされます。"
 
-#: src/text.vala:569
+#: src/text.vala:573
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] ""
 
-#: src/text.vala:574
+#: src/text.vala:578
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
 msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
 
-#: src/text.vala:579
+#: src/text.vala:583
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
-#: src/text.vala:584
+#: src/text.vala:588
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
-#: src/text.vala:589
+#: src/text.vala:593
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} が参加しました"
 
-#: src/text.vala:594
+#: src/text.vala:598
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"

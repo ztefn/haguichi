@@ -162,6 +162,8 @@ Türkçe (tr)
     public static string unreachable;
     public static string mismatch;
     public static string conflict;
+    public static string connect_label;
+    public static string disconnect_label;
     public static string connected;
     public static string disconnected;
     public static string connecting;
@@ -359,7 +361,7 @@ Türkçe (tr)
         about_label                                = _("_About");
         quit_label                                 = _("_Quit");
         
-        show_app                                   = _("_Show Haguichi");
+        show_app                                   = _("_Show Haguichi"); // This string is only used in indicators
         
         yes                                        = _("Yes");
         no                                         = _("No");
@@ -386,6 +388,8 @@ Türkçe (tr)
         unreachable                                = _("Unreachable");
         mismatch                                   = _("Protocol mismatch");
         conflict                                   = _("Conflicting address");
+        connect_label                              = _("C_onnect"); // This string is only used in indicators
+        disconnect_label                           = _("_Disconnect"); // This string is only used in indicators
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");
         connecting                                 = _("Connecting…");
