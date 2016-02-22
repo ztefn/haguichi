@@ -200,7 +200,7 @@ macro(vala_precompile output target_name)
 	
     set(os_defines "")
     if(WIN32)
-        list(APPEND os_defines "-D \"G_OS_WIN32\"")
+        list(APPEND os_defines "-D" "\"G_OS_WIN32\"")
     endif(WIN32)
 
     # Workaround for a bug that would make valac run twice. This file is written

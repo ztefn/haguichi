@@ -91,12 +91,12 @@ OPTIONS
 add_executable(haguichi ${VALA_C})
 target_link_libraries( haguichi notify )
 
+
 install(TARGETS
 	haguichi
 RUNTIME DESTINATION
-	${CMAKE_INSTALL_BINDIR}/
+	${CMAKE_INSTALL_BINDIR}
 )
-
 if(HAVE_VALADOC)
 	valadoc(haguichi
 		${CMAKE_BINARY_DIR}/valadoc/haguichi
