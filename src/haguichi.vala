@@ -77,9 +77,7 @@ class Haguichi : Gtk.Application
             Command.execute ("haguichi-indicator");
         }
         
-        Intl.textdomain (Text.app_name.down());
         Text.init();
-        
         Settings.init();
         
         if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
