@@ -27,8 +27,8 @@ public class Utils : Object
     {
         try
         {
-            label = new Regex (""" ?\(_[a-zA-Z]\)""").replace (label, -1, 0, ""); // Japanse translations
-            label = label.replace ("_", "");                                      // All other translations
+            label = new Regex ("""\(_[a-zA-Z]\)""").replace (label, -1, 0, ""); // Japanse translations
+            label = label.replace ("_", "");                                    // All other translations
         }
         catch (RegexError e)
         {
