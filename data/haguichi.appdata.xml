@@ -29,4 +29,25 @@
   <developer_name>Stephen Brandt</developer_name>
   <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
   <translation type="gettext">haguichi</translation>
+  <languages>
+    <lang percentage="95">ast</lang>
+    <lang percentage="90">bg</lang>
+    <lang percentage="100">cs</lang>
+    <lang percentage="100">de</lang>
+    <lang percentage="100">es</lang>
+    <lang percentage="100">fr</lang>
+    <lang percentage="100">id</lang>
+    <lang percentage="100">it</lang>
+    <lang percentage="96">ja</lang>
+    <lang percentage="100">kk</lang>
+    <lang percentage="100">lt</lang>
+    <lang percentage="100">nl</lang>
+    <lang percentage="100">pl</lang>
+    <lang percentage="100">pt_BR</lang>
+    <lang percentage="90">ru</lang>
+    <lang percentage="100">sk</lang>
+    <lang percentage="83">sv</lang>
+    <lang percentage="85">tr</lang>
+    <lang percentage="100">uk</lang>
+​  </languages>
 </component>
