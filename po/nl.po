@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 19:54+0100\n"
-"PO-Revision-Date: 2013-05-02 22:42+0000\n"
+"PO-Revision-Date: 2016-02-23 23:10+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-05-02 22:44+0000\n"
-"X-Generator: Launchpad (build 16598)\n"
+"X-Launchpad-Export-Date: 2016-02-23 23:12+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
+"Language: \n"
 
 #: src/text.vala:346
 msgid "A graphical frontend for Hamachi."
@@ -52,7 +52,7 @@ msgstr "_Informatie"
 
 #: src/text.vala:358
 msgid "_Donate"
-msgstr "_Doneer"
+msgstr "_Doneren"
 
 #: src/text.vala:359
 msgid "_Preferences"
@@ -116,7 +116,7 @@ msgstr "Direct"
 
 #: src/text.vala:378
 msgid "Relayed"
-msgstr "Doorgegeven"
+msgstr "Omgeleid"
 
 #: src/text.vala:379
 msgid "Anonymous"
@@ -148,7 +148,7 @@ msgstr "Onbereikbaar"
 
 #: src/text.vala:389
 msgid "Protocol mismatch"
-msgstr "Ongelijk protocol"
+msgstr "Protocol komt niet overeen"
 
 #: src/text.vala:390
 msgid "Conflicting address"
@@ -156,7 +156,7 @@ msgstr "Conflicterend adres"
 
 #: src/text.vala:391
 msgid "C_onnect"
-msgstr "_Verbinden"
+msgstr "_Verbinding maken"
 
 #: src/text.vala:392
 msgid "_Disconnect"
@@ -172,15 +172,15 @@ msgstr "Niet verbonden"
 
 #: src/text.vala:395
 msgid "Connecting…"
-msgstr "Verbinden…"
+msgstr "Bezig met verbinden…"
 
 #: src/text.vala:396
 msgid "Logging in…"
-msgstr "Inloggen…"
+msgstr "Bezig met aanmelden…"
 
 #: src/text.vala:397
 msgid "Updating…"
-msgstr "Bijwerken…"
+msgstr "Bezig met bijwerken…"
 
 #: src/text.vala:399
 msgid "Hamachi is not configured"
@@ -188,7 +188,7 @@ msgstr "Hamachi is niet geconfigureerd"
 
 #: src/text.vala:400
 msgid "You need to configure Hamachi before you can connect."
-msgstr "Hamachi moet eerst geconfigureerd worden om te kunnen verbinden."
+msgstr "Hamachi moet eerst worden geconfigureerd om te kunnen verbinden."
 
 #: src/text.vala:401
 msgid "C_onfigure"
@@ -200,9 +200,7 @@ msgstr "Hamachi is niet geïnstalleerd"
 
 #: src/text.vala:404
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr ""
-"U wordt aangeraden om Hamachi te downloaden en de installatieinstructies te "
-"volgen."
+msgstr "Download Hamachi en volg daarna de installatieinstructies."
 
 #: src/text.vala:405
 msgid "Hamachi version {0} is obsolete"
@@ -210,9 +208,7 @@ msgstr "Hamachi versie {0} is verouderd"
 
 #: src/text.vala:406
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
-"U wordt aangeraden om de nieuwste versie van Hamachi te downloaden en deze "
-"vervolgens te installeren."
+msgstr "Download en installeer een nieuwere versie van Hamachi."
 
 #: src/text.vala:407
 msgid "_Download"
@@ -252,7 +248,7 @@ msgstr "Niet beschikbaar"
 
 #: src/text.vala:418
 msgid "Awaiting approval"
-msgstr "Wachtend op goedkeuring"
+msgstr "Wacht op goedkeuring"
 
 #: src/text.vala:419
 msgid "Locked:"
@@ -420,11 +416,11 @@ msgstr "_Terugzetten"
 
 #: src/text.vala:468
 msgid "Could not restore configuration"
-msgstr "Kon de reservekopie niet terugzetten"
+msgstr "Reservekopie kan helaas niet worden teruggezet"
 
 #: src/text.vala:469
 msgid "Archive does not contain expected files."
-msgstr "Het archief bevat niet de verwachte bestanden."
+msgstr "Het archief bevat niet de juiste bestanden."
 
 #: src/text.vala:470
 msgid "All supported archives"
@@ -460,23 +456,23 @@ msgstr "Netwerk niet gevonden"
 
 #: src/text.vala:481
 msgid "Invalid password"
-msgstr "Ongeldig wachtwoord"
+msgstr "Het wachtwoord is onjuist"
 
 #: src/text.vala:482
 msgid "Network is full"
-msgstr "Netwerk is vol"
+msgstr "Dit netwerk is vol"
 
 #: src/text.vala:483
 msgid "Network is locked"
-msgstr "Het netwerk is gesloten"
+msgstr "Dit netwerk is gesloten"
 
 #: src/text.vala:484
 msgid "Network already joined"
-msgstr "Netwerk reeds toegetreden"
+msgstr "U bent al toegetreden tot dit netwerk"
 
 #: src/text.vala:485
 msgid "Network ID is already taken"
-msgstr "Netwerk-ID is al in gebruik"
+msgstr "Dit netwerk-ID is al in gebruik"
 
 #: src/text.vala:486
 msgid "Unknown error"
@@ -484,7 +480,7 @@ msgstr "Onbekende fout"
 
 #: src/text.vala:488
 msgid "Join request sent"
-msgstr "Verzoek is ingediend"
+msgstr "Uw toetredingsverzoek is ingediend"
 
 #: src/text.vala:490
 msgid "Preferences"
@@ -500,7 +496,7 @@ msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verwijderen?"
 
 #: src/text.vala:494
 msgid "If you delete a network, it will be permanently lost."
-msgstr "Als u een network verwijderd zal het voorgoed verloren gaan."
+msgstr "Als u een netwerk verwijderd kan dit niet meer worden hersteld."
 
 #: src/text.vala:496
 msgid "Are you sure you want to leave the network “{0}”?"
@@ -509,7 +505,7 @@ msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verlaten?"
 #: src/text.vala:497
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
-"Indien toegestaan kunt u op een later moment opnieuw tot het netwerk "
+"Indien toegestaan kunt u op een later moment opnieuw tot dit netwerk "
 "toetreden."
 
 #: src/text.vala:499
@@ -517,30 +513,31 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Weet u zeker dat u lid ‘{0}’ uit het netwerk ‘{1}’ wilt verwijderen?"
 
 #: src/text.vala:500
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Indien toegestaan kunnen verwijderde leden op een later moment opnieuw tot "
-"het netwerk toetreden."
+"dit netwerk toetreden."
 
 #: src/text.vala:502
 msgid "Could not delete network “{0}”"
-msgstr "Kon het netwerk ‘{0}’ niet verwijderen"
+msgstr "Het netwerk ‘{0}’ kan niet worden verwijderd"
 
 #: src/text.vala:503
 msgid "Could not leave network “{0}”"
-msgstr "Kon het netwerk ‘{0}’ niet verlaten"
+msgstr "Het netwerk ‘{0}’ kan niet worden verlaten"
 
 #: src/text.vala:504
 msgid "Could not evict member “{0}”"
-msgstr "Kon het lid ‘{0}’ niet verwijderen"
+msgstr "Het lid ‘{0}’ kan niet worden verwijderd"
 
 #: src/text.vala:505
 msgid "Could not go online in the network “{0}”"
-msgstr "Kon niet online gaan in het netwerk ‘{0}’"
+msgstr "Het online gaan in netwerk ‘{0}’ is mislukt"
 
 #: src/text.vala:506
 msgid "Could not go offline in the network “{0}”"
-msgstr "Kon niet offline gaan in het netwerk ‘{0}’"
+msgstr "Het offline gaan in netwerk ‘{0}’ is mislukt"
 
 #: src/text.vala:508
 msgid "See output for details."
@@ -552,7 +549,7 @@ msgstr "Algemeen"
 
 #: src/text.vala:511
 msgid "Desktop"
-msgstr "Werkplek"
+msgstr "Werkomgeving"
 
 #: src/text.vala:512
 msgid "Commands"
@@ -560,7 +557,7 @@ msgstr "Opdrachten"
 
 #: src/text.vala:514
 msgid "Notifications"
-msgstr "Meldingen"
+msgstr "Notificaties"
 
 #: src/text.vala:515
 msgid "Behavior"
@@ -588,11 +585,11 @@ msgstr "_Offline leden tonen"
 
 #: src/text.vala:523
 msgid "Sort by _Name"
-msgstr "Op _naam sorteren"
+msgstr "Sorteren op _naam"
 
 #: src/text.vala:524
 msgid "Sort by _Status"
-msgstr "Op _status sorteren"
+msgstr "Sorteren op _status"
 
 #: src/text.vala:526
 msgid "C_onnect automatically on startup"
@@ -608,23 +605,23 @@ msgstr "_Verbinding verbreken bij afsluiten"
 
 #: src/text.vala:530
 msgid "Display notification when the connection is l_ost"
-msgstr "Melding weergeven als de verbinding is v_erbroken"
+msgstr "Een notificatie tonen wanneer de verbinding is v_erbroken"
 
 #: src/text.vala:531
 msgid "Display notification when a member _joins"
-msgstr "Melding weergeven als een lid tot een netwerk _toetreed"
+msgstr "Een notificatie tonen wanneer er een lid _toetreedt"
 
 #: src/text.vala:532
 msgid "Display notification when a member _leaves"
-msgstr "Melding weergeven als een lid een netwerk _verlaat"
+msgstr "Een notificatie tonen wanneer er een lid _uittreedt"
 
 #: src/text.vala:533
 msgid "Display notification when a member comes o_nline"
-msgstr "Melding weergeven als een lid o_nline komt"
+msgstr "Een notificatie tonen wanneer er een lid o_nline komt"
 
 #: src/text.vala:534
 msgid "Display notification when a member goes o_ffline"
-msgstr "Melding weergeven als een lid o_ffline gaat"
+msgstr "Een notificatie tonen wanneer er een lid o_ffline gaat"
 
 #: src/text.vala:536
 msgid "Error connecting"
@@ -720,11 +717,11 @@ msgstr "Verwijderen"
 
 #: src/text.vala:562
 msgid "Move up"
-msgstr "Naar boven"
+msgstr "Omhoog verplaatsen"
 
 #: src/text.vala:563
 msgid "Move down"
-msgstr "Naar beneden"
+msgstr "Omlaag verplaatsen"
 
 #: src/text.vala:564
 msgid "Set as default action"
