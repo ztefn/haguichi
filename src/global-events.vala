@@ -376,6 +376,13 @@ public class GlobalEvents
     public static void quit_app ()
     {
         Haguichi.session.quitted();
+        
+        if (Haguichi.modal_dialog != null)
+        {
+            GlobalEvents.set_modal_dialog (null);
+            Haguichi.modal_dialog.destroy();
+        }
+        
         Haguichi.window.hide();
         
         if ((bool) Settings.disconnect_on_quit.val)
