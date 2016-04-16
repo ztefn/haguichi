@@ -40,6 +40,8 @@ public class NetworkView : TreeView
     private Menus.NetworkMenu network_menu;
     private Menus.MemberMenu member_menu;
     private Gtk.Menu tree_menu;
+    
+    private bool skip_update_collapsed_networks;
 
     public NetworkView ()
     {
@@ -800,6 +802,11 @@ public class NetworkView : TreeView
     
     private void update_collapsed_networks (TreeIter _iter, string mode)
     {
+        if (skip_update_collapsed_networks)
+        {
+            return;
+        }
+        
         if (is_network (sorted_store, _iter))
         {
             Value network_val;
@@ -836,6 +843,8 @@ public class NetworkView : TreeView
             sorted_store.get_value (network_iter, network_column, out network_val);
             Network network = (Network) network_val;
             
+            skip_update_collapsed_networks = true;
+            
             if (is_collapsed (network))
             {
                 collapse_row (sorted_store.get_path (network_iter));
@@ -859,12 +868,16 @@ public class NetworkView : TreeView
                     expand_row (sorted_store.get_path (network_iter), false);
                 }
             }
+            
+            skip_update_collapsed_networks = false;
         }
     }
     
     private void collapse_or_expand_network (Network network)
     {
         TreeIter _iter = return_network_iter (network);
+        
+        skip_update_collapsed_networks = true;
         
         if (is_collapsed (network))
         {
@@ -874,6 +887,8 @@ public class NetworkView : TreeView
         {
             expand_row (store.get_path (_iter), false);
         }
+        
+        skip_update_collapsed_networks = false;
     }
     
     private bool is_collapsed (Network network)
