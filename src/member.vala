@@ -192,22 +192,27 @@ public class Member : Object
         
         if (dlg.response_id == Gtk.ResponseType.OK)
         {
-            if (Haguichi.demo_mode)
-            {
-                Haguichi.window.network_view.remove_member (network, this);
-            }
-            else
-            {
-                is_evicted = true;
-                new Thread<void*> (null, evict_thread);
-            }
+            is_evicted = true;
+            new Thread<void*> (null, evict_thread);
         }
         dlg.destroy();
     }
     
     private void* evict_thread ()
     {
-        Hamachi.evict (this);
+        bool success = Hamachi.evict (this);
+        
+        if (success)
+        {
+            Idle.add_full (Priority.HIGH_IDLE, () =>
+            {
+                Network network = Haguichi.window.network_view.return_network_by_id (network_id);
+                
+                Haguichi.window.network_view.remove_member (network, this);
+                network.remove_member (this);
+                return false;
+            });
+        }
         
         Thread.usleep (1000000); // Wait a second to get an updated list
         

@@ -324,40 +324,58 @@ public class Hamachi : Object
         return success;
     }
     
-    public static void delete (Network network)
+    public static bool delete (Network network)
     {
-        string output = Command.return_output ("hamachi delete \"" + Utils.clean_string (network.id) + "\"");
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.delete", output);
-
-        if (output.contains (".. failed"))
+        bool success = true;
+        
+        if (!Haguichi.demo_mode)
         {
-            string heading = Utils.format (Text.failed_delete_network_heading, network.name, null, null);
-            string message = Text.see_output;
-            
-            Idle.add_full (Priority.HIGH_IDLE, () =>
+            string output = Command.return_output ("hamachi delete \"" + Utils.clean_string (network.id) + "\"");
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.delete", output);
+
+            if (output.contains (".. failed"))
             {
-                new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
-                return false;
-            });
+                success = false;
+                
+                string heading = Utils.format (Text.failed_delete_network_heading, network.name, null, null);
+                string message = Text.see_output;
+                
+                Idle.add_full (Priority.HIGH_IDLE, () =>
+                {
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    return false;
+                });
+            }
         }
+        
+        return success;
     }
     
-    public static void leave (Network network)
+    public static bool leave (Network network)
     {
-        string output = Command.return_output ("hamachi leave \"" + Utils.clean_string (network.id) + "\"");
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.leave", output);
+        bool success = true;
         
-        if (output.contains (".. failed"))
+        if (!Haguichi.demo_mode)
         {
-            string heading = Utils.format (Text.failed_leave_network_heading, network.name, null, null);
-            string message = Text.see_output;
+            string output = Command.return_output ("hamachi leave \"" + Utils.clean_string (network.id) + "\"");
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.leave", output);
             
-            Idle.add_full (Priority.HIGH_IDLE, () =>
+            if (output.contains (".. failed"))
             {
-                new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
-                return false;
-            });
+                success = false;
+                
+                string heading = Utils.format (Text.failed_leave_network_heading, network.name, null, null);
+                string message = Text.see_output;
+                
+                Idle.add_full (Priority.HIGH_IDLE, () =>
+                {
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    return false;
+                });
+            }
         }
+        
+        return success;
     }
     
     public static void approve (Member member)
@@ -372,22 +390,31 @@ public class Hamachi : Object
         Debug.log (Debug.domain.HAMACHI, "Hamachi.reject", output);
     }
     
-    public static void evict (Member member)
+    public static bool evict (Member member)
     {
-        string output = Command.return_output ("hamachi evict \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.evict", output);
-
-        if (output.contains (".. failed"))
+        bool success = true;
+        
+        if (!Haguichi.demo_mode)
         {
-            string heading = Utils.format (Text.failed_evict_member_heading, member.nick, null, null);
-            string message = Text.see_output;
-            
-            Idle.add_full (Priority.HIGH_IDLE, () =>
+            string output = Command.return_output ("hamachi evict \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.evict", output);
+
+            if (output.contains (".. failed"))
             {
-                new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
-                return false;
-            });
+                success = false;
+                
+                string heading = Utils.format (Text.failed_evict_member_heading, member.nick, null, null);
+                string message = Text.see_output;
+                
+                Idle.add_full (Priority.HIGH_IDLE, () =>
+                {
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    return false;
+                });
+            }
         }
+        
+        return success;
     }
     
     private static string get_list ()

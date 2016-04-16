@@ -346,22 +346,25 @@ approve  : manual";
         
         if (dlg.response_id == Gtk.ResponseType.OK)
         {
-            if (Haguichi.demo_mode)
-            {
-                Haguichi.connection.remove_network (this);
-                Haguichi.window.network_view.remove_network (this);
-            }
-            else
-            {
-                new Thread<void*> (null, leave_thread);
-            }
+            new Thread<void*> (null, leave_thread);
         }
         dlg.destroy();
     }
     
     private void* leave_thread ()
     {
-        Hamachi.leave (this);
+        bool success = Hamachi.leave (this);
+        
+        if (success)
+        {
+            Idle.add_full (Priority.HIGH_IDLE, () =>
+            {
+                Haguichi.connection.remove_network (this);
+                Haguichi.window.network_view.remove_network (this);
+                Haguichi.window.update();
+                return false;
+            });
+        }
         
         Thread.usleep (1000000); // Wait a second to get an updated list
         
@@ -383,22 +386,25 @@ approve  : manual";
         
         if (dlg.response_id == Gtk.ResponseType.OK)
         {
-            if (Haguichi.demo_mode)
-            {
-                Haguichi.connection.remove_network (this);
-                Haguichi.window.network_view.remove_network (this);
-            }
-            else
-            {
-                new Thread<void*> (null, delete_thread);
-            }
+            new Thread<void*> (null, delete_thread);
         }
         dlg.destroy();
     }
     
     private void* delete_thread ()
     {
-        Hamachi.delete (this);
+        bool success = Hamachi.delete (this);
+        
+        if (success)
+        {
+            Idle.add_full (Priority.HIGH_IDLE, () =>
+            {
+                Haguichi.connection.remove_network (this);
+                Haguichi.window.network_view.remove_network (this);
+                Haguichi.window.update();
+                return false;
+            });
+        }
         
         Thread.usleep (1000000); // Wait a second to get an updated list
         
