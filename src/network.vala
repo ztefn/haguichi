@@ -166,7 +166,7 @@ approve  : manual";
                 Debug.log (Debug.domain.ERROR, "Network.determine_ownership_thread", e.message);
             }
         }
-        Debug.log (Debug.domain.HAMACHI, "Network.determine_ownership_thread", "Owner: " + owner);
+        Debug.log (Debug.domain.HAMACHI, "Network.determine_ownership_thread", "Owner for network " + id + ": " + owner);
         
         Idle.add_full (Priority.DEFAULT_IDLE, () =>
         {
