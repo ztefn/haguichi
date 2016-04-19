@@ -525,21 +525,7 @@ public class Controller : Object
     
     private static void update_list ()
     {
-        if (Haguichi.demo_mode)
-        {
-            Debug.log (Debug.domain.INFO, "Controller.update_list", "Demo mode, not really updating list.");
-            
-            if (manual_update)
-            {
-                manual_update = false;
-                num_update_cycles ++;
-            }
-            
-            update_cycle(); // Continue update interval
-            
-            HaguichiWindow.header_bar.set_subtitle (Text.connected);
-        }
-        else if (last_status == 2)
+        if (last_status == 2)
         {
             Debug.log (Debug.domain.INFO, "Controller.update_list", "Internet connection lost.");
             
@@ -560,138 +546,145 @@ public class Controller : Object
         }
         else if (last_status >= 6) // We're connected allright
         {
-            Debug.log (Debug.domain.INFO, "Controller.update_list", "Connected, updating list.");
-            
-            members_left_hash    = new HashTable<string, MemberEvent>(str_hash, str_equal);
-            members_online_hash  = new HashTable<string, MemberEvent>(str_hash, str_equal);
-            members_offline_hash = new HashTable<string, MemberEvent>(str_hash, str_equal);
-            members_joined_hash  = new HashTable<string, MemberEvent>(str_hash, str_equal);
-            
-            
-            HashTable<string, Network> old_networks_hash = new HashTable<string, Network>(str_hash, str_equal);
-            
-            foreach (Network old_network in Haguichi.connection.networks)
+            if (Haguichi.demo_mode)
             {
-                old_networks_hash.insert (old_network.id, old_network);
+                Debug.log (Debug.domain.INFO, "Controller.update_list", "Demo mode, not really updating list.");
             }
-            
-            HashTable<string, Network> new_networks_hash = new HashTable<string, Network>(str_hash, str_equal);
-            
-            foreach (Network new_network in new_networks_list)
+            else
             {
-                new_networks_hash.insert (new_network.id, new_network);
-            }
-            
-            
-            foreach (Network old_network in Haguichi.connection.networks)
-            {
-                if (!new_networks_hash.contains (old_network.id))
+                Debug.log (Debug.domain.INFO, "Controller.update_list", "Connected, updating list.");
+                
+                members_left_hash    = new HashTable<string, MemberEvent>(str_hash, str_equal);
+                members_online_hash  = new HashTable<string, MemberEvent>(str_hash, str_equal);
+                members_offline_hash = new HashTable<string, MemberEvent>(str_hash, str_equal);
+                members_joined_hash  = new HashTable<string, MemberEvent>(str_hash, str_equal);
+                
+                
+                HashTable<string, Network> old_networks_hash = new HashTable<string, Network>(str_hash, str_equal);
+                
+                foreach (Network old_network in Haguichi.connection.networks)
                 {
-                    // Network not in new list, removing...
-                    
-                    Haguichi.window.network_view.remove_network (old_network);
-                    Haguichi.connection.remove_network (old_network);
+                    old_networks_hash.insert (old_network.id, old_network);
                 }
-            }
-            
-            foreach (Network new_network in new_networks_list)
-            {
-                if (old_networks_hash.contains (new_network.id))
+                
+                HashTable<string, Network> new_networks_hash = new HashTable<string, Network>(str_hash, str_equal);
+                
+                foreach (Network new_network in new_networks_list)
                 {
-                    // Network in new and old list, updating...
-                    
-                    Network old_network = (Network) old_networks_hash.get (new_network.id);
-                    
-                    old_network.update (new_network.status, new_network.id, new_network.name);
-                    Haguichi.window.network_view.update_network (old_network);
-                    
-                    
-                    // Check all network members
-                    
-                    HashTable<string, Member> old_members_hash = new HashTable<string, Member>(str_hash, str_equal);
-                    
-                    foreach (Member old_member in old_network.members)
+                    new_networks_hash.insert (new_network.id, new_network);
+                }
+                
+                
+                foreach (Network old_network in Haguichi.connection.networks)
+                {
+                    if (!new_networks_hash.contains (old_network.id))
                     {
-                        old_members_hash.insert (old_member.client_id, old_member);
+                        // Network not in new list, removing...
+                        
+                        Haguichi.window.network_view.remove_network (old_network);
+                        Haguichi.connection.remove_network (old_network);
                     }
-                    
-                    
-                    HashTable<string, Member> new_members_hash = new HashTable<string, Member>(str_hash, str_equal);
-                    
-                    foreach (Member new_member in new_network.members)
+                }
+                
+                foreach (Network new_network in new_networks_list)
+                {
+                    if (old_networks_hash.contains (new_network.id))
                     {
-                        new_members_hash.insert (new_member.client_id, new_member);
-                    }
-                    
-                    
-                    foreach (Member old_member in old_network.members)
-                    {
-                        if (!new_members_hash.contains (old_member.client_id))
+                        // Network in new and old list, updating...
+                        
+                        Network old_network = (Network) old_networks_hash.get (new_network.id);
+                        
+                        old_network.update (new_network.status, new_network.id, new_network.name);
+                        Haguichi.window.network_view.update_network (old_network);
+                        
+                        
+                        // Check all network members
+                        
+                        HashTable<string, Member> old_members_hash = new HashTable<string, Member>(str_hash, str_equal);
+                        
+                        foreach (Member old_member in old_network.members)
                         {
-                            // Member not in new list, removing...
-                            
-                            Haguichi.window.network_view.remove_member (old_network, old_member);
-                            old_network.remove_member (old_member);
-                            
-                            if ((old_member.status.status_int < 3 ) &&
-                                (!old_member.is_evicted))
+                            old_members_hash.insert (old_member.client_id, old_member);
+                        }
+                        
+                        
+                        HashTable<string, Member> new_members_hash = new HashTable<string, Member>(str_hash, str_equal);
+                        
+                        foreach (Member new_member in new_network.members)
+                        {
+                            new_members_hash.insert (new_member.client_id, new_member);
+                        }
+                        
+                        
+                        foreach (Member old_member in old_network.members)
+                        {
+                            if (!new_members_hash.contains (old_member.client_id))
                             {
-                                add_member_to_hash (members_left_hash, old_member, old_network);
+                                // Member not in new list, removing...
+                                
+                                Haguichi.window.network_view.remove_member (old_network, old_member);
+                                old_network.remove_member (old_member);
+                                
+                                if ((old_member.status.status_int < 3 ) &&
+                                    (!old_member.is_evicted))
+                                {
+                                    add_member_to_hash (members_left_hash, old_member, old_network);
+                                }
                             }
                         }
-                    }
-                    
-                    foreach (Member new_member in new_network.members)
-                    {
-                        if (old_members_hash.contains (new_member.client_id))
+                        
+                        foreach (Member new_member in new_network.members)
                         {
-                            // Member in old and new list, updating...
+                            if (old_members_hash.contains (new_member.client_id))
+                            {
+                                // Member in old and new list, updating...
 
-                            Member old_member = (Member) old_members_hash [new_member.client_id];
-                            
-                            if ((old_member.status.status_int == 0) &&
-                                 (new_member.status.status_int == 1))
-                            {
-                                add_member_to_hash (members_online_hash, old_member, old_network);
+                                Member old_member = (Member) old_members_hash [new_member.client_id];
+                                
+                                if ((old_member.status.status_int == 0) &&
+                                     (new_member.status.status_int == 1))
+                                {
+                                    add_member_to_hash (members_online_hash, old_member, old_network);
+                                }
+                                if ((old_member.status.status_int == 1) &&
+                                    (new_member.status.status_int == 0))
+                                {
+                                    add_member_to_hash (members_offline_hash, old_member, old_network);
+                                }
+                                
+                                old_member.update (new_member.status, new_member.network_id, new_member.ipv4, new_member.ipv6, new_member.nick, new_member.client_id, new_member.tunnel);
+                                Haguichi.window.network_view.update_member_with_network (old_network, old_member);
                             }
-                            if ((old_member.status.status_int == 1) &&
-                                (new_member.status.status_int == 0))
+                            else
                             {
-                                add_member_to_hash (members_offline_hash, old_member, old_network);
+                                // Member not in old list, adding...
+                                
+                                old_network.add_member (new_member);
+                                Haguichi.window.network_view.add_member (old_network, new_member);
+                                
+                                add_member_to_hash (members_joined_hash, new_member, old_network);
                             }
-                            
-                            old_member.update (new_member.status, new_member.network_id, new_member.ipv4, new_member.ipv6, new_member.nick, new_member.client_id, new_member.tunnel);
-                            Haguichi.window.network_view.update_member_with_network (old_network, old_member);
-                        }
-                        else
-                        {
-                            // Member not in old list, adding...
-                            
-                            old_network.add_member (new_member);
-                            Haguichi.window.network_view.add_member (old_network, new_member);
-                            
-                            add_member_to_hash (members_joined_hash, new_member, old_network);
                         }
                     }
+                    else
+                    {
+                        // Network not in old list, adding...
+                        
+                        Haguichi.connection.add_network (new_network);
+                        Haguichi.window.network_view.add_network (new_network);
+                    }
                 }
-                else
-                {
-                    // Network not in old list, adding...
-                    
-                    Haguichi.connection.add_network (new_network);
-                    Haguichi.window.network_view.add_network (new_network);
-                }
+                
+                Haguichi.window.network_view.collapse_or_expand_networks();
+                HaguichiWindow.sidebar.refresh_tab();
+                
+                notify_members_joined();
+                notify_members_left();
+                notify_members_online();
+                notify_members_offline();
             }
             
-            Haguichi.window.network_view.collapse_or_expand_networks();
-            HaguichiWindow.sidebar.refresh_tab();
-            
-            notify_members_joined();
-            notify_members_left();
-            notify_members_online();
-            notify_members_offline();
-            
-            if ( manual_update )
+            if (manual_update)
             {
                 manual_update = false;
                 num_update_cycles ++;
