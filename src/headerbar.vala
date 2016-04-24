@@ -274,7 +274,7 @@ public class Headerbar : HeaderBar
         {
             minimum_width = HaguichiWindow.minimum_width;
             
-            if (Gtk.check_version(3, 18, 0) == null)
+            if (Gtk.check_version (3, 18, 0) == null) // Add 50 pixels for GTK+ version 3.18 and later
             {
                 minimum_width += 50;
             }

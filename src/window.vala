@@ -273,7 +273,8 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             get_preferred_width (out minimum_width, null);
             minimum_width -= Settings.decorator_offset;
             
-            if (Gtk.check_version(3, 18, 0) == null)
+            if ((Gtk.check_version (3, 18, 0) == null) && // Add 50 pixels just for GTK+ version 3.18
+                (Gtk.check_version (3, 20, 0) != null))
             {
                 minimum_width += 50;
             }

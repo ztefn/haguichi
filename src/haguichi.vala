@@ -85,8 +85,11 @@ class Haguichi : Gtk.Application
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP").has_suffix (":GNOME"))) // Any GNOME based desktop, for example "Budgie:GNOME"
         {
+            if (Gtk.check_version (3, 20, 0) != null) // Add 52 pixels offset for all GTK+ versions before 3.20
+            {
+            	Settings.decorator_offset = 52;
+            }
             window_use_header_bar = true;
-            Settings.decorator_offset = 52;
             Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", (bool) Settings.prefer_dark_theme.val);
         }
         Gtk.Settings.get_default().get ("gtk-dialogs-use-header", ref dialog_use_header_bar);
