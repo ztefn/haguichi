@@ -123,25 +123,25 @@
 
   <schema path="/org/haguichi/ui/" id="org.haguichi.ui" gettext-domain="haguichi">
     <key type="i" name="height">
-      <default>565</default>
+      <default>500</default>
     </key>
     <key type="b" name="maximized">
       <default>false</default>
     </key>
     <key type="i" name="position-x">
-      <default>100</default>
+      <default>120</default>
     </key>
     <key type="i" name="position-y">
-      <default>80</default>
+      <default>60</default>
     </key>
     <key type="b" name="prefer-dark-theme">
       <default>true</default>
     </key>
     <key type="i" name="sidebar-position">
-      <default>305</default>
+      <default>290</default>
     </key>
     <key type="i" name="width">
-      <default>580</default>
+      <default>560</default>
     </key>
   </schema>
 

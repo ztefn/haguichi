@@ -56,8 +56,8 @@ public class Settings : Object
         schema_base_id                = "org." + Text.app_name.down();
         
         decorator_offset              = 0;
-        switch_layout_threshold       = 625;
-        switch_sidebar_threshold      = 500;
+        switch_layout_threshold       = 620;
+        switch_sidebar_threshold      = 480;
         
         connect_on_startup            = new Key ("behavior", "connect-on-startup");
         disconnect_on_quit            = new Key ("behavior", "disconnect-on-quit");
