@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 19:54+0100\n"
-"PO-Revision-Date: 2015-07-11 16:29+0000\n"
+"PO-Revision-Date: 2016-04-25 17:44+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-07-11 20:40+0000\n"
-"X-Generator: Launchpad (build 17620)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-04-27 11:48+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
+"Language: ru\n"
 
 #: src/text.vala:346
 msgid "A graphical frontend for Hamachi."
@@ -222,11 +222,11 @@ msgstr "_Загрузить"
 
 #: src/text.vala:409
 msgid "You are connected!"
-msgstr ""
+msgstr "Вы подключены!"
 
 #: src/text.vala:410
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Нажмите кнопку + для добавления сети."
 
 #: src/text.vala:412
 msgid "Members:"
@@ -394,7 +394,7 @@ msgstr "Учётная запись не найдена"
 
 #: src/text.vala:461
 msgid "Config_uration"
-msgstr ""
+msgstr "_Настройки"
 
 #: src/text.vala:462
 msgid "_Open Folder"
@@ -422,7 +422,7 @@ msgstr "_Восстановить"
 
 #: src/text.vala:468
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Невозможно восстановить настройки"
 
 #: src/text.vala:469
 msgid "Archive does not contain expected files."
@@ -478,7 +478,7 @@ msgstr "Вы уже подключены к этой сети"
 
 #: src/text.vala:485
 msgid "Network ID is already taken"
-msgstr ""
+msgstr "Сеть с данным ID уже существует"
 
 #: src/text.vala:486
 msgid "Unknown error"
@@ -498,15 +498,15 @@ msgstr "Сведения"
 
 #: src/text.vala:493
 msgid "Are you sure you want to delete the network “{0}”?"
-msgstr ""
+msgstr "Вы уверены что хотите удалить сеть «{0}»?"
 
 #: src/text.vala:494
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Если вы удалите сеть, она удалиться без возможности восстановления."
 
 #: src/text.vala:496
 msgid "Are you sure you want to leave the network “{0}”?"
-msgstr ""
+msgstr "Вы уверены что хотите покинуть сеть «{0}»?"
 
 #: src/text.vala:497
 msgid "If admitted, you can rejoin the network at any later time."
@@ -517,7 +517,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
 
 #: src/text.vala:500
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
 #: src/text.vala:502
@@ -534,15 +535,15 @@ msgstr "Ошибка при попытке выгнать «{0}»"
 
 #: src/text.vala:505
 msgid "Could not go online in the network “{0}”"
-msgstr ""
+msgstr "Невозможно выйти в онлайн сети «{0}»"
 
 #: src/text.vala:506
 msgid "Could not go offline in the network “{0}”"
-msgstr ""
+msgstr "Невозможно выйти в оффлайн сети «{0}»"
 
 #: src/text.vala:508
 msgid "See output for details."
-msgstr ""
+msgstr "Подробности смотрите в выводе."
 
 #: src/text.vala:510
 msgid "General"
