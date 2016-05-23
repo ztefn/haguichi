@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-02-22 19:54+0100\n"
-"PO-Revision-Date: 2016-04-25 17:44+0000\n"
+"PO-Revision-Date: 2016-05-22 15:38+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-04-27 11:48+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-23 20:52+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: ru\n"
 
 #: src/text.vala:346
@@ -402,7 +402,7 @@ msgstr "_Открыть папку"
 
 #: src/text.vala:463
 msgid "_Save a Backup…"
-msgstr ""
+msgstr "Сделать _резервную копию…"
 
 #: src/text.vala:464
 msgid "Save a Backup"
@@ -410,7 +410,7 @@ msgstr "Создать резервную копию"
 
 #: src/text.vala:465
 msgid "_Restore from Backup…"
-msgstr ""
+msgstr "_Восстановить с резервной копии…"
 
 #: src/text.vala:466
 msgid "Restore from Backup"
@@ -510,7 +510,7 @@ msgstr "Вы уверены что хотите покинуть сеть «{0}�
 
 #: src/text.vala:497
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
+msgstr "Вы всегда сможете заново подключиться к выбранной сети."
 
 #: src/text.vala:499
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
@@ -520,6 +520,7 @@ msgstr "Вы уверены, что хотите выгнать «{0}» из с�
 msgid ""
 "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
+"Выгнанные участники всегда смогут заново подключиться к выбранной сети."
 
 #: src/text.vala:502
 msgid "Could not delete network “{0}”"
@@ -727,7 +728,7 @@ msgstr "Вниз"
 
 #: src/text.vala:564
 msgid "Set as default action"
-msgstr ""
+msgstr "Сохранить как действие по умолчанию"
 
 #: src/text.vala:566
 msgid "Revert all changes"
@@ -735,7 +736,7 @@ msgstr "Отменить все изменения"
 
 #: src/text.vala:567
 msgid "Are you sure you want to revert all changes?"
-msgstr ""
+msgstr "Вы уверены что хотите отменить все изменения?"
 
 #: src/text.vala:568
 msgid "If you revert all changes, the default commands will be restored."
