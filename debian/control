@@ -8,7 +8,7 @@ Homepage: https://www.haguichi.net/
 Package: haguichi
 Architecture: any
 Depends: libglib2.0-0 (>= 2.42), libgtk-3-0 (>= 3.14), libnotify4 (>= 0.7.6)
-Recommends: haguichi-indicator, dnsutils, adwaita-icon-theme (>= 3.14) | elementary-icon-theme (>= 3.2)
+Recommends: haguichi-indicator, bash, coreutils, dnsutils, iputils-ping | inetutils-ping, policykit-1 | gksu | kdesudo, tar, adwaita-icon-theme (>= 3.14) | elementary-icon-theme (>= 3.2)
 Description: Graphical frontend for Hamachi
  Haguichi provides a graphical frontend for Hamachi on Linux.
  .
