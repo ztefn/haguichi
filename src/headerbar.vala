@@ -167,7 +167,7 @@ public class Headerbar : HeaderBar
         gear_menu.append_section (null, sort_section);
         gear_menu.append_section (null, filter_section);
         
-        if (!Haguichi.app.prefers_app_menu())
+        if (!Haguichi.use_app_menu)
         {
             gear_menu.append_section (null, preferences_section);
             gear_menu.append_section (null, donate_section);

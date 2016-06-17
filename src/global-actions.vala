@@ -157,20 +157,20 @@ public class GlobalActions
         app.set_accels_for_action ("app.help", {"F1"});
         app.set_accels_for_action ("app.quit", {"<Control>Q"});
         
-        if (app.prefers_app_menu())
+        if (Haguichi.use_app_menu)
         {
-            var section0 = new GLib.Menu();
+            var section0 = new Menu();
             section0.append (Text.donate_label, "app.donate");
             
-            var section1 = new GLib.Menu();
+            var section1 = new Menu();
             section1.append (Text.preferences_label, "app.preferences");
             
-            var section2 = new GLib.Menu();
+            var section2 = new Menu();
             section2.append (Text.help_label,  "app.help");
             section2.append (Text.about_label, "app.about");
             section2.append (Text.quit_label,  "app.quit");
             
-            var menu = new GLib.Menu();
+            var menu = new Menu();
             menu.insert_section (0, null, section0);
             menu.insert_section (1, null, section1);
             menu.insert_section (2, null, section2);

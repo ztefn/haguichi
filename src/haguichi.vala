@@ -21,6 +21,8 @@ class Haguichi : Gtk.Application
     public static Connection connection;
     public static AppSession session;
     
+    public static bool use_app_menu;
+    
     public static bool window_use_header_bar;
     public static bool dialog_use_header_bar;
     
@@ -79,6 +81,12 @@ class Haguichi : Gtk.Application
         
         Text.init();
         Settings.init();
+        
+        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") &&
+            (app.prefers_app_menu()))
+        {
+            use_app_menu = true;
+        }
         
         if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
