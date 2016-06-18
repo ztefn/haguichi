@@ -26,5 +26,6 @@ Comment[tr]=İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun
 Comment[uk]=Приєднуйтесь та стоврюйте локальну мережу через Інтернет
 Icon=haguichi
 Categories=GNOME;GTK;Network;P2P;
+OnlyShowIn=GNOME;MATE;Unity;Cinnamon;
 X-GNOME-Autostart-enabled=false
 X-MATE-Autostart-enabled=false
