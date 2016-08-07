@@ -25,6 +25,6 @@ Comment[sv]=Anslut och skapa lokala nätverk över internet
 Comment[tr]=İnternet üzerinden yerel ağlara katılın veya yerel ağlar kurun
 Comment[uk]=Приєднуйтесь та стоврюйте локальну мережу через Інтернет
 Icon=haguichi
-OnlyShowIn=GNOME;MATE;Unity;Cinnamon;
+OnlyShowIn=GNOME;MATE;Unity;X-Cinnamon;
 X-GNOME-Autostart-enabled=false
 X-MATE-Autostart-enabled=false
