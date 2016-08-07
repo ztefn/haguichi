@@ -15,6 +15,7 @@
     <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
   </screenshots>
   <releases>
+    <release version="1.3.5" date="2016-08-08"/>
     <release version="1.3.4" date="2016-05-16"/>
     <release version="1.3.3" date="2016-03-05"/>
     <release version="1.3.2" date="2016-01-30"/>
