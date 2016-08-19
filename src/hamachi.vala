@@ -15,6 +15,7 @@ public class Hamachi : Object
     public  static string version;
     public  static string ip_version;
     public  static string last_info;
+    public  static string last_list;
     private static string service;
     
     public static void init ()
@@ -417,14 +418,6 @@ public class Hamachi : Object
         return success;
     }
     
-    private static string get_list ()
-    {
-        string output = Command.return_output ("hamachi list");
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.get_list", "\n" + output);
-        
-        return output;
-    }
-    
     public static string random_address ()
     {
         string address  = "25.";
@@ -461,9 +454,8 @@ public class Hamachi : Object
         return id;
     }
     
-    public static List<Network> return_list ()
+    public static string get_list ()
     {
-        List<Network> networks = new List<Network>();
         string output = "";
         
         if (Haguichi.demo_mode)
@@ -512,10 +504,19 @@ public class Hamachi : Object
         }
         else
         {
-            output = get_list();
+            output = Command.return_output ("hamachi list");
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.get_list", "\n" + output);
         }
         
-        string[] split = output.split ("\n");
+        last_list = output;
+        return last_list;
+    }
+    
+    public static List<Network> return_networks ()
+    {
+        List<Network> networks = new List<Network>();
+        
+        string[] split = last_list.split ("\n");
         string cur_network_id = "";
         
         try
@@ -632,7 +633,7 @@ public class Hamachi : Object
         }
         catch (RegexError e)
         {
-            Debug.log (Debug.domain.ERROR, "Hamachi.return_list", e.message);
+            Debug.log (Debug.domain.ERROR, "Hamachi.return_networks", e.message);
         }
         
         return networks;

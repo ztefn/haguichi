@@ -20,6 +20,7 @@ public class Controller : Object
     public  static int num_update_cycles;
     private static int num_wait_for_internet_cycles;
     private static string start_output;
+    private static string old_list;
     
     private static HashTable<string, MemberEvent> members_left_hash;
     private static HashTable<string, MemberEvent> members_online_hash;
@@ -460,7 +461,8 @@ public class Controller : Object
     
     private static void get_network_list ()
     {
-        Haguichi.connection.networks = Hamachi.return_list();
+        Hamachi.get_list();
+        Haguichi.connection.networks = Hamachi.return_networks();
         Haguichi.window.network_view.fill_tree();
         GlobalEvents.connection_established();
     }
@@ -503,7 +505,13 @@ public class Controller : Object
     
         if (last_status >= 6)
         {
-            new_networks_list = Hamachi.return_list();
+            old_list = Hamachi.last_list;
+            Hamachi.get_list();
+            
+            if (manual_update || old_list != Hamachi.last_list)
+            {
+                new_networks_list = Hamachi.return_networks();
+            }
         }
         
         if (continue_update)
@@ -549,6 +557,10 @@ public class Controller : Object
             if (Haguichi.demo_mode)
             {
                 Debug.log (Debug.domain.INFO, "Controller.update_list", "Demo mode, not really updating list.");
+            }
+            else if (!manual_update && old_list == Hamachi.last_list)
+            {
+                Debug.log (Debug.domain.INFO, "Controller.update_list", "Connected, list not changed. Skipping update.");
             }
             else
             {
