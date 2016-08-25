@@ -508,7 +508,7 @@ public class Controller : Object
             old_list = Hamachi.last_list;
             Hamachi.get_list();
             
-            if (manual_update || old_list != Hamachi.last_list)
+            if (old_list != Hamachi.last_list)
             {
                 new_networks_list = Hamachi.return_networks();
             }
@@ -558,7 +558,7 @@ public class Controller : Object
             {
                 Debug.log (Debug.domain.INFO, "Controller.update_list", "Demo mode, not really updating list.");
             }
-            else if (!manual_update && old_list == Hamachi.last_list)
+            else if (old_list == Hamachi.last_list)
             {
                 Debug.log (Debug.domain.INFO, "Controller.update_list", "Connected, list not changed. Skipping update.");
             }
