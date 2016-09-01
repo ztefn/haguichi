@@ -1,5 +1,5 @@
 ### AutoVala Project ###
-autovala_version: 20
+autovala_version: 21
 project_name: haguichi
 *vala_version: 0.26
 
@@ -71,16 +71,16 @@ c_library: notify
 *translate: vala src/preferences.vala
 *translate: vala src/text.vala
 *translate: vala src/command.vala
+*translate: vala src/controller.vala
 *translate: vala src/connection.vala
 *translate: vala src/hamachi.vala
+*translate: vala src/member.vala
 *translate: vala src/debug.vala
 *translate: vala src/member-event.vala
 *translate: vala src/haguichi.vala
 *translate: vala src/key.vala
 *translate: vala src/status.vala
 *translate: vala src/settings.vala
-*translate: vala src/member.vala
-*translate: vala src/controller.vala
 *translate: vala src/utils.vala
 *translate: vala src/network-view.vala
 *translate: vala src/global-events.vala
