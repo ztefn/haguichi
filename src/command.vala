@@ -348,6 +348,11 @@ public class Command : Object
         catch (Error e)
         {
             Debug.log (Debug.domain.ERROR, "Command.open_uri", e.message);
+            
+            if (exists ("xdg-open"))
+            {
+                execute ("xdg-open " + uri);
+            }
         }
     }
 }
