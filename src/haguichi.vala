@@ -88,7 +88,9 @@ class Haguichi : Gtk.Application
             use_app_menu = true;
         }
         
-        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
+        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Deepin") ||
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "KDE") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP").has_suffix (":GNOME"))) // Any GNOME based desktop, for example "Budgie:GNOME"
