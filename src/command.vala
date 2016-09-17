@@ -351,6 +351,7 @@ public class Command : Object
             
             if (exists ("xdg-open"))
             {
+                Debug.log (Debug.domain.ENVIRONMENT, "Command.open_uri", "Falling back to xdg-open");
                 execute ("xdg-open " + uri);
             }
         }
