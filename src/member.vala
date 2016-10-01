@@ -72,7 +72,8 @@ public class Member : Object
         }
         else if (_nick.length >= 25)
         {
-            if (_nick.validate() == false)
+            if ((_nick.validate() == false) &&
+                (_init == true))
             {
                 // Set nick to "Unknown" initially when the string is not valid UTF-8 encoded to prevent Gtk and Pango warnings,
                 // which typically happens when multibyte characters get cut off in the network list
