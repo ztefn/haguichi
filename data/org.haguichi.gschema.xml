@@ -83,6 +83,9 @@
     <key type="as" name="collapsed-networks">
       <default>[]</default>
     </key>
+    <key type="as" name="long-nicks">
+      <default>[]</default>
+    </key>
     <key type="s" name="member-template-large">
       <default><![CDATA['%N%_*<br><span size="smaller">%S <i>%A</i></span>']]></default>
     </key>

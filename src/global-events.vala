@@ -384,6 +384,7 @@ public class GlobalEvents
         }
         
         Haguichi.window.hide();
+        Haguichi.connection.save_long_nicks();
         
         if ((bool) Settings.disconnect_on_quit.val)
         {

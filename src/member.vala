@@ -40,7 +40,7 @@ public class Member : Object
     
     public void init ()
     {
-        get_long_nick (nick);
+        get_long_nick (nick, true);
     }
     
     public void update (Status _status, string _network_id, string? _ipv4, string? _ipv6, string? _nick, string _client_id, string? _tunnel)
@@ -52,7 +52,7 @@ public class Member : Object
         client_id  = _client_id;
         tunnel     = _tunnel;
         
-        get_long_nick (_nick);
+        get_long_nick (_nick, false);
     }
     
     private void set_sort_strings ()
@@ -61,10 +61,11 @@ public class Member : Object
         status_sort_string = status.status_sortable + nick + client_id;
     }
     
-    public void get_long_nick (string _nick)
+    public void get_long_nick (string _nick, bool _init)
     {
-        if ((_nick.length >= 25) &&
-            (nick.length > 25) &&
+        if ((_init == false) &&
+            (_nick.length >= 25) &&
+            (nick.length >= 25) &&
             (nick.has_prefix (_nick)))
         {
             // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
@@ -72,8 +73,18 @@ public class Member : Object
         else if ((_nick.length >= 25) ||
                  (_nick.has_suffix ("�")))
         {
-            // Retrieve long nick
-            new Thread<void*> (null, get_long_nick_thread);
+            if ((Haguichi.connection.has_long_nick (client_id)) &&
+                (Haguichi.connection.get_long_nick (client_id).has_prefix (_nick)))
+            {
+                // Get long nick from cache
+                nick = Haguichi.connection.get_long_nick (client_id);
+                Debug.log (Debug.domain.INFO, "Member.get_long_nick", "Retrieved long nick for client " + client_id + " from cache: " + nick);
+            }
+            else
+            {
+                // Retrieve long nick from hamachi
+                new Thread<void*> (null, get_long_nick_thread);
+            }
         }
         else
         {
@@ -85,24 +96,22 @@ public class Member : Object
     
     private void* get_long_nick_thread ()
     {
-        if (Haguichi.demo_mode)
+        string output = Command.return_output ("hamachi peer " + client_id);
+        Debug.log (Debug.domain.HAMACHI, "Member.get_long_nick_thread", output);
+        
+        string _nick = Hamachi.retrieve (output, "nickname");
+        if (_nick != "")
         {
-            Debug.log (Debug.domain.HAMACHI, "Member.get_long_nick_thread", "Demo mode, keeping nick " + nick);
+            nick = _nick;
         }
-        else
+        Haguichi.connection.add_long_nick (client_id, nick);
+        set_sort_strings ();
+        
+        Idle.add_full (Priority.DEFAULT_IDLE, () =>
         {
-            string output = Command.return_output ("hamachi peer " + client_id);
-            Debug.log (Debug.domain.HAMACHI, "Member.GetLongNickThread", output);
-            
-            nick = Hamachi.retrieve (output, "nickname");
-            set_sort_strings ();
-            
-            Idle.add_full (Priority.DEFAULT_IDLE, () =>
-            {
-                Haguichi.window.network_view.update_member (this);
-                return false;
-            });
-        }
+            Haguichi.window.network_view.update_member (this);
+            return false;
+        });
         
         return null;
     }

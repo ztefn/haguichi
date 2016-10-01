@@ -30,6 +30,7 @@ public class Settings : Object
     public static Key reconnect_interval;
     public static Key update_interval;
     public static Key collapsed_networks;
+    public static Key long_nicks;
     public static Key network_list_icon_size_large;
     public static Key network_list_icon_size_small;
     public static Key member_template_large;
@@ -72,6 +73,7 @@ public class Settings : Object
         reconnect_interval            = new Key ("config", "reconnect-interval");
         update_interval               = new Key ("config", "update-interval");
         collapsed_networks            = new Key ("network-list", "collapsed-networks");
+        long_nicks                    = new Key ("network-list", "long-nicks");
         member_template_large         = new Key ("network-list", "member-template-large");
         member_template_small         = new Key ("network-list", "member-template-small");
         network_template_large        = new Key ("network-list", "network-template-large");
