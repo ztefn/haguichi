@@ -33,7 +33,7 @@ public class Member : Object
         client_id  = _client_id;
         tunnel     = _tunnel;
         
-        set_sort_strings ();
+        set_sort_strings();
         
         is_evicted = false;
     }
@@ -70,14 +70,23 @@ public class Member : Object
         {
             // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
         }
-        else if ((_nick.length >= 25) ||
-                 (_nick.has_suffix ("�")))
+        else if (_nick.length >= 25)
         {
-            if ((Haguichi.connection.has_long_nick (client_id)) &&
+            if (_nick.validate() == false)
+            {
+                // Set nick to "Unknown" initially when the string is not valid UTF-8 encoded to prevent Gtk and Pango warnings,
+                // which typically happens when multibyte characters get cut off in the network list
+                nick = Text.unknown;
+            }
+            
+            if ((_nick.validate() == true) &&
+                (Haguichi.connection.has_long_nick (client_id)) &&
                 (Haguichi.connection.get_long_nick (client_id).has_prefix (_nick)))
             {
                 // Get long nick from cache
                 nick = Haguichi.connection.get_long_nick (client_id);
+                set_sort_strings();
+                
                 Debug.log (Debug.domain.INFO, "Member.get_long_nick", "Retrieved long nick for client " + client_id + " from cache: " + nick);
             }
             else
@@ -90,7 +99,7 @@ public class Member : Object
         {
             // Save passed nick
             nick = _nick;
-            set_sort_strings ();
+            set_sort_strings();
         }
     }
     
@@ -105,7 +114,7 @@ public class Member : Object
             nick = _nick;
         }
         Haguichi.connection.add_long_nick (client_id, nick);
-        set_sort_strings ();
+        set_sort_strings();
         
         Idle.add_full (Priority.DEFAULT_IDLE, () =>
         {
@@ -139,7 +148,7 @@ public class Member : Object
             ipv4    = "192.168.155.23";
             status  = new Status ("*");
         
-            set_sort_strings ();
+            set_sort_strings();
             
             Haguichi.window.network_view.update_member (this);
             HaguichiWindow.sidebar.refresh_tab();
