@@ -25,4 +25,5 @@ or (at your option) any later version.
 Haguichi is distributed in the hope that it will be useful, but
 WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-See the GNU General Public License for more details.ense for more details. details.
+See the GNU General Public License for more details.
+
