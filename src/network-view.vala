@@ -181,7 +181,7 @@ public class NetworkView : TreeView
                 network.return_member_count (out member_count, out member_online_count);
                 
                 string status_string   = Utils.format ("\n{0} <i>{1}</i>", Text.status, network.status.status_text, null);
-                string id_string       = Utils.format ("\n{0} <i>{1}</i>", Text.network_id, network.id, null);
+                string id_string       = Utils.format ("\n{0} <i>{1}</i>", Text.network_id, Markup.escape_text (network.id), null);
                 string count_string    = Utils.format (Text.member_count, member_online_count.to_string(), member_count.to_string(), null);
                 string member_string   = Utils.format ("\n{0} <i>{1}</i>", Text.members, count_string, null);
                 string capacity_string = "";
@@ -603,18 +603,15 @@ public class NetworkView : TreeView
         
         if (is_network (_model, _iter))
         {
-            string name = Markup.escape_text (network.name);
-            name = name.replace ("\n", "");
-            name = name.replace ("\r", "");
-            name = name.replace ("\t", "");
-            name = name.replace ("\b", "");
+            string id   = Markup.escape_text (network.id).replace   ("%", "{PERCENTSIGN}");
+            string name = Markup.escape_text (network.name).replace ("%", "{PERCENTSIGN}");
             
             int member_count;
             int member_online_count;
             network.return_member_count (out member_count, out member_online_count);
             
             string template = network_template;
-            template = template.replace ("%ID",  network.id);
+            template = template.replace ("%ID",  id);
             template = template.replace ("%N",   name);
             template = template.replace ("%S",   network.status.status_text);
             template = template.replace ("%T",   member_count.to_string());
@@ -635,7 +632,7 @@ public class NetworkView : TreeView
                 template = template.replace ("%*_", "");
             }
             
-            text_cell.markup = template;
+            text_cell.markup = template.replace ("{PERCENTSIGN}", "%");
             
             if (network.status.status_int == 0)
             {
@@ -648,11 +645,7 @@ public class NetworkView : TreeView
         }
         else
         {
-            string name = Markup.escape_text (member.nick);
-            name = name.replace ("\n", "");
-            name = name.replace ("\r", "");
-            name = name.replace ("\t", "");
-            name = name.replace ("\b", "");
+            string name = Markup.escape_text (member.nick).replace ("%", "{PERCENTSIGN}");
             
             string address = "";
             if ((member.ipv4 != null) &&
@@ -692,7 +685,7 @@ public class NetworkView : TreeView
                 template = template.replace ("%*_", "");
             }
             
-            text_cell.markup = template;
+            text_cell.markup = template.replace ("{PERCENTSIGN}", "%");
             
             if (member.status.status_int == 0)
             {
