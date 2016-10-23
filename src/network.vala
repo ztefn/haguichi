@@ -258,7 +258,7 @@ approve  : manual";
             Idle.add_full (Priority.HIGH_IDLE, () =>
             {
                 Haguichi.window.network_view.update_network (this);
-                HaguichiWindow.sidebar.refresh_tab ();
+                HaguichiWindow.sidebar.refresh_tab();
                 return false;
             });
         }
@@ -312,7 +312,7 @@ approve  : manual";
         
         approve = approval;
         
-        HaguichiWindow.sidebar.refresh_tab ();
+        HaguichiWindow.sidebar.refresh_tab();
         
         new Thread<void*> (null, set_approval_thread);
     }

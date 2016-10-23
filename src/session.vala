@@ -88,5 +88,5 @@ public class AppSession : Object
     public signal void mode_changed (string mode);
     public signal void modality_changed (bool modal);
     public signal void visibility_changed (bool visible);
-    public signal void quitted ();
+    public signal void quitted();
 }

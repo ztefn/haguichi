@@ -74,7 +74,7 @@ namespace Dialogs
             id_label.halign = Align.END;
             id_label.mnemonic_widget = id_entry;
 
-            password_entry = new Entry ();
+            password_entry = new Entry();
             password_entry.changed.connect (hide_message);
             password_entry.activates_default = true;
             password_entry.visibility = false;
@@ -104,7 +104,7 @@ namespace Dialogs
             get_action_area().margin = 6;
             get_action_area().margin_top = 0;
             
-            hide_message ();
+            hide_message();
             set_mode ("Normal");
             id_entry.grab_focus();
             

@@ -62,13 +62,13 @@ public class Headerbar : HeaderBar
         var change_nick = new GLib.MenuItem (Text.change_nick_label,       "app.change-nick");
         var info        = new GLib.MenuItem (Text.information_label,       "app.info");
         
-        var info_section = new GLib.Menu ();
+        var info_section = new GLib.Menu();
         info_section.append_item (info);
         
-        var nick_section = new GLib.Menu ();
+        var nick_section = new GLib.Menu();
         nick_section.append_item (change_nick);
         
-        var copy_section = new GLib.Menu ();
+        var copy_section = new GLib.Menu();
         copy_section.append_item (copy_ipv4);
         copy_section.append_item (copy_ipv6);
         copy_section.append_item (copy_id);
@@ -118,7 +118,7 @@ public class Headerbar : HeaderBar
         refresh_but.set_action_name ("app.refresh");
         
         
-        var gear_menu = new GLib.Menu ();
+        var gear_menu = new GLib.Menu();
         
         var open_config    = new GLib.MenuItem (Text.config_folder_label,  "app.open-config");
         var save_config    = new GLib.MenuItem (Text.config_save_label,    "app.save-config");
@@ -137,28 +137,28 @@ public class Headerbar : HeaderBar
         var about        = new GLib.MenuItem (Text.about_label,                   "app.about");
         var quit         = new GLib.MenuItem (Text.quit_label,                    "app.quit");
         
-        var backup_section = new GLib.Menu ();
+        var backup_section = new GLib.Menu();
         backup_section.append_item (save_config);
         backup_section.append_item (restore_config);
         
-        var config_submenu = new GLib.Menu ();
+        var config_submenu = new GLib.Menu();
         config_submenu.append_item (open_config);
         config_submenu.append_section (null, backup_section);
         
-        var sort_section = new GLib.Menu ();
+        var sort_section = new GLib.Menu();
         sort_section.append_item (sort_by_name);
         sort_section.append_item (sort_by_status);
         
-        var filter_section = new GLib.Menu ();
+        var filter_section = new GLib.Menu();
         filter_section.append_item (show_offline);
         
-        var preferences_section = new GLib.Menu ();
+        var preferences_section = new GLib.Menu();
         preferences_section.append_item (preferences);
         
-        var donate_section = new GLib.Menu ();
+        var donate_section = new GLib.Menu();
         donate_section.append_item (donate);
         
-        var meta_section = new GLib.Menu ();
+        var meta_section = new GLib.Menu();
         meta_section.append_item (help);
         meta_section.append_item (about);
         meta_section.append_item (quit);
@@ -353,7 +353,7 @@ public class Headerbar : HeaderBar
                 
                 GlobalActions.info.set_enabled (true);
                 
-                GlobalEvents.stop_search ();
+                GlobalEvents.stop_search();
                 
                 set_subtitle (Text.disconnected);
                 break;
