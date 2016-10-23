@@ -342,7 +342,7 @@ public class GlobalEvents
     
     public static void open_config ()
     {
-        Command.open_uri ("file://"+Hamachi.data_path);
+        Command.open_uri ("file://" + Hamachi.data_path);
     }
     
     public static void help ()

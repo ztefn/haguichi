@@ -214,7 +214,7 @@ public class NetworkView : TreeView
                     approve_string = Utils.format ("\n{0} <i>{1}</i>", Text.approval, Text.automatically, null);
                 }
                 
-                tip_label.set_markup ("<span size=\"larger\" weight=\"bold\">"+Markup.escape_text (network.name)+"</span><span size=\"smaller\">"+status_string+id_string+member_string+owner_string+capacity_string+lock_string+approve_string+"</span>");
+                tip_label.set_markup ("<span size=\"larger\" weight=\"bold\">" + Markup.escape_text (network.name) + "</span><span size=\"smaller\">" + status_string + id_string + member_string + owner_string + capacity_string + lock_string + approve_string + "</span>");
                 
                 tip_icon.set_from_icon_name (Utils.get_network_icon_name (false), IconSize.DIALOG);
                 
@@ -257,7 +257,7 @@ public class NetworkView : TreeView
                     connection_string = Utils.format ("\n{0} <i>{1}</i>", Text.connection, member.status.connection_type, null);
                 }
                 
-                tip_label.set_markup ("<span size=\"larger\" weight=\"bold\">"+Markup.escape_text (member.nick)+"</span><span size=\"smaller\">"+status_string+client_string+address_string+tunnel_string+connection_string+"</span>");
+                tip_label.set_markup ("<span size=\"larger\" weight=\"bold\">" + Markup.escape_text (member.nick) + "</span><span size=\"smaller\">" + status_string + client_string + address_string + tunnel_string + connection_string + "</span>");
                 
                 tip_icon.set_from_icon_name (Utils.get_member_icon_name (false), IconSize.DIALOG);
                 

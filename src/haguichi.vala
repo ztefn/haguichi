@@ -135,12 +135,12 @@ class Haguichi : Gtk.Application
             }
             if ((s == "-v") || (s == "--version"))
             {
-                stdout.printf ("%s\n", Text.app_name + " " + Text.app_version);
+                stdout.printf ("%s %s\n", Text.app_name, Text.app_version);
                 return 0;
             }
             if (s == "--license")
             {
-                stdout.printf ("%s\n", "\n" + Text.app_info + "\n\n" + Text.app_license + "\n");
+                stdout.printf ("\n%s\n\n%s\n\n", Text.app_info, Text.app_license);
                 return 0;
             }
             
@@ -162,8 +162,7 @@ class Haguichi : Gtk.Application
             }
             else if (s.has_prefix ("-"))
             {
-                stdout.printf ("%s\n", "Unknown option " + s + "\n");
-                stdout.printf ("%s\n", Text.app_help);
+                stdout.printf ("Unknown option %s\n\n%s\n", s, Text.app_help);
                 return 0;
             }
         }
