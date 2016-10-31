@@ -184,17 +184,17 @@ namespace Dialogs
             switch (mode)
             {
                 case "Attaching":
-                    account_entry.sensitive  = false;
-                    with_networks.sensitive  = false;
-                    cancel_but.sensitive     = false;
-                    attach_but.sensitive     = false;
+                    account_entry.sensitive = false;
+                    with_networks.sensitive = false;
+                    cancel_but.sensitive    = false;
+                    attach_but.sensitive    = false;
                     break;
                     
                 case "Normal":
-                    account_entry.sensitive  = true;
-                    with_networks.sensitive  = true;
-                    cancel_but.sensitive     = true;
-                    attach_but.sensitive     = true;
+                    account_entry.sensitive = true;
+                    with_networks.sensitive = true;
+                    cancel_but.sensitive    = true;
+                    attach_but.sensitive    = true;
                     break;
             }
         }

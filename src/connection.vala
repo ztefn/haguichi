@@ -76,7 +76,8 @@ public class Connection : Object
     {
         string[] long_nicks = {};
         
-        long_nicks_hash.foreach ((client_id, long_nick) => {
+        long_nicks_hash.foreach ((client_id, long_nick) =>
+        {
             long_nicks += client_id + ";" + long_nick;
         });
         

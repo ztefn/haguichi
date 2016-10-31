@@ -145,9 +145,9 @@ public class Member : Object
     {
         if (Haguichi.demo_mode)
         {
-            nick    = "Nick";
-            ipv4    = "192.168.155.23";
-            status  = new Status ("*");
+            nick   = "Nick";
+            ipv4   = "192.168.155.23";
+            status = new Status ("*");
         
             set_sort_strings();
             

@@ -167,7 +167,7 @@ namespace Dialogs
             interval_label.halign = Align.START;
             
             interval_box = new Box (Orientation.HORIZONTAL, 0);
-            interval_box.pack_start (interval_spin, false, false, 0);
+            interval_box.pack_start (interval_spin,  false, false, 0);
             interval_box.pack_start (interval_label, false, false, 0);
             
             GroupBox behavior_box = new GroupBox (Text.behavior_group);
@@ -177,7 +177,7 @@ namespace Dialogs
             behavior_box.add_widget (interval_box);
             
             Box system_box = new Box (Orientation.VERTICAL, 0);
-            system_box.pack_start (hamachi_box, false, false, 0);
+            system_box.pack_start (hamachi_box,  false, false, 0);
             system_box.pack_start (behavior_box, false, false, 0);
             system_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 8);
             

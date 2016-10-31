@@ -147,7 +147,7 @@ public class Sidebar : Box
         info_button_box.add (attach_button);
         
         info_box = new Box (Orientation.VERTICAL, 0);
-        info_box.pack_start (info_grid,      false, false, 0);
+        info_box.pack_start (info_grid,       false, false, 0);
         info_box.pack_start (info_button_box, true,  true,  0);
         
         
@@ -264,7 +264,7 @@ public class Sidebar : Box
         
         network_box = new Box (Orientation.VERTICAL, 0);
         network_box.vexpand = true;
-        network_box.pack_start (network_grid,           false, false, 0);
+        network_box.pack_start (network_grid,            false, false, 0);
         network_box.pack_start (network_password_button, false, false, 0);
         network_box.pack_start (network_button_box,      true,  true,  0);
         
@@ -349,7 +349,7 @@ public class Sidebar : Box
         
         
         member_box = new Box (Orientation.VERTICAL, 0);
-        member_box.pack_start (member_grid,      false, false, 0);
+        member_box.pack_start (member_grid,       false, false, 0);
         member_box.pack_start (commands_box,      false, false, 0);
         member_box.pack_start (approval_box,      true,  true,  0);
         member_box.pack_start (member_button_box, true,  true,  0);

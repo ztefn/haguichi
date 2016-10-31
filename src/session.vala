@@ -77,7 +77,7 @@ public class AppSession : Object
     
     public bool get_modality ()
     {
-        return  (Haguichi.modal_dialog != null);
+        return (Haguichi.modal_dialog != null);
     }
     
     public bool get_visibility ()

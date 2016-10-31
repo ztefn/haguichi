@@ -12,13 +12,13 @@ public class Utils : Object
 {
     public static string format (owned string text, string? param1, string? param2, string? param3)
     {
-        if (param1 == null) {text = text.replace ("{0}", "");}
-        if (param2 == null) {text = text.replace ("{1}", "");}
-        if (param3 == null) {text = text.replace ("{2}", "");}
+        if (param1 == null) { text = text.replace ("{0}", ""); }
+        if (param2 == null) { text = text.replace ("{1}", ""); }
+        if (param3 == null) { text = text.replace ("{2}", ""); }
         
-        if (param1 != null) {text = text.replace ("{0}", param1);}
-        if (param2 != null) {text = text.replace ("{1}", param2);}
-        if (param3 != null) {text = text.replace ("{2}", param3);}
+        if (param1 != null) { text = text.replace ("{0}", param1); }
+        if (param2 != null) { text = text.replace ("{1}", param2); }
+        if (param3 != null) { text = text.replace ("{2}", param3); }
         
         return text;
     }

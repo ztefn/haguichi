@@ -21,10 +21,10 @@ namespace Dialogs
         {
             GlobalEvents.set_modal_dialog (this);
             
-            text              = header_text;
-            secondary_text    = message_text;
-            message_type      = _message_type;
-            transient_for     = parent;
+            text           = header_text;
+            secondary_text = message_text;
+            message_type   = _message_type;
+            transient_for  = parent;
             
             response.connect (on_response);
         }

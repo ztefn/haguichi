@@ -195,10 +195,10 @@ public class Headerbar : HeaderBar
         show_all();
         
         connect_but.get_preferred_width (out connect_but_width, null);
-        client_but.get_preferred_width (out client_but_width, null);
-        box.get_preferred_width (out box_width, null);
-        search_but.get_preferred_width (out search_but_width, null);
-        gear_but.get_preferred_width (out gear_but_width, null);
+        client_but.get_preferred_width  (out client_but_width,  null);
+        box.get_preferred_width         (out box_width,         null);
+        search_but.get_preferred_width  (out search_but_width,  null);
+        gear_but.get_preferred_width    (out gear_but_width,    null);
         
         hide_all_buttons();
         

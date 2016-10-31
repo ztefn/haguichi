@@ -86,8 +86,8 @@ namespace Dialogs
             Grid grid = new Grid();
             grid.row_spacing = 6;
             grid.column_spacing = 6;
-            grid.attach (id_label,     0, 1, 1, 1);
-            grid.attach (id_entry,     1, 1, 1, 1);
+            grid.attach (id_label,       0, 1, 1, 1);
+            grid.attach (id_entry,       1, 1, 1, 1);
             grid.attach (password_label, 0, 2, 1, 1);
             grid.attach (password_entry, 1, 2, 1, 1);
             grid.margin = 11;

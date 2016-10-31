@@ -75,7 +75,7 @@ public class CommandsEditor : Box
         
         column1.pack_start (toggle_cell, false);
         
-        column2.pack_start (text_cell,    true);
+        column2.pack_start (text_cell, true);
         column2.pack_start (default_cell, false);
         
         column2.set_cell_data_func (text_cell, text_cell_layout);
@@ -263,11 +263,11 @@ public class CommandsEditor : Box
         
         if (store.get_iter_first (out iter))                           // First command
         {
-            store.set_value (iter, default_column , false);
+            store.set_value (iter, default_column, false);
             
             while (store.iter_next (ref iter))                         // All other commands
             {
-                store.set_value (iter, default_column , false);
+                store.set_value (iter, default_column, false);
             }
         }
         
@@ -277,7 +277,7 @@ public class CommandsEditor : Box
         
         if (tv.get_selection().get_selected (out model, out selected))
         {            
-            store.set_value (selected, default_column , true);
+            store.set_value (selected, default_column, true);
         }
         
         update_commands();
@@ -454,7 +454,7 @@ public class CommandsEditor : Box
         Value command_ipv6_val;    store.get_value (iter, command_ipv6_column, out command_ipv6_val);
         Value priority_val;        store.get_value (iter, priority_column, out priority_val);
         
-        string is_active  = (bool) active_val ? "true" : "false";
+        string is_active  = (bool) active_val  ? "true" : "false";
         string is_default = (bool) default_val ? "true" : "false";
         
         string command_ipv4 = ((string) command_ipv4_val).replace (";", "{COLON}");

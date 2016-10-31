@@ -42,8 +42,8 @@ namespace Widgets
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-            pack_start (heading, false, false, 0);
-            pack_start (message, false, false, 0);
+            pack_start (heading,    false, false, 0);
+            pack_start (message,    false, false, 0);
             pack_start (button_box, false, false, 0);
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);

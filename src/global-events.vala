@@ -114,16 +114,16 @@ public class GlobalEvents
     public static void about ()
     {
         Gtk.show_about_dialog (null,
-                               "transient-for", Haguichi.window,
-                               "program-name", Text.app_name,
-                               "logo-icon-name", Text.app_name.down(),
-                               "comments", Text.app_comments,
-                               "version", Text.app_version,
-                               "license", Text.app_license,
-                               "copyright", Text.app_copyright,
-                               "website", Text.app_website,
-                               "website-label", Text.app_website_label,
-                               "authors", Text.app_authors,
+                               "transient-for",      Haguichi.window,
+                               "program-name",       Text.app_name,
+                               "logo-icon-name",     Text.app_name.down(),
+                               "comments",           Text.app_comments,
+                               "version",            Text.app_version,
+                               "license",            Text.app_license,
+                               "copyright",          Text.app_copyright,
+                               "website",            Text.app_website,
+                               "website-label",      Text.app_website_label,
+                               "authors",            Text.app_authors,
                                "translator-credits", Text.app_translator_credits);
     }
     

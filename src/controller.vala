@@ -814,7 +814,8 @@ public class Controller : Object
     
     public static void notify_members_joined ()
     {
-        members_joined_hash.foreach ((member_id, member_event) => {
+        members_joined_hash.foreach ((member_id, member_event) =>
+        {
             notify_member_joined (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
         });
     }
@@ -836,7 +837,8 @@ public class Controller : Object
     
     public static void notify_members_left ()
     {
-        members_left_hash.foreach ((member_id, member_event) => {
+        members_left_hash.foreach ((member_id, member_event) =>
+        {
             notify_member_left (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
         });
     }
@@ -858,7 +860,8 @@ public class Controller : Object
     
     public static void notify_members_online ()
     {
-        members_online_hash.foreach ((member_id, member_event) => {
+        members_online_hash.foreach ((member_id, member_event) =>
+        {
             notify_member_online (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
         });
     }
@@ -880,7 +883,8 @@ public class Controller : Object
     
     public static void notify_members_offline ()
     {
-        members_offline_hash.foreach ((member_id, member_event) => {
+        members_offline_hash.foreach ((member_id, member_event) =>
+        {
             notify_member_offline (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
         });
     }

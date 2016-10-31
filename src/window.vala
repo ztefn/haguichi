@@ -180,7 +180,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         delete_event.connect (on_win_delete);
         key_press_event.connect (on_key_press);
         
-        width  = (int) Settings.win_width.val + Settings.decorator_offset;
+        width  = (int) Settings.win_width.val  + Settings.decorator_offset;
         height = (int) Settings.win_height.val + Settings.decorator_offset;
         
         x = (int) Settings.win_x.val;
@@ -355,7 +355,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             {
                 if (!GlobalEvents.search_active)
                 {
-                     GlobalEvents.start_search();
+                    GlobalEvents.start_search();
                 }
                 else if (!search_entry.has_focus)
                 {
