@@ -240,9 +240,29 @@ public class Command : Object
         {
             // Keep
         }
+        else if (exists ("gvncviewer"))
+        {
+            remote_desktop = "gvncviewer";
+        }
         else if (exists ("krdc"))
         {
             remote_desktop = "krdc";
+        }
+        else if (exists ("vncviewer"))
+        {
+            remote_desktop = "vncviewer";
+        }
+        else if (exists ("xtightvncviewer"))
+        {
+            remote_desktop = "xtightvncviewer";
+        }
+        else if (exists ("xvnc4viewer"))
+        {
+            remote_desktop = "xvnc4viewer";
+        }
+        else if (exists ("rdesktop"))
+        {
+            remote_desktop = "rdesktop";
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop_thread", "Command for remote desktop: " + remote_desktop);
