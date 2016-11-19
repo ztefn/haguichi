@@ -971,9 +971,11 @@ public class NetworkView : TreeView
         columns_autosize();
     }
     
-    public void set_layout ()
+    public void refresh_layout ()
     {
-        set_layout_from_string (current_layout);
+        string layout = current_layout;
+        current_layout = "";
+        set_layout_from_string (layout);
     }
     
     public void set_layout_from_string (string layout)

@@ -89,7 +89,7 @@ public class Key : Object
                 (key == Settings.member_template_small.key_name) ||
                 (key == Settings.member_template_large.key_name))
             {
-                Haguichi.window.network_view.set_layout();
+                Haguichi.window.network_view.refresh_layout();
             }
             else if (key == Settings.nickname.key_name)
             {
