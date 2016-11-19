@@ -125,10 +125,15 @@ public class NetworkView : TreeView
     
     private bool is_network (TreeModel _model, TreeIter _iter)
     {
+        return !is_member (_model, _iter);
+    }
+    
+    private bool is_member (TreeModel _model, TreeIter _iter)
+    {
         Value member_val;
         _model.get_value (_iter, member_column, out member_val);
         
-        if ((Member) member_val == null)
+        if ((Member) member_val != null)
         {
             return true;
         }
@@ -774,8 +779,7 @@ public class NetworkView : TreeView
             {
                 string[] command = Command.return_default();
                 
-                if ((command.length == 6) &&
-                    (Command.custom_exists (command[3], command[4])))
+                if (command.length == 6)
                 {
                     Command.execute (Command.return_custom (last_member, command[3], command[4], command[5]));
                 }
@@ -933,6 +937,32 @@ public class NetworkView : TreeView
         }
         
         return false;
+    }
+    
+    public void activate_command_by_number (int number)
+    {
+        TreeModel _model;
+        TreeIter _iter;
+        
+        if (get_selection().get_selected (out _model, out _iter))
+        {
+            if (is_member (sorted_store, _iter))
+            {
+                Value member_val;
+                sorted_store.get_value (_iter, member_column, out member_val);
+                Member member = (Member) member_val;
+                
+                if (member.status.status_int == 1)
+                {
+                    string[] command = Command.return_by_number (number);
+                    
+                    if (command.length == 6)
+                    {
+                        Command.execute (Command.return_custom (member, command[3], command[4], command[5]));
+                    }
+                }
+            }
+        }
     }
     
     private void set_network_list_icon_size (IconSize size)

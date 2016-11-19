@@ -350,9 +350,37 @@ public class Command : Object
             string[] _array = _string.split (";", 6);
             
             if ((_array.length == 6) &&
-                (_array[1] == "true"))
+                (_array[1] == "true") &&
+                (custom_exists (_array[3], _array[4])))
             {
                 command = _array;
+            }
+        }
+        
+        return command;
+    }
+    
+    public static string[] return_by_number (int number)
+    {
+        string[] command  = new string[] {""};
+        string[] commands = (string[]) Settings.custom_commands.val;
+        
+        int count = 0;
+        
+        foreach (string _string in commands)
+        {
+            string[] _array = _string.split (";", 6);
+            
+            if ((_array.length == 6) &&
+                (_array[0] == "true") &&
+                (custom_exists (_array[3], _array[4])))
+            {
+                count ++;
+                
+                if (count == number)
+                {
+                    command = _array;
+                }
             }
         }
         

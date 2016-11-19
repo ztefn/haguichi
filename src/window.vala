@@ -336,11 +336,28 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     {
         if (Gdk.ModifierType.CONTROL_MASK in event.state)
         {
-            if (event.keyval == Gdk.Key.bracketleft)
+            if (((event.keyval >= 49) &&         // "1"
+                 (event.keyval <= 57)) ||        // "9"
+                ((event.keyval >= 65457) &&      // "1" - NumPad
+                 (event.keyval <= 65465)))       // "9" - NumPad
+            {
+                int number = (int) event.keyval;
+                
+                if (number > 65456)
+                {
+                    number -= 65456;
+                }
+                else if (number > 48)
+                {
+                    number -= 48;
+                }
+                network_view.activate_command_by_number (number);
+            }
+            else if (event.keyval == Gdk.Key.bracketleft)
             {
                 network_view.expand_all();
             }
-            if (event.keyval == Gdk.Key.bracketright)
+            else if (event.keyval == Gdk.Key.bracketright)
             {
                 network_view.collapse_all();
             }
