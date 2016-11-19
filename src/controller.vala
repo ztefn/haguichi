@@ -428,13 +428,13 @@ public class Controller : Object
         string output = Hamachi.login();
         
         if ((output.contains (".. ok")) ||
-            (output.contains ("Already logged in")) ) // Ok, logged in.
+            (output.contains ("Already logged in")) ) // Ok, logged in
         {
             Debug.log (Debug.domain.INFO, "Controller.go_login_thread", "Connected!");
             
             last_status = 6;
             
-            Thread.usleep (1000000); // Wait a second to get updated info and list
+            Thread.usleep (2000000); // Wait two seconds to get updated info and list
             
             Hamachi.get_info();
              
