@@ -102,23 +102,37 @@ public class Hamachi : Object
         Debug.log (Debug.domain.HAMACHI, "Hamachi.determine_version", "Unknown version");
     }
     
-    private static void determine_service ()
+    public static void determine_service ()
     {
-        if (Command.exists ("systemctl"))
+        string init_system = (string) Settings.init_system.val;
+        
+        if (Command.exists ("systemctl") &&
+            ((init_system == "auto") ||
+             (init_system == "systemctl")))
         {
-            service = "systemctl {0} logmein-hamachi"; // systemd
+            // Systemd
+            service = "systemctl {0} logmein-hamachi";
         }
-        else if (Command.exists ("service"))
+        else if (Command.exists ("service") &&
+                 ((init_system == "auto") ||
+                  (init_system == "service")))
         {
-            service = "service logmein-hamachi {0}"; // Upstart
+            // Upstart
+            service = "service logmein-hamachi {0}";
         }
-        else if (FileUtils.test ("/etc/init.d/logmein-hamachi", GLib.FileTest.EXISTS))
+        else if (FileUtils.test ("/etc/init.d/logmein-hamachi", GLib.FileTest.EXISTS) &&
+                 ((init_system == "auto") ||
+                  (init_system == "init.d")))
         {
-            service = "/etc/init.d/logmein-hamachi {0}"; // SysVinit
+            // Sysvinit
+            service = "/etc/init.d/logmein-hamachi {0}";
         }
-        else if (FileUtils.test ("/etc/rc.d/logmein-hamachi", GLib.FileTest.EXISTS))
+        else if (FileUtils.test ("/etc/rc.d/logmein-hamachi", GLib.FileTest.EXISTS) &&
+                 ((init_system == "auto") ||
+                  (init_system == "rc.d")))
         {
-            service = "/etc/rc.d/logmein-hamachi {0}"; // BSD style init
+            // BSD style init
+            service = "/etc/rc.d/logmein-hamachi {0}";
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.determine_service", service);

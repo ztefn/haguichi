@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
 
+  <enum id="org.haguichi.commands.init-system">
+    <value value="0" nick="auto"/>
+    <value value="1" nick="systemctl"/>
+    <value value="2" nick="service"/>
+    <value value="3" nick="init.d"/>
+    <value value="4" nick="rc.d"/>
+  </enum>
+
   <enum id="org.haguichi.commands.super-user">
     <value value="0" nick="auto"/>
     <value value="1" nick="pkexec"/>
@@ -50,6 +58,9 @@
   <schema path="/org/haguichi/commands/" id="org.haguichi.commands" gettext-domain="haguichi">
     <key type="as" name="customizable">
       <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4']</default>
+    </key>
+    <key name="init-system" enum="org.haguichi.commands.init-system">
+      <default>'auto'</default>
     </key>
     <key name="super-user" enum="org.haguichi.commands.super-user">
       <default>'auto'</default>

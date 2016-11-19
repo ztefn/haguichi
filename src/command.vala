@@ -110,7 +110,7 @@ public class Command : Object
         sudo_args  = "";
         sudo_start = "-- ";
         
-        string   command  = (string) Settings.command_for_super_user.val;
+        string   command  = (string) Settings.super_user.val;
         string[] commands = {"pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "sudo"};
         
         if ((command in commands) &&

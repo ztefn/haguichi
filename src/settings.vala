@@ -22,7 +22,8 @@ public class Settings : Object
     public static Key start_in_tray;
     public static Key update_network_list;
     public static Key custom_commands;
-    public static Key command_for_super_user;
+    public static Key init_system;
+    public static Key super_user;
     public static Key check_internet_hostname;
     public static Key check_internet_ip;
     public static Key nickname;
@@ -65,7 +66,8 @@ public class Settings : Object
         reconnect_on_connection_loss  = new Key ("behavior", "reconnect-on-connection-loss");
         update_network_list           = new Key ("behavior", "update-network-list");
         custom_commands               = new Key ("commands", "customizable");
-        command_for_super_user        = new Key ("commands", "super-user");
+        init_system                   = new Key ("commands", "init-system");
+        super_user                    = new Key ("commands", "super-user");
         check_internet_hostname       = new Key ("config", "check-internet-hostname");
         check_internet_ip             = new Key ("config", "check-internet-ip");
         nickname                      = new Key ("config", "nickname");

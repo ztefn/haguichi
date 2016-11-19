@@ -174,7 +174,11 @@ public class Key : Object
             {
                 Haguichi.window.network_view.go_sort ((string) _value);
             }
-            else if (key == Settings.command_for_super_user.key_name)
+            else if (key == Settings.init_system.key_name)
+            {
+                Hamachi.determine_service();
+            }
+            else if (key == Settings.super_user.key_name)
             {
                 Command.determine_sudo();
             }
