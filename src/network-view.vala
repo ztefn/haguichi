@@ -671,8 +671,9 @@ public class NetworkView : TreeView
             template = template.replace ("%ID",  member.client_id);
             template = template.replace ("%N",   name);
             template = template.replace ("%A",   address);
-            template = template.replace ("%IP4", (member.ipv4 == null) ? "" : member.ipv4);
-            template = template.replace ("%IP6", (member.ipv6 == null) ? "" : member.ipv6);
+            template = template.replace ("%IP4", (member.ipv4   == null) ? "" : member.ipv4);
+            template = template.replace ("%IP6", (member.ipv6   == null) ? "" : member.ipv6);
+            template = template.replace ("%TUN", (member.tunnel == null) ? "" : member.tunnel);
             template = template.replace ("%S",   member.status.status_text);
             template = template.replace ("%CX",  member.status.connection_type);
             template = template.replace ("<br>", "\n");
