@@ -57,7 +57,7 @@
 
   <schema path="/org/haguichi/commands/" id="org.haguichi.commands" gettext-domain="haguichi">
     <key type="as" name="customizable">
-      <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4']</default>
+      <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4', 'false;false;_SSH;%TERMINAL ssh %A;%TERMINAL ssh %A;IPv4']</default>
     </key>
     <key name="init-system" enum="org.haguichi.commands.init-system">
       <default>'auto'</default>
