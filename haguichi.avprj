@@ -1,11 +1,10 @@
 ### AutoVala Project ###
-autovala_version: 21
+autovala_version: 24
 project_name: haguichi
 *vala_version: 0.26
 
-
 vala_binary: src/haguichi
-version: 1.3.6
+version: 1.3.7
 compile_options: --target-glib 2.32
 compile_options: --thread
 *vala_check_package: atk
@@ -62,49 +61,50 @@ c_library: notify
 *vala_source: widgets/sidebar-label.vala
 *vala_source: window.vala
 
+
 *po: po
 
-*translate: vala src/session.vala
-*translate: vala src/network.vala
-*translate: vala src/sidebar.vala
-*translate: vala src/headerbar.vala
-*translate: vala src/preferences.vala
-*translate: vala src/text.vala
-*translate: vala src/command.vala
-*translate: vala src/controller.vala
-*translate: vala src/connection.vala
-*translate: vala src/hamachi.vala
-*translate: vala src/member.vala
-*translate: vala src/debug.vala
-*translate: vala src/member-event.vala
-*translate: vala src/haguichi.vala
-*translate: vala src/key.vala
-*translate: vala src/status.vala
-*translate: vala src/settings.vala
-*translate: vala src/utils.vala
-*translate: vala src/network-view.vala
-*translate: vala src/global-events.vala
 *translate: vala src/bubble.vala
-*translate: vala src/window.vala
+*translate: vala src/command.vala
+*translate: vala src/connection.vala
+*translate: vala src/controller.vala
+*translate: vala src/debug.vala
+*translate: vala src/dialogs/add-edit-command.vala
+*translate: vala src/dialogs/attach.vala
+*translate: vala src/dialogs/base.vala
+*translate: vala src/dialogs/change-nick.vala
+*translate: vala src/dialogs/change-password.vala
+*translate: vala src/dialogs/confirm.vala
+*translate: vala src/dialogs/join-create-network.vala
+*translate: vala src/dialogs/message.vala
 *translate: vala src/global-actions.vala
+*translate: vala src/global-events.vala
+*translate: vala src/haguichi.vala
+*translate: vala src/hamachi.vala
+*translate: vala src/headerbar.vala
+*translate: vala src/key.vala
+*translate: vala src/member-event.vala
+*translate: vala src/member.vala
+*translate: vala src/menus/command-menu-item.vala
 *translate: vala src/menus/member-menu.vala
 *translate: vala src/menus/network-menu.vala
-*translate: vala src/menus/command-menu-item.vala
-*translate: vala src/widgets/message-box.vala
-*translate: vala src/widgets/sidebar-entry.vala
+*translate: vala src/network-view.vala
+*translate: vala src/network.vala
+*translate: vala src/preferences.vala
+*translate: vala src/session.vala
+*translate: vala src/settings.vala
+*translate: vala src/sidebar.vala
+*translate: vala src/status.vala
+*translate: vala src/text.vala
+*translate: vala src/utils.vala
 *translate: vala src/widgets/command-button.vala
-*translate: vala src/widgets/sidebar-label.vala
+*translate: vala src/widgets/commands-editor.vala
 *translate: vala src/widgets/group-box.vala
 *translate: vala src/widgets/message-bar.vala
-*translate: vala src/widgets/commands-editor.vala
-*translate: vala src/dialogs/join-create-network.vala
-*translate: vala src/dialogs/add-edit-command.vala
-*translate: vala src/dialogs/confirm.vala
-*translate: vala src/dialogs/message.vala
-*translate: vala src/dialogs/change-password.vala
-*translate: vala src/dialogs/base.vala
-*translate: vala src/dialogs/attach.vala
-*translate: vala src/dialogs/change-nick.vala
+*translate: vala src/widgets/message-box.vala
+*translate: vala src/widgets/sidebar-entry.vala
+*translate: vala src/widgets/sidebar-label.vala
+*translate: vala src/window.vala
 
 *appdata: data/haguichi.appdata.xml
 
