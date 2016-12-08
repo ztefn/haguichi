@@ -172,6 +172,10 @@ public class Command : Object
         {
             terminal = "konsole";
         }
+        else if (exists ("deepin-terminal"))
+        {
+            terminal = "deepin-terminal";
+        }
         else if (exists ("lxterminal"))
         {
             terminal = "lxterminal";
@@ -217,6 +221,10 @@ public class Command : Object
         else if (exists ("dolphin"))
         {
             file_manager = "dolphin";
+        }
+        else if (exists ("dde-file-manager"))
+        {
+            file_manager = "dde-file-manager";
         }
         else if (exists ("pcmanfm"))
         {
