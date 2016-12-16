@@ -93,6 +93,7 @@ class Haguichi : Gtk.Application
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "KDE") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "X-Cinnamon") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP").has_suffix (":GNOME"))) // Any GNOME based desktop, for example "Budgie:GNOME"
         {
             if (Gtk.check_version (3, 20, 0) != null) // Add 52 pixels offset for all GTK+ versions before 3.20
