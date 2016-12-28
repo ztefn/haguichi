@@ -94,7 +94,7 @@ public class Sidebar : Box
         
         heading_box = new Box (Orientation.HORIZONTAL, 0);
         heading_box.halign = Align.CENTER;
-        heading_box.margin_top = 20;
+        heading_box.margin_top = 15;
         heading_box.margin_bottom = 20;
         heading_box.pack_start (heading_label, false, false, 0);
         
@@ -143,7 +143,6 @@ public class Sidebar : Box
         info_button_box.spacing = 5;
         info_button_box.valign = Align.END;
         info_button_box.margin_top = 20;
-        info_button_box.margin_bottom = 5;
         info_button_box.add (attach_button);
         
         info_box = new Box (Orientation.VERTICAL, 0);
@@ -254,7 +253,6 @@ public class Sidebar : Box
         network_button_box.spacing = 5;
         network_button_box.valign = Align.END;
         network_button_box.margin_top = 20;
-        network_button_box.margin_bottom = 5;
         network_button_box.set_layout (ButtonBoxStyle.EDGE);
         network_button_box.add (online_button);
         network_button_box.add (offline_button);
@@ -328,7 +326,6 @@ public class Sidebar : Box
         approval_box.spacing = 5;
         approval_box.valign = Align.END;
         approval_box.margin_top = 20;
-        approval_box.margin_bottom = 5;
         approval_box.set_layout (ButtonBoxStyle.EDGE);
         approval_box.add (approve_button);
         approval_box.add (reject_button);
@@ -343,7 +340,6 @@ public class Sidebar : Box
         member_button_box = new ButtonBox (Orientation.HORIZONTAL);
         member_button_box.spacing = 5;
         member_button_box.valign = Align.END;
-        member_button_box.margin_bottom = 5;
         member_button_box.set_layout (ButtonBoxStyle.EDGE);
         member_button_box.add (evict_button);
         
@@ -362,7 +358,7 @@ public class Sidebar : Box
         
         orientation  = Orientation.VERTICAL;
         margin       = 10;
-        margin_end   = 15;
+        margin_end   = 10;
         no_show_all  = true;
         
         heading_box.show_all();
@@ -428,7 +424,7 @@ public class Sidebar : Box
                 if (Command.custom_exists (command_ipv4, command_ipv6))
                 {
                     CommandButton cb = new CommandButton (label, command_ipv4, command_ipv6, priority);
-                    commands_box.pack_start (cb, false, false, 5);
+                    commands_box.pack_start (cb, false, false, 3);
                 }
             }
         }
