@@ -95,7 +95,7 @@ public class Sidebar : Box
         heading_box = new Box (Orientation.HORIZONTAL, 0);
         heading_box.halign = Align.CENTER;
         heading_box.margin_top = 15;
-        heading_box.margin_bottom = 20;
+        heading_box.margin_bottom = 18;
         heading_box.pack_start (heading_label, false, false, 0);
         
         
@@ -140,9 +140,9 @@ public class Sidebar : Box
         attach_button.clicked.connect (GlobalEvents.attach);
         
         info_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        info_button_box.spacing = 5;
+        info_button_box.spacing = 6;
         info_button_box.valign = Align.END;
-        info_button_box.margin_top = 20;
+        info_button_box.margin_top = 18;
         info_button_box.add (attach_button);
         
         info_box = new Box (Orientation.VERTICAL, 0);
@@ -196,8 +196,8 @@ public class Sidebar : Box
         
         network_password_button = new Button.with_mnemonic (Text.change_password_label);
         network_password_button.halign = Align.CENTER;
-        network_password_button.margin_top = 25;
-        network_password_button.margin_bottom = 5;
+        network_password_button.margin_top = 24;
+        network_password_button.margin_bottom = 6;
         network_password_button.clicked.connect (() =>
         {
             network.change_password();
@@ -250,9 +250,9 @@ public class Sidebar : Box
         });
         
         network_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        network_button_box.spacing = 5;
+        network_button_box.spacing = 6;
         network_button_box.valign = Align.END;
-        network_button_box.margin_top = 20;
+        network_button_box.margin_top = 18;
         network_button_box.set_layout (ButtonBoxStyle.EDGE);
         network_button_box.add (online_button);
         network_button_box.add (offline_button);
@@ -305,9 +305,9 @@ public class Sidebar : Box
         member_grid.attach (member_connection_entry, 1, 6, 1, 1);
         
         
-        commands_box = new Box (Orientation.VERTICAL, 5);
-        commands_box.margin_top = 20;
-        commands_box.margin_bottom = 25;
+        commands_box = new Box (Orientation.VERTICAL, 6);
+        commands_box.margin_top = 18;
+        commands_box.margin_bottom = 24;
         
         
         approve_button = new Button.with_mnemonic (Text.approve_label);
@@ -323,9 +323,9 @@ public class Sidebar : Box
         });
         
         approval_box = new ButtonBox (Orientation.HORIZONTAL);
-        approval_box.spacing = 5;
+        approval_box.spacing = 6;
         approval_box.valign = Align.END;
-        approval_box.margin_top = 20;
+        approval_box.margin_top = 18;
         approval_box.set_layout (ButtonBoxStyle.EDGE);
         approval_box.add (approve_button);
         approval_box.add (reject_button);
@@ -338,7 +338,7 @@ public class Sidebar : Box
         });
         
         member_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        member_button_box.spacing = 5;
+        member_button_box.spacing = 6;
         member_button_box.valign = Align.END;
         member_button_box.set_layout (ButtonBoxStyle.EDGE);
         member_button_box.add (evict_button);
@@ -357,8 +357,7 @@ public class Sidebar : Box
         pack_start (member_box,  true,  true,  0);
         
         orientation  = Orientation.VERTICAL;
-        margin       = 10;
-        margin_end   = 10;
+        margin       = 12;
         no_show_all  = true;
         
         heading_box.show_all();
