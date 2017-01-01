@@ -15,7 +15,7 @@ Provides a graphical frontend for Hamachi on Linux.
 Channel #haguichi on irc.freenode.net
 
 ## License
-Copyright © 2007–2016 Stephen Brandt
+Copyright © 2007–2017 Stephen Brandt
 
 Haguichi is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
