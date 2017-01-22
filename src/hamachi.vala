@@ -302,7 +302,7 @@ public class Hamachi : Object
                 
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
-                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output).destroy();
                     return false;
                 });
             }
@@ -330,7 +330,7 @@ public class Hamachi : Object
                 
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
-                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output).destroy();
                     return false;
                 });
             }
@@ -357,7 +357,7 @@ public class Hamachi : Object
                 
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
-                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output).destroy();
                     return false;
                 });
             }
@@ -384,7 +384,7 @@ public class Hamachi : Object
                 
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
-                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output).destroy();
                     return false;
                 });
             }
@@ -423,7 +423,7 @@ public class Hamachi : Object
                 
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
-                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output);
+                    new Dialogs.Message (Haguichi.window, heading, message, Gtk.MessageType.ERROR, output).destroy();
                     return false;
                 });
             }
@@ -761,7 +761,7 @@ public class Hamachi : Object
         else
         {
             Debug.log (Debug.domain.INFO, "Hamachi.restore_config", "Archive doesn't contain " + Hamachi.data_path);
-            new Dialogs.Message (Haguichi.window, Text.config_restore_error_title, Text.config_restore_error_message, Gtk.MessageType.ERROR, null);
+            new Dialogs.Message (Haguichi.window, Text.config_restore_error_title, Text.config_restore_error_message, Gtk.MessageType.ERROR, null).destroy();
         }
     }
 }

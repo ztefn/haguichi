@@ -334,11 +334,7 @@ public class Controller : Object
             Idle.add_full (Priority.HIGH_IDLE, () =>
             {
                 GlobalEvents.connection_stopped();
-                new Dialogs.Message (Haguichi.window,
-                                     Text.connect_error_heading,
-                                     Text.see_output,
-                                     MessageType.ERROR,
-                                     output);
+                new Dialogs.Message (Haguichi.window, Text.connect_error_heading, Text.see_output, MessageType.ERROR, output).destroy();
                 return false;
             });
         }

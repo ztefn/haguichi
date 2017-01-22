@@ -50,7 +50,6 @@ namespace Dialogs
             }
             
             run();
-            destroy();
         }
     }
 }
