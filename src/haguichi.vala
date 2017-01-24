@@ -88,13 +88,12 @@ class Haguichi : Gtk.Application
             use_app_menu = true;
         }
         
-        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Deepin") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") ||
+        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP").contains ("GNOME")) || // Match any GNOME based desktop, thus also stuff like "GNOME-Flashback" and "Budgie:GNOME"
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Deepin") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "KDE") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
             (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "X-Cinnamon") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP").has_suffix (":GNOME"))) // Any GNOME based desktop, for example "Budgie:GNOME"
+            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "X-Cinnamon"))
         {
             if (Gtk.check_version (3, 20, 0) != null) // Add 52 pixels offset for all GTK+ versions before 3.20
             {
