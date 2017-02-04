@@ -542,7 +542,9 @@ public class Controller : Object
             
             if ((bool) Settings.notify_on_connection_loss.val)
             {
-                new Bubble (Text.notify_connection_lost, "");
+                Bubble bubble = new Bubble (Text.notify_connection_lost, "");
+                bubble.add_reconnect_action();
+                bubble.show();
             }
             
             GlobalEvents.connection_stopped();
@@ -827,7 +829,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
-            new Bubble (Text.notify_member_joined_heading, body);
+            new Bubble (Text.notify_member_joined_heading, body).show();
         }
     }
     
@@ -850,7 +852,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
-            new Bubble (Text.notify_member_left_heading, body);
+            new Bubble (Text.notify_member_left_heading, body).show();
         }
     }
     
@@ -873,7 +875,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
-            new Bubble (Text.notify_member_online_heading, body);
+            new Bubble (Text.notify_member_online_heading, body).show();
         }
     }
     
@@ -896,7 +898,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
-            new Bubble (Text.notify_member_offline_heading, body);
+            new Bubble (Text.notify_member_offline_heading, body).show();
         }
     }
 }

@@ -127,7 +127,9 @@ public class Key : Object
                 if ((Haguichi.demo_mode) &&
                     ((bool) _value))
                 {
-                    new Bubble (Text.notify_connection_lost, "");
+                    Bubble bubble = new Bubble (Text.notify_connection_lost, "");
+                    bubble.add_reconnect_action();
+                    bubble.show();
                 }
             }
             else if (key == Settings.notify_on_member_join.key_name)

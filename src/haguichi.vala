@@ -79,6 +79,7 @@ class Haguichi : Gtk.Application
             Command.execute ("haguichi-indicator");
         }
         
+        Notify.init (Text.app_name);
         Text.init();
         Settings.init();
         

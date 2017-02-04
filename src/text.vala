@@ -165,6 +165,7 @@ Türkçe (tr)
     public static string conflict;
     public static string connect_label;
     public static string disconnect_label;
+    public static string reconnect_label;
     public static string connected;
     public static string disconnected;
     public static string connecting;
@@ -391,6 +392,7 @@ Türkçe (tr)
         conflict                                   = _("Conflicting address");
         connect_label                              = _("C_onnect"); // This string is only used in indicators
         disconnect_label                           = _("_Disconnect"); // This string is only used in indicators
+        reconnect_label                            = _("Reconnect");
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");
         connecting                                 = _("Connecting…");

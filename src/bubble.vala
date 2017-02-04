@@ -12,17 +12,46 @@ using Notify;
 
 public class Bubble : Object
 {
+    public Notify.Notification notification;
+    
     public Bubble (string summary, string body)
     {
-        Notify.init ("Haguichi");
-        
+        notification = new Notify.Notification (summary, body, "haguichi");
+    }
+    
+    public void show ()
+    {
         try
         {
-            new Notify.Notification (summary, body, "haguichi").show();
+            notification.show();
         }
         catch (Error e)
         {
-            Debug.log (Debug.domain.ERROR, "Bubble", e.message);
+            Debug.log (Debug.domain.ERROR, "Bubble.show", e.message);
         }
+    }
+    
+    public void close ()
+    {
+        try
+        {
+            notification.close();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "Bubble.close", e.message);
+        }
+    }
+    
+    public void add_reconnect_action ()
+    {
+        notification.add_action ("reconnect", Text.reconnect_label, (notification, action) =>
+        {
+            if (GlobalActions.connect.get_enabled())
+            {
+                GlobalActions.connect.activate (null);
+            }
+            close();
+        });
     }
 }

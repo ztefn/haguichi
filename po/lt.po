@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-22 19:54+0100\n"
+"POT-Creation-Date: 2017-02-04 14:23+0100\n"
 "PO-Revision-Date: 2016-01-24 19:48+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -20,737 +20,742 @@ msgstr ""
 "X-Launchpad-Export-Date: 2016-01-25 19:52+0000\n"
 "X-Generator: Launchpad (build 17902)\n"
 
-#: src/text.vala:346
+#: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
 msgstr "Grafinė Hamachi naudotojo sąsaja"
 
-#: src/text.vala:347
+#: src/text.vala:349
 msgid "Join and create local networks over the Internet"
 msgstr "Prisijungti ir kurti vietinius tinklus per internetą"
 
-#: src/text.vala:351
+#: src/text.vala:353
 msgid "_OK"
 msgstr "_Gerai"
 
-#: src/text.vala:352
+#: src/text.vala:354
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/text.vala:353
+#: src/text.vala:355
 msgid "_Save"
 msgstr "Į_rašyti"
 
-#: src/text.vala:354
+#: src/text.vala:356
 msgid "_Refresh"
 msgstr "Į_kelti iš naujo"
 
-#: src/text.vala:355
+#: src/text.vala:357
 msgid "_Revert"
 msgstr "_Grąžinti"
 
-#: src/text.vala:356
+#: src/text.vala:358
 msgid "_Delete"
 msgstr "_Ištrinti"
 
-#: src/text.vala:357
+#: src/text.vala:359
 msgid "_Information"
 msgstr "_Informacija"
 
-#: src/text.vala:358
+#: src/text.vala:360
 msgid "_Donate"
 msgstr "_Paaukoti"
 
-#: src/text.vala:359
+#: src/text.vala:361
 msgid "_Preferences"
 msgstr "_Nuostatos"
 
-#: src/text.vala:360
+#: src/text.vala:362
 msgid "_Help"
 msgstr "Ž_inynas"
 
-#: src/text.vala:361
+#: src/text.vala:363
 msgid "_About"
 msgstr "_Apie"
 
-#: src/text.vala:362
+#: src/text.vala:364
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: src/text.vala:364
+#: src/text.vala:366
 msgid "_Show Haguichi"
 msgstr "_Rodyti Haguichi"
 
-#: src/text.vala:366
+#: src/text.vala:368
 msgid "Yes"
 msgstr "Taip"
 
-#: src/text.vala:367
+#: src/text.vala:369
 msgid "No"
 msgstr "Ne"
 
-#: src/text.vala:369
+#: src/text.vala:371
 msgid "_Hamachi output"
 msgstr "_Hamachi išvestis"
 
-#: src/text.vala:371
+#: src/text.vala:373
 msgid "IPv4 address:"
 msgstr "IPv4 adresas:"
 
-#: src/text.vala:372
+#: src/text.vala:374
 msgid "IPv6 address:"
 msgstr "IPv6 adresas:"
 
-#: src/text.vala:373
+#: src/text.vala:375
 msgid "Client ID:"
 msgstr "Kliento ID:"
 
-#: src/text.vala:374
+#: src/text.vala:376
 msgid "Status:"
 msgstr "Būsena:"
 
-#: src/text.vala:375
+#: src/text.vala:377
 msgid "Tunnel:"
 msgstr "Tunelis:"
 
-#: src/text.vala:376
+#: src/text.vala:378
 msgid "Connection:"
 msgstr "Ryšys:"
 
-#: src/text.vala:377
+#: src/text.vala:379
 msgid "Direct"
 msgstr "Tiesioginis"
 
-#: src/text.vala:378
+#: src/text.vala:380
 msgid "Relayed"
 msgstr "Retransliuojamas"
 
-#: src/text.vala:379
+#: src/text.vala:381
 msgid "Anonymous"
 msgstr "Anoniminis"
 
-#: src/text.vala:380
+#: src/text.vala:382
 msgid "_Network ID:"
 msgstr "Ti_nklo ID:"
 
-#: src/text.vala:382
+#: src/text.vala:384
 msgid "_Password:"
 msgstr "Sla_ptažodis:"
 
-#: src/text.vala:383
+#: src/text.vala:385
 msgid "_Nickname:"
 msgstr "_Slapyvardis:"
 
-#: src/text.vala:386
+#: src/text.vala:388
 msgid "Offline"
 msgstr "Atsijungęs"
 
-#: src/text.vala:387
+#: src/text.vala:389
 msgid "Online"
 msgstr "Pasiekiamas"
 
-#: src/text.vala:388
+#: src/text.vala:390
 msgid "Unreachable"
 msgstr "Nepasiekiamas"
 
-#: src/text.vala:389
+#: src/text.vala:391
 msgid "Protocol mismatch"
 msgstr "Protokolo neatitikimas"
 
-#: src/text.vala:390
+#: src/text.vala:392
 msgid "Conflicting address"
 msgstr "Konfliktuojantis adresas"
 
-#: src/text.vala:391
+#: src/text.vala:393
 msgid "C_onnect"
 msgstr "Prisi_jungti"
 
-#: src/text.vala:392
+#: src/text.vala:394
 msgid "_Disconnect"
 msgstr "Atsij_ungti"
 
-#: src/text.vala:393
+#: src/text.vala:395
+#, fuzzy
+msgid "Reconnect"
+msgstr "Prisi_jungti"
+
+#: src/text.vala:396
 msgid "Connected"
 msgstr "Prisijungta"
 
-#: src/text.vala:394
+#: src/text.vala:397
 msgid "Disconnected"
 msgstr "Neprisijungta"
 
-#: src/text.vala:395
+#: src/text.vala:398
 msgid "Connecting…"
 msgstr "Jungiamasi…"
 
-#: src/text.vala:396
+#: src/text.vala:399
 msgid "Logging in…"
 msgstr "Prisijungiama..."
 
-#: src/text.vala:397
+#: src/text.vala:400
 msgid "Updating…"
 msgstr "Atnaujinama..."
 
-#: src/text.vala:399
+#: src/text.vala:402
 msgid "Hamachi is not configured"
 msgstr "Hamachi nėra sukonfigūruota"
 
-#: src/text.vala:400
+#: src/text.vala:403
 msgid "You need to configure Hamachi before you can connect."
 msgstr "Prieš galėdami prisijungti, turite sukonfigūruoti Hamachi."
 
-#: src/text.vala:401
+#: src/text.vala:404
 msgid "C_onfigure"
 msgstr "K_onfigūruoti"
 
-#: src/text.vala:403
+#: src/text.vala:406
 msgid "Hamachi is not installed"
 msgstr "Hamachi nėra įdiegta"
 
-#: src/text.vala:404
+#: src/text.vala:407
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr "Prašome atsisiųsti Hamachi ir sekti įdiegimo nurodymus."
 
-#: src/text.vala:405
+#: src/text.vala:408
 msgid "Hamachi version {0} is obsolete"
 msgstr "Hamachi versija {0} yra pasenusi"
 
-#: src/text.vala:406
+#: src/text.vala:409
 msgid "Please download and install the latest Hamachi version."
 msgstr "Prašome atsisiųsti ir įdiegti naujausią Hamachi versiją."
 
-#: src/text.vala:407
+#: src/text.vala:410
 msgid "_Download"
 msgstr "_Atsisiųsti"
 
-#: src/text.vala:409
+#: src/text.vala:412
 msgid "You are connected!"
 msgstr "Jūs esate prisijungę!"
 
-#: src/text.vala:410
+#: src/text.vala:413
 msgid "Click on the + button to add a network."
 msgstr "Spauskite + mygtuką, kad pridėtumėte tinklą."
 
-#: src/text.vala:412
+#: src/text.vala:415
 msgid "Members:"
 msgstr "Nariai:"
 
-#: src/text.vala:413
+#: src/text.vala:416
 msgid "{0} online, {1} total"
 msgstr "prisijungusių {0}, viso {1}"
 
-#: src/text.vala:414
+#: src/text.vala:417
 msgid "Owner:"
 msgstr "Savininkas:"
 
-#: src/text.vala:415
+#: src/text.vala:418
 msgid "You"
 msgstr "Jūs"
 
-#: src/text.vala:416
+#: src/text.vala:419
 msgid "Unknown"
 msgstr "Nežinoma"
 
-#: src/text.vala:417
+#: src/text.vala:420
 msgid "Unavailable"
 msgstr "Neprieinamas"
 
-#: src/text.vala:418
+#: src/text.vala:421
 msgid "Awaiting approval"
 msgstr "Laukiama patvirtinimo"
 
-#: src/text.vala:419
+#: src/text.vala:422
 msgid "Locked:"
 msgstr "Užrakintas:"
 
-#: src/text.vala:420
+#: src/text.vala:423
 msgid "Approval:"
 msgstr "Patvirtinimas:"
 
-#: src/text.vala:421
+#: src/text.vala:424
 msgid "Manually"
 msgstr "Rankiniu būdu"
 
-#: src/text.vala:422
+#: src/text.vala:425
 msgid "Automatically"
 msgstr "Automatiškai"
 
-#: src/text.vala:423
+#: src/text.vala:426
 msgid "Capacity:"
 msgstr "Talpa:"
 
-#: src/text.vala:425
+#: src/text.vala:428
 msgid "_Go Online"
 msgstr "Prisijun_gti"
 
-#: src/text.vala:426
+#: src/text.vala:429
 msgid "_Go Offline"
 msgstr "Atsijun_gti"
 
-#: src/text.vala:427
+#: src/text.vala:430
 msgid "_Leave"
 msgstr "_Išeiti"
 
-#: src/text.vala:428
+#: src/text.vala:431
 msgid "_Locked"
 msgstr "_Užrakintas"
 
-#: src/text.vala:429
+#: src/text.vala:432
 msgid "_New Member Approval"
 msgstr "_Naujų narių patvirtinimas"
 
-#: src/text.vala:430
+#: src/text.vala:433
 msgid "_Automatically"
 msgstr "_Automatiškai"
 
-#: src/text.vala:431
+#: src/text.vala:434
 msgid "_Manually"
 msgstr "Ra_nkiniu būdu"
 
-#: src/text.vala:432
+#: src/text.vala:435
 msgid "_Copy Network ID"
 msgstr "_Kopijuoti tinklo ID"
 
-#: src/text.vala:434
+#: src/text.vala:437
 msgid "_Browse Shares"
 msgstr "Naršyti _bendrinamus aplankus"
 
-#: src/text.vala:435
+#: src/text.vala:438
 msgid "_Ping"
 msgstr "Ryšio _patikrinimas"
 
-#: src/text.vala:436
+#: src/text.vala:439
 msgid "_View Remote Desktop"
 msgstr "_Rodyti nuotolinį darbalaukį"
 
-#: src/text.vala:437
+#: src/text.vala:440
 msgid "_Approve"
 msgstr "P_atvirtinti"
 
-#: src/text.vala:438
+#: src/text.vala:441
 msgid "_Reject"
 msgstr "_Atmesti"
 
-#: src/text.vala:439
+#: src/text.vala:442
 msgid "_Evict"
 msgstr "Išk_eldinti"
 
-#: src/text.vala:440
+#: src/text.vala:443
 msgid "Copy IPv_4 Address"
 msgstr "Kopijuoti IPv_4 adresą"
 
-#: src/text.vala:441
+#: src/text.vala:444
 msgid "Copy IPv_6 Address"
 msgstr "Kopijuoti IPv_6 adresą"
 
-#: src/text.vala:442
+#: src/text.vala:445
 msgid "_Copy Client ID"
 msgstr "_Kopijuoti kliento ID"
 
-#: src/text.vala:444
+#: src/text.vala:447
 msgid "Change _Nickname…"
 msgstr "Keisti s_lapyvardį..."
 
-#: src/text.vala:445
+#: src/text.vala:448
 msgid "Change Nickname"
 msgstr "Keisti slapyvardį"
 
-#: src/text.vala:446
+#: src/text.vala:449
 msgid "C_hange"
 msgstr "_Keisti"
 
-#: src/text.vala:448
+#: src/text.vala:451
 msgid "Change _Password…"
 msgstr "Keisti sla_ptažodį..."
 
-#: src/text.vala:449
+#: src/text.vala:452
 msgid "Change Password"
 msgstr "Keisti slaptažodį"
 
-#: src/text.vala:450
+#: src/text.vala:453
 msgid "_New password:"
 msgstr "_Naujas slaptažodis:"
 
-#: src/text.vala:452
+#: src/text.vala:455
 msgid "_Account:"
 msgstr "P_askyra:"
 
-#: src/text.vala:455
+#: src/text.vala:458
 msgid "_Attach to Account…"
 msgstr "_Pridėti prie paskyros..."
 
-#: src/text.vala:456
+#: src/text.vala:459
 msgid "Attach to Account"
 msgstr "Pridėti prie paskyros"
 
-#: src/text.vala:457
+#: src/text.vala:460
 msgid "_Include all networks created by this client"
 msgstr "Įtraukt_i visus šio kliento sukurtus tinklus"
 
-#: src/text.vala:458
+#: src/text.vala:461
 msgid "_Attach"
 msgstr "_Pridėti"
 
-#: src/text.vala:459
+#: src/text.vala:462
 msgid "Account not found"
 msgstr "Paskyra nerasta"
 
-#: src/text.vala:461
+#: src/text.vala:464
 msgid "Config_uration"
 msgstr "Konfi_gūracija"
 
-#: src/text.vala:462
+#: src/text.vala:465
 msgid "_Open Folder"
 msgstr "Atverti a_planką"
 
-#: src/text.vala:463
+#: src/text.vala:466
 msgid "_Save a Backup…"
 msgstr "Įrašyti at_sarginę kopiją..."
 
-#: src/text.vala:464
+#: src/text.vala:467
 msgid "Save a Backup"
 msgstr "Įrašyti atsarginę kopiją"
 
-#: src/text.vala:465
+#: src/text.vala:468
 msgid "_Restore from Backup…"
 msgstr "Atku_rti iš atsarginės kopijos..."
 
-#: src/text.vala:466
+#: src/text.vala:469
 msgid "Restore from Backup"
 msgstr "Atkurti iš atsarginės kopijos"
 
-#: src/text.vala:467
+#: src/text.vala:470
 msgid "_Restore"
 msgstr "Atku_rti"
 
-#: src/text.vala:468
+#: src/text.vala:471
 msgid "Could not restore configuration"
 msgstr "Nepavyko atkurti konfigūracijos"
 
-#: src/text.vala:469
+#: src/text.vala:472
 msgid "Archive does not contain expected files."
 msgstr "Archyve nėra reikiamų failų."
 
-#: src/text.vala:470
+#: src/text.vala:473
 msgid "All supported archives"
 msgstr "Visi palaikomi archyvai"
 
-#: src/text.vala:472
+#: src/text.vala:475
 msgid "_Join Network…"
 msgstr "Prisi_jungti prie tinklo..."
 
-#: src/text.vala:473
+#: src/text.vala:476
 msgid "Join Network"
 msgstr "Prisijungti prie tinklo"
 
-#: src/text.vala:474
+#: src/text.vala:477
 msgid "_Join"
 msgstr "Prisijungti"
 
-#: src/text.vala:476
+#: src/text.vala:479
 msgid "_Create Network…"
 msgstr "Su_kurti tinklą..."
 
-#: src/text.vala:477
+#: src/text.vala:480
 msgid "Create Network"
 msgstr "Sukurti tinklą"
 
-#: src/text.vala:478
+#: src/text.vala:481
 msgid "C_reate"
 msgstr "Suku_rti"
 
-#: src/text.vala:480
+#: src/text.vala:483
 msgid "Network not found"
 msgstr "Tinklas nerastas"
 
-#: src/text.vala:481
+#: src/text.vala:484
 msgid "Invalid password"
 msgstr "Neteisingas slaptažodis"
 
-#: src/text.vala:482
+#: src/text.vala:485
 msgid "Network is full"
 msgstr "Tinklas pilnas"
 
-#: src/text.vala:483
+#: src/text.vala:486
 msgid "Network is locked"
 msgstr "Tinklas užrakintas"
 
-#: src/text.vala:484
+#: src/text.vala:487
 msgid "Network already joined"
 msgstr "Prie tinklo jau prisijungta"
 
-#: src/text.vala:485
+#: src/text.vala:488
 msgid "Network ID is already taken"
 msgstr "Tinklo ID jau užimtas"
 
-#: src/text.vala:486
+#: src/text.vala:489
 msgid "Unknown error"
 msgstr "Nežinoma klaida"
 
-#: src/text.vala:488
+#: src/text.vala:491
 msgid "Join request sent"
 msgstr "Prisijungimo prašymas išsiųstas"
 
-#: src/text.vala:490
+#: src/text.vala:493
 msgid "Preferences"
 msgstr "Nuostatos"
 
-#: src/text.vala:491
+#: src/text.vala:494
 msgid "Information"
 msgstr "Informacija"
 
-#: src/text.vala:493
+#: src/text.vala:496
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Ar tikrai norite ištrinti tinklą “{0}”?"
 
-#: src/text.vala:494
+#: src/text.vala:497
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Jeigu ištrinsite tinklą, jis bus negrįžtamai prarastas."
 
-#: src/text.vala:496
+#: src/text.vala:499
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Ar tikrai norite išeiti iš tinklo “{0}”?"
 
-#: src/text.vala:497
+#: src/text.vala:500
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
 "Jei pritarsite, vėliau, bet kada galėsite iš naujo prisijungti prie tinklo."
 
-#: src/text.vala:499
+#: src/text.vala:502
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Ar tikrai norite iškeldinti narį “{0}” iš tinklo “{1}”?"
 
-#: src/text.vala:500
+#: src/text.vala:503
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jei pritarsite, iškeldinti nariai vėliau, bet kuriuo metu gali iš naujo "
 "prisijungti prie tinklo."
 
-#: src/text.vala:502
+#: src/text.vala:505
 msgid "Could not delete network “{0}”"
 msgstr "Nepavyko ištrinti tinklo “{0}”"
 
-#: src/text.vala:503
+#: src/text.vala:506
 msgid "Could not leave network “{0}”"
 msgstr "Nepavyko išeiti iš tinklo “{0}”"
 
-#: src/text.vala:504
+#: src/text.vala:507
 msgid "Could not evict member “{0}”"
 msgstr "Nepavyko iškeldinti nario “{0}”"
 
-#: src/text.vala:505
+#: src/text.vala:508
 msgid "Could not go online in the network “{0}”"
 msgstr "Nepavyko prisijungti tinkle “{0}”"
 
-#: src/text.vala:506
+#: src/text.vala:509
 msgid "Could not go offline in the network “{0}”"
 msgstr "Nepavyko atsijungti tinkle “{0}”"
 
-#: src/text.vala:508
+#: src/text.vala:511
 msgid "See output for details."
 msgstr "Išsamesnei informacijai, žiūrėkite išvestį."
 
-#: src/text.vala:510
+#: src/text.vala:513
 msgid "General"
 msgstr "Bendra"
 
-#: src/text.vala:511
+#: src/text.vala:514
 msgid "Desktop"
 msgstr "Darbalaukis"
 
-#: src/text.vala:512
+#: src/text.vala:515
 msgid "Commands"
 msgstr "Komandos"
 
-#: src/text.vala:514
+#: src/text.vala:517
 msgid "Notifications"
 msgstr "Pranešimai"
 
-#: src/text.vala:515
+#: src/text.vala:518
 msgid "Behavior"
 msgstr "Elgsena"
 
-#: src/text.vala:517
+#: src/text.vala:520
 msgid "_Protocol:"
 msgstr "_Protokolas:"
 
-#: src/text.vala:518
+#: src/text.vala:521
 msgid "Both IPv4 and IPv6"
 msgstr "Abu IPv4 ir IPv6"
 
-#: src/text.vala:519
+#: src/text.vala:522
 msgid "IPv4 only"
 msgstr "Tik IPv4"
 
-#: src/text.vala:520
+#: src/text.vala:523
 msgid "IPv6 only"
 msgstr "Tik IPv6"
 
-#: src/text.vala:522
+#: src/text.vala:525
 msgid "Show _Offline Members"
 msgstr "R_odyti atsijungusius narius"
 
-#: src/text.vala:523
+#: src/text.vala:526
 msgid "Sort by _Name"
 msgstr "Rikiuoti pagal _vardą"
 
-#: src/text.vala:524
+#: src/text.vala:527
 msgid "Sort by _Status"
 msgstr "Rikiuoti pagal bū_seną"
 
-#: src/text.vala:526
+#: src/text.vala:529
 msgid "C_onnect automatically on startup"
 msgstr "Aut_omatiškai jungtis paleisties metu"
 
-#: src/text.vala:527
+#: src/text.vala:530
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "Dingus r_yšiui, automatiškai jungtis iš naujo"
 
-#: src/text.vala:528
+#: src/text.vala:531
 msgid "_Disconnect on quit"
 msgstr "Išeinant, a_tsijungti"
 
-#: src/text.vala:530
+#: src/text.vala:533
 msgid "Display notification when the connection is l_ost"
 msgstr "Rodyti pranešimą, kai di_ngsta ryšys"
 
-#: src/text.vala:531
+#: src/text.vala:534
 msgid "Display notification when a member _joins"
 msgstr "Rodyti pranešimą, kai narys prisijungia prie tinklo"
 
-#: src/text.vala:532
+#: src/text.vala:535
 msgid "Display notification when a member _leaves"
 msgstr "Rodyti pranešimą, kai narys _išeina"
 
-#: src/text.vala:533
+#: src/text.vala:536
 msgid "Display notification when a member comes o_nline"
 msgstr "Rodyti pranešimą, kai narys prisijungia"
 
-#: src/text.vala:534
+#: src/text.vala:537
 msgid "Display notification when a member goes o_ffline"
 msgstr "Rodyti pranešimą, kai narys atsijungia"
 
-#: src/text.vala:536
+#: src/text.vala:539
 msgid "Error connecting"
 msgstr "Klaida, jungiantis"
 
-#: src/text.vala:537
+#: src/text.vala:540
 msgid "Hamachi login failed"
 msgstr "Hamachi prisijungimas nepavyko"
 
-#: src/text.vala:538
+#: src/text.vala:541
 msgid "No internet connection"
 msgstr "Nėra interneto ryšio"
 
-#: src/text.vala:540
+#: src/text.vala:543
 msgid "Hamachi lost connection"
 msgstr "Hamachi ryšys nutrūko"
 
-#: src/text.vala:541
+#: src/text.vala:544
 msgid "Member online"
 msgstr "Narys prisijungė"
 
-#: src/text.vala:542
+#: src/text.vala:545
 msgid "{0} came online in the network {1}"
 msgstr "{0} prisijungė tinkle {1}"
 
-#: src/text.vala:543
+#: src/text.vala:546
 msgid "Member offline"
 msgstr "Narys atsijungė"
 
-#: src/text.vala:544
+#: src/text.vala:547
 msgid "{0} went offline in the network {1}"
 msgstr "{0} atsijungė tinkle {1}"
 
-#: src/text.vala:545
+#: src/text.vala:548
 msgid "Member joined"
 msgstr "Narys prisijungė prie tinklo"
 
-#: src/text.vala:546
+#: src/text.vala:549
 msgid "{0} joined the network {1}"
 msgstr "{0} prisijungė prie tinklo {1}"
 
-#: src/text.vala:547
+#: src/text.vala:550
 msgid "Member left"
 msgstr "Narys išėjo"
 
-#: src/text.vala:548
+#: src/text.vala:551
 msgid "{0} left the network {1}"
 msgstr "{0} išėjo iš tinklo {1}"
 
-#: src/text.vala:550
+#: src/text.vala:553
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/text.vala:551
+#: src/text.vala:554
 msgid "Add Command"
 msgstr "Pridėti komandą"
 
-#: src/text.vala:552
+#: src/text.vala:555
 msgid "_Add"
 msgstr "_Pridėti"
 
-#: src/text.vala:553
+#: src/text.vala:556
 msgid "Edit"
 msgstr "Redaguoti"
 
-#: src/text.vala:554
+#: src/text.vala:557
 msgid "Edit Command"
 msgstr "Redaguoti komandą"
 
-#: src/text.vala:555
+#: src/text.vala:558
 msgid "_Label:"
 msgstr "_Etiketė:"
 
-#: src/text.vala:556
+#: src/text.vala:559
 msgid "IPv_4 command:"
 msgstr "IPv_4 komanda:"
 
-#: src/text.vala:557
+#: src/text.vala:560
 msgid "IPv_6 command:"
 msgstr "IPv_6 komanda:"
 
-#: src/text.vala:558
+#: src/text.vala:561
 msgid "Use %A for address and %N for nickname"
 msgstr "Naudokite %A adresui ir %N slapyvardžiui"
 
-#: src/text.vala:559
+#: src/text.vala:562
 msgid "_Priority:"
 msgstr "_Pirmenybė:"
 
-#: src/text.vala:561
+#: src/text.vala:564
 msgid "Remove"
 msgstr "Šalinti"
 
-#: src/text.vala:562
+#: src/text.vala:565
 msgid "Move up"
 msgstr "Perkelti aukštyn"
 
-#: src/text.vala:563
+#: src/text.vala:566
 msgid "Move down"
 msgstr "Nuleisti žemyn"
 
-#: src/text.vala:564
+#: src/text.vala:567
 msgid "Set as default action"
 msgstr "Nustatyti kaip numatytąjį veiksmą"
 
-#: src/text.vala:566
+#: src/text.vala:569
 msgid "Revert all changes"
 msgstr "Grąžinti visus pakeitimus"
 
-#: src/text.vala:567
+#: src/text.vala:570
 msgid "Are you sure you want to revert all changes?"
 msgstr "Ar tikrai norite grąžinti visus pakeitimus?"
 
-#: src/text.vala:568
+#: src/text.vala:571
 msgid "If you revert all changes, the default commands will be restored."
 msgstr "Jei grąžinsite visus pakeitimus, bus atkurtos numatytosios komandos."
 
-#: src/text.vala:573
+#: src/text.vala:576
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Jungiamasi iš naujo po {0} sekundės"
 msgstr[1] "Jungiamasi iš naujo po {0} sekundžių"
 msgstr[2] "Jungiamasi iš naujo po {0} sekundžių"
 
-#: src/text.vala:578
+#: src/text.vala:581
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
@@ -758,28 +763,28 @@ msgstr[0] "Atna_ujinti tinklo sąrašą kas %S _sekundę"
 msgstr[1] "Atna_ujinti tinklo sąrašą kas %S _sekundes"
 msgstr[2] "Atna_ujinti tinklo sąrašą kas %S _sekundžių"
 
-#: src/text.vala:583
+#: src/text.vala:586
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} prisijungė tinkle {1} ir {2} kitame tinkle"
 msgstr[1] "{0} prisijungė tinkle {1} ir {2} kituose tinkluose"
 msgstr[2] "{0} prisijungė tinkle {1} ir {2} kitų tinklų"
 
-#: src/text.vala:588
+#: src/text.vala:591
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} atsijungė tinkle {1} ir {2} kitame tinkle"
 msgstr[1] "{0} atsijungė tinkle {1} ir {2} kituose tinkluose"
 msgstr[2] "{0} atsijungė tinkle {1} ir {2} kitų tinklų"
 
-#: src/text.vala:593
+#: src/text.vala:596
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} prisijungė prie tinklo {1} ir prie {2} kito tinklo"
 msgstr[1] "{0} prisijungė prie tinklo {1} ir prie {2} kitų tinklų"
 msgstr[2] "{0} prisijungė prie tinklo {1} ir prie {2} kitų tinklų"
 
-#: src/text.vala:598
+#: src/text.vala:601
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} išėjo iš tinklo {1} ir iš {2} kito tinklo"

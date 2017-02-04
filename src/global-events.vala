@@ -394,6 +394,8 @@ public class GlobalEvents
             }
         }
         
+        Notify.uninit();
+        
         Debug.log (Debug.domain.INFO, "GlobalEvents.quit_app", "Quitting...");
         Haguichi.window.destroy();
     }
