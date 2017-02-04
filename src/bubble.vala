@@ -45,13 +45,19 @@ public class Bubble : Object
     
     public void add_reconnect_action ()
     {
-        notification.add_action ("reconnect", Text.reconnect_label, (notification, action) =>
+        // Check if notification server is capable of showing actions
+        if (Notify.get_server_caps().find_custom ("actions", strcmp) != null)
         {
-            if (GlobalActions.connect.get_enabled())
+            notification.add_action ("reconnect", Text.reconnect_label, (notification, action) =>
             {
-                GlobalActions.connect.activate (null);
-            }
-            close();
-        });
+                // Connect only if this action is still enabled
+                if (GlobalActions.connect.get_enabled())
+                {
+                    GlobalActions.connect.activate (null);
+                }
+                // Close the notification as the action may not be executed without this call
+                close();
+            });
+        }
     }
 }
