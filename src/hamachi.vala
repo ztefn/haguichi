@@ -393,16 +393,40 @@ public class Hamachi : Object
         return success;
     }
     
-    public static void approve (Member member)
+    public static bool approve (Member member)
     {
-        string output = Command.return_output ("hamachi approve \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.approve", output);
+        bool success = true;
+        
+        if (!Haguichi.demo_mode)
+        {
+            string output = Command.return_output ("hamachi approve \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.approve", output);
+            
+            if (output.contains (".. failed"))
+            {
+                success = false;
+            }
+        }
+        
+        return success;
     }
     
-    public static void reject (Member member)
+    public static bool reject (Member member)
     {
-        string output = Command.return_output ("hamachi reject \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.reject", output);
+        bool success = true;
+        
+        if (!Haguichi.demo_mode)
+        {
+            string output = Command.return_output ("hamachi reject \"" + Utils.clean_string (member.network_id) + "\" " + member.client_id);
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.reject", output);
+            
+            if (output.contains (".. failed"))
+            {
+                success = false;
+            }
+        }
+        
+        return success;
     }
     
     public static bool evict (Member member)

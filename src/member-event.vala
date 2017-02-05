@@ -10,25 +10,39 @@
 
 public class MemberEvent
 {
-    public string nick;
-    private string[] networks;
+    public  string   client_id;
+    public  string   name;
+    private string[] network_approval_ids;
+    private string[] network_names;
     
-    public MemberEvent (string _nick)
+    public MemberEvent (string _client_id, string _name)
     {
-        nick = _nick;
-        networks = {};
+        client_id            = _client_id;
+        name                 = _name;
+        network_approval_ids = {};
+        network_names        = {};
     }
     
-    public void add_network (string network)
+    public void add_network (string network_name)
     {
-        networks += network;
+        network_names += network_name;
     }
     
-    public string first_network
+    public void add_network_approval (string network_id)
+    {
+        network_approval_ids += network_id;
+    }
+    
+    public string[] get_network_approval_ids ()
+    {
+        return network_approval_ids;
+    }
+    
+    public string first_network_name
     {
         get
         {
-            return networks[0];
+            return network_names[0];
         }
     }
     
@@ -36,7 +50,7 @@ public class MemberEvent
     {
         get
         {
-            return networks.length;
+            return network_names.length;
         }
     }
 }

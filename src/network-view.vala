@@ -650,7 +650,7 @@ public class NetworkView : TreeView
         }
         else
         {
-            string name = Markup.escape_text (member.nick).replace ("%", "{PERCENTSIGN}");
+            string name = Markup.escape_text (member.known_name).replace ("%", "{PERCENTSIGN}");
             
             string address = "";
             if ((member.ipv4 != null) &&

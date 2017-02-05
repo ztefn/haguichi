@@ -55,9 +55,17 @@ public class Member : Object
         get_long_nick (_nick, false);
     }
     
+    public string known_name
+    {
+        get
+        {
+            return (nick == Text.unknown) ? client_id : nick;
+        }
+    }
+    
     private void set_sort_strings ()
     {
-        name_sort_string = nick + client_id;
+        name_sort_string = known_name + client_id;
         status_sort_string = status.status_sortable + nick + client_id;
     }
     
@@ -188,7 +196,19 @@ public class Member : Object
     
     private void* reject_thread ()
     {
-        Hamachi.reject (this);
+        bool success = Hamachi.reject (this);
+        
+        if (success)
+        {
+            Idle.add_full (Priority.HIGH_IDLE, () =>
+            {
+                Network network = Haguichi.window.network_view.return_network_by_id (network_id);
+                
+                Haguichi.window.network_view.remove_member (network, this);
+                network.remove_member (this);
+                return false;
+            });
+        }
         
         Thread.usleep (1000000); // Wait a second to get an updated list
         

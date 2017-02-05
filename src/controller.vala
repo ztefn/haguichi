@@ -708,13 +708,18 @@ public class Controller : Object
     
     private static void add_member_to_hash (HashTable<string, MemberEvent> hash, Member member, Network network)
     {
-        MemberEvent member_event = new MemberEvent(member.nick);
+        MemberEvent member_event = new MemberEvent (member.client_id, member.known_name);
         
         if (hash.contains (member.client_id))
         {
             member_event = (MemberEvent) hash.get (member.client_id);
         }
         member_event.add_network (network.name);
+        
+        if (member.status.status_int == 3)
+        {
+            member_event.add_network_approval (network.id);
+        }
         
         hash.replace (member.client_id, member_event);
     }
@@ -814,11 +819,11 @@ public class Controller : Object
     {
         members_joined_hash.foreach ((member_id, member_event) =>
         {
-            notify_member_joined (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
+            notify_member_joined (member_event.name, member_event.first_network_name, (member_event.networks_length - 1), member_event.client_id, member_event.get_network_approval_ids());
         });
     }
     
-    public static void notify_member_joined (string nick, string network, int more)
+    public static void notify_member_joined (string nick, string network, int more, string? client_id, string[]? network_approval_ids)
     {
         if ((bool) Settings.notify_on_member_join.val)
         {
@@ -829,7 +834,13 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
-            new Bubble (Text.notify_member_joined_heading, body).show();
+            
+            Bubble bubble = new Bubble (Text.notify_member_joined_heading, body);
+            if (network_approval_ids.length > 0)
+            {
+                bubble.add_approve_reject_actions (client_id, network_approval_ids);
+            }
+            bubble.show();
         }
     }
     
@@ -837,7 +848,7 @@ public class Controller : Object
     {
         members_left_hash.foreach ((member_id, member_event) =>
         {
-            notify_member_left (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
+            notify_member_left (member_event.name, member_event.first_network_name, (member_event.networks_length - 1));
         });
     }
     
@@ -852,6 +863,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
+            
             new Bubble (Text.notify_member_left_heading, body).show();
         }
     }
@@ -860,7 +872,7 @@ public class Controller : Object
     {
         members_online_hash.foreach ((member_id, member_event) =>
         {
-            notify_member_online (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
+            notify_member_online (member_event.name, member_event.first_network_name, (member_event.networks_length - 1));
         });
     }
     
@@ -875,6 +887,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
+            
             new Bubble (Text.notify_member_online_heading, body).show();
         }
     }
@@ -883,7 +896,7 @@ public class Controller : Object
     {
         members_offline_hash.foreach ((member_id, member_event) =>
         {
-            notify_member_offline (member_event.nick, member_event.first_network, (member_event.networks_length - 1));
+            notify_member_offline (member_event.name, member_event.first_network_name, (member_event.networks_length - 1));
         });
     }
     
@@ -898,6 +911,7 @@ public class Controller : Object
             }
             
             string body = Utils.format (message, nick, network, more.to_string());
+            
             new Bubble (Text.notify_member_offline_heading, body).show();
         }
     }
