@@ -585,7 +585,7 @@ public class Controller : Object
                 }
                 
                 
-                foreach (Network old_network in Haguichi.connection.networks)
+                old_networks_hash.foreach ((old_network_id, old_network) =>
                 {
                     if (!new_networks_hash.contains (old_network.id))
                     {
@@ -594,9 +594,9 @@ public class Controller : Object
                         Haguichi.window.network_view.remove_network (old_network);
                         Haguichi.connection.remove_network (old_network);
                     }
-                }
+                });
                 
-                foreach (Network new_network in new_networks_list)
+                new_networks_hash.foreach ((new_network_id, new_network) =>
                 {
                     if (old_networks_hash.contains (new_network.id))
                     {
@@ -626,7 +626,7 @@ public class Controller : Object
                         }
                         
                         
-                        foreach (Member old_member in old_network.members)
+                        old_members_hash.foreach ((old_member_id, old_member) =>
                         {
                             if (!new_members_hash.contains (old_member.client_id))
                             {
@@ -641,9 +641,9 @@ public class Controller : Object
                                     add_member_to_hash (members_left_hash, old_member, old_network);
                                 }
                             }
-                        }
+                        });
                         
-                        foreach (Member new_member in new_network.members)
+                        new_members_hash.foreach ((new_member_id, new_member) =>
                         {
                             if (old_members_hash.contains (new_member.client_id))
                             {
@@ -674,7 +674,7 @@ public class Controller : Object
                                 
                                 add_member_to_hash (members_joined_hash, new_member, old_network);
                             }
-                        }
+                        });
                     }
                     else
                     {
@@ -683,7 +683,7 @@ public class Controller : Object
                         Haguichi.connection.add_network (new_network);
                         Haguichi.window.network_view.add_network (new_network);
                     }
-                }
+                });
                 
                 Haguichi.window.network_view.collapse_or_expand_networks();
                 HaguichiWindow.sidebar.refresh_tab();
