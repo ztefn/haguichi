@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2015-08-27 17:16+0000\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-05 12:05+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-08-29 11:56+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2017-02-06 20:16+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: pl\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -169,9 +169,8 @@ msgid "_Disconnect"
 msgstr "_Rozłącz"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "P_ołącz"
+msgstr "Połącz ponownie"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -211,7 +210,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: src/text.vala:407
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: src/text.vala:408
 msgid "Hamachi version {0} is obsolete"
@@ -524,7 +524,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Na pewno wykluczyć członka „{0}” z sieci „{1}”?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jeśli zostanie przyjęte, to wyrzuceni członkowie mogą ponownie dołączyć do "
 "sieci w dowolnym czasie."
@@ -627,11 +628,13 @@ msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
 
 #: src/text.vala:536
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
 
 #: src/text.vala:537
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr ""
+"Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
 
 #: src/text.vala:539
 msgid "Error connecting"
