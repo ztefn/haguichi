@@ -42,8 +42,11 @@ public class Inhibitor : Object
                 
                 if (Controller.last_status >= 6)
                 {
+                    Controller.restore = false;
+                    
                     GlobalEvents.connection_stopped();
                     Hamachi.logout();
+                    
                     Controller.restore = true;
                 }
                 release();
