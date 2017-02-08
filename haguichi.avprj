@@ -12,6 +12,7 @@ compile_options: --thread
 *vala_check_package: gdk-3.0
 *vala_check_package: gdk-pixbuf-2.0
 *vala_check_package: gio-2.0
+*vala_check_package: gio-unix-2.0
 *vala_check_package: glib-2.0
 *vala_check_package: gobject-2.0
 *vala_check_package: gtk+-3.0
@@ -37,6 +38,7 @@ c_library: notify
 *vala_source: haguichi.vala
 *vala_source: hamachi.vala
 *vala_source: headerbar.vala
+*vala_source: inhibitor.vala
 *vala_source: key.vala
 *vala_source: member-event.vala
 *vala_source: member.vala
@@ -82,6 +84,7 @@ c_library: notify
 *translate: vala src/haguichi.vala
 *translate: vala src/hamachi.vala
 *translate: vala src/headerbar.vala
+*translate: vala src/inhibitor.vala
 *translate: vala src/key.vala
 *translate: vala src/member-event.vala
 *translate: vala src/member.vala

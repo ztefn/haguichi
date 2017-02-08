@@ -16,6 +16,7 @@ src/global-events.vala
 src/haguichi.vala
 src/hamachi.vala
 src/headerbar.vala
+src/inhibitor.vala
 src/key.vala
 src/member-event.vala
 src/member.vala

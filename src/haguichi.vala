@@ -20,6 +20,7 @@ class Haguichi : Gtk.Application
     
     public static Connection connection;
     public static AppSession session;
+    public static Inhibitor inhibitor;
     
     public static bool use_app_menu;
     
@@ -115,6 +116,7 @@ class Haguichi : Gtk.Application
         preferences_dialog = new Dialogs.Preferences();
         
         connection = new Connection();
+        inhibitor = new Inhibitor();
         
         Controller.last_status = -3;
         Controller.init();
