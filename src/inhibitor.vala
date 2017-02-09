@@ -40,9 +40,11 @@ public class Inhibitor : Object
             {
                 Debug.log (Debug.domain.ENVIRONMENT, "Inhibitor.manager", "Preparing for sleep...");
                 
-                if (Controller.last_status >= 6)
+                if ((Controller.restore) ||
+                    (Controller.last_status >= 6))
                 {
                     Controller.restore = false;
+                    Controller.restore_countdown = 0;
                     
                     GlobalEvents.connection_stopped();
                     Hamachi.logout();
