@@ -27,6 +27,7 @@ public class Inhibitor : Object
     {
         try
         {
+            // Connect to the logind manager on the system bus: https://www.freedesktop.org/wiki/Software/systemd/logind/
             manager = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.login1", "/org/freedesktop/login1");
         }
         catch (IOError e)
@@ -40,15 +41,21 @@ public class Inhibitor : Object
             {
                 Debug.log (Debug.domain.ENVIRONMENT, "Inhibitor.manager", "Preparing for sleep...");
                 
+                // Only restore connection after wake up if currently connected or already marked to do so
                 if ((Controller.restore) ||
                     (Controller.last_status >= 6))
                 {
-                    Controller.restore = false;
+                    // Abort any pending connection restore cycle and make sure we don't trigger a new one either
                     Controller.restore_countdown = 0;
+                    Controller.restore = false;
                     
+                    // It's now safe to call the following method
                     GlobalEvents.connection_stopped();
+                    
+                    // And don't forget the most important bit!
                     Hamachi.logout();
                     
+                    // Finally, mark the connection to be restored again after wake up
                     Controller.restore = true;
                 }
                 release();
@@ -59,6 +66,7 @@ public class Inhibitor : Object
                 
                 if (Controller.restore)
                 {
+                    // Restore the connection when internet is available again
                     Controller.wait_for_internet_cycle();
                 }
                 aquire();
