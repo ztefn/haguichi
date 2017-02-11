@@ -1,7 +1,7 @@
 ### AutoVala Project ###
 autovala_version: 24
 project_name: haguichi
-*vala_version: 0.26
+vala_version: 0.26
 
 vala_binary: src/haguichi
 version: 1.3.7
