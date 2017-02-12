@@ -138,7 +138,7 @@ public class Key : Object
                 
                 if (Haguichi.demo_mode)
                 {
-                    Controller.notify_member_joined ("T-800", "Skynet", 0, null, null); 
+                    Controller.notify_member_joined ("T-800", "Skynet", 0, "000-000-000", {"000-000-000"}); 
                 }
             }
             else if (key == Settings.notify_on_member_leave.key_name)

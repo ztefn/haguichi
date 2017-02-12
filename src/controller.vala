@@ -823,7 +823,7 @@ public class Controller : Object
         });
     }
     
-    public static void notify_member_joined (string nick, string network, int more, string? client_id, string[]? network_approval_ids)
+    public static void notify_member_joined (string nick, string network, int more, string client_id, string[] network_approval_ids)
     {
         if ((bool) Settings.notify_on_member_join.val)
         {
