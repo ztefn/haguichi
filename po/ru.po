@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2016-05-22 15:38+0000\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-16 02:38+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-05-23 20:52+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2017-02-16 19:04+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: ru\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -169,9 +169,8 @@ msgid "_Disconnect"
 msgstr "_Отключиться"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "П_одключиться"
+msgstr "Подключиться повторно"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -522,7 +521,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Выгнанные участники всегда смогут заново подключиться к выбранной сети."
 
@@ -745,12 +745,14 @@ msgstr "Вы уверены что хотите отменить все изме
 #: src/text.vala:571
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
+"Если вы отмените все изменения, то будут восстановлены команды по умолчанию."
 
 #: src/text.vala:576
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Повторное подключение через {0} секунду"
+msgstr[1] "Повторное подключение через {0} секунд"
+msgstr[2] "Повторное подключение через {0} секунд"
 
 #: src/text.vala:581
 #, c-format

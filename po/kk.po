@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2015-07-11 16:39+0000\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-16 02:31+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
-"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-07-11 20:40+0000\n"
-"X-Generator: Launchpad (build 17620)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2017-02-16 19:04+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: kk\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -168,9 +168,8 @@ msgid "_Disconnect"
 msgstr "Б_айланысты үзу"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "Ба_йланысты орнату"
+msgstr "Қайта қосылу"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -521,7 +520,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "”{1}” желісінен “{0}” мүшені шығарып тастауға сенімдісіз бе?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr "Шығарылған мүшелер осы желіге кейінірек қайта кіре алады."
 
 #: src/text.vala:505
@@ -750,29 +750,35 @@ msgstr ""
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Желіге {0} секунтдан кейін қайта қосылу"
+msgstr[1] "Желіге {0} секунтдан кейін қайта қосылу"
 
 #: src/text.vala:581
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
 msgstr[0] "_Желілер тізімін әрбір %S _секунд сайын жаңарту"
+msgstr[1] "_Желілер тізімін әрбір %S _секунд сайын жаңарту"
 
 #: src/text.vala:586
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} {1} және {2} басқа желілеріне қосылды"
+msgstr[0] "{0} {1} және {2} басқа желіге қосылды"
+msgstr[1] "{0} {1} және {2} басқа желілеріне қосылды"
 
 #: src/text.vala:591
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} {1} және {2} басқа желілерінен ажыратылды"
+msgstr[0] "{0} {1} және {2} басқа желіден ажыратылды"
+msgstr[1] "{0} {1} және {2} басқа желілерінен ажыратылды"
 
 #: src/text.vala:596
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} {1} және {2} басқа желілеріне кірді"
+msgstr[0] "{0} {1} және {2} басқа желіге кірді"
+msgstr[1] "{0} {1} және {2} басқа желілеріне кірді"
 
 #: src/text.vala:601
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} {1} және {2} басқа желілерінен шығып кетті"
+msgstr[0] "{0} {1} және {2} басқа желіден шығып кетті"
+msgstr[1] "{0} {1} және {2} басқа желілерінен шығып кетті"

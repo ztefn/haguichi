@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2015-07-11 12:37+0000\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-15 23:23+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-11 20:40+0000\n"
-"X-Generator: Launchpad (build 17620)\n"
+"X-Launchpad-Export-Date: 2017-02-16 19:00+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: it\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -168,9 +168,8 @@ msgid "_Disconnect"
 msgstr "_Disconnetti"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "C_onnetti"
+msgstr "Riconnetti"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -521,7 +520,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Sei sicuro di volere espellere il membro «{0}» dalla rete «{1}»?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Se ammessi, i membri cacciati possono rientrare nella rete in qualsiasi "
 "momento."
