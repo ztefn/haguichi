@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2015-08-09 17:58+0000\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-17 05:49+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
-"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-10 17:24+0000\n"
-"X-Generator: Launchpad (build 17686)\n"
+"X-Launchpad-Export-Date: 2017-02-17 21:52+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: es\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -168,9 +168,8 @@ msgid "_Disconnect"
 msgstr "_Desconectar"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "_Conectar"
+msgstr "Volver a conectar"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -514,14 +513,16 @@ msgstr "¿Confirma que quiere abandonar la red «{0}»?"
 
 #: src/text.vala:500
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr "Si es admitido, podrá unirse a la red en cualquier momento posterior."
+msgstr ""
+"Si es admitido, podrá unirse a la red en cualquier momento posterior."
 
 #: src/text.vala:502
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "¿Confirma que quiere expulsar al miembro «{0}» de la red «{1}»?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si es admitido, los miembros posteriores podrán unirse a la red en cualquier "
 "momento posterior."
@@ -744,7 +745,8 @@ msgstr "¿Está seguro que desea borrar todos los cambios?"
 
 #: src/text.vala:571
 msgid "If you revert all changes, the default commands will be restored."
-msgstr "Si borras todos los cambios, se restaurarán los comandos por defecto."
+msgstr ""
+"Si borras todos los cambios, se restaurarán los comandos por defecto."
 
 #: src/text.vala:576
 msgid "Reconnecting in {0} second"

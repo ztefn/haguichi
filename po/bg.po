@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2013-11-23 10:36+0000\n"
-"Last-Translator: Atanas Kovachki <Unknown>\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-02-17 19:52+0000\n"
+"Last-Translator: Dimitar Dimitrov <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
-"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-11-27 19:56+0000\n"
-"X-Generator: Launchpad (build 16847)\n"
+"X-Launchpad-Export-Date: 2017-02-17 21:52+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+"Language: bg\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -57,7 +57,7 @@ msgstr "_Информация"
 
 #: src/text.vala:360
 msgid "_Donate"
-msgstr ""
+msgstr "_Дарение"
 
 #: src/text.vala:361
 msgid "_Preferences"
@@ -73,7 +73,7 @@ msgstr "_Относно"
 
 #: src/text.vala:364
 msgid "_Quit"
-msgstr "_Спиране на програмата"
+msgstr "_Изход"
 
 #: src/text.vala:366
 msgid "_Show Haguichi"
@@ -101,7 +101,7 @@ msgstr "IPv6 адрес:"
 
 #: src/text.vala:375
 msgid "Client ID:"
-msgstr "Идентификационен номер на клиента:"
+msgstr "Клиент:"
 
 #: src/text.vala:376
 msgid "Status:"
@@ -129,7 +129,7 @@ msgstr "Анонимен"
 
 #: src/text.vala:382
 msgid "_Network ID:"
-msgstr "_Идентификационен номер на мрежата:"
+msgstr "_Мрежа:"
 
 #: src/text.vala:384
 msgid "_Password:"
@@ -165,12 +165,11 @@ msgstr "_Свързване"
 
 #: src/text.vala:394
 msgid "_Disconnect"
-msgstr "_Разкачване"
+msgstr "_Изключи"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "_Свързване"
+msgstr "Повторно свързване"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -225,13 +224,12 @@ msgid "_Download"
 msgstr "_Изтегляне"
 
 #: src/text.vala:412
-#, fuzzy
 msgid "You are connected!"
-msgstr "Изключен"
+msgstr "Вие се свързахте!"
 
 #: src/text.vala:413
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Кликнете + бутона за да добавите мрежа."
 
 #: src/text.vala:415
 msgid "Members:"
@@ -259,7 +257,7 @@ msgstr "Недостъпен"
 
 #: src/text.vala:421
 msgid "Awaiting approval"
-msgstr "Очаквам одобрение"
+msgstr "Очаква одобрение"
 
 #: src/text.vala:422
 msgid "Locked:"
@@ -311,11 +309,11 @@ msgstr "_Ръчно"
 
 #: src/text.vala:435
 msgid "_Copy Network ID"
-msgstr "_Копирай идентификационния номер на мрежата"
+msgstr "_Копирай Мрежа"
 
 #: src/text.vala:437
 msgid "_Browse Shares"
-msgstr "_Прегледай споделените файлове"
+msgstr "_Преглед на споделени файлове"
 
 #: src/text.vala:438
 msgid "_Ping"
@@ -323,7 +321,7 @@ msgstr "_Пинг"
 
 #: src/text.vala:439
 msgid "_View Remote Desktop"
-msgstr "_Виж отдалечения работен плот"
+msgstr "_Преглед на работен плот"
 
 #: src/text.vala:440
 msgid "_Approve"
@@ -347,7 +345,7 @@ msgstr "Копирай IPv_6 Адреса"
 
 #: src/text.vala:445
 msgid "_Copy Client ID"
-msgstr "_Копирай идентификационния номер на клиента"
+msgstr "_Копирай Клиент"
 
 #: src/text.vala:447
 msgid "Change _Nickname…"
@@ -370,13 +368,12 @@ msgid "Change Password"
 msgstr "Промяна на Парола"
 
 #: src/text.vala:453
-#, fuzzy
 msgid "_New password:"
-msgstr "_Парола:"
+msgstr "_Нова парола:"
 
 #: src/text.vala:455
 msgid "_Account:"
-msgstr "_Акаунт"
+msgstr "_Акаунт:"
 
 #: src/text.vala:458
 msgid "_Attach to Account…"
@@ -428,11 +425,11 @@ msgstr "_Възстанови"
 
 #: src/text.vala:471
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Конфигурацията не беше възстановена"
 
 #: src/text.vala:472
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Архивът не съдържа очакваните файлове."
 
 #: src/text.vala:473
 msgid "All supported archives"
@@ -464,7 +461,7 @@ msgstr "С_ъздай"
 
 #: src/text.vala:483
 msgid "Network not found"
-msgstr "Мрежата не е намерена."
+msgstr "Мрежата не е намерена"
 
 #: src/text.vala:484
 msgid "Invalid password"
@@ -483,7 +480,6 @@ msgid "Network already joined"
 msgstr "Мрежата е вече добавена"
 
 #: src/text.vala:488
-#, fuzzy
 msgid "Network ID is already taken"
 msgstr "Името на мрежата е заето"
 
@@ -509,7 +505,7 @@ msgstr "Сигурни ли сте, че искате да изтриете мр
 
 #: src/text.vala:497
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Ако изтриете мрежа, тя ще бъде перманентно загубена."
 
 #: src/text.vala:499
 msgid "Are you sure you want to leave the network “{0}”?"
@@ -517,7 +513,7 @@ msgstr "Сигурни ли сте, че искате да напуснете м
 
 #: src/text.vala:500
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
+msgstr "Ако решите, можете да се включите в мрежата по всяко време."
 
 #: src/text.vala:502
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
@@ -525,8 +521,11 @@ msgstr ""
 "Сигурни ли сте, че искате да изгоните потребител „{0}“ от мрежата „{1}“?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
+"Ако решите, изгонените членове могат да се включат отново в мрежата по всяко "
+"време."
 
 #: src/text.vala:505
 msgid "Could not delete network “{0}”"
@@ -542,15 +541,15 @@ msgstr "Грешка при изгонването на потребител „
 
 #: src/text.vala:508
 msgid "Could not go online in the network “{0}”"
-msgstr ""
+msgstr "Неуспешно преминаване на линия в мрежата “{0}”"
 
 #: src/text.vala:509
 msgid "Could not go offline in the network “{0}”"
-msgstr ""
+msgstr "Неуспешно преминаване извън линия в мрежата “{0}”"
 
 #: src/text.vala:511
 msgid "See output for details."
-msgstr ""
+msgstr "Виж изхода за детайли."
 
 #: src/text.vala:513
 msgid "General"
@@ -565,9 +564,8 @@ msgid "Commands"
 msgstr "Команди"
 
 #: src/text.vala:517
-#, fuzzy
 msgid "Notifications"
-msgstr "Зона за известия"
+msgstr "Известия"
 
 #: src/text.vala:518
 msgid "Behavior"
@@ -591,7 +589,7 @@ msgstr "IPv6 само"
 
 #: src/text.vala:525
 msgid "Show _Offline Members"
-msgstr "Покажи _потребителите извън линия"
+msgstr "Покажи потребителите _извън линия"
 
 #: src/text.vala:526
 msgid "Sort by _Name"
@@ -631,7 +629,7 @@ msgstr "Показвай съобщение, когато потребител �
 
 #: src/text.vala:537
 msgid "Display notification when a member goes o_ffline"
-msgstr "Показвай съобщение, когато потребител отиде извън на линия"
+msgstr "Показвай съобщение, когато потребител отиде извън линия"
 
 #: src/text.vala:539
 msgid "Error connecting"
@@ -643,7 +641,7 @@ msgstr "Грешка при влизането"
 
 #: src/text.vala:541
 msgid "No internet connection"
-msgstr "Няма интернет връзка"
+msgstr "Няма връзка с интернет"
 
 #: src/text.vala:543
 msgid "Hamachi lost connection"
@@ -651,7 +649,7 @@ msgstr "Hamachi изгуби връзка"
 
 #: src/text.vala:544
 msgid "Member online"
-msgstr "Потребител на линия"
+msgstr "Потребителят е на линия"
 
 #: src/text.vala:545
 msgid "{0} came online in the network {1}"
@@ -659,7 +657,7 @@ msgstr "{0} дойде на линия в мрежата {1}"
 
 #: src/text.vala:546
 msgid "Member offline"
-msgstr "Потребител извън линия"
+msgstr "Потребителят е извън линия"
 
 #: src/text.vala:547
 msgid "{0} went offline in the network {1}"
@@ -734,34 +732,33 @@ msgid "Move down"
 msgstr "Премести надолу"
 
 #: src/text.vala:567
-#, fuzzy
 msgid "Set as default action"
-msgstr "Възстанови командите по подразбиране"
+msgstr "Ибери като действие по подразбиране"
 
 #: src/text.vala:569
-#, fuzzy
 msgid "Revert all changes"
-msgstr "Върни промените?"
+msgstr "Отмяна на всички промени"
 
 #: src/text.vala:570
 msgid "Are you sure you want to revert all changes?"
-msgstr "Сигурен ли сте, че искате да възстановите всички промени?"
+msgstr "Сигурен ли сте, че искате да отмените всички промени?"
 
 #: src/text.vala:571
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
+"Ако отмените промените, командите по подразбиране ще бъдат възстановени."
 
 #: src/text.vala:576
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Свързване след {0} секунда"
+msgstr[1] "Свързване след {0} секунди"
 
 #: src/text.vala:581
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
-msgstr[0] "_Обновявай листът с мрежите на всеки %S _секунди"
+msgstr[0] "_Обновявай листът с мрежите на всеки %S _секундa"
 msgstr[1] "_Обновявай листът с мрежите на всеки %S _секунди"
 
 #: src/text.vala:586
