@@ -7,17 +7,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 14:23+0100\n"
-"PO-Revision-Date: 2017-01-05 23:01+0000\n"
-"Last-Translator: Aytunç <aytuncyeni@gmail.com>\n"
+"POT-Creation-Date: 2017-02-04 14:24+0100\n"
+"PO-Revision-Date: 2017-03-02 20:42+0000\n"
+"Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
-"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-01-07 14:16+0000\n"
-"X-Generator: Launchpad (build 18302)\n"
+"X-Launchpad-Export-Date: 2017-03-02 22:04+0000\n"
+"X-Generator: Launchpad (build 18329)\n"
+"Language: tr\n"
 
 #: src/text.vala:348
 msgid "A graphical frontend for Hamachi."
@@ -168,9 +168,8 @@ msgid "_Disconnect"
 msgstr "_Bağlantıyı Kes"
 
 #: src/text.vala:395
-#, fuzzy
 msgid "Reconnect"
-msgstr "B_ağlan"
+msgstr "Yeniden bağlan"
 
 #: src/text.vala:396
 msgid "Connected"
@@ -521,7 +520,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "”{0}” üyesini “{1}” ağından atmak istediğinize emin misiniz?"
 
 #: src/text.vala:503
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Kabul edilirlerse, atılan üyeler ağa başka bir zamanda tekrar "
 "bağlanabilirler."
@@ -744,7 +744,8 @@ msgstr "Tüm değişiklikleri geri çevirmek istediğinizden emin misiniz?"
 
 #: src/text.vala:571
 msgid "If you revert all changes, the default commands will be restored."
-msgstr "Değişiklikleri geri alırsanız varsayılan komutlar geri yüklenecektir."
+msgstr ""
+"Değişiklikleri geri alırsanız varsayılan komutlar geri yüklenecektir."
 
 #: src/text.vala:576
 msgid "Reconnecting in {0} second"

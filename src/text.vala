@@ -114,6 +114,7 @@ Svenska (sv)
 
 Türkçe (tr)
     Aytunç Yeni https://launchpad.net/~aytuncyeni
+    Kudret Emre https://launchpad.net/~kudretemre
 
 Українська (uk)
     Fedir Zinchuk https://launchpad.net/~fedikw
