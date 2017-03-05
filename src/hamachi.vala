@@ -777,7 +777,7 @@ public class Hamachi : Object
         {
             GlobalEvents.stop_hamachi();
             
-            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "stop", null, null) + "; sleep 3; rm " + Hamachi.data_path + "/*; tar -xavf '" + filename + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
+            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; rm " + Hamachi.data_path + "/*; tar -xavf '" + filename + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
             Debug.log (Debug.domain.INFO, "Hamachi.restore_config", output);
             
             Controller.init();
