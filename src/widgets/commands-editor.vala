@@ -290,7 +290,11 @@ public class CommandsEditor : Box
         
         if (tv.get_selection().get_selected (out model, out selected))
         {
+#if VALA_0_36
+            store.remove (ref selected);
+#else
             store.remove (selected);
+#endif
         }
         
         update_commands();
