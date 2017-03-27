@@ -180,6 +180,10 @@ public class Command : Object
         {
             terminal = "lxterminal";
         }
+        else if (exists ("uxterm"))
+        {
+            terminal = "uxterm";
+        }
         else if (exists ("xterm"))
         {
             terminal = "xterm";
