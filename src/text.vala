@@ -11,7 +11,7 @@
 public class Text : Object
 {
     public const  string app_name                  = "Haguichi";
-    public const  string app_version               = "1.3.7";
+    public const  string app_version               = "1.3.8";
     public const  string app_website               = "https://www.haguichi.net/";
     public const  string app_website_label         = "www.haguichi.net";
     public static string app_comments;

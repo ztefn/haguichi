@@ -8,6 +8,7 @@ list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 enable_testing ()
 option(ICON_UPDATE "Update the icon cache after installing" ON)
 option(BUILD_VALADOC "Build API documentation if Valadoc is available" OFF)
+option(VALA_0_36 "VALA_0_36" OFF)
 
 if( NOT CMAKE_BUILD_TYPE )
 	set(CMAKE_BUILD_TYPE Release)
