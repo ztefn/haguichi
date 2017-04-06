@@ -36,6 +36,7 @@
   <url type="faq">https://www.haguichi.net/faq/</url>
   <url type="help">https://www.haguichi.net/tips-and-tricks/</url>
   <url type="donation">https://www.haguichi.net/donate/</url>
+  <url type="translate">https://translations.launchpad.net/haguichi</url>
   <developer_name>Stephen Brandt</developer_name>
   <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
   <translation type="gettext">haguichi</translation>
