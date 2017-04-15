@@ -17,6 +17,12 @@ public class Sidebar : Box
     private Member member;
     private Network network;
     
+    private ScrolledWindow scrolled_window;
+    private Revealer action_box_revealer;
+    
+    private Box scrolled_box;
+    private Box action_box;
+    
     private Label heading_label;
     
     private Box heading_box;
@@ -28,7 +34,6 @@ public class Sidebar : Box
     private ButtonBox info_button_box;
     private ButtonBox network_button_box;
     private ButtonBox member_button_box;
-    private ButtonBox approval_box;
     
     private SidebarLabel version_label;
     private SidebarLabel ipv4_label;
@@ -140,14 +145,13 @@ public class Sidebar : Box
         attach_button.clicked.connect (GlobalEvents.attach);
         
         info_button_box = new ButtonBox (Orientation.HORIZONTAL);
+        info_button_box.margin = 6;
         info_button_box.spacing = 6;
         info_button_box.valign = Align.END;
-        info_button_box.margin_top = 18;
         info_button_box.add (attach_button);
         
         info_box = new Box (Orientation.VERTICAL, 0);
-        info_box.pack_start (info_grid,       false, false, 0);
-        info_box.pack_start (info_button_box, true,  true,  0);
+        info_box.pack_start (info_grid, false, false, 0);
         
         
         
@@ -250,9 +254,9 @@ public class Sidebar : Box
         });
         
         network_button_box = new ButtonBox (Orientation.HORIZONTAL);
+        network_button_box.margin = 6;
         network_button_box.spacing = 6;
         network_button_box.valign = Align.END;
-        network_button_box.margin_top = 18;
         network_button_box.set_layout (ButtonBoxStyle.EDGE);
         network_button_box.add (online_button);
         network_button_box.add (offline_button);
@@ -264,7 +268,6 @@ public class Sidebar : Box
         network_box.vexpand = true;
         network_box.pack_start (network_grid,            false, false, 0);
         network_box.pack_start (network_password_button, false, false, 0);
-        network_box.pack_start (network_button_box,      true,  true,  0);
         
         
         
@@ -307,7 +310,6 @@ public class Sidebar : Box
         
         commands_box = new Box (Orientation.VERTICAL, 6);
         commands_box.margin_top = 18;
-        commands_box.margin_bottom = 24;
         
         
         approve_button = new Button.with_mnemonic (Text.approve_label);
@@ -322,14 +324,6 @@ public class Sidebar : Box
             member.reject();
         });
         
-        approval_box = new ButtonBox (Orientation.HORIZONTAL);
-        approval_box.spacing = 6;
-        approval_box.valign = Align.END;
-        approval_box.margin_top = 18;
-        approval_box.set_layout (ButtonBoxStyle.EDGE);
-        approval_box.add (approve_button);
-        approval_box.add (reject_button);
-        
         
         evict_button = new Button.with_mnemonic (Text.evict_label);
         evict_button.clicked.connect (() =>
@@ -338,30 +332,51 @@ public class Sidebar : Box
         });
         
         member_button_box = new ButtonBox (Orientation.HORIZONTAL);
+        member_button_box.margin = 6;
         member_button_box.spacing = 6;
         member_button_box.valign = Align.END;
         member_button_box.set_layout (ButtonBoxStyle.EDGE);
         member_button_box.add (evict_button);
+        member_button_box.add (approve_button);
+        member_button_box.add (reject_button);
         
         
         member_box = new Box (Orientation.VERTICAL, 0);
-        member_box.pack_start (member_grid,       false, false, 0);
-        member_box.pack_start (commands_box,      false, false, 0);
-        member_box.pack_start (approval_box,      true,  true,  0);
-        member_box.pack_start (member_button_box, true,  true,  0);
+        member_box.pack_start (member_grid,  false, false, 0);
+        member_box.pack_start (commands_box, false, false, 0);
         
         
-        pack_start (heading_box, false, false, 0);
-        pack_start (info_box,    true,  true,  0);
-        pack_start (network_box, true,  true,  0);
-        pack_start (member_box,  true,  true,  0);
+        scrolled_box = new Box (Orientation.VERTICAL, 0);
+        scrolled_box.margin = 12;
+        scrolled_box.pack_start (heading_box, false, false, 0);
+        scrolled_box.pack_start (info_box,    true,  true,  0);
+        scrolled_box.pack_start (network_box, true,  true,  0);
+        scrolled_box.pack_start (member_box,  true,  true,  0);
         
-        orientation  = Orientation.VERTICAL;
-        margin       = 12;
-        no_show_all  = true;
         
-        heading_box.show_all();
-        info_box.show_all();
+        scrolled_window = new ScrolledWindow (null, null);
+        scrolled_window.add (scrolled_box);
+        scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
+        
+        
+        action_box = new Box (Orientation.HORIZONTAL, 0);
+        action_box.pack_start (info_button_box,    true, true, 0);
+        action_box.pack_start (network_button_box, true, true, 0);
+        action_box.pack_start (member_button_box,  true, true, 0);
+        action_box.get_style_context().add_class ("frame");
+        action_box.get_style_context().add_class ("toolbar");
+        action_box.get_style_context().add_class ("action-bar");
+        action_box.get_style_context().add_class ("search-bar");
+        
+        action_box_revealer = new Revealer();
+        action_box_revealer.add (action_box);
+        action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
+        
+        
+        pack_start (scrolled_window,     true,  true,  0);
+        pack_start (action_box_revealer, false, false, 0);
+        
+        orientation = Orientation.VERTICAL;
         
         show_tab ("Info");
         
@@ -526,6 +541,11 @@ public class Sidebar : Box
     {
         attach_button.visible   = visible;
         attach_button.sensitive = sensitive;
+        
+        if (current_tab == "Info")
+        {
+            refresh_tab();
+        }
     }
     
     public void set_member (Member? _member)
@@ -548,13 +568,21 @@ public class Sidebar : Box
         current_tab = tab;
         
         info_box.hide();
+        info_button_box.hide();
+        
         network_box.hide();
+        network_button_box.hide();
+        
         member_box.hide();
+        member_button_box.hide();
         
         switch (current_tab)
         {
             case "Info":
                 info_box.show();
+                info_button_box.show();
+                
+                action_box_revealer.set_reveal_child (attach_button.visible);
                 
                 heading_label.set_markup ("<span size=\"large\"><b>" + Text.information_title + "</b></span>");
                 heading_label.selectable = false;
@@ -569,6 +597,9 @@ public class Sidebar : Box
                 }
                 
                 network_box.show_all();
+                network_button_box.show_all();
+                
+                action_box_revealer.set_reveal_child (true);
                 
                 int member_count, member_online_count;
                 network.return_member_count (out member_count, out member_online_count);
@@ -641,6 +672,9 @@ public class Sidebar : Box
                 
             case "Member":
                 member_box.show_all();
+                member_button_box.show_all();
+                
+                action_box_revealer.set_reveal_child (true);
                 
                 member_status_entry.set_text     (member.status.status_text);
                 member_id_entry.set_text         (member.client_id);
@@ -675,7 +709,9 @@ public class Sidebar : Box
                 
                 if (member.status.status_int != 3)
                 {
-                    approval_box.hide();
+                    approve_button.hide();
+                    reject_button.hide();
+                    
                     commands_box.show_all();
                     
                     foreach (Widget cb in commands_box.get_children())
@@ -690,14 +726,19 @@ public class Sidebar : Box
                 }
                 else
                 {
-                    approval_box.show_all();
                     commands_box.hide();
                 }
                 
                 if ((network.is_owner == 0) ||
                     (member.status.status_int == 3))
                 {
-                    member_button_box.hide();
+                    evict_button.hide();
+                }
+                
+                if ((network.is_owner == 0) &&
+                    (member.status.status_int != 3))
+                {
+                    action_box_revealer.set_reveal_child (false);
                 }
                 
                 break;
