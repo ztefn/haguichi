@@ -503,7 +503,7 @@ public class Sidebar : Box
         }
         else
         {
-            account_entry.set_text (account);
+            account_entry.set_markup (account.replace (" (pending)", "\n<i>(pending)</i>"));
             
             account_label.show();
             account_entry.show();

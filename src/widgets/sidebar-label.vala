@@ -18,6 +18,7 @@ public class SidebarLabel : Label
         // Fix error "undefined symbol: gtk_label_set_xalign" when build with valac >= 0.28 (which asumes Gtk+ 3.16) and running Gtk+ 3.14
         // xalign = 1;
         ((Gtk.Misc) this).xalign = 1.0f;
+        ((Gtk.Misc) this).yalign = 0.0f;
         width_chars = 10;
         ellipsize = Pango.EllipsizeMode.START;
         get_style_context().add_class ("dim-label");
