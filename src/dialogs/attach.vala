@@ -120,9 +120,14 @@ namespace Dialogs
                     return false;
                 });
                 
-                Thread.usleep (2000000);
+                Thread.usleep (2000000); // Wait two seconds to get updated info
                 Hamachi.get_info();
-                GlobalEvents.set_attach();
+                
+                Idle.add_full (Priority.HIGH_IDLE, () =>
+                {
+                    GlobalEvents.set_attach();
+                    return false;
+                });
             }
             else if ((output.index_of (".. failed, not found") != -1) ||
                      (output.index_of (".. failed, [248]") != -1))
