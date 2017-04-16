@@ -362,6 +362,7 @@ public class Sidebar : Box
         
         scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.add (scrolled_box);
+        scrolled_window.get_style_context().add_class ("sidebar");
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
         
