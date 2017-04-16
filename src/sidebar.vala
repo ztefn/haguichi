@@ -31,9 +31,9 @@ public class Sidebar : Box
     private Box network_box;
     private Box member_box;
     
-    private ButtonBox info_button_box;
-    private ButtonBox network_button_box;
-    private ButtonBox member_button_box;
+    private ActionBar info_action_bar;
+    private ActionBar network_action_bar;
+    private ActionBar member_action_bar;
     
     private SidebarLabel version_label;
     private SidebarLabel ipv4_label;
@@ -140,18 +140,18 @@ public class Sidebar : Box
         info_grid.attach (ipv6_label,     0, 6, 1, 1);
         info_grid.attach (ipv6_entry,     1, 6, 1, 1);
         
+        info_box = new Box (Orientation.VERTICAL, 0);
+        info_box.pack_start (info_grid, false, false, 0);
+        
         
         attach_button = new Button.with_mnemonic (Text.attach_label);
         attach_button.clicked.connect (GlobalEvents.attach);
         
-        info_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        info_button_box.margin = 6;
-        info_button_box.spacing = 6;
-        info_button_box.valign = Align.END;
-        info_button_box.add (attach_button);
+        info_action_bar = new ActionBar();
+        info_action_bar.set_center_widget (attach_button);
         
-        info_box = new Box (Orientation.VERTICAL, 0);
-        info_box.pack_start (info_grid, false, false, 0);
+        Revealer info_action_bar_revealer = (Revealer) info_action_bar.get_child();
+        info_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
         
         
         
@@ -227,6 +227,11 @@ public class Sidebar : Box
         network_grid.attach (network_approval_label,  0, 7, 1, 1);
         network_grid.attach (network_approval_combo,  1, 7, 1, 1);
         
+        network_box = new Box (Orientation.VERTICAL, 0);
+        network_box.vexpand = true;
+        network_box.pack_start (network_grid,            false, false, 0);
+        network_box.pack_start (network_password_button, false, false, 0);
+        
         
         delete_button = new Button.with_mnemonic (Text.delete_label);
         delete_button.clicked.connect (() =>
@@ -253,21 +258,20 @@ public class Sidebar : Box
             network.go_offline();
         });
         
-        network_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        network_button_box.margin = 6;
-        network_button_box.spacing = 6;
-        network_button_box.valign = Align.END;
-        network_button_box.set_layout (ButtonBoxStyle.EDGE);
-        network_button_box.add (online_button);
-        network_button_box.add (offline_button);
-        network_button_box.add (delete_button);
-        network_button_box.add (leave_button);
+        SizeGroup network_actions_size_group = new SizeGroup (SizeGroupMode.HORIZONTAL);
+        network_actions_size_group.add_widget (delete_button);
+        network_actions_size_group.add_widget (leave_button);
+        network_actions_size_group.add_widget (online_button);
+        network_actions_size_group.add_widget (offline_button);
         
+        network_action_bar = new ActionBar();
+        network_action_bar.pack_start (online_button);
+        network_action_bar.pack_start (offline_button);
+        network_action_bar.pack_end (delete_button);
+        network_action_bar.pack_end (leave_button);
         
-        network_box = new Box (Orientation.VERTICAL, 0);
-        network_box.vexpand = true;
-        network_box.pack_start (network_grid,            false, false, 0);
-        network_box.pack_start (network_password_button, false, false, 0);
+        Revealer network_action_bar_revealer = (Revealer) network_action_bar.get_child();
+        network_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
         
         
         
@@ -307,9 +311,12 @@ public class Sidebar : Box
         member_grid.attach (member_connection_label, 0, 6, 1, 1);
         member_grid.attach (member_connection_entry, 1, 6, 1, 1);
         
-        
         commands_box = new Box (Orientation.VERTICAL, 6);
         commands_box.margin_top = 18;
+        
+        member_box = new Box (Orientation.VERTICAL, 0);
+        member_box.pack_start (member_grid,  false, false, 0);
+        member_box.pack_start (commands_box, false, false, 0);
         
         
         approve_button = new Button.with_mnemonic (Text.approve_label);
@@ -324,26 +331,25 @@ public class Sidebar : Box
             member.reject();
         });
         
-        
         evict_button = new Button.with_mnemonic (Text.evict_label);
         evict_button.clicked.connect (() =>
         {
             member.evict();
         });
         
-        member_button_box = new ButtonBox (Orientation.HORIZONTAL);
-        member_button_box.margin = 6;
-        member_button_box.spacing = 6;
-        member_button_box.valign = Align.END;
-        member_button_box.set_layout (ButtonBoxStyle.EDGE);
-        member_button_box.add (evict_button);
-        member_button_box.add (approve_button);
-        member_button_box.add (reject_button);
+        SizeGroup member_actions_size_group = new SizeGroup (SizeGroupMode.HORIZONTAL);
+        member_actions_size_group.add_widget (evict_button);
+        member_actions_size_group.add_widget (approve_button);
+        member_actions_size_group.add_widget (reject_button);
         
+        member_action_bar = new ActionBar();
+        member_action_bar.set_center_widget (evict_button);
+        member_action_bar.pack_start (approve_button);
+        member_action_bar.pack_end (reject_button);
         
-        member_box = new Box (Orientation.VERTICAL, 0);
-        member_box.pack_start (member_grid,  false, false, 0);
-        member_box.pack_start (commands_box, false, false, 0);
+        Revealer member_action_bar_revealer = (Revealer) member_action_bar.get_child();
+        member_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
+        
         
         
         scrolled_box = new Box (Orientation.VERTICAL, 0);
@@ -360,13 +366,9 @@ public class Sidebar : Box
         
         
         action_box = new Box (Orientation.HORIZONTAL, 0);
-        action_box.pack_start (info_button_box,    true, true, 0);
-        action_box.pack_start (network_button_box, true, true, 0);
-        action_box.pack_start (member_button_box,  true, true, 0);
-        action_box.get_style_context().add_class ("frame");
-        action_box.get_style_context().add_class ("toolbar");
-        action_box.get_style_context().add_class ("action-bar");
-        action_box.get_style_context().add_class ("search-bar");
+        action_box.pack_start (info_action_bar,    true, true, 0);
+        action_box.pack_start (network_action_bar, true, true, 0);
+        action_box.pack_start (member_action_bar,  true, true, 0);
         
         action_box_revealer = new Revealer();
         action_box_revealer.add (action_box);
@@ -568,19 +570,19 @@ public class Sidebar : Box
         current_tab = tab;
         
         info_box.hide();
-        info_button_box.hide();
+        info_action_bar.hide();
         
         network_box.hide();
-        network_button_box.hide();
+        network_action_bar.hide();
         
         member_box.hide();
-        member_button_box.hide();
+        member_action_bar.hide();
         
         switch (current_tab)
         {
             case "Info":
                 info_box.show();
-                info_button_box.show();
+                info_action_bar.show();
                 
                 action_box_revealer.set_reveal_child (attach_button.visible);
                 
@@ -597,7 +599,7 @@ public class Sidebar : Box
                 }
                 
                 network_box.show_all();
-                network_button_box.show_all();
+                network_action_bar.show_all();
                 
                 action_box_revealer.set_reveal_child (true);
                 
@@ -672,7 +674,7 @@ public class Sidebar : Box
                 
             case "Member":
                 member_box.show_all();
-                member_button_box.show_all();
+                member_action_bar.show_all();
                 
                 action_box_revealer.set_reveal_child (true);
                 
