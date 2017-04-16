@@ -338,7 +338,6 @@ public class Sidebar : Box
         });
         
         SizeGroup member_actions_size_group = new SizeGroup (SizeGroupMode.HORIZONTAL);
-        member_actions_size_group.add_widget (evict_button);
         member_actions_size_group.add_widget (approve_button);
         member_actions_size_group.add_widget (reject_button);
         
