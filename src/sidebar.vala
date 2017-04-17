@@ -94,7 +94,11 @@ public class Sidebar : Box
     
     public Sidebar ()
     {
-        heading_label = new Label(null);
+        current_tab = "Info";
+        orientation = Orientation.VERTICAL;
+        
+        
+        heading_label = new Label (null);
         heading_label.ellipsize = Pango.EllipsizeMode.END;
         
         heading_box = new Box (Orientation.HORIZONTAL, 0);
@@ -152,7 +156,7 @@ public class Sidebar : Box
         
         Revealer info_action_bar_revealer = (Revealer) info_action_bar.get_child();
         info_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
-        
+        info_action_bar_revealer.set_transition_duration (0);
         
         
         network_status_label   = new SidebarLabel (Text.status);
@@ -272,6 +276,7 @@ public class Sidebar : Box
         
         Revealer network_action_bar_revealer = (Revealer) network_action_bar.get_child();
         network_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
+        network_action_bar_revealer.set_transition_duration (0);
         
         
         
@@ -348,6 +353,7 @@ public class Sidebar : Box
         
         Revealer member_action_bar_revealer = (Revealer) member_action_bar.get_child();
         member_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
+        member_action_bar_revealer.set_transition_duration (0);
         
         
         
@@ -378,9 +384,6 @@ public class Sidebar : Box
         pack_start (scrolled_window,     true,  true,  0);
         pack_start (action_box_revealer, false, false, 0);
         
-        orientation = Orientation.VERTICAL;
-        
-        show_tab ("Info");
         
         generate_command_buttons();
     }
@@ -562,11 +565,17 @@ public class Sidebar : Box
     
     public void refresh_tab ()
     {
-        show_tab (current_tab);
+        show_tab (current_tab, true);
     }
     
-    public void show_tab (string tab)
+    public void show_tab (string tab, bool refresh)
     {
+        if ((tab == current_tab) &&
+            (refresh == false))
+        {
+            return;
+        }
+        
         current_tab = tab;
         
         info_box.hide();
@@ -594,7 +603,7 @@ public class Sidebar : Box
             case "Network":
                 if (!Haguichi.connection.has_network (network))
                 {
-                    show_tab ("Info");
+                    show_tab ("Info", false);
                     return;
                 }
                 

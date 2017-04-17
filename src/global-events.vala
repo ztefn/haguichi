@@ -220,7 +220,7 @@ public class GlobalEvents
             Haguichi.window.content_box.position = width - (Settings.decorator_offset + Settings.switch_sidebar_threshold) / 2;
         }
         
-        HaguichiWindow.sidebar.show_tab ("Info");
+        HaguichiWindow.sidebar.show_tab ("Info", false);
     }
     
     public static void join_network ()

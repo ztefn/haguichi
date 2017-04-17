@@ -529,7 +529,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 Haguichi.session.mode_changed (mode);
                 header_bar.set_mode (mode);
                 
-                sidebar.show_tab ("Info");
+                sidebar.show_tab ("Info", false);
                 break;
                 
             case "Not configured":

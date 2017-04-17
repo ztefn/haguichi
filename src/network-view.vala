@@ -722,7 +722,7 @@ public class NetworkView : TreeView
             if (is_network (sorted_store, _iter))
             {
                 HaguichiWindow.sidebar.set_member (null);
-                HaguichiWindow.sidebar.show_tab ("Network");
+                HaguichiWindow.sidebar.show_tab ("Network", true);
             }
             else
             {
@@ -731,12 +731,12 @@ public class NetworkView : TreeView
                 last_member = (Member) member_val;
                 
                 HaguichiWindow.sidebar.set_member (last_member);
-                HaguichiWindow.sidebar.show_tab ("Member");
+                HaguichiWindow.sidebar.show_tab ("Member", true);
             }
         }
         else
         {
-            HaguichiWindow.sidebar.show_tab ("Info");
+            HaguichiWindow.sidebar.show_tab ("Info", false);
         }
     }
     
