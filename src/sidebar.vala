@@ -371,7 +371,7 @@ public class Sidebar : Box
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
         
-        action_box = new Box (Orientation.HORIZONTAL, 0);
+        action_box = new Box (Orientation.VERTICAL, 0);
         action_box.pack_start (info_action_bar,    true, true, 0);
         action_box.pack_start (network_action_bar, true, true, 0);
         action_box.pack_start (member_action_bar,  true, true, 0);
@@ -593,7 +593,10 @@ public class Sidebar : Box
                 info_box.show();
                 info_action_bar.show();
                 
-                action_box_revealer.set_reveal_child (attach_button.visible);
+                if (action_box_revealer.get_reveal_child() != attach_button.visible)
+                {
+                    action_box_revealer.set_reveal_child (attach_button.visible);
+                }
                 
                 heading_label.set_markup ("<span size=\"large\"><b>" + Text.information_title + "</b></span>");
                 heading_label.selectable = false;
