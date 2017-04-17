@@ -156,7 +156,7 @@ public class Sidebar : Box
         
         Revealer info_action_bar_revealer = (Revealer) info_action_bar.get_child();
         info_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
-        info_action_bar_revealer.set_transition_duration (0);
+        
         
         
         network_status_label   = new SidebarLabel (Text.status);
@@ -276,7 +276,6 @@ public class Sidebar : Box
         
         Revealer network_action_bar_revealer = (Revealer) network_action_bar.get_child();
         network_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
-        network_action_bar_revealer.set_transition_duration (0);
         
         
         
@@ -353,7 +352,6 @@ public class Sidebar : Box
         
         Revealer member_action_bar_revealer = (Revealer) member_action_bar.get_child();
         member_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
-        member_action_bar_revealer.set_transition_duration (0);
         
         
         
@@ -378,7 +376,7 @@ public class Sidebar : Box
         
         action_box_revealer = new Revealer();
         action_box_revealer.add (action_box);
-        action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
+        action_box_revealer.set_transition_type (RevealerTransitionType.NONE);
         
         
         pack_start (scrolled_window,     true,  true,  0);
@@ -596,6 +594,7 @@ public class Sidebar : Box
                 if (action_box_revealer.get_reveal_child() != attach_button.visible)
                 {
                     action_box_revealer.set_reveal_child (attach_button.visible);
+                    action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
                 }
                 
                 heading_label.set_markup ("<span size=\"large\"><b>" + Text.information_title + "</b></span>");
