@@ -594,6 +594,10 @@ public class Sidebar : Box
                 if (action_box_revealer.get_reveal_child() != attach_button.visible)
                 {
                     action_box_revealer.set_reveal_child (attach_button.visible);
+                }
+                
+                if (action_box_revealer.get_transition_type() == RevealerTransitionType.NONE)
+                {
                     action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
                 }
                 
