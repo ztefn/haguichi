@@ -97,6 +97,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.add (network_view);
+        scrolled_window.min_content_height = 100;
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
         empty_box = new Widgets.MessageBox();
@@ -259,7 +260,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             network_view.set_layout_from_string ("small");
         }
         
-        if ((height > 100) && (width > Settings.switch_sidebar_threshold))
+        if (width > Settings.switch_sidebar_threshold)
         {
             sidebar.show();
         }
