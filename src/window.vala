@@ -54,11 +54,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         try
         {
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  16, IconLookupFlags.NO_SVG));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  24, IconLookupFlags.NO_SVG));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  32, IconLookupFlags.NO_SVG));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  48, IconLookupFlags.NO_SVG));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi", 256, IconLookupFlags.NO_SVG));
+            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  16, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  24, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  32, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  48, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon ("haguichi", 256, IconLookupFlags.FORCE_SIZE));
         }
         catch (Error e)
         {
