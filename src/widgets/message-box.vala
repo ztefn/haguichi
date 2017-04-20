@@ -22,6 +22,8 @@ namespace Widgets
         {
             orientation = Orientation.VERTICAL;
             margin = 10;
+            margin_top = 15;
+            margin_bottom = 20;
             
             heading = new Label (null);
             heading.wrap = true;
@@ -37,7 +39,6 @@ namespace Widgets
             button_box = new ButtonBox (Orientation.HORIZONTAL);
             button_box.set_layout (ButtonBoxStyle.CENTER);
             button_box.spacing = 6;
-            button_box.margin_top = 20;
             
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
             pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
@@ -76,6 +77,7 @@ namespace Widgets
             }
             
             button_box.hide();
+            button_box.margin_top = 0;
             
             show();
         }
@@ -83,6 +85,7 @@ namespace Widgets
         public void add_button (Button button)
         {
             button_box.add (button);
+            button_box.margin_top = 20;
             button.show();
             button_box.show();
         }
