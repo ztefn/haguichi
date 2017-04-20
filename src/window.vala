@@ -97,7 +97,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.add (network_view);
-        scrolled_window.min_content_height = 100;
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
         empty_box = new Widgets.MessageBox();
@@ -141,6 +140,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         content_box.pack1 (left_box, false, false);
         content_box.pack2 (sidebar, false, true);
         content_box.position = (int) Settings.sidebar_position.val;
+        content_box.set_size_request (-1, 180);
         content_box.size_allocate.connect (() =>
         {
             sidebar_pos = content_box.position;
