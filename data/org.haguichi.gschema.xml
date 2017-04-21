@@ -98,13 +98,13 @@
       <default>[]</default>
     </key>
     <key type="s" name="member-template-large">
-      <default><![CDATA['%N%_*<br><span size="smaller">%S <i>%A</i></span>']]></default>
+      <default><![CDATA['%N%_*<br><small>%S <i>%A</i></small>']]></default>
     </key>
     <key type="s" name="member-template-small">
       <default><![CDATA['%N%_*']]></default>
     </key>
     <key type="s" name="network-template-large">
-      <default><![CDATA['<b>%N</b> (%O/%T)%_*<br><span size="smaller">%S</span>']]></default>
+      <default><![CDATA['<b>%N</b> (%O/%T)%_*<br><small>%S</small>']]></default>
     </key>
     <key type="s" name="network-template-small">
       <default><![CDATA['<b>%N</b> (%O/%T)%_*']]></default>
