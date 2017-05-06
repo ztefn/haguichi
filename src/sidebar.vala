@@ -521,7 +521,7 @@ public class Sidebar : Box
         }
         else
         {
-            account_entry.set_markup (account.replace (" (pending)", "\n<small><i>(pending)</i></small>"));
+            account_entry.set_markup (account.replace (" (pending)", "\n<small><i>" + Text.pending + "</i></small>"));
             
             account_label.show();
             account_entry.show();

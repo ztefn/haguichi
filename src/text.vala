@@ -228,6 +228,7 @@ Türkçe (tr)
     
     public static string account_label;
     public static string account;
+    public static string pending;
     
     public static string attach_label;
     public static string attach_title;
@@ -455,6 +456,7 @@ Türkçe (tr)
         
         account_label                              = _("_Account:");
         account                                    = Utils.remove_mnemonics (account_label); // "Account:"
+        pending                                    = _("Pending");
         
         attach_label                               = _("_Attach to Account…");
         attach_title                               = _("Attach to Account");
