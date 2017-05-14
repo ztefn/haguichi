@@ -720,6 +720,14 @@ public class Hamachi : Object
         return output;
     }
     
+    public static string cancel ()
+    {
+        string output = Command.return_output ("hamachi cancel");
+        Debug.log (Debug.domain.HAMACHI, "Hamachi.cancel", output);
+        
+        return output;
+    }
+    
     public static string join_network (string name, string password)
     {
         string output = Command.return_output ("hamachi do-join \"" + Utils.clean_string (name) + "\" \"" + Utils.clean_string (password) + "\"");

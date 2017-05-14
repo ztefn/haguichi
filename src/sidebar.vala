@@ -26,6 +26,7 @@ public class Sidebar : Box
     private Label heading_label;
     
     private Box heading_box;
+    private Box account_entry_box;
     private Box commands_box;
     private Box info_box;
     private Box network_box;
@@ -49,6 +50,7 @@ public class Sidebar : Box
     private SidebarEntry account_entry;
     private SidebarEntry nick_entry;
     
+    private Button cancel_button;
     private Button attach_button;
     
     private SidebarLabel network_status_label;
@@ -123,6 +125,22 @@ public class Sidebar : Box
         account_label = new SidebarLabel (Text.account);
         account_entry = new SidebarEntry();
         
+        cancel_button = new Button();
+        cancel_button.tooltip_text = Text.cancel;
+        cancel_button.image = new Image.from_icon_name ("edit-delete-symbolic", IconSize.MENU);
+        cancel_button.margin_left = 3;
+        cancel_button.valign = Align.START;
+        cancel_button.relief = ReliefStyle.NONE;
+        cancel_button.get_style_context().add_class ("circular");
+        cancel_button.clicked.connect (() =>
+        {
+            GlobalEvents.cancel_attach();
+        });
+        
+        account_entry_box = new Box (Orientation.HORIZONTAL, 0);
+        account_entry_box.pack_start (account_entry, true,  true,  0);
+        account_entry_box.pack_start (cancel_button, false, false, 0);
+        
         nick_label    = new SidebarLabel (Text.nick);
         nick_entry    = new SidebarEntry();
         
@@ -131,18 +149,18 @@ public class Sidebar : Box
         info_grid.row_spacing = 9;
         info_grid.column_spacing = 9;
         info_grid.halign = Align.CENTER;
-        info_grid.attach (version_label,  0, 1, 1, 1);
-        info_grid.attach (version_entry,  1, 1, 1, 1);
-        info_grid.attach (id_label,       0, 2, 1, 1);
-        info_grid.attach (id_entry,       1, 2, 1, 1);
-        info_grid.attach (account_label,  0, 3, 1, 1);
-        info_grid.attach (account_entry,  1, 3, 1, 1);
-        info_grid.attach (nick_label,     0, 4, 1, 1);
-        info_grid.attach (nick_entry,     1, 4, 1, 1);
-        info_grid.attach (ipv4_label,     0, 5, 1, 1);
-        info_grid.attach (ipv4_entry,     1, 5, 1, 1);
-        info_grid.attach (ipv6_label,     0, 6, 1, 1);
-        info_grid.attach (ipv6_entry,     1, 6, 1, 1);
+        info_grid.attach (version_label,     0, 1, 1, 1);
+        info_grid.attach (version_entry,     1, 1, 1, 1);
+        info_grid.attach (id_label,          0, 2, 1, 1);
+        info_grid.attach (id_entry,          1, 2, 1, 1);
+        info_grid.attach (account_label,     0, 3, 1, 1);
+        info_grid.attach (account_entry_box, 1, 3, 1, 1);
+        info_grid.attach (nick_label,        0, 4, 1, 1);
+        info_grid.attach (nick_entry,        1, 4, 1, 1);
+        info_grid.attach (ipv4_label,        0, 5, 1, 1);
+        info_grid.attach (ipv4_entry,        1, 5, 1, 1);
+        info_grid.attach (ipv6_label,        0, 6, 1, 1);
+        info_grid.attach (ipv6_entry,        1, 6, 1, 1);
         
         info_box = new Box (Orientation.VERTICAL, 0);
         info_box.pack_start (info_grid, false, false, 0);
@@ -517,14 +535,15 @@ public class Sidebar : Box
             (account == "-"))
         {
             account_label.hide();
-            account_entry.hide();
+            account_entry_box.hide();
         }
         else
         {
             account_entry.set_markup (account.replace (" (pending)", "\n<small><i>" + Text.pending + "</i></small>"));
+            cancel_button.visible = account.has_suffix (" (pending)");
             
             account_label.show();
-            account_entry.show();
+            account_entry_box.show();
         }
     }
     
@@ -758,6 +777,24 @@ public class Sidebar : Box
                     action_box_revealer.set_reveal_child (false);
                 }
                 
+                break;
+        }
+    }
+    
+    public void set_mode (string _mode)
+    {
+        switch (_mode)
+        {
+            case "Connected":
+                cancel_button.sensitive = true;
+                attach_button.sensitive = true;
+                break;
+                
+            case "Disconnected":
+                cancel_button.sensitive = false;
+                attach_button.sensitive = false;
+                
+                show_tab ("Info", false);
                 break;
         }
     }

@@ -101,7 +101,10 @@ namespace Dialogs
         
         private void* go_attach_thread ()
         {
+            string account = account_entry.get_chars (0, -1);
             string output;
+            
+            GlobalEvents.attach_blocking = true;
             
             if (Haguichi.demo_mode)
             {
@@ -109,25 +112,20 @@ namespace Dialogs
             }
             else
             {
-                output = Hamachi.attach (account_entry.get_chars (0, -1), with_networks.active);
+                output = Hamachi.attach (account, with_networks.active);
             }
             
             if (output.index_of (".. ok") != -1)
             {
                 Idle.add_full (Priority.HIGH_IDLE, () =>
                 {
+                    GlobalEvents.set_attach_with_account (account + " (pending)");
                     dismiss();
                     return false;
                 });
                 
                 Thread.usleep (2000000); // Wait two seconds to get updated info
                 Hamachi.get_info();
-                
-                Idle.add_full (Priority.HIGH_IDLE, () =>
-                {
-                    GlobalEvents.set_attach();
-                    return false;
-                });
             }
             else if ((output.index_of (".. failed, not found") != -1) ||
                      (output.index_of (".. failed, [248]") != -1))
@@ -142,6 +140,8 @@ namespace Dialogs
             {
                 // Unknown output
             }
+            
+            GlobalEvents.attach_blocking = false;
             
             return null;
         }

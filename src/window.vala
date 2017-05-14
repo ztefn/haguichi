@@ -515,6 +515,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 
                 Haguichi.session.mode_changed (mode);
                 header_bar.set_mode (mode);
+                sidebar.set_mode (mode);
                 break;
                 
             case "Disconnected":
@@ -529,8 +530,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 
                 Haguichi.session.mode_changed (mode);
                 header_bar.set_mode (mode);
-                
-                sidebar.show_tab ("Info", false);
+                sidebar.set_mode (mode);
                 break;
                 
             case "Not configured":

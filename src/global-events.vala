@@ -13,6 +13,7 @@ using Gtk;
 public class GlobalEvents
 {
     public static bool search_active;
+    public static bool attach_blocking;
     
     public static void set_modal_dialog (Dialog? dialog)
     {
@@ -240,8 +241,14 @@ public class GlobalEvents
     
     public static void set_attach ()
     {
-        string account = Hamachi.get_account();
-        
+        if (!attach_blocking)
+        {
+            set_attach_with_account (Hamachi.get_account());
+        }
+    }
+    
+    public static void set_attach_with_account (string account)
+    {
         HaguichiWindow.sidebar.set_account (account);
         
         if (((account == "") ||
@@ -259,6 +266,26 @@ public class GlobalEvents
         {
             HaguichiWindow.sidebar.set_attach (false, false);
         }
+    }
+    
+    public static void cancel_attach ()
+    {
+        set_attach_with_account ("");
+        new Thread<void*> (null, cancel_attach_thread);
+    }
+    
+    private static void* cancel_attach_thread ()
+    {
+        attach_blocking = true;
+        
+        Hamachi.cancel();
+        
+        Thread.usleep (2000000); // Wait two seconds to get updated info
+        Hamachi.get_info();
+        
+        attach_blocking = false;
+        
+        return null;
     }
     
     public static void set_config ()
