@@ -53,7 +53,7 @@ namespace Widgets
             }
             if (message != null)
             {
-                markup += "\n<span size=\"smaller\">{1}</span>";
+                markup += "\n<small>{1}</small>";
             }
             
             label.set_markup (Utils.format (markup, header, message, null));

@@ -620,7 +620,7 @@ public class Sidebar : Box
                     action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
                 }
                 
-                heading_label.set_markup ("<span size=\"large\"><b>" + Text.information_title + "</b></span>");
+                heading_label.set_markup ("<big><b>" + Text.information_title + "</b></big>");
                 heading_label.selectable = false;
                 
                 break;
@@ -701,7 +701,7 @@ public class Sidebar : Box
                     delete_button.hide();
                 }
                 
-                heading_label.set_markup ("<span size=\"large\"><b>" + Markup.escape_text (network.name) + "</b></span>");
+                heading_label.set_markup ("<big><b>" + Markup.escape_text (network.name) + "</b></big>");
                 heading_label.selectable = true;
                 
                 break;
@@ -740,7 +740,7 @@ public class Sidebar : Box
                     member_connection_entry.hide();
                 }
                 
-                heading_label.set_markup ("<span size=\"large\"><b>" + Markup.escape_text (member.nick) + "</b></span>");
+                heading_label.set_markup ("<big><b>" + Markup.escape_text (member.nick) + "</b></big>");
                 heading_label.selectable = true;
                 
                 if (member.status.status_int != 3)

@@ -64,7 +64,7 @@ namespace Widgets
             heading.hide();
             message.hide();
             
-            heading.set_markup ("<span size=\"larger\">" + _heading + "</span>");
+            heading.set_markup ("<big>" + _heading + "</big>");
             message.set_markup (_message);
             
             if (_heading != null)
