@@ -49,7 +49,7 @@ namespace Dialogs
             
             set_icon_list (HaguichiWindow.app_icons);
             
-            if (Haguichi.window_use_header_bar)
+            if (Haguichi.dialog_use_header_bar)
             {
                 var titlebar = new HeaderBar();
                 titlebar.title = Text.preferences_title;
