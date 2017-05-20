@@ -317,11 +317,15 @@ public class Headerbar : HeaderBar
             case "Countdown":
                 GlobalActions.connect.set_enabled (true);
                 
+                GlobalActions.info.set_enabled (true);
+                
                 set_subtitle (Utils.format (Text.reconnecting (Controller.restore_countdown), Controller.restore_countdown.to_string(), null, null));
                 break;
                 
             case "Connecting":
                 connect_but.active = true;
+                
+                GlobalActions.info.set_enabled (true);
                 
                 set_subtitle (Text.connecting);
                 break;
