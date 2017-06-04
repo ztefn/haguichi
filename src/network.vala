@@ -159,6 +159,18 @@ approve  : manual";
                 if (id != null)
                 {
                     owner = id;
+                    
+                    Idle.add_full (Priority.DEFAULT_IDLE, () =>
+                    {
+                        foreach (Member member in members)
+                        {
+                            if (member.client_id == owner)
+                            {
+                                Haguichi.window.network_view.update_member_with_network (this, member);
+                            }
+                        }
+                        return false;
+                    });
                 }
             }
             catch (RegexError e)
@@ -171,14 +183,6 @@ approve  : manual";
         Idle.add_full (Priority.DEFAULT_IDLE, () =>
         {
             Haguichi.window.network_view.update_network (this);
-            
-            foreach (Member member in members)
-            {
-                if (member.client_id == owner)
-                {
-                    Haguichi.window.network_view.update_member_with_network (this, member);
-                }
-            }
             return false;
         });
         
