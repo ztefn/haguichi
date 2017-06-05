@@ -241,7 +241,7 @@ public class Hamachi : Object
         try
         {
             MatchInfo mi;
-            new Regex ("""^(?<ipv4>[0-9\.]{7,15})?[ ]*(?<ipv6>[0-9a-f\:]{2,45})?$""").match (ouput, 0, out mi);
+            new Regex ("""^(?<ipv4>[0-9\.]{7,15})?[ ]*(?<ipv6>[0-9a-f\:]{6,39})?$""").match (ouput, 0, out mi);
             
             ipv4 = mi.fetch_named ("ipv4");
             ipv6 = mi.fetch_named ("ipv6");
@@ -559,6 +559,8 @@ public class Hamachi : Object
         
         try
         {
+            int64 start_time = get_real_time();
+            
             Regex network_regex           = new Regex ("""^ (?<status>.{1}) \[(?<id>.+?)\][ ]*(?<name>.*?)[ ]*(capacity: [0-9]{1,3}/(?<capacity>[0-9]{1,3}),)?[ ]*(\[(?<subnet>[0-9\./]{9,19})\])?[ ]*( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$""");
             Regex normal_member_regex     = new Regex ("""^     (?<status>.{1}) (?<id>[0-9-]{11})[ ]+(?<nick>.*?)[ ]*(?<ipv4>[0-9\.]{7,15})?[ ]*(alias: (?<alias>not set|[0-9\.]{7,15}))?[ ]*(?<ipv6>[0-9a-f\:]{6,39})?[ ]*(?<connection>direct|via relay|via server)?[ ]*(?<transport>UDP|TCP)?[ ]*(?<tunnel>[0-9\.]{7,15}\:[0-9]{1,5})?[ ]*(?<message>[ a-zA-Z]+)?$""");
             Regex unapproved_member_regex = new Regex ("""^     \? (?<id>[0-9-]{11})[ ]*$""");
@@ -668,6 +670,8 @@ public class Hamachi : Object
                     }
                 }
             }
+            
+            Debug.log (Debug.domain.INFO, "Hamachi.return_networks", "Parsed network list in " + (get_real_time() - start_time).to_string() + " microseconds");
         }
         catch (RegexError e)
         {
