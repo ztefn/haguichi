@@ -8,24 +8,24 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2013-12-06 21:48+0000\n"
-"Last-Translator: Ḷḷumex03 <l.lumex03.tornes@gmail.com>\n"
+"PO-Revision-Date: 2017-06-27 01:34+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <ast@li.org>\n"
-"Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2013-12-08 14:24+0000\n"
-"X-Generator: Launchpad (build 16869)\n"
+"X-Launchpad-Export-Date: 2017-06-30 22:40+0000\n"
+"X-Generator: Launchpad (build 18419)\n"
+"Language: ast\n"
 
 #: src/text.vala:350
 msgid "A graphical frontend for Hamachi."
-msgstr "Una interfaz gráfica p'Hamachi."
+msgstr "Un frontal gráficu p'Hamachi"
 
 #: src/text.vala:351
 msgid "Join and create local networks over the Internet"
-msgstr "Xúnite ya cria redes llocales na rede"
+msgstr "Xúnite y crea redes llocales n'internet"
 
 #: src/text.vala:355
 msgid "_OK"
@@ -41,7 +41,7 @@ msgstr "_Guardar"
 
 #: src/text.vala:358
 msgid "_Refresh"
-msgstr "_Anovar"
+msgstr "An_ovar"
 
 #: src/text.vala:359
 msgid "_Revert"
@@ -57,7 +57,7 @@ msgstr "_Información"
 
 #: src/text.vala:362
 msgid "_Donate"
-msgstr ""
+msgstr "_Donar"
 
 #: src/text.vala:363
 msgid "_Preferences"
@@ -65,7 +65,7 @@ msgstr "_Preferencies"
 
 #: src/text.vala:364
 msgid "_Help"
-msgstr "_Aida"
+msgstr "_Ayuda"
 
 #: src/text.vala:365
 msgid "_About"
@@ -89,7 +89,7 @@ msgstr "Non"
 
 #: src/text.vala:373
 msgid "_Hamachi output"
-msgstr "_Salida de Hamachi"
+msgstr "_Salida d'Hamachi"
 
 #: src/text.vala:375
 msgid "IPv4 address:"
@@ -101,7 +101,7 @@ msgstr "Direición IPv6:"
 
 #: src/text.vala:377
 msgid "Client ID:"
-msgstr "ID veceru:"
+msgstr "ID de veceru:"
 
 #: src/text.vala:378
 msgid "Status:"
@@ -129,7 +129,7 @@ msgstr "Anónimu"
 
 #: src/text.vala:384
 msgid "_Network ID:"
-msgstr "_ID rede:"
+msgstr "_ID de rede:"
 
 #: src/text.vala:386
 msgid "_Password:"
@@ -137,11 +137,11 @@ msgstr "_Conseña"
 
 #: src/text.vala:387
 msgid "_Nickname:"
-msgstr "_Alcuñu"
+msgstr "_Nomatu:"
 
 #: src/text.vala:390
 msgid "Offline"
-msgstr "Fuera llinia"
+msgstr "Ensin conexón"
 
 #: src/text.vala:391
 msgid "Online"
@@ -153,7 +153,7 @@ msgstr "Nun pue algamase"
 
 #: src/text.vala:393
 msgid "Protocol mismatch"
-msgstr "Incoherencia de protocolu"
+msgstr ""
 
 #: src/text.vala:394
 msgid "Conflicting address"
@@ -168,9 +168,8 @@ msgid "_Disconnect"
 msgstr "_Desconeutar"
 
 #: src/text.vala:397
-#, fuzzy
 msgid "Reconnect"
-msgstr "C_oneutar"
+msgstr "Reconeutar"
 
 #: src/text.vala:398
 msgid "Connected"
@@ -182,15 +181,15 @@ msgstr "Desconectáu"
 
 #: src/text.vala:400
 msgid "Connecting…"
-msgstr "En coneutando…"
+msgstr "Coneutando…"
 
 #: src/text.vala:401
 msgid "Logging in…"
-msgstr "N'aniciando sesión…"
+msgstr "Aniciando sesión…"
 
 #: src/text.vala:402
 msgid "Updating…"
-msgstr "N'anovando…"
+msgstr "Anovando"
 
 #: src/text.vala:404
 msgid "Hamachi is not configured"
@@ -198,7 +197,7 @@ msgstr "Hamachi nun ta configuráu"
 
 #: src/text.vala:405
 msgid "You need to configure Hamachi before you can connect."
-msgstr "Necesites configurar Hamachi enantes de poder coneutate."
+msgstr "Precises configurar Hamachi enantes que pueas coneutate."
 
 #: src/text.vala:406
 msgid "C_onfigure"
@@ -210,28 +209,27 @@ msgstr "Hamachi nun ta instaláu"
 
 #: src/text.vala:409
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Por favor, baxa Hamachi ya sigui les intrucciones d'instalación."
+msgstr "Baxa Hamachi y sigui les instrucciones d'instalación, por favor."
 
 #: src/text.vala:410
 msgid "Hamachi version {0} is obsolete"
-msgstr "La version {0} de Hamachi ye pervieya"
+msgstr "La version {0} de Hamachi ta obsoleta"
 
 #: src/text.vala:411
 msgid "Please download and install the latest Hamachi version."
-msgstr "Por favor, baxa ya instala la cabera versión de Hamachi."
+msgstr "Baxa ya instala la cabera versión d'Hamachi, por favor."
 
 #: src/text.vala:412
 msgid "_Download"
 msgstr "_Baxar"
 
 #: src/text.vala:414
-#, fuzzy
 msgid "You are connected!"
-msgstr "Desconectáu"
+msgstr "¡Tas coneutáu!"
 
 #: src/text.vala:415
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Primi nel botón + p'amestar una rede."
 
 #: src/text.vala:417
 msgid "Members:"
@@ -243,7 +241,7 @@ msgstr "{0} en llinia, {1} en total"
 
 #: src/text.vala:419
 msgid "Owner:"
-msgstr "Propietariu:"
+msgstr "Dueñu:"
 
 #: src/text.vala:420
 msgid "You"
@@ -251,7 +249,7 @@ msgstr "Tu"
 
 #: src/text.vala:421
 msgid "Unknown"
-msgstr "Desconocíu"
+msgstr "Desconozse"
 
 #: src/text.vala:422
 msgid "Unavailable"
@@ -259,7 +257,7 @@ msgstr "Non disponible"
 
 #: src/text.vala:423
 msgid "Awaiting approval"
-msgstr "N'asperando pola aprobación"
+msgstr "Esperando pola aprobación"
 
 #: src/text.vala:424
 msgid "Locked:"
@@ -370,9 +368,8 @@ msgid "Change Password"
 msgstr "Camudar conseña"
 
 #: src/text.vala:455
-#, fuzzy
 msgid "_New password:"
-msgstr "_Conseña"
+msgstr ""
 
 #: src/text.vala:457
 msgid "_Account:"
@@ -487,9 +484,8 @@ msgid "Network already joined"
 msgstr "Rede xá xunida"
 
 #: src/text.vala:491
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "El viesu la rede xá ta coyíu"
+msgstr ""
 
 #: src/text.vala:492
 msgid "Unknown error"
@@ -528,7 +524,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "¿De xuru quies desallugar al miembru “{0}” de la rede “{1}”?"
 
 #: src/text.vala:506
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si s'almite, los miembros desallugaos puen xunise otra vegada a la rede "
 "cuando-yos pete."
@@ -570,9 +567,8 @@ msgid "Commands"
 msgstr "Comandos"
 
 #: src/text.vala:520
-#, fuzzy
 msgid "Notifications"
-msgstr "Estaya de notificación"
+msgstr ""
 
 #: src/text.vala:521
 msgid "Behavior"

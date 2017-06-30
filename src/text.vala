@@ -53,6 +53,7 @@ Options:
     public static string[] app_authors;
     public const  string   app_translator_credits  =
 @"Asturianu (ast)
+    Enol Puente https://launchpad.net/~enolp
     Tornes Llume https://launchpad.net/~l-lumex03-tornes
 
 Български (bg)
