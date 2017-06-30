@@ -176,6 +176,10 @@ public class Command : Object
         {
             terminal = "deepin-terminal";
         }
+        else if (exists ("qterminal"))
+        {
+            terminal = "qterminal";
+        }
         else if (exists ("lxterminal"))
         {
             terminal = "lxterminal";
