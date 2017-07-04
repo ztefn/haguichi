@@ -8,9 +8,6 @@
  * or (at your option) any later version.
  */
 
-// The phony commented package below is marked only for Autovala detection: https://github.com/rastersoft/autovala/blob/master/wiki/autovala-tricks.7.md#using-gio-gio-unix-gobject-gmodule-or-math-packages
-// using GIO-unix;
-
 [DBus (name = "org.freedesktop.login1.Manager")]
 public interface LogindManager : DBusProxy
 {

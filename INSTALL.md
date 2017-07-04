@@ -9,7 +9,7 @@
   The following development packages are required to build Haguichi:
 
    * gettext
-   * cmake (>= 2.6)
+   * meson (>= 0.40)
    * valac (>= 0.26)
    * glib-2.0 (>= 2.42)
    * gtk+-3.0 (>= 3.14)
@@ -17,7 +17,7 @@
 
   On Debian based distributions you can install these packages by running the following command:
 
-    $ sudo apt install build-essential gettext cmake valac libglib2.0-dev libgtk-3-dev libnotify-dev
+    $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev libnotify-dev
 
 
   Building
@@ -25,10 +25,9 @@
 
   To build Haguichi, run the following commands:
 
-    $ mkdir build
-    $ cd build
-    $ cmake .. -DCMAKE_INSTALL_PREFIX=/usr
-    $ make
+    $ mkdir build && cd build
+    $ meson ..
+    $ ninja
 
 
   Installing
@@ -36,5 +35,5 @@
 
   After Haguichi has been built, run the following command to install it:
 
-    $ sudo make install
+    $ sudo ninja install
 

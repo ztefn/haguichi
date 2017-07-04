@@ -9,6 +9,7 @@
  */
 
 using Gtk;
+using Config;
 
 class Haguichi : Gtk.Application
 {
@@ -72,6 +73,10 @@ class Haguichi : Gtk.Application
     {
         base.startup();
         
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
+        
         Debug.log (Debug.domain.INFO, "Haguichi.startup", "Greetings, I am " + Text.app_name + " " + Text.app_version);
         
         if (Command.exists ("haguichi-indicator"))
@@ -79,8 +84,6 @@ class Haguichi : Gtk.Application
             Debug.log (Debug.domain.ENVIRONMENT, "Haguichi.startup", "Launching haguichi-indicator...");
             Command.execute ("haguichi-indicator");
         }
-        
-        Intl.textdomain (Text.app_name.down());
         
         Notify.init (Text.app_name);
         Text.init();

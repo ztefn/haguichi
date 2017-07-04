@@ -1,4 +1,0 @@
-#!/bin/sh
-set -e
-glib-compile-schemas /usr/share/glib-2.0/schemas
-update-icon-caches /usr/share/icons/hicolor /usr/share/icons/ubuntu-mono-dark /usr/share/icons/ubuntu-mono-light
