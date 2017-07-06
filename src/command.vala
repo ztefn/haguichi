@@ -234,6 +234,10 @@ public class Command : Object
         {
             file_manager = "dde-file-manager";
         }
+        else if (exists ("pcmanfm-qt"))
+        {
+            file_manager = "pcmanfm-qt";
+        }
         else if (exists ("pcmanfm"))
         {
             file_manager = "pcmanfm";
