@@ -106,28 +106,21 @@ public class Command : Object
     
     private static void* determine_sudo_thread ()
     {
-        sudo       = "";
+        sudo       = (string) Settings.super_user.val;
         sudo_args  = "";
         sudo_start = "-- ";
         
-        string   command  = (string) Settings.super_user.val;
-        string[] commands = {"pkexec", "gksudo", "gksu", "gnomesu", "kdesudo", "kdesu", "sudo"};
-        
-        if ((command in commands) &&
-            (exists (command)))
+        if (sudo == "auto")
         {
-            sudo = command;
-        }
-        else
-        {
-            foreach (string c in commands)
-            {
-                if ((sudo == "") &&
-                    (exists (c)))
-                {
-                    sudo = c;
-                }
-            }
+            sudo = get_available ({
+                "pkexec",
+                "gksudo",
+                "gksu",
+                "gnomesu",
+                "kdesudo",
+                "kdesu",
+                "sudo"
+            });
         }
         
         if (sudo == "pkexec")
@@ -143,6 +136,21 @@ public class Command : Object
         return null;
     }
     
+    private static string get_available (string[] commands)
+    {
+        // Check each command in the list for existence, and return immediately if it does
+        foreach (string cmd in commands)
+        {
+            if (exists (cmd))
+            {
+                return cmd;
+            }
+        }
+        
+        // Return the first command as fallback
+        return commands[0];
+    }
+    
     public static void determine_terminal ()
     {
         new Thread<void*> (null, determine_terminal_thread);
@@ -150,48 +158,18 @@ public class Command : Object
     
     private static void* determine_terminal_thread ()
     {
-        terminal = "gnome-terminal";
-        
-        if (exists ("gnome-terminal"))
-        {
-            // Keep
-        }
-        else if (exists ("mate-terminal"))
-        {
-            terminal = "mate-terminal";
-        }
-        else if (exists ("pantheon-terminal"))
-        {
-            terminal = "pantheon-terminal";
-        }
-        else if (exists ("xfce4-terminal"))
-        {
-            terminal = "xfce4-terminal";
-        }
-        else if (exists ("konsole"))
-        {
-            terminal = "konsole";
-        }
-        else if (exists ("deepin-terminal"))
-        {
-            terminal = "deepin-terminal";
-        }
-        else if (exists ("qterminal"))
-        {
-            terminal = "qterminal";
-        }
-        else if (exists ("lxterminal"))
-        {
-            terminal = "lxterminal";
-        }
-        else if (exists ("uxterm"))
-        {
-            terminal = "uxterm";
-        }
-        else if (exists ("xterm"))
-        {
-            terminal = "xterm";
-        }
+        terminal = get_available ({
+            "gnome-terminal",
+            "mate-terminal",
+            "pantheon-terminal",
+            "xfce4-terminal",
+            "konsole",
+            "deepin-terminal",
+            "qterminal",
+            "lxterminal",
+            "uxterm",
+            "xterm"
+        });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_terminal_thread", "Command for terminal: " + terminal);
         return null;
@@ -204,44 +182,17 @@ public class Command : Object
     
     private static void* determine_file_manager_thread ()
     {
-        file_manager = "nautilus";
-        
-        if (exists ("nautilus"))
-        {
-            // Keep
-        }
-        else if (exists ("caja"))
-        {
-            file_manager = "caja";
-        }
-        else if (exists ("nemo"))
-        {
-            file_manager = "nemo";
-        }
-        else if (exists ("pantheon-files"))
-        {
-            file_manager = "pantheon-files";
-        }
-        else if (exists ("thunar"))
-        {
-            file_manager = "thunar";
-        }
-        else if (exists ("dolphin"))
-        {
-            file_manager = "dolphin";
-        }
-        else if (exists ("dde-file-manager"))
-        {
-            file_manager = "dde-file-manager";
-        }
-        else if (exists ("pcmanfm-qt"))
-        {
-            file_manager = "pcmanfm-qt";
-        }
-        else if (exists ("pcmanfm"))
-        {
-            file_manager = "pcmanfm";
-        }
+        file_manager = get_available ({
+            "nautilus",
+            "caja",
+            "nemo",
+            "pantheon-files",
+            "thunar",
+            "dolphin",
+            "dde-file-manager",
+            "pcmanfm-qt",
+            "pcmanfm"
+        });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager_thread", "Command for file manager: " + file_manager);
         return null;
@@ -254,36 +205,15 @@ public class Command : Object
     
     private static void* determine_remote_desktop_thread ()
     {
-        remote_desktop = "vinagre";
-        
-        if (exists ("vinagre"))
-        {
-            // Keep
-        }
-        else if (exists ("gvncviewer"))
-        {
-            remote_desktop = "gvncviewer";
-        }
-        else if (exists ("krdc"))
-        {
-            remote_desktop = "krdc";
-        }
-        else if (exists ("vncviewer"))
-        {
-            remote_desktop = "vncviewer";
-        }
-        else if (exists ("xtightvncviewer"))
-        {
-            remote_desktop = "xtightvncviewer";
-        }
-        else if (exists ("xvnc4viewer"))
-        {
-            remote_desktop = "xvnc4viewer";
-        }
-        else if (exists ("rdesktop"))
-        {
-            remote_desktop = "rdesktop";
-        }
+        remote_desktop = get_available ({
+            "vinagre",
+            "gvncviewer",
+            "krdc",
+            "vncviewer",
+            "xtightvncviewer",
+            "xvnc4viewer",
+            "rdesktop"
+        });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop_thread", "Command for remote desktop: " + remote_desktop);
         return null;
