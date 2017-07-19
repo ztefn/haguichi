@@ -275,9 +275,10 @@ public class Command : Object
             command = command.replace ("%N",  nick   );
             command = command.replace ("%ID", id     );
             
-            string quote = (terminal == "konsole") ? "" : "\"";
+            string execute = (terminal == "gnome-terminal") ? "--" : "-e";
+            string quote   = (terminal == "gnome-terminal") ? ""   : "\"";
             
-            command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " -e " + quote + "\\1" + quote);
+            command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + execute + " " + quote + "\\1" + quote);
             command = command.replace ("%FILEMANAGER", file_manager);
             command = command.replace ("%REMOTEDESKTOP", remote_desktop);
             command = command.replace ("{COLON}", ";");
