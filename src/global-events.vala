@@ -249,6 +249,11 @@ public class GlobalEvents
     
     public static void set_attach_with_account (string account)
     {
+        if (Haguichi.demo_mode)
+        {
+            Hamachi.demo_account = account;
+        }
+        
         HaguichiWindow.sidebar.set_account (account);
         
         if (((account == "") ||

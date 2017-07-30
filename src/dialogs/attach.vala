@@ -108,7 +108,14 @@ namespace Dialogs
             
             if (Haguichi.demo_mode)
             {
-                output = ".. failed, not found";
+                if (account.contains ("@"))
+                {
+                    output = ".. ok";
+                }
+                else
+                {
+                    output = ".. failed, not found";
+                }
             }
             else
             {
