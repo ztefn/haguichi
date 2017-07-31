@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-06-27 01:34+0000\n"
-"Last-Translator: enolp <enolp@softastur.org>\n"
+"PO-Revision-Date: 2017-07-02 20:09+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-06-30 22:40+0000\n"
-"X-Generator: Launchpad (build 18419)\n"
+"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
+"X-Generator: Launchpad (build 18441)\n"
 "Language: ast\n"
 
 #: src/text.vala:350
@@ -767,14 +767,14 @@ msgstr[1] "_Anovar la llista de rede cada %S _segundos"
 #: src/text.vala:589
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} púnxose en llinia na rede {1} ya {1} rede más"
-msgstr[1] "{0} púnxose en llinia na rede {1} ya {1} redes más"
+msgstr[0] "{0} púnxose en llinia na rede {1} ya {2} rede más"
+msgstr[1] "{0} púnxose en llinia na rede {1} ya {2} redes más"
 
 #: src/text.vala:594
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} púnxose en llinia na rede {1} ya {1} rede más"
-msgstr[1] "{0} púnxose fuera de llinia na rede {1} ya {1} redes más"
+msgstr[0] "{0} púnxose en llinia na rede {1} ya {2} rede más"
+msgstr[1] "{0} púnxose fuera de llinia na rede {1} ya {2} redes más"
 
 #: src/text.vala:599
 msgid "{0} joined the network {1} and {2} other network"

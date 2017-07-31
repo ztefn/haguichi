@@ -71,8 +71,9 @@ Español (es)
     Eduardo Parra https://launchpad.net/~soker
 
 Français (fr)
-    Gabriel U. https://launchpad.net/~gabriel-ull
     Emilien Klein https://launchpad.net/~emilien-klein
+    Gabriel U. https://launchpad.net/~gabriel-ull
+    Jean-Marc https://launchpad.net/~m-balthazar
 
 Bahasa Indonesia (id)
     Fattah Rizki https://launchpad.net/~galamarv

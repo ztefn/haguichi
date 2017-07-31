@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-02-16 02:38+0000\n"
+"PO-Revision-Date: 2017-07-30 17:19+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-02-16 19:04+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
+"X-Generator: Launchpad (build 18441)\n"
+"Language: ru\n"
 
 #: src/text.vala:350
 msgid "A graphical frontend for Hamachi."
@@ -378,7 +378,7 @@ msgstr "_Учётная запись:"
 
 #: src/text.vala:459
 msgid "Pending"
-msgstr ""
+msgstr "Ожидается"
 
 #: src/text.vala:461
 msgid "_Attach to Account…"
@@ -525,7 +525,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
 
 #: src/text.vala:506
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Выгнанные участники всегда смогут заново подключиться к выбранной сети."
 

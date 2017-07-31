@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-02-18 20:06+0000\n"
+"PO-Revision-Date: 2017-07-30 17:39+0000\n"
 "Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
-"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2017-02-18 20:08+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
+"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
+"X-Generator: Launchpad (build 18441)\n"
+"Language: fr\n"
 
 #: src/text.vala:350
 msgid "A graphical frontend for Hamachi."
@@ -378,7 +378,7 @@ msgstr "_Compte :"
 
 #: src/text.vala:459
 msgid "Pending"
-msgstr ""
+msgstr "En attente"
 
 #: src/text.vala:461
 msgid "_Attach to Account…"
@@ -526,7 +526,8 @@ msgstr ""
 "Êtes-vous sûr de vouloir expulser le membre « {0} » du réseau « {1} » ?"
 
 #: src/text.vala:506
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si admis, les membres expulsés peuvent rejoindre le réseau à tout moment "
 "ultérieur."
