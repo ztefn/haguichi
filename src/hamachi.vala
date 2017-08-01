@@ -728,8 +728,13 @@ public class Hamachi : Object
     
     public static string cancel ()
     {
-        string output = Command.return_output ("hamachi cancel");
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.cancel", output);
+        string output = "";
+        
+        if (!Haguichi.demo_mode)
+        {
+            output = Command.return_output ("hamachi cancel");
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.cancel", output);
+        }
         
         return output;
     }
