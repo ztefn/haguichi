@@ -127,7 +127,7 @@ public class Command : Object
             sudo_args = "--sudo-mode -D \"" + Text.app_name + "\" ";
         }
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_sudo_thread", "Command for sudo: " + sudo);
+        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_sudo", sudo);
     }
     
     private static string get_available (string[] commands)
@@ -160,7 +160,7 @@ public class Command : Object
             "xterm"
         });
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_terminal_thread", "Command for terminal: " + terminal);
+        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_terminal", terminal);
     }
     
     public static void determine_file_manager ()
@@ -177,7 +177,7 @@ public class Command : Object
             "pcmanfm"
         });
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager_thread", "Command for file manager: " + file_manager);
+        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager", file_manager);
     }
     
     public static void determine_remote_desktop ()
@@ -192,7 +192,7 @@ public class Command : Object
             "rdesktop"
         });
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop_thread", "Command for remote desktop: " + remote_desktop);
+        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop", remote_desktop);
     }
     
     public static string return_custom (Member? member, string command_ipv4, string command_ipv6, string priority)
