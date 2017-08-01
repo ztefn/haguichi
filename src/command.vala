@@ -101,11 +101,6 @@ public class Command : Object
     
     public static void determine_sudo ()
     {
-        new Thread<void*> (null, determine_sudo_thread);
-    }
-    
-    private static void* determine_sudo_thread ()
-    {
         sudo       = (string) Settings.super_user.val;
         sudo_args  = "";
         sudo_start = "-- ";
@@ -133,7 +128,6 @@ public class Command : Object
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_sudo_thread", "Command for sudo: " + sudo);
-        return null;
     }
     
     private static string get_available (string[] commands)
@@ -153,11 +147,6 @@ public class Command : Object
     
     public static void determine_terminal ()
     {
-        new Thread<void*> (null, determine_terminal_thread);
-    }
-    
-    private static void* determine_terminal_thread ()
-    {
         terminal = get_available ({
             "gnome-terminal",
             "mate-terminal",
@@ -172,15 +161,9 @@ public class Command : Object
         });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_terminal_thread", "Command for terminal: " + terminal);
-        return null;
     }
     
     public static void determine_file_manager ()
-    {
-        new Thread<void*> (null, determine_file_manager_thread);
-    }
-    
-    private static void* determine_file_manager_thread ()
     {
         file_manager = get_available ({
             "nautilus",
@@ -195,15 +178,9 @@ public class Command : Object
         });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager_thread", "Command for file manager: " + file_manager);
-        return null;
     }
     
     public static void determine_remote_desktop ()
-    {
-        new Thread<void*> (null, determine_remote_desktop_thread);
-    }
-    
-    private static void* determine_remote_desktop_thread ()
     {
         remote_desktop = get_available ({
             "vinagre",
@@ -216,7 +193,6 @@ public class Command : Object
         });
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop_thread", "Command for remote desktop: " + remote_desktop);
-        return null;
     }
     
     public static string return_custom (Member? member, string command_ipv4, string command_ipv6, string priority)
