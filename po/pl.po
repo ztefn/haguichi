@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-05-07 07:01+0000\n"
+"PO-Revision-Date: 2017-08-03 20:44+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-05-07 15:28+0000\n"
-"X-Generator: Launchpad (build 18366)\n"
+"X-Launchpad-Export-Date: 2017-08-03 21:08+0000\n"
+"X-Generator: Launchpad (build 18441)\n"
 "Language: pl\n"
 
 #: src/text.vala:350
@@ -70,7 +70,7 @@ msgstr "Pomo_c"
 
 #: src/text.vala:365
 msgid "_About"
-msgstr "_O programie"
+msgstr "_O programie"
 
 #: src/text.vala:366
 msgid "_Quit"
@@ -211,7 +211,7 @@ msgstr "Hamachi nie jest zainstalowane"
 #: src/text.vala:409
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr ""
-"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: src/text.vala:410
 msgid "Hamachi version {0} is obsolete"
@@ -219,7 +219,7 @@ msgstr "Wersja {0} programu Hamachi jest przestarzała"
 
 #: src/text.vala:411
 msgid "Please download and install the latest Hamachi version."
-msgstr "Proszę pobrać i zainstalować najnowszą wersję programu Hamachi."
+msgstr "Proszę pobrać i zainstalować najnowszą wersję programu Hamachi."
 
 #: src/text.vala:412
 msgid "_Download"
@@ -419,11 +419,11 @@ msgstr "Zapisz kopię zapasową"
 
 #: src/text.vala:471
 msgid "_Restore from Backup…"
-msgstr "P_rzywróć z kopii zapasowej…"
+msgstr "P_rzywróć z kopii zapasowej…"
 
 #: src/text.vala:472
 msgid "Restore from Backup"
-msgstr "Przywróć z kopii zapasowej"
+msgstr "Przywróć z kopii zapasowej"
 
 #: src/text.vala:473
 msgid "_Restore"
@@ -495,7 +495,7 @@ msgstr "Nieznany błąd"
 
 #: src/text.vala:494
 msgid "Join request sent"
-msgstr "Wysłano prośbę o dołączenie"
+msgstr "Wysłano prośbę o dołączenie"
 
 #: src/text.vala:496
 msgid "Preferences"
@@ -520,19 +520,19 @@ msgstr "Na pewno opuścić sieć „{0}”?"
 #: src/text.vala:503
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
-"Jeśli zostanie przyjęte, to można ponownie dołączyć do sieci w dowolnym "
+"Jeśli zostanie przyjęte, to można ponownie dołączyć do sieci w dowolnym "
 "czasie."
 
 #: src/text.vala:505
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "Na pewno wykluczyć członka „{0}” z sieci „{1}”?"
+msgstr "Na pewno wykluczyć członka „{0}” z sieci „{1}”?"
 
 #: src/text.vala:506
 msgid ""
 "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jeśli zostanie przyjęte, to wyrzuceni członkowie mogą ponownie dołączyć do "
-"sieci w dowolnym czasie."
+"sieci w dowolnym czasie."
 
 #: src/text.vala:508
 msgid "Could not delete network “{0}”"
@@ -540,7 +540,7 @@ msgstr "Usunięcie sieci „{0}” się nie powiodło"
 
 #: src/text.vala:509
 msgid "Could not leave network “{0}”"
-msgstr "Opuszczenie sieci „{0}” się nie powiodło."
+msgstr "Opuszczenie sieci „{0}” się nie powiodło"
 
 #: src/text.vala:510
 msgid "Could not evict member “{0}”"
@@ -548,11 +548,11 @@ msgstr "Wykluczenie członka „{0}” się nie powiodło"
 
 #: src/text.vala:511
 msgid "Could not go online in the network “{0}”"
-msgstr "Nie można przejść do trybu online w sieci „{0}”"
+msgstr "Nie można przejść do trybu online w sieci „{0}”"
 
 #: src/text.vala:512
 msgid "Could not go offline in the network “{0}”"
-msgstr "Nie można przejść do trybu offline w sieci „{0}”"
+msgstr "Nie można przejść do trybu offline w sieci „{0}”"
 
 #: src/text.vala:514
 msgid "See output for details."
@@ -584,7 +584,7 @@ msgstr "_Protokół:"
 
 #: src/text.vala:524
 msgid "Both IPv4 and IPv6"
-msgstr "IPv4 i IPv6"
+msgstr "IPv4 i IPv6"
 
 #: src/text.vala:525
 msgid "IPv4 only"
@@ -596,7 +596,7 @@ msgstr "Tylko IPv6"
 
 #: src/text.vala:528
 msgid "Show _Offline Members"
-msgstr "Wyświetlanie członków w trybie _offline"
+msgstr "Wyświetlanie członków w trybie _offline"
 
 #: src/text.vala:529
 msgid "Sort by _Name"
@@ -642,7 +642,7 @@ msgstr ""
 
 #: src/text.vala:542
 msgid "Error connecting"
-msgstr "Błąd łączenie"
+msgstr "Błąd podczas łączenia"
 
 #: src/text.vala:543
 msgid "Hamachi login failed"
@@ -650,7 +650,7 @@ msgstr "Zalogowanie do Hamachi się nie powiodło"
 
 #: src/text.vala:544
 msgid "No internet connection"
-msgstr "Brak połączenia z Internetem"
+msgstr "Brak połączenia z Internetem"
 
 #: src/text.vala:546
 msgid "Hamachi lost connection"
@@ -658,19 +658,19 @@ msgstr "Hamachi utraciło połączenie"
 
 #: src/text.vala:547
 msgid "Member online"
-msgstr "Członek jest w trybie online"
+msgstr "Członek jest w trybie online"
 
 #: src/text.vala:548
 msgid "{0} came online in the network {1}"
-msgstr "Użytkownik {0} przeszedł do trybu online w sieci {1}"
+msgstr "Użytkownik {0} przeszedł do trybu online w sieci {1}"
 
 #: src/text.vala:549
 msgid "Member offline"
-msgstr "Członek jest w trybie offline"
+msgstr "Członek jest w trybie offline"
 
 #: src/text.vala:550
 msgid "{0} went offline in the network {1}"
-msgstr "Użytkownik {0} przeszedł do trybu offline w sieci {1}"
+msgstr "Użytkownik {0} przeszedł do trybu offline w sieci {1}"
 
 #: src/text.vala:551
 msgid "Member joined"
@@ -722,7 +722,7 @@ msgstr "Polecenie IPv_6:"
 
 #: src/text.vala:564
 msgid "Use %A for address and %N for nickname"
-msgstr "Użycie %A dla adresu i %N dla pseudonimu"
+msgstr "%A oznacza adres, a %N pseudonim"
 
 #: src/text.vala:565
 msgid "_Priority:"
@@ -734,11 +734,11 @@ msgstr "Usuń"
 
 #: src/text.vala:568
 msgid "Move up"
-msgstr "W górę"
+msgstr "W górę"
 
 #: src/text.vala:569
 msgid "Move down"
-msgstr "W dół"
+msgstr "W dół"
 
 #: src/text.vala:570
 msgid "Set as default action"
@@ -777,32 +777,32 @@ msgstr[2] "_Aktualizowanie listy sieci co %S _sekund"
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
-"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innej sieci"
+"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innej sieci"
 msgstr[1] ""
-"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innych sieciach"
+"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innych sieciach"
 msgstr[2] ""
-"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innych sieciach"
+"Użytkownik {0} przeszedł do trybu online w sieci {1} i {2} innych sieciach"
 
 #: src/text.vala:594
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
-"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innej sieci"
+"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innej sieci"
 msgstr[1] ""
-"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innych sieciach"
+"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innych sieciach"
 msgstr[2] ""
-"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innych sieciach"
+"Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innych sieciach"
 
 #: src/text.vala:599
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "Użytkownik {0} dołączył do sieci {1} i {2} innej sieci"
-msgstr[1] "Użytkownik {0} dołączył do sieci {1} i {2} innych sieci"
-msgstr[2] "Użytkownik {0} dołączył do sieci {1} i {2} innych sieci"
+msgstr[0] "Użytkownik {0} dołączył do sieci {1} i {2} innej sieci"
+msgstr[1] "Użytkownik {0} dołączył do sieci {1} i {2} innych sieci"
+msgstr[2] "Użytkownik {0} dołączył do sieci {1} i {2} innych sieci"
 
 #: src/text.vala:604
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
-msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
-msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
+msgstr[0] "Użytkownik {0} opuścił sieć {1} i {2} inną sieć"
+msgstr[1] "Użytkownik {0} opuścił sieć {1} i {2} inne sieci"
+msgstr[2] "Użytkownik {0} opuścił sieć {1} i {2} innych sieci"
