@@ -67,7 +67,7 @@ Deutsch (de)
     Jannik Heller https://launchpad.net/~scrawl
 
 Español (es)
-    Adolfo Jayme https://launchpad.net/~fitoschido
+    Adolfo Jayme https://launchpad.net/~fitojb
     Eduardo Parra https://launchpad.net/~soker
 
 Français (fr)
@@ -96,10 +96,10 @@ Nederlands (nl)
 
 Polski (pl)
     Antoni Sperka https://launchpad.net/~antek1004-gmail
-    Piotr Drąg https://launchpad.net/~raven46
+    Piotr Drąg https://launchpad.net/~piotrdrag
 
 Português do Brasil (pt-BR)
-    Rodrigo de Avila https://launchpad.net/~rodrigo-avila
+    Rodrigo de Avila https://launchpad.net/~rodrigo.avila
 
 Русский (ru)
     jmb_kz https://launchpad.net/~jmb-kz
