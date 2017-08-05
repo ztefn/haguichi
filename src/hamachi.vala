@@ -108,36 +108,54 @@ public class Hamachi : Object
     {
         string init_system = (string) Settings.init_system.val;
         
-        if (Command.exists ("systemctl") &&
-            ((init_system == "auto") ||
-             (init_system == "systemctl")))
+        if ((init_system == "systemctl") ||
+            ((init_system == "auto") &&
+             Command.exists ("systemctl") &&
+             systemctl_unit_found()))
         {
             // Systemd
-            service = "systemctl {0} logmein-hamachi";
+            service = "systemctl {0} logmein-hamachi.service";
         }
-        else if (Command.exists ("service") &&
-                 ((init_system == "auto") ||
-                  (init_system == "service")))
+        else if ((init_system == "service") ||
+                 ((init_system == "auto") &&
+                  Command.exists ("service")))
         {
             // Upstart
             service = "service logmein-hamachi {0}";
         }
-        else if (FileUtils.test ("/etc/init.d/logmein-hamachi", GLib.FileTest.EXISTS) &&
-                 ((init_system == "auto") ||
-                  (init_system == "init.d")))
+        else if ((init_system == "init.d") ||
+                 ((init_system == "auto") &&
+                  FileUtils.test ("/etc/init.d/logmein-hamachi", GLib.FileTest.EXISTS)))
         {
             // Sysvinit
             service = "/etc/init.d/logmein-hamachi {0}";
         }
-        else if (FileUtils.test ("/etc/rc.d/logmein-hamachi", GLib.FileTest.EXISTS) &&
-                 ((init_system == "auto") ||
-                  (init_system == "rc.d")))
+        else if ((init_system == "rc.d") ||
+                 ((init_system == "auto") &&
+                  FileUtils.test ("/etc/rc.d/logmein-hamachi", GLib.FileTest.EXISTS)))
         {
             // BSD style init
             service = "/etc/rc.d/logmein-hamachi {0}";
         }
         
-        Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.determine_service", service);
+        Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.determine_service", init_system + ": " + service);
+    }
+    
+    public static bool systemctl_unit_found ()
+    {
+        bool found = true;
+        
+        string output = Command.return_output ("systemctl status logmein-hamachi.service");
+        Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.systemctl_unit_found", output);
+        
+        if (output.contains ("Loaded: not-found") ||
+            output.contains ("Unit logmein-hamachi.service could not be found."))
+        {
+            found = false;
+        }
+        
+        Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.systemctl_unit_found", found.to_string());
+        return found;
     }
     
     public static string retrieve (string? output, string nfo)
