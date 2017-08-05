@@ -325,7 +325,8 @@ public class Controller : Object
                 return false;
             });
         }
-        else if (output != "")
+        else if ((output != "") &&
+                 (output.contains ("Request dismissed") == false))
         {
             Debug.log (Debug.domain.INFO, "Controller.go_start_thread", "Failed to start Hamachi, showing output.");
             
