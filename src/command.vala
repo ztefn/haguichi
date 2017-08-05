@@ -46,10 +46,17 @@ public class Command : Object
     public static string return_output (string command)
     {
         string output = "error";
+        string error;
+        int    exit_status;
         
         try
         {
-            GLib.Process.spawn_command_line_sync (command, out output);
+            GLib.Process.spawn_command_line_sync (command, out output, out error, out exit_status);
+            
+            if (error != "")
+            {
+                Debug.log (Debug.domain.ERROR, "Command.return_output", "stderr: " + error);
+            }
         }
         catch (SpawnError e)
         {
@@ -62,6 +69,11 @@ public class Command : Object
             Thread.usleep (100000);
             
             output = return_output (command);
+        }
+        
+        if ((output == "") && (error != ""))
+        {
+            output = error;
         }
         
         return output;
