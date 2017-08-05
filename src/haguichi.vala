@@ -35,6 +35,7 @@ class Haguichi : Gtk.Application
     
     private static int activate_count;
     private static uint registration_id;
+    private static int64 startup_moment;
     
     public Haguichi ()
     {
@@ -72,6 +73,8 @@ class Haguichi : Gtk.Application
     public override void startup ()
     {
         base.startup();
+        
+        startup_moment = get_real_time();
         
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
@@ -125,6 +128,8 @@ class Haguichi : Gtk.Application
         
         Controller.last_status = -3;
         Controller.init();
+        
+        Debug.log (Debug.domain.INFO, "Haguichi.startup", "Completed startup in " + (get_real_time() - startup_moment).to_string() + " microseconds");
     }
     
     public static int main (string[] args)
