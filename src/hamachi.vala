@@ -145,7 +145,7 @@ public class Hamachi : Object
     {
         bool found = true;
         
-        string output = Command.return_output ("systemctl status logmein-hamachi.service");
+        string output = Command.return_output ("bash -c \"systemctl status logmein-hamachi.service\" 2>&1");
         Debug.log (Debug.domain.ENVIRONMENT, "Hamachi.systemctl_unit_found", output);
         
         if (output.contains ("Loaded: not-found") ||
