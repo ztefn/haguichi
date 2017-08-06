@@ -41,6 +41,7 @@ sources = [
     'src/member-event.vala',
     'src/member.vala',
     'src/menus/command-menu-item.vala',
+    'src/menus/join-create-menu.vala',
     'src/menus/member-menu.vala',
     'src/menus/network-menu.vala',
     'src/network-view.vala',

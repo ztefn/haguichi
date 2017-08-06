@@ -41,9 +41,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     public NetworkView network_view;
     
     private ScrolledWindow scrolled_window;
-    private Widgets.MessageBox empty_box;
+    private EventBox empty_box;
     private Box connected_box;
     private Box disconnected_box;
+    
+    private Menus.JoinCreateMenu join_create_menu;
     
     private Spinner spinner;
     
@@ -99,8 +101,23 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         scrolled_window.add (network_view);
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
-        empty_box = new Widgets.MessageBox();
-        empty_box.set_message (Text.empty_list_heading, Text.empty_list_message);
+        join_create_menu = new Menus.JoinCreateMenu();
+        
+        Widgets.MessageBox empty_message_box = new Widgets.MessageBox();
+        empty_message_box.set_message (Text.empty_list_heading, Text.empty_list_message);
+        
+        empty_box = new EventBox();
+        empty_box.add (empty_message_box);
+        empty_box.button_press_event.connect ((event) =>
+        {
+            if (event.button == 3)
+            {
+                join_create_menu.popup (null, null, null, 0, get_current_event_time());
+                return true;
+            }
+            
+            return false;
+        });
         
         connected_box = new Box (Orientation.VERTICAL, 0);
         connected_box.pack_start (scrolled_window, true, true, 0);
@@ -468,7 +485,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             empty_box.hide();
             scrolled_window.show();
         }
-
+        
         sidebar.update();
     }
     

@@ -39,7 +39,7 @@ public class NetworkView : TreeView
     
     private Menus.NetworkMenu network_menu;
     private Menus.MemberMenu member_menu;
-    private Gtk.Menu tree_menu;
+    private Menus.JoinCreateMenu join_create_menu;
     
     private bool skip_update_collapsed_networks;
 
@@ -108,19 +108,9 @@ public class NetworkView : TreeView
     
     public void generate_popup_menus ()
     {
-        network_menu = new Menus.NetworkMenu();
-        member_menu  = new Menus.MemberMenu();
-        
-        Gtk.MenuItem join = new Gtk.MenuItem.with_mnemonic (Text.join_network_label);
-        join.activate.connect (GlobalEvents.join_network);
-        
-        Gtk.MenuItem create = new Gtk.MenuItem.with_mnemonic (Text.create_network_label);
-        create.activate.connect (GlobalEvents.create_network);
-        
-        tree_menu = new Gtk.Menu();
-        tree_menu.add (join);
-        tree_menu.add (create);
-        tree_menu.show_all();
+        network_menu     = new Menus.NetworkMenu();
+        member_menu      = new Menus.MemberMenu();
+        join_create_menu = new Menus.JoinCreateMenu();
     }
     
     private bool is_network (TreeModel _model, TreeIter _iter)
@@ -1006,7 +996,7 @@ public class NetworkView : TreeView
         
     }
     
-    public override bool button_release_event (Gdk.EventButton event)
+    public override bool button_press_event (Gdk.EventButton event)
     {
         if (event.button == 3)
         {
@@ -1020,10 +1010,10 @@ public class NetworkView : TreeView
             }
             else
             {
-                tree_menu.popup (null, null, null, 0, get_current_event_time());
+                join_create_menu.popup (null, null, null, 0, get_current_event_time());
             }
         }
         
-        return base.button_release_event(event);
+        return base.button_press_event(event);
     }
 }
