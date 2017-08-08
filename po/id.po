@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-03-08 11:24+0000\n"
+"PO-Revision-Date: 2017-08-08 17:48+0000\n"
 "Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-03-08 22:00+0000\n"
-"X-Generator: Launchpad (build 18330)\n"
+"X-Launchpad-Export-Date: 2017-08-08 19:56+0000\n"
+"X-Generator: Launchpad (build 18446)\n"
+"Language: id\n"
 
 #: src/text.vala:350
 msgid "A graphical frontend for Hamachi."
@@ -377,7 +377,7 @@ msgstr "_Akun:"
 
 #: src/text.vala:459
 msgid "Pending"
-msgstr ""
+msgstr "Tertunda"
 
 #: src/text.vala:461
 msgid "_Attach to Account…"
@@ -525,7 +525,8 @@ msgstr ""
 "Apakah anda yakin ingin mengeluarkan anggota “{0}”? dari jaringan “{1}”?"
 
 #: src/text.vala:506
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jika diijinkan, anggota yang dikeluarkan dapat bergabung kembali ke jaringan "
 "ini."
