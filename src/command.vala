@@ -45,7 +45,7 @@ public class Command : Object
     
     public static string return_output (string command)
     {
-        string output = "error";
+        string output;
         string error;
         int    exit_status;
         
@@ -60,10 +60,18 @@ public class Command : Object
         }
         catch (SpawnError e)
         {
-            Debug.log (Debug.domain.ERROR, "Command.return_output", e.message);
+            error = e.message;
+            Debug.log (Debug.domain.ERROR, "Command.return_output", error);
         }
         
-        if (output.contains (".. failed, busy")) // Keep trying until it's not busy anymore
+        // We don't like NULL strings
+        if (output == null)
+        {
+            output = "";
+        }
+        
+        // When hamachi is busy try again after a little while
+        if (output.contains (".. failed, busy"))
         {
             Debug.log (Debug.domain.HAMACHI, "Command.return_output", "Hamachi is busy, waiting to try again...");
             Thread.usleep (100000);
@@ -71,12 +79,15 @@ public class Command : Object
             output = return_output (command);
         }
         
+        // When there's no regular output we'd want to return the error if available
         if ((output == "") && (error != ""))
         {
-            output = error;
+            return error;
         }
-        
-        return output;
+        else
+        {
+            return output;
+        }
     }
     
     public static bool exists (string? command)

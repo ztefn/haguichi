@@ -72,12 +72,6 @@ public class Hamachi : Object
             return;
         }
         
-        if (output == "error")
-        {
-            Debug.log (Debug.domain.HAMACHI, "Hamachi.determine_version", "Error output");
-            return;
-        }
-        
         Debug.log (Debug.domain.HAMACHI, "Hamachi.determine_version", output);
         
         if (output.contains ("Hamachi, a zero-config virtual private networking utility, ver "))
