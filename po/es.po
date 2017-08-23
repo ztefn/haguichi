@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-06 15:54+0200\n"
-"PO-Revision-Date: 2017-08-22 13:29+0000\n"
+"PO-Revision-Date: 2017-08-23 17:17+0000\n"
 "Last-Translator: Adolfo Jayme <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-08-22 17:12+0000\n"
+"X-Launchpad-Export-Date: 2017-08-23 19:44+0000\n"
 "X-Generator: Launchpad (build 18446)\n"
 "Language: es\n"
 
@@ -201,7 +201,7 @@ msgstr "Debe configurar Hamachi antes de que pueda realizar una conexión."
 
 #: src/text.vala:406
 msgid "C_onfigure"
-msgstr "_Configurar"
+msgstr "C_onfigurar"
 
 #: src/text.vala:408
 msgid "Hamachi is not installed"
@@ -469,7 +469,7 @@ msgstr "Red no encontrada"
 
 #: src/text.vala:487
 msgid "Invalid password"
-msgstr "Contraseña incorrecta."
+msgstr "Contraseña incorrecta"
 
 #: src/text.vala:488
 msgid "Network is full"
@@ -745,12 +745,12 @@ msgstr "Revertir los cambios"
 
 #: src/text.vala:573
 msgid "Are you sure you want to revert all changes?"
-msgstr "¿Está seguro que desea borrar todos los cambios?"
+msgstr "¿Confirma que quiere revertir todos los cambios?"
 
 #: src/text.vala:574
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
-"Si borras todos los cambios, se restaurarán los comandos por defecto."
+"Si revierte todos los cambios, se restaurarán las órdenes predeterminadas."
 
 #: src/text.vala:579
 msgid "Reconnecting in {0} second"
