@@ -23,8 +23,9 @@ class Haguichi : Gtk.Application
     public static AppSession session;
     public static Inhibitor inhibitor;
     
-    public static bool use_app_menu;
+    public static string current_desktop;
     
+    public static bool use_app_menu;
     public static bool window_use_header_bar;
     public static bool dialog_use_header_bar;
     
@@ -92,27 +93,34 @@ class Haguichi : Gtk.Application
         Text.init();
         Settings.init();
         
-        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP") == "GNOME") &&
+        current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        
+        // Check if we should use an app menu on any GNOME (based) desktop,
+        // thus also match desktops like "ubuntu:GNOME", "Budgie:GNOME" and "GNOME-Flashback"
+        if ((current_desktop.contains ("GNOME")) &&
             (app.prefers_app_menu()))
         {
             use_app_menu = true;
         }
         
-        if ((Environment.get_variable ("XDG_CURRENT_DESKTOP").contains ("GNOME")) || // Match any GNOME based desktop, thus also stuff like "GNOME-Flashback" and "Budgie:GNOME"
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Deepin") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "KDE") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "Pantheon") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "XFCE") ||
-            (Environment.get_variable ("XDG_CURRENT_DESKTOP") == "X-Cinnamon"))
+        // Only on specific desktops we use header bars and possibly dark theme
+        if ((current_desktop.contains ("GNOME")) ||
+            (current_desktop == "Deepin") ||
+            (current_desktop == "KDE") ||
+            (current_desktop == "Pantheon") ||
+            (current_desktop == "XFCE") ||
+            (current_desktop == "X-Cinnamon"))
         {
-            if (Gtk.check_version (3, 20, 0) != null) // Add 52 pixels offset for all GTK+ versions before 3.20
+            window_use_header_bar = true;
+            Gtk.Settings.get_default().get ("gtk-dialogs-use-header", ref dialog_use_header_bar);
+            Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", (bool) Settings.prefer_dark_theme.val);
+            
+            // Add 52 pixels offset for all GTK+ versions before 3.20
+            if (Gtk.check_version (3, 20, 0) != null)
             {
             	Settings.decorator_offset = 52;
             }
-            window_use_header_bar = true;
-            Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", (bool) Settings.prefer_dark_theme.val);
         }
-        Gtk.Settings.get_default().get ("gtk-dialogs-use-header", ref dialog_use_header_bar);
         
         GlobalActions.init (app);
         Command.init();
