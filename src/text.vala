@@ -112,7 +112,7 @@ Slovenčina (sk)
 Svenska (sv)
     Daniel Holm https://launchpad.net/~danielholm
     Daniel Nylander https://launchpad.net/~yeager
-    David Bengtsson https://launchpad.net/~justfaking
+    David Bengtsson https://launchpad.net/~jstfaking
 
 Türkçe (tr)
     Aytunç Yeni https://launchpad.net/~aytuncyeni
