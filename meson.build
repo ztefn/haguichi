@@ -1,5 +1,5 @@
 project('haguichi', ['vala', 'c'],
-    version: '1.3.8',
+    version: '1.3.9',
     default_options: ['prefix=/usr', 'sysconfdir=/etc'],
     meson_version: '>= 0.40'
 )
