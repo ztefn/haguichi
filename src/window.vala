@@ -160,7 +160,15 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         content_box.set_size_request (-1, 180);
         content_box.size_allocate.connect (() =>
         {
-            sidebar_pos = content_box.position;
+            Gdk.WindowState ws = get_window().get_state();
+            
+            // Only update position when in normal window state
+            if (!((Gdk.WindowState.FULLSCREEN in ws) ||
+                  (Gdk.WindowState.MAXIMIZED in ws) ||
+                  (Gdk.WindowState.TILED in ws)))
+            {
+                sidebar_pos = content_box.position;
+            }
         });
         
         
@@ -252,23 +260,36 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     {
         Gdk.WindowState ws = get_window().get_state();
         
+        // Return when not window is not visible, otherwise we might receive wrong position and size
         if ((Gdk.WindowState.WITHDRAWN in ws) ||
-            (Gdk.WindowState.ICONIFIED in ws) ||
-            (Gdk.WindowState.MAXIMIZED in ws) ||
-            (Gdk.WindowState.TILED in ws))
+            (Gdk.WindowState.ICONIFIED in ws))
         {
-            return; // Return when not in normal window state, otherwise we'll receive wrong positions
+            return;
         }
         
-        get_position (out x, out y);
-        get_size (out width, out height);
+        int new_x, new_y, new_width, new_height;
         
-        width  -= Settings.decorator_offset;
-        height -= Settings.decorator_offset;
+        get_position (out new_x, out new_y);
+        get_size (out new_width, out new_height);
         
-        //print ("x: %d  y: %d  w: %d  h: %d\n", x, y, width, height);
+        new_width  -= Settings.decorator_offset;
+        new_height -= Settings.decorator_offset;
         
-        if (width > Settings.switch_layout_threshold)
+        //print ("x: %d  y: %d  w: %d  h: %d\n", new_x, new_y, new_width, new_height);
+        
+        // Only update position and size when in normal window state
+        if (!((Gdk.WindowState.FULLSCREEN in ws) ||
+              (Gdk.WindowState.MAXIMIZED in ws) ||
+              (Gdk.WindowState.TILED in ws)))
+        {
+            x = new_x;
+            y = new_y;
+            
+            width  = new_width;
+            height = new_height;
+        }
+        
+        if (new_width > Settings.switch_layout_threshold)
         {
             network_view.set_layout_from_string ("large");
         }
@@ -277,7 +298,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             network_view.set_layout_from_string ("small");
         }
         
-        if (width > Settings.switch_sidebar_threshold)
+        if (new_width > Settings.switch_sidebar_threshold)
         {
             sidebar.show();
         }
@@ -291,13 +312,14 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             get_preferred_width (out minimum_width, null);
             minimum_width -= Settings.decorator_offset;
             
-            if ((Gtk.check_version (3, 18, 0) == null) && // Add 50 pixels just for GTK+ version 3.18
+            // Add 50 pixels just for GTK+ version 3.18
+            if ((Gtk.check_version (3, 18, 0) == null) &&
                 (Gtk.check_version (3, 20, 0) != null))
             {
                 minimum_width += 50;
             }
         }
-        header_bar.show_hide_buttons (width, minimum_width);
+        header_bar.show_hide_buttons (new_width, minimum_width);
     }
     
     public void save_geometry ()
@@ -317,17 +339,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         maximized = (bool) (Gdk.WindowState.MAXIMIZED in event.new_window_state);
         Debug.log (Debug.domain.GUI, "Window.on_state_changed", "Maximized: " + maximized.to_string());
-        
-        if (maximized)
-        {
-            network_view.set_layout_from_string ("large");
-            sidebar.show();
-            header_bar.show_all_buttons();
-        }
-        else
-        {
-            move_resize();
-        }
         
         return false;
     }
