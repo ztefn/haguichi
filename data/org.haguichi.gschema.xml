@@ -139,9 +139,6 @@
     <key type="i" name="height">
       <default>500</default>
     </key>
-    <key type="b" name="maximized">
-      <default>false</default>
-    </key>
     <key type="i" name="position-x">
       <default>120</default>
     </key>

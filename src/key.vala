@@ -184,17 +184,6 @@ public class Key : Object
             {
                 Command.determine_sudo();
             }
-            else if (key == Settings.win_maximized.key_name)
-            {
-                if ((bool) _value)
-                {
-                    Haguichi.window.maximize();
-                }
-                else
-                {
-                    Haguichi.window.unmaximize();
-                }
-            }
             else if (key == Settings.prefer_dark_theme.key_name)
             {
                 Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", (bool) _value);

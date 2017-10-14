@@ -45,13 +45,12 @@ public class Settings : Object
     public static Key notify_on_member_leave;
     public static Key notify_on_member_offline;
     public static Key notify_on_member_online;
-    public static Key win_height;
-    public static Key win_maximized;
-    public static Key win_x;
-    public static Key win_y;
+    public static Key height;
+    public static Key position_x;
+    public static Key position_y;
     public static Key prefer_dark_theme;
     public static Key sidebar_position;
-    public static Key win_width;
+    public static Key width;
 
     public static void init ()
     {
@@ -87,12 +86,11 @@ public class Settings : Object
         notify_on_member_leave        = new Key ("notifications", "member-leave");
         notify_on_member_offline      = new Key ("notifications", "member-offline");
         notify_on_member_online       = new Key ("notifications", "member-online");
-        win_height                    = new Key ("ui", "height");
-        win_maximized                 = new Key ("ui", "maximized");
-        win_x                         = new Key ("ui", "position-x");
-        win_y                         = new Key ("ui", "position-y");
+        height                        = new Key ("ui", "height");
+        position_x                    = new Key ("ui", "position-x");
+        position_y                    = new Key ("ui", "position-y");
         prefer_dark_theme             = new Key ("ui", "prefer-dark-theme");
         sidebar_position              = new Key ("ui", "sidebar-position");
-        win_width                     = new Key ("ui", "width");
+        width                         = new Key ("ui", "width");
     }
 }

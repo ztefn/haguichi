@@ -206,11 +206,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         delete_event.connect (on_win_delete);
         key_press_event.connect (on_key_press);
         
-        width  = (int) Settings.win_width.val  + Settings.decorator_offset;
-        height = (int) Settings.win_height.val + Settings.decorator_offset;
+        width  = (int) Settings.width.val  + Settings.decorator_offset;
+        height = (int) Settings.height.val + Settings.decorator_offset;
         
-        x = (int) Settings.win_x.val;
-        y = (int) Settings.win_y.val;
+        x = (int) Settings.position_x.val;
+        y = (int) Settings.position_y.val;
         
         add (main_box);
         set_default_size (width, height);
@@ -221,13 +221,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         if (Haguichi.hidden == false)
         {
             show();
-        }
-        
-        maximized = (bool) Settings.win_maximized.val;
-        
-        if (maximized)
-        {
-            maximize();
         }
     }
     
@@ -324,11 +317,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     
     public void save_geometry ()
     {
-        Settings.win_x.val = x;
-        Settings.win_y.val = y;
-        Settings.win_width.val = width;
-        Settings.win_height.val = height;
-        Settings.win_maximized.val = maximized;
+        Settings.position_x.val = x;
+        Settings.position_y.val = y;
+        Settings.width.val = width;
+        Settings.height.val = height;
         Settings.sidebar_position.val = sidebar_pos;
     }
     
