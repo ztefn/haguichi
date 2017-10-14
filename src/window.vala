@@ -160,14 +160,19 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         content_box.set_size_request (-1, 180);
         content_box.size_allocate.connect (() =>
         {
-            Gdk.WindowState ws = get_window().get_state();
+            Gdk.Window w = get_window();
             
-            // Only update position when in normal window state
-            if (!((Gdk.WindowState.FULLSCREEN in ws) ||
-                  (Gdk.WindowState.MAXIMIZED in ws) ||
-                  (Gdk.WindowState.TILED in ws)))
+            if (w != null)
             {
-                sidebar_pos = content_box.position;
+                Gdk.WindowState ws = w.get_state();
+                
+                // Only update position when in normal window state
+                if (!((Gdk.WindowState.FULLSCREEN in ws) ||
+                      (Gdk.WindowState.MAXIMIZED in ws) ||
+                      (Gdk.WindowState.TILED in ws)))
+                {
+                    sidebar_pos = content_box.position;
+                }
             }
         });
         
