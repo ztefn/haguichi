@@ -162,17 +162,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         {
             Gdk.Window w = get_window();
             
-            if (w != null)
+            // Only update position when in normal window state
+            if (w != null && is_state_normal (w.get_state()))
             {
-                Gdk.WindowState ws = w.get_state();
-                
-                // Only update position when in normal window state
-                if (!((Gdk.WindowState.FULLSCREEN in ws) ||
-                      (Gdk.WindowState.MAXIMIZED in ws) ||
-                      (Gdk.WindowState.TILED in ws)))
-                {
-                    sidebar_pos = content_box.position;
-                }
+                sidebar_pos = content_box.position;
             }
         });
         
@@ -248,6 +241,20 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         text_context.restore();
     }
     
+    private bool is_state_normal (Gdk.WindowState ws)
+    {
+        if ((Gdk.WindowState.FULLSCREEN in ws) ||
+            (Gdk.WindowState.MAXIMIZED in ws) ||
+            (Gdk.WindowState.TILED in ws))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    
     private bool on_configure (Gdk.EventConfigure event)
     {
         move_resize();
@@ -276,9 +283,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         //print ("x: %d  y: %d  w: %d  h: %d\n", new_x, new_y, new_width, new_height);
         
         // Only update position and size when in normal window state
-        if (!((Gdk.WindowState.FULLSCREEN in ws) ||
-              (Gdk.WindowState.MAXIMIZED in ws) ||
-              (Gdk.WindowState.TILED in ws)))
+        if (is_state_normal (ws))
         {
             x = new_x;
             y = new_y;
