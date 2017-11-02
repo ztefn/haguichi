@@ -153,10 +153,12 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         left_box.pack_start (disconnected_box,    true,  true,  0);
         left_box.pack_start (connected_box,       true,  true,  0);
         
+        sidebar_pos = (int) Settings.sidebar_position.val;
+        
         content_box = new Paned (Orientation.HORIZONTAL);
         content_box.pack1 (left_box, false, false);
         content_box.pack2 (sidebar, false, true);
-        content_box.position = (int) Settings.sidebar_position.val;
+        content_box.position = sidebar_pos;
         content_box.set_size_request (-1, 180);
         content_box.size_allocate.connect (() =>
         {
