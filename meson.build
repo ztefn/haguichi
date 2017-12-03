@@ -1,4 +1,6 @@
-project('haguichi', ['vala', 'c'],
+project(
+    'haguichi',
+    ['vala', 'c'],
     version: '1.3.9',
     default_options: ['prefix=/usr', 'sysconfdir=/etc'],
     meson_version: '>= 0.40'
@@ -66,10 +68,10 @@ sources = [
 deps = [
     dependency('gio-2.0'),
     dependency('gio-unix-2.0'),
-    dependency('glib-2.0', version: '>=2.42'),
+    dependency('glib-2.0', version: '>= 2.42'),
     dependency('gobject-2.0'),
-    dependency('gtk+-3.0', version: '>=3.14'),
-    dependency('libnotify', version: '>=0.7.6')
+    dependency('gtk+-3.0', version: '>= 3.14'),
+    dependency('libnotify', version: '>= 0.7.6')
 ]
 
 executable(
