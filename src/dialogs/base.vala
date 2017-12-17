@@ -15,7 +15,6 @@ namespace Dialogs
     public class Base : MessageDialog
     {
         public int response_id;
-        public Box contents;
         
         public Base (Window parent, string header_text, string message_text, MessageType _message_type)
         {
