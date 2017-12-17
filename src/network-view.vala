@@ -80,7 +80,6 @@ public class NetworkView : TreeView
         cursor_changed.connect (row_handler);
         headers_visible        = false;
         set_search_entry       (HaguichiWindow.search_entry);
-        set_search_equal_func  (on_search_equal_func);
         
         init_store();
         set_layout_from_string ("small");
@@ -510,64 +509,38 @@ public class NetworkView : TreeView
             _model.get_value (_iter, network_column, out network_val);
             Network network = (Network) network_val;
             
-            string match_text = network.name + " " + network.id;
-            
-            if (is_network (_model, _iter))
+            if (network != null)
             {
-                foreach (Member member in network.members)
+                string match_text = network.name + " " + network.id;
+                
+                if (is_network (_model, _iter))
                 {
-                    if ((show_offline_members) ||
-                        (member.status.status_int != 0))
+                    foreach (Member member in network.members)
+                    {
+                        if ((show_offline_members) ||
+                            (member.status.status_int != 0))
+                        {
+                            match_text += " " + member.nick + " " + member.client_id + " " + member.ipv4 + " " + member.ipv6;
+                        }
+                    }
+                }
+                else
+                {
+                    Value member_val;
+                    _model.get_value (_iter, member_column, out member_val);
+                    Member member = (Member) member_val;
+                    
+                    if (member != null)
                     {
                         match_text += " " + member.nick + " " + member.client_id + " " + member.ipv4 + " " + member.ipv6;
                     }
                 }
-            }
-            else
-            {
-                Value member_val;
-                _model.get_value (_iter, member_column, out member_val);
-                Member member = (Member) member_val;
                 
-                if (member != null)
+                if (!match_text.down().contains (filter_text))
                 {
-                    match_text += " " + member.nick + " " + member.client_id + " " + member.ipv4 + " " + member.ipv6;
+                    return false;
                 }
             }
-            
-            if (!match_text.down().contains (filter_text))
-            {
-                return false;
-            }
-        }
-        
-        return true;
-    }
-    
-    private bool on_search_equal_func (TreeModel _model, int column, string filter_text, TreeIter _iter)
-    {
-        Value network_val;
-        _model.get_value (_iter, network_column, out network_val);
-        Network network = (Network) network_val;
-        
-        string match_text;
-        
-        if (is_network (_model, _iter))
-        {
-            match_text = network.name + " " + network.id;
-        }
-        else
-        {
-            Value member_val;
-            _model.get_value (_iter, member_column, out member_val);
-            Member member = (Member) member_val;
-            
-            match_text = member.nick + " " + member.client_id + " " + member.ipv4 + " " + member.ipv6;
-        }
-        
-        if (match_text.down().contains (filter_text))
-        {
-            return false;
         }
         
         return true;
