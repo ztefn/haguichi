@@ -31,7 +31,7 @@
     <value value="1" nick="status"/>
   </enum>
 
-  <schema path="/org/haguichi/" id="org.haguichi" gettext-domain="haguichi">
+  <schema path="/org/haguichi/" id="org.haguichi">
     <child schema="org.haguichi.behavior" name="behavior"/>
     <child schema="org.haguichi.commands" name="commands"/>
     <child schema="org.haguichi.config" name="config"/>
@@ -40,7 +40,7 @@
     <child schema="org.haguichi.ui" name="ui"/>
   </schema>
 
-  <schema path="/org/haguichi/behavior/" id="org.haguichi.behavior" gettext-domain="haguichi">
+  <schema path="/org/haguichi/behavior/" id="org.haguichi.behavior">
     <key type="b" name="connect-on-startup">
       <default>true</default>
     </key>
@@ -55,7 +55,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/commands/" id="org.haguichi.commands" gettext-domain="haguichi">
+  <schema path="/org/haguichi/commands/" id="org.haguichi.commands">
     <key type="as" name="customizable">
       <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4', 'false;false;_SSH;%TERMINAL ssh %A;%TERMINAL ssh %A;IPv4']</default>
     </key>
@@ -67,7 +67,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/config/" id="org.haguichi.config" gettext-domain="haguichi">
+  <schema path="/org/haguichi/config/" id="org.haguichi.config">
     <key type="s" name="check-internet-hostname">
       <default>'www.google.com'</default>
     </key>
@@ -90,7 +90,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/network-list/" id="org.haguichi.network-list" gettext-domain="haguichi">
+  <schema path="/org/haguichi/network-list/" id="org.haguichi.network-list">
     <key type="as" name="collapsed-networks">
       <default>[]</default>
     </key>
@@ -117,7 +117,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/notifications/" id="org.haguichi.notifications" gettext-domain="haguichi">
+  <schema path="/org/haguichi/notifications/" id="org.haguichi.notifications">
     <key type="b" name="connection-loss">
       <default>true</default>
     </key>
@@ -135,7 +135,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/ui/" id="org.haguichi.ui" gettext-domain="haguichi">
+  <schema path="/org/haguichi/ui/" id="org.haguichi.ui">
     <key type="i" name="height">
       <default>500</default>
     </key>
