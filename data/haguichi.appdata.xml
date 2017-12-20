@@ -39,7 +39,7 @@
   <url type="donation">https://www.haguichi.net/donate/</url>
   <url type="translate">https://translations.launchpad.net/haguichi</url>
   <developer_name>Stephen Brandt</developer_name>
-  <updatecontact>stephen_at_stephenbrandt.com</updatecontact>
+  <update_contact>stephen_at_stephenbrandt.com</update_contact>
   <translation type="gettext">haguichi</translation>
   <languages>
     <lang percentage="100">ast</lang>
