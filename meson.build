@@ -74,6 +74,18 @@ deps = [
     dependency('libnotify', version: '>= 0.7.6')
 ]
 
+if get_option('enable-appindicator')
+    add_project_arguments(
+        ['-D', 'ENABLE_APPINDICATOR'],
+        language: 'vala'
+    )
+    deps += dependency('appindicator3-0.1')
+    sources += [
+        'src/indicator.vala',
+        'src/indicator-menu.vala'
+    ]
+endif
+
 executable(
     meson.project_name(),
     sources,
