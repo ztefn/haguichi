@@ -26,7 +26,7 @@ public class IndicatorMenu : Gtk.Menu
     
     public IndicatorMenu()
     {
-        show_item = new Gtk.CheckMenuItem.with_mnemonic (_("_Show Haguichi"));
+        show_item = new Gtk.CheckMenuItem.with_mnemonic (Text.show_app);
         show_item.toggled.connect (() =>
         {
             if (show_item.active)
@@ -39,40 +39,40 @@ public class IndicatorMenu : Gtk.Menu
             }
         });
         
-        connecting_item = new Gtk.MenuItem.with_label (_("Connecting…").replace ("…", ""));
+        connecting_item = new Gtk.MenuItem.with_label (Text.connecting.replace ("…", ""));
         connecting_item.sensitive = false;
         
-        connect_item = new Gtk.MenuItem.with_mnemonic (_("C_onnect"));
+        connect_item = new Gtk.MenuItem.with_mnemonic (Text.connect_label);
         connect_item.activate.connect (() =>
         {
             Haguichi.session.start_hamachi();
         });
         
-        disconnect_item = new Gtk.MenuItem.with_mnemonic (_("_Disconnect"));
+        disconnect_item = new Gtk.MenuItem.with_mnemonic (Text.disconnect_label);
         disconnect_item.activate.connect (() =>
         {
             Haguichi.session.stop_hamachi();
         });
         
-        join_item = new Gtk.MenuItem.with_mnemonic (_("_Join Network…"));
+        join_item = new Gtk.MenuItem.with_mnemonic (Text.join_network_label);
         join_item.activate.connect (() =>
         {
             Haguichi.session.join_network();
         });
         
-        create_item = new Gtk.MenuItem.with_mnemonic (_("_Create Network…"));
+        create_item = new Gtk.MenuItem.with_mnemonic (Text.create_network_label);
         create_item.activate.connect (() =>
         {
             Haguichi.session.create_network();
         });
         
-        info_item = new Gtk.MenuItem.with_mnemonic (_("_Information"));
+        info_item = new Gtk.MenuItem.with_mnemonic (Text.information_label);
         info_item.activate.connect (() =>
         {
             Haguichi.session.information();
         });
         
-        quit_item = new Gtk.MenuItem.with_mnemonic (_("_Quit"));
+        quit_item = new Gtk.MenuItem.with_mnemonic (Text.quit_label);
         quit_item.activate.connect (() =>
         {
             Haguichi.session.quit_app();
