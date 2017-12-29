@@ -102,7 +102,6 @@ public class IndicatorMenu : Gtk.Menu
             Haguichi.session.mode_changed.disconnect (set_mode);
             Haguichi.session.modality_changed.disconnect (set_modality);
             Haguichi.session.visibility_changed.disconnect (set_visibility);
-            Haguichi.app.quit();
         });
     }
     
