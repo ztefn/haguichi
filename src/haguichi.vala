@@ -14,6 +14,9 @@ using Config;
 class Haguichi : Gtk.Application
 {
     public static Gtk.Application app;
+#if ENABLE_APPINDICATOR
+    public static HaguichiIndicator indicator;
+#endif
     public static HaguichiWindow window;
     public static Dialogs.Preferences preferences_dialog;
     
@@ -83,12 +86,6 @@ class Haguichi : Gtk.Application
         
         Debug.log (Debug.domain.INFO, "Haguichi.startup", "Greetings, I am " + Text.app_name + " " + Text.app_version);
         
-        if (Command.exists ("haguichi-indicator"))
-        {
-            Debug.log (Debug.domain.ENVIRONMENT, "Haguichi.startup", "Launching haguichi-indicator...");
-            Command.execute ("haguichi-indicator");
-        }
-        
         Notify.init (Text.app_name);
         Text.init();
         Settings.init();
@@ -125,6 +122,10 @@ class Haguichi : Gtk.Application
         GlobalActions.init (app);
         Command.init();
         Hamachi.init();
+        
+#if ENABLE_APPINDICATOR
+        indicator = new HaguichiIndicator();
+#endif
         
         window = new HaguichiWindow();
         add_window (window);
