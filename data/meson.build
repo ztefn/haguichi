@@ -1,7 +1,15 @@
-install_subdir(
-    'icons',
-    install_dir: get_option('datadir')
-)
+icon_themes = ['hicolor']
+
+if get_option('for-ubuntu')
+    icon_themes += ['ubuntu-mono-dark', 'ubuntu-mono-light']
+endif
+
+foreach theme : icon_themes
+    install_subdir(
+        'icons/' + theme,
+        install_dir: join_paths(get_option('datadir'), 'icons')
+    )
+endforeach
 
 install_data(
     meson.project_name() + '.appdata.xml',

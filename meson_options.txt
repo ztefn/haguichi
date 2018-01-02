@@ -1,1 +1,2 @@
 option('enable-appindicator', type: 'boolean', value: false)
+option('for-ubuntu', type: 'boolean', value: false)
