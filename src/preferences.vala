@@ -153,6 +153,15 @@ namespace Dialogs
                 Settings.disconnect_on_quit.val = disconnect_on_quit.active;
             });
             
+            update_network_list = new CheckButton();
+            update_network_list.use_underline = true;
+            update_network_list.active = (bool) Settings.update_network_list.val;
+            update_network_list.toggled.connect (() =>
+            {
+                Settings.update_network_list.val = update_network_list.active;
+                interval_spin.sensitive = update_network_list.active;
+            });
+            
             interval_spin = new SpinButton.with_range (0, 999, 1);
             interval_spin.sensitive = (bool) Settings.update_network_list.val;
             interval_spin.value = (int) Settings.update_interval.val;
@@ -163,12 +172,14 @@ namespace Dialogs
             interval_spin.max_length = 3;
             
             interval_label = new Label (null);
+            interval_label.use_underline = true;
             interval_label.mnemonic_widget = interval_spin;
             interval_label.halign = Align.START;
             
             interval_box = new Box (Orientation.HORIZONTAL, 0);
-            interval_box.pack_start (interval_spin,  false, false, 0);
-            interval_box.pack_start (interval_label, false, false, 0);
+            interval_box.pack_start (update_network_list, false, false, 0);
+            interval_box.pack_start (interval_spin,       false, false, 0);
+            interval_box.pack_start (interval_label,      false, false, 0);
             
             GroupBox behavior_box = new GroupBox (Text.behavior_group);
             behavior_box.add_widget (connect_on_startup);
@@ -199,24 +210,8 @@ namespace Dialogs
         {
             string[] interval_string = Text.update_network_list_interval ((int) interval_spin.value).split ("%S", 2);
             
-            if (update_network_list != null)
-            {
-                interval_box.remove (update_network_list);
-            }
-            
-            update_network_list = new CheckButton.with_mnemonic (interval_string[0] + " ");
-            update_network_list.active = (bool) Settings.update_network_list.val;
-            update_network_list.toggled.connect (() =>
-            {
-                Settings.update_network_list.val = update_network_list.active;
-                interval_spin.sensitive = update_network_list.active;
-            });
-            
-            interval_box.pack_start (update_network_list, false, false, 0);
-            interval_box.reorder_child (update_network_list, 0);
-            interval_box.show_all();
-            
-            interval_label.set_text_with_mnemonic (" " + interval_string[1]);
+            update_network_list.label = interval_string[0] + " ";
+            interval_label.label      = " " + interval_string[1];
         }
         
         public void open ()
