@@ -110,6 +110,24 @@ public class Utils : Object
         return output;
     }
     
+    public static string get_message_type_icon_name (Gtk.MessageType message_type)
+    {
+        switch (message_type)
+        {
+            case Gtk.MessageType.WARNING:
+                return "dialog-warning";
+            
+            case Gtk.MessageType.QUESTION:
+                return "dialog-question";
+            
+            case Gtk.MessageType.ERROR:
+                return "dialog-error";
+            
+            default:
+                return "dialog-info";
+        }
+    }
+    
     public static string get_available_theme_icon (string[] icon_names)
     {
         foreach (string icon_name in icon_names) // Check each icon name in the list for existence, and return immediately if it does

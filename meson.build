@@ -86,6 +86,14 @@ if get_option('enable-appindicator')
     ]
 endif
 
+if get_option('for-elementary')
+    add_project_arguments(
+        ['-D', 'FOR_ELEMENTARY'],
+        language: 'vala'
+    )
+    deps += dependency('granite', version: '>= 0.5')
+endif
+
 executable(
     meson.project_name(),
     sources,

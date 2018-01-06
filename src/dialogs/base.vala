@@ -12,25 +12,37 @@ using Gtk;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class Base : Granite.MessageDialog
+#else
     public class Base : MessageDialog
+#endif
     {
         public int response_id;
         
         public Base (Window parent, string header_text, string message_text, MessageType _message_type)
         {
-            GlobalEvents.set_modal_dialog (this);
-            
+#if FOR_ELEMENTARY
+            base.with_image_from_icon_name (header_text, message_text, Utils.get_message_type_icon_name (_message_type), ButtonsType.NONE);
+#else
             text           = header_text;
             secondary_text = message_text;
             message_type   = _message_type;
+#endif
             transient_for  = parent;
+            
+            GlobalEvents.set_modal_dialog (this);
             
             response.connect (on_response);
         }
         
         public void add_content (Widget widget)
         {
+#if FOR_ELEMENTARY
+            custom_bin.add (widget);
+#else
             ((Box) message_area).pack_end (widget, false, false, 0);   
+#endif
             widget.show();
         }
         
