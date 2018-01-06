@@ -37,6 +37,8 @@ public class CommandsEditor : Box
     private int priority_column;
     private int view_column;
     
+    private const string[] default_icon_names = {"emblem-default-symbolic", "emblem-ok-symbolic", "emblem-checked", "checkmark"};
+    
     public CommandsEditor ()
     {
         orientation         = Orientation.VERTICAL;
@@ -138,7 +140,7 @@ public class CommandsEditor : Box
         edit_but.tooltip_markup = Text.edit_tip;
         
         Image default_img = new Image();
-        default_img.set_from_icon_name ("emblem-default-symbolic", IconSize.MENU);
+        default_img.set_from_icon_name (Utils.get_available_theme_icon (default_icon_names), IconSize.MENU);
         
         default_but = new Button();
         default_but.image = default_img;
@@ -477,7 +479,7 @@ public class CommandsEditor : Box
         
         if ((bool) default_val)
         {
-            default_cell.icon_name = "emblem-default-symbolic";
+            default_cell.icon_name = Utils.get_available_theme_icon (default_icon_names);
         }
         else
         {

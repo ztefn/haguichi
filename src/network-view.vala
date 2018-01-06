@@ -210,7 +210,7 @@ public class NetworkView : TreeView
                 
                 tip_label.set_markup ("<big><b>" + Markup.escape_text (network.name) + "</b></big><small>" + status_string + id_string + member_string + owner_string + capacity_string + lock_string + approve_string + "</small>");
                 
-                tip_icon.set_from_icon_name (Utils.get_network_icon_name (false), IconSize.DIALOG);
+                tip_icon.set_from_icon_name (Utils.get_available_theme_icon ({"network-workgroup", "network"}), IconSize.DIALOG);
                 
                 tip_box.add (tip_icon);
                 tip_box.add (tip_label);
@@ -253,7 +253,7 @@ public class NetworkView : TreeView
                 
                 tip_label.set_markup ("<big><b>" + Markup.escape_text (member.nick) + "</b></big><small>" + status_string + client_string + address_string + tunnel_string + connection_string + "</small>");
                 
-                tip_icon.set_from_icon_name (Utils.get_member_icon_name (false), IconSize.DIALOG);
+                tip_icon.set_from_icon_name (Utils.get_available_theme_icon ({"stock_person", "avatar-default", "user-info", "user-identity"}), IconSize.DIALOG);
                 
                 tip_box.add (tip_icon);
                 tip_box.add (tip_label);

@@ -110,73 +110,16 @@ public class Utils : Object
         return output;
     }
     
-    public static string get_symbolic_icon_name (owned string icon_name)
+    public static string get_available_theme_icon (string[] icon_names)
     {
-        if (Gtk.IconTheme.get_default().has_icon (icon_name + "-symbolic") )
+        foreach (string icon_name in icon_names) // Check each icon name in the list for existence, and return immediately if it does
         {
-            icon_name += "-symbolic";
+            if (Gtk.IconTheme.get_default().has_icon (icon_name))
+            {
+                return icon_name;
+            }
         }
         
-        return icon_name;
-    }
-    
-    public static string get_information_icon_name (bool symbolic)
-    {
-        string icon_name = "";
-        
-        if (Gtk.IconTheme.get_default().has_icon ("dialog-information-symbolic") && symbolic)
-        {
-            icon_name = "dialog-information-symbolic";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("dialog-information"))
-        {
-            icon_name = "dialog-information";
-        }
-        
-        return icon_name;
-    }
-    
-    public static string get_network_icon_name (bool symbolic)
-    {
-        string icon_name = "";
-        
-        if (Gtk.IconTheme.get_default().has_icon ("network-workgroup-symbolic") && symbolic)
-        {
-            icon_name = "network-workgroup-symbolic";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("network-workgroup"))
-        {
-            icon_name = "network-workgroup";
-        }
-        
-        return icon_name;
-    }
-    
-    public static string get_member_icon_name (bool symbolic)
-    {
-        string icon_name = "";
-        
-        if (Gtk.IconTheme.get_default().has_icon ("avatar-default-symbolic") && symbolic)
-        {
-            icon_name = "avatar-default-symbolic";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("stock_person"))
-        {
-            icon_name = "stock_person";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("avatar-default"))
-        {
-            icon_name = "avatar-default";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("user-info"))
-        {
-            icon_name = "user-info";
-        }
-        else if (Gtk.IconTheme.get_default().has_icon ("user-identity"))
-        {
-            icon_name = "user-identity";
-        }
-        
-        return icon_name;
+        return icon_names[0]; // Return the first icon name as fallback
     }
 }
