@@ -54,15 +54,7 @@ public class Settings : Object
 
     public static void init ()
     {
-        var base_schema = new GLib.Settings (schema_base_id);
-        
-        if ((int) base_schema.get_value ("stamp") == 1)
-        {
-            Debug.log (Debug.domain.ENVIRONMENT, "Settings.init", "Transferring old settings...");
-            
-            base_schema.set_value ("stamp", 2);
-            Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/\"");
-        }
+        check();
         
         decorator_offset              = 0;
         switch_layout_threshold       = 620;
@@ -100,5 +92,21 @@ public class Settings : Object
         prefer_dark_theme             = new Key ("ui", "prefer-dark-theme");
         sidebar_position              = new Key ("ui", "sidebar-position");
         width                         = new Key ("ui", "width");
+    }
+    
+    public static void check ()
+    {
+        var base_schema = new GLib.Settings (schema_base_id);
+
+        int stamp = (int) base_schema.get_value ("stamp");
+        Debug.log (Debug.domain.ENVIRONMENT, "Settings.check", "Settings are on stamp " + stamp.to_string());
+        
+        if (stamp == 1)
+        {
+            base_schema.set_value ("stamp", 2);
+            
+            Debug.log (Debug.domain.ENVIRONMENT, "Settings.check", "Migrating user settings to new schema location...");
+            Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/; dconf reset -f /org/haguichi/\"");
+        }
     }
 }
