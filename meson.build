@@ -6,20 +6,37 @@ project(
     meson_version: '>= 0.40'
 )
 
+app_name    = meson.project_name()
+app_id      = 'com.github.ztefn.' + app_name
+app_version = meson.project_version()
+binary_name = app_name
+icon_name   = app_name
+
 add_project_arguments(
-    '-DPACKAGE_NAME="' + meson.project_name() + '"',
-    '-DVERSION="' + meson.project_version() + '"',
-    '-DGETTEXT_PACKAGE="' + meson.project_name() + '"',
-    '-DDATADIR="' + join_paths(get_option('prefix'), get_option('datadir')) + '"',
-    '-DLOCALEDIR="' + join_paths(get_option('prefix'), get_option('localedir')) + '"',
+    '-DGETTEXT_PACKAGE="' + app_name + '"',
     language: 'c'
+)
+
+conf = configuration_data()
+conf.set('PACKAGE_NAME', app_name)
+conf.set('VERSION', app_version)
+conf.set('BINARY_NAME', binary_name)
+conf.set('ICON_NAME', icon_name)
+conf.set('GETTEXT_PACKAGE', app_name)
+conf.set('DATADIR', join_paths(get_option('prefix'), get_option('datadir')))
+conf.set('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+
+config = configure_file(
+    input: 'src/config.vala.in',
+    output: 'config.vala',
+    configuration: conf
 )
 
 subdir('data')
 subdir('po')
 
 sources = [
-    'vapi/config.vapi',
+    config,
     'src/bubble.vala',
     'src/command.vala',
     'src/connection.vala',
@@ -95,7 +112,7 @@ if get_option('for-elementary')
 endif
 
 executable(
-    meson.project_name(),
+    binary_name,
     sources,
     dependencies: deps,
     install: true

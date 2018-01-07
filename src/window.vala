@@ -9,6 +9,7 @@
  */
 
 using Gtk;
+using Config;
 
 public class HaguichiWindow : Gtk.ApplicationWindow
 {
@@ -56,11 +57,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         try
         {
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  16, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  24, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  32, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi",  48, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon ("haguichi", 256, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  16, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  24, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  32, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  48, IconLookupFlags.FORCE_SIZE));
+            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME, 256, IconLookupFlags.FORCE_SIZE));
         }
         catch (Error e)
         {

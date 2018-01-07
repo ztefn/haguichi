@@ -10,7 +10,7 @@
 
 public class Settings : Object
 {
-    public static string schema_base_id;
+    public const  string schema_base_id = "com.github.ztefn.haguichi";
     
     public static int decorator_offset;
     public static int switch_layout_threshold;
@@ -54,7 +54,15 @@ public class Settings : Object
 
     public static void init ()
     {
-        schema_base_id                = "org." + Text.app_name.down();
+        var base_schema = new GLib.Settings (schema_base_id);
+        
+        if ((int) base_schema.get_value ("stamp") == 1)
+        {
+            Debug.log (Debug.domain.ENVIRONMENT, "Settings.init", "Transferring old settings...");
+            
+            base_schema.set_value ("stamp", 2);
+            Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/\"");
+        }
         
         decorator_offset              = 0;
         switch_layout_threshold       = 620;

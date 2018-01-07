@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
 
-  <enum id="org.haguichi.commands.init-system">
+  <enum id="com.github.ztefn.haguichi.commands.init-system">
     <value value="0" nick="auto"/>
     <value value="1" nick="systemctl"/>
     <value value="2" nick="service"/>
@@ -9,7 +9,7 @@
     <value value="4" nick="rc.d"/>
   </enum>
 
-  <enum id="org.haguichi.commands.super-user">
+  <enum id="com.github.ztefn.haguichi.commands.super-user">
     <value value="0" nick="auto"/>
     <value value="1" nick="pkexec"/>
     <value value="2" nick="gksudo"/>
@@ -20,27 +20,30 @@
     <value value="8" nick="sudo"/>
   </enum>
 
-  <enum id="org.haguichi.config.protocol">
+  <enum id="com.github.ztefn.haguichi.config.protocol">
     <value value="0" nick="both"/>
     <value value="1" nick="ipv4"/>
     <value value="2" nick="ipv6"/>
   </enum>
 
-  <enum id="org.haguichi.network-list.sort-by">
+  <enum id="com.github.ztefn.haguichi.network-list.sort-by">
     <value value="0" nick="name"/>
     <value value="1" nick="status"/>
   </enum>
 
-  <schema path="/org/haguichi/" id="org.haguichi">
-    <child schema="org.haguichi.behavior" name="behavior"/>
-    <child schema="org.haguichi.commands" name="commands"/>
-    <child schema="org.haguichi.config" name="config"/>
-    <child schema="org.haguichi.network-list" name="network-list"/>
-    <child schema="org.haguichi.notifications" name="notifications"/>
-    <child schema="org.haguichi.ui" name="ui"/>
+  <schema path="/com/github/ztefn/haguichi/" id="com.github.ztefn.haguichi">
+    <key type="i" name="stamp">
+      <default>1</default>
+    </key>
+    <child schema="com.github.ztefn.haguichi.behavior" name="behavior"/>
+    <child schema="com.github.ztefn.haguichi.commands" name="commands"/>
+    <child schema="com.github.ztefn.haguichi.config" name="config"/>
+    <child schema="com.github.ztefn.haguichi.network-list" name="network-list"/>
+    <child schema="com.github.ztefn.haguichi.notifications" name="notifications"/>
+    <child schema="com.github.ztefn.haguichi.ui" name="ui"/>
   </schema>
 
-  <schema path="/org/haguichi/behavior/" id="org.haguichi.behavior">
+  <schema path="/com/github/ztefn/haguichi/behavior/" id="com.github.ztefn.haguichi.behavior">
     <key type="b" name="connect-on-startup">
       <default>true</default>
     </key>
@@ -55,19 +58,19 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/commands/" id="org.haguichi.commands">
+  <schema path="/com/github/ztefn/haguichi/commands/" id="com.github.ztefn.haguichi.commands">
     <key type="as" name="customizable">
       <default>['true;true;_Browse Shares;%FILEMANAGER smb://%A/;%FILEMANAGER smb://[%A]/;IPv4', 'true;false;_View Remote Desktop;%REMOTEDESKTOP %A;%REMOTEDESKTOP [%A];IPv4', 'true;false;_Ping;%TERMINAL ping %A;%TERMINAL ping6 %A;IPv4', 'false;false;_SSH;%TERMINAL ssh %A;%TERMINAL ssh %A;IPv4']</default>
     </key>
-    <key name="init-system" enum="org.haguichi.commands.init-system">
+    <key name="init-system" enum="com.github.ztefn.haguichi.commands.init-system">
       <default>'auto'</default>
     </key>
-    <key name="super-user" enum="org.haguichi.commands.super-user">
+    <key name="super-user" enum="com.github.ztefn.haguichi.commands.super-user">
       <default>'auto'</default>
     </key>
   </schema>
 
-  <schema path="/org/haguichi/config/" id="org.haguichi.config">
+  <schema path="/com/github/ztefn/haguichi/config/" id="com.github.ztefn.haguichi.config">
     <key type="s" name="check-internet-hostname">
       <default>'www.google.com'</default>
     </key>
@@ -77,7 +80,7 @@
     <key type="s" name="nickname">
       <default>'%USERNAME'</default>
     </key>
-    <key name="protocol" enum="org.haguichi.config.protocol">
+    <key name="protocol" enum="com.github.ztefn.haguichi.config.protocol">
       <default>'both'</default>
     </key>
     <key type="i" name="reconnect-interval">
@@ -90,7 +93,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/network-list/" id="org.haguichi.network-list">
+  <schema path="/com/github/ztefn/haguichi/network-list/" id="com.github.ztefn.haguichi.network-list">
     <key type="as" name="collapsed-networks">
       <default>[]</default>
     </key>
@@ -112,12 +115,12 @@
     <key type="b" name="show-offline-members">
       <default>true</default>
     </key>
-    <key name="sort-by" enum="org.haguichi.network-list.sort-by">
+    <key name="sort-by" enum="com.github.ztefn.haguichi.network-list.sort-by">
       <default>'name'</default>
     </key>
   </schema>
 
-  <schema path="/org/haguichi/notifications/" id="org.haguichi.notifications">
+  <schema path="/com/github/ztefn/haguichi/notifications/" id="com.github.ztefn.haguichi.notifications">
     <key type="b" name="connection-loss">
       <default>true</default>
     </key>
@@ -135,7 +138,7 @@
     </key>
   </schema>
 
-  <schema path="/org/haguichi/ui/" id="org.haguichi.ui">
+  <schema path="/com/github/ztefn/haguichi/ui/" id="com.github.ztefn.haguichi.ui">
     <key type="i" name="height">
       <default>500</default>
     </key>

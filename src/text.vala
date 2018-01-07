@@ -8,17 +8,19 @@
  * or (at your option) any later version.
  */
 
+using Config;
+
 public class Text : Object
 {
     public const  string app_name                  = "Haguichi";
-    public const  string app_version               = Config.VERSION;
+    public const  string app_version               = VERSION;
     public const  string app_website               = "https://www.haguichi.net/";
     public const  string app_website_label         = "www.haguichi.net";
     public static string app_comments;
     public static string app_description;
     public const  string app_copyright             = "Copyright © 2007–2018 Stephen Brandt";
     public const  string app_license               =
-@"Haguichi is free software: you can redistribute it and/or modify
+"Haguichi is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
 by the Free Software Foundation, either version 3 of the License,
 or (at your option) any later version.
@@ -32,12 +34,12 @@ You should have received a copy of the GNU General Public License
 along with Haguichi. If not, see <http://www.gnu.org/licenses/>.";
     
     public const  string app_info                  =
-@"Haguichi, a graphical frontend for Hamachi.
+"Haguichi, a graphical frontend for Hamachi.
 Copyright © 2007–2018 Stephen Brandt <stephen@stephenbrandt.com>";
             
     public const  string app_help                  =
-@"Usage:
-  haguichi [options]
+"Usage:
+  " + BINARY_NAME + " [options]
 
 Options:
   -h, --help              Show this help and exit
@@ -52,7 +54,7 @@ Options:
     
     public static string[] app_authors;
     public const  string   app_translator_credits  =
-@"Asturianu (ast)
+"Asturianu (ast)
     Enol Puente https://launchpad.net/~enolp
     Tornes Llume https://launchpad.net/~l-lumex03-tornes
 

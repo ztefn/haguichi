@@ -11,22 +11,28 @@ foreach theme : icon_themes
     )
 endforeach
 
-install_data(
-    meson.project_name() + '.appdata.xml',
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
+configure_file(
+    input: app_id + '.appdata.xml.in',
+    output: app_id + '.appdata.xml',
+    install_dir: join_paths(get_option('datadir'), 'metainfo'),
+    configuration: conf
+)
+
+configure_file(
+    input: app_id + '.desktop.in',
+    output: app_id + '.desktop',
+    install_dir: join_paths(get_option('datadir'), 'applications'),
+    configuration: conf
+)
+
+configure_file(
+    input: app_id + '-autostart.desktop.in',
+    output: app_id + '-autostart.desktop',
+    install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart'),
+    configuration: conf
 )
 
 install_data(
-    meson.project_name() + '.desktop',
-    install_dir: join_paths(get_option('datadir'), 'applications')
-)
-
-install_data(
-    meson.project_name() + '-autostart.desktop',
-    install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart')
-)
-
-install_data(
-    'org.' + meson.project_name() + '.gschema.xml',
+    app_id + '.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
 )

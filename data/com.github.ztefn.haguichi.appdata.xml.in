@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop">
-  <id>haguichi.desktop</id>
+  <id>com.github.ztefn.haguichi.desktop</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Haguichi</name>
@@ -40,7 +40,7 @@
   <url type="translate">https://translations.launchpad.net/haguichi</url>
   <developer_name>Stephen Brandt</developer_name>
   <update_contact>stephen_at_stephenbrandt.com</update_contact>
-  <translation type="gettext">haguichi</translation>
+  <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <languages>
     <lang percentage="100">ast</lang>
     <lang percentage="100">bg</lang>

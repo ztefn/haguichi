@@ -38,8 +38,8 @@ class HaguichiIndicator
         
         menu = new IndicatorMenu();
         
-        indicator = new Indicator ("haguichi", icon_disconnected, IndicatorCategory.APPLICATION_STATUS);
-        indicator.set_title ("Haguichi");
+        indicator = new Indicator (Text.app_name.down(), icon_disconnected, IndicatorCategory.APPLICATION_STATUS);
+        indicator.set_title (Text.app_name);
         indicator.set_menu (menu);
         indicator.set_status (IndicatorStatus.ACTIVE);
         indicator.scroll_event.connect ((ind, steps, direction) =>

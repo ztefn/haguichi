@@ -117,7 +117,7 @@ public class GlobalEvents
         Gtk.show_about_dialog (null,
                                "transient-for",      Haguichi.window,
                                "program-name",       Text.app_name,
-                               "logo-icon-name",     Text.app_name.down(),
+                               "logo-icon-name",     Config.ICON_NAME,
                                "comments",           Text.app_comments,
                                "version",            Text.app_version,
                                "license",            Text.app_license,

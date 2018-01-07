@@ -8,7 +8,7 @@
  * or (at your option) any later version.
  */
 
-[DBus (name = "apps.Haguichi")]
+[DBus (name = "com.github.ztefn.haguichi")]
 public class AppSession : Object
 {
     public void show ()

@@ -19,7 +19,7 @@ public class Bubble : Object
     
     public Bubble (string summary, string body)
     {
-        notification = new Notify.Notification (summary, body, "haguichi");
+        notification = new Notify.Notification (summary, body, Config.ICON_NAME);
     }
     
     public void show ()

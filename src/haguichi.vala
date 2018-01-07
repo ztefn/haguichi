@@ -43,7 +43,7 @@ class Haguichi : Gtk.Application
     
     public Haguichi ()
     {
-        Object (application_id: "apps.Haguichi", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "com.github.ztefn.haguichi", flags: ApplicationFlags.FLAGS_NONE);
     }
     
     public override void activate ()
@@ -62,7 +62,7 @@ class Haguichi : Gtk.Application
         base.dbus_register (connection, object_path);
         
         session = new AppSession();
-        registration_id = connection.register_object ("/apps/Haguichi", session);
+        registration_id = connection.register_object ("/com/github/ztefn/haguichi", session);
         
         return true;
     }
