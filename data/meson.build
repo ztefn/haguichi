@@ -18,18 +18,38 @@ configure_file(
     configuration: conf
 )
 
-configure_file(
-    input: app_id + '.desktop.in',
-    output: app_id + '.desktop',
-    install_dir: join_paths(get_option('datadir'), 'applications'),
+desktop = app_id + '.desktop'
+
+desktop_in = configure_file(
+    input: desktop + '.in.in',
+    output: desktop + '.in',
     configuration: conf
 )
 
-configure_file(
-    input: app_id + '-autostart.desktop.in',
-    output: app_id + '-autostart.desktop',
-    install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart'),
+i18n.merge_file (
+    type: 'desktop',
+    input: desktop_in,
+    output: desktop,
+    po_dir: po_dir,
+    install: true,
+    install_dir: join_paths(get_option('datadir'), 'applications')
+)
+
+autostart = app_id + '-autostart.desktop'
+
+autostart_in = configure_file(
+    input: autostart + '.in.in',
+    output: autostart + '.in',
     configuration: conf
+)
+
+i18n.merge_file (
+    type: 'desktop',
+    input: autostart_in,
+    output: autostart,
+    po_dir: po_dir,
+    install: true,
+    install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart'),
 )
 
 install_data(

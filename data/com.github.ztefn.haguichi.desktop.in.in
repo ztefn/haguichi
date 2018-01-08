@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Haguichi
+GenericName=Zero Configuration VPN
+Exec=@BINARY_NAME@
+Terminal=false
+Comment=Join and create local networks over the Internet
+Icon=@ICON_NAME@
+Categories=GNOME;GTK;Network;P2P;
+Keywords=LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;
+X-GNOME-UsesNotifications=true

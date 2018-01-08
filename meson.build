@@ -27,6 +27,10 @@ conf.set('GETTEXT_PACKAGE', gettext_pkg)
 conf.set('DATADIR', join_paths(get_option('prefix'), get_option('datadir')))
 conf.set('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
 
+i18n = import('i18n')
+
+po_dir = join_paths(meson.source_root(), 'po')
+
 subdir('data')
 subdir('po')
 subdir('src')
