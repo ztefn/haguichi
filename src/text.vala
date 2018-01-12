@@ -47,7 +47,9 @@ Options:
   -d, --debug             Print debug messages
   --hidden                Start with hidden window
   --demo                  Run in demo mode
-  --list=FILE             Use a text file as list in demo mode\n\n""" + app_info + "\n";
+  --list=FILE             Use a text file as list in demo mode
+
+""" + app_info + "\n";
     
     public static string[] app_authors;
     public const  string   app_translator_credits  =
