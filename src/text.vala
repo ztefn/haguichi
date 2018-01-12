@@ -20,7 +20,7 @@ public class Text : Object
     public static string app_description;
     public const  string app_copyright             = "Copyright © 2007–2018 Stephen Brandt";
     public const  string app_license               =
-"Haguichi is free software: you can redistribute it and/or modify
+"""Haguichi is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
 by the Free Software Foundation, either version 3 of the License,
 or (at your option) any later version.
@@ -31,15 +31,14 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with Haguichi. If not, see <http://www.gnu.org/licenses/>.";
+along with Haguichi. If not, see <http://www.gnu.org/licenses/>.""";
     
     public const  string app_info                  =
-"Haguichi, a graphical frontend for Hamachi.
-Copyright © 2007–2018 Stephen Brandt <stephen@stephenbrandt.com>";
+"""Haguichi, a graphical frontend for Hamachi.
+Copyright © 2007–2018 Stephen Brandt <stephen@stephenbrandt.com>""";
             
     public const  string app_help                  =
-"Usage:
-  " + BINARY_NAME + " [options]
+"Usage:\n  " + BINARY_NAME + """ [options]
 
 Options:
   -h, --help              Show this help and exit
@@ -48,13 +47,11 @@ Options:
   -d, --debug             Print debug messages
   --hidden                Start with hidden window
   --demo                  Run in demo mode
-  --list=FILE             Use a text file as list in demo mode
-
-" + app_info + "\n";
+  --list=FILE             Use a text file as list in demo mode\n\n""" + app_info + "\n";
     
     public static string[] app_authors;
     public const  string   app_translator_credits  =
-"Asturianu (ast)
+"""Asturianu (ast)
     Enol Puente https://launchpad.net/~enolp
     Tornes Llume https://launchpad.net/~l-lumex03-tornes
 
@@ -122,7 +119,7 @@ Türkçe (tr)
 
 Українська (uk)
     Fedir Zinchuk https://launchpad.net/~fedikw
-";
+""";
     
     public const  string help_url                  = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=help";
     public const  string get_hamachi_url           = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=get-hamachi";
@@ -352,14 +349,16 @@ Türkçe (tr)
     
     public static void init ()
     {
+        // Description used in about dialog.
         app_comments                               = _("A graphical frontend for Hamachi.");
+        // Description used in application launchers.
         app_description                            = _("Join and create local networks over the Internet");
         
         app_authors                                = {"Stephen Brandt https://launchpad.net/~ztefn", ""};
         
         ok_label                                   = _("_OK");
         cancel_label                               = _("_Cancel");
-        cancel                                     = Utils.remove_mnemonics (cancel_label); // "Cancel";
+        cancel                                     = Utils.remove_mnemonics (cancel_label);
         save_label                                 = _("_Save");
         refresh_label                              = _("_Refresh");
         revert_label                               = _("_Revert");
@@ -371,7 +370,7 @@ Türkçe (tr)
         about_label                                = _("_About");
         quit_label                                 = _("_Quit");
         
-        show_app                                   = _("_Show Haguichi"); // This string is only used in indicators
+        show_app                                   = _("_Show Haguichi");
         
         yes                                        = _("Yes");
         no                                         = _("No");
@@ -388,18 +387,18 @@ Türkçe (tr)
         relayed                                    = _("Relayed");
         anonymous                                  = _("Anonymous");
         network_id_label                           = _("_Network ID:");
-        network_id                                 = Utils.remove_mnemonics (network_id_label); // "Network ID:"
+        network_id                                 = Utils.remove_mnemonics (network_id_label);
         password_label                             = _("_Password:");
         nick_label                                 = _("_Nickname:");
-        nick                                       = Utils.remove_mnemonics (nick_label); // "Nickname:"
+        nick                                       = Utils.remove_mnemonics (nick_label);
         
         offline                                    = _("Offline");
         online                                     = _("Online");
         unreachable                                = _("Unreachable");
         mismatch                                   = _("Protocol mismatch");
         conflict                                   = _("Conflicting address");
-        connect_label                              = _("C_onnect"); // This string is only used in indicators
-        disconnect_label                           = _("_Disconnect"); // This string is only used in indicators
+        connect_label                              = _("C_onnect");
+        disconnect_label                           = _("_Disconnect");
         reconnect_label                            = _("Reconnect");
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");
@@ -447,6 +446,7 @@ Türkçe (tr)
         vnc_label                                  = _("_View Remote Desktop");
         approve_label                              = _("_Approve");
         reject_label                               = _("_Reject");
+        // This action removes the selected member from the network.
         evict_label                                = _("_Evict");
         copy_address_ipv4_label                    = _("Copy IPv_4 Address");
         copy_address_ipv6_label                    = _("Copy IPv_6 Address");
@@ -461,7 +461,7 @@ Türkçe (tr)
         new_password_label                         = _("_New password:");
         
         account_label                              = _("_Account:");
-        account                                    = Utils.remove_mnemonics (account_label); // "Account:"
+        account                                    = Utils.remove_mnemonics (account_label);
         pending                                    = _("Pending");
         
         attach_label                               = _("_Attach to Account…");
@@ -520,6 +520,7 @@ Türkçe (tr)
         see_output                                 = _("See output for details.");
         
         general_tab                                = _("General");
+        // In this context meaning "work environment".
         desktop_tab                                = _("Desktop");
         commands_tab                               = _("Commands");
         
@@ -549,16 +550,6 @@ Türkçe (tr)
         connect_error_login_failed                 = _("Hamachi login failed");
         connect_error_no_internet_connection       = _("No internet connection");
         
-        notify_connection_lost                     = _("Hamachi lost connection");
-        notify_member_online_heading               = _("Member online");
-        notify_member_online_message               = _("{0} came online in the network {1}");
-        notify_member_offline_heading              = _("Member offline");
-        notify_member_offline_message              = _("{0} went offline in the network {1}");
-        notify_member_joined_heading               = _("Member joined");
-        notify_member_joined_message               = _("{0} joined the network {1}");
-        notify_member_left_heading                 = _("Member left");
-        notify_member_left_message                 = _("{0} left the network {1}");
-        
         add_tip                                    = _("Add");
         add_command_title                          = _("Add Command");
         add_label                                  = _("_Add");
@@ -578,6 +569,44 @@ Türkçe (tr)
         revert_tip                                 = _("Revert all changes");
         revert_heading                             = _("Are you sure you want to revert all changes?");
         revert_message                             = _("If you revert all changes, the default commands will be restored.");
+        
+        notify_connection_lost                     = _("Hamachi lost connection");
+        notify_member_online_heading               = _("Member online");
+        notify_member_offline_heading              = _("Member offline");
+        notify_member_joined_heading               = _("Member joined");
+        notify_member_left_heading                 = _("Member left");
+        // Notification bubble. For example: "T-800 came online in the network Skynet".
+        notify_member_online_message               = _("{0} came online in the network {1}");
+        // Notification bubble. For example: "T-800 went offline in the network Skynet".
+        notify_member_offline_message              = _("{0} went offline in the network {1}");
+        // Notification bubble. For example: "T-800 joined the network Skynet".
+        notify_member_joined_message               = _("{0} joined the network {1}");
+        // Notification bubble. For example: "T-800 left the network Skynet".
+        notify_member_left_message                 = _("{0} left the network {1}");
+    }
+    
+    public static string notify_member_online_message_plural (int count)
+    {
+        // Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+        return ngettext ("{0} came online in the network {1} and {2} other network", "{0} came online in the network {1} and {2} other networks", count);
+    }
+    
+    public static string notify_member_offline_message_plural (int count)
+    {
+        // Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+        return ngettext ("{0} went offline in the network {1} and {2} other network", "{0} went offline in the network {1} and {2} other networks", count);
+    }
+    
+    public static string notify_member_joined_message_plural (int count)
+    {
+        // Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+        return ngettext ("{0} joined the network {1} and {2} other network", "{0} joined the network {1} and {2} other networks", count);
+    }
+    
+    public static string notify_member_left_message_plural (int count)
+    {
+        // Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+        return ngettext ("{0} left the network {1} and {2} other network", "{0} left the network {1} and {2} other networks", count);
     }
     
     public static string reconnecting (int count)
@@ -588,25 +617,5 @@ Türkçe (tr)
     public static string update_network_list_interval (int count)
     {
         return ngettext ("_Update the network list every %S _second", "_Update the network list every %S _seconds", count);
-    }
-    
-    public static string notify_member_online_message_plural (int count)
-    {
-        return ngettext ("{0} came online in the network {1} and {2} other network", "{0} came online in the network {1} and {2} other networks", count);
-    }
-    
-    public static string notify_member_offline_message_plural (int count)
-    {
-        return ngettext ("{0} went offline in the network {1} and {2} other network", "{0} went offline in the network {1} and {2} other networks", count);
-    }
-    
-    public static string notify_member_joined_message_plural (int count)
-    {
-        return ngettext ("{0} joined the network {1} and {2} other network", "{0} joined the network {1} and {2} other networks", count);
-    }
-    
-    public static string notify_member_left_message_plural (int count)
-    {
-        return ngettext ("{0} left the network {1} and {2} other network", "{0} left the network {1} and {2} other networks", count);
     }
 }
