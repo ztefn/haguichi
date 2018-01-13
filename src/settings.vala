@@ -104,9 +104,16 @@ public class Settings : Object
         if (stamp == 1)
         {
             base_schema.set_value ("stamp", 2);
-            
             Debug.log (Debug.domain.ENVIRONMENT, "Settings.check", "Migrating user settings to new schema location...");
-            Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/; dconf reset -f /org/haguichi/\"");
+            
+            if (Command.exists ("dconf"))
+            {
+                Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/; dconf reset -f /org/haguichi/\"");
+            }
+            else
+            {
+                Debug.log (Debug.domain.ERROR, "Settings.check", "DConf command is not available");
+            }
         }
     }
 }
