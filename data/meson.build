@@ -52,6 +52,13 @@ i18n.merge_file (
     install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart'),
 )
 
+gnome = import('gnome')
+
+resources = gnome.compile_resources(
+    'haguichi-resources', app_id + '.gresource.xml',
+    source_dir: '.'
+)
+
 install_data(
     app_id + '.gschema.xml',
     install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')

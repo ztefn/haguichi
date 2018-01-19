@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/com/github/ztefn/haguichi">
+    <file>stylesheets/default.css</file>
+    <file>stylesheets/elementary.css</file>
+    <file>stylesheets/elementary-dark.css</file>
+  </gresource>
+</gresources>

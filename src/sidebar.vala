@@ -102,6 +102,7 @@ public class Sidebar : Box
         
         heading_label = new Label (null);
         heading_label.ellipsize = Pango.EllipsizeMode.END;
+        heading_label.get_style_context().add_class ("h2");
         
         heading_box = new Box (Orientation.HORIZONTAL, 0);
         heading_box.halign = Align.CENTER;
@@ -383,7 +384,6 @@ public class Sidebar : Box
         
         scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.add (scrolled_box);
-        scrolled_window.get_style_context().add_class ("sidebar");
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
         
         
@@ -402,6 +402,16 @@ public class Sidebar : Box
         
         
         generate_command_buttons();
+    }
+    
+    public void add_style_class (string name)
+    {
+        scrolled_window.get_style_context().add_class (name);
+    }
+    
+    public void remove_style_class (string name)
+    {
+        scrolled_window.get_style_context().remove_class (name);
     }
     
     private void network_lock_changed ()
@@ -620,7 +630,7 @@ public class Sidebar : Box
                     action_box_revealer.set_transition_type (RevealerTransitionType.SLIDE_UP);
                 }
                 
-                heading_label.set_markup ("<big><b>" + Text.information_title + "</b></big>");
+                heading_label.set_markup (Text.information_title);
                 heading_label.selectable = false;
                 
                 break;
@@ -701,7 +711,7 @@ public class Sidebar : Box
                     delete_button.hide();
                 }
                 
-                heading_label.set_markup ("<big><b>" + Markup.escape_text (network.name) + "</b></big>");
+                heading_label.set_markup (Markup.escape_text (network.name));
                 heading_label.selectable = true;
                 
                 break;
@@ -740,7 +750,7 @@ public class Sidebar : Box
                     member_connection_entry.hide();
                 }
                 
-                heading_label.set_markup ("<big><b>" + Markup.escape_text (member.nick) + "</b></big>");
+                heading_label.set_markup (Markup.escape_text (member.nick));
                 heading_label.selectable = true;
                 
                 if (member.status.status_int != 3)

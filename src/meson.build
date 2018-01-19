@@ -83,6 +83,7 @@ executable(
     binary_name,
     config,
     sources,
+    resources,
     dependencies: deps,
     install: true
 )

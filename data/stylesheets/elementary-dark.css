@@ -1,0 +1,88 @@
+/*
+ * Set primary color for titlebar
+ */
+
+@define-color colorPrimary mix (#000, @titlebar_color, 0.95);
+
+
+/*
+ * Override font size for welcome headings
+ */
+
+.welcome .h1 {
+    font-size: 16px;
+}
+
+.welcome .h2 {
+    font-size: 12px;
+}
+
+
+/*
+ * Set background color for connected and disconnected boxes
+ */
+
+.connected-box {
+    background-color: shade (@bg_color, 1.05);
+}
+
+.disconnected-box {
+    background-color: shade (@bg_color, 1.02);
+}
+
+
+/*
+ * Improve "suggested-action" style for buttons in titlebar
+ */
+
+.titlebar .image-button.suggested-action:active,
+.titlebar .image-button.suggested-action:active:hover,
+.titlebar .image-button.suggested-action:checked {
+    background-color: @selected_bg_color;
+    background-image: none;
+}
+
+.titlebar .image-button.suggested-action:active GtkImage,
+.titlebar .image-button.suggested-action:active:hover GtkImage,
+.titlebar .image-button.suggested-action:checked GtkImage {
+    color: @titlebar_color;
+    icon-shadow: 0 1px shade (@selected_bg_color, 1.2);
+}
+
+
+/*
+ * Fix missing "insensitive" style for buttons in titlebar
+ * https://github.com/elementary/stylesheet/issues/97
+ */
+
+.titlebar .image-button:insensitive GtkImage {
+    color: @insensitive_color;
+}
+
+
+/*
+ * Fix missing "suggested-action" style for buttons in actionbar
+ * https://github.com/elementary/stylesheet/issues/98
+ */
+
+.action-bar .button {
+    box-shadow:
+        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
+        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
+        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
+        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+}
+
+.action-bar .button.suggested-action {
+    background-image:
+        linear-gradient(
+            to bottom,
+            shade (@selected_bg_color, 1.1),
+            shade (@selected_bg_color, 0.9)
+        );
+    box-shadow:
+        inset 0 0 0 1px alpha (#fff, 0.05),
+        inset 0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 -1px 0 0 alpha (#fff, 0.1),
+        0 1px 0 0 alpha (#fff, 0.15);
+}

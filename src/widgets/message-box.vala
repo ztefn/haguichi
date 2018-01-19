@@ -24,14 +24,17 @@ namespace Widgets
             margin = 10;
             margin_top = 15;
             margin_bottom = 20;
+            get_style_context().add_class ("welcome");
             
             heading = new Label (null);
             heading.wrap = true;
             heading.halign = Align.CENTER;
             heading.set_justify (Justification.CENTER);
+            heading.get_style_context().add_class ("h1");
             
             message = new Label (null);
             message.wrap = true;
+            message.get_style_context().add_class ("h2");
             message.get_style_context().add_class ("dim-label");
             message.halign = Align.CENTER;
             message.set_justify (Justification.CENTER);
@@ -64,7 +67,7 @@ namespace Widgets
             heading.hide();
             message.hide();
             
-            heading.set_markup ("<big>" + _heading + "</big>");
+            heading.set_markup (_heading);
             message.set_markup (_message);
             
             if (_heading != null)

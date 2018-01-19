@@ -50,6 +50,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     
     private Spinner spinner;
     
+    private CssProvider provider;
     
     public HaguichiWindow ()
     {
@@ -123,6 +124,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         connected_box = new Box (Orientation.VERTICAL, 0);
         connected_box.pack_start (scrolled_window, true, true, 0);
         connected_box.pack_start (empty_box, true, true, 0);
+        connected_box.get_style_context().add_class ("connected-box");
         
         
         // Disconnected Box
@@ -144,6 +146,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
         disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
         disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
+        disconnected_box.get_style_context().add_class ("disconnected-box");
         
         
         // Content Box
@@ -190,15 +193,18 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         main_box.pack_start (content_box, true, true, 0);
         main_box.show_all();
         
+        provider = new CssProvider();
+        StyleContext.add_provider_for_screen (this.get_screen(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        
         Gtk.Settings.get_default().notify["gtk-theme-name"].connect ((sender, property) =>
         {
-            set_colors();
+            set_styles();
         });
         Gtk.Settings.get_default().notify["gtk-application-prefer-dark-theme"].connect ((sender, property) =>
         {
-            set_colors();
+            set_styles();
         });
-        set_colors();
+        set_styles();
         
         add_accel_group(accel_group);
         
@@ -225,23 +231,26 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
     }
     
-    private void set_colors ()
+    private void set_styles ()
     {
-        // Extracting normal background color from treeview for connected box
-        TreeView tree_view = new TreeView();
-        StyleContext tree_context = tree_view.get_style_context();
-        tree_context.save();
-        tree_context.set_state (StateFlags.NORMAL);
-        connected_box.override_background_color (StateFlags.NORMAL, tree_context.get_background_color(tree_context.get_state()));
-        tree_context.restore();
+        // Request stylesheet for current theme
+        string theme_name = Gtk.Settings.get_default().gtk_theme_name;
         
-        // Extracting insensitive background color from textview for disconnected box
-        TextView text_view = new TextView();
-        StyleContext text_context = text_view.get_style_context();
-        text_context.save();
-        text_context.set_state (StateFlags.INSENSITIVE);
-        disconnected_box.override_background_color (StateFlags.NORMAL, text_context.get_background_color(text_context.get_state()));
-        text_context.restore();
+        if (theme_name == "elementary")
+        {
+            if (Gtk.Settings.get_default().gtk_application_prefer_dark_theme)
+            {
+                theme_name += "-dark";
+            }
+            sidebar.remove_style_class ("sidebar");
+        }
+        else
+        {
+            theme_name = "default";
+            sidebar.add_style_class ("sidebar");
+        }
+        
+        provider.load_from_resource ("/com/github/ztefn/haguichi/stylesheets/" + theme_name + ".css");
     }
     
     private bool is_state_normal (Gdk.WindowState ws)

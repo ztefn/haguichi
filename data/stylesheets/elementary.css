@@ -1,0 +1,43 @@
+/*
+ * Set primary color for titlebar
+ */
+
+@define-color colorPrimary #f44;
+
+
+/*
+ * Override font size for welcome headings
+ */
+
+.welcome .h1 {
+    font-size: 16px;
+}
+
+.welcome .h2 {
+    font-size: 12px;
+}
+
+
+/*
+ * Set background color for connected and disconnected boxes
+ */
+
+.connected-box {
+    background-color: shade (@bg_color, 1.1);
+}
+
+.disconnected-box {
+    background-color: shade (@bg_color, 1.02);
+}
+
+
+/*
+ * Improve "suggested-action" style for buttons in titlebar
+ */
+
+.titlebar .image-button.suggested-action:active,
+.titlebar .image-button.suggested-action:active:hover,
+.titlebar .image-button.suggested-action:checked {
+    background-color: alpha (#fff, 0.25);
+    background-image: none;
+}
