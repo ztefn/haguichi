@@ -225,6 +225,7 @@ namespace Dialogs
                     
                     Haguichi.connection.add_network (new_network);
                     Haguichi.window.network_view.add_network (new_network);
+                    Controller.update_connection(); // Update list
                     return false;
                 });
                 return null;
