@@ -26,7 +26,7 @@ desktop_in = configure_file(
     configuration: conf
 )
 
-i18n.merge_file (
+i18n.merge_file(
     type: 'desktop',
     input: desktop_in,
     output: desktop,
@@ -43,7 +43,7 @@ autostart_in = configure_file(
     configuration: conf
 )
 
-i18n.merge_file (
+i18n.merge_file(
     type: 'desktop',
     input: autostart_in,
     output: autostart,
@@ -55,7 +55,8 @@ i18n.merge_file (
 gnome = import('gnome')
 
 resources = gnome.compile_resources(
-    'haguichi-resources', app_id + '.gresource.xml',
+    'haguichi-resources',
+    app_id + '.gresource.xml',
     source_dir: '.'
 )
 
