@@ -1,10 +1,19 @@
 /*
- * Set font size and weight for headings
+ * Set font size for welcome headings
  */
 
-.h1 {
+.welcome .h1 {
     font-size: large;
 }
+
+.welcome .h2 {
+    font-size: medium;
+}
+
+
+/*
+ * Set font size and weight for sidebar heading
+ */
 
 .sidebar .h2 {
     font-weight: bold;
