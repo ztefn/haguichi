@@ -33,7 +33,7 @@
     <kudo>Notifications</kudo>
   </kudos>
   <url type="homepage">https://www.haguichi.net/</url>
-  <url type="bugtracker">https://bugs.launchpad.net/haguichi</url>
+  <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
   <url type="faq">https://www.haguichi.net/faq/</url>
   <url type="help">https://www.haguichi.net/tips-and-tricks/</url>
   <url type="donation">https://www.haguichi.net/donate/</url>
