@@ -21,13 +21,15 @@ namespace Widgets
         {
             orientation = Orientation.VERTICAL;
             border_width = 6;
+            get_style_context().add_class ("group-box");
             
             if (label != "")
             {
                 grp_label = new Label(null);
+                grp_label.get_style_context().add_class ("h4");
                 grp_label.halign = Align.START;
                 grp_label.margin = 6;
-                grp_label.set_markup (Utils.format ("<b>{0}</b>", label, null, null));
+                grp_label.set_markup (label);
                 
                 add (grp_label);
             }

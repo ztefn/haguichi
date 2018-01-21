@@ -22,6 +22,15 @@
 
 
 /*
+ * Set font weight for group box labels
+ */
+
+.group-box .h4 {
+    font-weight: bold;
+}
+
+
+/*
  * Set background color for connected and disconnected boxes
  */
 
