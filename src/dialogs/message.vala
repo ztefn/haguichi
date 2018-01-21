@@ -18,8 +18,8 @@ namespace Dialogs
         {
             base (parent, header_text, message_text, _message_type);
             
-            Button ok_but = (Button) add_button (Text.ok_label, ResponseType.OK);
-            ok_but.grab_default();
+            Button close_but = (Button) add_button (Text.close_label, ResponseType.CLOSE);
+            close_but.grab_default();
             
             if (output != null)
             {

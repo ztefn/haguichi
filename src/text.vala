@@ -127,7 +127,7 @@ Türkçe (tr)
     public const  string get_hamachi_url           = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=get-hamachi";
     public const  string donate_url                = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=donate";
     
-    public static string ok_label;
+    public static string close_label;
     public static string cancel_label;
     public static string cancel;
     public static string save_label;
@@ -358,7 +358,7 @@ Türkçe (tr)
         
         app_authors                                = {"Stephen Brandt https://launchpad.net/~ztefn", ""};
         
-        ok_label                                   = _("_OK");
+        close_label                                = _("_Close");
         cancel_label                               = _("_Cancel");
         cancel                                     = Utils.remove_mnemonics (cancel_label);
         save_label                                 = _("_Save");

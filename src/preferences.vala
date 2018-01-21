@@ -13,7 +13,7 @@ using Widgets;
 
 namespace Dialogs
 {
-    public class Preferences : Window
+    public class Preferences : Dialog
     {
         public  CommandsEditor commands_editor;
         
@@ -42,22 +42,24 @@ namespace Dialogs
         {
             Object (title: Text.preferences_title,
                     transient_for: Haguichi.window,
-                    window_position: WindowPosition.CENTER_ON_PARENT,
-                    type_hint: Gdk.WindowTypeHint.DIALOG,
+#if FOR_ELEMENTARY
+                    deletable: false,
+#endif
+                    modal: false,
                     resizable: false,
-                    border_width: 0);
+                    use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
-            set_icon_list (HaguichiWindow.app_icons);
+#if FOR_ELEMENTARY
+            add_button (Text.close_label, ResponseType.CLOSE).margin = 6;
             
-            if (Haguichi.dialog_use_header_bar)
+            response.connect ((response_id) =>
             {
-                var titlebar = new HeaderBar();
-                titlebar.title = Text.preferences_title;
-                titlebar.show_close_button = true;
-                titlebar.show();
-                
-                set_titlebar (titlebar);
-            }
+                if (response_id == ResponseType.CLOSE)
+                {
+                    hide();
+                }
+            });
+#endif
             
             delete_event.connect (on_delete);
             
@@ -193,17 +195,42 @@ namespace Dialogs
             system_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 8);
             
             
-            Notebook notebook = new Notebook();
-            notebook.show_border = false;
-            notebook.append_page (system_box, new Label (Text.general_tab));
-            notebook.append_page (commands_editor, new Label (Text.commands_tab));
-            notebook.append_page (desktop_box, new Label (Text.desktop_tab));
+            Stack container = new Stack();
+            container.expand = true;
+            container.add_titled (system_box,      "system",   Text.general_tab);
+            container.add_titled (commands_editor, "commands", Text.commands_tab);
+            container.add_titled (desktop_box,     "desktop",  Text.desktop_tab);
             
+            StackSwitcher switcher = new StackSwitcher();
+            switcher.stack  = container;
+            switcher.expand = true;
+            switcher.halign = Gtk.Align.CENTER;
+            
+            Box content_area = get_content_area() as Box;
+            
+            if (Haguichi.dialog_use_header_bar)
+            {
+                var titlebar = new HeaderBar();
+                titlebar.custom_title = switcher;
+                titlebar.show_close_button = true;
+                titlebar.show_all();
+                
+                set_titlebar (titlebar);
+                
+                container.transition_type = StackTransitionType.SLIDE_LEFT_RIGHT;
+            }
+            else
+            {
+                content_area.add (switcher);
+#if !FOR_ELEMENTARY
+                switcher.margin_top = 12;
+#endif
+            }
+            
+            content_area.add (container);
+            content_area.show_all();
             
             set_interval_string();
-            
-            add (notebook);
-            notebook.show_all();
         }
         
         public void set_interval_string ()
