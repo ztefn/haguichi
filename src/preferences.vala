@@ -49,18 +49,6 @@ namespace Dialogs
                     resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
-#if FOR_ELEMENTARY
-            add_button (Text.close_label, ResponseType.CLOSE).margin = 6;
-            
-            response.connect ((response_id) =>
-            {
-                if (response_id == ResponseType.CLOSE)
-                {
-                    hide();
-                }
-            });
-#endif
-            
             delete_event.connect (on_delete);
             
             
@@ -206,8 +194,6 @@ namespace Dialogs
             switcher.expand = true;
             switcher.halign = Gtk.Align.CENTER;
             
-            Box content_area = get_content_area() as Box;
-            
             if (Haguichi.dialog_use_header_bar)
             {
                 var titlebar = new HeaderBar();
@@ -221,14 +207,27 @@ namespace Dialogs
             }
             else
             {
-                content_area.add (switcher);
 #if !FOR_ELEMENTARY
                 switcher.margin_top = 12;
 #endif
+                get_content_area().add (switcher);
+                
+                get_action_area().margin = 6;
+                get_action_area().margin_top = 0;
+                
+                add_button (Text.close_label, ResponseType.CLOSE);
+                
+                response.connect ((response_id) =>
+                {
+                    if (response_id == ResponseType.CLOSE)
+                    {
+                        hide();
+                    }
+                });
             }
             
-            content_area.add (container);
-            content_area.show_all();
+            get_content_area().add (container);
+            get_content_area().show_all();
             
             set_interval_string();
         }
