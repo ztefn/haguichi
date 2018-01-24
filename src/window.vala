@@ -413,13 +413,16 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 ((event.keyval >= 65456) &&      // "0" - NumPad
                  (event.keyval <= 65465)))       // "9" - NumPad
             {
-                if (!GlobalEvents.search_active)
+                if (GlobalActions.start_search.enabled)
                 {
-                    GlobalEvents.start_search();
-                }
-                else if (!search_entry.has_focus)
-                {
-                    search_entry.grab_focus();
+                    if (!GlobalEvents.search_active)
+                    {
+                        GlobalEvents.start_search();
+                    }
+                    else if (!search_entry.has_focus)
+                    {
+                        search_entry.grab_focus();
+                    }
                 }
             }
             else if (event.keyval == Gdk.Key.Escape)
