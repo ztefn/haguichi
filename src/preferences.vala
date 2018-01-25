@@ -190,9 +190,7 @@ namespace Dialogs
             container.add_titled (desktop_box,     "desktop",  Text.desktop_tab);
             
             StackSwitcher switcher = new StackSwitcher();
-            switcher.stack  = container;
-            switcher.expand = true;
-            switcher.halign = Gtk.Align.CENTER;
+            switcher.stack = container;
             
             if (Haguichi.dialog_use_header_bar)
             {
@@ -207,6 +205,7 @@ namespace Dialogs
             }
             else
             {
+                switcher.halign = Align.CENTER;
 #if !FOR_ELEMENTARY
                 switcher.margin_top = 12;
 #endif
