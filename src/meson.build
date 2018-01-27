@@ -42,9 +42,11 @@ sources = [
     'utils.vala',
     'widgets/command-button.vala',
     'widgets/commands-editor.vala',
-    'widgets/group-box.vala',
     'widgets/message-bar.vala',
     'widgets/message-box.vala',
+    'widgets/preferences-box.vala',
+    'widgets/preferences-label.vala',
+    'widgets/preferences-switch.vala',
     'widgets/sidebar-entry.vala',
     'widgets/sidebar-label.vala',
     'window.vala'

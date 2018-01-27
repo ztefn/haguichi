@@ -38,10 +38,13 @@ public class Utils : Object
         return label;
     }
     
-    public static string remove_colons (owned string label)
+    public static string remove_colons (owned string? label)
     {
-        label = label.replace (" :", ""); // French translations
-        label = label.replace (":",  ""); // All other translations
+        if (label != null)
+        {
+            label = label.replace (" :", ""); // French translations
+            label = label.replace (":",  ""); // All other translations
+        }
         
         return label;
     }

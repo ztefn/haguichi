@@ -301,7 +301,7 @@ Türkçe (tr)
     public static string protocol_ipv4;
     public static string protocol_ipv6;
     
-    public static string checkbox_show_offline_members;
+    public static string show_offline_members;
     public static string sort_by_name;
     public static string sort_by_status;
     
@@ -309,11 +309,11 @@ Türkçe (tr)
     public static string reconnect_on_connection_loss;
     public static string disconnect_on_quit;
     
-    public static string checkbox_notify_connection_lost;
-    public static string checkbox_notify_member_join;
-    public static string checkbox_notify_member_leave;
-    public static string checkbox_notify_member_online;
-    public static string checkbox_notify_member_offline;
+    public static string notify_on_connection_lost;
+    public static string notify_on_member_join;
+    public static string notify_on_member_leave;
+    public static string notify_on_member_online;
+    public static string notify_on_member_offline;
     
     public static string connect_error_heading;
     public static string connect_error_login_failed;
@@ -534,7 +534,7 @@ Türkçe (tr)
         protocol_ipv4                              = _("IPv4 only");
         protocol_ipv6                              = _("IPv6 only");
         
-        checkbox_show_offline_members              = _("Show _Offline Members");
+        show_offline_members                       = _("Show _Offline Members");
         sort_by_name                               = _("Sort by _Name");
         sort_by_status                             = _("Sort by _Status");
         
@@ -542,11 +542,11 @@ Türkçe (tr)
         reconnect_on_connection_loss               = _("_Reconnect automatically when the connection is lost");
         disconnect_on_quit                         = _("_Disconnect on quit");
         
-        checkbox_notify_connection_lost            = _("Display notification when the connection is l_ost");
-        checkbox_notify_member_join                = _("Display notification when a member _joins");
-        checkbox_notify_member_leave               = _("Display notification when a member _leaves");
-        checkbox_notify_member_online              = _("Display notification when a member comes o_nline");
-        checkbox_notify_member_offline             = _("Display notification when a member goes o_ffline");
+        notify_on_connection_lost                  = _("Display notification when the connection is l_ost");
+        notify_on_member_join                      = _("Display notification when a member _joins");
+        notify_on_member_leave                     = _("Display notification when a member _leaves");
+        notify_on_member_online                    = _("Display notification when a member comes o_nline");
+        notify_on_member_offline                   = _("Display notification when a member goes o_ffline");
         
         connect_error_heading                      = _("Error connecting");
         connect_error_login_failed                 = _("Hamachi login failed");

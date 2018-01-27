@@ -22,10 +22,14 @@
 
 
 /*
- * Set font weight for group box labels
+ * Set background color and heading font weight for preferences dialog
  */
 
-.group-box .h4 {
+DialogsPreferences {
+    background-color: @insensitive_bg_color;
+}
+
+DialogsPreferences .h4 {
     font-weight: bold;
 }
 

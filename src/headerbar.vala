@@ -130,12 +130,12 @@ public class Headerbar : HeaderBar
         var sort_by_status = new GLib.MenuItem (Text.sort_by_status, "app.sort-by");
         sort_by_status.set_attribute_value ("target", "status");
         
-        var show_offline = new GLib.MenuItem (Text.checkbox_show_offline_members, "app.show-offline-members");
-        var preferences  = new GLib.MenuItem (Text.preferences_label,             "app.preferences");
-        var donate       = new GLib.MenuItem (Text.donate_label,                  "app.donate");
-        var help         = new GLib.MenuItem (Text.help_label,                    "app.help");
-        var about        = new GLib.MenuItem (Text.about_label,                   "app.about");
-        var quit         = new GLib.MenuItem (Text.quit_label,                    "app.quit");
+        var show_offline = new GLib.MenuItem (Text.show_offline_members, "app.show-offline-members");
+        var preferences  = new GLib.MenuItem (Text.preferences_label,    "app.preferences");
+        var donate       = new GLib.MenuItem (Text.donate_label,         "app.donate");
+        var help         = new GLib.MenuItem (Text.help_label,           "app.help");
+        var about        = new GLib.MenuItem (Text.about_label,          "app.about");
+        var quit         = new GLib.MenuItem (Text.quit_label,           "app.quit");
         
         var backup_section = new GLib.Menu();
         backup_section.append_item (save_config);

@@ -106,23 +106,23 @@ public class Key : Object
             }
             else if (key == Settings.update_network_list.key_name)
             {
-                Haguichi.preferences_dialog.update_network_list.active = (bool) _value;
+                Haguichi.preferences_dialog.update_network_list_switch.active = (bool) _value;
             }
             else if (key == Settings.connect_on_startup.key_name)
             {
-                Haguichi.preferences_dialog.connect_on_startup.active = (bool) _value;
+                Haguichi.preferences_dialog.connect_on_startup_switch.active = (bool) _value;
             }
             else if (key == Settings.reconnect_on_connection_loss.key_name)
             {
-                Haguichi.preferences_dialog.reconnect_on_connection_loss.active = (bool) _value;
+                Haguichi.preferences_dialog.reconnect_on_connection_loss_switch.active = (bool) _value;
             }
             else if (key == Settings.disconnect_on_quit.key_name)
             {
-                Haguichi.preferences_dialog.disconnect_on_quit.active = (bool) _value;
+                Haguichi.preferences_dialog.disconnect_on_quit_switch.active = (bool) _value;
             }
             else if (key == Settings.notify_on_connection_loss.key_name)
             {
-                Haguichi.preferences_dialog.notify_on_connection_loss.active = (bool) _value;
+                Haguichi.preferences_dialog.notify_connection_loss_switch.active = (bool) _value;
                 
                 if ((Haguichi.demo_mode) &&
                     ((bool) _value))
@@ -134,7 +134,7 @@ public class Key : Object
             }
             else if (key == Settings.notify_on_member_join.key_name)
             {
-                Haguichi.preferences_dialog.notify_on_member_join.active = (bool) _value;
+                Haguichi.preferences_dialog.notify_member_join_switch.active = (bool) _value;
                 
                 if (Haguichi.demo_mode)
                 {
@@ -143,7 +143,7 @@ public class Key : Object
             }
             else if (key == Settings.notify_on_member_leave.key_name)
             {
-                Haguichi.preferences_dialog.notify_on_member_leave.active = (bool) _value;
+                Haguichi.preferences_dialog.notify_member_leave_switch.active = (bool) _value;
                 
                 if (Haguichi.demo_mode)
                 {
@@ -152,7 +152,7 @@ public class Key : Object
             }
             else if (key == Settings.notify_on_member_online.key_name)
             {
-                Haguichi.preferences_dialog.notify_on_member_online.active = (bool) _value;
+                Haguichi.preferences_dialog.notify_member_online_switch.active = (bool) _value;
                 
                 if (Haguichi.demo_mode)
                 {
@@ -161,7 +161,7 @@ public class Key : Object
             }
             else if (key == Settings.notify_on_member_offline.key_name)
             {
-                Haguichi.preferences_dialog.notify_on_member_offline.active = (bool) _value;
+                Haguichi.preferences_dialog.notify_member_offline_switch.active = (bool) _value;
                 
                 if (Haguichi.demo_mode)
                 {
