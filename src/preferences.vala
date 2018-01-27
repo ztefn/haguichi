@@ -175,6 +175,8 @@ namespace Dialogs
             get_content_area().add (container);
             get_content_area().show_all();
             
+            get_style_context().add_class ("preferences");
+            
             set_interval_string();
         }
         

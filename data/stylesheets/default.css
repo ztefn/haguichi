@@ -25,11 +25,11 @@
  * Set background color and heading font weight for preferences dialog
  */
 
-DialogsPreferences {
+.preferences {
     background-color: @insensitive_bg_color;
 }
 
-DialogsPreferences .h4 {
+.preferences .h4 {
     font-weight: bold;
 }
 
