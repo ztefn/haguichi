@@ -22,12 +22,8 @@
 
 
 /*
- * Set background color and heading font weight for preferences dialog
+ * Set font weight and padding for preferences headings
  */
-
-.preferences {
-    background-color: @insensitive_bg_color;
-}
 
 .preferences .h4 {
     font-weight: bold;

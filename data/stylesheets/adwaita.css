@@ -1,0 +1,9 @@
+@import url("resource:///com/github/ztefn/haguichi/stylesheets/default.css");
+
+/*
+ * Set background color for preferences dialog
+ */
+
+.preferences {
+    background-color: @insensitive_bg_color;
+}

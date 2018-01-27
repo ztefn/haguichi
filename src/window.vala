@@ -234,20 +234,29 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     private void set_styles ()
     {
         // Request stylesheet for current theme
-        string theme_name = Gtk.Settings.get_default().gtk_theme_name;
+        string theme_name = Gtk.Settings.get_default().gtk_theme_name.down();
         
+        // Don't use sidebar class with elementary theme because it looks hideous
         if (theme_name == "elementary")
+        {
+            sidebar.remove_style_class ("sidebar");
+        }
+        else
+        {
+            sidebar.add_style_class ("sidebar");
+        }
+        
+        if ((theme_name == "elementary") ||
+            (theme_name == "adwaita"))
         {
             if (Gtk.Settings.get_default().gtk_application_prefer_dark_theme)
             {
                 theme_name += "-dark";
             }
-            sidebar.remove_style_class ("sidebar");
         }
         else
         {
             theme_name = "default";
-            sidebar.add_style_class ("sidebar");
         }
         
         provider.load_from_resource ("/com/github/ztefn/haguichi/stylesheets/" + theme_name + ".css");
