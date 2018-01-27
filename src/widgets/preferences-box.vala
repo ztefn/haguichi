@@ -16,17 +16,16 @@ namespace Widgets
     {
         private Grid grid;
         
-        public PreferencesBox (string label)
+        public PreferencesBox (string text)
         {
             orientation  = Orientation.VERTICAL;
             border_width = 12;
             
-            var grp_label = new Label(label);
-            grp_label.get_style_context().add_class ("h4");
-            grp_label.halign = Align.START;
-            grp_label.margin_bottom = 6;
+            var label = new Label (text);
+            label.get_style_context().add_class ("h4");
+            label.halign = Align.START;
             
-            add (grp_label);
+            add (label);
             
             grid = new Grid();
             grid.column_spacing  = 9;
