@@ -20,6 +20,7 @@ namespace Dialogs
         public  Switch disconnect_on_quit_switch;
         public  Switch update_network_list_switch;
         
+        public  Switch prefer_dark_theme_switch;
         public  Switch notify_connection_loss_switch;
         public  Switch notify_member_join_switch;
         public  Switch notify_member_leave_switch;
@@ -34,6 +35,8 @@ namespace Dialogs
         private Label disconnect_on_quit_label;
         private Label update_network_list_label;
         private Label interval_label;
+        
+        private Label prefer_dark_theme_label;
         private Label notify_connection_loss_label;
         private Label notify_member_join_label;
         private Label notify_member_leave_label;
@@ -54,24 +57,33 @@ namespace Dialogs
             delete_event.connect (on_delete);
             
             
+            prefer_dark_theme_switch      = new PreferencesSwitch (Settings.prefer_dark_theme);
             notify_connection_loss_switch = new PreferencesSwitch (Settings.notify_on_connection_loss);
             notify_member_join_switch     = new PreferencesSwitch (Settings.notify_on_member_join);
             notify_member_leave_switch    = new PreferencesSwitch (Settings.notify_on_member_leave);
             notify_member_online_switch   = new PreferencesSwitch (Settings.notify_on_member_online);
             notify_member_offline_switch  = new PreferencesSwitch (Settings.notify_on_member_offline);
             
+            prefer_dark_theme_label       = new PreferencesLabel (Text.prefer_dark_theme, prefer_dark_theme_switch);
             notify_connection_loss_label  = new PreferencesLabel (Text.notify_on_connection_lost, notify_connection_loss_switch);
             notify_member_join_label      = new PreferencesLabel (Text.notify_on_member_join, notify_member_join_switch);
             notify_member_leave_label     = new PreferencesLabel (Text.notify_on_member_leave, notify_member_leave_switch);
             notify_member_online_label    = new PreferencesLabel (Text.notify_on_member_online, notify_member_online_switch);
             notify_member_offline_label   = new PreferencesLabel (Text.notify_on_member_offline, notify_member_offline_switch);
             
-            var desktop_box = new PreferencesBox (Text.notify_group);
-            desktop_box.add_row (notify_connection_loss_label, notify_connection_loss_switch, 1);
-            desktop_box.add_row (notify_member_join_label,     notify_member_join_switch,     2);
-            desktop_box.add_row (notify_member_leave_label,    notify_member_leave_switch,    3);
-            desktop_box.add_row (notify_member_online_label,   notify_member_online_switch,   4);
-            desktop_box.add_row (notify_member_offline_label,  notify_member_offline_switch,  5);
+            var appearance_box = new PreferencesBox (Text.appearance_group);
+            appearance_box.add_row (prefer_dark_theme_label,  prefer_dark_theme_switch,      1);
+            
+            var notify_box = new PreferencesBox (Text.notify_group);
+            notify_box.add_row (notify_connection_loss_label, notify_connection_loss_switch, 1);
+            notify_box.add_row (notify_member_join_label,     notify_member_join_switch,     2);
+            notify_box.add_row (notify_member_leave_label,    notify_member_leave_switch,    3);
+            notify_box.add_row (notify_member_online_label,   notify_member_online_switch,   4);
+            notify_box.add_row (notify_member_offline_label,  notify_member_offline_switch,  5);
+            
+            var desktop_box = new Box (Orientation.VERTICAL, 0);
+            desktop_box.pack_start (appearance_box, false, false, 0);
+            desktop_box.pack_start (notify_box,     false, false, 0);
             
             
             ip_combo = new ComboBoxText();
@@ -174,6 +186,11 @@ namespace Dialogs
             
             get_content_area().add (container);
             get_content_area().show_all();
+            
+            if (!Haguichi.window_use_header_bar)
+            {
+                appearance_box.hide();
+            }
             
             get_style_context().add_class ("preferences");
             

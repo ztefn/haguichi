@@ -293,8 +293,9 @@ Türkçe (tr)
     public static string commands_tab;
     public static string desktop_tab;
     
-    public static string notify_group;
     public static string behavior_group;
+    public static string appearance_group;
+    public static string notify_group;
     
     public static string protocol_label;
     public static string protocol_both;
@@ -308,6 +309,8 @@ Türkçe (tr)
     public static string connect_on_startup;
     public static string reconnect_on_connection_loss;
     public static string disconnect_on_quit;
+    
+    public static string prefer_dark_theme;
     
     public static string notify_on_connection_lost;
     public static string notify_on_member_join;
@@ -522,12 +525,13 @@ Türkçe (tr)
         see_output                                 = _("See output for details.");
         
         general_tab                                = _("General");
+        commands_tab                               = _("Commands");
         // In this context meaning "work environment".
         desktop_tab                                = _("Desktop");
-        commands_tab                               = _("Commands");
         
-        notify_group                               = _("Notifications");
         behavior_group                             = _("Behavior");
+        appearance_group                           = _("Appearance");
+        notify_group                               = _("Notifications");
         
         protocol_label                             = _("_Protocol:");
         protocol_both                              = _("Both IPv4 and IPv6");
@@ -541,6 +545,8 @@ Türkçe (tr)
         connect_on_startup                         = _("C_onnect automatically on startup");
         reconnect_on_connection_loss               = _("_Reconnect automatically when the connection is lost");
         disconnect_on_quit                         = _("_Disconnect on quit");
+        
+        prefer_dark_theme                          = _("Use _dark theme variant");
         
         notify_on_connection_lost                  = _("Display notification when the connection is l_ost");
         notify_on_member_join                      = _("Display notification when a member _joins");
