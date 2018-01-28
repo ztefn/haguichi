@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-28 13:54+0100\n"
+"POT-Creation-Date: 2018-01-28 22:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,784 +19,788 @@ msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
 #. Description used in about dialog.
-#: src/text.vala:358
+#: src/text.vala:360
 msgid "A graphical frontend for Hamachi."
 msgstr ""
 
 #. Description used in application launchers.
-#: src/text.vala:360
+#: src/text.vala:362
 msgid "Join and create local networks over the Internet"
 msgstr ""
 
-#: src/text.vala:364
+#: src/text.vala:366
 msgid "_Close"
 msgstr ""
 
-#: src/text.vala:365
+#: src/text.vala:367
 msgid "_Cancel"
 msgstr ""
 
-#: src/text.vala:367
+#: src/text.vala:369
 msgid "_Save"
 msgstr ""
 
-#: src/text.vala:368
+#: src/text.vala:370
 msgid "_Refresh"
 msgstr ""
 
-#: src/text.vala:369
+#: src/text.vala:371
 msgid "_Revert"
 msgstr ""
 
-#: src/text.vala:370
+#: src/text.vala:372
 msgid "_Delete"
 msgstr ""
 
-#: src/text.vala:371
+#: src/text.vala:373
 msgid "_Information"
 msgstr ""
 
-#: src/text.vala:372
+#: src/text.vala:374
 msgid "_Donate"
 msgstr ""
 
-#: src/text.vala:373
+#: src/text.vala:375
 msgid "_Preferences"
 msgstr ""
 
-#: src/text.vala:374
+#: src/text.vala:376
 msgid "_Help"
 msgstr ""
 
-#: src/text.vala:375
+#: src/text.vala:377
 msgid "_About"
 msgstr ""
 
-#: src/text.vala:376
+#: src/text.vala:378
 msgid "_Quit"
 msgstr ""
 
-#: src/text.vala:378
+#: src/text.vala:380
 msgid "_Show Haguichi"
 msgstr ""
 
-#: src/text.vala:380
+#: src/text.vala:382
 msgid "Yes"
 msgstr ""
 
-#: src/text.vala:381
+#: src/text.vala:383
 msgid "No"
 msgstr ""
 
-#: src/text.vala:383
+#: src/text.vala:385
 msgid "_Hamachi output"
 msgstr ""
 
-#: src/text.vala:385
+#: src/text.vala:387
 msgid "IPv4 address:"
 msgstr ""
 
-#: src/text.vala:386
+#: src/text.vala:388
 msgid "IPv6 address:"
 msgstr ""
 
-#: src/text.vala:387
+#: src/text.vala:389
 msgid "Client ID:"
 msgstr ""
 
-#: src/text.vala:388
+#: src/text.vala:390
 msgid "Status:"
 msgstr ""
 
-#: src/text.vala:389
+#: src/text.vala:391
 msgid "Tunnel:"
 msgstr ""
 
-#: src/text.vala:390
+#: src/text.vala:392
 msgid "Connection:"
 msgstr ""
 
-#: src/text.vala:391
+#: src/text.vala:393
 msgid "Direct"
 msgstr ""
 
-#: src/text.vala:392
+#: src/text.vala:394
 msgid "Relayed"
 msgstr ""
 
-#: src/text.vala:393
+#: src/text.vala:395
 msgid "Anonymous"
 msgstr ""
 
-#: src/text.vala:394
+#: src/text.vala:396
 msgid "_Network ID:"
 msgstr ""
 
-#: src/text.vala:396
+#: src/text.vala:398
 msgid "_Password:"
 msgstr ""
 
-#: src/text.vala:397
+#: src/text.vala:399
 msgid "_Nickname:"
 msgstr ""
 
-#: src/text.vala:400
+#: src/text.vala:402
 msgid "Offline"
 msgstr ""
 
-#: src/text.vala:401
+#: src/text.vala:403
 msgid "Online"
 msgstr ""
 
-#: src/text.vala:402
+#: src/text.vala:404
 msgid "Unreachable"
 msgstr ""
 
-#: src/text.vala:403
+#: src/text.vala:405
 msgid "Protocol mismatch"
 msgstr ""
 
-#: src/text.vala:404
+#: src/text.vala:406
 msgid "Conflicting address"
 msgstr ""
 
-#: src/text.vala:405
+#: src/text.vala:407
 msgid "C_onnect"
 msgstr ""
 
-#: src/text.vala:406
+#: src/text.vala:408
 msgid "_Disconnect"
 msgstr ""
 
-#: src/text.vala:407
+#: src/text.vala:409
 msgid "Reconnect"
 msgstr ""
 
-#: src/text.vala:408
+#: src/text.vala:410
 msgid "Connected"
 msgstr ""
 
-#: src/text.vala:409
+#: src/text.vala:411
 msgid "Disconnected"
 msgstr ""
 
-#: src/text.vala:410
+#: src/text.vala:412
 msgid "Connecting…"
 msgstr ""
 
-#: src/text.vala:411
+#: src/text.vala:413
 msgid "Logging in…"
 msgstr ""
 
-#: src/text.vala:412
+#: src/text.vala:414
 msgid "Updating…"
 msgstr ""
 
-#: src/text.vala:414
+#: src/text.vala:416
 msgid "Hamachi is not configured"
 msgstr ""
 
-#: src/text.vala:415
+#: src/text.vala:417
 msgid "You need to configure Hamachi before you can connect."
 msgstr ""
 
-#: src/text.vala:416
+#: src/text.vala:418
 msgid "C_onfigure"
 msgstr ""
 
-#: src/text.vala:418
+#: src/text.vala:420
 msgid "Hamachi is not installed"
 msgstr ""
 
-#: src/text.vala:419
+#: src/text.vala:421
 msgid "Please download Hamachi and follow the installation instructions."
 msgstr ""
 
-#: src/text.vala:420
+#: src/text.vala:422
 msgid "Hamachi version {0} is obsolete"
 msgstr ""
 
-#: src/text.vala:421
+#: src/text.vala:423
 msgid "Please download and install the latest Hamachi version."
 msgstr ""
 
-#: src/text.vala:422
+#: src/text.vala:424
 msgid "_Download"
 msgstr ""
 
-#: src/text.vala:424
+#: src/text.vala:426
 msgid "You are connected!"
 msgstr ""
 
-#: src/text.vala:425
+#: src/text.vala:427
 msgid "Click on the + button to add a network."
 msgstr ""
 
-#: src/text.vala:427
+#: src/text.vala:429
 msgid "Members:"
 msgstr ""
 
-#: src/text.vala:428
+#: src/text.vala:430
 msgid "{0} online, {1} total"
 msgstr ""
 
-#: src/text.vala:429
+#: src/text.vala:431
 msgid "Owner:"
 msgstr ""
 
-#: src/text.vala:430
+#: src/text.vala:432
 msgid "You"
 msgstr ""
 
-#: src/text.vala:431
+#: src/text.vala:433
 msgid "Unknown"
 msgstr ""
 
-#: src/text.vala:432
+#: src/text.vala:434
 msgid "Unavailable"
 msgstr ""
 
-#: src/text.vala:433
+#: src/text.vala:435
 msgid "Awaiting approval"
 msgstr ""
 
-#: src/text.vala:434
+#: src/text.vala:436
 msgid "Locked:"
 msgstr ""
 
-#: src/text.vala:435
+#: src/text.vala:437
 msgid "Approval:"
 msgstr ""
 
-#: src/text.vala:436
+#: src/text.vala:438
 msgid "Manually"
 msgstr ""
 
-#: src/text.vala:437
+#: src/text.vala:439
 msgid "Automatically"
 msgstr ""
 
-#: src/text.vala:438
+#: src/text.vala:440
 msgid "Capacity:"
 msgstr ""
 
-#: src/text.vala:440
+#: src/text.vala:442
 msgid "_Go Online"
 msgstr ""
 
-#: src/text.vala:441
+#: src/text.vala:443
 msgid "_Go Offline"
 msgstr ""
 
-#: src/text.vala:442
+#: src/text.vala:444
 msgid "_Leave"
 msgstr ""
 
-#: src/text.vala:443
+#: src/text.vala:445
 msgid "_Locked"
 msgstr ""
 
-#: src/text.vala:444
+#: src/text.vala:446
 msgid "_New Member Approval"
 msgstr ""
 
-#: src/text.vala:445
+#: src/text.vala:447
 msgid "_Automatically"
 msgstr ""
 
-#: src/text.vala:446
+#: src/text.vala:448
 msgid "_Manually"
 msgstr ""
 
-#: src/text.vala:447
+#: src/text.vala:449
 msgid "_Copy Network ID"
 msgstr ""
 
-#: src/text.vala:449
+#: src/text.vala:451
 msgid "_Browse Shares"
 msgstr ""
 
-#: src/text.vala:450
+#: src/text.vala:452
 msgid "_Ping"
 msgstr ""
 
-#: src/text.vala:451
+#: src/text.vala:453
 msgid "_View Remote Desktop"
 msgstr ""
 
-#: src/text.vala:452
+#: src/text.vala:454
 msgid "_Approve"
 msgstr ""
 
-#: src/text.vala:453
+#: src/text.vala:455
 msgid "_Reject"
 msgstr ""
 
 #. This action removes the selected member from the network.
-#: src/text.vala:455
+#: src/text.vala:457
 msgid "_Evict"
 msgstr ""
 
-#: src/text.vala:456
+#: src/text.vala:458
 msgid "Copy IPv_4 Address"
 msgstr ""
 
-#: src/text.vala:457
+#: src/text.vala:459
 msgid "Copy IPv_6 Address"
 msgstr ""
 
-#: src/text.vala:458
+#: src/text.vala:460
 msgid "_Copy Client ID"
 msgstr ""
 
-#: src/text.vala:460
+#: src/text.vala:462
 msgid "Change _Nickname…"
 msgstr ""
 
-#: src/text.vala:461
+#: src/text.vala:463
 msgid "Change Nickname"
 msgstr ""
 
-#: src/text.vala:462
+#: src/text.vala:464
 msgid "C_hange"
 msgstr ""
 
-#: src/text.vala:464
+#: src/text.vala:466
 msgid "Change _Password…"
 msgstr ""
 
-#: src/text.vala:465
+#: src/text.vala:467
 msgid "Change Password"
 msgstr ""
 
-#: src/text.vala:466
+#: src/text.vala:468
 msgid "_New password:"
 msgstr ""
 
-#: src/text.vala:468
+#: src/text.vala:470
 msgid "_Account:"
 msgstr ""
 
-#: src/text.vala:470
+#: src/text.vala:472
 msgid "Pending"
 msgstr ""
 
-#: src/text.vala:472
+#: src/text.vala:474
 msgid "_Attach to Account…"
 msgstr ""
 
-#: src/text.vala:473
+#: src/text.vala:475
 msgid "Attach to Account"
 msgstr ""
 
-#: src/text.vala:474
+#: src/text.vala:476
 msgid "_Include all networks created by this client"
 msgstr ""
 
-#: src/text.vala:475
+#: src/text.vala:477
 msgid "_Attach"
 msgstr ""
 
-#: src/text.vala:476
+#: src/text.vala:478
 msgid "Account not found"
 msgstr ""
 
-#: src/text.vala:478
+#: src/text.vala:480
 msgid "Config_uration"
 msgstr ""
 
-#: src/text.vala:479
+#: src/text.vala:481
 msgid "_Open Folder"
 msgstr ""
 
-#: src/text.vala:480
+#: src/text.vala:482
 msgid "_Save a Backup…"
 msgstr ""
 
-#: src/text.vala:481
+#: src/text.vala:483
 msgid "Save a Backup"
 msgstr ""
 
-#: src/text.vala:482
+#: src/text.vala:484
 msgid "_Restore from Backup…"
 msgstr ""
 
-#: src/text.vala:483
+#: src/text.vala:485
 msgid "Restore from Backup"
 msgstr ""
 
-#: src/text.vala:484
+#: src/text.vala:486
 msgid "_Restore"
 msgstr ""
 
-#: src/text.vala:485
+#: src/text.vala:487
 msgid "Could not restore configuration"
 msgstr ""
 
-#: src/text.vala:486
+#: src/text.vala:488
 msgid "Archive does not contain expected files."
 msgstr ""
 
-#: src/text.vala:487
+#: src/text.vala:489
 msgid "All supported archives"
 msgstr ""
 
-#: src/text.vala:489
+#: src/text.vala:491
 msgid "_Join Network…"
 msgstr ""
 
-#: src/text.vala:490
+#: src/text.vala:492
 msgid "Join Network"
 msgstr ""
 
-#: src/text.vala:491
+#: src/text.vala:493
 msgid "_Join"
 msgstr ""
 
-#: src/text.vala:493
+#: src/text.vala:495
 msgid "_Create Network…"
 msgstr ""
 
-#: src/text.vala:494
+#: src/text.vala:496
 msgid "Create Network"
 msgstr ""
 
-#: src/text.vala:495
+#: src/text.vala:497
 msgid "C_reate"
 msgstr ""
 
-#: src/text.vala:497
+#: src/text.vala:499
 msgid "Network not found"
 msgstr ""
 
-#: src/text.vala:498
+#: src/text.vala:500
 msgid "Invalid password"
 msgstr ""
 
-#: src/text.vala:499
+#: src/text.vala:501
 msgid "Network is full"
 msgstr ""
 
-#: src/text.vala:500
+#: src/text.vala:502
 msgid "Network is locked"
 msgstr ""
 
-#: src/text.vala:501
+#: src/text.vala:503
 msgid "Network already joined"
 msgstr ""
 
-#: src/text.vala:502
+#: src/text.vala:504
 msgid "Network ID is already taken"
 msgstr ""
 
-#: src/text.vala:503
+#: src/text.vala:505
 msgid "Unknown error"
 msgstr ""
 
-#: src/text.vala:505
+#: src/text.vala:507
 msgid "Join request sent"
 msgstr ""
 
-#: src/text.vala:507
+#: src/text.vala:509
 msgid "Preferences"
 msgstr ""
 
-#: src/text.vala:508
+#: src/text.vala:510
 msgid "Information"
 msgstr ""
 
-#: src/text.vala:510
+#: src/text.vala:512
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr ""
 
-#: src/text.vala:511
+#: src/text.vala:513
 msgid "If you delete a network, it will be permanently lost."
 msgstr ""
 
-#: src/text.vala:513
+#: src/text.vala:515
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr ""
 
-#: src/text.vala:514
+#: src/text.vala:516
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
 
-#: src/text.vala:516
+#: src/text.vala:518
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr ""
 
-#: src/text.vala:517
+#: src/text.vala:519
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 
-#: src/text.vala:519
+#: src/text.vala:521
 msgid "Could not delete network “{0}”"
 msgstr ""
 
-#: src/text.vala:520
+#: src/text.vala:522
 msgid "Could not leave network “{0}”"
 msgstr ""
 
-#: src/text.vala:521
+#: src/text.vala:523
 msgid "Could not evict member “{0}”"
 msgstr ""
 
-#: src/text.vala:522
+#: src/text.vala:524
 msgid "Could not go online in the network “{0}”"
 msgstr ""
 
-#: src/text.vala:523
+#: src/text.vala:525
 msgid "Could not go offline in the network “{0}”"
 msgstr ""
 
-#: src/text.vala:525
+#: src/text.vala:527
 msgid "See output for details."
 msgstr ""
 
-#: src/text.vala:527
+#: src/text.vala:529
 msgid "General"
 msgstr ""
 
-#: src/text.vala:528
+#: src/text.vala:530
 msgid "Commands"
 msgstr ""
 
 #. In this context meaning "work environment".
-#: src/text.vala:530
+#: src/text.vala:532
 msgid "Desktop"
 msgstr ""
 
-#: src/text.vala:532
+#: src/text.vala:534
 msgid "Behavior"
 msgstr ""
 
-#: src/text.vala:533
+#: src/text.vala:535
 msgid "Appearance"
 msgstr ""
 
-#: src/text.vala:534
+#: src/text.vala:536
 msgid "Notifications"
 msgstr ""
 
-#: src/text.vala:536
+#: src/text.vala:538
 msgid "_Protocol:"
 msgstr ""
 
-#: src/text.vala:537
+#: src/text.vala:539
 msgid "Both IPv4 and IPv6"
 msgstr ""
 
-#: src/text.vala:538
+#: src/text.vala:540
 msgid "IPv4 only"
 msgstr ""
 
-#: src/text.vala:539
+#: src/text.vala:541
 msgid "IPv6 only"
 msgstr ""
 
-#: src/text.vala:541
+#: src/text.vala:543
 msgid "Show _Offline Members"
 msgstr ""
 
-#: src/text.vala:542
+#: src/text.vala:544
 msgid "Sort by _Name"
 msgstr ""
 
-#: src/text.vala:543
+#: src/text.vala:545
 msgid "Sort by _Status"
 msgstr ""
 
-#: src/text.vala:545
+#: src/text.vala:547
 msgid "C_onnect automatically on startup"
 msgstr ""
 
-#: src/text.vala:546
+#: src/text.vala:548
 msgid "_Reconnect automatically when the connection is lost"
 msgstr ""
 
-#: src/text.vala:547
+#: src/text.vala:549
 msgid "_Disconnect on quit"
 msgstr ""
 
-#: src/text.vala:549
+#: src/text.vala:551
 msgid "Use _dark theme variant"
 msgstr ""
 
-#: src/text.vala:551
-msgid "Display notification when the connection is l_ost"
-msgstr ""
-
-#: src/text.vala:552
-msgid "Display notification when a member _joins"
-msgstr ""
-
 #: src/text.vala:553
-msgid "Display notification when a member _leaves"
-msgstr ""
-
-#: src/text.vala:554
-msgid "Display notification when a member comes o_nline"
+msgid "Show _indicator"
 msgstr ""
 
 #: src/text.vala:555
-msgid "Display notification when a member goes o_ffline"
+msgid "Display notification when the connection is l_ost"
+msgstr ""
+
+#: src/text.vala:556
+msgid "Display notification when a member _joins"
 msgstr ""
 
 #: src/text.vala:557
-msgid "Error connecting"
+msgid "Display notification when a member _leaves"
 msgstr ""
 
 #: src/text.vala:558
-msgid "Hamachi login failed"
+msgid "Display notification when a member comes o_nline"
 msgstr ""
 
 #: src/text.vala:559
-msgid "No internet connection"
+msgid "Display notification when a member goes o_ffline"
 msgstr ""
 
 #: src/text.vala:561
-msgid "Add"
+msgid "Error connecting"
 msgstr ""
 
 #: src/text.vala:562
-msgid "Add Command"
+msgid "Hamachi login failed"
 msgstr ""
 
 #: src/text.vala:563
-msgid "_Add"
-msgstr ""
-
-#: src/text.vala:564
-msgid "Edit"
+msgid "No internet connection"
 msgstr ""
 
 #: src/text.vala:565
-msgid "Edit Command"
+msgid "Add"
 msgstr ""
 
 #: src/text.vala:566
-msgid "_Label:"
+msgid "Add Command"
 msgstr ""
 
 #: src/text.vala:567
-msgid "IPv_4 command:"
+msgid "_Add"
 msgstr ""
 
 #: src/text.vala:568
-msgid "IPv_6 command:"
+msgid "Edit"
 msgstr ""
 
 #: src/text.vala:569
-msgid "Use %A for address and %N for nickname"
+msgid "Edit Command"
 msgstr ""
 
 #: src/text.vala:570
-msgid "_Priority:"
+msgid "_Label:"
+msgstr ""
+
+#: src/text.vala:571
+msgid "IPv_4 command:"
 msgstr ""
 
 #: src/text.vala:572
-msgid "Remove"
+msgid "IPv_6 command:"
 msgstr ""
 
 #: src/text.vala:573
-msgid "Move up"
+msgid "Use %A for address and %N for nickname"
 msgstr ""
 
 #: src/text.vala:574
-msgid "Move down"
+msgid "_Priority:"
 msgstr ""
 
-#: src/text.vala:575
-msgid "Set as default action"
+#: src/text.vala:576
+msgid "Remove"
 msgstr ""
 
 #: src/text.vala:577
-msgid "Revert all changes"
+msgid "Move up"
 msgstr ""
 
 #: src/text.vala:578
-msgid "Are you sure you want to revert all changes?"
+msgid "Move down"
 msgstr ""
 
 #: src/text.vala:579
-msgid "If you revert all changes, the default commands will be restored."
+msgid "Set as default action"
 msgstr ""
 
 #: src/text.vala:581
-msgid "Hamachi lost connection"
+msgid "Revert all changes"
 msgstr ""
 
 #: src/text.vala:582
-msgid "Member online"
+msgid "Are you sure you want to revert all changes?"
 msgstr ""
 
 #: src/text.vala:583
-msgid "Member offline"
-msgstr ""
-
-#: src/text.vala:584
-msgid "Member joined"
+msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
 
 #: src/text.vala:585
+msgid "Hamachi lost connection"
+msgstr ""
+
+#: src/text.vala:586
+msgid "Member online"
+msgstr ""
+
+#: src/text.vala:587
+msgid "Member offline"
+msgstr ""
+
+#: src/text.vala:588
+msgid "Member joined"
+msgstr ""
+
+#: src/text.vala:589
 msgid "Member left"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/text.vala:587
+#: src/text.vala:591
 msgid "{0} came online in the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/text.vala:589
+#: src/text.vala:593
 msgid "{0} went offline in the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/text.vala:591
+#: src/text.vala:595
 msgid "{0} joined the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/text.vala:593
+#: src/text.vala:597
 msgid "{0} left the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/text.vala:599
+#: src/text.vala:603
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/text.vala:605
+#: src/text.vala:609
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/text.vala:611
+#: src/text.vala:615
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/text.vala:617
+#: src/text.vala:621
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/text.vala:622
+#: src/text.vala:626
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/text.vala:627
+#: src/text.vala:631
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"

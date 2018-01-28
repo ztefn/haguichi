@@ -19,7 +19,6 @@ public class Settings : Object
     public static Key connect_on_startup;
     public static Key disconnect_on_quit;
     public static Key reconnect_on_connection_loss;
-    public static Key start_in_tray;
     public static Key update_network_list;
     public static Key custom_commands;
     public static Key init_system;
@@ -32,8 +31,6 @@ public class Settings : Object
     public static Key update_interval;
     public static Key collapsed_networks;
     public static Key long_nicks;
-    public static Key network_list_icon_size_large;
-    public static Key network_list_icon_size_small;
     public static Key member_template_large;
     public static Key member_template_small;
     public static Key network_template_large;
@@ -49,6 +46,7 @@ public class Settings : Object
     public static Key position_x;
     public static Key position_y;
     public static Key prefer_dark_theme;
+    public static Key show_indicator;
     public static Key sidebar_position;
     public static Key width;
 
@@ -90,6 +88,7 @@ public class Settings : Object
         position_x                    = new Key ("ui", "position-x");
         position_y                    = new Key ("ui", "position-y");
         prefer_dark_theme             = new Key ("ui", "prefer-dark-theme");
+        show_indicator                = new Key ("ui", "show-indicator");
         sidebar_position              = new Key ("ui", "sidebar-position");
         width                         = new Key ("ui", "width");
     }

@@ -41,7 +41,6 @@ class HaguichiIndicator
         indicator = new Indicator (Text.app_name.down(), icon_disconnected, IndicatorCategory.APPLICATION_STATUS);
         indicator.set_title (Text.app_name);
         indicator.set_menu (menu);
-        indicator.set_status (IndicatorStatus.ACTIVE);
         indicator.scroll_event.connect ((ind, steps, direction) =>
         {
             // Never hide the main window when a modal dialog is being shown
@@ -65,5 +64,26 @@ class HaguichiIndicator
     public void set_icon_name (string name)
     {
         indicator.icon_name = name;
+    }
+    
+    public bool connected
+    {
+        get
+        {
+            return indicator.connected;
+        }
+    }
+    
+    public bool active
+    {
+        get
+        {
+            return (indicator.get_status() == IndicatorStatus.ACTIVE);
+        }
+        
+        set
+        {
+            indicator.set_status ((value == true) ? IndicatorStatus.ACTIVE : IndicatorStatus.PASSIVE);
+        }
     }
 }

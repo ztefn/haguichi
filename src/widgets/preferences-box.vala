@@ -44,5 +44,18 @@ namespace Widgets
             grid.attach (label,  0, position, 1, 1);
             grid.attach (widget, 1, position, 1, 1);
         }
+        
+        public void remove_row (int position)
+        {
+            grid.remove_row (position);
+        }
+        
+        public uint num_rows
+        {
+            get
+            {
+                return grid.get_children().length();
+            }
+        }
     }
 }

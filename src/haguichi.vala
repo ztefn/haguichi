@@ -125,6 +125,7 @@ class Haguichi : Gtk.Application
         
 #if ENABLE_APPINDICATOR
         indicator = new HaguichiIndicator();
+        indicator.active = (bool) Settings.show_indicator.val;
 #endif
         
         window = new HaguichiWindow();

@@ -21,6 +21,7 @@ namespace Dialogs
         public  Switch update_network_list_switch;
         
         public  Switch prefer_dark_theme_switch;
+        public  Switch show_indicator_switch;
         public  Switch notify_connection_loss_switch;
         public  Switch notify_member_join_switch;
         public  Switch notify_member_leave_switch;
@@ -37,11 +38,14 @@ namespace Dialogs
         private Label interval_label;
         
         private Label prefer_dark_theme_label;
+        private Label show_indicator_label;
         private Label notify_connection_loss_label;
         private Label notify_member_join_label;
         private Label notify_member_leave_label;
         private Label notify_member_online_label;
         private Label notify_member_offline_label;
+        
+        private PreferencesBox appearance_box;
         
         public Preferences ()
         {
@@ -58,6 +62,7 @@ namespace Dialogs
             
             
             prefer_dark_theme_switch      = new PreferencesSwitch (Settings.prefer_dark_theme);
+            show_indicator_switch         = new PreferencesSwitch (Settings.show_indicator);
             notify_connection_loss_switch = new PreferencesSwitch (Settings.notify_on_connection_loss);
             notify_member_join_switch     = new PreferencesSwitch (Settings.notify_on_member_join);
             notify_member_leave_switch    = new PreferencesSwitch (Settings.notify_on_member_leave);
@@ -65,14 +70,18 @@ namespace Dialogs
             notify_member_offline_switch  = new PreferencesSwitch (Settings.notify_on_member_offline);
             
             prefer_dark_theme_label       = new PreferencesLabel (Text.prefer_dark_theme, prefer_dark_theme_switch);
+            show_indicator_label          = new PreferencesLabel (Text.show_indicator, show_indicator_switch);
             notify_connection_loss_label  = new PreferencesLabel (Text.notify_on_connection_lost, notify_connection_loss_switch);
             notify_member_join_label      = new PreferencesLabel (Text.notify_on_member_join, notify_member_join_switch);
             notify_member_leave_label     = new PreferencesLabel (Text.notify_on_member_leave, notify_member_leave_switch);
             notify_member_online_label    = new PreferencesLabel (Text.notify_on_member_online, notify_member_online_switch);
             notify_member_offline_label   = new PreferencesLabel (Text.notify_on_member_offline, notify_member_offline_switch);
             
-            var appearance_box = new PreferencesBox (Text.appearance_group);
-            appearance_box.add_row (prefer_dark_theme_label,  prefer_dark_theme_switch,      1);
+            appearance_box = new PreferencesBox (Text.appearance_group);
+            if (Haguichi.window_use_header_bar)
+            {
+                appearance_box.add_row (prefer_dark_theme_label, prefer_dark_theme_switch, 1);
+            }
             
             var notify_box = new PreferencesBox (Text.notify_group);
             notify_box.add_row (notify_connection_loss_label, notify_connection_loss_switch, 1);
@@ -82,6 +91,7 @@ namespace Dialogs
             notify_box.add_row (notify_member_offline_label,  notify_member_offline_switch,  5);
             
             var desktop_box = new Box (Orientation.VERTICAL, 0);
+            desktop_box.margin_bottom = 3;
             desktop_box.pack_start (appearance_box, false, false, 0);
             desktop_box.pack_start (notify_box,     false, false, 0);
             
@@ -96,7 +106,7 @@ namespace Dialogs
                 Settings.protocol.val = Utils.protocol_to_string (ip_combo.active);
             });
             
-            Label ip_label = new PreferencesLabel (Text.protocol_label, ip_combo);
+            var ip_label = new PreferencesLabel (Text.protocol_label, ip_combo);
             
             var hamachi_box = new PreferencesBox ("Hamachi");
             hamachi_box.add_row (ip_label, ip_combo, 1);
@@ -138,17 +148,18 @@ namespace Dialogs
             behavior_box.add_row (interval_box,                       update_network_list_switch,          4);
             
             var general_box = new Box (Orientation.VERTICAL, 0);
+            general_box.margin_bottom = 3;
             general_box.pack_start (hamachi_box,  false, false, 0);
             general_box.pack_start (behavior_box, false, false, 0);
             
             
-            Stack container = new Stack();
+            var container = new Stack();
             container.expand = true;
             container.add_titled (general_box,          "general",  Text.general_tab);
             container.add_titled (new CommandsEditor(), "commands", Text.commands_tab);
             container.add_titled (desktop_box,          "desktop",  Text.desktop_tab);
             
-            StackSwitcher switcher = new StackSwitcher();
+            var switcher = new StackSwitcher();
             switcher.stack = container;
             
             if (Haguichi.dialog_use_header_bar)
@@ -187,11 +198,6 @@ namespace Dialogs
             get_content_area().add (container);
             get_content_area().show_all();
             
-            if (!Haguichi.window_use_header_bar)
-            {
-                appearance_box.hide();
-            }
-            
             get_style_context().add_class ("preferences");
             
             set_interval_string();
@@ -207,6 +213,18 @@ namespace Dialogs
         
         public void open ()
         {
+#if ENABLE_APPINDICATOR
+            appearance_box.remove_row (2);
+            
+            if (Haguichi.indicator.connected)
+            {
+                appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
+                appearance_box.show_all();
+            }
+#endif
+            // Only show appearance box if there are any rows present
+            appearance_box.visible = (appearance_box.num_rows > 0);
+            
             show();
             present();
         }

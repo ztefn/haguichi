@@ -312,6 +312,8 @@ Türkçe (tr)
     
     public static string prefer_dark_theme;
     
+    public static string show_indicator;
+    
     public static string notify_on_connection_lost;
     public static string notify_on_member_join;
     public static string notify_on_member_leave;
@@ -547,6 +549,8 @@ Türkçe (tr)
         disconnect_on_quit                         = _("_Disconnect on quit");
         
         prefer_dark_theme                          = _("Use _dark theme variant");
+        
+        show_indicator                             = _("Show _indicator");
         
         notify_on_connection_lost                  = _("Display notification when the connection is l_ost");
         notify_on_member_join                      = _("Display notification when a member _joins");

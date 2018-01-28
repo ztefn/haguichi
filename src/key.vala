@@ -186,7 +186,15 @@ public class Key : Object
             }
             else if (key == Settings.prefer_dark_theme.key_name)
             {
+                Haguichi.preferences_dialog.prefer_dark_theme_switch.active = (bool) _value;
                 Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", (bool) _value);
+            }
+            else if (key == Settings.show_indicator.key_name)
+            {
+                Haguichi.preferences_dialog.show_indicator_switch.active = (bool) _value;
+#if ENABLE_APPINDICATOR
+                Haguichi.indicator.active = (bool) _value;
+#endif
             }
         }
     }

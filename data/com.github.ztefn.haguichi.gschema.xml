@@ -151,6 +151,9 @@
     <key type="b" name="prefer-dark-theme">
       <default>true</default>
     </key>
+    <key type="b" name="show-indicator">
+      <default>true</default>
+    </key>
     <key type="i" name="sidebar-position">
       <default>290</default>
     </key>
