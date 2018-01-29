@@ -66,14 +66,6 @@ class HaguichiIndicator
         indicator.icon_name = name;
     }
     
-    public bool connected
-    {
-        get
-        {
-            return indicator.connected;
-        }
-    }
-    
     public bool active
     {
         get

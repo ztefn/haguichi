@@ -82,6 +82,9 @@ namespace Dialogs
             {
                 appearance_box.add_row (prefer_dark_theme_label, prefer_dark_theme_switch, 1);
             }
+#if ENABLE_APPINDICATOR
+            appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
+#endif
             
             var notify_box = new PreferencesBox (Text.notify_group);
             notify_box.add_row (notify_connection_loss_label, notify_connection_loss_switch, 1);
@@ -198,6 +201,9 @@ namespace Dialogs
             get_content_area().add (container);
             get_content_area().show_all();
             
+            // Only show appearance box if there are any rows present
+            appearance_box.visible = (appearance_box.num_rows > 0);
+            
             get_style_context().add_class ("preferences");
             
             set_interval_string();
@@ -213,18 +219,6 @@ namespace Dialogs
         
         public void open ()
         {
-#if ENABLE_APPINDICATOR
-            appearance_box.remove_row (2);
-            
-            if (Haguichi.indicator.connected)
-            {
-                appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
-                appearance_box.show_all();
-            }
-#endif
-            // Only show appearance box if there are any rows present
-            appearance_box.visible = (appearance_box.num_rows > 0);
-            
             show();
             present();
         }
