@@ -464,10 +464,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     
     public override void show ()
     {
-        base.show();
-        
-        Haguichi.session.visibility_changed (true);
-        
         // Move window to the current desktop and correct for any desktop compositor deviation
         
         while (x < 0)
@@ -489,6 +485,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
         
         move (x, y);
+        
+        base.show();
+        
+        Haguichi.session.visibility_changed (true);
     }    
     
     public override void hide ()
