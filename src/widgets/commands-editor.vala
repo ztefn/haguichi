@@ -132,7 +132,7 @@ public class CommandsEditor : Box
         down_but.tooltip_markup = Text.move_down_tip;
         
         Image edit_img = new Image();
-        edit_img.set_from_icon_name ("system-run-symbolic", IconSize.MENU);
+        edit_img.set_from_icon_name ("emblem-system-symbolic", IconSize.MENU);
         
         edit_but = new Button();
         edit_but.image = edit_img;
