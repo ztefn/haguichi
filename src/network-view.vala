@@ -879,7 +879,11 @@ public class NetworkView : TreeView
         if (is_network (sorted_store, _iter))
         {
             network_menu.set_network (last_network);
+#if GTK_3_22
+            network_menu.popup_at_pointer (null);
+#else
             network_menu.popup (null, null, null, 0, get_current_event_time());
+#endif
         }
         else
         {
@@ -888,7 +892,11 @@ public class NetworkView : TreeView
             Member last_member = (Member) member_val;
             
             member_menu.set_member (last_member, last_network);
+#if GTK_3_22
+            member_menu.popup_at_pointer (null);
+#else
             member_menu.popup (null, null, null, 0, get_current_event_time());
+#endif
         }
     }
     
@@ -983,7 +991,11 @@ public class NetworkView : TreeView
             }
             else
             {
+#if GTK_3_22
+                join_create_menu.popup_at_pointer (event);
+#else
                 join_create_menu.popup (null, null, null, 0, get_current_event_time());
+#endif
             }
         }
         

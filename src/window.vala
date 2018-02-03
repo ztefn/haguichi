@@ -114,7 +114,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         {
             if (event.button == 3)
             {
+#if GTK_3_22
+                join_create_menu.popup_at_pointer (event);
+#else
                 join_create_menu.popup (null, null, null, 0, get_current_event_time());
+#endif
                 return true;
             }
             
