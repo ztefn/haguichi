@@ -470,25 +470,42 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     {
         // Move window to the current desktop and correct for any desktop compositor deviation
         
-        while (x < 0)
-        {
-            x += Gdk.Screen.width();
-        }
-        while (x > Gdk.Screen.width())
-        {
-            x -= Gdk.Screen.width();
-        }
+        var window = get_window();
         
-        while (y < 0)
+        if (window != null)
         {
-            y += Gdk.Screen.height();
+#if GTK_3_22
+            var display  = get_display();
+            var monitor  = display.get_monitor_at_window (window);
+            var geometry = monitor.get_geometry();
+            
+            int screen_width  = geometry.width;
+            int screen_height = geometry.height;
+#else
+            int screen_width  = Gdk.Screen.width();
+            int screen_height = Gdk.Screen.height();
+#endif
+            
+            while (x < 0)
+            {
+                x += screen_width;
+            }
+            while (x > screen_width)
+            {
+                x -= screen_width;
+            }
+            
+            while (y < 0)
+            {
+                y += screen_height;
+            }
+            while (y > screen_height)
+            {
+                y -= screen_height;
+            }
+            
+            move (x, y);
         }
-        while (y > Gdk.Screen.height())
-        {
-            y -= Gdk.Screen.height();
-        }
-        
-        move (x, y);
         
         base.show();
         
