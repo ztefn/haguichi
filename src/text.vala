@@ -133,7 +133,6 @@ Türkçe (tr)
     public static string cancel_label;
     public static string cancel;
     public static string save_label;
-    public static string refresh_label;
     public static string revert_label;
     public static string delete_label;
     public static string information_label;
@@ -370,7 +369,6 @@ Türkçe (tr)
         cancel_label                               = _("_Cancel");
         cancel                                     = Utils.remove_mnemonics (cancel_label);
         save_label                                 = _("_Save");
-        refresh_label                              = _("_Refresh");
         revert_label                               = _("_Revert");
         delete_label                               = _("_Delete");
         information_label                          = _("_Information");
