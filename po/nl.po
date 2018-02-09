@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-05-06 22:00+0000\n"
+"POT-Creation-Date: 2018-02-10 00:34+0100\n"
+"PO-Revision-Date: 2018-02-09 23:21+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
 "Language: \n"
@@ -11,8 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-05-07 15:28+0000\n"
-"X-Generator: Launchpad (build 18366)\n"
+"X-Launchpad-Export-Date: 2018-02-09 23:24+0000\n"
+"X-Generator: Launchpad (build 18544)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -58,7 +58,7 @@ msgstr "_Voorkeuren"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Snel_toetsen"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -810,11 +810,11 @@ msgstr[1] "_Werk de netwerklijst om de %S _seconden bij"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Hulp tonen"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Client-informatie tonen"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -829,19 +829,16 @@ msgid "Quit"
 msgstr "Afsluiten"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Dit netwerk is vol"
+msgstr "Netwerklijst"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Netwerk toetreden"
+msgstr "Een netwerk toetreden"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Netwerk aanmaken"
+msgstr "Een netwerk aanmaken"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -849,28 +846,26 @@ msgstr "Verversen"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Zoeken"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "_Offline leden tonen"
+msgstr "Offline leden tonen/verbergen"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Alle netwerken uitklappen"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Alle netwerken inklappen"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Opdracht bewerken"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Verversen"
+msgstr "Opdracht uitvoeren"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Verversen"
