@@ -133,6 +133,7 @@ public class Headerbar : HeaderBar
         var show_offline = new GLib.MenuItem (Text.show_offline_members, "app.show-offline-members");
         var preferences  = new GLib.MenuItem (Text.preferences_label,    "app.preferences");
         var donate       = new GLib.MenuItem (Text.donate_label,         "app.donate");
+        var shortcuts    = new GLib.MenuItem (Text.shortcuts_label,      "app.shortcuts");
         var help         = new GLib.MenuItem (Text.help_label,           "app.help");
         var about        = new GLib.MenuItem (Text.about_label,          "app.about");
         var quit         = new GLib.MenuItem (Text.quit_label,           "app.quit");
@@ -159,6 +160,7 @@ public class Headerbar : HeaderBar
         donate_section.append_item (donate);
         
         var meta_section = new GLib.Menu();
+        meta_section.append_item (shortcuts);
         meta_section.append_item (help);
         meta_section.append_item (about);
         meta_section.append_item (quit);

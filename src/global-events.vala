@@ -15,7 +15,7 @@ public class GlobalEvents
     public static bool search_active;
     public static bool attach_blocking;
     
-    public static void set_modal_dialog (Dialog? dialog)
+    public static void set_modal_dialog (Window? dialog)
     {
         Haguichi.modal_dialog = dialog;
         Haguichi.session.modality_changed (dialog != null);
@@ -385,6 +385,25 @@ public class GlobalEvents
     public static void donate ()
     {
         Command.open_uri (Text.donate_url);
+    }
+    
+    public static void shortcuts ()
+    {
+#if GTK_3_20
+        var builder = new Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts-window.ui");
+        var shortcuts_window = (ShortcutsWindow) builder.get_object ("shortcuts-window");
+        shortcuts_window.delete_event.connect ((event) =>
+        {
+            set_modal_dialog (null);
+            return false;
+        });
+        shortcuts_window.set_transient_for (Haguichi.window);
+        shortcuts_window.show_all();
+        
+        set_modal_dialog (shortcuts_window);
+#else
+        Command.open_uri (Text.shortcuts_url);
+#endif
     }
     
     public static void copy_ipv4_to_clipboard ()

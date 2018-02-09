@@ -38,6 +38,7 @@ public class GlobalActions
     public static SimpleAction preferences;
     public static SimpleAction info;
     public static SimpleAction donate;
+    public static SimpleAction shortcuts;
     public static SimpleAction help;
     public static SimpleAction about;
     public static SimpleAction quit;
@@ -112,6 +113,9 @@ public class GlobalActions
         donate = new SimpleAction ("donate", null);
         donate.activate.connect (GlobalEvents.donate);
         
+        shortcuts = new SimpleAction ("shortcuts", null);
+        shortcuts.activate.connect (GlobalEvents.shortcuts);
+        
         help = new SimpleAction ("help", null);
         help.activate.connect (GlobalEvents.help);
         
@@ -140,6 +144,7 @@ public class GlobalActions
         app.add_action (show_offline);
         app.add_action (donate);
         app.add_action (preferences);
+        app.add_action (shortcuts);
         app.add_action (info);
         app.add_action (help);
         app.add_action (about);
@@ -153,6 +158,7 @@ public class GlobalActions
         app.set_accels_for_action ("app.start-search", {"<Control>F"});
         app.set_accels_for_action ("app." + Settings.show_offline_members.key_name, {"<Control>M"});
         app.set_accels_for_action ("app.preferences", {"<Control>P"});
+        app.set_accels_for_action ("app.shortcuts", {"<Control>F1"});
         app.set_accels_for_action ("app.info", {"F2"});
         app.set_accels_for_action ("app.help", {"F1"});
         app.set_accels_for_action ("app.quit", {"<Control>Q"});
@@ -166,9 +172,10 @@ public class GlobalActions
             section1.append (Text.preferences_label, "app.preferences");
             
             var section2 = new Menu();
-            section2.append (Text.help_label,  "app.help");
-            section2.append (Text.about_label, "app.about");
-            section2.append (Text.quit_label,  "app.quit");
+            section2.append (Text.shortcuts_label, "app.shortcuts");
+            section2.append (Text.help_label,      "app.help");
+            section2.append (Text.about_label,     "app.about");
+            section2.append (Text.quit_label,      "app.quit");
             
             var menu = new Menu();
             menu.insert_section (0, null, section0);

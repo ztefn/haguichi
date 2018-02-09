@@ -6,5 +6,6 @@
     <file>stylesheets/default.css</file>
     <file>stylesheets/elementary.css</file>
     <file>stylesheets/elementary-dark.css</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts-window.ui</file>
   </gresource>
 </gresources>

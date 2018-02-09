@@ -61,7 +61,16 @@ deps = [
     dependency('libnotify', version: '>= 0.7.6')
 ]
 
-if (dependency('gtk+-3.0').version().version_compare('>= 3.22'))
+gtk_version = dependency('gtk+-3.0').version()
+
+if (gtk_version.version_compare('>= 3.20'))
+    add_project_arguments(
+        ['-D', 'GTK_3_20'],
+        language: 'vala'
+    )
+endif
+
+if (gtk_version.version_compare('>= 3.22'))
     add_project_arguments(
         ['-D', 'GTK_3_22'],
         language: 'vala'
