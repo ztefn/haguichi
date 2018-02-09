@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkShortcutsWindow" id="shortcuts-window">
+    <property name="modal">1</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <property name="section-name">shortcuts</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">General</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">F1</property>
+                <property name="title" translatable="yes">Show help</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">F2</property>
+                <property name="title" translatable="yes">Show client information</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;O</property>
+                <property name="title" translatable="yes">Connect</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;D</property>
+                <property name="title" translatable="yes">Disconnect</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;P</property>
+                <property name="title" translatable="yes">Preferences</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="title" translatable="yes">Quit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="title" translatable="yes">Network List</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;J</property>
+                <property name="title" translatable="yes">Join a network</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <property name="title" translatable="yes">Create a network</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;R F5</property>
+                <property name="title" translatable="yes">Refresh</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;F</property>
+                <property name="title" translatable="yes">Search</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;M</property>
+                <property name="title" translatable="yes">Show/hide offline members</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;bracketleft</property>
+                <property name="title" translatable="yes">Expand all networks</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;bracketright</property>
+                <property name="title" translatable="yes">Collapse all networks</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;1...9</property>
+                <property name="title" translatable="yes">Execute command</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

@@ -14,7 +14,7 @@ public class Text : Object
 {
     public const  string app_name                  = "Haguichi";
     public const  string app_version               = VERSION;
-    public const  string app_website               = "https://www.haguichi.net/";
+    public const  string app_website               = "https://www.haguichi.net";
     public const  string app_website_label         = "www.haguichi.net";
     public static string app_comments;
     public static string app_description;
@@ -123,9 +123,11 @@ Türkçe (tr)
     Fedir Zinchuk https://launchpad.net/~fedikw
 """;
     
-    public const  string help_url                  = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=help";
-    public const  string get_hamachi_url           = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=get-hamachi";
-    public const  string donate_url                = "https://www.haguichi.net/redirect/?version=" + app_version + "&action=donate";
+    public const  string redirect_url              = app_website  + "/redirect/?action=";
+    public const  string help_url                  = redirect_url + "help";
+    public const  string get_hamachi_url           = redirect_url + "get-hamachi";
+    public const  string donate_url                = redirect_url + "donate";
+    public const  string shortcuts_url             = redirect_url + "shortcuts";
     
     public static string close_label;
     public static string cancel_label;
@@ -137,6 +139,7 @@ Türkçe (tr)
     public static string information_label;
     public static string donate_label;
     public static string preferences_label;
+    public static string shortcuts_label;
     public static string help_label;
     public static string about_label;
     public static string quit_label;
@@ -373,6 +376,7 @@ Türkçe (tr)
         information_label                          = _("_Information");
         donate_label                               = _("_Donate");
         preferences_label                          = _("_Preferences");
+        shortcuts_label                            = _("_Keyboard Shortcuts");
         help_label                                 = _("_Help");
         about_label                                = _("_About");
         quit_label                                 = _("_Quit");
