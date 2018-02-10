@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2018-01-29 16:11+0000\n"
+"PO-Revision-Date: 2018-02-10 12:38+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-01-29 19:12+0000\n"
-"X-Generator: Launchpad (build 18534)\n"
+"X-Launchpad-Export-Date: 2018-02-10 13:08+0000\n"
+"X-Generator: Launchpad (build 18544)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -64,7 +64,7 @@ msgstr "P_referencje"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Skróty klawiszowe"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -829,11 +829,11 @@ msgstr[2] "_Aktualizowanie listy sieci co %S _sekund"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Wyświetlenie pomocy"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Wyświetlenie informacji o kliencie"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -848,19 +848,16 @@ msgid "Quit"
 msgstr "Zakończ"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Sieć jest pełna"
+msgstr "Lista sieci"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Dołącz do sieci"
+msgstr "Dołączenie do sieci"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Utwórz sieć"
+msgstr "Utworzenie sieci"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -868,28 +865,26 @@ msgstr "Odśwież"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Wyszukiwanie"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "Wyświetlanie członków w trybie _offline"
+msgstr "Wyświetlenie/ukrycie członków w trybie offline"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Rozwinięcie wszystkich sieci"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Zwinięcie wszystkich sieci"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Modyfikuj polecenie"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Odśwież"
+msgstr "Wykonanie polecenia"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Odśwież"
