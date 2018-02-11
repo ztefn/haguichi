@@ -107,7 +107,7 @@ public class Sidebar : Box
         heading_box = new Box (Orientation.HORIZONTAL, 0);
         heading_box.halign = Align.CENTER;
         heading_box.margin_top = 15;
-        heading_box.margin_bottom = 18;
+        heading_box.margin_bottom = 12;
         heading_box.pack_start (heading_label, false, false, 0);
         
         
@@ -334,7 +334,7 @@ public class Sidebar : Box
         member_grid.attach (member_connection_entry, 1, 6, 1, 1);
         
         commands_box = new Box (Orientation.VERTICAL, 6);
-        commands_box.margin_top = 18;
+        commands_box.margin_top = 12;
         
         member_box = new Box (Orientation.VERTICAL, 0);
         member_box.pack_start (member_grid,  false, false, 0);
