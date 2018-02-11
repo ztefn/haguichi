@@ -216,7 +216,6 @@ public class Sidebar : Box
         
         network_approval_combo = new ComboBox();
         network_approval_combo.halign = Align.START;
-        network_approval_combo.margin_start = 1;
         network_approval_combo.pack_start (cell, false);
         network_approval_combo.add_attribute (cell, "text", 0);
         network_approval_combo.model = store;
