@@ -124,12 +124,14 @@ public class Sidebar : Box
         id_entry      = new SidebarEntry();
         
         account_label = new SidebarLabel (Text.account);
+        account_label.yalign = 0.0f;
         account_entry = new SidebarEntry();
         
         cancel_button = new Button();
         cancel_button.tooltip_text = Text.cancel;
         cancel_button.image = new Image.from_icon_name ("edit-delete-symbolic", IconSize.MENU);
         cancel_button.margin_left = 3;
+        cancel_button.margin_top = 6;
         cancel_button.valign = Align.START;
         cancel_button.relief = ReliefStyle.NONE;
         cancel_button.get_style_context().add_class ("circular");
@@ -147,7 +149,6 @@ public class Sidebar : Box
         
         
         Grid info_grid = new Grid();
-        info_grid.row_spacing = 9;
         info_grid.column_spacing = 9;
         info_grid.halign = Align.CENTER;
         info_grid.attach (version_label,     0, 1, 1, 1);
@@ -232,7 +233,6 @@ public class Sidebar : Box
         
         
         Grid network_grid = new Grid();
-        network_grid.row_spacing = 9;
         network_grid.column_spacing = 9;
         network_grid.halign = Align.CENTER;
         network_grid.attach (network_status_label,    0, 1, 1, 1);
@@ -318,7 +318,6 @@ public class Sidebar : Box
         
         
         Grid member_grid = new Grid();
-        member_grid.row_spacing = 9;
         member_grid.column_spacing = 9;
         member_grid.halign = Align.CENTER;
         member_grid.attach (member_status_label,     0, 1, 1, 1);

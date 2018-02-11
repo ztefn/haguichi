@@ -14,9 +14,9 @@ public class SidebarEntry : Label
 {
     public SidebarEntry ()
     {
-        // Fix error "undefined symbol: gtk_label_set_xalign" when build with valac >= 0.28 (which asumes Gtk+ 3.16) and running Gtk+ 3.14
-        // xalign = 0;
-        ((Gtk.Misc) this).xalign = 0.0f;
+        xalign = 0.0f;
+        margin_top = 6;
+        margin_bottom = 6;
         width_chars = 15;
         ellipsize = Pango.EllipsizeMode.END;
         selectable = true;
