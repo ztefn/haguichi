@@ -15,10 +15,9 @@ public class SidebarEntry : Label
     public SidebarEntry ()
     {
         xalign = 0.0f;
-        margin_top = 6;
-        margin_bottom = 6;
         width_chars = 15;
         ellipsize = Pango.EllipsizeMode.END;
         selectable = true;
+        get_style_context().add_class ("sidebar-entry");
     }
 }

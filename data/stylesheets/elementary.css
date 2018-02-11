@@ -32,6 +32,18 @@
 
 
 /*
+ * Set padding for sidebar labels and entries
+ */
+
+.sidebar-label,
+.sidebar-entry
+{
+    padding-top: 4px;
+    padding-bottom: 5px;
+}
+
+
+/*
  * Improve "suggested-action" style for buttons in titlebar
  */
 

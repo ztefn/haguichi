@@ -16,10 +16,9 @@ public class SidebarLabel : Label
     {
         label = Utils.remove_colons (_label);
         xalign = 1.0f;
-        margin_top = 6;
-        margin_bottom = 6;
         width_chars = 10;
         ellipsize = Pango.EllipsizeMode.START;
+        get_style_context().add_class ("sidebar-label");
         get_style_context().add_class ("dim-label");
     }
 }

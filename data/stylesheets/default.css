@@ -22,6 +22,18 @@
 
 
 /*
+ * Set padding for sidebar labels and entries
+ */
+
+.sidebar-label,
+.sidebar-entry
+{
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+
+/*
  * Set font weight and padding for preferences headings
  */
 
