@@ -42,6 +42,7 @@ sources = [
     'utils.vala',
     'widgets/command-button.vala',
     'widgets/commands-editor.vala',
+    'widgets/commands-editor-row.vala',
     'widgets/message-bar.vala',
     'widgets/message-box.vala',
     'widgets/preferences-box.vala',

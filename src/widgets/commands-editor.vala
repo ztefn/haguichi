@@ -12,15 +12,8 @@ using Gtk;
 
 public class CommandsEditor : Box
 {
-    private Box box;
+    private ListBox list_box;
     
-    private Gtk.ListStore store;
-    private TreeView tv;
-    
-    private CellRendererText text_cell;
-    private CellRendererPixbuf default_cell;
-    private CellRendererToggle toggle_cell;
-
     private Button add_but;
     private Button remove_but;
     private Button up_but;
@@ -29,74 +22,12 @@ public class CommandsEditor : Box
     private Button default_but;
     private Button revert_but;
     
-    private int active_column;
-    private int default_column;
-    private int label_column;
-    private int command_ipv4_column;
-    private int command_ipv6_column;
-    private int priority_column;
-    private int view_column;
-    
-    private const string[] default_icon_names = {"emblem-default-symbolic", "emblem-ok-symbolic", "emblem-checked", "checkmark"};
+    public string[] default_icon_names = {"emblem-default-symbolic", "emblem-ok-symbolic", "emblem-checked", "checkmark"};
     
     public CommandsEditor ()
     {
-        orientation         = Orientation.VERTICAL;
-        active_column       = 0;
-        default_column      = 1;
-        label_column        = 2;
-        command_ipv4_column = 3;
-        command_ipv6_column = 4;
-        priority_column     = 5;
-        view_column         = 6;
-        
-        store = new Gtk.ListStore (7,               // Num column
-                               typeof (bool),       // Active
-                               typeof (bool),       // Default
-                               typeof (string),     // Label
-                               typeof (string),     // IPv4 command
-                               typeof (string),     // IPv6 command
-                               typeof (string),     // Priority
-                               typeof (string));    // View
-        
-        tv = new TreeView.with_model (store);
-        
-        text_cell = new CellRendererText();
-        
-        default_cell = new CellRendererPixbuf();
-        default_cell.xpad = 6;
-        
-        toggle_cell = new CellRendererToggle();
-        toggle_cell.activatable = true;
-        toggle_cell.xpad = 6;
-        toggle_cell.toggled.connect (enable_command_toggled);
-        
-        
-        TreeViewColumn column1 = new TreeViewColumn();
-        TreeViewColumn column2 = new TreeViewColumn();
-        
-        column1.pack_start (toggle_cell, false);
-        
-        column2.pack_start (text_cell, true);
-        column2.pack_start (default_cell, false);
-        
-        column2.set_cell_data_func (text_cell, text_cell_layout);
-        column2.set_cell_data_func (default_cell, default_cell_layout);
-        
-        column1.add_attribute (toggle_cell, "active", active_column);
-        column2.add_attribute (text_cell, "text", label_column);
-        
-        tv.append_column (column1);
-        tv.append_column (column2);
-
-        tv.headers_visible = false;
-        tv.reorderable = true;
-        tv.enable_search = false;
-        tv.drag_end.connect (handle_drag_end);
-        tv.realize.connect (set_button_sensitivity_void);
-        tv.button_release_event.connect (set_button_sensitivity);
-        tv.key_release_event.connect (set_button_sensitivity);
-        tv.row_activated.connect (on_row_activate);
+        border_width = 12;
+        orientation  = Orientation.VERTICAL;
         
         
         Image add_img = new Image();
@@ -157,8 +88,8 @@ public class CommandsEditor : Box
         
         ToolItem left_ti = new ToolItem();
         left_ti.add (left_box);
-
-
+        
+        
         Image revert_img = new Image();
         revert_img.set_from_icon_name ("edit-undo-symbolic", IconSize.MENU);
         
@@ -172,13 +103,13 @@ public class CommandsEditor : Box
         
         ToolItem right_ti = new ToolItem();
         right_ti.add (right_box);
-
-
+        
+        
         SeparatorToolItem sep = new SeparatorToolItem();
         sep.draw = false;
         sep.set_expand (true);
-
-
+        
+        
         Toolbar tb = new Toolbar();
         tb.get_style_context().add_class ("inline-toolbar");
         tb.add (left_ti);
@@ -186,57 +117,46 @@ public class CommandsEditor : Box
         tb.add (right_ti);
         
         
+        list_box = new ListBox();
+        list_box.activate_on_single_click = false;
+        list_box.realize.connect (set_button_sensitivity);
+        list_box.row_activated.connect (on_row_activate);
+        list_box.row_selected.connect (on_row_selected);
+        list_box.set_header_func (add_row_header);
+        
+        
         ScrolledWindow sw = new ScrolledWindow (null, null);
         sw.shadow_type = ShadowType.ETCHED_IN;
         sw.get_style_context().set_junction_sides (JunctionSides.BOTTOM);
         sw.hscrollbar_policy = PolicyType.NEVER;
         sw.vscrollbar_policy = PolicyType.AUTOMATIC;
-        sw.add (tv);
+        sw.add (list_box);
         
         
-        box = new Box (Orientation.VERTICAL, 0);
-        box.pack_start (sw, true,  true,  0);
-        box.pack_start (tb, false, false, 0);
-        
-        
-        pack_start (box, true, true, 0);
-        border_width = 12;
+        pack_start (sw, true,  true,  0);
+        pack_start (tb, false, false, 0);
         
         fill();
     }
     
     private void move_up ()
     {
-        TreeIter selected;
-        TreeModel model;
-        
-        if (tv.get_selection().get_selected (out model, out selected))
-        {
-            TreeIter prev = selected;
-            
-            if ((model as Gtk.ListStore).iter_previous (ref prev))
-            {
-                (model as Gtk.ListStore).swap (selected, prev);
-            }
-        }
-        
-        update_commands();
+        move_row (-1);
     }
     
     private void move_down ()
     {
-        TreeIter selected;
-        TreeModel model;
+        move_row (1);
+    }
+    
+    private void move_row (int offset)
+    {
+        var row = get_selected_row();
+        var index = row.get_index();
         
-        if (tv.get_selection().get_selected (out model, out selected))
-        {
-            TreeIter next = selected;
-            
-            if ((model as Gtk.ListStore).iter_next (ref next))
-            {
-                (model as Gtk.ListStore).swap (selected, next);
-            }
-        }
+        // Remove the row and insert at new index
+        list_box.remove (row);
+        list_box.insert (row, index + offset);
         
         update_commands();
     }
@@ -245,41 +165,31 @@ public class CommandsEditor : Box
     {
         string heading = Text.revert_heading;
         string message = Text.revert_message;
-            
+        
         Dialogs.Confirm dlg = new Dialogs.Confirm (Haguichi.preferences_dialog, heading, message, MessageType.QUESTION, Text.revert_label);
         
         if (dlg.response_id == ResponseType.OK)
         {
             Settings.custom_commands.val = Settings.custom_commands.get_default_value();
             
-            store.clear();
+            clear();
             fill();
             update_commands();
         }
+        
         dlg.destroy();
     }
     
     private void set_default ()
     {
-        TreeIter iter = TreeIter();
-        
-        if (store.get_iter_first (out iter))                           // First command
+        foreach (Widget widget in list_box.get_children())
         {
-            store.set_value (iter, default_column, false);
+            var row = widget as CommandsEditorRow;
             
-            while (store.iter_next (ref iter))                         // All other commands
+            if (row != null)
             {
-                store.set_value (iter, default_column, false);
+                row.set_default (row.is_selected());
             }
-        }
-        
-        
-        TreeIter selected;
-        TreeModel model;
-        
-        if (tv.get_selection().get_selected (out model, out selected))
-        {            
-            store.set_value (selected, default_column, true);
         }
         
         update_commands();
@@ -287,16 +197,19 @@ public class CommandsEditor : Box
     
     private void remove_command ()
     {
-        TreeIter selected;
-        TreeModel model;
+        var row = get_selected_row();
+        var index = row.get_index();
         
-        if (tv.get_selection().get_selected (out model, out selected))
+        list_box.remove (row);
+        
+        // After removing select the current row at this index if present, and otherwise select the previous row
+        if (list_box.get_row_at_index (index) != null)
         {
-#if VALA_0_36
-            store.remove (ref selected);
-#else
-            store.remove (selected);
-#endif
+            list_box.select_row (list_box.get_row_at_index (index));
+        }
+        else
+        {
+            list_box.select_row (list_box.get_row_at_index (index - 1));
         }
         
         update_commands();
@@ -304,54 +217,26 @@ public class CommandsEditor : Box
     
     public void update_selected_command (string label, string command_ipv4, string command_ipv6, string priority)
     {
-        TreeIter selected;
-        TreeModel model;
-        
-        if (tv.get_selection().get_selected (out model, out selected))
-        {
-            store.set (selected,
-                       2, label,
-                       3, command_ipv4,
-                       4, command_ipv6,
-                       5, priority,
-                       6, _(label),
-                       -1);
-        }
+        get_selected_row().update (label, command_ipv4, command_ipv6, priority);
         
         update_commands();
     }
     
     public void insert_command (string label, string command_ipv4, string command_ipv6, string priority)
     {
-        TreeIter iter;
-        store.append (out iter);
-        store.set (iter,
-                   0, true,
-                   1, false,
-                   2, label,
-                   3, command_ipv4,
-                   4, command_ipv6,
-                   5, priority,
-                   6, _(label),
-                   -1);
+        var row = new CommandsEditorRow (this, true, false, label, command_ipv4, command_ipv6, priority);
+        
+        list_box.add (row);
+        list_box.select_row (row);
         
         update_commands();
     }
     
     public void edit_command ()
     {
-        TreeIter selected;
-        TreeModel model;
+        var row = get_selected_row();
         
-        if (tv.get_selection().get_selected (out model, out selected))
-        {
-            Value label;           store.get_value (selected, view_column, out label);
-            Value command_ipv4;    store.get_value (selected, command_ipv4_column, out command_ipv4);
-            Value command_ipv6;    store.get_value (selected, command_ipv6_column, out command_ipv6);
-            Value priority;        store.get_value (selected, priority_column, out priority);
-            
-            new Dialogs.AddEditCommand ("Edit", this, (string) label, (string) command_ipv4, (string) command_ipv6, (string) priority);
-        }
+        new Dialogs.AddEditCommand ("Edit", this, row.label, row.command_ipv4, row.command_ipv6, row.priority);
     }
     
     private void add_command ()
@@ -359,9 +244,38 @@ public class CommandsEditor : Box
         new Dialogs.AddEditCommand ("Add", this, "", "", "", "IPv4");
     }
     
-    private void handle_drag_end ()
+    public void add_row_header (ListBoxRow row, ListBoxRow? before)
     {
-        update_commands();
+        row.set_header ((before == null) ? null : new Separator (Orientation.HORIZONTAL));
+    }
+    
+    private CommandsEditorRow? get_selected_row ()
+    {
+        foreach (Widget widget in list_box.get_children())
+        {
+            var row = widget as CommandsEditorRow;
+            
+            if ((row != null) &&
+                (row.is_selected()))
+            {
+                return row;
+            }
+        }
+        
+        return null;
+    }
+    
+    private void clear ()
+    {
+        foreach (Widget widget in list_box.get_children())
+        {
+            var row = widget as CommandsEditorRow;
+            
+            if (row != null)
+            {
+                list_box.remove (row);
+            }
+        }
     }
     
     public void fill ()
@@ -374,17 +288,8 @@ public class CommandsEditor : Box
             
             if (parts.length == 6)
             {
-                bool is_active = false;
-                if (parts[0] == "true")
-                {
-                    is_active = true;
-                }
-                
-                bool is_default = false;
-                if (parts[1] == "true")
-                {
-                    is_default = true;
-                }
+                bool is_active  = bool.parse (parts[0]);
+                bool is_default = bool.parse (parts[1]);
                 
                 string command_ipv4 = parts[3];
                 string command_ipv6 = parts[4];
@@ -393,36 +298,12 @@ public class CommandsEditor : Box
                 command_ipv4 = command_ipv4.replace ("{COLON}", ";");
                 command_ipv6 = command_ipv6.replace ("{COLON}", ";");
                 
-                TreeIter iter;
-                store.append (out iter);
-                store.set (iter,
-                           0, is_active,
-                           1, is_default,
-                           2, parts[2],
-                           3, command_ipv4,
-                           4, command_ipv6,
-                           5, priority,
-                           6,_(parts[2]),
-                           -1);
+                list_box.add (new CommandsEditorRow (this, is_active, is_default, parts[2], command_ipv4, command_ipv6, priority));
             }
         }
     }
     
-    private void enable_command_toggled (string path)
-    {
-        TreeIter iter;
-
-        if (store.get_iter (out iter, new TreePath.from_string (path)))
-        {
-            Value old;
-            store.get_value (iter, active_column, out old);
-            store.set_value (iter, active_column, !(bool) old);
-            
-            update_commands();
-        }
-    }
-    
-    private void update_commands ()
+    public void update_commands ()
     {
         set_button_sensitivity();
         
@@ -436,203 +317,56 @@ public class CommandsEditor : Box
     private string[] compose_commands_string ()
     {
         string[] commands_string = {};
-        TreeIter iter = TreeIter();
         
-        if (store.get_iter_first (out iter))                           // First command
+        foreach (Widget widget in list_box.get_children())
         {
-            commands_string += compose_command_string (iter);
+            var row = widget as CommandsEditorRow;
             
-            while (store.iter_next (ref iter))                         // All other commands
+            if (row != null)
             {
-                commands_string += compose_command_string (iter);
+                commands_string += compose_command_string (row);
             }
         }
         
         return commands_string;
     }
     
-    private string compose_command_string (TreeIter iter)
+    private string compose_command_string (CommandsEditorRow row)
     {
-        Value active_val;          store.get_value (iter, active_column, out active_val);
-        Value default_val;         store.get_value (iter, default_column, out default_val);
-        Value label_val;           store.get_value (iter, label_column, out label_val);
-        Value command_ipv4_val;    store.get_value (iter, command_ipv4_column, out command_ipv4_val);
-        Value command_ipv6_val;    store.get_value (iter, command_ipv6_column, out command_ipv6_val);
-        Value priority_val;        store.get_value (iter, priority_column, out priority_val);
+        string command_ipv4 = row.command_ipv4.replace (";", "{COLON}");
+        string command_ipv6 = row.command_ipv6.replace (";", "{COLON}");
         
-        string is_active  = (bool) active_val  ? "true" : "false";
-        string is_default = (bool) default_val ? "true" : "false";
-        
-        string command_ipv4 = ((string) command_ipv4_val).replace (";", "{COLON}");
-        string command_ipv6 = ((string) command_ipv6_val).replace (";", "{COLON}");
-        
-        return is_active + ";" + is_default + ";" + (string) label_val + ";" + command_ipv4 + ";" + command_ipv6 + ";" + (string) priority_val;
+        return row.is_active.to_string() + ";" + row.is_default.to_string() + ";" + row.label + ";" + command_ipv4 + ";" + command_ipv6 + ";" + row.priority.to_string();
     }
     
-    private void default_cell_layout (CellLayout layout, CellRenderer cell, TreeModel model, TreeIter iter)
+    private void set_button_sensitivity ()
     {
-        CellRendererPixbuf default_cell = (cell as CellRendererPixbuf);
-        default_cell.follow_state = true;
+        remove_but.sensitive  = false;
+        up_but.sensitive      = false;
+        down_but.sensitive    = false;
+        edit_but.sensitive    = false;
+        default_but.sensitive = false;
+        revert_but.sensitive  = (string.joinv ("", compose_commands_string()) != string.joinv ("", (string[]) Settings.custom_commands.get_default_value()));
         
-        Value default_val;
-        model.get_value (iter, default_column, out default_val);
+        var row = get_selected_row();
         
-        if ((bool) default_val)
+        if (row != null)
         {
-            default_cell.icon_name = Utils.get_available_theme_icon (default_icon_names);
-        }
-        else
-        {
-            default_cell.icon_name = "";
-        }
-        
-        Value active_val;
-        model.get_value (iter, active_column, out active_val);
-        
-        if ((bool) active_val)
-        {
-            default_cell.sensitive = true;
-        }
-        else
-        {
-            default_cell.sensitive = false;
-        }
-    }
-    
-    private void text_cell_layout (CellLayout layout, CellRenderer cell, TreeModel model, TreeIter iter)
-    {
-        CellRendererText text_cell = (cell as CellRendererText);
-        
-        StyleContext context = tv.get_style_context();
-        context.save();
-        
-        context.set_state (StateFlags.NORMAL);
-        Gdk.RGBA active_txt_color = context.get_color (context.get_state());
-        
-        context.set_state (StateFlags.INSENSITIVE);
-        Gdk.RGBA inactive_txt_color = context.get_color (context.get_state());
-        
-        context.restore();
-        
-        Value active_val;
-        model.get_value (iter, active_column, out active_val);
-        
-        if ((bool) active_val)
-        {
-            text_cell.foreground_rgba = active_txt_color;
-        }
-        else
-        {
-            text_cell.foreground_rgba = inactive_txt_color;
-        }
-        
-        Value title_val;
-        model.get_value (iter, view_column, out title_val);
-        
-        Value priority_val;
-        model.get_value (iter, priority_column, out priority_val);
-        
-        string title    = ((string) title_val).replace ("_", "");
-        string command  = "";
-        string address  = "";
-        string priority = (string) priority_val;
-        
-        if (priority == "IPv4")
-        {
-            Value command_val;
-            model.get_value (iter, command_ipv4_column, out command_val);
-            command = (string) command_val;
-            address = "25.123.456.78";
-        }
-        if (priority == "IPv6")
-        {
-            Value command_val;
-            model.get_value (iter, command_ipv6_column, out command_val);
-            command = (string) command_val;
-            address = "2620:9b::56d:f78e";
-        }
-        
-        command = Command.replace_variables (command, address, "Nick", "090-123-456");
-        
-        text_cell.markup = Utils.format ("<b>{0}</b>\n{1}", Markup.escape_text (title), Markup.escape_text (command), null);
-    }
-    
-    private void set_button_sensitivity_void ()
-    {
-        set_button_sensitivity();
-    }
-    
-    private bool set_button_sensitivity ()
-    {
-        if (string.joinv ("", compose_commands_string()) == string.joinv ("", (string[]) Settings.custom_commands.get_default_value()))
-        {
-            revert_but.sensitive = false;
-        }
-        else
-        {
-            revert_but.sensitive = true;
-        }
-        
-        if (tv.get_selection().count_selected_rows() > 0)
-        {
-            default_but.sensitive = true;
-            edit_but.sensitive    = true;
             remove_but.sensitive  = true;
-
-            TreeIter selected;
-            TreeModel model;
-            
-            if (tv.get_selection().get_selected (out model, out selected))
-            {
-                Value default_val;
-                store.get_value (selected, default_column, out default_val);
-                
-                if ((bool) default_val)
-                {
-                    default_but.sensitive = false;
-                }
-                else
-                {
-                    default_but.sensitive = true;
-                }
-                
-                TreePath path = model.get_path (selected);
-                
-                if (path.prev())
-                {
-                    up_but.sensitive = true;
-                }
-                else
-                {
-                    up_but.sensitive = false;
-                }
-                
-                TreeIter next = selected;
-                
-                if ((model as Gtk.ListStore).iter_next (ref next))
-                {
-                    down_but.sensitive = true;
-                }
-                else
-                {
-                    down_but.sensitive = false;
-                }
-            }
+            up_but.sensitive      = (list_box.get_row_at_index (row.get_index() - 1) != null);
+            down_but.sensitive    = (list_box.get_row_at_index (row.get_index() + 1) != null);
+            edit_but.sensitive    = true;
+            default_but.sensitive = !row.is_default;
         }
-        else
-        {
-            default_but.sensitive = false;
-            edit_but.sensitive    = false;
-            remove_but.sensitive  = false;
-            up_but.sensitive      = false;
-            down_but.sensitive    = false;
-        }
-        
-        return false;
     }
     
     private void on_row_activate ()
     {
         edit_command();
+    }
+    
+    private void on_row_selected ()
+    {
+        set_button_sensitivity();
     }
 }
