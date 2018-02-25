@@ -39,6 +39,7 @@ public class CommandsEditorRow : ListBoxRow
         title.xalign = 0.0f;
         
         preview = new Label (null);
+        preview.margin_bottom = 2;
         preview.xalign = 0.0f;
         preview.get_style_context().add_class ("dim-label");
         
@@ -61,8 +62,8 @@ public class CommandsEditorRow : ListBoxRow
         
         Box box = new Box (Orientation.HORIZONTAL, 0);
         box.border_width = 6;
-        box.pack_start (label_box, false, false, 6);
-        box.pack_start (img,       false, false, 6);
+        box.pack_start (label_box, false, false, 4);
+        box.pack_start (img,       false, false, 8);
         box.pack_end   (swh,       false, false, 6);
         
         add (box);

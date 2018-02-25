@@ -44,6 +44,15 @@
 
 
 /*
+ * Set font size for dimmed labels in commands editor
+ */
+
+.preferences .commands-editor .dim-label {
+    font-size: small;
+}
+
+
+/*
  * Improve "suggested-action" style for buttons in titlebar
  */
 

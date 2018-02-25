@@ -29,6 +29,8 @@ public class CommandsEditor : Box
         border_width = 12;
         orientation  = Orientation.VERTICAL;
         
+        get_style_context().add_class ("commands-editor");
+        
         
         Image add_img = new Image();
         add_img.set_from_icon_name ("list-add-symbolic", IconSize.MENU);

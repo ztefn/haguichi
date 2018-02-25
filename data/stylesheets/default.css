@@ -12,6 +12,19 @@
 
 
 /*
+ * Set background color for connected and disconnected boxes
+ */
+
+.connected-box {
+    background-color: @theme_base_color;
+}
+
+.disconnected-box {
+    background-color: @insensitive_bg_color;
+}
+
+
+/*
  * Set font size and weight for sidebar heading
  */
 
@@ -44,13 +57,9 @@
 
 
 /*
- * Set background color for connected and disconnected boxes
+ * Set font size for dimmed labels in commands editor
  */
 
-.connected-box {
-    background-color: @theme_base_color;
-}
-
-.disconnected-box {
-    background-color: @insensitive_bg_color;
+.preferences .commands-editor .dim-label {
+    font-size: small;
 }
