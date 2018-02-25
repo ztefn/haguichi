@@ -130,7 +130,7 @@ public class Sidebar : Box
         cancel_button = new Button();
         cancel_button.tooltip_text = Text.cancel;
         cancel_button.image = new Image.from_icon_name ("edit-delete-symbolic", IconSize.MENU);
-        cancel_button.margin_left = 3;
+        cancel_button.margin_start = 3;
         cancel_button.margin_top = 6;
         cancel_button.valign = Align.START;
         cancel_button.relief = ReliefStyle.NONE;

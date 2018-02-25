@@ -30,7 +30,7 @@ namespace Widgets
             grid = new Grid();
             grid.column_spacing  = 9;
             grid.row_homogeneous = true;
-            grid.margin_left     = 12;
+            grid.margin_start    = 12;
             
             add (grid);
         }
