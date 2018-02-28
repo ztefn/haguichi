@@ -65,8 +65,8 @@ namespace Dialogs
             Box vbox = new Box (Orientation.VERTICAL, 0);
             vbox.pack_start (account_box, false, false, 0);
             vbox.pack_start (with_networks, false, false, 6);
-            vbox.margin = 11;
-            vbox.margin_bottom = 0;
+            vbox.margin = 12;
+            vbox.margin_bottom = 6;
             
             
             Box container = new Box (Orientation.VERTICAL, 0);
@@ -75,6 +75,7 @@ namespace Dialogs
             container.show_all();
             
             
+            get_content_area().border_width = 0;
             get_content_area().add (container);
             
             get_action_area().margin = 6;

@@ -198,6 +198,7 @@ namespace Dialogs
                 });
             }
             
+            get_content_area().border_width = 0;
             get_content_area().add (container);
             get_content_area().show_all();
             

@@ -132,9 +132,10 @@ namespace Dialogs
             grid.attach (hint_label,         1, 4, 1, 1);
             grid.attach (priority_label,     0, 5, 1, 1);
             grid.attach (priority_box,       1, 5, 1, 1);
-            grid.margin = 11;
+            grid.margin = 12;
             
             
+            get_content_area().border_width = 0;
             get_content_area().add (grid);
             
             get_action_area().margin = 6;

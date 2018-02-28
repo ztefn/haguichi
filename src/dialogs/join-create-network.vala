@@ -90,7 +90,7 @@ namespace Dialogs
             grid.attach (id_entry,       1, 1, 1, 1);
             grid.attach (password_label, 0, 2, 1, 1);
             grid.attach (password_entry, 1, 2, 1, 1);
-            grid.margin = 11;
+            grid.margin = 12;
             
             
             Box container = new Box (Orientation.VERTICAL, 0);
@@ -99,6 +99,7 @@ namespace Dialogs
             container.show_all();
             
             
+            get_content_area().border_width = 0;
             get_content_area().add (container);
             
             get_action_area().margin = 6;

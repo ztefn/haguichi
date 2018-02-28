@@ -50,9 +50,10 @@ namespace Dialogs
             nick_box = new Box (Orientation.HORIZONTAL, 0);
             nick_box.pack_start (nick_label, false, false, 0);
             nick_box.pack_start (nick_entry, true, true, 0);
-            nick_box.margin = 11;
+            nick_box.margin = 12;
             
             
+            get_content_area().border_width = 0;
             get_content_area().add (nick_box);
             
             get_action_area().margin = 6;

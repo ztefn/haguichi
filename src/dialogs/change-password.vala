@@ -55,9 +55,10 @@ namespace Dialogs
             password_box = new Box (Orientation.HORIZONTAL, 0);
             password_box.pack_start (password_label, false, false, 0);
             password_box.pack_start (password_entry, true, true, 0);
-            password_box.margin = 11;
+            password_box.margin = 12;
             
             
+            get_content_area().border_width = 0;
             get_content_area().add (password_box);
             
             get_action_area().margin = 6;
