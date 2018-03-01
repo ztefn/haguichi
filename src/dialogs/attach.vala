@@ -176,6 +176,9 @@ namespace Dialogs
             Idle.add_full (Priority.HIGH_IDLE, () =>
             {
                 set_mode ("Normal");
+                
+                account_entry.grab_focus();
+                
                 message_bar.set_message (message, null, MessageType.ERROR);
                 return false;
             });
