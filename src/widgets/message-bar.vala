@@ -12,12 +12,13 @@ using Gtk;
 
 namespace Widgets
 {
-    public class MessageBar : InfoBar
+    public class MessageBar : Revealer
     {
         private uint timer_id;
         
         private Label label;
         private ButtonBox button_box;
+        private InfoBar info_bar;
         
         public MessageBar ()
         {
@@ -31,11 +32,14 @@ namespace Widgets
             button_box.margin_end = 9;
             button_box.spacing = 6;
             
-            get_content_area().add (label);
-            get_action_area().destroy();
-            add (button_box);
+            info_bar = new InfoBar();
+            info_bar.get_content_area().add (label);
+            info_bar.get_action_area().destroy();
+            info_bar.add (button_box);
             
-            show_all();
+            add (info_bar);
+            
+            get_info_bar_revealer().set_transition_type (RevealerTransitionType.NONE);
         }
         
         public void set_message (string? header, string? message, MessageType _message_type)
@@ -58,11 +62,11 @@ namespace Widgets
             
             label.set_markup (Utils.format (markup, header, message, null));
             
-            set_message_type (_message_type);
+            info_bar.set_message_type (_message_type);
             
             button_box.hide();
             
-            show();
+            set_reveal_child (true);
         }
         
         public void set_message_with_timeout (string? header, string? message, MessageType _message_type, int timeout)
@@ -81,7 +85,7 @@ namespace Widgets
             
             timer_id = GLib.Timeout.add ((uint) timeout, () =>
             {
-                hide();
+                hide_message();
                 timer_id = 0;
                 
                 return false;
@@ -93,6 +97,26 @@ namespace Widgets
             button_box.add (button);
             button.show();
             button_box.show();
+        }
+        
+        public void hide_message ()
+        {
+            set_reveal_child (false);
+        }
+        
+        private Revealer? get_info_bar_revealer ()
+        {
+            foreach (Widget widget in info_bar.get_children())
+            {
+                var revealer = widget as Revealer;
+                
+                if (revealer != null)
+                {
+                    return revealer;
+                }
+            }
+            
+            return null;
         }
     }
 }

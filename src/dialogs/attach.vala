@@ -47,7 +47,7 @@ namespace Dialogs
             account_entry.activates_default = true;
             account_entry.width_chars = 30;
             account_entry.changed.connect (check_entry_length);
-            account_entry.changed.connect (hide_message);
+            account_entry.changed.connect (message_bar.hide_message);
             
             account_label = new Label.with_mnemonic (Utils.remove_colons (Text.account_label) + "  ");
             account_label.halign = Align.END;
@@ -81,7 +81,6 @@ namespace Dialogs
             get_action_area().margin = 6;
             get_action_area().margin_top = 0;
             
-            hide_message();
             account_entry.grab_focus();
             
             show();
@@ -182,11 +181,6 @@ namespace Dialogs
                 message_bar.set_message (message, null, MessageType.ERROR);
                 return false;
             });
-        }
-        
-        private void hide_message ()
-        {
-            message_bar.hide();
         }
         
         private void dismiss ()

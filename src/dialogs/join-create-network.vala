@@ -66,7 +66,7 @@ namespace Dialogs
             
             id_entry = new Entry();
             id_entry.changed.connect (check_id_length);
-            id_entry.changed.connect (hide_message);
+            id_entry.changed.connect (message_bar.hide_message);
             id_entry.activates_default = true;
             id_entry.width_chars = 30;
             id_entry.max_length = 64;
@@ -75,7 +75,7 @@ namespace Dialogs
             id_label.mnemonic_widget = id_entry;
 
             password_entry = new Entry();
-            password_entry.changed.connect (hide_message);
+            password_entry.changed.connect (message_bar.hide_message);
             password_entry.activates_default = true;
             password_entry.visibility = false;
             password_entry.width_chars = 30;
@@ -105,7 +105,6 @@ namespace Dialogs
             get_action_area().margin = 6;
             get_action_area().margin_top = 0;
             
-            hide_message();
             set_mode ("Normal");
             id_entry.grab_focus();
             
@@ -282,11 +281,6 @@ namespace Dialogs
                 message_bar.set_message (message, null, MessageType.ERROR);
                 return false;
             });
-        }
-        
-        private void hide_message ()
-        {
-            message_bar.hide();
         }
         
         private void check_id_length ()

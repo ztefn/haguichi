@@ -31,7 +31,7 @@ public class Controller : Object
     
     public static void init ()
     {
-        HaguichiWindow.message_bar.hide();
+        HaguichiWindow.message_bar.hide_message();
         GlobalEvents.set_config();
         
         new_networks_list = new List<Network>();
@@ -362,7 +362,7 @@ public class Controller : Object
         Idle.add_full (Priority.HIGH_IDLE, () =>
         {
             Haguichi.window.set_mode ("Connecting");
-            HaguichiWindow.message_bar.hide();
+            HaguichiWindow.message_bar.hide_message();
             return false;
         });
         

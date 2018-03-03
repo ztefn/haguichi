@@ -227,8 +227,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         set_default_size (width, height);
         move (x, y);
         
-        message_bar.hide();
-        
         if (Haguichi.hidden == false)
         {
             show();
