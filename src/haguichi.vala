@@ -123,13 +123,13 @@ class Haguichi : Gtk.Application
         Command.init();
         Hamachi.init();
         
+        window = new HaguichiWindow();
+        add_window (window);
+        
 #if ENABLE_APPINDICATOR
         indicator = new HaguichiIndicator();
         indicator.active = (bool) Settings.show_indicator.val;
 #endif
-        
-        window = new HaguichiWindow();
-        add_window (window);
         
         preferences_dialog = new Dialogs.Preferences();
         

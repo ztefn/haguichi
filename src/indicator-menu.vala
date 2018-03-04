@@ -27,6 +27,7 @@ public class IndicatorMenu : Gtk.Menu
     public IndicatorMenu()
     {
         show_item = new Gtk.CheckMenuItem.with_mnemonic (Text.show_app);
+        show_item.active = Haguichi.session.get_visibility();
         show_item.toggled.connect (() =>
         {
             if (show_item.active)
