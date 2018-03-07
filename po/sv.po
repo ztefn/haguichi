@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2014-03-19 00:09+0000\n"
-"Last-Translator: Erik Simmesgård <Unknown>\n"
+"PO-Revision-Date: 2018-03-07 13:19+0000\n"
+"Last-Translator: Daniel Nylander <yeager@ubuntu.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-03-30 20:36+0000\n"
-"X-Generator: Launchpad (build 16967)\n"
+"X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -55,7 +55,7 @@ msgstr "_Information"
 
 #: src/text.vala:375
 msgid "_Donate"
-msgstr ""
+msgstr "_Donera"
 
 #: src/text.vala:376
 msgid "_Preferences"
@@ -63,7 +63,7 @@ msgstr "_Inställningar"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Tangentbordsgenvägar"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -123,7 +123,7 @@ msgstr "Direkt"
 
 #: src/text.vala:396
 msgid "Relayed"
-msgstr ""
+msgstr "Omdirigerad"
 
 #: src/text.vala:397
 msgid "Anonymous"
@@ -155,11 +155,11 @@ msgstr "Kan inte nås"
 
 #: src/text.vala:407
 msgid "Protocol mismatch"
-msgstr ""
+msgstr "Protokollet stämmer inte"
 
 #: src/text.vala:408
 msgid "Conflicting address"
-msgstr ""
+msgstr "Konflikt i adress"
 
 #: src/text.vala:409
 msgid "C_onnect"
@@ -170,9 +170,8 @@ msgid "_Disconnect"
 msgstr "_Koppla från"
 
 #: src/text.vala:411
-#, fuzzy
 msgid "Reconnect"
-msgstr "A_nslut"
+msgstr "Återanslut"
 
 #: src/text.vala:412
 msgid "Connected"
@@ -216,24 +215,23 @@ msgstr "Hämta ner Hamachi och följ installationsinstruktionerna."
 
 #: src/text.vala:424
 msgid "Hamachi version {0} is obsolete"
-msgstr ""
+msgstr "Hamachi version {0} är för gammal"
 
 #: src/text.vala:425
 msgid "Please download and install the latest Hamachi version."
-msgstr ""
+msgstr "Hämta och installera den senaste versionen av Hamachi."
 
 #: src/text.vala:426
 msgid "_Download"
 msgstr "_Hämta"
 
 #: src/text.vala:428
-#, fuzzy
 msgid "You are connected!"
-msgstr "Frånkopplad"
+msgstr "Du är ansluten!"
 
 #: src/text.vala:429
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "Klicka på +-knappen för att lägga till ett nätverk."
 
 #: src/text.vala:431
 msgid "Members:"
@@ -373,9 +371,8 @@ msgid "Change Password"
 msgstr "Ändra lösenord"
 
 #: src/text.vala:470
-#, fuzzy
 msgid "_New password:"
-msgstr "_Lösenord:"
+msgstr "_Nytt lösenord:"
 
 #: src/text.vala:472
 msgid "_Account:"
@@ -383,7 +380,7 @@ msgstr "_Konto:"
 
 #: src/text.vala:474
 msgid "Pending"
-msgstr ""
+msgstr "Väntar"
 
 #: src/text.vala:476
 msgid "_Attach to Account…"
@@ -407,43 +404,43 @@ msgstr "Kontot hittades inte"
 
 #: src/text.vala:482
 msgid "Config_uration"
-msgstr ""
+msgstr "Konfig_uration"
 
 #: src/text.vala:483
 msgid "_Open Folder"
-msgstr ""
+msgstr "_Öppna mapp"
 
 #: src/text.vala:484
 msgid "_Save a Backup…"
-msgstr ""
+msgstr "_Spara en säkerhetskopia…"
 
 #: src/text.vala:485
 msgid "Save a Backup"
-msgstr ""
+msgstr "Spara en säkerhetskopia"
 
 #: src/text.vala:486
 msgid "_Restore from Backup…"
-msgstr ""
+msgstr "Åt_erställ från säkerhetskopia…"
 
 #: src/text.vala:487
 msgid "Restore from Backup"
-msgstr ""
+msgstr "Återställ från säkerhetskopia"
 
 #: src/text.vala:488
 msgid "_Restore"
-msgstr ""
+msgstr "Åte_rställ"
 
 #: src/text.vala:489
 msgid "Could not restore configuration"
-msgstr ""
+msgstr "Kunde inte återställa konfigurationen"
 
 #: src/text.vala:490
 msgid "Archive does not contain expected files."
-msgstr ""
+msgstr "Arkivet innehåller inte de filer som förväntades."
 
 #: src/text.vala:491
 msgid "All supported archives"
-msgstr ""
+msgstr "Alla arkiv som stöds"
 
 #: src/text.vala:493
 msgid "_Join Network…"
@@ -490,9 +487,8 @@ msgid "Network already joined"
 msgstr "Har redan gått med i nätverket"
 
 #: src/text.vala:506
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "Nätverksnamnet används redan"
+msgstr "Nätverks-id används redan"
 
 #: src/text.vala:507
 msgid "Unknown error"
@@ -516,7 +512,7 @@ msgstr "Vill du verkligen ta bort nätverket “{0}”?"
 
 #: src/text.vala:515
 msgid "If you delete a network, it will be permanently lost."
-msgstr ""
+msgstr "Om du tar bort ett nätverk så är det permanent borta."
 
 #: src/text.vala:517
 msgid "Are you sure you want to leave the network “{0}”?"
@@ -524,7 +520,7 @@ msgstr "Vill du verkligen lämna nätverket “{0}”?"
 
 #: src/text.vala:518
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
+msgstr "Om godkänd så kan du gå med i nätverket igen senare."
 
 #: src/text.vala:520
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
@@ -532,7 +528,7 @@ msgstr "Vill du verkligen kasta ut medlemmen “{0}” från nätverket “{1}�
 
 #: src/text.vala:521
 msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
+msgstr "Om godkänd så kan utslängda medlemmar gå med i nätverket senare."
 
 #: src/text.vala:523
 msgid "Could not delete network “{0}”"
@@ -548,15 +544,15 @@ msgstr "Det gick inte att kasta ut medlemmen “{0}”"
 
 #: src/text.vala:526
 msgid "Could not go online in the network “{0}”"
-msgstr ""
+msgstr "Kunde inte ansluta via nätverket “{0}”"
 
 #: src/text.vala:527
 msgid "Could not go offline in the network “{0}”"
-msgstr ""
+msgstr "Kunde inte koppla ner i nätverket “{0}”"
 
 #: src/text.vala:529
 msgid "See output for details."
-msgstr ""
+msgstr "Se utdata för mer information."
 
 #: src/text.vala:531 data/ui/shortcuts-window.ui:11
 msgid "General"
@@ -577,12 +573,11 @@ msgstr "Beteende"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Utseende"
 
 #: src/text.vala:538
-#, fuzzy
 msgid "Notifications"
-msgstr "Notifieringsyta"
+msgstr "Notifieringar"
 
 #: src/text.vala:540
 msgid "_Protocol:"
@@ -626,11 +621,11 @@ msgstr "_Koppla från vid stängning"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Använ_d mörk temavariant"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Visa _indikator"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -717,22 +712,21 @@ msgid "Move down"
 msgstr "Flytta nedåt"
 
 #: src/text.vala:581
-#, fuzzy
 msgid "Set as default action"
-msgstr "Återställ standardkommandon"
+msgstr "Ställ in som standardåtgärd"
 
 #: src/text.vala:583
-#, fuzzy
 msgid "Revert all changes"
-msgstr "Återställ ändringar?"
+msgstr "Ångra alla ändringar"
 
 #: src/text.vala:584
 msgid "Are you sure you want to revert all changes?"
-msgstr ""
+msgstr "Är du säker på att du vill ångra alla ändringar?"
 
 #: src/text.vala:585
 msgid "If you revert all changes, the default commands will be restored."
 msgstr ""
+"Om du ångrar alla ändringar så kommer standardkommandon att återställas."
 
 #: src/text.vala:587
 msgid "Hamachi lost connection"
@@ -805,8 +799,8 @@ msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 #: src/text.vala:628
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Återansluter om {0} sekund"
+msgstr[1] "Återansluter om {0} sekunder"
 
 #: src/text.vala:633
 #, c-format
@@ -817,11 +811,11 @@ msgstr[1] "_Uppdatera nätverkslistan varje %S _sekunder"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Visa hjälp"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Visa klientinformation"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -836,19 +830,16 @@ msgid "Quit"
 msgstr "Avsluta"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Nätverket är fullt"
+msgstr "Nätverkslista"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Gå med i nätverk"
+msgstr "Gå med i ett nätverk"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Skapa nätverk"
+msgstr "Skapa ett nätverk"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -856,28 +847,26 @@ msgstr "Uppdatera"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "_Frånkopplade användare"
+msgstr "Visa/dölj frånkopplade medlemmar"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Fäll ut alla nätverk"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Fäll in alla nätverk"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Redigera kommando"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Uppdatera"
+msgstr "Kör kommando"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Uppdatera"

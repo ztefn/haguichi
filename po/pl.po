@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2018-02-10 12:38+0000\n"
+"PO-Revision-Date: 2018-03-06 22:44+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-02-10 13:08+0000\n"
-"X-Generator: Launchpad (build 18544)\n"
+"X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -28,7 +28,7 @@ msgstr "Graficzny interfejs dla Hamachi."
 #. Description used in application launchers.
 #: src/text.vala:364
 msgid "Join and create local networks over the Internet"
-msgstr "Dołączanie i tworzenie lokalnych sieci przez Internet"
+msgstr "Dołączanie i tworzenie lokalnych sieci przez Internet"
 
 #: src/text.vala:368
 msgid "_Close"
@@ -60,7 +60,7 @@ msgstr "_Wsparcie finansowe"
 
 #: src/text.vala:376
 msgid "_Preferences"
-msgstr "P_referencje"
+msgstr "_Preferencje"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
@@ -570,7 +570,7 @@ msgstr "Polecenia"
 #. In this context meaning "work environment".
 #: src/text.vala:534
 msgid "Desktop"
-msgstr "Stacja robocza"
+msgstr "Pulpit"
 
 #: src/text.vala:536
 msgid "Behavior"
@@ -634,23 +634,23 @@ msgstr "_Wskaźnik"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
-msgstr "Wyświetlanie powiadomienia po ze_rwaniu połączenia"
+msgstr "Po ze_rwaniu połączenia"
 
 #: src/text.vala:558
 msgid "Display notification when a member _joins"
-msgstr "Wyświetlanie powiadomienia, kiedy dołącza _nowy członek"
+msgstr "Kiedy dołącza _nowy członek"
 
 #: src/text.vala:559
 msgid "Display notification when a member _leaves"
-msgstr "Wyświetlanie powiadomienia, kiedy członek _opuszcza sieć"
+msgstr "Kiedy członek _opuszcza sieć"
 
 #: src/text.vala:560
 msgid "Display notification when a member comes o_nline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_nline"
+msgstr "Kiedy członek przechodzi do trybu o_nline"
 
 #: src/text.vala:561
 msgid "Display notification when a member goes o_ffline"
-msgstr "Wyświetlanie powiadomienia, kiedy członek przechodzi do trybu o_ffline"
+msgstr "Kiedy członek przechodzi do trybu o_ffline"
 
 #: src/text.vala:563
 msgid "Error connecting"
@@ -837,15 +837,15 @@ msgstr "Wyświetlenie informacji o kliencie"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
-msgstr "Połącz"
+msgstr "Połączenie"
 
 #: data/ui/shortcuts-window.ui:33
 msgid "Disconnect"
-msgstr "Rozłącz"
+msgstr "Rozłączenie"
 
 #: data/ui/shortcuts-window.ui:45
 msgid "Quit"
-msgstr "Zakończ"
+msgstr "Zakończenie działania"
 
 #: data/ui/shortcuts-window.ui:52
 msgid "Network List"
@@ -861,7 +861,7 @@ msgstr "Utworzenie sieci"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
-msgstr "Odśwież"
+msgstr "Odświeżenie"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"

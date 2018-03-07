@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-07-31 08:03+0000\n"
+"PO-Revision-Date: 2018-03-07 18:04+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "Language: uk\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
+"X-Generator: Launchpad (build 18566)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -64,7 +64,7 @@ msgstr "П_араметри"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Комбінації клавіш"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -574,7 +574,7 @@ msgstr "Поведінка"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Вигляд"
 
 #: src/text.vala:538
 msgid "Notifications"
@@ -622,11 +622,11 @@ msgstr "_Відключатись при виході"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Використовувати _темний варіант теми"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Показати _індикатор"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -817,11 +817,11 @@ msgstr[2] "_Оновлювати список мереж кожні %S _секу
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Показати довідку"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Показати дані клієнта"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -836,17 +836,14 @@ msgid "Quit"
 msgstr "Вийти"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Мережа немає вільних місць"
+msgstr "Список мереж"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Приєднати мережу"
+msgstr "Приєднатись до мережі"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
 msgstr "Створити мережу"
 
@@ -856,28 +853,26 @@ msgstr "Оновити"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Пошук"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "_Показати учасників, що поза мережею"
+msgstr "Показати/приховати неактивних користувачів"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Розгорнути всі мережі"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Згорнути всі мережі"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Змінити команду"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Оновити"
+msgstr "Виконати команду"
 
 #~ msgid "_OK"
 #~ msgstr "_Гаразд"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Оновити"
