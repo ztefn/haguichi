@@ -238,7 +238,7 @@ public class CommandsEditor : Box
     {
         var row = get_selected_row();
         
-        new Dialogs.AddEditCommand ("Edit", this, row.label, row.command_ipv4, row.command_ipv6, row.priority);
+        new Dialogs.AddEditCommand ("Edit", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
     }
     
     private void add_command ()

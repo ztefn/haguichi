@@ -85,7 +85,7 @@ public class CommandsEditorRow : ListBoxRow
         string command = (priority == "IPv6") ? command_ipv6 : command_ipv4;
         string address = (priority == "IPv6") ? "2620:9b::56d:f78e" : "25.123.456.78";
         
-        title.label   = Utils.remove_mnemonics (label);
+        title.label   = Utils.remove_mnemonics (_(label));
         preview.label = Command.replace_variables (command, address, "Nick", "090-123-456");
     }
     
