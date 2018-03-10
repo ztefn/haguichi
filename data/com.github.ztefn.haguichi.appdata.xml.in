@@ -42,23 +42,23 @@
   <update_contact>stephen_at_stephenbrandt.com</update_contact>
   <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <languages>
-    <lang percentage="100">ast</lang>
-    <lang percentage="100">bg</lang>
-    <lang percentage="100">cs</lang>
-    <lang percentage="100">de</lang>
-    <lang percentage="100">es</lang>
+    <lang percentage="93">ast</lang>
+    <lang percentage="93">bg</lang>
+    <lang percentage="93">cs</lang>
+    <lang percentage="93">de</lang>
+    <lang percentage="93">es</lang>
     <lang percentage="100">fr</lang>
-    <lang percentage="100">id</lang>
+    <lang percentage="93">id</lang>
     <lang percentage="100">it</lang>
-    <lang percentage="95">ja</lang>
-    <lang percentage="100">kk</lang>
-    <lang percentage="100">lt</lang>
+    <lang percentage="88">ja</lang>
+    <lang percentage="93">kk</lang>
+    <lang percentage="93">lt</lang>
     <lang percentage="100">nl</lang>
     <lang percentage="100">pl</lang>
     <lang percentage="100">pt_BR</lang>
-    <lang percentage="100">ru</lang>
-    <lang percentage="100">sk</lang>
-    <lang percentage="82">sv</lang>
+    <lang percentage="93">ru</lang>
+    <lang percentage="93">sk</lang>
+    <lang percentage="100">sv</lang>
     <lang percentage="100">tr</lang>
     <lang percentage="100">uk</lang>
   </languages>
