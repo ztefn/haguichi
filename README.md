@@ -10,7 +10,7 @@
 
    * [Homepage](https://www.haguichi.net)
    * [Download](https://www.haguichi.net/download/)
-   * [Bug tracker](https://bugs.launchpad.net/haguichi)
+   * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
    * [Donate](https://www.haguichi.net/donate/)
 
