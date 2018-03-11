@@ -36,6 +36,9 @@ public class Sidebar : Box
     private ActionBar network_action_bar;
     private ActionBar member_action_bar;
     
+    private Stack network_start_actions;
+    private Stack network_end_actions;
+    
     private SidebarLabel version_label;
     private SidebarLabel ipv4_label;
     private SidebarLabel ipv6_label;
@@ -280,6 +283,14 @@ public class Sidebar : Box
             network.go_offline();
         });
         
+        network_start_actions = new Stack();
+        network_start_actions.add_named (online_button,  "online");
+        network_start_actions.add_named (offline_button, "offline");
+        
+        network_end_actions = new Stack();
+        network_end_actions.add_named (delete_button, "delete");
+        network_end_actions.add_named (leave_button,  "leave");
+        
         SizeGroup network_actions_size_group = new SizeGroup (SizeGroupMode.HORIZONTAL);
         network_actions_size_group.add_widget (delete_button);
         network_actions_size_group.add_widget (leave_button);
@@ -287,10 +298,8 @@ public class Sidebar : Box
         network_actions_size_group.add_widget (offline_button);
         
         network_action_bar = new ActionBar();
-        network_action_bar.pack_start (online_button);
-        network_action_bar.pack_start (offline_button);
-        network_action_bar.pack_end (delete_button);
-        network_action_bar.pack_end (leave_button);
+        network_action_bar.pack_start (network_start_actions);
+        network_action_bar.pack_end (network_end_actions);
         
         Revealer network_action_bar_revealer = (Revealer) network_action_bar.get_child();
         network_action_bar_revealer.set_transition_type (RevealerTransitionType.NONE);
@@ -657,11 +666,11 @@ public class Sidebar : Box
                 
                 if (network.status.status_int == 1)
                 {
-                    online_button.hide();
+                    network_start_actions.set_visible_child_name ("offline");
                 }
                 else
                 {
-                    offline_button.hide();
+                    network_start_actions.set_visible_child_name ("online");
                 }
                 
                 if (network.capacity == 0)
@@ -696,7 +705,7 @@ public class Sidebar : Box
                     network_lock_check.toggled.connect (network_lock_changed);
                     network_approval_combo.changed.connect (network_approval_changed);
                     
-                    leave_button.hide();
+                    network_end_actions.set_visible_child_name ("delete");
                 }
                 else
                 {
@@ -706,7 +715,7 @@ public class Sidebar : Box
                     network_lock_check.hide();
                     network_password_button.hide();
                     
-                    delete_button.hide();
+                    network_end_actions.set_visible_child_name ("leave");
                 }
                 
                 heading_label.set_markup (Markup.escape_text (network.name));
