@@ -48,6 +48,7 @@ sources = [
     'widgets/preferences-box.vala',
     'widgets/preferences-label.vala',
     'widgets/preferences-switch.vala',
+    'widgets/sidebar-button.vala',
     'widgets/sidebar-entry.vala',
     'widgets/sidebar-label.vala',
     'window.vala'

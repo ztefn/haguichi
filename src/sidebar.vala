@@ -168,7 +168,7 @@ public class Sidebar : Box
         info_box.pack_start (info_grid, false, false, 0);
         
         
-        attach_button = new Button.with_mnemonic (Text.attach_label);
+        attach_button = new SidebarButton (Text.attach_label);
         attach_button.clicked.connect (GlobalEvents.attach);
         
         info_action_bar = new ActionBar();
@@ -221,7 +221,7 @@ public class Sidebar : Box
         network_approval_combo.model = store;
         
         
-        network_password_button = new Button.with_mnemonic (Text.change_password_label);
+        network_password_button = new SidebarButton (Text.change_password_label);
         network_password_button.halign = Align.CENTER;
         network_password_button.margin_top = 24;
         network_password_button.margin_bottom = 6;
@@ -255,26 +255,26 @@ public class Sidebar : Box
         network_box.pack_start (network_password_button, false, false, 0);
         
         
-        delete_button = new Button.with_mnemonic (Text.delete_label);
+        delete_button = new SidebarButton (Text.delete_label);
         delete_button.clicked.connect (() =>
         {
             network.delete();
         });
         
-        leave_button = new Button.with_mnemonic (Text.leave_label);
+        leave_button = new SidebarButton (Text.leave_label);
         leave_button.clicked.connect (() =>
         {
             network.leave();
         });
         
-        online_button = new Button.with_mnemonic (Text.go_online_label);
+        online_button = new SidebarButton (Text.go_online_label);
         online_button.get_style_context().add_class ("suggested-action");
         online_button.clicked.connect (() =>
         {
             network.go_online();
         });
         
-        offline_button = new Button.with_mnemonic (Text.go_offline_label);
+        offline_button = new SidebarButton (Text.go_offline_label);
         offline_button.clicked.connect (() =>
         {
             network.go_offline();
@@ -340,19 +340,19 @@ public class Sidebar : Box
         member_box.pack_start (commands_box, false, false, 0);
         
         
-        approve_button = new Button.with_mnemonic (Text.approve_label);
+        approve_button = new SidebarButton (Text.approve_label);
         approve_button.clicked.connect (() =>
         {
             member.approve();
         });
         
-        reject_button = new Button.with_mnemonic (Text.reject_label);
+        reject_button = new SidebarButton (Text.reject_label);
         reject_button.clicked.connect (() =>
         {
             member.reject();
         });
         
-        evict_button = new Button.with_mnemonic (Text.evict_label);
+        evict_button = new SidebarButton (Text.evict_label);
         evict_button.clicked.connect (() =>
         {
             member.evict();

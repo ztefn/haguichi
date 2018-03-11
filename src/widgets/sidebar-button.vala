@@ -10,18 +10,12 @@
 
 using Gtk;
 
-public class CommandButton : Button
+public class SidebarButton : Button
 {
-    public CommandButton (string _label, string command_ipv4, string command_ipv6, string _priority)
+    public SidebarButton (string _label)
     {
-        label = _(_label);
-        halign = Align.CENTER;
+        label = _label;
         use_underline = true;
         Utils.get_label_widget(this).ellipsize = Pango.EllipsizeMode.MIDDLE;
-        
-        clicked.connect (() =>
-        {
-            Command.execute (Command.return_custom ((Member) Haguichi.window.network_view.last_member, command_ipv4, command_ipv6, _priority));      
-        });
     }
 }

@@ -8,6 +8,8 @@
  * or (at your option) any later version.
  */
 
+using Gtk;
+
 public class Utils : Object
 {
     public static string format (owned string text, string? param1, string? param2, string? param3)
@@ -113,17 +115,17 @@ public class Utils : Object
         return output;
     }
     
-    public static string get_message_type_icon_name (Gtk.MessageType message_type)
+    public static string get_message_type_icon_name (MessageType message_type)
     {
         switch (message_type)
         {
-            case Gtk.MessageType.WARNING:
+            case MessageType.WARNING:
                 return "dialog-warning";
             
-            case Gtk.MessageType.QUESTION:
+            case MessageType.QUESTION:
                 return "dialog-question";
             
-            case Gtk.MessageType.ERROR:
+            case MessageType.ERROR:
                 return "dialog-error";
             
             default:
@@ -135,12 +137,27 @@ public class Utils : Object
     {
         foreach (string icon_name in icon_names) // Check each icon name in the list for existence, and return immediately if it does
         {
-            if (Gtk.IconTheme.get_default().has_icon (icon_name))
+            if (IconTheme.get_default().has_icon (icon_name))
             {
                 return icon_name;
             }
         }
         
         return icon_names[0]; // Return the first icon name as fallback
+    }
+    
+    public static Label? get_label_widget (Container container)
+    {
+        foreach (Widget child in container.get_children())
+        {
+            var label = child as Label;
+            
+            if (label != null)
+            {
+                return label;
+            }
+        }
+        
+        return null;
     }
 }
