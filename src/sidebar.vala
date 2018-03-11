@@ -110,7 +110,7 @@ public class Sidebar : Box
         heading_box = new Box (Orientation.HORIZONTAL, 0);
         heading_box.halign = Align.CENTER;
         heading_box.margin_top = 15;
-        heading_box.margin_bottom = 12;
+        heading_box.margin_bottom = 15;
         heading_box.pack_start (heading_label, false, false, 0);
         
         
@@ -226,8 +226,8 @@ public class Sidebar : Box
         
         network_password_button = new SidebarButton (Text.change_password_label);
         network_password_button.halign = Align.CENTER;
-        network_password_button.margin_top = 24;
-        network_password_button.margin_bottom = 6;
+        network_password_button.margin_top = 27;
+        network_password_button.margin_bottom = 3;
         network_password_button.clicked.connect (() =>
         {
             network.change_password();
@@ -342,7 +342,7 @@ public class Sidebar : Box
         member_grid.attach (member_connection_entry, 1, 6, 1, 1);
         
         commands_box = new Box (Orientation.VERTICAL, 6);
-        commands_box.margin_top = 12;
+        commands_box.margin_top = 15;
         
         member_box = new Box (Orientation.VERTICAL, 0);
         member_box.pack_start (member_grid,  false, false, 0);
