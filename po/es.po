@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-08-23 17:17+0000\n"
+"PO-Revision-Date: 2018-03-12 16:43+0000\n"
 "Last-Translator: Adolfo Jayme <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-08-23 19:44+0000\n"
-"X-Generator: Launchpad (build 18446)\n"
+"X-Launchpad-Export-Date: 2018-03-12 18:12+0000\n"
+"X-Generator: Launchpad (build 18571)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -63,7 +63,7 @@ msgstr "Prefere_ncias"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Atajos del _teclado"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -575,7 +575,7 @@ msgstr "Comportamiento"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Apariencia"
 
 #: src/text.vala:538
 msgid "Notifications"
@@ -623,11 +623,11 @@ msgstr "_Desconectar al salir"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Usar la variante de tema _oscuro"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Mostrar el _indicador"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -813,11 +813,11 @@ msgstr[1] "_Actualizar la lista de redes cada %S _segundos"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Mostrar la ayuda"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Mostrar la información del cliente"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -832,19 +832,16 @@ msgid "Quit"
 msgstr "Salir"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "La red está llena"
+msgstr "Lista de redes"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Unirse a la red"
+msgstr "Unirse a una red"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Crear red"
+msgstr "Crear una red"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -852,28 +849,26 @@ msgstr "Actualizar"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Buscar"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "_Mostrar miembros no conectados"
+msgstr "Mostrar u ocultar miembros desconectados"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Expandir todas las redes"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Contraer todas las redes"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Editar la orden"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Actualizar"
+msgstr "Ejecutar orden"
 
 #~ msgid "_OK"
 #~ msgstr "_Aceptar"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Actualizar"
