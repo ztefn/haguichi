@@ -1,7 +1,7 @@
 icon_themes = ['hicolor']
 
 if get_option('for-ubuntu')
-    icon_themes += ['ubuntu-mono-dark', 'ubuntu-mono-light']
+    icon_themes += ['Suru', 'ubuntu-mono-dark', 'ubuntu-mono-light']
 endif
 
 foreach theme : icon_themes
