@@ -57,9 +57,9 @@ sources = [
 deps = [
     dependency('gio-2.0'),
     dependency('gio-unix-2.0'),
-    dependency('glib-2.0', version: '>= 2.42'),
+    dependency('glib-2.0', version: '>= 2.48'),
     dependency('gobject-2.0'),
-    dependency('gtk+-3.0', version: '>= 3.14'),
+    dependency('gtk+-3.0', version: '>= 3.18'),
     dependency('libnotify', version: '>= 0.7.6')
 ]
 

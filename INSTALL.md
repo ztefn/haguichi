@@ -10,9 +10,9 @@
 
    * gettext
    * meson (>= 0.40)
-   * valac (>= 0.26)
-   * glib-2.0 (>= 2.42)
-   * gtk+-3.0 (>= 3.14)
+   * valac (>= 0.30)
+   * glib-2.0 (>= 2.48)
+   * gtk+-3.0 (>= 3.18)
    * libnotify (>= 0.7.6)
 
   On Debian based distributions you can install these packages by running the following command:
