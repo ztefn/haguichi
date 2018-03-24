@@ -17,6 +17,10 @@ public class GlobalEvents
     
     public static void set_modal_dialog (Window? dialog)
     {
+        GlobalActions.preferences.set_enabled (dialog == null);
+        GlobalActions.shortcuts.set_enabled (dialog == null);
+        GlobalActions.about.set_enabled (dialog == null);
+        
         Haguichi.modal_dialog = dialog;
         Haguichi.session.modality_changed (dialog != null);
     }
@@ -114,18 +118,7 @@ public class GlobalEvents
     
     public static void about ()
     {
-        Gtk.show_about_dialog (null,
-                               "transient-for",      Haguichi.window,
-                               "program-name",       Text.app_name,
-                               "logo-icon-name",     Config.ICON_NAME,
-                               "comments",           Text.app_comments,
-                               "version",            Text.app_version,
-                               "license",            Text.app_license,
-                               "copyright",          Text.app_copyright,
-                               "website",            Text.app_website,
-                               "website-label",      Text.app_website_label,
-                               "authors",            Text.app_authors,
-                               "translator-credits", Text.app_translator_credits);
+        new Dialogs.About();
     }
     
     public static void preferences ()
@@ -430,8 +423,8 @@ public class GlobalEvents
         
         if (Haguichi.modal_dialog != null)
         {
-            GlobalEvents.set_modal_dialog (null);
             Haguichi.modal_dialog.destroy();
+            GlobalEvents.set_modal_dialog (null);
         }
         
         Haguichi.window.hide();

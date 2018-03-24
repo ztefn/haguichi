@@ -10,6 +10,7 @@ sources = [
     'connection.vala',
     'controller.vala',
     'debug.vala',
+    'dialogs/about.vala',
     'dialogs/add-edit-command.vala',
     'dialogs/attach.vala',
     'dialogs/base.vala',

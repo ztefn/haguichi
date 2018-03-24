@@ -30,6 +30,7 @@ namespace Dialogs
             Object (title: Text.attach_title,
                     transient_for: Haguichi.window,
                     modal: true,
+                    resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
             GlobalEvents.set_modal_dialog (this);
@@ -84,7 +85,7 @@ namespace Dialogs
             account_entry.grab_focus();
             
             show();
-            resizable = false;
+            
             response.connect ((response_id) =>
             {
                 if (response_id == ResponseType.OK)

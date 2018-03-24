@@ -54,11 +54,15 @@ namespace Dialogs
 #if FOR_ELEMENTARY
                     deletable: false,
 #endif
-                    modal: false,
+                    modal: true,
                     resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
-            delete_event.connect (on_delete);
+            delete_event.connect ((event) =>
+            {
+                close();
+                return true;
+            });
             
             
             prefer_dark_theme_switch      = new PreferencesSwitch (Settings.prefer_dark_theme);
@@ -193,7 +197,7 @@ namespace Dialogs
                 {
                     if (response_id == ResponseType.CLOSE)
                     {
-                        hide();
+                        close();
                     }
                 });
             }
@@ -220,14 +224,15 @@ namespace Dialogs
         
         public void open ()
         {
+            GlobalEvents.set_modal_dialog (this);
             show();
             present();
         }
         
-        private bool on_delete ()
+        public void close ()
         {
+            GlobalEvents.set_modal_dialog (null);
             hide();
-            return true;
         }
     }
 }

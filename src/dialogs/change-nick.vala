@@ -26,6 +26,7 @@ namespace Dialogs
             Object (title: Text.change_nick_title,
                     transient_for: Haguichi.window,
                     modal: true,
+                    resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
             GlobalEvents.set_modal_dialog (this);
@@ -63,7 +64,7 @@ namespace Dialogs
             change_but.grab_default();
             
             show_all();
-            resizable = false;
+            
             response.connect ((response_id) =>
             {
                 if (response_id == ResponseType.OK)

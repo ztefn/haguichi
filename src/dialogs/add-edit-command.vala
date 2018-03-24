@@ -39,6 +39,7 @@ namespace Dialogs
         {
             Object (transient_for: Haguichi.preferences_dialog,
                     modal: true,
+                    resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
             
             mode   = _mode;
@@ -144,7 +145,7 @@ namespace Dialogs
             save_but.grab_default();
             
             show_all();
-            resizable = false;
+            
             response.connect ((response_id) =>
             {
                 if (response_id == ResponseType.OK)
@@ -184,7 +185,6 @@ namespace Dialogs
         
         private void dismiss ()
         {
-            GlobalEvents.set_modal_dialog (null);
             destroy();
         }
         
