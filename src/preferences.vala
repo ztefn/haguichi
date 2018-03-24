@@ -60,7 +60,7 @@ namespace Dialogs
             
             delete_event.connect ((event) =>
             {
-                close();
+                shut();
                 return true;
             });
             
@@ -197,7 +197,7 @@ namespace Dialogs
                 {
                     if (response_id == ResponseType.CLOSE)
                     {
-                        close();
+                        shut();
                     }
                 });
             }
@@ -229,7 +229,7 @@ namespace Dialogs
             present();
         }
         
-        public void close ()
+        public void shut ()
         {
             GlobalEvents.set_modal_dialog (null);
             hide();
