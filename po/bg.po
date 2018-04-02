@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-08-03 09:21+0000\n"
+"POT-Creation-Date: 2018-04-02 11:57+0200\n"
+"PO-Revision-Date: 2018-04-01 12:12+0000\n"
 "Last-Translator: Dimitar Dimitrov <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
 "Language: bg\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-08-03 17:32+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2018-04-02 09:48+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -63,7 +63,7 @@ msgstr "_Настройки"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Клавишни комбинации"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -576,7 +576,7 @@ msgstr "Поведение"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Изглед"
 
 #: src/text.vala:538
 msgid "Notifications"
@@ -624,11 +624,11 @@ msgstr "_Автоматично изключване при излизане"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "_Тъмна тема"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Показване на _индикатор"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -814,11 +814,11 @@ msgstr[1] "_Обновявай листът с мрежите на всеки %S
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Показване на помощ"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Показване на клиентската информация"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -833,19 +833,16 @@ msgid "Quit"
 msgstr "Изход"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Мрежата е пълна"
+msgstr "Списък с мрежи"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
 msgstr "Влез в мрежа"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Създай Мрежа"
+msgstr "Създай мрежа"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -853,28 +850,26 @@ msgstr "Обновяване"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Търсене"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "Покажи потребителите _извън линия"
+msgstr "Показване/скриване на офлайн членовете"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Разширяване на всички мрежи"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Свиване на всички мрежи"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Редактиране на команда"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Обновяване"
+msgstr "Изпълнение на команда"
 
 #~ msgid "_OK"
 #~ msgstr "_Добре"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Обновяване"

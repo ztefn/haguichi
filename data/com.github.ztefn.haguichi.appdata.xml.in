@@ -43,7 +43,7 @@
   <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <languages>
     <lang percentage="93">ast</lang>
-    <lang percentage="93">bg</lang>
+    <lang percentage="100">bg</lang>
     <lang percentage="100">cs</lang>
     <lang percentage="93">de</lang>
     <lang percentage="100">es</lang>
