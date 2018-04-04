@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-07-30 18:54+0000\n"
+"POT-Creation-Date: 2018-04-04 19:39+0200\n"
+"PO-Revision-Date: 2018-04-03 19:12+0000\n"
 "Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "Language: sk\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2018-04-04 17:28+0000\n"
+"X-Generator: Launchpad (build 18599)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -63,7 +63,7 @@ msgstr "_Predvoľby"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klávesové skratky"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -573,7 +573,7 @@ msgstr "Chovanie"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Vzhľad"
 
 #: src/text.vala:538
 msgid "Notifications"
@@ -621,11 +621,11 @@ msgstr "O_dpojiť pri ukončení"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Použiť _tmavú tému"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Zobraziť _indikátor"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -816,11 +816,11 @@ msgstr[2] "_Aktualizovať zoznam sietí raz za %S _sekúnd"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Zobraziť nápovedu"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Zobraziť informácie o klientovi"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -835,17 +835,14 @@ msgid "Quit"
 msgstr "Koniec"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Sieť je plná"
+msgstr "Zoznam sietí"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Vstúpiť do siete"
+msgstr "Pripojiť sa k sieti"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
 msgstr "Vytvoriť sieť"
 
@@ -855,28 +852,26 @@ msgstr "Obnoviť"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Hľadať"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "Zobraziť _offline členov"
+msgstr "Zobraziť/skryť offline členov"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Rozbaliť všetky siete"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Zbaliť všetky siete"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Upraviť príkaz"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Obnoviť"
+msgstr "Vykonať príkaz"
 
 #~ msgid "_OK"
 #~ msgstr "_Ok"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Obnoviť"
