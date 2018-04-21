@@ -9,9 +9,16 @@ project(
 app_name    = meson.project_name()
 app_id      = 'com.github.ztefn.' + app_name
 app_version = meson.project_version()
-binary_name = app_name
-icon_name   = app_name
-gettext_pkg = app_name
+
+if get_option('use-rdnn-everywhere')
+    pkg_name = app_id
+else
+    pkg_name = app_name
+endif
+
+binary_name = pkg_name
+icon_name   = pkg_name
+gettext_pkg = pkg_name
 
 add_project_arguments(
     '-DGETTEXT_PACKAGE="' + gettext_pkg + '"',
@@ -19,7 +26,7 @@ add_project_arguments(
 )
 
 conf = configuration_data()
-conf.set('PACKAGE_NAME', app_name)
+conf.set('PACKAGE_NAME', pkg_name)
 conf.set('VERSION', app_version)
 conf.set('BINARY_NAME', binary_name)
 conf.set('ICON_NAME', icon_name)
