@@ -1,60 +1,6 @@
-haguichi (1.3.9) vivid; urgency=low
+haguichi (1.4.0) xenial; urgency=medium
 
   * New version
 
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 30 Sep 2017 18:04:58 +0200
-
-haguichi (1.3.8) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Fri, 31 Mar 2017 22:36:22 +0200
-
-haguichi (1.3.7) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Wed, 07 Dec 2016 20:47:32 +0100
-
-haguichi (1.3.6) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sun, 07 Aug 2016 21:41:29 +0200
-
-haguichi (1.3.5) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Mon, 16 May 2016 16:40:53 +0200
-
-haguichi (1.3.4) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 05 Mar 2016 15:31:59 +0100
-
-haguichi (1.3.3) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 30 Jan 2016 21:18:40 +0100
-
-haguichi (1.3.2) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sun, 20 Dec 2015 00:53:50 +0100
-
-haguichi (1.3.1) vivid; urgency=low
-
-  * New version
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 15 Aug 2015 13:57:50 +0200
-
-haguichi (1.3.0) vivid; urgency=low
-
-  * Initial packaging
-
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 18 Apr 2015 18:56:51 +0200
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 21 Apr 2018 23:17:51 +0200
 
