@@ -35,7 +35,7 @@ i18n.merge_file(
     install_dir: join_paths(get_option('datadir'), 'applications')
 )
 
-autostart = app_id + '-autostart.desktop'
+autostart = app_id + '.autostart.desktop'
 
 autostart_in = configure_file(
     input: autostart + '.in.in',
