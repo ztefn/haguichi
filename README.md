@@ -31,7 +31,7 @@
 
   Support development by making a donation! You can donate any amount you wish by clicking on the PayPal logo below.
 
-  [<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" srcset="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png 2x" alt="PayPal" />](https://www.paypal.me/ztefn)
+  [<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" height="26" alt="PayPal" />](https://www.paypal.me/ztefn)
 
 
   License
