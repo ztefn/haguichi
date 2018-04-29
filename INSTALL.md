@@ -20,6 +20,37 @@
     $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev libnotify-dev
 
 
+  Build options
+  -------------
+
+  **enable-appindicator**
+
+  This option enables appindicator integration and additionally requires the *appindicator3* development package.
+
+    $ meson configure -Denable-appindicator=true
+
+
+  **for-elementary**
+
+  This option enables full integration with elementary OS and additionally requires the *granite* development package.
+
+    $ meson configure -Dfor-elementary=true
+
+
+  **for-ubuntu**
+
+  This option enables full integration with Ubuntu by installing ubuntu-mono and Suru icons.
+
+    $ meson configure -Dfor-ubuntu=true
+
+
+  **use-rdnn-everywhere**
+
+  This option enables usage of [RDNN](https://en.wikipedia.org/wiki/Reverse_domain_name_notation "Reverse Domain Name Notation") everywhere, specifically for binary, icon and gettext package.
+
+    $ meson configure -Duse-rdnn-everywhere=true
+
+
   Building
   --------
 

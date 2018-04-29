@@ -1,4 +1,4 @@
 option('enable-appindicator', type: 'boolean', value: false)
-option('for-ubuntu',          type: 'boolean', value: false)
 option('for-elementary',      type: 'boolean', value: false)
+option('for-ubuntu',          type: 'boolean', value: false)
 option('use-rdnn-everywhere', type: 'boolean', value: false)
