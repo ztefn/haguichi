@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-09 21:53+0100\n"
-"PO-Revision-Date: 2017-07-30 20:47+0000\n"
+"PO-Revision-Date: 2018-05-11 06:55+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "Language: lt\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-07-31 18:12+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2018-05-11 22:40+0000\n"
+"X-Generator: Launchpad (build 18640)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:362
@@ -64,7 +64,7 @@ msgstr "_Nuostatos"
 
 #: src/text.vala:377
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Klaviatūros trumpiniai"
 
 #: src/text.vala:378
 msgid "_Help"
@@ -577,7 +577,7 @@ msgstr "Elgsena"
 
 #: src/text.vala:537
 msgid "Appearance"
-msgstr ""
+msgstr "Išvaizda"
 
 #: src/text.vala:538
 msgid "Notifications"
@@ -625,11 +625,11 @@ msgstr "Išeinant, a_tsijungti"
 
 #: src/text.vala:553
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Nau_doti tamsų temos variantą"
 
 #: src/text.vala:555
 msgid "Show _indicator"
-msgstr ""
+msgstr "Rodyti _indikatorių"
 
 #: src/text.vala:557
 msgid "Display notification when the connection is l_ost"
@@ -820,11 +820,11 @@ msgstr[2] "Atna_ujinti tinklo sąrašą kas %S _sekundžių"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Rodyti žinyną"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Rodyti kliento informaciją"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -839,17 +839,14 @@ msgid "Quit"
 msgstr "Išeiti"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Tinklas pilnas"
+msgstr "Tinklų sąrašas"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
 msgstr "Prisijungti prie tinklo"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
 msgstr "Sukurti tinklą"
 
@@ -859,28 +856,26 @@ msgstr "Įkelti iš naujo"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Ieškoti"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "R_odyti atsijungusius narius"
+msgstr "Rodyti/slėpti atsijungusius narius"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Išskleisti visus tinklus"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Suskleisti visus tinklus"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Redaguoti komandą"
-
-#~ msgid "_Refresh"
-#~ msgstr "Į_kelti iš naujo"
+msgstr "Vykdyti komandą"
 
 #~ msgid "_OK"
 #~ msgstr "_Gerai"
+
+#~ msgid "_Refresh"
+#~ msgstr "Į_kelti iš naujo"
