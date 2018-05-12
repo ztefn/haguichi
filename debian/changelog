@@ -1,12 +1,27 @@
-haguichi (1.4.1) xenial; urgency=medium
+com.github.ztefn.haguichi (1.140.0) xenial; urgency=low
 
-  * New version
+  * Rebased on master version 1.4.0.
+  * Implemented shortcuts window for Juno.
+  * Revamped preferences dialog using stack, list box and switch widgets.
+  * Integrated appindicator and added accompanying switch to preferences dialog.
+  * Added dark theme switch to preferences dialog.
+  * Tweaked sidebar content alignment and margins.
+  * Improved window position and size handling.
+  * Improved modal dialog management.
+  * Fixed crash that could occur when adding a network while the network list was being filtered.
+  * Updated Brazilian Portuguese, Bulgarian, Czech, Dutch, French, Italian, Polish, Slovak, Spanish, Swedish, Turkish and Ukrainian translations.
 
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 12 May 2018 01:06:45 +0200
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 12 May 2018 09:55:17 +0200
 
-haguichi (1.4.0) xenial; urgency=medium
+com.github.ztefn.haguichi (1.138.2) xenial; urgency=low
 
-  * New version
+  * Tweaks for elementary stylesheet (mostly fixes for dark variant).
+  * Fixed missing icon in notifications.
 
- -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 21 Apr 2018 23:17:51 +0200
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Thu, 28 Dec 2017 23:33:12 +0100
 
+com.github.ztefn.haguichi (1.138.1) xenial; urgency=low
+
+  * Initial release for elementary OS based on master version 1.3.8.
+
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Tue, 19 Dec 2017 19:42:07 +0100
