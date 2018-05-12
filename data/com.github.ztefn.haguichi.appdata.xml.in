@@ -4,35 +4,68 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Haguichi</name>
-  <summary>Graphical frontend for Hamachi</summary>
+  <summary>A graphical frontend for Hamachi</summary>
   <description>
-    <p>Haguichi provides a graphical frontend for Hamachi on Linux.</p>
-    <p>It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list. Also, it lets you easily backup and restore your Hamachi configuration folder.</p>
+    <p>Join, create and manage Hamachi networks in a breeze.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Searchable, sortable and collapsible network list</li>
+      <li>Sidebar for easy access to details and actions</li>
+      <li>Desktop notifications</li>
+      <li>Fully customizable commands</li>
+      <li>Simple method to backup and/or restore your Hamachi configuration folder</li>
+    </ul>
   </description>
   <screenshots>
-    <screenshot width="1248" height="702" type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
-    <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-2.png</screenshot>
-    <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/4.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/5.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/6.png</image>
+    </screenshot>
   </screenshots>
   <releases>
-    <release version="1.4.0" date="2018-05-10"/>
-    <release version="1.3.8" date="2017-09-23"/>
-    <release version="1.3.7" date="2017-03-30"/>
-    <release version="1.3.6" date="2016-12-06"/>
-    <release version="1.3.5" date="2016-08-08"/>
-    <release version="1.3.4" date="2016-05-16"/>
-    <release version="1.3.3" date="2016-03-05"/>
-    <release version="1.3.2" date="2016-01-30"/>
-    <release version="1.3.1" date="2015-12-19"/>
-    <release version="1.3.0" date="2015-08-12"/>
+    <release version="1.140.0" date="2018-05-12">
+      <description>
+        <ul>
+          <li>Implemented shortcuts window for Juno.</li>
+          <li>Revamped preferences dialog using stack, list box and switch widgets.</li>
+          <li>Integrated appindicator and added accompanying switch to preferences dialog.</li>
+          <li>Added dark theme switch to preferences dialog.</li>
+          <li>Tweaked sidebar content alignment and margins.</li>
+          <li>Improved window position and size handling.</li>
+          <li>Improved modal dialog management.</li>
+          <li>Fixed crash that could occur when adding a network while the network list was being filtered.</li>
+          <li>Updated Brazilian Portuguese, Bulgarian, Czech, Dutch, French, Italian, Polish, Slovak, Spanish, Swedish, Turkish and Ukrainian translations.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.138.2" date="2017-12-28">
+      <description>
+        <ul>
+          <li>Tweaks for elementary stylesheet (mostly fixes for dark variant).</li>
+          <li>Fixed missing icon in notifications.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.138.1" date="2017-12-19">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
   </releases>
-  <kudos>
-    <kudo>AppMenu</kudo>
-    <kudo>HiDpiIcon</kudo>
-    <kudo>HighContrast</kudo>
-    <kudo>ModernToolkit</kudo>
-    <kudo>Notifications</kudo>
-  </kudos>
   <url type="homepage">https://www.haguichi.net/</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
   <url type="faq">https://www.haguichi.net/faq/</url>
@@ -63,4 +96,9 @@
     <lang percentage="100">tr</lang>
     <lang percentage="100">uk</lang>
   </languages>
+  <custom>
+    <value key="x-appcenter-color-primary">#FF4444</value>
+    <value key="x-appcenter-color-primary-text">#FFFFFF</value>
+    <value key="x-appcenter-suggested-price">0</value>
+  </custom>
 </component>
