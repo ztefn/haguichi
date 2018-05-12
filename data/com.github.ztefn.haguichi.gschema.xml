@@ -33,7 +33,7 @@
 
   <schema path="/com/github/ztefn/haguichi/" id="com.github.ztefn.haguichi">
     <key type="i" name="stamp">
-      <default>1</default>
+      <default>2</default>
     </key>
     <child schema="com.github.ztefn.haguichi.behavior" name="behavior"/>
     <child schema="com.github.ztefn.haguichi.commands" name="commands"/>
@@ -140,7 +140,7 @@
 
   <schema path="/com/github/ztefn/haguichi/ui/" id="com.github.ztefn.haguichi.ui">
     <key type="i" name="height">
-      <default>500</default>
+      <default>600</default>
     </key>
     <key type="i" name="position-x">
       <default>120</default>
@@ -149,7 +149,7 @@
       <default>60</default>
     </key>
     <key type="b" name="prefer-dark-theme">
-      <default>true</default>
+      <default>false</default>
     </key>
     <key type="b" name="show-indicator">
       <default>true</default>
@@ -158,7 +158,7 @@
       <default>290</default>
     </key>
     <key type="i" name="width">
-      <default>560</default>
+      <default>660</default>
     </key>
   </schema>
 
