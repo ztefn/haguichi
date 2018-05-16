@@ -1,3 +1,9 @@
+com.github.ztefn.haguichi (1.140.1) xenial; urgency=low
+
+  * Added elementary style app icons and removed all useless ones.
+
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Wed, 16 May 2018 23:34:23 +0200
+
 com.github.ztefn.haguichi (1.140.0) xenial; urgency=low
 
   * Rebased on master version 1.4.0.

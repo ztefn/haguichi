@@ -37,6 +37,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.140.1" date="2018-05-16">
+      <description>
+        <ul>
+          <li>Added elementary style app icons and removed all useless ones.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.140.0" date="2018-05-12">
       <description>
         <ul>
