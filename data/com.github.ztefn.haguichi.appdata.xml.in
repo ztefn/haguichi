@@ -37,6 +37,13 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.140.2" date="2018-05-17">
+      <description>
+        <ul>
+          <li>Moved 128x128@2 app icon to the appropriate subfolder.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.140.1" date="2018-05-16">
       <description>
         <ul>

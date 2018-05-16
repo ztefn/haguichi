@@ -1,3 +1,9 @@
+com.github.ztefn.haguichi (1.140.2) xenial; urgency=low
+
+  * Moved 128x128@2 app icon to the appropriate subfolder.
+
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Thu, 17 May 2018 00:12:37 +0200
+
 com.github.ztefn.haguichi (1.140.1) xenial; urgency=low
 
   * Added elementary style app icons and removed all useless ones.
