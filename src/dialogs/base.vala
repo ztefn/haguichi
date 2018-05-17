@@ -31,7 +31,10 @@ namespace Dialogs
 #endif
             transient_for  = parent;
             
-            GlobalEvents.set_modal_dialog (this);
+            if (transient_for == Haguichi.window)
+            {
+                GlobalEvents.set_modal_dialog (this);
+            }
             
             response.connect (on_response);
         }
@@ -49,7 +52,11 @@ namespace Dialogs
         public void on_response (Dialog dialog, int _response_id)
         {
             response_id = _response_id;
-            GlobalEvents.set_modal_dialog (null);
+            
+            if (transient_for == Haguichi.window)
+            {
+                GlobalEvents.set_modal_dialog (null);
+            }
         }
     }
 }

@@ -319,6 +319,8 @@ public class GlobalEvents
         
         FileChooserDialog chooser = new FileChooserDialog (Text.config_save_title, Haguichi.window, FileChooserAction.SAVE, Text.cancel_label, ResponseType.CANCEL);
         
+        GlobalEvents.set_modal_dialog (chooser);
+        
         Button ok_but = (Button) chooser.add_button (Text.save_label, ResponseType.OK);
         ok_but.get_style_context().add_class ("suggested-action");
         
@@ -336,6 +338,7 @@ public class GlobalEvents
                 Hamachi.save_config (chooser.get_filename());
             }
             
+            GlobalEvents.set_modal_dialog (null);
             chooser.destroy();
         });
     }
@@ -343,6 +346,8 @@ public class GlobalEvents
     public static void restore_config ()
     {
         FileChooserDialog chooser = new FileChooserDialog (Text.config_restore_title, Haguichi.window, FileChooserAction.OPEN, Text.cancel_label, ResponseType.CANCEL);
+        
+        GlobalEvents.set_modal_dialog (chooser);
         
         Button ok_but = (Button) chooser.add_button (Text.config_restore_button_label, ResponseType.OK);
         ok_but.get_style_context().add_class ("suggested-action");
@@ -361,6 +366,7 @@ public class GlobalEvents
                 Hamachi.restore_config (chooser.get_filename());
             }
             
+            GlobalEvents.set_modal_dialog (null);
             chooser.destroy();
         });
     }
