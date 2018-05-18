@@ -10,7 +10,7 @@ app_name    = meson.project_name()
 app_id      = 'com.github.ztefn.' + app_name
 app_version = meson.project_version()
 
-if get_option('use-rdnn-everywhere')
+if get_option('use-rdnn-everywhere') or get_option('for-elementary')
     pkg_name = app_id
 else
     pkg_name = app_name

@@ -1,4 +1,8 @@
-icon_themes = ['hicolor']
+if get_option('for-elementary')
+    icon_themes = ['elementary/hicolor']
+else
+    icon_themes = ['hicolor']
+endif
 
 if get_option('for-ubuntu')
     icon_themes += ['Suru', 'ubuntu-mono-dark', 'ubuntu-mono-light']
