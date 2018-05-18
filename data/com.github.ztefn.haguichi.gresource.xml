@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/ztefn/haguichi">
-    <file>stylesheets/adwaita.css</file>
-    <file>stylesheets/adwaita-dark.css</file>
-    <file>stylesheets/default.css</file>
-    <file>stylesheets/elementary.css</file>
-    <file>stylesheets/elementary-dark.css</file>
-    <file preprocess="xml-stripblanks">ui/shortcuts-window.ui</file>
+  <gresource prefix="/com/github/ztefn/haguichi/icons">
+    <file>16x16/status/haguichi-node-error.png</file>
+    <file>16x16/status/haguichi-node-offline.png</file>
+    <file>16x16/status/haguichi-node-online.png</file>
+    <file>16x16/status/haguichi-node-online-relayed.png</file>
+    <file>16x16/status/haguichi-node-unapproved.png</file>
+    <file>16x16/status/haguichi-node-unreachable.png</file>
+    <file>24x24/status/haguichi-node-error.png</file>
+    <file>24x24/status/haguichi-node-offline.png</file>
+    <file>24x24/status/haguichi-node-online.png</file>
+    <file>24x24/status/haguichi-node-online-relayed.png</file>
+    <file>24x24/status/haguichi-node-unapproved.png</file>
+    <file>24x24/status/haguichi-node-unreachable.png</file>
+    <file>32x32/status/haguichi-node-error.png</file>
+    <file>32x32/status/haguichi-node-offline.png</file>
+    <file>32x32/status/haguichi-node-online.png</file>
+    <file>32x32/status/haguichi-node-online-relayed.png</file>
+    <file>32x32/status/haguichi-node-unapproved.png</file>
+    <file>32x32/status/haguichi-node-unreachable.png</file>
+    <file>48x48/status/haguichi-node-error.png</file>
+    <file>48x48/status/haguichi-node-offline.png</file>
+    <file>48x48/status/haguichi-node-online.png</file>
+    <file>48x48/status/haguichi-node-online-relayed.png</file>
+    <file>48x48/status/haguichi-node-unapproved.png</file>
+    <file>48x48/status/haguichi-node-unreachable.png</file>
+  </gresource>
+  <gresource prefix="/com/github/ztefn/haguichi/stylesheets">
+    <file>adwaita.css</file>
+    <file>adwaita-dark.css</file>
+    <file>default.css</file>
+    <file>elementary.css</file>
+    <file>elementary-dark.css</file>
+  </gresource>
+  <gresource prefix="/com/github/ztefn/haguichi/ui">
+    <file preprocess="xml-stripblanks">shortcuts-window.ui</file>
   </gresource>
 </gresources>

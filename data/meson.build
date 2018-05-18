@@ -57,7 +57,7 @@ gnome = import('gnome')
 resources = gnome.compile_resources(
     'haguichi-resources',
     app_id + '.gresource.xml',
-    source_dir: '.'
+    source_dir: ['icons/resources', 'stylesheets', 'ui']
 )
 
 install_data(
