@@ -1,0 +1,27 @@
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <defs>
+  <linearGradient id="c" y2="25.901" gradientUnits="userSpaceOnUse" x2="-77.819" gradientTransform="matrix(1,0,0,-1,254,302)" y1="129" x1="-150">
+   <stop stop-color="#640f0f" offset="0"/>
+   <stop stop-color="#ff4f4f" offset=".12214"/>
+   <stop stop-color="#f30000" offset="1"/>
+  </linearGradient>
+  <linearGradient id="b" y2="212.96" gradientUnits="userSpaceOnUse" x2="-112.1" gradientTransform="matrix(1,0,0,-1,254,302)" y1="82.584" x1="-56.871">
+   <stop stop-color="#ff7a55" offset="0"/>
+   <stop stop-color="#ffb484" offset="1"/>
+  </linearGradient>
+  <linearGradient id="a" y2="247.58" gradientUnits="userSpaceOnUse" x2="170.76" y1="109.56" x1="110.77">
+   <stop stop-color="#fff" offset="0"/>
+   <stop stop-color="#fff" stop-opacity=".137" offset=".13812"/>
+   <stop stop-color="#fff" stop-opacity=".098" offset=".87978"/>
+   <stop stop-color="#fff" stop-opacity=".596" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(0,-16)">
+  <g style="enable-background:new" transform="matrix(.063056 0 0 .067473 -1.2584 13.069)">
+   <path style="color:#000000;enable-background:new" d="m150.4 258h64.334l-88.403-96.278h-64.334z" fill="url(#c)"/>
+   <path style="color:#000000;enable-background:new" d="m150.4 66h64.334l-88.403 96-33.14 33.69-31.19-33.69z" stroke-opacity=".4" stroke="#f33500" stroke-linecap="round" stroke-width="15.331" fill="url(#b)"/>
+   <path opacity=".5" style="color:#000000;enable-background:new" d="m178.56 83.393 2.2017-2.4853-23.243 0.0024-74.581 81.408c27.298 30.847 49.099 52.368 74.46 80.394l22.553 0.0778-2.3274-2.5143" stroke="url(#a)" stroke-width="15.331" fill="none"/>
+   <path style="color:#000000;enable-background:new" d="m97.638 200.63 52.765 57.368h64.334l-88.403-96.278" stroke-opacity=".4" stroke="#950804" stroke-width="15.331" fill="none"/>
+  </g>
+ </g>
+</svg>
