@@ -38,12 +38,11 @@ public class Headerbar : HeaderBar
         
         
         connect_but = new ToggleButton();
+        connect_but.valign = Align.CENTER;
         connect_but.image = new Image.from_icon_name ("system-shutdown-symbolic", IconSize.MENU);
         connect_but.set_action_name ("app.connect");
         connect_but.get_style_context().add_class ("suggested-action");
         
-        
-        network_but = new MenuButton();
         
         var join   = new GLib.MenuItem (Text.join_network_label,   "app.join-network");
         var create = new GLib.MenuItem (Text.create_network_label, "app.create-network");
@@ -52,6 +51,8 @@ public class Headerbar : HeaderBar
         network_menu.append_item (join);
         network_menu.append_item (create);
         
+        network_but = new MenuButton();
+        network_but.valign = Align.CENTER;
         network_but.image = new Image.from_icon_name ("list-add-symbolic", IconSize.MENU);
         network_but.menu_model = network_menu;
         
@@ -79,6 +80,7 @@ public class Headerbar : HeaderBar
         client_menu.append_section (null, copy_section);
         
         client_but = new MenuButton();
+        client_but.valign = Align.CENTER;
         client_but.image = new Image.from_icon_name ("avatar-default-symbolic", IconSize.MENU);
         client_but.menu_model = client_menu;
         client_but.toggled.connect (() =>
@@ -109,11 +111,13 @@ public class Headerbar : HeaderBar
         
         
         search_but = new ToggleButton();
+        search_but.valign = Align.CENTER;
         search_but.image = new Image.from_icon_name ("edit-find-symbolic", IconSize.MENU);
         search_but.set_action_name ("app.toggle-search");
         
         
         refresh_but = new Button();
+        refresh_but.valign = Align.CENTER;
         refresh_but.image = new Image.from_icon_name ("view-refresh-symbolic", IconSize.MENU);
         refresh_but.set_action_name ("app.refresh");
         
@@ -177,6 +181,7 @@ public class Headerbar : HeaderBar
         }
         
         gear_but = new MenuButton();
+        gear_but.valign = Align.CENTER;
         gear_but.image = new Image.from_icon_name ("open-menu-symbolic", IconSize.MENU);
         gear_but.menu_model = gear_menu;
         gear_but.add_accelerator ("clicked", HaguichiWindow.accel_group, Gdk.Key.F10, 0, AccelFlags.VISIBLE);
