@@ -55,18 +55,48 @@
  * Improve "suggested-action" style for buttons in titlebar
  */
 
+.titlebar .image-button.suggested-action {
+    border: 1px solid alpha (#000, 0.2);
+    box-shadow:
+        0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 1px 0 0 alpha (#fff, 0.25);
+}
+
+.titlebar .image-button.suggested-action:backdrop {
+    box-shadow: none;
+}
+
+.titlebar .image-button.suggested-action image {
+    color: @selected_bg_color;
+    -gtk-icon-shadow: none;
+}
+
+.titlebar .image-button.suggested-action:backdrop image {
+    color: alpha (@selected_bg_color, 0.7);
+}
+
 .titlebar .image-button.suggested-action:active,
 .titlebar .image-button.suggested-action:active:hover,
 .titlebar .image-button.suggested-action:checked {
     background-color: @selected_bg_color;
     background-image: none;
+    border: 1px solid transparent;
+    box-shadow: none; 
 }
 
-.titlebar .image-button.suggested-action:active GtkImage,
-.titlebar .image-button.suggested-action:active:hover GtkImage,
-.titlebar .image-button.suggested-action:checked GtkImage {
+.titlebar .image-button.suggested-action:checked:backdrop {
+    background-color: alpha (@selected_bg_color, 0.8);
+}
+
+.titlebar .image-button.suggested-action:active image,
+.titlebar .image-button.suggested-action:active:hover image,
+.titlebar .image-button.suggested-action:checked image {
     color: @titlebar_color;
-    icon-shadow: 0 1px shade (@selected_bg_color, 1.2);
+    -gtk-icon-shadow: 0 1px shade (@selected_bg_color, 1.2);
+}
+
+.titlebar .image-button.suggested-action:backdrop image {
+    -gtk-icon-shadow: none;
 }
 
 
@@ -75,34 +105,28 @@
  * https://github.com/elementary/stylesheet/issues/97
  */
 
-.titlebar .image-button:insensitive GtkImage {
+.titlebar .image-button:disabled image {
     color: @insensitive_color;
 }
 
 
 /*
- * Fix missing "suggested-action" style for buttons in actionbar
- * https://github.com/elementary/stylesheet/issues/98
+ * Fix missing "backdrop" style for disabled buttons in titlebar
+ * https://github.com/elementary/stylesheet/issues/370
  */
 
-.action-bar .button {
-    box-shadow:
-        inset 0 0 0 1px alpha (@bg_highlight_color, 0.05),
-        inset 0 1px 0 0 alpha (@bg_highlight_color, 0.45),
-        inset 0 -1px 0 0 alpha (@bg_highlight_color, 0.15),
-        0 1px 0 0 alpha (@bg_highlight_color, 0.15);
+.titlebar .image-button:disabled:backdrop image {
+    color: shade (@insensitive_color, 0.8);
 }
 
-.action-bar .button.suggested-action {
-    background-image:
-        linear-gradient(
-            to bottom,
-            shade (@selected_bg_color, 1.1),
-            shade (@selected_bg_color, 0.9)
-        );
-    box-shadow:
-        inset 0 0 0 1px alpha (#fff, 0.05),
-        inset 0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 -1px 0 0 alpha (#fff, 0.1),
-        0 1px 0 0 alpha (#fff, 0.15);
+
+/*
+ * Fix headerbar being too high when using subtitle
+ * https://github.com/elementary/stylesheet/issues/352
+ */
+
+.haguichi-window .titlebar
+{
+    padding-top: 3px;
+    padding-bottom: 2px;
 }

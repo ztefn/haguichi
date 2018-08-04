@@ -55,9 +55,77 @@
  * Improve "suggested-action" style for buttons in titlebar
  */
 
+.titlebar .image-button.suggested-action {
+    border: 1px solid alpha (#000, 0.2);
+    box-shadow:
+        0 1px 0 0 alpha (#fff, 0.25),
+        inset 0 1px 0 0 alpha (#fff, 0.25);
+}
+
+.titlebar .image-button.suggested-action:backdrop {
+    box-shadow: none;
+}
+
+.titlebar .image-button.suggested-action image {
+    color: #fff;
+    -gtk-icon-shadow: none;
+}
+
+.titlebar .image-button.suggested-action:backdrop image {
+    color: alpha (#fff, 0.7);
+}
+
+.titlebar .image-button.suggested-action:disabled image {
+    color: shade (@textColorPrimary, 1.5);
+    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
+}
+
+.titlebar .image-button.suggested-action:disabled:backdrop {
+    border-color: shade (@textColorPrimary, 1.8);
+}
+
 .titlebar .image-button.suggested-action:active,
 .titlebar .image-button.suggested-action:active:hover,
 .titlebar .image-button.suggested-action:checked {
-    background-color: alpha (#fff, 0.25);
+    background-color: alpha (#fff, 0.8);
     background-image: none;
+    border: 1px solid transparent;
+    box-shadow: none; 
+}
+
+.titlebar .image-button.suggested-action:checked:backdrop {
+    background-color: alpha (#fff, 0.7);
+}
+
+.titlebar .image-button.suggested-action:active image,
+.titlebar .image-button.suggested-action:active:hover image,
+.titlebar .image-button.suggested-action:checked image {
+    color: shade (@colorPrimary, 0.9);
+    -gtk-icon-shadow: 0 1px alpha (#fff, 0.25);
+}
+
+.titlebar .image-button.suggested-action:backdrop image {
+    -gtk-icon-shadow: none;
+}
+
+
+/*
+ * Fix missing "backdrop" style for disabled buttons in titlebar
+ * https://github.com/elementary/stylesheet/issues/370
+ */
+
+.titlebar .image-button:disabled:backdrop image {
+    color: shade (@textColorPrimary, 1.8);
+}
+
+
+/*
+ * Fix headerbar being too high when using subtitle
+ * https://github.com/elementary/stylesheet/issues/352
+ */
+
+.haguichi-window .titlebar
+{
+    padding-top: 3px;
+    padding-bottom: 2px;
 }

@@ -70,6 +70,8 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         }
         set_icon_list (app_icons);
         
+        get_style_context().add_class ("haguichi-window");
+        
         accel_group = new AccelGroup();
         header_bar  = new Headerbar();
         message_bar = new Widgets.MessageBar();
