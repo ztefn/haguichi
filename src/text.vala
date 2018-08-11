@@ -17,6 +17,7 @@ public class Text : Object
     public const  string app_website               = "https://www.haguichi.net";
     public const  string app_website_label         = "www.haguichi.net";
     public static string app_comments;
+    public static string app_generic_name;
     public static string app_description;
     public const  string app_copyright             = "Copyright © 2007–2018 Stephen Brandt";
     public const  string app_license               =
@@ -359,7 +360,9 @@ Türkçe (tr)
     public static void init ()
     {
         // Description used in about dialog.
-        app_comments                               = _("A graphical frontend for Hamachi.");
+        app_comments                               = _("A graphical frontend for Hamachi");
+        // Generic name used in application launchers.
+        app_generic_name                           = _("Hamachi Network Manager");
         // Description used in application launchers.
         app_description                            = _("Join and create local networks over the Internet");
         

@@ -4,10 +4,17 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Haguichi</name>
-  <summary>Graphical frontend for Hamachi</summary>
+  <summary>A graphical frontend for Hamachi</summary>
   <description>
-    <p>Haguichi provides a graphical frontend for Hamachi on Linux.</p>
-    <p>It features fully customizable commands, notification bubbles, rich tooltips, along with a searchable, sortable and collapsible network list. Also, it lets you easily backup and restore your Hamachi configuration folder.</p>
+    <p>Join, create and manage Hamachi networks in a breeze.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Searchable, sortable and collapsible network list</li>
+      <li>Sidebar for easy access to details and actions</li>
+      <li>Desktop notifications</li>
+      <li>Fully customizable commands</li>
+      <li>Backup and restore your Hamachi configuration folder</li>
+    </ul>
   </description>
   <screenshots>
     <screenshot width="1248" height="702" type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>

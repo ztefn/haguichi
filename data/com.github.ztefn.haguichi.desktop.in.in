@@ -1,7 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Haguichi
-GenericName=Zero Configuration VPN
+GenericName=Hamachi Network Manager
 Exec=@BINARY_NAME@
 Terminal=false
 Comment=Join and create local networks over the Internet

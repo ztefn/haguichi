@@ -15,11 +15,21 @@ foreach theme : icon_themes
     )
 endforeach
 
-configure_file(
-    input: app_id + '.appdata.xml.in',
-    output: app_id + '.appdata.xml',
-    install_dir: join_paths(get_option('datadir'), 'metainfo'),
+appdata = app_id + '.appdata.xml'
+
+appdata_in = configure_file(
+    input: appdata + '.in.in',
+    output: appdata + '.in',
     configuration: conf
+)
+
+i18n.merge_file(
+    type: 'xml',
+    input: appdata_in,
+    output: appdata,
+    po_dir: po_dir,
+    install: true,
+    install_dir: join_paths(get_option('datadir'), 'metainfo')
 )
 
 desktop = app_id + '.desktop'
