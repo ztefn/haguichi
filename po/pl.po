@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-11 19:40+0200\n"
-"PO-Revision-Date: 2018-03-06 22:44+0000\n"
+"POT-Creation-Date: 2018-08-11 21:19+0200\n"
+"PO-Revision-Date: 2018-08-11 18:20+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
-"X-Generator: Launchpad (build 18566)\n"
+"X-Launchpad-Export-Date: 2018-08-11 19:12+0000\n"
+"X-Generator: Launchpad (build 18747)\n"
 
 #. Description used in about dialog.
 #: src/text.vala:363 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -28,7 +28,7 @@ msgstr "Graficzny interfejs dla Hamachi"
 #. Generic name used in application launchers.
 #: src/text.vala:365
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Menedżer sieci Hamachi"
 
 #. Description used in application launchers.
 #: src/text.vala:367
@@ -838,33 +838,32 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Łatwe dołączanie, tworzenie i zarządzanie sieciami Hamachi."
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Funkcje:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Lista sieci, którą można przeszukiwać, porządkować i zwijać"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Panel boczny z łatwym dostępem do informacji i działań"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "Powiadomienia"
+msgstr "Powiadomienia na pulpicie"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "W pełni konfigurowalne polecenia"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Nie można przywrócić konfiguracji"
+msgstr ""
+"Tworzenie kopii zapasowej i przywracanie katalogu z konfiguracją Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -925,6 +924,9 @@ msgstr "Zwinięcie wszystkich sieci"
 #: data/ui/shortcuts-window.ui:98
 msgid "Execute command"
 msgstr "Wykonanie polecenia"
+
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Graficzny interfejs dla Hamachi."
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
