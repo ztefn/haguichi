@@ -9,9 +9,12 @@ Package: haguichi
 Architecture: any
 Depends: libglib2.0-0 (>= 2.48), libglib2.0-bin (>= 2.48), libgtk-3-0 (>= 3.18), libnotify4 (>= 0.7.6), libappindicator3-1
 Recommends: bash, coreutils, dconf-cli, desktop-file-utils, dnsutils, iputils-ping | inetutils-ping, xdg-utils, policykit-1 | gksu | kdesudo, tar
-Description: Graphical frontend for Hamachi
- Haguichi provides a graphical frontend for Hamachi on Linux.
+Description: A graphical frontend for Hamachi
+ Join, create and manage Hamachi networks in a breeze.
  .
- It features fully customizable commands, notification bubbles, rich tooltips,
- along with a searchable, sortable and collapsible network list. Also, it lets
- you easily backup and restore your Hamachi configuration folder.
+ Features:
+  * Searchable, sortable and collapsible network list
+  * Sidebar for easy access to details and actions
+  * Desktop notifications
+  * Fully customizable commands
+  * Backup and restore your Hamachi configuration folder
