@@ -37,6 +37,9 @@ class Haguichi : Gtk.Application
     public static bool demo_mode;
     public static string demo_list_path;
     
+    public static ThreadPool<Member>  member_threads;
+    public static ThreadPool<Network> network_threads;
+    
     private static int activate_count;
     private static uint registration_id;
     private static int64 startup_moment;
@@ -135,6 +138,16 @@ class Haguichi : Gtk.Application
         
         connection = new Connection();
         inhibitor = new Inhibitor();
+        
+        try
+        {
+            member_threads  = new ThreadPool<Member>.with_owned_data  ((member)  => { member.get_long_nick_thread();        }, 2, false);
+            network_threads = new ThreadPool<Network>.with_owned_data ((network) => { network.determine_ownership_thread(); }, 2, false);
+        }
+        catch (ThreadError e)
+        {
+            Debug.log (Debug.domain.ERROR, "Haguichi.startup", e.message);
+        }
         
         Controller.last_status = -3;
         Controller.init();

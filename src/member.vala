@@ -23,6 +23,8 @@ public class Member : Object
     
     public bool is_evicted;
     
+    private string new_nick;
+    
     public Member (Status _status, string _network_id, string? _ipv4, string? _ipv6, string? _nick, string _client_id, string? _tunnel)
     {
         status     = _status;
@@ -69,18 +71,20 @@ public class Member : Object
         status_sort_string = status.status_sortable + nick + client_id;
     }
     
-    public void get_long_nick (string _nick, bool _init)
+    private void get_long_nick (string _nick, bool _init)
     {
+        new_nick = _nick;
+        
         if ((_init == false) &&
-            (_nick.length >= 25) &&
+            (new_nick.length >= 25) &&
             (nick.length >= 25) &&
-            (nick.has_prefix (_nick)))
+            (nick.has_prefix (new_nick)))
         {
             // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
         }
-        else if (_nick.length >= 25)
+        else if (new_nick.length >= 25)
         {
-            if ((_nick.validate() == false) &&
+            if ((new_nick.validate() == false) &&
                 (_init == true))
             {
                 // Set nick to "Unknown" initially when the string is not valid UTF-8 encoded to prevent Gtk and Pango warnings,
@@ -88,41 +92,59 @@ public class Member : Object
                 nick = Text.unknown;
             }
             
-            if ((_nick.validate() == true) &&
-                (Haguichi.connection.has_long_nick (client_id)) &&
-                (Haguichi.connection.get_long_nick (client_id).has_prefix (_nick)))
+            string cached_nick = get_long_nick_from_cache();
+            
+            if (cached_nick != null)
             {
-                // Get long nick from cache
-                nick = Haguichi.connection.get_long_nick (client_id);
-                set_sort_strings();
-                
-                Debug.log (Debug.domain.INFO, "Member.get_long_nick", "Retrieved long nick for client " + client_id + " from cache: " + nick);
+                // If we got a long nick from cache then use it
+                nick = cached_nick;
             }
             else
             {
-                // Retrieve long nick from hamachi
-                new Thread<void*> (null, get_long_nick_thread);
+                // If not then get long nick from hamachi
+                try
+                {
+                    Haguichi.member_threads.add (this);
+                }
+                catch (ThreadError e)
+                {
+                    Debug.log (Debug.domain.ERROR, "Member.get_long_nick", e.message);
+                }
             }
         }
         else
         {
             // Save passed nick
-            nick = _nick;
+            nick = new_nick;
             set_sort_strings();
         }
     }
     
-    private void* get_long_nick_thread ()
+    public void get_long_nick_thread ()
     {
-        string output = Command.return_output ("hamachi peer " + client_id);
-        Debug.log (Debug.domain.HAMACHI, "Member.get_long_nick_thread", output);
+        // First try the cache again, because an other thread might have retreived it already for the same member in a different network
+        string cached_nick = get_long_nick_from_cache();
         
-        string _nick = Hamachi.retrieve (output, "nickname");
-        if (_nick != "")
+        if (cached_nick != null)
         {
-            nick = _nick;
+            nick = cached_nick;
         }
-        Haguichi.connection.add_long_nick (client_id, nick);
+        else
+        {
+            // Okay, really retreive it from hamachi now
+            string output = Command.return_output ("hamachi peer " + client_id);
+            Debug.log (Debug.domain.HAMACHI, "Member.get_long_nick_thread", output);
+            
+            string _nick = Hamachi.retrieve (output, "nickname");
+            if (_nick != "")
+            {
+                nick = _nick;
+            }
+            
+            // Add retreived long nick to the cache
+            Haguichi.connection.add_long_nick (client_id, nick);
+        }
+        
         set_sort_strings();
         
         Idle.add_full (Priority.DEFAULT_IDLE, () =>
@@ -130,8 +152,21 @@ public class Member : Object
             Haguichi.window.network_view.update_member (this);
             return false;
         });
+    }
+    
+    private string get_long_nick_from_cache ()
+    {
+        string _nick = null;
         
-        return null;
+        if ((new_nick.validate() == true) &&
+            (Haguichi.connection.has_long_nick (client_id)) &&
+            (Haguichi.connection.get_long_nick (client_id).has_prefix (new_nick)))
+        {
+            _nick = Haguichi.connection.get_long_nick (client_id);
+            Debug.log (Debug.domain.INFO, "Member.get_long_nick_from_cache", "Retrieved long nick for client " + client_id + " from cache: " + _nick);
+        }
+        
+        return _nick;
     }
     
     public void copy_ipv4_to_clipboard ()

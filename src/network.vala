@@ -113,12 +113,19 @@ public class Network : Object
         return _owner;
     }
     
-    public void determine_ownership ()
+    private void determine_ownership ()
     {
-        new Thread<void*> (null, determine_ownership_thread);
+        try
+        {
+            Haguichi.network_threads.add (this);
+        }
+        catch (ThreadError e)
+        {
+            Debug.log (Debug.domain.ERROR, "Network.determine_ownership", e.message);
+        }
     }
     
-    private void* determine_ownership_thread ()
+    public void determine_ownership_thread ()
     {
         if (owner == "This computer")
         {
@@ -185,8 +192,6 @@ approve  : manual";
             Haguichi.window.network_view.update_network (this);
             return false;
         });
-        
-        return null;
     }
     
     public void add_member (Member member)
