@@ -15,6 +15,8 @@ namespace Dialogs
 {
     public class Preferences : Dialog
     {
+        public  CommandsEditor commands_editor;
+        
         public  Switch connect_on_startup_switch;
         public  Switch reconnect_on_connection_loss_switch;
         public  Switch disconnect_on_quit_switch;
@@ -160,11 +162,14 @@ namespace Dialogs
             general_box.pack_start (behavior_box, false, false, 0);
             
             
+            commands_editor = new CommandsEditor();
+            
+            
             var container = new Stack();
             container.expand = true;
-            container.add_titled (general_box,          "general",  Text.general_tab);
-            container.add_titled (new CommandsEditor(), "commands", Text.commands_tab);
-            container.add_titled (desktop_box,          "desktop",  Text.desktop_tab);
+            container.add_titled (general_box,     "general",  Text.general_tab);
+            container.add_titled (commands_editor, "commands", Text.commands_tab);
+            container.add_titled (desktop_box,     "desktop",  Text.desktop_tab);
             
             var switcher = new StackSwitcher();
             switcher.stack = container;

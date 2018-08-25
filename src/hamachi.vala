@@ -10,19 +10,19 @@
 
 public class Hamachi : Object
 {
-    public  static string data_path;
-    public  static string config_path;
+    public  const  string data_path   = "/var/lib/logmein-hamachi";
+    public  const  string config_path = data_path + "/h2-engine-override.cfg";
+    
     public  static string version;
     public  static string ip_version;
     public  static string demo_account;
     public  static string last_info;
     public  static string last_list;
+    
     private static string service;
     
     public static void init ()
     {
-        data_path    = "/var/lib/logmein-hamachi";
-        config_path  = data_path + "/h2-engine-override.cfg";
         ip_version   = "IPv4";
         demo_account = "-";
         

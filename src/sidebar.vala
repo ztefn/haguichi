@@ -406,9 +406,6 @@ public class Sidebar : Box
         
         pack_start (scrolled_window,     true,  true,  0);
         pack_start (action_box_revealer, false, false, 0);
-        
-        
-        generate_command_buttons();
     }
     
     public void add_style_class (string name)

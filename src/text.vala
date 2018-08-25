@@ -176,6 +176,7 @@ Türkçe (tr)
     public static string reconnect_label;
     public static string connected;
     public static string disconnected;
+    public static string initializing;
     public static string connecting;
     public static string logging_in;
     public static string updating;
@@ -414,6 +415,7 @@ Türkçe (tr)
         reconnect_label                            = _("Reconnect");
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");
+        initializing                               = _("Initializing…");
         connecting                                 = _("Connecting…");
         logging_in                                 = _("Logging in…");
         updating                                   = _("Updating…");

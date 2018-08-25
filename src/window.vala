@@ -229,6 +229,8 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         set_default_size (width, height);
         move (x, y);
         
+        set_mode ("Initializing");
+        
         if (Haguichi.hidden == false)
         {
             show();
@@ -556,6 +558,11 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         switch (mode)
         {
+            case "Initializing":
+                Haguichi.session.mode_changed (mode);
+                header_bar.set_mode (mode);
+                break;
+                
             case "Countdown":
                 content_box.show();
                 
@@ -612,7 +619,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 message_box.show();
                 
                 Haguichi.session.mode_changed (mode);
-                header_bar.set_mode  (mode);
+                header_bar.set_mode (mode);
                 break;
                 
             case "Not installed":

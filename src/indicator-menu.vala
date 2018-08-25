@@ -168,6 +168,17 @@ public class IndicatorMenu : Gtk.Menu
         
         switch (mode)
         {
+            case "Initializing":
+                connecting_item.hide();
+                connect_item.sensitive    = false;
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = false;
+                
+                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
+                break;
+                
             case "Connecting":
                 connect_item.hide();
                 connecting_item.show();
@@ -200,25 +211,11 @@ public class IndicatorMenu : Gtk.Menu
                 break;
             
             case "Not configured":
-                connecting_item.hide();
-                connect_item.sensitive    = false;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = false;
-                
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
+                set_mode ("Initializing");
                 break;
             
             case "Not installed":
-                connecting_item.hide();
-                connect_item.sensitive    = false;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = false;
-                
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
+                set_mode ("Initializing");
                 break;
         }
     }

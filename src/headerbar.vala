@@ -321,6 +321,10 @@ public class Headerbar : HeaderBar
         
         switch (mode)
         {
+            case "Initializing":
+                set_subtitle (Text.initializing);
+                break;
+                
             case "Countdown":
                 GlobalActions.connect.set_enabled (true);
                 

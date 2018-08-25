@@ -32,101 +32,124 @@ public class Controller : Object
     public static void init ()
     {
         HaguichiWindow.message_bar.hide_message();
+        
+        GlobalEvents.update_nick();
         GlobalEvents.set_config();
         
         new_networks_list = new List<Network>();
         
-        if (last_status != -3)
+        new Thread<void*> (null, init_thread);
+    }
+    
+    private static void* init_thread ()
+    {
+        Command.init();
+        
+        Idle.add_full (Priority.HIGH_IDLE, () =>
         {
-            Hamachi.init();
-        }
+            Haguichi.preferences_dialog.commands_editor.fill();
+            Haguichi.window.network_view.generate_popup_menus();
+            HaguichiWindow.sidebar.generate_command_buttons();
+            return false;
+        });
         
-        GlobalEvents.update_nick();
-        GlobalEvents.set_attach();
+        Hamachi.init();
         
-        HaguichiWindow.sidebar.update();
+        Idle.add_full (Priority.HIGH_IDLE, () =>
+        {
+            GlobalEvents.set_attach();
+            HaguichiWindow.sidebar.update();
+            return false;
+        });
         
         last_status = -2;
         status_check();
         
-        if (last_status >= 6)
+        Idle.add_full (Priority.HIGH_IDLE, () =>
         {
-            restore = (bool) Settings.reconnect_on_connection_loss.val;
-            
-            Haguichi.window.set_mode ("Connected");
-            
-            get_network_list();
-        }
-        else if (last_status >= 5)
-        {
-            restore = (bool) Settings.reconnect_on_connection_loss.val;
-            
-            go_connect();
-        }
-        else if ((last_status >= 3) &&
-                 ((bool) Settings.connect_on_startup.val))
-        {
-            restore = true;
-            
-            go_connect();
-        }
-        else if ((last_status >= 2) &&
-                 ((bool) Settings.connect_on_startup.val))
-        {
-            restore = true;
-            
-            Haguichi.window.set_mode ("Disconnected");
-            wait_for_internet_cycle();
-        }
-        else if (last_status >= 2)
-        {
-            Haguichi.window.set_mode ("Disconnected");
-        }
-        else if (last_status >= 1)
-        {
-            Haguichi.window.set_mode ("Not configured");
-            
-            Button configure_button = new Button.with_mnemonic (Text.configure_label);
-            configure_button.get_style_context().add_class ("suggested-action");
-            configure_button.clicked.connect (() =>
+            if (last_status >= 6)
             {
-                Hamachi.configure();
-                Controller.init();
-            });
-            
-            HaguichiWindow.message_box.set_message (Text.not_configured_heading, Text.not_configured_message);
-            HaguichiWindow.message_box.add_button (configure_button);
-            
-            configure_button.can_default = true;
-            configure_button.grab_default();
-            configure_button.grab_focus();
-        }
-        else
-        {
-            Haguichi.window.set_mode ("Not installed");
-            
-            Button download_button = new Button.with_mnemonic (Text.download_label);
-            download_button.get_style_context().add_class ("suggested-action");
-            download_button.clicked.connect (() =>
+                restore = (bool) Settings.reconnect_on_connection_loss.val;
+                
+                Haguichi.window.set_mode ("Connected");
+                
+                get_network_list();
+            }
+            else if (last_status >= 5)
             {
-                Command.open_uri (Text.get_hamachi_url);
-            });
-            
-            if (Hamachi.version != "")
+                restore = (bool) Settings.reconnect_on_connection_loss.val;
+                
+                go_connect();
+            }
+            else if ((last_status >= 3) &&
+                     ((bool) Settings.connect_on_startup.val))
             {
-                HaguichiWindow.message_box.set_message (Utils.format (Text.obsolete_heading, Hamachi.version, null, null), Text.obsolete_message);
+                restore = true;
+                
+                go_connect();
+            }
+            else if ((last_status >= 2) &&
+                     ((bool) Settings.connect_on_startup.val))
+            {
+                restore = true;
+                
+                Haguichi.window.set_mode ("Disconnected");
+                wait_for_internet_cycle();
+            }
+            else if (last_status >= 2)
+            {
+                Haguichi.window.set_mode ("Disconnected");
+            }
+            else if (last_status >= 1)
+            {
+                Haguichi.window.set_mode ("Not configured");
+                
+                Button configure_button = new Button.with_mnemonic (Text.configure_label);
+                configure_button.get_style_context().add_class ("suggested-action");
+                configure_button.clicked.connect (() =>
+                {
+                    Hamachi.configure();
+                    Controller.init();
+                });
+                
+                HaguichiWindow.message_box.set_message (Text.not_configured_heading, Text.not_configured_message);
+                HaguichiWindow.message_box.add_button (configure_button);
+                
+                configure_button.can_default = true;
+                configure_button.grab_default();
+                configure_button.grab_focus();
             }
             else
             {
-                HaguichiWindow.message_box.set_message (Text.not_installed_heading, Text.not_installed_message);
+                Haguichi.window.set_mode ("Not installed");
+                
+                Button download_button = new Button.with_mnemonic (Text.download_label);
+                download_button.get_style_context().add_class ("suggested-action");
+                download_button.clicked.connect (() =>
+                {
+                    Command.open_uri (Text.get_hamachi_url);
+                });
+                
+                if (Hamachi.version != "")
+                {
+                    HaguichiWindow.message_box.set_message (Utils.format (Text.obsolete_heading, Hamachi.version, null, null), Text.obsolete_message);
+                }
+                else
+                {
+                    HaguichiWindow.message_box.set_message (Text.not_installed_heading, Text.not_installed_message);
+                }
+                
+                HaguichiWindow.message_box.add_button (download_button);
+                
+                download_button.can_default = true;
+                download_button.grab_default();
+                download_button.grab_focus();
             }
             
-            HaguichiWindow.message_box.add_button (download_button);
-            
-            download_button.can_default = true;
-            download_button.grab_default();
-            download_button.grab_focus();
-        }
+            return false;
+        });
+        
+        return null;
     }
     
     public static void status_check ()

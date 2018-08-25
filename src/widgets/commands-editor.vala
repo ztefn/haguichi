@@ -137,8 +137,6 @@ public class CommandsEditor : Box
         
         pack_start (sw, true,  true,  0);
         pack_start (tb, false, false, 0);
-        
-        fill();
     }
     
     private void move_up ()

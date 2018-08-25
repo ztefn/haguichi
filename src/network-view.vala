@@ -83,7 +83,6 @@ public class NetworkView : TreeView
         
         init_store();
         set_layout_from_string ("small");
-        generate_popup_menus();
     }
     
     private void init_store ()

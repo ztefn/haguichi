@@ -123,8 +123,6 @@ class Haguichi : Gtk.Application
         }
         
         GlobalActions.init (app);
-        Command.init();
-        Hamachi.init();
         
         window = new HaguichiWindow();
         add_window (window);
@@ -149,7 +147,6 @@ class Haguichi : Gtk.Application
             Debug.log (Debug.domain.ERROR, "Haguichi.startup", e.message);
         }
         
-        Controller.last_status = -3;
         Controller.init();
         
         Debug.log (Debug.domain.INFO, "Haguichi.startup", "Completed startup in " + (get_real_time() - startup_moment).to_string() + " microseconds");
