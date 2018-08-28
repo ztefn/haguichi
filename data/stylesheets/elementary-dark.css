@@ -101,16 +101,6 @@
 
 
 /*
- * Fix missing "insensitive" style for buttons in titlebar
- * https://github.com/elementary/stylesheet/issues/97
- */
-
-.titlebar .image-button:disabled image {
-    color: @insensitive_color;
-}
-
-
-/*
  * Fix missing "backdrop" style for disabled buttons in titlebar
  * https://github.com/elementary/stylesheet/issues/370
  */
