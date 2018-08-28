@@ -577,7 +577,8 @@ public class Hamachi : Object
         {
             int64 start_time = get_real_time();
             
-            Regex network_regex           = new Regex ("""^ (?<status>.{1}) \[(?<id>.+?)\][ ]*(?<name>.*?)[ ]*(capacity: [0-9]{1,3}/(?<capacity>[0-9]{1,3}),)?[ ]*(\[(?<subnet>[0-9\./]{9,19})\])?[ ]*( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$""");
+            Regex network_regex_part1     = new Regex ("""^ (?<status>.{1}) \[(?<id>[0-9-]{11}|.+)\][ ]*(?<name>.*?)[ ]*$""");
+            Regex network_regex_part2     = new Regex ("""^(capacity: [0-9]{1,3}/(?<capacity>[0-9]{1,3}),)?[ ]*(\[(?<subnet>[0-9\./]{9,19})\])?[ ]*( subscription type: (?<subscription>[^,]+),)?( owner: (?<owner>.*))?$""");
             Regex normal_member_regex     = new Regex ("""^     (?<status>.{1}) (?<id>[0-9-]{11})[ ]+(?<nick>.*?)[ ]*(?<ipv4>[0-9\.]{7,15})?[ ]*(alias: (?<alias>not set|[0-9\.]{7,15}))?[ ]*(?<ipv6>[0-9a-f\:]{6,39})?[ ]*(?<connection>direct|via relay|via server)?[ ]*(?<transport>UDP|TCP)?[ ]*(?<tunnel>[0-9\.]{7,15}\:[0-9]{1,5})?[ ]*(?<message>[ a-zA-Z]+)?$""");
             Regex unapproved_member_regex = new Regex ("""^     \? (?<id>[0-9-]{11})[ ]*$""");
             
@@ -587,14 +588,19 @@ public class Hamachi : Object
                 {
                     if (s.index_of ("[") == 3) // Line contains network
                     {
-                        MatchInfo mi;
-                        network_regex.match (s, RegexMatchFlags.NOTEMPTY, out mi);
+                        int index = s.last_index_of ("capacity: ");
                         
-                        string id       = mi.fetch_named ("id");
-                        string name     = mi.fetch_named ("name").chomp();
-                        string owner    = mi.fetch_named ("owner");
-                        string capacity = mi.fetch_named ("capacity");
-                        Status status   = new Status (mi.fetch_named ("status"));
+                        string part1 = s.substring (0, index);
+                        string part2 = s.substring (index, -1);
+                        
+                        MatchInfo mi1; network_regex_part1.match (part1, RegexMatchFlags.NOTEMPTY, out mi1);
+                        MatchInfo mi2; network_regex_part2.match (part2, RegexMatchFlags.NOTEMPTY, out mi2);
+                        
+                        string id       = mi1.fetch_named ("id");
+                        string name     = mi1.fetch_named ("name");
+                        string owner    = mi2.fetch_named ("owner");
+                        string capacity = mi2.fetch_named ("capacity");
+                        Status status   = new Status (mi1.fetch_named ("status"));
                         
                         if (name == "")
                         {
