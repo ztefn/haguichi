@@ -183,13 +183,13 @@ public class Hamachi : Object
     
     public static void configure ()
     {
-        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; echo \'Ipc.User      " + GLib.Environment.get_user_name() + "\' >> " + config_path + "; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
+        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; echo \'Ipc.User      " + GLib.Environment.get_user_name() + "\' >> " + config_path + "; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
         Debug.log (Debug.domain.HAMACHI, "Hamachi.configure", output);
     }
     
     public static string start ()
     {
-        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + Utils.format (service, "start", null, null));
+        string output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + Utils.format (service, "restart", null, null));
         Debug.log (Debug.domain.HAMACHI, "Hamachi.start", output);
         
         Thread.usleep (1000000);
@@ -816,7 +816,7 @@ public class Hamachi : Object
         {
             GlobalEvents.stop_hamachi();
             
-            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; rm " + Hamachi.data_path + "/*; tar -xavf '" + filename + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
+            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; rm " + Hamachi.data_path + "/*; tar -xavf '" + filename + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
             Debug.log (Debug.domain.INFO, "Hamachi.restore_config", output);
             
             Controller.init();
