@@ -172,7 +172,6 @@ public class CommandsEditor : Box
         {
             Settings.custom_commands.val = Settings.custom_commands.get_default_value();
             
-            clear();
             fill();
             update_commands();
         }
@@ -280,6 +279,8 @@ public class CommandsEditor : Box
     
     public void fill ()
     {
+        clear();
+        
         string[] commands = (string[]) Settings.custom_commands.val;
         
         foreach (string command in commands)
