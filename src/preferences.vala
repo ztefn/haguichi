@@ -88,7 +88,7 @@ namespace Dialogs
             {
                 appearance_box.add_row (prefer_dark_theme_label, prefer_dark_theme_switch, 1);
             }
-#if ENABLE_APPINDICATOR
+#if ENABLE_APPINDICATOR || ENABLE_WINGPANEL_INDICATOR
             appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
 #endif
             

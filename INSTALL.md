@@ -30,6 +30,13 @@
     $ meson configure -Denable-appindicator=true
 
 
+  **enable-wingpanel-indicator**
+
+  This option enables wingpanel integration and additionally requires the *wingpanel-2.0* development package.
+
+    $ meson configure -Denable-wingpanel-indicator=true
+
+
   **for-elementary**
 
   This option enables full integration with elementary OS and additionally requires the *granite* development package.

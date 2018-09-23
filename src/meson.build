@@ -100,6 +100,27 @@ if get_option('for-elementary')
     deps += dependency('granite', version: '>= 0.5')
 endif
 
+if get_option('enable-wingpanel-indicator')
+    add_project_arguments(
+        ['-D', 'ENABLE_WINGPANEL_INDICATOR'],
+        language: 'vala'
+    )
+    wingpanel_dep = dependency('wingpanel-2.0')
+    shared_module(
+        meson.project_name(),
+        'indicator-wingpanel.vala',
+        dependencies: [
+            dependency('glib-2.0'),
+            dependency('gobject-2.0'),
+            dependency('granite'),
+            dependency('gtk+-3.0'),
+            wingpanel_dep
+        ],
+        install: true,
+        install_dir: wingpanel_dep.get_pkgconfig_variable('indicatorsdir')
+    )
+endif
+
 executable(
     binary_name,
     config,
