@@ -4,12 +4,12 @@
 
   Provides a graphical frontend for Hamachi on Linux.
 
+  [<img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter">](https://appcenter.elementary.io/com.github.ztefn.haguichi)
 
   Links
   -----
 
    * [Homepage](https://www.haguichi.net)
-   * [Download](https://www.haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
 
@@ -17,7 +17,7 @@
   Screenshot
   ----------
 
-  ![Screenshot](https://www.haguichi.net/appdata/screenshot-1.png)
+  ![Screenshot](data/screenshots/1.png?raw=true)
 
 
   IRC
