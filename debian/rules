@@ -11,7 +11,7 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	mkdir -p debian/build
-	cd debian/build && meson -Denable-appindicator=true -Dfor-ubuntu=true ../..
+	cd debian/build && meson -Denable-wingpanel-indicator=true -Dfor-elementary=true -Duse-rdnn-everywhere=true ../..
 
 override_dh_auto_build:
 	cd debian/build && ninja
@@ -20,5 +20,5 @@ override_dh_auto_test:
 	cd debian/build && ninja test
 
 override_dh_auto_install:
-	cd debian/build && DESTDIR=${CURDIR}/debian/haguichi ninja install
+	cd debian/build && DESTDIR=${CURDIR}/debian/com.github.ztefn.haguichi ninja install
 

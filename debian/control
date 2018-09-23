@@ -1,13 +1,13 @@
-Source: haguichi
+Source: com.github.ztefn.haguichi
 Section: net
 Maintainer: Stephen Brandt <stephen@stephenbrandt.com>
 Priority: optional
-Build-Depends: build-essential, gettext, debhelper (>= 9), meson (>= 0.40), valac (>= 0.30), libgtk-3-dev (>= 3.18), libglib2.0-dev (>= 2.48), libnotify-dev (>= 0.7.6), libappindicator3-dev
+Build-Depends: build-essential, gettext, debhelper (>= 9), meson (>= 0.40), valac (>= 0.30), libgtk-3-dev (>= 3.18), libglib2.0-dev (>= 2.48), libgranite-dev (>= 0.5), libnotify-dev (>= 0.7.6), libwingpanel-2.0-dev (>= 2.1.1)
 Homepage: https://www.haguichi.net/
 
-Package: haguichi
+Package: com.github.ztefn.haguichi
 Architecture: any
-Depends: libglib2.0-0 (>= 2.48), libglib2.0-bin (>= 2.48), libgtk-3-0 (>= 3.18), libnotify4 (>= 0.7.6), libappindicator3-1
+Depends: libglib2.0-0 (>= 2.48), libglib2.0-bin (>= 2.48), libgtk-3-0 (>= 3.18), libgranite4 (>= 0.5), libnotify4 (>= 0.7.6), libwingpanel-2.0-0 (>= 2.1.1)
 Recommends: bash, coreutils, dconf-cli, desktop-file-utils, dnsutils, iputils-ping | inetutils-ping, xdg-utils, policykit-1 | gksu | kdesudo, tar
 Description: A graphical frontend for Hamachi
  Join, create and manage Hamachi networks in a breeze.
