@@ -18,9 +18,21 @@
     <p>Please note: Requires installation of Hamachi on the system in order to use.</p>
   </description>
   <screenshots>
-    <screenshot width="1248" height="702" type="default">https://haguichi.net/appdata/screenshot-1.png</screenshot>
-    <screenshot width="1248" height="702">https://haguichi.net/appdata/screenshot-2.png</screenshot>
-    <screenshot width="1248" height="702">https://haguichi.net/appdata/screenshot-3.png</screenshot>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/4.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/5.png</image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">com.github.ztefn.haguichi.desktop</launchable>
@@ -28,111 +40,7 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
-    <release version="1.4.4" date="2021-06-09">
-      <description>
-        <p>Haguichi 1.4.4 has undergone a small spring cleanup and is ready to face the world:</p>
-        <ul>
-          <li>Added build support for libayatana-indicator as alternative to libappindicator (fixes issue #39).</li>
-          <li>Added invisible tooltips to action buttons in headerbar for screen readers and applications like Plotinus.</li>
-          <li>Tweaked action area margins for dialogs without headerbar.</li>
-          <li>Added Control+? accelerator for opening the shortcuts window.</li>
-          <li>Retired application menu and reorganized the primary menu to follow GNOME HIG.</li>
-          <li>Improved init system detection for systemctl by checking if the system has actually been booted with systemd (fixes issues #35 and #36).</li>
-          <li>Dropped support for gksu(do), gnomesu and kdesu(do) to gain super user privileges.</li>
-          <li>Removed dconf migration for settings in old schema location.</li>
-          <li>Fixed build warnings about deprecated methods and error handling.</li>
-          <li>Updated Ukrainian translation.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.3" date="2020-10-03">
-      <description>
-        <p>Haguichi 1.4.3 has emerged to deliver a compilation of little fixes and tweaks:</p>
-        <ul>
-          <li>Fixed search entry leaving out the trigger character when activated by typing for the first time.</li>
-          <li>Added fallback method to detect if Hamachi configuration path exists when running inside a Flatpak sandbox while the path is not yet mounted.</li>
-          <li>Added symlinks to hicolor status icons in Yaru theme in order to prevent the indicator from falling back to the application icon.</li>
-          <li>Moved symbolic application icons for hicolor theme to a more specific folder to make sure they are rendered properly.</li>
-          <li>Symbolic icons are now used for the indicator on Cinnamon desktops.</li>
-          <li>Client side decorations are now used on MATE desktops.</li>
-          <li>Removed "Donate" menu item due to little use.</li>
-          <li>Translator credits are now part of the translations themselves.</li>
-          <li>Added complete Portuguese translation (thanks to André Barata).</li>
-          <li>Updated Dutch and Polish translations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.2" date="2019-12-18">
-      <description>
-        <p>Haguichi 1.4.2 is made up of the following list. Which has been checked twice:</p>
-        <ul>
-          <li>Implemented FileChooserNative for GTK+ version 3.20 and later.</li>
-          <li>Updated hicolor icons to follow the new GNOME style.</li>
-          <li>Added Yaru icons in new non-squircle style (big thanks to ubuntujaggers).</li>
-          <li>Nodes are now drawn using a custom cell renderer with specific style context instead of separate icon resources.</li>
-          <li>Changed symbol to indicate network ownership from outlined to filled star.</li>
-          <li>Added support for tilix.</li>
-          <li>Added stylesheet for Mint themes.</li>
-          <li>Added stylesheet for Yaru themes.</li>
-          <li>Added support for Flatpak.</li>
-          <li>Removed autostart desktop file.</li>
-          <li>Updated Russian translation.</li>
-          <li>Other minor improvements and optimizations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.1" date="2018-11-07">
-      <description>
-        <p>Haguichi 1.4.1 has embarked on a great journey packing the following changes:</p>
-        <ul>
-          <li>Initialization is now completely multi-threaded.</li>
-          <li>Now using a thread pool for determining network ownership and retreiving long nicks.</li>
-          <li>Made improvements to configuring and restarting the Hamachi service (fixes issue #16).</li>
-          <li>Made network properties extraction more robust.</li>
-          <li>Added wingpanel integration as build option.</li>
-          <li>Added support for io.elementary.files and io.elementary.terminal.</li>
-          <li>Added support for using the Delete key to trigger delete, leave and evict actions.</li>
-          <li>Custom command buttons and menu items that don't use the %A address variable are not shown greyed out anymore for members that are offline.</li>
-          <li>Client side decorations are now used on LXQt desktops.</li>
-          <li>Updated elementary stylesheets for Juno release.</li>
-          <li>Added specific application icons for elementary OS.</li>
-          <li>Node icons are now included as resources instead of installed into hicolor icon theme.</li>
-          <li>Suru icons for Ubuntu are now installed in /usr/share/icons/Yaru.</li>
-          <li>AppData XML and .desktop files are now completely translatable (fixes bug #1753846).</li>
-          <li>Updated Asturian, Brazilian Portuguese, Bulgarian, Dutch, French, Indonesian, Italian, Japanese, Lithuanian, Polish, Spanish, Swedish and Ukrainian translations.</li>
-          <li>Other minor fixes, improvements and optimizations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.0" date="2018-05-10">
-      <description>
-        <p>Haguichi 1.4.0 has washed ashore carrying bulk of new features and updates:</p>
-        <ul>
-          <li>Implemented shortcuts window for GTK+ version 3.20 and later.</li>
-          <li>Revamped preferences dialog using stack, list box and switch widgets.</li>
-          <li>Integrated appindicator as build option and added accompanying switch to preferences dialog.</li>
-          <li>Added dark theme switch to preferences dialog (only available when client side decorations are used).</li>
-          <li>Added Suru application icons for Ubuntu (big thanks to Sam Hewitt).</li>
-          <li>Tweaked sidebar content alignment and margins.</li>
-          <li>Improved window position and size handling.</li>
-          <li>Improved modal dialog management.</li>
-          <li>Improved compatibility with GTK+ 3.20 and 3.22.</li>
-          <li>Fixed crash that could occur when adding a network while the network list was being filtered.</li>
-          <li>Now using stylesheets to implement theme specific tweaks and fixes.</li>
-          <li>Now using the RDNN com.github.ztefn.haguichi for .desktop files, GSettings schema and D-Bus name.</li>
-          <li>Updated Brazilian Portuguese, Bulgarian, Czech, Dutch, French, Italian, Polish, Slovak, Spanish, Swedish, Turkish and Ukrainian translations.</li>
-          <li>Bumped minimum required versions of Vala (0.30), GLib (2.48) and GTK+ (3.18).</li>
-          <li>Other minor fixes, improvements and optimizations.</li>
-        </ul>
-      </description>
-    </release>
   </releases>
-  <kudos>
-    <kudo>HiDpiIcon</kudo>
-    <kudo>HighContrast</kudo>
-    <kudo>ModernToolkit</kudo>
-    <kudo>Notifications</kudo>
-  </kudos>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
   <url type="faq">https://haguichi.net/faq/</url>
@@ -164,4 +72,9 @@
     <lang percentage="96">tr</lang>
     <lang percentage="100">uk</lang>
   </languages>
+  <custom>
+    <value key="x-appcenter-color-primary">#FFE6D6</value>
+    <value key="x-appcenter-color-primary-text">#D60000</value>
+    <value key="x-appcenter-suggested-price">0</value>
+  </custom>
 </component>

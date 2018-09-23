@@ -1,11 +1,14 @@
 
 <div align="center">
   <h1>
-    <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
+    <img src="data/icons/elementary/hicolor/128x128/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux.</h4>
-  <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" />
+  <p>
+    <a href="https://appcenter.elementary.io/com.github.ztefn.haguichi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+  </p>
+  <img src="data/screenshots/1.png?raw=true" alt="Screenshot" width="658" />
 </div>
 
 
@@ -13,7 +16,6 @@
   -----
 
    * [Homepage](https://haguichi.net)
-   * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
 
