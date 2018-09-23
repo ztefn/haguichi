@@ -75,6 +75,10 @@
     color: alpha (@selected_bg_color, 0.7);
 }
 
+.titlebar .image-button.suggested-action:disabled image {
+    color: @insensitive_color;
+}
+
 .titlebar .image-button.suggested-action:active,
 .titlebar .image-button.suggested-action:active:hover,
 .titlebar .image-button.suggested-action:checked {
