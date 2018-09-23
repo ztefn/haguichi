@@ -144,7 +144,7 @@
       <default>60</default>
     </key>
     <key type="b" name="prefer-dark-theme">
-      <default>true</default>
+      <default>false</default>
     </key>
     <key type="b" name="show-indicator">
       <default>true</default>
