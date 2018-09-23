@@ -95,6 +95,7 @@
 
 .titlebar .image-button.suggested-action:checked:backdrop {
     background-color: alpha (#fff, 0.7);
+    border-color: transparent;
 }
 
 .titlebar .image-button.suggested-action:active image,
@@ -102,6 +103,10 @@
 .titlebar .image-button.suggested-action:checked image {
     color: shade (@colorPrimary, 0.9);
     -gtk-icon-shadow: 0 1px alpha (#fff, 0.25);
+}
+
+.titlebar .image-button.suggested-action:checked:backdrop image {
+    color: shade (@colorPrimary, 1.1);
 }
 
 .titlebar .image-button.suggested-action:backdrop image {
