@@ -3,11 +3,14 @@
 
 <div align="center">
   <h1>
-    <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi logo" width="128" /><br />
+    <img src="data/icons/elementary/hicolor/128x128/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="128" /><br />
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux</h4>
-  <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" width="704" />
+  <p>
+    <a href="https://appcenter.elementary.io/com.github.ztefn.haguichi"><img src="https://appcenter.elementary.io/badge.svg" alt="Get it on AppCenter" /></a>
+  </p>
+  <img src="data/screenshots/1.png?raw=true" alt="Screenshot" width="594" />
 </div>
 
 
@@ -15,7 +18,6 @@
   -----
 
    * [Homepage](https://haguichi.net)
-   * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
 
 
@@ -24,7 +26,6 @@
 
    * Searchable, sortable and collapsible network list
    * Sidebar for easy access to details and actions
-   * Indicator support for quick access to primary actions
    * Desktop notifications to stay up to date of network events
    * Commands that can be completely customized
    * Backup and restore of your Hamachi configuration folder
