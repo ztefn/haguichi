@@ -33,7 +33,7 @@
 
   <schema path="/com/github/ztefn/haguichi/" id="com.github.ztefn.haguichi">
     <key type="i" name="stamp">
-      <default>1</default>
+      <default>2</default>
     </key>
     <child schema="com.github.ztefn.haguichi.behavior" name="behavior"/>
     <child schema="com.github.ztefn.haguichi.commands" name="commands"/>
@@ -149,7 +149,7 @@
       <default>60</default>
     </key>
     <key type="b" name="prefer-dark-theme">
-      <default>true</default>
+      <default>false</default>
     </key>
     <key type="b" name="show-indicator">
       <default>true</default>
