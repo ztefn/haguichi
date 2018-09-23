@@ -11,7 +11,6 @@
     <ul>
       <li>Searchable, sortable and collapsible network list</li>
       <li>Sidebar for easy access to details and actions</li>
-      <li>Indicator support for quick access to primary actions</li>
       <li>Desktop notifications to stay up to date of network events</li>
       <li>Commands that can be completely customized</li>
       <li>Backup and restore of your Hamachi configuration folder</li>
@@ -21,23 +20,23 @@
   <screenshots>
     <screenshot type="default">
       <caption>View your network list and client information</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-1.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/1.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected member details</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-2.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/2.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected network details</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-3.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/3.png</image>
     </screenshot>
     <screenshot>
       <caption>Search your network list</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-4.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/4.png</image>
     </screenshot>
     <screenshot>
       <caption>Join or create networks</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-5.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/elementary/data/screenshots/5.png</image>
     </screenshot>
   </screenshots>
   <supports>
@@ -58,88 +57,6 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
-    <release version="1.5.3" date="2025-11-09">
-      <url>https://haguichi.net/news/release153/</url>
-      <description translate="no">
-        <p>Haguichi 1.5.3 knocks at the door with a handful of treats and tweaks:</p>
-        <ul>
-          <li>Replaced deprecated Gtk.ShortcutsWindow with Adw.ShortcutsDialog when libadwaita 1.8 is available.</li>
-          <li>Sidebar title is now shown in the headerbar when scrolled down.</li>
-          <li>Enabled automatic row selection in the network list when searching or after a row is collapsed or removed.</li>
-          <li>Return and Delete key presses are now passed on to the selected row when search entry is focused.</li>
-          <li>Search entry can now be refocused by pressing Ctrl+F while search mode is already active.</li>
-          <li>When using drag and drop to reorder a command the dragged row is now anchored to the point where the drag started.</li>
-          <li>Added option to duplicate existing commands.</li>
-          <li>Added Adw.Toast with button to undo removal when removing a command.</li>
-          <li>Added support for COSMIC Terminal and Files.</li>
-          <li>Added Hungarian translation (thanks to therealmate).</li>
-          <li>Updated Swedish translation.</li>
-          <li>All bundled resource files are now compressed.</li>
-          <li>Other minor fixes, improvements and optimizations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.5.2" date="2025-04-30">
-      <url>https://haguichi.net/news/release152/</url>
-      <description translate="no">
-        <p>Haguichi 1.5.2 sends up white smoke to announce its newest changes:</p>
-        <ul>
-          <li>Implemented Adw.StatusPage to show the connection restore countdown with an additional cancel button.</li>
-          <li>Connection loss notification will not be displayed if the window is already focused.</li>
-          <li>Selected node and search text is now saved when restoring connection.</li>
-          <li>Within "Add Command" and "Edit Command" dialogs command variables can now be inserted directly from the popover into the command entries.</li>
-          <li>Now using Adw.ToggleGroup instead of grouped Gtk.CheckButtons to select IP version priority when libadwaita 1.7 is available.</li>
-          <li>Now using Adw.Dialog based widgets starting from libadwaita 1.5 instead of 1.6.</li>
-          <li>Added more network list update interval options to preferences dialog.</li>
-          <li>Added support for Flatpak commands.</li>
-          <li>Added support for Ghostty.</li>
-          <li>Added debug information to about dialog.</li>
-          <li>Updated Yaru icons for Ubuntu builds to use a smaller square for optical compensation (thanks again to ubuntujaggers).</li>
-          <li>Updated Polish and Portuguese translations.</li>
-          <li>Bumped minimum required versions of GLib (2.80), GTK (4.14) and libadwaita (1.5).</li>
-          <li>Other minor fixes, improvements and optimizations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.5.1" date="2024-12-01">
-      <url>https://haguichi.net/news/release151/</url>
-      <description translate="no">
-        <p>Haguichi 1.5.1 has put on its bow tie and is ready to celebrate the holiday season:</p>
-        <ul>
-          <li>Modernized layout for all input dialogs.</li>
-          <li>Now using Adw.Dialog as base for all dialogs when libadwaita 1.6 is available.</li>
-          <li>Now using Adw.Spinner instead of Gtk.Spinner when libadwaita 1.6 is available.</li>
-          <li>Fixed showing commands menu button if there is only one item present.</li>
-          <li>Added support for Ptyxis.</li>
-          <li>Added Finnish translation (thanks to Jiri Grönroos).</li>
-          <li>Updated Indonesian and Russian translations.</li>
-          <li>Other minor fixes and improvements.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.5.0" date="2024-07-20">
-      <url>https://haguichi.net/news/release150/</url>
-      <description translate="no">
-        <p>Haguichi 1.5.0 has been rebuild completely from the ground up:</p>
-        <ul>
-          <li>Redesigned user interface using GTK 4 and libadwaita.</li>
-          <li>Added support for multiple search terms by separating them using a "⎵" (space) or "+" (plus) to find only results matching both terms and by using a "," (comma) to find results matching either term.</li>
-          <li>Now displays a message if there are no results found instead of showing an empty network list.</li>
-          <li>Online and total member count in sidebar now includes the client itself.</li>
-          <li>Networks are now automatically selected immediately after you create or join them.</li>
-          <li>Hamachi is now automatically restarted if the hamachi set-pass command hangs when changing the network password.</li>
-          <li>Reimplemented indicator to communicate with the SNI D-Bus interface directly and drop dependency on appindicator libraries that don't support GTK 4.</li>
-          <li>Implemented Xdp.Portal to request permission to run in the background and to set background status when doing so.</li>
-          <li>Renamed --hidden command line option to --background or -b for short.</li>
-          <li>Changed accelerator to open preferences to Control+, following the GNOME standard for keyboard shortcuts.</li>
-          <li>Changed default network list update interval to 30 seconds.</li>
-          <li>Added support for zstd compressed tar archives when saving and restoring configuration backups.</li>
-          <li>Added line "StartupNotify=true" to .desktop file so that a spinning cursor is shown on launch.</li>
-          <li>Now using standard GLib functions for message logging so that important errors are written to the system logs.</li>
-          <li>Updated Brazilian Portuguese, Dutch, Japanese, Lithuanian, Spanish and Ukrainian translations.</li>
-        </ul>
-      </description>
-    </release>
   </releases>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
