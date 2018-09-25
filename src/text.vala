@@ -85,6 +85,7 @@ Italiano (it)
     Enrico Grassi https://launchpad.net/~enricog
 
 日本語 (ja)
+    Ryo Nakano https://launchpad.net/~ryonakaknock3
     Satoru Matsumoto https://launchpad.net/~helios-reds
 
 Қазақ (kk)

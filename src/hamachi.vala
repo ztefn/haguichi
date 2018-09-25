@@ -542,7 +542,7 @@ public class Hamachi : Object
                 output += "     * " + random_client_id() + "   fitojb                     " + random_address() + "\n";
                 output += "     * " + random_client_id() + "   Fedik                      " + random_address() + "  alias: not set                             direct\n";
                 output += "     * " + random_client_id() + "   galamarv                   " + random_address() + "  alias: not set                             via relay\n";
-                output += "       " + random_client_id() + "   HeliosReds                 " + random_address() + "\n";
+                output += "       " + random_client_id() + "   ryonakano                  " + random_address() + "\n";
                 output += "     * " + random_client_id() + "   Jean-Marc                  " + random_address() + "  alias: not set                             direct\n";
                 output += "     ! " + random_client_id() + "   jmb_kz                     " + random_address() + "  alias: not set                             direct\n";
                 output += "     x " + random_client_id() + "   Ḷḷumex03                   " + random_address() + "\n";

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2013-05-29 14:53+0000\n"
-"Last-Translator: Satoru Matsumoto <helios_reds@gmx.net>\n"
+"PO-Revision-Date: 2018-09-24 10:46+0000\n"
+"Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2013-05-29 18:56+0000\n"
-"X-Generator: Launchpad (build 16652)\n"
+"X-Launchpad-Export-Date: 2018-09-25 20:04+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
+"Language: ja\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -27,12 +27,12 @@ msgstr "Hamachi 用のグラフィカルフロントエンド"
 #. Generic name used in application launchers.
 #: src/text.vala:366
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Hamachi ネットワークマネージャー"
 
 #. Description used in application launchers.
 #: src/text.vala:368
 msgid "Join and create local networks over the Internet"
-msgstr "インターネット越しのローカルネットワークを作ったり参加してみよう"
+msgstr "インターネットを通じてローカルネットワークに参加したり作成したりします"
 
 #: src/text.vala:372
 msgid "_Close"
@@ -60,7 +60,7 @@ msgstr "情報(_I)"
 
 #: src/text.vala:379
 msgid "_Donate"
-msgstr ""
+msgstr "寄付(_D)"
 
 #: src/text.vala:380
 msgid "_Preferences"
@@ -68,7 +68,7 @@ msgstr "設定(_P)"
 
 #: src/text.vala:381
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #: src/text.vala:382
 msgid "_Help"
@@ -76,7 +76,7 @@ msgstr "ヘルプ(_H)"
 
 #: src/text.vala:383
 msgid "_About"
-msgstr "情報(_A)"
+msgstr "このアプリケーションについて(_A)"
 
 #: src/text.vala:384
 msgid "_Quit"
@@ -96,7 +96,7 @@ msgstr "いいえ"
 
 #: src/text.vala:391
 msgid "_Hamachi output"
-msgstr "Hamachi から出力されたログ"
+msgstr "Hamachi から出力されたログ(_H)"
 
 #: src/text.vala:393
 msgid "IPv4 address:"
@@ -164,7 +164,7 @@ msgstr "プロトコルが一致しません"
 
 #: src/text.vala:412
 msgid "Conflicting address"
-msgstr "重複アドレス"
+msgstr "アドレスが重複しています"
 
 #: src/text.vala:413
 msgid "C_onnect"
@@ -175,21 +175,20 @@ msgid "_Disconnect"
 msgstr "切断(_D)"
 
 #: src/text.vala:415
-#, fuzzy
 msgid "Reconnect"
-msgstr "接続(_O)"
+msgstr "再接続"
 
 #: src/text.vala:416
 msgid "Connected"
-msgstr "接続しました"
+msgstr "接続済み"
 
 #: src/text.vala:417
 msgid "Disconnected"
-msgstr "切断しました"
+msgstr "未接続"
 
 #: src/text.vala:418
 msgid "Initializing…"
-msgstr ""
+msgstr "初期化しています…"
 
 #: src/text.vala:419
 msgid "Connecting…"
@@ -225,7 +224,7 @@ msgstr "Hamachi をダウンロードして手順に従いインストールし�
 
 #: src/text.vala:429
 msgid "Hamachi version {0} is obsolete"
-msgstr "Hamachi バージョン {0} は既にサポート対象外となっています"
+msgstr "Hamachi バージョン {0} はサポート対象外です"
 
 #: src/text.vala:430
 msgid "Please download and install the latest Hamachi version."
@@ -236,13 +235,12 @@ msgid "_Download"
 msgstr "ダウンロード(_D)"
 
 #: src/text.vala:433
-#, fuzzy
 msgid "You are connected!"
-msgstr "切断しました"
+msgstr "接続されました！"
 
 #: src/text.vala:434
 msgid "Click on the + button to add a network."
-msgstr ""
+msgstr "+ ボタンをクリックしてネットワークを追加してください。"
 
 #: src/text.vala:436
 msgid "Members:"
@@ -250,7 +248,7 @@ msgstr "メンバー:"
 
 #: src/text.vala:437
 msgid "{0} online, {1} total"
-msgstr "オンライン {0}, トータル {1}"
+msgstr "オンライン {0}、合計 {1}"
 
 #: src/text.vala:438
 msgid "Owner:"
@@ -294,11 +292,11 @@ msgstr "最大同時接続数:"
 
 #: src/text.vala:449
 msgid "_Go Online"
-msgstr "オンラインに(_G)"
+msgstr "オンラインにする(_G)"
 
 #: src/text.vala:450
 msgid "_Go Offline"
-msgstr "オフラインに(_G)"
+msgstr "オフラインにする(_G)"
 
 #: src/text.vala:451
 msgid "_Leave"
@@ -382,9 +380,8 @@ msgid "Change Password"
 msgstr "パスワードを変更"
 
 #: src/text.vala:475
-#, fuzzy
 msgid "_New password:"
-msgstr "パスワード(_P)："
+msgstr "新しいパスワード(_N):"
 
 #: src/text.vala:477
 msgid "_Account:"
@@ -392,7 +389,7 @@ msgstr "アカウント(_A):"
 
 #: src/text.vala:479
 msgid "Pending"
-msgstr ""
+msgstr "保留中"
 
 #: src/text.vala:481
 msgid "_Attach to Account…"
@@ -400,7 +397,7 @@ msgstr "アカウントと関連付ける(_A)…"
 
 #: src/text.vala:482
 msgid "Attach to Account"
-msgstr "アカウントと関連付け"
+msgstr "アカウントと関連付ける"
 
 #: src/text.vala:483
 msgid "_Include all networks created by this client"
@@ -408,7 +405,7 @@ msgstr "このクライアントで作った全てのネットワークを含め
 
 #: src/text.vala:484
 msgid "_Attach"
-msgstr "関連付け(_A)"
+msgstr "関連付ける(_A)"
 
 #: src/text.vala:485
 msgid "Account not found"
@@ -416,11 +413,11 @@ msgstr "アカウントが見つかりませんでした"
 
 #: src/text.vala:487
 msgid "Config_uration"
-msgstr "設定(_u)"
+msgstr "設定(_U)"
 
 #: src/text.vala:488
 msgid "_Open Folder"
-msgstr "フォルダを開く(_O)"
+msgstr "フォルダーを開く(_O)"
 
 #: src/text.vala:489
 msgid "_Save a Backup…"
@@ -428,23 +425,23 @@ msgstr "バックアップ保存(_S)…"
 
 #: src/text.vala:490
 msgid "Save a Backup"
-msgstr "バックアップ保存"
+msgstr "バックアップを保存"
 
 #: src/text.vala:491
 msgid "_Restore from Backup…"
-msgstr "バックアップからリストア(_R)…"
+msgstr "バックアップから復元(_R)…"
 
 #: src/text.vala:492
 msgid "Restore from Backup"
-msgstr "バックアップからリストア"
+msgstr "バックアップから復元"
 
 #: src/text.vala:493
 msgid "_Restore"
-msgstr "リストア(_R)"
+msgstr "復元(_R)"
 
 #: src/text.vala:494
 msgid "Could not restore configuration"
-msgstr "設定をリストアできませんでした"
+msgstr "設定を復元できませんでした"
 
 #: src/text.vala:495
 msgid "Archive does not contain expected files."
@@ -452,7 +449,7 @@ msgstr "求めているファイルがアーカイブ内に見当たりません
 
 #: src/text.vala:496
 msgid "All supported archives"
-msgstr "サポートしている全アーカイブ"
+msgstr "すべてのサポートされたアーカイブ"
 
 #: src/text.vala:498
 msgid "_Join Network…"
@@ -468,11 +465,11 @@ msgstr "参加(_J)"
 
 #: src/text.vala:502
 msgid "_Create Network…"
-msgstr "ネットワーク作成(_C)…"
+msgstr "ネットワークを作成(_C)…"
 
 #: src/text.vala:503
 msgid "Create Network"
-msgstr "ネットワークの作成"
+msgstr "ネットワークを作成"
 
 #: src/text.vala:504
 msgid "C_reate"
@@ -496,12 +493,11 @@ msgstr "ネットワークがロックされています"
 
 #: src/text.vala:510
 msgid "Network already joined"
-msgstr "既にネットワークに参加しています"
+msgstr "すでにネットワークに参加しています"
 
 #: src/text.vala:511
-#, fuzzy
 msgid "Network ID is already taken"
-msgstr "そのネットワーク名は既に使用されています"
+msgstr "Network ID はすでに存在します"
 
 #: src/text.vala:512
 msgid "Unknown error"
@@ -513,7 +509,7 @@ msgstr "参加リクエストを送信しました"
 
 #: src/text.vala:516 data/ui/shortcuts-window.ui:39
 msgid "Preferences"
-msgstr "環境設定"
+msgstr "設定"
 
 #: src/text.vala:517
 msgid "Information"
@@ -521,7 +517,7 @@ msgstr "情報"
 
 #: src/text.vala:519
 msgid "Are you sure you want to delete the network “{0}”?"
-msgstr "ネットワーク “{0}” を 本当に削除してもいいですか？"
+msgstr "ネットワーク “{0}” を削除してもよろしいですか？"
 
 #: src/text.vala:520
 msgid "If you delete a network, it will be permanently lost."
@@ -529,41 +525,40 @@ msgstr "ネットワークを削除すると、そのネットワークは元に
 
 #: src/text.vala:522
 msgid "Are you sure you want to leave the network “{0}”?"
-msgstr "ネットワーク “{0}” から 本当に離脱してもいいですか？"
+msgstr "ネットワーク “{0}” から離脱してもよろしいですか？"
 
 #: src/text.vala:523
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr "離脱しても、後でいつでもネットワークに再参加することができます。"
+msgstr "承認されれば、後でいつでもネットワークに再参加することができます。"
 
 #: src/text.vala:525
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "本当にメンバー “{0}” を登録から抹消していいですか？"
+msgstr "ネットワーク \"{1}\" からメンバー “{0}” を登録から抹消してもよろしいですか？"
 
 #: src/text.vala:526
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"登録を抹消しても、そのメンバーは後でいつでもネットワークに再参加することがで"
-"きます。"
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加することができます。"
 
 #: src/text.vala:528
 msgid "Could not delete network “{0}”"
-msgstr "ネットワーク “{0}” の削除に失敗しました"
+msgstr "ネットワーク “{0}” を削除できませんでした"
 
 #: src/text.vala:529
 msgid "Could not leave network “{0}”"
-msgstr "ネットワーク “{0}” からの離脱に失敗"
+msgstr "ネットワーク “{0}” を離脱できませんでした"
 
 #: src/text.vala:530
 msgid "Could not evict member “{0}”"
-msgstr "メンバー “{0}” の登録抹消失敗"
+msgstr "メンバー “{0}” の登録を抹消できませんでした"
 
 #: src/text.vala:531
 msgid "Could not go online in the network “{0}”"
-msgstr "ネットワーク “{0}” で オンラインになれません"
+msgstr "ネットワーク “{0}” でオンラインにできませんでした"
 
 #: src/text.vala:532
 msgid "Could not go offline in the network “{0}”"
-msgstr "ネットワーク “{0}” で オフラインになれません"
+msgstr "ネットワーク “{0}” でオフラインにできませんでした"
 
 #: src/text.vala:534
 msgid "See output for details."
@@ -588,12 +583,11 @@ msgstr "動作"
 
 #: src/text.vala:542
 msgid "Appearance"
-msgstr ""
+msgstr "外観"
 
 #: src/text.vala:543
-#, fuzzy
 msgid "Notifications"
-msgstr "通知エリア"
+msgstr "通知"
 
 #: src/text.vala:545
 msgid "_Protocol:"
@@ -637,11 +631,11 @@ msgstr "終了時に接続を切る(_D)"
 
 #: src/text.vala:558
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "ダークテーマを使用する(_D)"
 
 #: src/text.vala:560
 msgid "Show _indicator"
-msgstr ""
+msgstr "インジケーターを表示する(_I)"
 
 #: src/text.vala:562
 msgid "Display notification when the connection is l_ost"
@@ -673,7 +667,7 @@ msgstr "Hamachi のログインに失敗しました"
 
 #: src/text.vala:570
 msgid "No internet connection"
-msgstr "インターネットに接続できません"
+msgstr "インターネット接続がありません"
 
 #: src/text.vala:572
 msgid "Add"
@@ -693,7 +687,7 @@ msgstr "編集"
 
 #: src/text.vala:576
 msgid "Edit Command"
-msgstr "コマンドの編集"
+msgstr "コマンドを編集"
 
 #: src/text.vala:577
 msgid "_Label:"
@@ -709,7 +703,7 @@ msgstr "IPv6 コマンド(_6):"
 
 #: src/text.vala:580
 msgid "Use %A for address and %N for nickname"
-msgstr "アドレスとして %A を使い、ニックネームとして %N を使う"
+msgstr "アドレスに %A、ニックネームに %N を使用できます"
 
 #: src/text.vala:581
 msgid "_Priority:"
@@ -728,21 +722,20 @@ msgid "Move down"
 msgstr "下へ"
 
 #: src/text.vala:586
-#, fuzzy
 msgid "Set as default action"
-msgstr "既定のコマンドに戻す"
+msgstr "デフォルトのアクションとして設定"
 
 #: src/text.vala:588
 msgid "Revert all changes"
-msgstr "変更を取り消しますか"
+msgstr "すべての変更を元に戻す"
 
 #: src/text.vala:589
 msgid "Are you sure you want to revert all changes?"
-msgstr "変更点をすべて元に戻してしまっていいですか？"
+msgstr "すべての変更を元に戻してもよろしいですか？"
 
 #: src/text.vala:590
 msgid "If you revert all changes, the default commands will be restored."
-msgstr "変更点をすべて元に戻すと、既定のコマンドがリストアされます。"
+msgstr "すべての変更点を元に戻すと、既定のコマンドが復元されます。"
 
 #: src/text.vala:592
 msgid "Hamachi lost connection"
@@ -750,11 +743,11 @@ msgstr "Hamachi の接続が切れました"
 
 #: src/text.vala:593
 msgid "Member online"
-msgstr "オンラインのメンバー"
+msgstr "メンバーがオンラインになりました"
 
 #: src/text.vala:594
 msgid "Member offline"
-msgstr "オフラインのメンバー"
+msgstr "メンバーがオフラインになりました"
 
 #: src/text.vala:595
 msgid "Member joined"
@@ -788,15 +781,13 @@ msgstr "ネットワーク {1} から {0} が離脱しました"
 #: src/text.vala:610
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: src/text.vala:616
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: src/text.vala:622
@@ -813,7 +804,7 @@ msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {
 #: src/text.vala:633
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] ""
+msgstr[0] "{0} 秒以内に再接続します"
 
 #: src/text.vala:638
 #, c-format
@@ -827,33 +818,31 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "簡単に Hamachi ネットワークに参加したり、作成したり、管理したりしましょう。"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "機能:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "検索・並べ替え・折りたたみ可能なネットワークリスト"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "詳細やアクションに簡単にアクセスできるサイドバー"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "通知エリア"
+msgstr "デスクトップ通知"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "十分にカスタマイズ可能なコマンド"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "設定をリストアできませんでした"
+msgstr "Hamachi 設定フォルダーをバックアップし復元できます"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -861,11 +850,11 @@ msgstr "Stephen Brandt"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "ヘルプを表示"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "クライアントの情報を表示"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -880,19 +869,16 @@ msgid "Quit"
 msgstr "終了"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "ネットワークが満員状態です"
+msgstr "ネットワークリスト"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
 msgstr "ネットワークに参加"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "ネットワークの作成"
+msgstr "ネットワークを作成"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -900,28 +886,29 @@ msgstr "更新"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "オフラインのメンバーを表示(_O)"
+msgstr "オフラインメンバーの表示を切り替える"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "すべてのネットワークを展開"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "すべてのネットワークを閉じる"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "コマンドの編集"
+msgstr "コマンドを実行"
 
-#~ msgid "_Refresh"
-#~ msgstr "更新(_R)"
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Hamachi 用のグラフィカルフロントエンド"
 
 #~ msgid "_OK"
 #~ msgstr "OK(_O)"
+
+#~ msgid "_Refresh"
+#~ msgstr "更新(_R)"
