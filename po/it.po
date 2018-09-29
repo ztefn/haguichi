@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2018-03-07 07:11+0000\n"
+"PO-Revision-Date: 2018-09-29 10:22+0000\n"
 "Last-Translator: Enrico G <Unknown>\n"
 "Language-Team: Italian <it@li.org>\n"
-"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
-"X-Generator: Launchpad (build 18566)\n"
+"X-Launchpad-Export-Date: 2018-09-29 17:36+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
+"Language: it\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -27,7 +27,7 @@ msgstr "Un frontend grafico per Hamachi"
 #. Generic name used in application launchers.
 #: src/text.vala:366
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Hamachi Network Manager"
 
 #. Description used in application launchers.
 #: src/text.vala:368
@@ -188,7 +188,7 @@ msgstr "Disconnesso"
 
 #: src/text.vala:418
 msgid "Initializing…"
-msgstr ""
+msgstr "Inizializzazione…"
 
 #: src/text.vala:419
 msgid "Connecting…"
@@ -536,7 +536,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Sei sicuro di volere espellere il membro «{0}» dalla rete «{1}»?"
 
 #: src/text.vala:526
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Se ammessi, i membri cacciati possono rientrare nella rete in qualsiasi "
 "momento."
@@ -826,33 +827,31 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Aggiungi, crea e gestisci le reti Hamachi in un batter d'occhio."
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Funzionalità:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Cerca, ordina e compatta la lista delle reti"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Barra laterale per l'accesso a dettagli e azioni"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "Notifiche"
+msgstr "Notifiche desktop"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "Comandi totalmente personalizzabili"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Impossibile ripristinare la configurazione"
+msgstr "Salva e ripristina la tua cartella della configurazione di Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -913,6 +912,9 @@ msgstr "Contrai tutte le reti"
 #: data/ui/shortcuts-window.ui:98
 msgid "Execute command"
 msgstr "Esegui comando"
+
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Un frontend grafico per Hamachi"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
