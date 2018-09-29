@@ -8,27 +8,27 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2018-05-11 06:55+0000\n"
+"PO-Revision-Date: 2018-09-29 19:29+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
-"Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-05-11 22:40+0000\n"
-"X-Generator: Launchpad (build 18640)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2018-09-29 22:20+0000\n"
+"X-Generator: Launchpad (build 18783)\n"
+"Language: lt\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
 msgid "A graphical frontend for Hamachi"
-msgstr "Grafinė Hamachi naudotojo sąsaja"
+msgstr "Hamachi grafinė naudotojo sąsaja"
 
 #. Generic name used in application launchers.
 #: src/text.vala:366
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Hamachi tinklo tvarkytuvė"
 
 #. Description used in application launchers.
 #: src/text.vala:368
@@ -189,7 +189,7 @@ msgstr "Neprisijungta"
 
 #: src/text.vala:418
 msgid "Initializing…"
-msgstr ""
+msgstr "Inicijuojama…"
 
 #: src/text.vala:419
 msgid "Connecting…"
@@ -197,11 +197,11 @@ msgstr "Jungiamasi…"
 
 #: src/text.vala:420
 msgid "Logging in…"
-msgstr "Prisijungiama..."
+msgstr "Prisijungiama…"
 
 #: src/text.vala:421
 msgid "Updating…"
-msgstr "Atnaujinama..."
+msgstr "Atnaujinama…"
 
 #: src/text.vala:423
 msgid "Hamachi is not configured"
@@ -362,7 +362,7 @@ msgstr "_Kopijuoti kliento ID"
 
 #: src/text.vala:469
 msgid "Change _Nickname…"
-msgstr "Keisti s_lapyvardį..."
+msgstr "Keisti s_lapyvardį…"
 
 #: src/text.vala:470
 msgid "Change Nickname"
@@ -374,7 +374,7 @@ msgstr "_Keisti"
 
 #: src/text.vala:473
 msgid "Change _Password…"
-msgstr "Keisti sla_ptažodį..."
+msgstr "Keisti sla_ptažodį…"
 
 #: src/text.vala:474
 msgid "Change Password"
@@ -394,7 +394,7 @@ msgstr "Laukiama"
 
 #: src/text.vala:481
 msgid "_Attach to Account…"
-msgstr "_Pridėti prie paskyros..."
+msgstr "_Pridėti prie paskyros…"
 
 #: src/text.vala:482
 msgid "Attach to Account"
@@ -422,7 +422,7 @@ msgstr "Atverti a_planką"
 
 #: src/text.vala:489
 msgid "_Save a Backup…"
-msgstr "Įrašyti at_sarginę kopiją..."
+msgstr "Įrašyti at_sarginę kopiją…"
 
 #: src/text.vala:490
 msgid "Save a Backup"
@@ -430,7 +430,7 @@ msgstr "Įrašyti atsarginę kopiją"
 
 #: src/text.vala:491
 msgid "_Restore from Backup…"
-msgstr "Atku_rti iš atsarginės kopijos..."
+msgstr "Atku_rti iš atsarginės kopijos…"
 
 #: src/text.vala:492
 msgid "Restore from Backup"
@@ -454,7 +454,7 @@ msgstr "Visi palaikomi archyvai"
 
 #: src/text.vala:498
 msgid "_Join Network…"
-msgstr "Prisi_jungti prie tinklo..."
+msgstr "Prisi_jungti prie tinklo…"
 
 #: src/text.vala:499
 msgid "Join Network"
@@ -466,7 +466,7 @@ msgstr "Prisijungti"
 
 #: src/text.vala:502
 msgid "_Create Network…"
-msgstr "Su_kurti tinklą..."
+msgstr "Su_kurti tinklą…"
 
 #: src/text.vala:503
 msgid "Create Network"
@@ -538,7 +538,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Ar tikrai norite iškeldinti narį “{0}” iš tinklo “{1}”?"
 
 #: src/text.vala:526
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jei pritarsite, iškeldinti nariai vėliau, bet kuriuo metu gali iš naujo "
 "prisijungti prie tinklo."
@@ -833,33 +834,35 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Lengvai prisijunkite, kurkite ir tvarkykite Hamachi tinklus."
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Ypatybės:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Randamas, rikiuojamas ir suskleidžiamas tinklų sąrašas"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
 msgstr ""
+"Šoninė juosta, skirta lengvai prieigai prie išsamesnės informacijos ir "
+"veiksmų"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "Pranešimai"
+msgstr "Darbalaukio pranešimai"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "Pilnai tinkinamos komandos"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Nepavyko atkurti konfigūracijos"
+msgstr ""
+"Galimybė daryti savo Hamachi konfigūracijos aplanko atsarginę kopiją ir ją "
+"atkurti"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -926,3 +929,6 @@ msgstr "Vykdyti komandą"
 
 #~ msgid "_Refresh"
 #~ msgstr "Į_kelti iš naujo"
+
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Grafinė Hamachi naudotojo sąsaja"
