@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2018-09-29 21:10+0000\n"
+"PO-Revision-Date: 2018-10-01 23:47+0000\n"
 "Last-Translator: Rodrigo de Avila <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2018-09-30 16:00+0000\n"
-"X-Generator: Launchpad (build 18783)\n"
+"X-Launchpad-Export-Date: 2018-10-03 17:56+0000\n"
+"X-Generator: Launchpad (build 18785)\n"
 "Language: pt_BR\n"
 
 #. Description used in about dialog.
@@ -830,7 +830,7 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Acesse, crie e gerencie suas redes Hamachi com facilidade"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
@@ -838,11 +838,11 @@ msgstr "Funcionalidades:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Lista de redes com busca, ordenação e agrupamento"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Barra lateral para acesso fácil aos detalhes e ações"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
 msgid "Desktop notifications"
@@ -850,11 +850,11 @@ msgstr "Notificações da área de trabalho"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "Comandos totalmente customizáveis"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr ""
+msgstr "Faça backup e restaure sua pasta de configuração do Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
