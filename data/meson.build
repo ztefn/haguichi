@@ -5,7 +5,7 @@ else
 endif
 
 if get_option('for-ubuntu')
-    icon_themes += ['Suru', 'ubuntu-mono-dark', 'ubuntu-mono-light']
+    icon_themes += ['Yaru', 'ubuntu-mono-dark', 'ubuntu-mono-light']
 endif
 
 foreach theme : icon_themes
