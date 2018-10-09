@@ -444,6 +444,15 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             {
                 GlobalEvents.stop_search();
             }
+            else if (event.keyval == Gdk.Key.Delete)
+            {
+                if ((!search_entry.has_focus) ||
+                    ((search_entry.cursor_position == search_entry.text_length) &&
+                     (search_entry.cursor_position == search_entry.selection_bound)))
+                {
+                    network_view.handle_delete_key_press();
+                }
+            }
         }
         
         return false;

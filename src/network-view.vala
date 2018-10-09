@@ -936,6 +936,43 @@ public class NetworkView : TreeView
         }
     }
     
+    public void handle_delete_key_press ()
+    {
+        TreeModel _model;
+        TreeIter _iter;
+        
+        if (get_selection().get_selected (out _model, out _iter))
+        {
+            Value network_val;
+            sorted_store.get_value (_iter, network_column, out network_val);
+            Network network = (Network) network_val;
+            
+            if (is_network (sorted_store, _iter))
+            {
+                if (network.is_owner == 1)
+                {
+                    network.delete();
+                }
+                else if (network.is_owner == 0)
+                {
+                    network.leave();
+                }
+            }
+            else
+            {
+                Value member_val;
+                sorted_store.get_value (_iter, member_column, out member_val);
+                Member member = (Member) member_val;
+                
+                if ((network.is_owner == 1) &&
+                    (member.status.status_int != 3))
+                {
+                    member.evict();
+                }
+            }
+        }
+    }
+    
     private void set_network_list_icon_size (IconSize size)
     {
         icon_cell.stock_size = size;
