@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2017-08-08 17:48+0000\n"
+"PO-Revision-Date: 2018-10-12 09:52+0000\n"
 "Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
-"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2017-08-08 19:56+0000\n"
-"X-Generator: Launchpad (build 18446)\n"
+"X-Launchpad-Export-Date: 2018-10-12 19:24+0000\n"
+"X-Generator: Launchpad (build 18790)\n"
+"Language: id\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -27,7 +27,7 @@ msgstr "Tampilan grafis bagi Hamachi"
 #. Generic name used in application launchers.
 #: src/text.vala:366
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Manajer Jaringan Hamachi"
 
 #. Description used in application launchers.
 #: src/text.vala:368
@@ -68,7 +68,7 @@ msgstr "_Preferensi"
 
 #: src/text.vala:381
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Pintasan Papan _Ketik"
 
 #: src/text.vala:382
 msgid "_Help"
@@ -188,7 +188,7 @@ msgstr "Koneksi terputus"
 
 #: src/text.vala:418
 msgid "Initializing…"
-msgstr ""
+msgstr "Menginisialisasi…"
 
 #: src/text.vala:419
 msgid "Connecting…"
@@ -537,7 +537,8 @@ msgstr ""
 "Apakah anda yakin ingin mengeluarkan anggota “{0}”? dari jaringan “{1}”?"
 
 #: src/text.vala:526
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jika diijinkan, anggota yang dikeluarkan dapat bergabung kembali ke jaringan "
 "ini."
@@ -585,7 +586,7 @@ msgstr "Perilaku"
 
 #: src/text.vala:542
 msgid "Appearance"
-msgstr ""
+msgstr "Tampilan"
 
 #: src/text.vala:543
 msgid "Notifications"
@@ -633,11 +634,11 @@ msgstr "_Diskonek ketika keluar"
 
 #: src/text.vala:558
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Pakai varian tema _gelap"
 
 #: src/text.vala:560
 msgid "Show _indicator"
-msgstr ""
+msgstr "Tampilkan _Indikator"
 
 #: src/text.vala:562
 msgid "Display notification when the connection is l_ost"
@@ -821,33 +822,31 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Bergabung, membuat dan mengelola jaringan Hamachi dengan mudah."
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Fitur:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Senarai Jaringan yang dapat ditelusuri, diurutkan dan diciutkan"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Bilah samping untuk memudahkan akses ke detail dan tindakan"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "Notifikasi"
+msgstr "Notifikasi destop"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "Perintah yang sepenuhnya dapat disesuaikan"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Tidak dapat memulihkan konfigurasi"
+msgstr "Cadangkan dan simpang ulang pelipat konfigurasi Hamachi anda"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -855,11 +854,11 @@ msgstr "Stephen Brandt"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Tampilkan bantuan"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Tampilkan informasi klien"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -874,19 +873,16 @@ msgid "Quit"
 msgstr "Keluar"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "Jaringan sedang penuh"
+msgstr "Senarai Jaringan"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Bergabung ke dalam jaringan"
+msgstr "Bergabung dalam jaringan"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Buat Jaringan"
+msgstr "Membuat Jaringan"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -894,28 +890,29 @@ msgstr "Segarkan"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Telusuri"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "Tampilkan Anggota _Luring"
+msgstr "Tampilkan/sembunyikan anggota yang terputus"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Tampilkan semua jaringan"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Sembunyikan semua jaringan"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Sunting Perintah"
+msgstr "Jalankan perintah"
 
 #~ msgid "_Refresh"
 #~ msgstr "Sega_rkan"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"
+
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Tampilan grafis bagi Hamachi."
