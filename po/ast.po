@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-08-25 17:24+0200\n"
-"PO-Revision-Date: 2017-08-04 17:16+0000\n"
+"PO-Revision-Date: 2018-10-12 07:44+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <ast@li.org>\n"
-"Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-08-04 19:20+0000\n"
-"X-Generator: Launchpad (build 18441)\n"
+"X-Launchpad-Export-Date: 2018-10-12 19:24+0000\n"
+"X-Generator: Launchpad (build 18790)\n"
+"Language: ast\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -27,7 +27,7 @@ msgstr "Un frontal gráficu p'Hamachi"
 #. Generic name used in application launchers.
 #: src/text.vala:366
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Xestor de rede Hamachi"
 
 #. Description used in application launchers.
 #: src/text.vala:368
@@ -68,7 +68,7 @@ msgstr "_Preferencies"
 
 #: src/text.vala:381
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "Atayos del _tecláu"
 
 #: src/text.vala:382
 msgid "_Help"
@@ -188,7 +188,7 @@ msgstr "Desconectáu"
 
 #: src/text.vala:418
 msgid "Initializing…"
-msgstr ""
+msgstr "Aniciando…"
 
 #: src/text.vala:419
 msgid "Connecting…"
@@ -536,7 +536,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "¿De xuru que quies desagospiar al miembru «{0}» de la rede «{0}»?"
 
 #: src/text.vala:526
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si se permite, los miembros desagospiaos puen xunise otra vegada cuando-yos "
 "pete."
@@ -584,7 +585,7 @@ msgstr "Comportamientu"
 
 #: src/text.vala:542
 msgid "Appearance"
-msgstr ""
+msgstr "Aspeutu"
 
 #: src/text.vala:543
 msgid "Notifications"
@@ -632,11 +633,11 @@ msgstr "_Desconeutase al colar"
 
 #: src/text.vala:558
 msgid "Use _dark theme variant"
-msgstr ""
+msgstr "Usar el tema _escuru"
 
 #: src/text.vala:560
 msgid "Show _indicator"
-msgstr ""
+msgstr "Amosar l'_indicador"
 
 #: src/text.vala:562
 msgid "Display notification when the connection is l_ost"
@@ -826,33 +827,32 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
+msgstr "Xúnite, crea y xestiona redes Hamachi con cenciellez"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Carauterístiques:"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Llista de redes espandible, que se pue ordenar y onde se pue guetar"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Barra llateral p'acceder fácilmente a los detalles y les aiciones"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-#, fuzzy
 msgid "Desktop notifications"
-msgstr "Avisos"
+msgstr "Avisos d'escritoriu"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
 msgid "Fully customizable commands"
-msgstr ""
+msgstr "Comandos personalizables dafechu"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-#, fuzzy
 msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Nun pudo restaurase la configuración"
+msgstr ""
+"Fai copies de seguranza y restaura la carpeta de configuración de Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:49
 msgid "Stephen Brandt"
@@ -860,11 +860,11 @@ msgstr "Stephen Brandt"
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr ""
+msgstr "Amusar l'ayuda"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr ""
+msgstr "Amosar la información del veceru"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Connect"
@@ -879,19 +879,16 @@ msgid "Quit"
 msgstr "Colar"
 
 #: data/ui/shortcuts-window.ui:52
-#, fuzzy
 msgid "Network List"
-msgstr "La rede ta enllena"
+msgstr "Llista de redes"
 
 #: data/ui/shortcuts-window.ui:56
-#, fuzzy
 msgid "Join a network"
-msgstr "Xunise a la rede"
+msgstr "Xunise a una rede"
 
 #: data/ui/shortcuts-window.ui:62
-#, fuzzy
 msgid "Create a network"
-msgstr "Crear rede"
+msgstr "Crear una rede"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Refresh"
@@ -899,28 +896,29 @@ msgstr "Refrescar"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Search"
-msgstr ""
+msgstr "Guetar"
 
 #: data/ui/shortcuts-window.ui:80
-#, fuzzy
 msgid "Show/hide offline members"
-msgstr "Amosar _miembros fuera de llinia"
+msgstr "Amosar miembros des/coneutaos"
 
 #: data/ui/shortcuts-window.ui:86
 msgid "Expand all networks"
-msgstr ""
+msgstr "Espander toles redes"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Contrayer toles redes"
 
 #: data/ui/shortcuts-window.ui:98
-#, fuzzy
 msgid "Execute command"
-msgstr "Editar comandu"
-
-#~ msgid "_Refresh"
-#~ msgstr "_Refrescar"
+msgstr "Executar un comandu"
 
 #~ msgid "_OK"
 #~ msgstr "_Aceutar"
+
+#~ msgid "A graphical frontend for Hamachi."
+#~ msgstr "Un frontal gráficu p'Hamachi"
+
+#~ msgid "_Refresh"
+#~ msgstr "_Refrescar"
