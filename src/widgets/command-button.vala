@@ -12,16 +12,24 @@ using Gtk;
 
 public class CommandButton : Button
 {
-    public CommandButton (string _label, string command_ipv4, string command_ipv6, string _priority)
+    public string command_ipv4;
+    public string command_ipv6;
+    public string priority;
+    
+    public CommandButton (string _label, string _command_ipv4, string _command_ipv6, string _priority)
     {
-        label = _(_label);
-        halign = Align.CENTER;
+        command_ipv4  = _command_ipv4;
+        command_ipv6  = _command_ipv6;
+        priority      = _priority;
+        label         = _(_label);
+        halign        = Align.CENTER;
         use_underline = true;
+        
         Utils.get_label_widget(this).ellipsize = Pango.EllipsizeMode.MIDDLE;
         
         clicked.connect (() =>
         {
-            Command.execute (Command.return_custom ((Member) Haguichi.window.network_view.last_member, command_ipv4, command_ipv6, _priority));      
+            Command.execute (Command.return_custom ((Member) Haguichi.window.network_view.last_member, command_ipv4, command_ipv6, priority));
         });
     }
 }

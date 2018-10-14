@@ -32,6 +32,8 @@ public class Sidebar : Box
     private Box network_box;
     private Box member_box;
     
+    private List<CommandButton> command_buttons;
+    
     private ActionBar info_action_bar;
     private ActionBar network_action_bar;
     private ActionBar member_action_bar;
@@ -451,6 +453,8 @@ public class Sidebar : Box
     
     public void generate_command_buttons ()
     {
+        command_buttons = new List<CommandButton>();
+        
         string[] commands = (string[]) Settings.custom_commands.val;
         
         foreach (Widget cb in commands_box.get_children())
@@ -473,6 +477,7 @@ public class Sidebar : Box
                 if (Command.custom_exists (command_ipv4, command_ipv6))
                 {
                     CommandButton cb = new CommandButton (label, command_ipv4, command_ipv6, priority);
+                    command_buttons.append (cb);
                     commands_box.pack_start (cb, false, false, 3);
                 }
             }
@@ -764,11 +769,13 @@ public class Sidebar : Box
                     
                     commands_box.show_all();
                     
-                    foreach (Widget cb in commands_box.get_children())
+                    foreach (CommandButton cb in command_buttons)
                     {
                         cb.sensitive = true;
                         
-                        if (member.status.status_int != 1)
+                        if ((member.status.status_int != 1) &&
+                            (cb.command_ipv4.contains("%A") ||
+                             cb.command_ipv6.contains("%A")))
                         {
                             cb.sensitive = false;
                         }

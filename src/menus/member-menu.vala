@@ -98,7 +98,9 @@ namespace Menus
                 item.visible = true;
                 item.sensitive = true;
                 
-                if (member.status.status_int != 1)
+                if ((member.status.status_int != 1) &&
+                    (item.command_ipv4.contains("%A") ||
+                     item.command_ipv6.contains("%A")))
                 {
                     item.sensitive = false;
                 }

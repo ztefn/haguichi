@@ -14,9 +14,16 @@ namespace Menus
 {
     public class CommandMenuItem : Gtk.MenuItem
     {
-        public CommandMenuItem (string _label, string command_ipv4, string command_ipv6, string priority)
+        public string command_ipv4;
+        public string command_ipv6;
+        public string priority;
+        
+        public CommandMenuItem (string _label, string _command_ipv4, string _command_ipv6, string _priority)
         {
-            label = _(_label);
+            command_ipv4  = _command_ipv4;
+            command_ipv6  = _command_ipv6;
+            priority      = _priority;
+            label         = _(_label);
             use_underline = true;
             
             activate.connect (() =>
