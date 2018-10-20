@@ -107,6 +107,7 @@ class Haguichi : Gtk.Application
         if ((current_desktop.contains ("GNOME")) ||
             (current_desktop == "Deepin") ||
             (current_desktop == "KDE") ||
+            (current_desktop == "LXQt") ||
             (current_desktop == "Pantheon") ||
             (current_desktop == "XFCE") ||
             (current_desktop == "X-Cinnamon"))
