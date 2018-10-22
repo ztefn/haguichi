@@ -91,7 +91,7 @@ Italiano (it)
 Қазақ (kk)
     jmb_kz https://launchpad.net/~jmb-kz
 
-lietuvių kalba (lt)
+Lietuvių kalba (lt)
     Moo https://launchpad.net/~mooo
 
 Nederlands (nl)
