@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
+<component type="desktop-application">
   <id>com.github.ztefn.haguichi</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
@@ -21,6 +21,11 @@
     <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-2.png</screenshot>
     <screenshot width="1248" height="702">https://www.haguichi.net/appdata/screenshot-3.png</screenshot>
   </screenshots>
+  <content_rating type="oars-1.1" />
+  <launchable type="desktop-id">com.github.ztefn.haguichi.desktop</launchable>
+  <provides>
+    <binary>@BINARY_NAME@</binary>
+  </provides>
   <releases>
     <release version="1.4.0" date="2018-05-10"/>
     <release version="1.3.8" date="2017-09-23"/>
