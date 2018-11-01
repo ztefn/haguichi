@@ -339,7 +339,6 @@ public class Haguichi.Indicator : Wingpanel.Indicator
         else
         {
             show_item.sensitive       = true;
-            info_item.sensitive       = true;
         }
     }
     

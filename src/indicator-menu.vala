@@ -141,6 +141,10 @@ public class IndicatorMenu : Gtk.Menu
             case "Connecting":
                 connecting_item.show();
                 connect_item.hide();
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = true;
                 break;
                 
             case "Connected":
@@ -184,7 +188,6 @@ public class IndicatorMenu : Gtk.Menu
         else
         {
             show_item.sensitive       = true;
-            info_item.sensitive       = true;
         }
     }
     
