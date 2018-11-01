@@ -106,14 +106,71 @@ public class IndicatorMenu : Gtk.Menu
         });
     }
     
-    public void set_visibility (bool visible)
+    private void set_visibility (bool _visible)
     {
-        show_item.active = visible;
+        show_item.active = _visible;
     }
     
-    public void set_modality (bool _modal)
+    private void set_modality (bool _modal)
     {
         modal = _modal;
+        set_mode (mode);
+    }
+    
+    private void set_mode (string _mode)
+    {
+        set_icon_mode (_mode);
+        set_menu_mode (_mode);
+        
+        mode = _mode;
+    }
+    
+    private void set_menu_mode (string _mode)
+    {
+        switch (_mode)
+        {
+            case "Initializing":
+                connecting_item.hide();
+                connect_item.sensitive    = false;
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = false;
+                break;
+                
+            case "Connecting":
+                connecting_item.show();
+                connect_item.hide();
+                break;
+                
+            case "Connected":
+                connecting_item.hide();
+                connect_item.hide();
+                disconnect_item.show();
+                disconnect_item.sensitive = true;
+                join_item.sensitive       = true;
+                create_item.sensitive     = true;
+                info_item.sensitive       = true;
+                break;
+                
+            case "Disconnected":
+                connecting_item.hide();
+                connect_item.show();
+                connect_item.sensitive    = true;
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = true;
+                break;
+                
+            case "Not configured":
+                set_mode ("Initializing");
+                break;
+                
+            case "Not installed":
+                set_mode ("Initializing");
+                break;
+        }
         
         if (modal)
         {
@@ -128,95 +185,63 @@ public class IndicatorMenu : Gtk.Menu
         {
             show_item.sensitive       = true;
             info_item.sensitive       = true;
-            
-            set_mode (mode);
+        }
+    }
+    
+    private void set_icon_mode (string _mode)
+    {
+        // Check if there isn't already an animation going on when connecting
+        if ((_mode == "Connecting") &&
+            (Haguichi.indicator.get_icon_name().has_prefix("haguichi-connecting")))
+        {
+            return;
+        }
+        
+        icon_num = 0;
+        
+        switch (_mode)
+        {
+            case "Initializing":
+                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
+                break;
+                
+            case "Connecting":
+                Timeout.add (400, switch_icon);
+                break;
+                
+            case "Connected":
+                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connected);
+                break;
+                
+            case "Disconnected":
+                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
+                break;
         }
     }
     
     private bool switch_icon ()
     {
-        if (mode == "Connecting")
-        {
-            if (icon_num == 0)
-            {
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting1);
-                icon_num = 1;
-            }
-            else if (icon_num == 1)
-            {
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting2);
-                icon_num = 2;
-            }
-            else
-            {
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting3);
-                icon_num = 0;
-            }
-            
-            return true;
-        }
-        else
+        if (mode != "Connecting")
         {
             return false;
         }
-    }
-    
-    public void set_mode (string _mode)
-    {
-        mode = _mode;
-        icon_num = 0;
         
-        switch (mode)
+        if (icon_num == 0)
         {
-            case "Initializing":
-                connecting_item.hide();
-                connect_item.sensitive    = false;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = false;
-                
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
-                break;
-                
-            case "Connecting":
-                connect_item.hide();
-                connecting_item.show();
-                
-                GLib.Timeout.add (400, switch_icon);
-                break;
-                
-            case "Connected":
-                connecting_item.hide();
-                connect_item.hide();
-                disconnect_item.show();
-                disconnect_item.sensitive = true;
-                join_item.sensitive       = true;
-                create_item.sensitive     = true;
-                info_item.sensitive       = true;
-                
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connected);
-                break;
-                
-            case "Disconnected":
-                connecting_item.hide();
-                connect_item.show();
-                connect_item.sensitive    = true;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = true;
-                
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
-                break;
-            
-            case "Not configured":
-                set_mode ("Initializing");
-                break;
-            
-            case "Not installed":
-                set_mode ("Initializing");
-                break;
+            Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting1);
+            icon_num = 1;
         }
+        else if (icon_num == 1)
+        {
+            Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting2);
+            icon_num = 2;
+        }
+        else
+        {
+            Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connecting3);
+            icon_num = 0;
+        }
+        
+        return true;
     }
 }

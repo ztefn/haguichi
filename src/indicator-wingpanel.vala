@@ -154,7 +154,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     
     private Gtk.Grid create_main_widget ()
     {
-        var grid = new Gtk.Grid ();
+        var grid = new Gtk.Grid();
         
         show_item = new Wingpanel.Widgets.Switch (_("_Show Haguichi").replace ("_", ""));
         show_item.clicked.connect (() =>
@@ -215,18 +215,18 @@ public class Haguichi.Indicator : Wingpanel.Indicator
             session.quit_app();
         });
         
-        grid.attach (show_item,                          0,  0, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator (), 0,  1, 1, 1);
-        grid.attach (connecting_item,                    0,  2, 1, 1);
-        grid.attach (connect_item,                       0,  3, 1, 1);
-        grid.attach (disconnect_item,                    0,  4, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator (), 0,  5, 1, 1);
-        grid.attach (join_item,                          0,  6, 1, 1);
-        grid.attach (create_item,                        0,  7, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator (), 0,  8, 1, 1);
-        grid.attach (info_item,                          0,  9, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator (), 0, 10, 1, 1);
-        grid.attach (quit_item,                          0, 11, 1, 1);
+        grid.attach (show_item,                         0,  0, 1, 1);
+        grid.attach (new Wingpanel.Widgets.Separator(), 0,  1, 1, 1);
+        grid.attach (connecting_item,                   0,  2, 1, 1);
+        grid.attach (connect_item,                      0,  3, 1, 1);
+        grid.attach (disconnect_item,                   0,  4, 1, 1);
+        grid.attach (new Wingpanel.Widgets.Separator(), 0,  5, 1, 1);
+        grid.attach (join_item,                         0,  6, 1, 1);
+        grid.attach (create_item,                       0,  7, 1, 1);
+        grid.attach (new Wingpanel.Widgets.Separator(), 0,  8, 1, 1);
+        grid.attach (info_item,                         0,  9, 1, 1);
+        grid.attach (new Wingpanel.Widgets.Separator(), 0, 10, 1, 1);
+        grid.attach (quit_item,                         0, 11, 1, 1);
         
         return grid;
     }
@@ -265,12 +265,12 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     {
         if (display_widget != null)
         {
-            set_icon_mode(_mode);
+            set_icon_mode (_mode);
         }
         
         if (main_widget != null)
         {
-            set_menu_mode(_mode);
+            set_menu_mode (_mode);
         }
         
         mode = _mode;
@@ -376,30 +376,28 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     
     private bool switch_icon ()
     {
-        if (mode == "Connecting")
-        {
-            if (icon_num == 0)
-            {
-                display_widget.set_main_icon_name (icon_connecting1);
-                icon_num = 1;
-            }
-            else if (icon_num == 1)
-            {
-                display_widget.set_main_icon_name (icon_connecting2);
-                icon_num = 2;
-            }
-            else
-            {
-                display_widget.set_main_icon_name (icon_connecting3);
-                icon_num = 0;
-            }
-            
-            return true;
-        }
-        else
+        if (mode != "Connecting")
         {
             return false;
         }
+        
+        if (icon_num == 0)
+        {
+            display_widget.set_main_icon_name (icon_connecting1);
+            icon_num = 1;
+        }
+        else if (icon_num == 1)
+        {
+            display_widget.set_main_icon_name (icon_connecting2);
+            icon_num = 2;
+        }
+        else
+        {
+            display_widget.set_main_icon_name (icon_connecting3);
+            icon_num = 0;
+        }
+        
+        return true;
     }
 }
 

@@ -61,6 +61,11 @@ class HaguichiIndicator
         });
     }
     
+    public string get_icon_name ()
+    {
+        return indicator.icon_name;
+    }
+    
     public void set_icon_name (string name)
     {
         indicator.icon_name = name;
