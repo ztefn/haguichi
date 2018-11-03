@@ -129,15 +129,6 @@ public class IndicatorMenu : Gtk.Menu
     {
         switch (_mode)
         {
-            case "Initializing":
-                connecting_item.hide();
-                connect_item.sensitive    = false;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = false;
-                break;
-                
             case "Connecting":
                 connecting_item.show();
                 connect_item.hide();
@@ -150,8 +141,8 @@ public class IndicatorMenu : Gtk.Menu
             case "Connected":
                 connecting_item.hide();
                 connect_item.hide();
-                disconnect_item.show();
                 disconnect_item.sensitive = true;
+                disconnect_item.show();
                 join_item.sensitive       = true;
                 create_item.sensitive     = true;
                 info_item.sensitive       = true;
@@ -159,20 +150,22 @@ public class IndicatorMenu : Gtk.Menu
                 
             case "Disconnected":
                 connecting_item.hide();
-                connect_item.show();
                 connect_item.sensitive    = true;
+                connect_item.show();
                 disconnect_item.hide();
                 join_item.sensitive       = false;
                 create_item.sensitive     = false;
                 info_item.sensitive       = true;
                 break;
                 
-            case "Not configured":
-                set_mode ("Initializing");
-                break;
-                
-            case "Not installed":
-                set_mode ("Initializing");
+            default:
+                connecting_item.hide();
+                connect_item.sensitive    = false;
+                connect_item.show();
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = false;
                 break;
         }
         
@@ -204,10 +197,6 @@ public class IndicatorMenu : Gtk.Menu
         
         switch (_mode)
         {
-            case "Initializing":
-                Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
-                break;
-                
             case "Connecting":
                 Timeout.add (400, switch_icon);
                 break;
@@ -216,7 +205,7 @@ public class IndicatorMenu : Gtk.Menu
                 Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_connected);
                 break;
                 
-            case "Disconnected":
+            default:
                 Haguichi.indicator.set_icon_name (Haguichi.indicator.icon_disconnected);
                 break;
         }

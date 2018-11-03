@@ -280,15 +280,6 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     {
         switch (_mode)
         {
-            case "Initializing":
-                connecting_item.hide();
-                connect_item.sensitive    = false;
-                disconnect_item.hide();
-                join_item.sensitive       = false;
-                create_item.sensitive     = false;
-                info_item.sensitive       = false;
-                break;
-                
             case "Connecting":
                 connecting_item.show();
                 connect_item.hide();
@@ -301,8 +292,8 @@ public class Haguichi.Indicator : Wingpanel.Indicator
             case "Connected":
                 connecting_item.hide();
                 connect_item.hide();
-                disconnect_item.show();
                 disconnect_item.sensitive = true;
+                disconnect_item.show();
                 join_item.sensitive       = true;
                 create_item.sensitive     = true;
                 info_item.sensitive       = true;
@@ -310,20 +301,22 @@ public class Haguichi.Indicator : Wingpanel.Indicator
                 
             case "Disconnected":
                 connecting_item.hide();
-                connect_item.show();
                 connect_item.sensitive    = true;
+                connect_item.show();
                 disconnect_item.hide();
                 join_item.sensitive       = false;
                 create_item.sensitive     = false;
                 info_item.sensitive       = true;
                 break;
                 
-            case "Not configured":
-                set_mode ("Initializing");
-                break;
-                
-            case "Not installed":
-                set_mode ("Initializing");
+            default:
+                connecting_item.hide();
+                connect_item.sensitive    = false;
+                connect_item.show();
+                disconnect_item.hide();
+                join_item.sensitive       = false;
+                create_item.sensitive     = false;
+                info_item.sensitive       = false;
                 break;
         }
         
@@ -355,10 +348,6 @@ public class Haguichi.Indicator : Wingpanel.Indicator
         
         switch (_mode)
         {
-            case "Initializing":
-                display_widget.set_main_icon_name (icon_disconnected);
-                break;
-                
             case "Connecting":
                 Timeout.add (400, switch_icon);
                 break;
@@ -367,7 +356,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
                 display_widget.set_main_icon_name (icon_connected);
                 break;
                 
-            case "Disconnected":
+            default:
                 display_widget.set_main_icon_name (icon_disconnected);
                 break;
         }
