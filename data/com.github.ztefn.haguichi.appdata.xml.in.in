@@ -57,22 +57,22 @@
   <languages>
     <lang percentage="100">ast</lang>
     <lang percentage="100">bg</lang>
-    <lang percentage="100">cs</lang>
-    <lang percentage="93">de</lang>
+    <lang percentage="96">cs</lang>
+    <lang percentage="89">de</lang>
     <lang percentage="100">es</lang>
     <lang percentage="100">fr</lang>
     <lang percentage="100">id</lang>
     <lang percentage="100">it</lang>
     <lang percentage="100">ja</lang>
-    <lang percentage="93">kk</lang>
+    <lang percentage="89">kk</lang>
     <lang percentage="100">lt</lang>
     <lang percentage="100">nl</lang>
     <lang percentage="100">pl</lang>
     <lang percentage="100">pt_BR</lang>
-    <lang percentage="93">ru</lang>
-    <lang percentage="100">sk</lang>
+    <lang percentage="89">ru</lang>
+    <lang percentage="96">sk</lang>
     <lang percentage="100">sv</lang>
-    <lang percentage="100">tr</lang>
+    <lang percentage="96">tr</lang>
     <lang percentage="100">uk</lang>
   </languages>
 </component>
