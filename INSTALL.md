@@ -19,6 +19,10 @@
 
     $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev libnotify-dev
 
+  On Solus you can install these packages by running the following command:
+
+    $ sudo eopkg it -c system.devel vala glib2-devel libgtk-3-devel libnotify-devel
+
 
   Build options
   -------------
