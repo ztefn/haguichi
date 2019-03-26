@@ -31,6 +31,7 @@
     <file>adwaita-dark.css</file>
     <file>default.css</file>
     <file>elementary.css</file>
+    <file>elementary-base.css</file>
     <file>elementary-dark.css</file>
   </gresource>
   <gresource prefix="/com/github/ztefn/haguichi/ui">

@@ -1,21 +1,10 @@
+@import url("resource:///com/github/ztefn/haguichi/stylesheets/elementary-base.css");
+
 /*
  * Set primary color for titlebar
  */
 
 @define-color colorPrimary mix (#000, @titlebar_color, 0.95);
-
-
-/*
- * Override font size for welcome headings
- */
-
-.welcome .h1 {
-    font-size: 16px;
-}
-
-.welcome .h2 {
-    font-size: 12px;
-}
 
 
 /*
@@ -28,26 +17,6 @@
 
 .disconnected-box {
     background-color: shade (@bg_color, 1.02);
-}
-
-
-/*
- * Set padding for sidebar labels and entries
- */
-
-.sidebar-label,
-.sidebar-entry {
-    padding-top: 4px;
-    padding-bottom: 5px;
-}
-
-
-/*
- * Set font size for dimmed labels in commands editor
- */
-
-.preferences .commands-editor .dim-label {
-    font-size: small;
 }
 
 
@@ -116,16 +85,4 @@
 
 .titlebar .image-button:disabled:backdrop image {
     color: shade (@insensitive_color, 0.8);
-}
-
-
-/*
- * Fix headerbar being too high when using subtitle
- * https://github.com/elementary/stylesheet/issues/352
- */
-
-.haguichi-window .titlebar
-{
-    padding-top: 3px;
-    padding-bottom: 2px;
 }
