@@ -1,0 +1,6 @@
+<svg id="SVGRoot" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(1 8)" enable-background="new">
+  <path d="m11-4.5c-4.69 0-8.5 3.81-8.5 8.5 0 4.69 3.81 8.5 8.5 8.5 4.69 0 8.5-3.81 8.5-8.5 0-4.69-3.81-8.5-8.5-8.5z" color="#000000" enable-background="accumulate" fill="#f77061"/>
+  <path d="m11-4.5001c-4.6901 0-8.5001 3.81-8.5001 8.5001 0 4.6901 3.81 8.5001 8.5001 8.5001 4.69 0 8.5001-3.81 8.5001-8.5001 0-4.6901-3.81-8.5001-8.5001-8.5001z" color="#000000" enable-background="accumulate" fill="none" opacity=".4" stroke="#5e1019" stroke-linecap="round" stroke-width=".99984"/>
+ </g>
+</svg>

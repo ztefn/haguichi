@@ -1,0 +1,8 @@
+<svg id="SVGRoot" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0,-172)" enable-background="new">
+  <path d="m24 234 80-50v4.0001l-46.303 50-17.36 17.547-16.337-17.547z" color="#000000" enable-background="new" fill="#f68550"/>
+  <path d="m70.303 184h33.697l-46.303 50-17.36 17.547-16.337-17.547z" color="#000000" enable-background="new" fill="#ffac82"/>
+  <path d="m70.303 288h33.697v-4.0001l-63.663-32.453-0.05833 3.94z" color="#000000" enable-background="new" fill="#d90c01"/>
+  <path d="m70.303 284h33.697l-43.361-46.835-20.361 14.322z" color="#000000" enable-background="new" fill="#fe3333"/>
+ </g>
+</svg>
