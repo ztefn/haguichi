@@ -588,9 +588,9 @@ public class NetworkView : TreeView
             
             if (network.is_owner == 1)
             {
-                template = template.replace ("%*",  "✩");
-                template = template.replace ("%_*", " ✩");
-                template = template.replace ("%*_", "✩ ");
+                template = template.replace ("%*",  "★");
+                template = template.replace ("%_*", " ★");
+                template = template.replace ("%*_", "★ ");
             }
             else
             {
@@ -642,9 +642,9 @@ public class NetworkView : TreeView
             
             if (network.owner == member.client_id)
             {
-                template = template.replace ("%*",   "✩");
-                template = template.replace ("%_*", " ✩");
-                template = template.replace ("%*_", "✩ ");
+                template = template.replace ("%*",   "★");
+                template = template.replace ("%_*", " ★");
+                template = template.replace ("%*_", "★ ");
             }
             else
             {
