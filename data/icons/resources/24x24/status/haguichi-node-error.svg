@@ -1,6 +1,6 @@
 <svg id="SVGRoot" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
  <g transform="translate(11,-308)" enable-background="new" shape-rendering="auto">
-  <path d="m1 311.5c-4.69 0-8.5 3.81-8.5 8.5s3.81 8.5 8.5 8.5c4.69 0 8.5-3.81 8.5-8.5 0-4.69-3.81-8.5-8.5-8.5z" color="#000000" color-rendering="auto" enable-background="accumulate" fill="#f8e45c" fill-rule="evenodd" image-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal"/>
+  <path d="m1 311.5c-4.69 0-8.5 3.81-8.5 8.5s3.81 8.5 8.5 8.5c4.69 0 8.5-3.81 8.5-8.5 0-4.69-3.81-8.5-8.5-8.5z" color="#000000" color-rendering="auto" enable-background="accumulate" fill="#f6d32d" fill-rule="evenodd" image-rendering="auto" solid-color="#000000" style="isolation:auto;mix-blend-mode:normal"/>
   <path d="m1 311.5c-4.69 0-8.4999 3.81-8.4999 8.4999 0 4.69 3.81 8.4999 8.4999 8.4999 4.69 0 8.4999-3.81 8.4999-8.4999 0-4.69-3.81-8.4999-8.4999-8.4999z" color="#000000" color-rendering="auto" enable-background="accumulate" fill="none" image-rendering="auto" opacity=".4" solid-color="#000000" stroke="#785605" stroke-linejoin="round" stroke-width="1.0002" style="isolation:auto;mix-blend-mode:normal"/>
  </g>
 </svg>

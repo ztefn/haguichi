@@ -1,7 +1,9 @@
 if get_option('for-elementary')
     icon_themes = ['elementary/hicolor']
+    icon_resources = 'icons/elementary/resources'
 else
     icon_themes = ['hicolor']
+    icon_resources = 'icons/resources'
 endif
 
 if get_option('for-ubuntu')
@@ -71,7 +73,7 @@ gnome = import('gnome')
 resources = gnome.compile_resources(
     'haguichi-resources',
     app_id + '.gresource.xml',
-    source_dir: ['icons/resources', 'stylesheets', 'ui']
+    source_dir: [icon_resources, 'stylesheets', 'ui']
 )
 
 install_data(
