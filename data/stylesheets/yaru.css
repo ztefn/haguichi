@@ -1,0 +1,29 @@
+@import url("resource:///com/github/ztefn/haguichi/stylesheets/default.css");
+
+/*
+ * Set styles for network nodes
+ */
+
+.network-node-online {
+    background-color: rgba(76, 193, 93, 1.0);
+}
+
+.network-node-online-relayed {
+    background-color: rgba(25, 182, 238, 1.0);
+}
+
+.network-node-unreachable {
+    background-color: rgba(251, 133, 70, 1.0);
+}
+
+.network-node-unapproved {
+    background-color: rgba(247, 99, 99, 1.0);
+}
+
+.network-node-error {
+    background-color: rgba(255, 218, 100, 1.0);
+}
+
+.network-node-offline {
+    background-color: rgba(179, 179, 179, 0.6);
+}

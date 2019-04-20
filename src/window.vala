@@ -260,7 +260,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 theme_name += "-dark";
             }
         }
-        else
+        else if (theme_name != "yaru")
         {
             theme_name = "default";
         }

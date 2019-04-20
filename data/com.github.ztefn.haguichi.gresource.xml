@@ -7,6 +7,7 @@
     <file>elementary.css</file>
     <file>elementary-base.css</file>
     <file>elementary-dark.css</file>
+    <file>yaru.css</file>
   </gresource>
   <gresource prefix="/com/github/ztefn/haguichi/ui">
     <file preprocess="xml-stripblanks">shortcuts-window.ui</file>
