@@ -41,6 +41,7 @@ sources = [
     'status.vala',
     'text.vala',
     'utils.vala',
+    'widgets/cell-renderer-node.vala',
     'widgets/command-button.vala',
     'widgets/commands-editor.vala',
     'widgets/commands-editor-row.vala',

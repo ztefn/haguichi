@@ -62,3 +62,36 @@
 .preferences .commands-editor .dim-label {
     font-size: small;
 }
+
+
+/*
+ * Set styles for network nodes
+ */
+
+.network-node {
+    border-radius: 50%;
+}
+
+.network-node-online {
+    background-color: rgba(50, 209, 122, 1.0);
+}
+
+.network-node-online-relayed {
+    background-color: rgba(11, 186, 244, 1.0);
+}
+
+.network-node-unreachable {
+    background-color: rgba(251, 132, 68, 1.0);
+}
+
+.network-node-unapproved {
+    background-color: rgba(239, 74, 92, 1.0);
+}
+
+.network-node-error {
+    background-color: rgba(248, 228, 92, 1.0);
+}
+
+.network-node-offline {
+    background-color: rgba(192, 191, 188, 0.6);
+}

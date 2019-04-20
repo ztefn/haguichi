@@ -105,30 +105,30 @@ public class Status : Object
         
         if (status_int == 0)
         {
-            icon_name = "haguichi-node-offline";
+            icon_name = "network-node-offline";
         }
         if (status_int == 1)
         {
             if (connection_type == Text.relayed)
             {
-                icon_name = "haguichi-node-online-relayed";
+                icon_name = "network-node-online-relayed";
             }
             else
             {
-                icon_name = "haguichi-node-online";
+                icon_name = "network-node-online";
             }
         }
         else if (status_int == 2)
         {
-            icon_name = "haguichi-node-unreachable";
+            icon_name = "network-node-unreachable";
         }
         else if (status_int == 3)
         {
-            icon_name = "haguichi-node-unapproved";
+            icon_name = "network-node-unapproved";
         }
         else if (status_int == 4)
         {
-            icon_name = "haguichi-node-error";
+            icon_name = "network-node-error";
         }
         
         return icon_name;

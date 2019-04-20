@@ -31,7 +31,7 @@ public class NetworkView : TreeView
     private int status_sort_column;
     
     private CellRendererText text_cell;
-    private CellRendererPixbuf icon_cell;
+    private CellRendererNode icon_cell;
     
     public  string network_template;
     public  string member_template;
@@ -56,7 +56,7 @@ public class NetworkView : TreeView
         text_cell = new CellRendererText();
         text_cell.ellipsize = Pango.EllipsizeMode.END;
         
-        icon_cell = new CellRendererPixbuf();
+        icon_cell = new CellRendererNode();
         
         column = new TreeViewColumn();
         

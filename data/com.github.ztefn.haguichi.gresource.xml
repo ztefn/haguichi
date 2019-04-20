@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/ztefn/haguichi/icons">
-    <file>16x16/status/haguichi-node-error.svg</file>
-    <file>16x16/status/haguichi-node-offline.svg</file>
-    <file>16x16/status/haguichi-node-online.svg</file>
-    <file>16x16/status/haguichi-node-online-relayed.svg</file>
-    <file>16x16/status/haguichi-node-unapproved.svg</file>
-    <file>16x16/status/haguichi-node-unreachable.svg</file>
-    <file>24x24/status/haguichi-node-error.svg</file>
-    <file>24x24/status/haguichi-node-offline.svg</file>
-    <file>24x24/status/haguichi-node-online.svg</file>
-    <file>24x24/status/haguichi-node-online-relayed.svg</file>
-    <file>24x24/status/haguichi-node-unapproved.svg</file>
-    <file>24x24/status/haguichi-node-unreachable.svg</file>
-  </gresource>
   <gresource prefix="/com/github/ztefn/haguichi/stylesheets">
     <file>adwaita.css</file>
     <file>adwaita-dark.css</file>
