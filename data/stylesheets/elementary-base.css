@@ -32,6 +32,40 @@
 
 
 /*
+ * Set styles for network nodes
+ */
+
+.network-node {
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 1px alpha(#000, 0.2);
+}
+
+.network-node-online {
+    background-color: #9bdb4d;
+}
+
+.network-node-online-relayed {
+    background-color: #64baff;
+}
+
+.network-node-unreachable {
+    background-color: #ffa154;
+}
+
+.network-node-unapproved {
+    background-color: #ed5353;
+}
+
+.network-node-error {
+    background-color: #f9c440;
+}
+
+.network-node-offline {
+    background-color: alpha(#d4d4d4, 0.6);
+}
+
+
+/*
  * Fix headerbar being too high when using subtitle
  * https://github.com/elementary/stylesheet/issues/352
  */
