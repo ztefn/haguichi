@@ -5,5 +5,5 @@
  */
 
 .preferences {
-    background-color: shade (@insensitive_bg_color, 0.85);
+    background-color: shade(@insensitive_bg_color, 0.85);
 }

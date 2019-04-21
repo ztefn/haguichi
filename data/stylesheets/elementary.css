@@ -12,11 +12,11 @@
  */
 
 .connected-box {
-    background-color: shade (@bg_color, 1.1);
+    background-color: shade(@bg_color, 1.1);
 }
 
 .disconnected-box {
-    background-color: shade (@bg_color, 1.02);
+    background-color: shade(@bg_color, 1.02);
 }
 
 
@@ -25,10 +25,10 @@
  */
 
 .titlebar .image-button.suggested-action {
-    border: 1px solid alpha (#000, 0.2);
+    border: 1px solid alpha(#000, 0.2);
     box-shadow:
-        0 1px 0 0 alpha (#fff, 0.25),
-        inset 0 1px 0 0 alpha (#fff, 0.25);
+        0 1px 0 0 alpha(#fff, 0.25),
+        inset 0 1px 0 0 alpha(#fff, 0.25);
 }
 
 .titlebar .image-button.suggested-action:backdrop {
@@ -41,41 +41,41 @@
 }
 
 .titlebar .image-button.suggested-action:backdrop image {
-    color: alpha (#fff, 0.7);
+    color: alpha(#fff, 0.7);
 }
 
 .titlebar .image-button.suggested-action:disabled image {
-    color: shade (@textColorPrimary, 1.5);
+    color: shade(@textColorPrimary, 1.5);
     -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
 }
 
 .titlebar .image-button.suggested-action:disabled:backdrop {
-    border-color: shade (@textColorPrimary, 1.8);
+    border-color: shade(@textColorPrimary, 1.8);
 }
 
 .titlebar .image-button.suggested-action:active,
 .titlebar .image-button.suggested-action:active:hover,
 .titlebar .image-button.suggested-action:checked {
-    background-color: alpha (#fff, 0.8);
+    background-color: alpha(#fff, 0.8);
     background-image: none;
     border: 1px solid transparent;
     box-shadow: none; 
 }
 
 .titlebar .image-button.suggested-action:checked:backdrop {
-    background-color: alpha (#fff, 0.7);
+    background-color: alpha(#fff, 0.7);
     border-color: transparent;
 }
 
 .titlebar .image-button.suggested-action:active image,
 .titlebar .image-button.suggested-action:active:hover image,
 .titlebar .image-button.suggested-action:checked image {
-    color: shade (@colorPrimary, 0.9);
-    -gtk-icon-shadow: 0 1px alpha (#fff, 0.25);
+    color: shade(@colorPrimary, 0.9);
+    -gtk-icon-shadow: 0 1px alpha(#fff, 0.25);
 }
 
 .titlebar .image-button.suggested-action:checked:backdrop image {
-    color: shade (@colorPrimary, 1.1);
+    color: shade(@colorPrimary, 1.1);
 }
 
 .titlebar .image-button.suggested-action:backdrop image {
@@ -89,5 +89,5 @@
  */
 
 .titlebar .image-button:disabled:backdrop image {
-    color: shade (@textColorPrimary, 1.8);
+    color: shade(@textColorPrimary, 1.8);
 }

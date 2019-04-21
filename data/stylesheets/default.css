@@ -73,25 +73,25 @@
 }
 
 .network-node-online {
-    background-color: rgba(50, 209, 122, 1.0);
+    background-color: #33d17a;
 }
 
 .network-node-online-relayed {
-    background-color: rgba(11, 186, 244, 1.0);
+    background-color: #0bbaf4;
 }
 
 .network-node-unreachable {
-    background-color: rgba(251, 132, 68, 1.0);
+    background-color: #ffa348;
 }
 
 .network-node-unapproved {
-    background-color: rgba(239, 74, 92, 1.0);
+    background-color: #ed333b;
 }
 
 .network-node-error {
-    background-color: rgba(248, 228, 92, 1.0);
+    background-color: #f8e45c;
 }
 
 .network-node-offline {
-    background-color: rgba(192, 191, 188, 0.6);
+    background-color: alpha(#c0bfbc, 0.6);
 }

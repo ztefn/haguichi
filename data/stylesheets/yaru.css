@@ -5,25 +5,25 @@
  */
 
 .network-node-online {
-    background-color: rgba(76, 193, 93, 1.0);
+    background-color: #76c22b;
 }
 
 .network-node-online-relayed {
-    background-color: rgba(25, 182, 238, 1.0);
+    background-color: #5884f4;
 }
 
 .network-node-unreachable {
-    background-color: rgba(251, 133, 70, 1.0);
+    background-color: #fb7c38;
 }
 
 .network-node-unapproved {
-    background-color: rgba(247, 99, 99, 1.0);
+    background-color: #f22c42;
 }
 
 .network-node-error {
-    background-color: rgba(255, 218, 100, 1.0);
+    background-color: #fdc92b;
 }
 
 .network-node-offline {
-    background-color: rgba(179, 179, 179, 0.6);
+    background-color: alpha(#b3b3b3, 0.6);
 }
