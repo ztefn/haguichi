@@ -20,7 +20,7 @@ class Haguichi : Gtk.Application
     public static HaguichiWindow window;
     public static Dialogs.Preferences preferences_dialog;
     
-    public static Window modal_dialog;
+    public static Object modal_dialog;
     
     public static Connection connection;
     public static AppSession session;

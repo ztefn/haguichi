@@ -15,7 +15,7 @@ public class GlobalEvents
     public static bool search_active;
     public static bool attach_blocking;
     
-    public static void set_modal_dialog (Window? dialog)
+    public static void set_modal_dialog (Object? dialog)
     {
         GlobalActions.preferences.set_enabled (dialog == null);
         GlobalActions.shortcuts.set_enabled (dialog == null);
@@ -317,56 +317,76 @@ public class GlobalEvents
     {
         DateTime now = new DateTime.now_local();
         
-        FileChooserDialog chooser = new FileChooserDialog (Text.config_save_title, Haguichi.window, FileChooserAction.SAVE, Text.cancel_label, ResponseType.CANCEL);
+#if GTK_3_20
+        FileChooserNative chooser = new FileChooserNative (Text.config_save_title,
+                                                           Haguichi.window,
+                                                           FileChooserAction.SAVE,
+                                                           Text.save_label,
+                                                           Text.cancel_label);
+#else
+        FileChooserDialog chooser = new FileChooserDialog (Text.config_save_title,
+                                                           Haguichi.window,
+                                                           FileChooserAction.SAVE,
+                                                           Text.cancel_label, ResponseType.CANCEL);
         
-        GlobalEvents.set_modal_dialog (chooser);
+        Button save_but = (Button) chooser.add_button (Text.save_label, ResponseType.ACCEPT);
+        save_but.get_style_context().add_class ("suggested-action");
+#endif
         
-        Button ok_but = (Button) chooser.add_button (Text.save_label, ResponseType.OK);
-        ok_but.get_style_context().add_class ("suggested-action");
+        set_modal_dialog (chooser);
         
         chooser.modal = true;
         chooser.do_overwrite_confirmation = true;
         chooser.add_filter (get_file_filter());
         chooser.set_current_folder (Environment.get_home_dir());
         chooser.set_current_name ("logmein-hamachi-config_" + now.format ("%Y-%m-%d") + ".tar.gz");
-        chooser.show_all();
+        chooser.show();
         
         chooser.response.connect ((response_id) =>
         {
-            if (response_id == ResponseType.OK)
+            if (response_id == ResponseType.ACCEPT)
             {
                 Hamachi.save_config (chooser.get_filename());
             }
             
-            GlobalEvents.set_modal_dialog (null);
+            set_modal_dialog (null);
             chooser.destroy();
         });
     }
     
     public static void restore_config ()
     {
-        FileChooserDialog chooser = new FileChooserDialog (Text.config_restore_title, Haguichi.window, FileChooserAction.OPEN, Text.cancel_label, ResponseType.CANCEL);
+#if GTK_3_20
+        FileChooserNative chooser = new FileChooserNative (Text.config_restore_title,
+                                                           Haguichi.window,
+                                                           FileChooserAction.OPEN,
+                                                           Text.config_restore_button_label,
+                                                           Text.cancel_label);
+#else
+        FileChooserDialog chooser = new FileChooserDialog (Text.config_restore_title,
+                                                           Haguichi.window,
+                                                           FileChooserAction.OPEN,
+                                                           Text.cancel_label, ResponseType.CANCEL);
         
-        GlobalEvents.set_modal_dialog (chooser);
+        Button restore_but = (Button) chooser.add_button (Text.config_restore_button_label, ResponseType.ACCEPT);
+        restore_but.get_style_context().add_class ("suggested-action");
+#endif
         
-        Button ok_but = (Button) chooser.add_button (Text.config_restore_button_label, ResponseType.OK);
-        ok_but.get_style_context().add_class ("suggested-action");
+        set_modal_dialog (chooser);
         
         chooser.modal = true;
         chooser.add_filter (get_file_filter());
         chooser.set_current_folder (Environment.get_home_dir());
-        chooser.show_all();
+        chooser.show();
         
         chooser.response.connect ((response_id) =>
         {
-            chooser.hide();
-            
-            if (response_id == ResponseType.OK)
+            if (response_id == ResponseType.ACCEPT)
             {
                 Hamachi.restore_config (chooser.get_filename());
             }
             
-            GlobalEvents.set_modal_dialog (null);
+            set_modal_dialog (null);
             chooser.destroy();
         });
     }
@@ -429,8 +449,11 @@ public class GlobalEvents
         
         if (Haguichi.modal_dialog != null)
         {
-            Haguichi.modal_dialog.destroy();
-            GlobalEvents.set_modal_dialog (null);
+            if (Haguichi.modal_dialog is Window)
+            {
+                ((Window) Haguichi.modal_dialog).destroy();
+            }
+            set_modal_dialog (null);
         }
         
         Haguichi.window.hide();
