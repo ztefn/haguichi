@@ -459,25 +459,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         return false;
     }
     
-    public void toggle_main_window ()
-    {
-        if (Haguichi.modal_dialog == null)
-        {
-            if (minimized || !visible)
-            {
-                show();
-            }
-            else
-            {
-                hide();
-            }
-        }
-        else
-        {
-            Haguichi.modal_dialog.present();
-        }
-    }
-    
     public override void show ()
     {
         // Move window to the current desktop and correct for any desktop compositor deviation
