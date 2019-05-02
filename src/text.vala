@@ -105,6 +105,7 @@ Português do Brasil (pt-BR)
     Rodrigo de Avila https://launchpad.net/~rodrigo.avila
 
 Русский (ru)
+    Dmitrij Kiryanov https://launchpad.net/~kagaminep
     jmb_kz https://launchpad.net/~jmb-kz
     Sergey Korolev https://launchpad.net/~slipped-on-blade
     Sergey Sedov https://launchpad.net/~serg-sedov
