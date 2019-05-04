@@ -81,15 +81,15 @@
 }
 
 .network-node-unreachable {
-    background-color: #ffa348;
+    background-color: #ff9934;
 }
 
 .network-node-unapproved {
-    background-color: #ed333b;
+    background-color: #ed3940;
 }
 
 .network-node-error {
-    background-color: #f8e45c;
+    background-color: #f7dd49;
 }
 
 .network-node-offline {
