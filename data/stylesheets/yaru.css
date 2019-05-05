@@ -5,25 +5,25 @@
  */
 
 .network-node-online {
-    background-color: #46bf57;
+    background: #46bf57;
 }
 
 .network-node-online-relayed {
-    background-color: #19b6ee;
+    background: #19b6ee;
 }
 
 .network-node-unreachable {
-    background-color: #fb7c38;
+    background: #fb7c38;
 }
 
 .network-node-unapproved {
-    background-color: #f22c42;
+    background: #f22c42;
 }
 
 .network-node-error {
-    background-color: #ffd347;
+    background: #ffd347;
 }
 
 .network-node-offline {
-    background-color: alpha(#b3b3b3, 0.6);
+    background: alpha(#b3b3b3, 0.6);
 }
