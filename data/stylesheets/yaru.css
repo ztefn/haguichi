@@ -5,11 +5,11 @@
  */
 
 .network-node-online {
-    background-color: #76c22b;
+    background-color: #46bf57;
 }
 
 .network-node-online-relayed {
-    background-color: #5884f4;
+    background-color: #19b6ee;
 }
 
 .network-node-unreachable {
@@ -21,7 +21,7 @@
 }
 
 .network-node-error {
-    background-color: #fdc92b;
+    background-color: #ffd347;
 }
 
 .network-node-offline {
