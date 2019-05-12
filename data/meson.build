@@ -49,23 +49,6 @@ i18n.merge_file(
     install_dir: join_paths(get_option('datadir'), 'applications')
 )
 
-autostart = app_id + '.autostart.desktop'
-
-autostart_in = configure_file(
-    input: autostart + '.in.in',
-    output: autostart + '.in',
-    configuration: conf
-)
-
-i18n.merge_file(
-    type: 'desktop',
-    input: autostart_in,
-    output: autostart,
-    po_dir: po_dir,
-    install: true,
-    install_dir: join_paths(get_option('sysconfdir'), 'xdg', 'autostart'),
-)
-
 gnome = import('gnome')
 
 resources = gnome.compile_resources(
