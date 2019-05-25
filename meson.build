@@ -17,7 +17,7 @@ else
 endif
 
 binary_name = pkg_name
-icon_name   = pkg_name
+icon_name   = app_id
 gettext_pkg = pkg_name
 
 add_project_arguments(
