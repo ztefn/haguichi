@@ -346,6 +346,7 @@ public class GlobalEvents
         {
             if (response_id == ResponseType.ACCEPT)
             {
+                Debug.log (Debug.domain.INFO, "GlobalEvents.save_config", "Saving hamachi configuration backup to " + chooser.get_filename());
                 Hamachi.save_config (chooser.get_filename());
             }
             
@@ -383,6 +384,7 @@ public class GlobalEvents
         {
             if (response_id == ResponseType.ACCEPT)
             {
+                Debug.log (Debug.domain.INFO, "GlobalEvents.restore_config", "Restoring hamachi configuration backup from " + chooser.get_filename());
                 Hamachi.restore_config (chooser.get_filename());
             }
             

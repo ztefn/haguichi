@@ -816,8 +816,27 @@ public class Hamachi : Object
         {
             GlobalEvents.stop_hamachi();
             
-            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; rm " + Hamachi.data_path + "/*; tar -xavf '" + filename + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
+            string file_path = filename;
+            
+            // When running inside Flatpak sanbox we create temporary copy of the file within the home directory so it's accessible as super user,
+            // otherwise we get a permission error when trying to access /run/user/1000/doc/xxxxxxxx/etc
+            if (Haguichi.running_in_flatpak)
+            {
+                file_path = "/home/" + Environment.get_user_name() + "/.hamachi-config-restore";
+                
+                Debug.log (Debug.domain.INFO, "Hamachi.restore_config", "Creating temporary file at " + file_path + "...");
+                Command.return_output ("cp " + filename + " " + file_path);
+            }
+            
+            output = Command.return_output (Command.sudo + " " + Command.sudo_args + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; rm " + Hamachi.data_path + "/*; tar -xavf '" + file_path + "' -C /; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
             Debug.log (Debug.domain.INFO, "Hamachi.restore_config", output);
+            
+            // Remove temporary copy of the file
+            if (Haguichi.running_in_flatpak)
+            {
+                Debug.log (Debug.domain.INFO, "Hamachi.restore_config", "Removing temporary file at " + file_path + "...");
+                Command.return_output ("rm " + file_path);
+            }
             
             Controller.init();
         }

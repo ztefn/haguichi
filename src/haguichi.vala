@@ -28,6 +28,7 @@ class Haguichi : Gtk.Application
     
     public static string current_desktop;
     
+    public static bool running_in_flatpak;
     public static bool use_app_menu;
     public static bool window_use_header_bar;
     public static bool dialog_use_header_bar;
@@ -88,6 +89,10 @@ class Haguichi : Gtk.Application
         Intl.textdomain (GETTEXT_PACKAGE);
         
         Debug.log (Debug.domain.INFO, "Haguichi.startup", "Greetings, I am " + Text.app_name + " " + Text.app_version);
+        
+        running_in_flatpak = FileUtils.test ("/.flatpak-info", FileTest.EXISTS);
+        Debug.log (Debug.domain.ENVIRONMENT, "Haguichi.startup", "Running inside Flatpak sandbox: " + running_in_flatpak.to_string());
+        Command.spawn_wrap = running_in_flatpak ? "flatpak-spawn --host " : "";
         
         Notify.init (Text.app_name);
         Text.init();

@@ -266,7 +266,7 @@ public class Controller : Object
         
         try
         {
-            GLib.Process.spawn_command_line_sync ("ping -c1 -W1 " + (string) Settings.check_internet_ip.val, out stdout, out stderr, out status);
+            GLib.Process.spawn_command_line_sync (Command.spawn_wrap + "ping -c1 -W1 " + (string) Settings.check_internet_ip.val, out stdout, out stderr, out status);
             
             success = (status == 0);
             
@@ -283,7 +283,7 @@ public class Controller : Object
             
             try
             {
-                GLib.Process.spawn_command_line_sync ("dig +short +tries=1 +time=1 " + (string) Settings.check_internet_hostname.val, out stdout, out stderr, out status);
+                GLib.Process.spawn_command_line_sync (Command.spawn_wrap + "dig +short +tries=1 +time=1 " + (string) Settings.check_internet_hostname.val, out stdout, out stderr, out status);
                 
                 success = ((status == 0) && (stdout != ""));
                 

@@ -10,6 +10,8 @@
 
 public class Command : Object
 {
+    public static string spawn_wrap;
+    
     public static string sudo;
     public static string sudo_args;
     public static string sudo_start;
@@ -35,7 +37,7 @@ public class Command : Object
         
         try
         {
-            GLib.Process.spawn_command_line_async (command);
+            GLib.Process.spawn_command_line_async (spawn_wrap + command);
         }
         catch (SpawnError e)
         {
@@ -51,7 +53,7 @@ public class Command : Object
         
         try
         {
-            GLib.Process.spawn_command_line_sync (command, out output, out error, out exit_status);
+            GLib.Process.spawn_command_line_sync (spawn_wrap + command, out output, out error, out exit_status);
             
             if (error != "")
             {
