@@ -81,11 +81,11 @@
 }
 
 .network-node-unreachable {
-    background: #ff9934;
+    background: #ff9329;
 }
 
 .network-node-unapproved {
-    background: #ed3940;
+    background: #f93840;
 }
 
 .network-node-error {
