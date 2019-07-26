@@ -1,3 +1,9 @@
+com.github.ztefn.haguichi (1.142.0) bionic; urgency=medium
+
+  * Stable release for Juno based on 1.4.2
+
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Fri, 26 Jul 2019 09:19:53 +0200
+
 com.github.ztefn.haguichi (1.141.1) bionic; urgency=medium
 
   * Stable release for Juno based on 1.4.1

@@ -70,6 +70,18 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.142.0" date="2019-07-26">
+      <description>
+        <ul>
+          <li>Implemented FileChooserNative for GTK+ version 3.20 and later.</li>
+          <li>Nodes are now drawn using a custom cell renderer with specific style context instead of separate icon resources.</li>
+          <li>Changed symbol to indicate network ownership from outlined to filled star.</li>
+          <li>Added support for Flatpak.</li>
+          <li>Removed autostart desktop file.</li>
+          <li>Updated Russian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.141.1" date="2018-12-16">
       <description>
         <ul>
