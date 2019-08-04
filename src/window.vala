@@ -260,6 +260,10 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                 theme_name += "-dark";
             }
         }
+        else if (theme_name.has_prefix ("mint-"))
+        {
+            theme_name = "mint";
+        }
         else if (theme_name != "yaru")
         {
             theme_name = "default";
