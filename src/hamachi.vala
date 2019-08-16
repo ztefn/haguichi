@@ -37,7 +37,7 @@ public class Hamachi : Object
         
         if (Haguichi.demo_mode)
         {
-            version = "2.1.0.198";
+            version = "2.1.0.203";
             return;
         }
         
