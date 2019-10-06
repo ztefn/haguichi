@@ -264,11 +264,16 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         {
             theme_name = "mint";
         }
-        else if (theme_name != "yaru")
+        else if (theme_name.has_prefix ("yaru"))
+        {
+            theme_name = "yaru";
+        }
+        else
         {
             theme_name = "default";
         }
         
+        Debug.log (Debug.domain.GUI, "Window.set_styles", "Loading " + theme_name + " stylesheet");
         provider.load_from_resource ("/com/github/ztefn/haguichi/stylesheets/" + theme_name + ".css");
     }
     
