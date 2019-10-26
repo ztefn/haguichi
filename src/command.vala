@@ -177,6 +177,7 @@ public class Command : Object
             "mate-terminal",
             "pantheon-terminal",
             "io.elementary.terminal",
+            "tilix",
             "xfce4-terminal",
             "konsole",
             "deepin-terminal",
