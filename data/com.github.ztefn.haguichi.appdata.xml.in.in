@@ -27,6 +27,7 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.4.2" date="2019-12-18"/>
     <release version="1.4.1" date="2018-11-07"/>
     <release version="1.4.0" date="2018-05-10"/>
     <release version="1.3.8" date="2017-09-23"/>
@@ -70,7 +71,7 @@
     <lang percentage="100">nl</lang>
     <lang percentage="100">pl</lang>
     <lang percentage="100">pt_BR</lang>
-    <lang percentage="89">ru</lang>
+    <lang percentage="98">ru</lang>
     <lang percentage="96">sk</lang>
     <lang percentage="100">sv</lang>
     <lang percentage="96">tr</lang>
