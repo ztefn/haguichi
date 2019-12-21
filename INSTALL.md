@@ -50,14 +50,14 @@
 
   **for-ubuntu**
 
-  This option enables full integration with Ubuntu by installing ubuntu-mono and Suru icons.
+  This option enables full integration with Ubuntu by installing ubuntu-mono and Yaru icons.
 
     $ meson configure -Dfor-ubuntu=true
 
 
   **use-rdnn-everywhere**
 
-  This option enables usage of [RDNN](https://en.wikipedia.org/wiki/Reverse_domain_name_notation "Reverse Domain Name Notation") everywhere, specifically for binary, icon and gettext package.
+  This option enables usage of [RDNN](https://en.wikipedia.org/wiki/Reverse_domain_name_notation "Reverse Domain Name Notation") everywhere, specifically for binary and gettext package.
 
     $ meson configure -Duse-rdnn-everywhere=true
 
