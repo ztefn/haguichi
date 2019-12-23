@@ -5,7 +5,7 @@
     "sdk": "org.gnome.Sdk",
     "command": "haguichi",
     "finish-args": [
-        "--filesystem=/var/lib/logmein-hamachi",
+        "--filesystem=/var/lib/logmein-hamachi:ro",
 
         "--system-talk-name=org.freedesktop.login1",
 
@@ -15,7 +15,7 @@
         "--share=network",
         "--share=ipc",
 
-        "--socket=x11",
+        "--socket=fallback-x11",
         "--socket=wayland"
     ],
     "cleanup": [
@@ -34,7 +34,6 @@
         {
             "name": "haguichi",
             "buildsystem": "meson",
-            "builddir": true,
             "sources": [
                 {
                     "type": "git",
