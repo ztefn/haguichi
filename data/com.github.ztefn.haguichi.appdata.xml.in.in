@@ -15,6 +15,7 @@
       <li>Fully customizable commands</li>
       <li>Backup and restore your Hamachi configuration folder</li>
     </ul>
+    <p><em>Please note: Requires installation of Hamachi on the system in order to use.</em></p>
   </description>
   <screenshots>
     <screenshot width="1248" height="702" type="default">https://www.haguichi.net/appdata/screenshot-1.png</screenshot>
