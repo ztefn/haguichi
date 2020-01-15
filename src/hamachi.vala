@@ -119,14 +119,14 @@ public class Hamachi : Object
         }
         else if ((init_system == "init.d") ||
                  ((init_system == "auto") &&
-                  FileUtils.test ("/etc/init.d/logmein-hamachi", GLib.FileTest.EXISTS)))
+                  Utils.path_exists ("f", "/etc/init.d/logmein-hamachi")))
         {
             // Sysvinit
             service = "/etc/init.d/logmein-hamachi {0}";
         }
         else if ((init_system == "rc.d") ||
                  ((init_system == "auto") &&
-                  FileUtils.test ("/etc/rc.d/logmein-hamachi", GLib.FileTest.EXISTS)))
+                  Utils.path_exists ("f", "/etc/rc.d/logmein-hamachi")))
         {
             // BSD style init
             service = "/etc/rc.d/logmein-hamachi {0}";

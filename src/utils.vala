@@ -160,4 +160,23 @@ public class Utils : Object
         
         return null;
     }
+    
+    public static bool path_exists (string type, string path)
+    {
+        if (FileUtils.test (path, GLib.FileTest.EXISTS))
+        {
+            Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "FileUtils tested true for path " + path);
+            return true;
+        }
+        
+        if ((Haguichi.running_in_flatpak) &&
+            (Command.return_output ("bash -c \"test -" + type + " " + path + " &>/dev/null || echo 'path not found'\"") == ""))
+        {
+            Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Test command tested true for path " + path);
+            return true;
+        }
+        
+        Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Path " + path + " was not found");
+        return false;
+    }
 }

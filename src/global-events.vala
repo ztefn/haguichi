@@ -288,7 +288,7 @@ public class GlobalEvents
     
     public static void set_config ()
     {
-        if (FileUtils.test (Hamachi.data_path, GLib.FileTest.EXISTS))
+        if (Utils.path_exists ("d", Hamachi.data_path))
         {
             GlobalActions.open_config.set_enabled (true);
             GlobalActions.save_config.set_enabled (true);
