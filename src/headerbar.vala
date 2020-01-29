@@ -136,7 +136,6 @@ public class Headerbar : HeaderBar
         
         var show_offline = new GLib.MenuItem (Text.show_offline_members, "app.show-offline-members");
         var preferences  = new GLib.MenuItem (Text.preferences_label,    "app.preferences");
-        var donate       = new GLib.MenuItem (Text.donate_label,         "app.donate");
         var shortcuts    = new GLib.MenuItem (Text.shortcuts_label,      "app.shortcuts");
         var help         = new GLib.MenuItem (Text.help_label,           "app.help");
         var about        = new GLib.MenuItem (Text.about_label,          "app.about");
@@ -160,9 +159,6 @@ public class Headerbar : HeaderBar
         var preferences_section = new GLib.Menu();
         preferences_section.append_item (preferences);
         
-        var donate_section = new GLib.Menu();
-        donate_section.append_item (donate);
-        
         var meta_section = new GLib.Menu();
         meta_section.append_item (shortcuts);
         meta_section.append_item (help);
@@ -176,7 +172,6 @@ public class Headerbar : HeaderBar
         if (!Haguichi.use_app_menu)
         {
             gear_menu.append_section (null, preferences_section);
-            gear_menu.append_section (null, donate_section);
             gear_menu.append_section (null, meta_section);
         }
         

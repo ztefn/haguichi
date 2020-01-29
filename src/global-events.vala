@@ -403,11 +403,6 @@ public class GlobalEvents
         Command.open_uri (Text.help_url);
     }
     
-    public static void donate ()
-    {
-        Command.open_uri (Text.donate_url);
-    }
-    
     public static void shortcuts ()
     {
 #if GTK_3_20

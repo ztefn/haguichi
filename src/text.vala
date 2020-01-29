@@ -129,7 +129,6 @@ Türkçe (tr)
     public const  string redirect_url              = app_website  + "/redirect/?action=";
     public const  string help_url                  = redirect_url + "help";
     public const  string get_hamachi_url           = redirect_url + "get-hamachi";
-    public const  string donate_url                = redirect_url + "donate";
     public const  string shortcuts_url             = redirect_url + "shortcuts";
     
     public static string close_label;
@@ -139,7 +138,6 @@ Türkçe (tr)
     public static string revert_label;
     public static string delete_label;
     public static string information_label;
-    public static string donate_label;
     public static string preferences_label;
     public static string shortcuts_label;
     public static string help_label;
@@ -378,7 +376,6 @@ Türkçe (tr)
         revert_label                               = _("_Revert");
         delete_label                               = _("_Delete");
         information_label                          = _("_Information");
-        donate_label                               = _("_Donate");
         preferences_label                          = _("_Preferences");
         shortcuts_label                            = _("_Keyboard Shortcuts");
         help_label                                 = _("_Help");

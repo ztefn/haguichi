@@ -37,7 +37,6 @@ public class GlobalActions
     
     public static SimpleAction preferences;
     public static SimpleAction info;
-    public static SimpleAction donate;
     public static SimpleAction shortcuts;
     public static SimpleAction help;
     public static SimpleAction about;
@@ -110,9 +109,6 @@ public class GlobalActions
         info = new SimpleAction ("info", null);
         info.activate.connect (GlobalEvents.information);
         
-        donate = new SimpleAction ("donate", null);
-        donate.activate.connect (GlobalEvents.donate);
-        
         shortcuts = new SimpleAction ("shortcuts", null);
         shortcuts.activate.connect (GlobalEvents.shortcuts);
         
@@ -142,7 +138,6 @@ public class GlobalActions
         app.add_action (restore_config);
         app.add_action (sort_by);
         app.add_action (show_offline);
-        app.add_action (donate);
         app.add_action (preferences);
         app.add_action (shortcuts);
         app.add_action (info);
@@ -165,9 +160,6 @@ public class GlobalActions
         
         if (Haguichi.use_app_menu)
         {
-            var section0 = new Menu();
-            section0.append (Text.donate_label, "app.donate");
-            
             var section1 = new Menu();
             section1.append (Text.preferences_label, "app.preferences");
             
@@ -178,9 +170,8 @@ public class GlobalActions
             section2.append (Text.quit_label,      "app.quit");
             
             var menu = new Menu();
-            menu.insert_section (0, null, section0);
-            menu.insert_section (1, null, section1);
-            menu.insert_section (2, null, section2);
+            menu.insert_section (0, null, section1);
+            menu.insert_section (1, null, section2);
             
             app.set_app_menu (menu);
         }
