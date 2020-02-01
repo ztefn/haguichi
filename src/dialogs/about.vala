@@ -26,7 +26,6 @@ namespace Dialogs
                     copyright:          Text.app_copyright,
                     website:            Text.app_website,
                     website_label:      Text.app_website_label,
-                    authors:            Text.app_authors,
                     translator_credits: Text.app_translator_credits);
             
             GlobalEvents.set_modal_dialog (this);

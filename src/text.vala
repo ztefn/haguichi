@@ -16,6 +16,7 @@ public class Text : Object
     public const  string app_version               = VERSION;
     public const  string app_website               = "https://www.haguichi.net";
     public const  string app_website_label         = "www.haguichi.net";
+    public static string app_translator_credits;
     public static string app_comments;
     public static string app_generic_name;
     public static string app_description;
@@ -51,80 +52,6 @@ Options:
   --list=FILE             Use a text file as list in demo mode
 
 """ + app_info + "\n";
-    
-    public static string[] app_authors;
-    public const  string   app_translator_credits  =
-"""Asturianu (ast)
-    Enol Puente https://launchpad.net/~enolp
-    Tornes Llume https://launchpad.net/~l-lumex03-tornes
-
-Български (bg)
-    Dimitar Dimitrov https://launchpad.net/~dimitrov
-
-Čeština (cs)
-    Jan Bažant https://launchpad.net/~brbla
-    Zdeněk Kopš https://launchpad.net/~zdenekkops
-
-Deutsch (de)
-    Jannik Heller https://launchpad.net/~scrawl
-
-Español (es)
-    Adolfo Jayme https://launchpad.net/~fitojb
-    Eduardo Parra https://launchpad.net/~soker
-
-Français (fr)
-    Emilien Klein https://launchpad.net/~emilien-klein
-    Gabriel U. https://launchpad.net/~gabriel-ull
-    Jean-Marc https://launchpad.net/~m-balthazar
-
-Bahasa Indonesia (id)
-    Fattah Rizki https://launchpad.net/~galamarv
-    Hertatijanto Hartono https://launchpad.net/~dvertx
-
-Italiano (it)
-    Enrico Grassi https://launchpad.net/~enricog
-
-日本語 (ja)
-    Ryo Nakano https://launchpad.net/~ryonakaknock3
-    Satoru Matsumoto https://launchpad.net/~helios-reds
-
-Қазақ (kk)
-    jmb_kz https://launchpad.net/~jmb-kz
-
-Lietuvių kalba (lt)
-    Moo https://launchpad.net/~mooo
-
-Nederlands (nl)
-    Stephen Brandt https://launchpad.net/~ztefn
-
-Polski (pl)
-    Antoni Sperka https://launchpad.net/~antek1004-gmail
-    Piotr Drąg https://launchpad.net/~piotrdrag
-
-Português do Brasil (pt-BR)
-    Rodrigo de Avila https://launchpad.net/~rodrigo.avila
-
-Русский (ru)
-    Dmitrij Kiryanov https://launchpad.net/~kagaminep
-    jmb_kz https://launchpad.net/~jmb-kz
-    Sergey Korolev https://launchpad.net/~slipped-on-blade
-    Sergey Sedov https://launchpad.net/~serg-sedov
-
-Slovenčina (sk)
-    Zdeněk Kopš https://launchpad.net/~zdenekkops
-
-Svenska (sv)
-    Daniel Holm https://launchpad.net/~danielholm
-    Daniel Nylander https://launchpad.net/~yeager
-    David Bengtsson https://launchpad.net/~jstfaking
-
-Türkçe (tr)
-    Aytunç Yeni https://launchpad.net/~aytuncyeni
-    Kudret Emre https://launchpad.net/~kudretemre
-
-Українська (uk)
-    Fedir Zinchuk https://launchpad.net/~fedikw
-""";
     
     public const  string redirect_url              = app_website  + "/redirect/?action=";
     public const  string help_url                  = redirect_url + "help";
@@ -360,14 +287,14 @@ Türkçe (tr)
     
     public static void init ()
     {
+        // Translator credits. Put one translator per line, in the form of "NAME URL".
+        app_translator_credits                     = _("translator-credits");
         // Description used in about dialog.
         app_comments                               = _("A graphical frontend for Hamachi");
         // Generic name used in application launchers.
         app_generic_name                           = _("Hamachi Network Manager");
         // Description used in application launchers.
         app_description                            = _("Join and create local networks over the Internet");
-        
-        app_authors                                = {"Stephen Brandt https://launchpad.net/~ztefn", ""};
         
         close_label                                = _("_Close");
         cancel_label                               = _("_Cancel");
