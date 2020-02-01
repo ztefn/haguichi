@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-29 16:53+0100\n"
-"PO-Revision-Date: 2018-08-25 19:22+0000\n"
+"PO-Revision-Date: 2020-01-31 16:30+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
-"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-08-25 21:36+0000\n"
-"X-Generator: Launchpad (build 18759)\n"
+"X-Launchpad-Export-Date: 2020-02-01 13:28+0000\n"
+"X-Generator: Launchpad (build 0a62c17273454a1313f81a74a2198ec30b44c7b6)\n"
+"Language: pl\n"
 
 #. Description used in about dialog.
 #: src/text.vala:364 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -217,7 +217,8 @@ msgstr "Hamachi nie jest zainstalowane"
 
 #: src/text.vala:427
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
+msgstr ""
+"Proszę pobrać Hamachi i postępować zgodnie z instrukcjami instalacji."
 
 #: src/text.vala:428
 msgid "Hamachi version {0} is obsolete"
@@ -535,7 +536,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Na pewno wykluczyć członka „{0}” z sieci „{1}”?"
 
 #: src/text.vala:525
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jeśli zostanie przyjęte, to wyrzuceni członkowie mogą ponownie dołączyć do "
 "sieci w dowolnym czasie."
@@ -869,6 +871,8 @@ msgstr ""
 msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr ""
+"Proszę zauważyć: do użycia wymagana jest instalacja programu Hamachi na "
+"komputerze."
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:57
 msgid "Stephen Brandt"
@@ -930,9 +934,6 @@ msgstr "Zwinięcie wszystkich sieci"
 msgid "Execute command"
 msgstr "Wykonanie polecenia"
 
-#~ msgid "_Donate"
-#~ msgstr "_Wsparcie finansowe"
-
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Graficzny interfejs dla Hamachi."
 
@@ -941,3 +942,6 @@ msgstr "Wykonanie polecenia"
 
 #~ msgid "_Refresh"
 #~ msgstr "_Odśwież"
+
+#~ msgid "_Donate"
+#~ msgstr "_Wsparcie finansowe"
