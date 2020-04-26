@@ -130,6 +130,7 @@ public class GlobalEvents
     {
         HaguichiWindow.header_bar.search_but.active = true;
         HaguichiWindow.search_bar_revealer.set_reveal_child (true);
+        HaguichiWindow.search_entry.realize(); // Avoid Gtk-CRITICAL warning "gtk_widget_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed"
         HaguichiWindow.search_entry.grab_focus();
         
         search_active = true;
