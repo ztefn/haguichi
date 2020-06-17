@@ -25,7 +25,8 @@ class HaguichiIndicator
     {
         // Only on specific desktops we use symbolic icons
         if ((Haguichi.current_desktop.contains ("GNOME")) ||
-            (Haguichi.current_desktop == "Pantheon"))
+            (Haguichi.current_desktop == "Pantheon") ||
+            (Haguichi.current_desktop == "X-Cinnamon"))
         {
             string postfix = "-symbolic";
             
