@@ -113,6 +113,7 @@ class Haguichi : Gtk.Application
             (current_desktop == "Deepin") ||
             (current_desktop == "KDE") ||
             (current_desktop == "LXQt") ||
+            (current_desktop == "MATE") ||
             (current_desktop == "Pantheon") ||
             (current_desktop == "XFCE") ||
             (current_desktop == "X-Cinnamon"))
