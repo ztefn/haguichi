@@ -189,19 +189,19 @@ msgstr "Desconectado"
 
 #: src/text.vala:344
 msgid "Initializing…"
-msgstr "A inicializar..."
+msgstr "A inicializar…"
 
 #: src/text.vala:345
 msgid "Connecting…"
-msgstr "A conectar..."
+msgstr "A conectar…"
 
 #: src/text.vala:346
 msgid "Logging in…"
-msgstr "A entrar..."
+msgstr "A entrar…"
 
 #: src/text.vala:347
 msgid "Updating…"
-msgstr "A atualizar..."
+msgstr "A atualizar…"
 
 #: src/text.vala:349
 msgid "Hamachi is not configured"
@@ -362,7 +362,7 @@ msgstr "_Copiar ID de Cliente"
 
 #: src/text.vala:395
 msgid "Change _Nickname…"
-msgstr "Alterar _Alcunha..."
+msgstr "Alterar _Alcunha…"
 
 #: src/text.vala:396
 msgid "Change Nickname"
@@ -374,7 +374,7 @@ msgstr "_Alterar"
 
 #: src/text.vala:399
 msgid "Change _Password…"
-msgstr "Alterar _Senha..."
+msgstr "Alterar _Senha…"
 
 #: src/text.vala:400
 msgid "Change Password"
@@ -394,7 +394,7 @@ msgstr "Pendente"
 
 #: src/text.vala:407
 msgid "_Attach to Account…"
-msgstr "_Anexar a uma Conta..."
+msgstr "_Anexar a uma Conta…"
 
 #: src/text.vala:408
 msgid "Attach to Account"
@@ -422,7 +422,7 @@ msgstr "_Abrir Pasta"
 
 #: src/text.vala:415
 msgid "_Save a Backup…"
-msgstr "_Gravar uma Cópia de Segurança..."
+msgstr "_Gravar uma Cópia de Segurança…"
 
 #: src/text.vala:416
 msgid "Save a Backup"
@@ -430,7 +430,7 @@ msgstr "Gravar uma Cópia de Segurança"
 
 #: src/text.vala:417
 msgid "_Restore from Backup…"
-msgstr "_Restaurar de uma Cópia de Segurança..."
+msgstr "_Restaurar de uma Cópia de Segurança…"
 
 #: src/text.vala:418
 msgid "Restore from Backup"
@@ -454,7 +454,7 @@ msgstr "Todos os arquivos suportados"
 
 #: src/text.vala:424
 msgid "_Join Network…"
-msgstr "_Juntar-se à Rede..."
+msgstr "_Juntar-se à Rede…"
 
 #: src/text.vala:425
 msgid "Join Network"
@@ -466,7 +466,7 @@ msgstr "_Juntar-se"
 
 #: src/text.vala:428
 msgid "_Create Network…"
-msgstr "_Criar Rede..."
+msgstr "_Criar Rede…"
 
 #: src/text.vala:429
 msgid "Create Network"
