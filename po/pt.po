@@ -69,7 +69,7 @@ msgstr "_Preferências"
 
 #: src/text.vala:307
 msgid "_Keyboard Shortcuts"
-msgstr "_Atalhos do Teclado"
+msgstr "Atalhos do _Teclado"
 
 #: src/text.vala:308
 msgid "_Help"
@@ -81,7 +81,7 @@ msgstr "_Sobre"
 
 #: src/text.vala:310
 msgid "_Quit"
-msgstr "_Sair"
+msgstr "Sai_r"
 
 #: src/text.vala:312
 msgid "_Show Haguichi"
@@ -145,7 +145,7 @@ msgstr "_Senha:"
 
 #: src/text.vala:331
 msgid "_Nickname:"
-msgstr "_Alcunha:"
+msgstr "Alcu_nha:"
 
 #: src/text.vala:334
 msgid "Offline"
@@ -309,7 +309,7 @@ msgstr "_Bloqueado"
 
 #: src/text.vala:379
 msgid "_New Member Approval"
-msgstr "_Aprovação de Novo Membro"
+msgstr "Aprovação de _Novo Membro"
 
 #: src/text.vala:380
 msgid "_Automatically"
@@ -362,7 +362,7 @@ msgstr "_Copiar ID de Cliente"
 
 #: src/text.vala:395
 msgid "Change _Nickname…"
-msgstr "Alterar _Alcunha…"
+msgstr "_Alterar Alcunha…"
 
 #: src/text.vala:396
 msgid "Change Nickname"
@@ -474,7 +474,7 @@ msgstr "Criar Rede"
 
 #: src/text.vala:430
 msgid "C_reate"
-msgstr "_Criar"
+msgstr "C_riar"
 
 #: src/text.vala:432
 msgid "Network not found"
