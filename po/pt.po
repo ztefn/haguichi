@@ -21,7 +21,8 @@ msgstr ""
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:291
 msgid "translator-credits"
-msgstr "tradução-créditos"
+msgstr ""
+"André Barata https://github.com/rottenpants466"
 
 #. Description used in about dialog.
 #: src/text.vala:293 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
