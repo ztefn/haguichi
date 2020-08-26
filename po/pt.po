@@ -703,7 +703,7 @@ msgstr "Comando IPv_6:"
 
 #: src/text.vala:506
 msgid "Use %A for address and %N for nickname"
-msgstr "Usar %E para endereço e %A para alcunha"
+msgstr "Usar %A para endereço e %N para alcunha"
 
 #: src/text.vala:507
 msgid "_Priority:"
