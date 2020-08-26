@@ -293,11 +293,11 @@ msgstr "Capacidade:"
 
 #: src/text.vala:375
 msgid "_Go Online"
-msgstr "_FIcar Ligado"
+msgstr "_Ficar Ligado"
 
 #: src/text.vala:376
 msgid "_Go Offline"
-msgstr "_FIcar Desligado"
+msgstr "_Ficar Desligado"
 
 #: src/text.vala:377
 msgid "_Leave"
