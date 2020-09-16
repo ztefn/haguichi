@@ -8,8 +8,8 @@
   Links
   -----
 
-   * [Homepage](https://www.haguichi.net)
-   * [Download](https://www.haguichi.net/download/)
+   * [Homepage](https://haguichi.net)
+   * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
 
@@ -17,7 +17,7 @@
   Screenshot
   ----------
 
-  ![Screenshot](https://www.haguichi.net/appdata/screenshot-1.png)
+  ![Screenshot](https://haguichi.net/appdata/screenshot-1.png)
 
 
   IRC
