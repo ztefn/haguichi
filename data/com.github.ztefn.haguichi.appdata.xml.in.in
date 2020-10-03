@@ -71,6 +71,17 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.143.0" date="2020-10-03">
+      <description>
+        <ul>
+          <li>Fixed search entry leaving out the trigger character when activated by typing for the first time.</li>
+          <li>Removed "Donate" menu item due to little use.</li>
+          <li>Translator credits are now part of the translations themselves.</li>
+          <li>Added complete Portuguese translation (thanks to André Barata).</li>
+          <li>Updated Dutch and Polish translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.142.0" date="2019-07-26">
       <description>
         <ul>
