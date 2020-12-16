@@ -129,6 +129,8 @@ public class GlobalEvents
     public static void start_search ()
     {
         HaguichiWindow.header_bar.search_but.active = true;
+        HaguichiWindow.header_bar.search_but.set_action_name ("app.stop-search");
+        HaguichiWindow.header_bar.search_but.tooltip_text = "";
         HaguichiWindow.search_bar_revealer.set_reveal_child (true);
         HaguichiWindow.search_entry.realize(); // Avoid Gtk-CRITICAL warning "gtk_widget_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed"
         HaguichiWindow.search_entry.grab_focus();
@@ -139,22 +141,13 @@ public class GlobalEvents
     public static void stop_search ()
     {
         HaguichiWindow.header_bar.search_but.active = false;
+        HaguichiWindow.header_bar.search_but.set_action_name ("app.start-search");
+        HaguichiWindow.header_bar.search_but.tooltip_text = Text.search_tip;
+        HaguichiWindow.header_bar.search_but.has_tooltip = false;
         HaguichiWindow.search_bar_revealer.set_reveal_child (false);
         HaguichiWindow.search_entry.text = "";
         
         search_active = false;
-    }
-    
-    public static void toggle_search ()
-    {
-        if (search_active) 
-        {
-            stop_search();
-        }
-        else
-        {
-            start_search();
-        }
     }
     
     public static void set_nick (string nick)

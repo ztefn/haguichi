@@ -113,7 +113,7 @@ public class Headerbar : HeaderBar
         search_but = new ToggleButton();
         search_but.valign = Align.CENTER;
         search_but.image = new Image.from_icon_name ("edit-find-symbolic", IconSize.MENU);
-        search_but.set_action_name ("app.toggle-search");
+        search_but.set_action_name ("app.start-search");
         search_but.tooltip_text = Text.search_tip;
         search_but.has_tooltip = false;
         
@@ -314,7 +314,6 @@ public class Headerbar : HeaderBar
         GlobalActions.refresh.set_enabled (false);
         
         GlobalActions.start_search.set_enabled (false);
-        GlobalActions.toggle_search.set_enabled (false);
         
         network_but.sensitive = false;
         
@@ -355,7 +354,6 @@ public class Headerbar : HeaderBar
                 GlobalActions.refresh.set_enabled (true);
                 
                 GlobalActions.start_search.set_enabled (true);
-                GlobalActions.toggle_search.set_enabled (true);
                 
                 network_but.sensitive = true;
                 

@@ -20,7 +20,6 @@ public class GlobalActions
     
     public static SimpleAction start_search;
     public static SimpleAction stop_search;
-    public static SimpleAction toggle_search;
     
     public static SimpleAction copy_ipv4;
     public static SimpleAction copy_ipv6;
@@ -75,9 +74,6 @@ public class GlobalActions
         stop_search = new SimpleAction ("stop-search", null);
         stop_search.activate.connect (GlobalEvents.stop_search);
         
-        toggle_search = new SimpleAction ("toggle-search", null);
-        toggle_search.activate.connect (GlobalEvents.toggle_search);
-        
         copy_ipv4 = new SimpleAction ("copy-ipv4", null);
         copy_ipv4.activate.connect (GlobalEvents.copy_ipv4_to_clipboard);
         
@@ -128,7 +124,6 @@ public class GlobalActions
         app.add_action (refresh);
         app.add_action (start_search);
         app.add_action (stop_search);
-        app.add_action (toggle_search);
         app.add_action (copy_ipv4);
         app.add_action (copy_ipv6);
         app.add_action (copy_id);
