@@ -70,6 +70,9 @@ Options:
     public static string about_label;
     public static string quit_label;
     
+    public static string refresh_tip;
+    public static string search_tip;
+    
     public static string show_app;
     
     public static string yes;
@@ -98,7 +101,9 @@ Options:
     public static string mismatch;
     public static string conflict;
     public static string connect_label;
+    public static string connect_tip;
     public static string disconnect_label;
+    public static string disconnect_tip;
     public static string reconnect_label;
     public static string connected;
     public static string disconnected;
@@ -308,6 +313,9 @@ Options:
         about_label                                = _("_About");
         quit_label                                 = _("_Quit");
         
+        refresh_tip                                = _("Refresh");
+        search_tip                                 = _("Search");
+        
         show_app                                   = _("_Show Haguichi");
         
         yes                                        = _("Yes");
@@ -336,7 +344,9 @@ Options:
         mismatch                                   = _("Protocol mismatch");
         conflict                                   = _("Conflicting address");
         connect_label                              = _("C_onnect");
+        connect_tip                                = _("Connect");
         disconnect_label                           = _("_Disconnect");
+        disconnect_tip                             = _("Disconnect");
         reconnect_label                            = _("Reconnect");
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");

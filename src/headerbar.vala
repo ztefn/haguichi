@@ -14,14 +14,14 @@ public class Headerbar : HeaderBar
 {
     private string mode;
     
-    public ToggleButton connect_but;
-    public MenuButton   network_but;
-    public MenuButton   client_but;
-    public ToggleButton search_but;
-    public Button       refresh_but;
-    public MenuButton   gear_but;
+    private ToggleButton connect_but;
+    private MenuButton   network_but;
+    private MenuButton   client_but;
+    public  ToggleButton search_but;
+    private Button       refresh_but;
+    private MenuButton   gear_but;
     
-    public Box box;
+    private Box box;
     
     private int minimum_width;
     private int last_allocated;
@@ -114,12 +114,16 @@ public class Headerbar : HeaderBar
         search_but.valign = Align.CENTER;
         search_but.image = new Image.from_icon_name ("edit-find-symbolic", IconSize.MENU);
         search_but.set_action_name ("app.toggle-search");
+        search_but.tooltip_text = Text.search_tip;
+        search_but.has_tooltip = false;
         
         
         refresh_but = new Button();
         refresh_but.valign = Align.CENTER;
         refresh_but.image = new Image.from_icon_name ("view-refresh-symbolic", IconSize.MENU);
         refresh_but.set_action_name ("app.refresh");
+        refresh_but.tooltip_text = Text.refresh_tip;
+        refresh_but.has_tooltip = false;
         
         
         var gear_menu = new GLib.Menu();
@@ -337,6 +341,8 @@ public class Headerbar : HeaderBar
                 break;
                 
             case "Connected":
+                connect_but.tooltip_text = Text.disconnect_tip;
+                connect_but.has_tooltip = false;
                 connect_but.set_action_name ("app.disconnect");
                 connect_but.active = true;
                 GlobalActions.disconnect.set_enabled (true);
@@ -357,6 +363,8 @@ public class Headerbar : HeaderBar
                 break;
                 
             case "Disconnected":
+                connect_but.tooltip_text = Text.connect_tip;
+                connect_but.has_tooltip = false;
                 connect_but.set_action_name ("app.connect");
                 connect_but.active = false;
                 GlobalActions.connect.set_enabled (true);
