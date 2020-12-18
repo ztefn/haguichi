@@ -12,7 +12,7 @@
 public interface LogindManager : DBusProxy
 {
     public signal void prepare_for_sleep (bool before);
-    public abstract UnixInputStream inhibit (string what, string who, string why, string mode) throws IOError;
+    public abstract UnixInputStream inhibit (string what, string who, string why, string mode) throws Error;
 }
 
 public class Inhibitor : Object
@@ -102,7 +102,7 @@ public class Inhibitor : Object
         {
             lock_file = manager.inhibit ("sleep", "Haguichi", "Properly disconnect", "delay");
         }
-        catch (IOError e)
+        catch (Error e)
         {
             Debug.log (Debug.domain.ERROR, "Inhibitor.aquire", e.message);
         }

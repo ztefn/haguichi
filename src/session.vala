@@ -11,76 +11,76 @@
 [DBus (name = "com.github.ztefn.haguichi")]
 public class AppSession : Object
 {
-    public void show ()
+    public void show () throws Error
     {
         Haguichi.window.present();
     }
     
-    public void hide ()
+    public void hide () throws Error
     {
         Haguichi.window.hide();
     }
     
-    public void start_hamachi ()
+    public void start_hamachi () throws Error
     {
         GlobalEvents.start_hamachi();
     }
     
-    public void stop_hamachi ()
+    public void stop_hamachi () throws Error
     {
         GlobalEvents.stop_hamachi();
     }
     
-    public void change_nick ()
+    public void change_nick () throws Error
     {
         Haguichi.window.present();
         GlobalEvents.change_nick();
     }
     
-    public void join_network ()
+    public void join_network () throws Error
     {
         Haguichi.window.present();
         GlobalEvents.join_network();
     }
     
-    public void create_network ()
+    public void create_network () throws Error
     {
         Haguichi.window.present();
         GlobalEvents.create_network();
     }
     
-    public void information ()
+    public void information () throws Error
     {
         Haguichi.window.present();
         GlobalEvents.information();
     }
     
-    public void preferences ()
+    public void preferences () throws Error
     {
         GlobalEvents.preferences();
     }
     
-    public void about ()
+    public void about () throws Error
     {
         GlobalEvents.about();
     }
     
-    public void quit_app ()
+    public void quit_app () throws Error
     {
         GlobalEvents.quit_app();
     }
     
-    public string get_mode ()
+    public string get_mode () throws Error
     {
         return Haguichi.window.mode;
     }
     
-    public bool get_modality ()
+    public bool get_modality () throws Error
     {
         return (Haguichi.modal_dialog != null);
     }
     
-    public bool get_visibility ()
+    public bool get_visibility () throws Error
     {
         return Haguichi.window.visible;
     }
