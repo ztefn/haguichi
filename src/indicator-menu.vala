@@ -27,16 +27,16 @@ public class IndicatorMenu : Gtk.Menu
     public IndicatorMenu()
     {
         show_item = new Gtk.CheckMenuItem.with_mnemonic (Text.show_app);
-        show_item.active = Haguichi.session.get_visibility();
+        show_item.active = get_visibility();
         show_item.toggled.connect (() =>
         {
             if (show_item.active)
             {
-                Haguichi.session.show();
+                show_window();
             }
             else
             {
-                Haguichi.session.hide();
+                hide_window();
             }
         });
         
@@ -44,40 +44,22 @@ public class IndicatorMenu : Gtk.Menu
         connecting_item.sensitive = false;
         
         connect_item = new Gtk.MenuItem.with_mnemonic (Text.connect_label);
-        connect_item.activate.connect (() =>
-        {
-            Haguichi.session.start_hamachi();
-        });
+        connect_item.activate.connect (start_hamachi);
         
         disconnect_item = new Gtk.MenuItem.with_mnemonic (Text.disconnect_label);
-        disconnect_item.activate.connect (() =>
-        {
-            Haguichi.session.stop_hamachi();
-        });
+        disconnect_item.activate.connect (stop_hamachi);
         
         join_item = new Gtk.MenuItem.with_mnemonic (Text.join_network_label);
-        join_item.activate.connect (() =>
-        {
-            Haguichi.session.join_network();
-        });
+        join_item.activate.connect (join_network);
         
         create_item = new Gtk.MenuItem.with_mnemonic (Text.create_network_label);
-        create_item.activate.connect (() =>
-        {
-            Haguichi.session.create_network();
-        });
+        create_item.activate.connect (create_network);
         
         info_item = new Gtk.MenuItem.with_mnemonic (Text.information_label);
-        info_item.activate.connect (() =>
-        {
-            Haguichi.session.information();
-        });
+        info_item.activate.connect (information);
         
         quit_item = new Gtk.MenuItem.with_mnemonic (Text.quit_label);
-        quit_item.activate.connect (() =>
-        {
-            Haguichi.session.quit_app();
-        });
+        quit_item.activate.connect (quit_app);
         
         
         add (show_item);
@@ -104,6 +86,115 @@ public class IndicatorMenu : Gtk.Menu
             Haguichi.session.modality_changed.disconnect (set_modality);
             Haguichi.session.visibility_changed.disconnect (set_visibility);
         });
+    }
+    
+    public void show_window ()
+    {
+        try
+        {
+            Haguichi.session.show();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.show_window", e.message);
+        }
+    }
+    
+    public void hide_window ()
+    {
+        try
+        {
+            Haguichi.session.hide();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.hide_window", e.message);
+        }
+    }
+    
+    private void start_hamachi ()
+    {
+        try
+        {
+            Haguichi.session.start_hamachi();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.start_hamachi", e.message);
+        }
+    }
+    
+    private void stop_hamachi ()
+    {
+        try
+        {
+            Haguichi.session.stop_hamachi();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.stop_hamachi", e.message);
+        }
+    }
+    
+    private void join_network ()
+    {
+        try
+        {
+            Haguichi.session.join_network();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.join_network", e.message);
+        }
+    }
+    
+    private void create_network ()
+    {
+        try
+        {
+            Haguichi.session.create_network();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.create_network", e.message);
+        }
+    }
+    
+    private void information ()
+    {
+        try
+        {
+            Haguichi.session.information();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.information", e.message);
+        }
+    }
+    
+    private void quit_app ()
+    {
+        try
+        {
+            Haguichi.session.quit_app();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.quit_app", e.message);
+        }
+    }
+    
+    private bool get_visibility ()
+    {
+        try
+        {
+            return Haguichi.session.get_visibility();
+        }
+        catch (Error e)
+        {
+            Debug.log (Debug.domain.ERROR, "IndicatorMenu.get_visibility", e.message);
+            return false;
+        }
     }
     
     private void set_visibility (bool _visible)

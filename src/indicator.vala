@@ -53,11 +53,11 @@ class HaguichiIndicator
             // Show the main window when scrolling up and hide it when scrolling down
             if (direction == Gdk.ScrollDirection.UP)
             {
-                Haguichi.session.show();
+                menu.show_window();
             }
             else if (direction == Gdk.ScrollDirection.DOWN)
             {
-                Haguichi.session.hide();
+                menu.hide_window();
             }
         });
     }
