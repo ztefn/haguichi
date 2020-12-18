@@ -346,7 +346,11 @@ public class Command : Object
     {
         try
         {
+#if GTK_3_22
+            Gtk.show_uri_on_window (Haguichi.window, uri, Gdk.CURRENT_TIME);
+#else
             Gtk.show_uri (null, uri, Gdk.CURRENT_TIME);
+#endif
         }
         catch (Error e)
         {
