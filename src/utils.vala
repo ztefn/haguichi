@@ -161,6 +161,16 @@ public class Utils : Object
         return null;
     }
     
+    public static void set_action_area_margins (Container action_area)
+    {
+        if (Haguichi.dialog_use_header_bar == false)
+        {
+            action_area.border_width = 0;
+            action_area.margin = 12;
+            action_area.margin_top = 0;
+        }
+    }
+    
     public static bool path_exists (string type, string path)
     {
         if (FileUtils.test (path, GLib.FileTest.EXISTS))

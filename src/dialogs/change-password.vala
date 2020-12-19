@@ -62,8 +62,7 @@ namespace Dialogs
             get_content_area().border_width = 0;
             get_content_area().add (password_box);
             
-            get_action_area().margin = 6;
-            get_action_area().margin_top = 0;
+            Utils.set_action_area_margins (cancel_but.parent);
             
             password_entry.grab_focus();
             change_but.grab_default();

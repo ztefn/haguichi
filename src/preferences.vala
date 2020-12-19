@@ -49,6 +49,8 @@ namespace Dialogs
         
         private PreferencesBox appearance_box;
         
+        private Button close_but;
+        
         public Preferences ()
         {
             Object (title: Text.preferences_title,
@@ -193,10 +195,9 @@ namespace Dialogs
 #endif
                 get_content_area().add (switcher);
                 
-                get_action_area().margin = 6;
-                get_action_area().margin_top = 0;
+                close_but = (Button) add_button (Text.close_label, ResponseType.CLOSE);
                 
-                add_button (Text.close_label, ResponseType.CLOSE);
+                Utils.set_action_area_margins (close_but.parent);
                 
                 response.connect ((response_id) =>
                 {
