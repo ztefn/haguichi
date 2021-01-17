@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -104,6 +104,7 @@ public class Hamachi : Object
         
         if ((init_system == "systemctl") ||
             ((init_system == "auto") &&
+             Utils.path_exists ("d", "/run/systemd/system") &&
              Command.exists ("systemctl") &&
              systemctl_unit_found()))
         {
