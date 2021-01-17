@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -179,11 +179,16 @@ public class Utils : Object
             return true;
         }
         
-        if ((Haguichi.running_in_flatpak) &&
-            (Command.return_output ("bash -c \"test -" + type + " " + path + " &>/dev/null || echo 'path not found'\"") == ""))
+        if (Haguichi.running_in_flatpak)
         {
-            Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Test command tested true for path " + path);
-            return true;
+            string output = Command.return_output ("bash -c \"test -" + type + " " + path + " &>/dev/null || echo 'path not found'\"");
+            Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Test command output for path " + path + ": " + output);
+            
+            if (output.contains ("path not found") == false)
+            {
+                Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Test command tested true for path " + path);
+                return true;
+            }
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Utils.path_exists", "Path " + path + " was not found");
