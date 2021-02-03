@@ -86,7 +86,15 @@ if get_option('enable-appindicator')
         ['-D', 'ENABLE_APPINDICATOR'],
         language: 'vala'
     )
-    deps += dependency('appindicator3-0.1')
+    appindicator_dep = dependency('appindicator3-0.1', required: false)
+    ayatana_dep = dependency('ayatana-appindicator3-0.1', required: false)
+    if appindicator_dep.found()
+        deps += appindicator_dep
+    elif ayatana_dep.found()
+        deps += ayatana_dep
+    else
+        error('No suitable appindicator library found')
+    endif
     sources += [
         'indicator.vala',
         'indicator-menu.vala'
