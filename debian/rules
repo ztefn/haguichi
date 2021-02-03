@@ -11,7 +11,7 @@ override_dh_auto_clean:
 
 override_dh_auto_configure:
 	mkdir -p debian/build
-	cd debian/build && meson -Denable-appindicator=true -Dfor-ubuntu=true ../..
+	cd debian/build && meson -Denable-appindicator=true ../..
 
 override_dh_auto_build:
 	cd debian/build && ninja

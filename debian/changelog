@@ -1,22 +1,22 @@
-haguichi (1.4.3) xenial; urgency=medium
+haguichi (1.4.3) buster; urgency=medium
 
   * New version
 
  -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 21 Dec 2019 19:21:49 +0100
 
-haguichi (1.4.2) xenial; urgency=medium
+haguichi (1.4.2) buster; urgency=medium
 
   * New version
 
  -- Stephen Brandt <stephen@stephenbrandt.com>  Sun, 16 Dec 2018 16:15:52 +0100
 
-haguichi (1.4.1) xenial; urgency=medium
+haguichi (1.4.1) buster; urgency=medium
 
   * New version
 
  -- Stephen Brandt <stephen@stephenbrandt.com>  Sat, 12 May 2018 01:06:45 +0200
 
-haguichi (1.4.0) xenial; urgency=medium
+haguichi (1.4.0) buster; urgency=medium
 
   * New version
 
