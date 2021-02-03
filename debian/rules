@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	rm -rf debian/build
+
+override_dh_auto_configure:
+	mkdir -p debian/build
+	cd debian/build && meson -Denable-wingpanel-indicator=true -Dfor-elementary=true -Duse-rdnn-everywhere=true ../..
+
+override_dh_auto_build:
+	cd debian/build && ninja
+
+override_dh_auto_test:
+	cd debian/build && ninja test
+
+override_dh_auto_install:
+	cd debian/build && DESTDIR=${CURDIR}/debian/com.github.ztefn.haguichi ninja install
+
