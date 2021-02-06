@@ -29,7 +29,7 @@
 
   **enable-appindicator**
 
-  This option enables appindicator integration and additionally requires the *appindicator3* development package.
+  This option enables appindicator integration and additionally requires the *appindicator3-0.1* or *ayatana-appindicator3-0.1* development package.
 
     $ meson configure -Denable-appindicator=true
 
