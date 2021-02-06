@@ -20,12 +20,6 @@
   ![Screenshot](https://haguichi.net/appdata/screenshot-1.png)
 
 
-  IRC
-  ---
-
-  Channel #haguichi on irc.freenode.net
-
-
   Donations
   ---------
 
