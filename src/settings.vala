@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -99,20 +99,5 @@ public class Settings : Object
 
         int stamp = (int) base_schema.get_value ("stamp");
         Debug.log (Debug.domain.ENVIRONMENT, "Settings.check", "Settings are on stamp " + stamp.to_string());
-        
-        if (stamp == 1)
-        {
-            base_schema.set_value ("stamp", 2);
-            Debug.log (Debug.domain.ENVIRONMENT, "Settings.check", "Migrating user settings to new schema location...");
-            
-            if (Command.exists ("dconf"))
-            {
-                Command.return_output ("bash -c \"dconf dump /org/haguichi/ | dconf load /com/github/ztefn/haguichi/; dconf reset -f /org/haguichi/\"");
-            }
-            else
-            {
-                Debug.log (Debug.domain.ERROR, "Settings.check", "DConf command is not available");
-            }
-        }
     }
 }

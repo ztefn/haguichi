@@ -33,7 +33,7 @@
 
   <schema path="/com/github/ztefn/haguichi/" id="com.github.ztefn.haguichi">
     <key type="i" name="stamp">
-      <default>1</default>
+      <default>2</default>
     </key>
     <child schema="com.github.ztefn.haguichi.behavior" name="behavior"/>
     <child schema="com.github.ztefn.haguichi.commands" name="commands"/>
