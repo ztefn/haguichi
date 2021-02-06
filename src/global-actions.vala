@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -152,23 +152,5 @@ public class GlobalActions
         app.set_accels_for_action ("app.info", {"F2"});
         app.set_accels_for_action ("app.help", {"F1"});
         app.set_accels_for_action ("app.quit", {"<Control>Q"});
-        
-        if (Haguichi.use_app_menu)
-        {
-            var section1 = new Menu();
-            section1.append (Text.preferences_label, "app.preferences");
-            
-            var section2 = new Menu();
-            section2.append (Text.shortcuts_label, "app.shortcuts");
-            section2.append (Text.help_label,      "app.help");
-            section2.append (Text.about_label,     "app.about");
-            section2.append (Text.quit_label,      "app.quit");
-            
-            var menu = new Menu();
-            menu.insert_section (0, null, section1);
-            menu.insert_section (1, null, section2);
-            
-            app.set_app_menu (menu);
-        }
     }
 }

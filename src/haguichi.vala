@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -29,7 +29,6 @@ class Haguichi : Gtk.Application
     public static string current_desktop;
     
     public static bool running_in_flatpak;
-    public static bool use_app_menu;
     public static bool window_use_header_bar;
     public static bool dialog_use_header_bar;
     
@@ -99,14 +98,6 @@ class Haguichi : Gtk.Application
         Settings.init();
         
         current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        
-        // Check if we should use an app menu on any GNOME (based) desktop,
-        // thus also match desktops like "ubuntu:GNOME", "Budgie:GNOME" and "GNOME-Flashback"
-        if ((current_desktop.contains ("GNOME")) &&
-            (app.prefers_app_menu()))
-        {
-            use_app_menu = true;
-        }
         
         // Only on specific desktops we use header bars and possibly dark theme
         if ((current_desktop.contains ("GNOME")) ||

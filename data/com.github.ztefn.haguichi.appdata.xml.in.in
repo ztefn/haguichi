@@ -43,7 +43,6 @@
     <release version="1.3.0" date="2015-08-12"/>
   </releases>
   <kudos>
-    <kudo>AppMenu</kudo>
     <kudo>HiDpiIcon</kudo>
     <kudo>HighContrast</kudo>
     <kudo>ModernToolkit</kudo>

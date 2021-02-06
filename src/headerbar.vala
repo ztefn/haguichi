@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -172,12 +172,8 @@ public class Headerbar : HeaderBar
         gear_menu.append_submenu (Text.config_label, config_submenu);
         gear_menu.append_section (null, sort_section);
         gear_menu.append_section (null, filter_section);
-        
-        if (!Haguichi.use_app_menu)
-        {
-            gear_menu.append_section (null, preferences_section);
-            gear_menu.append_section (null, meta_section);
-        }
+        gear_menu.append_section (null, preferences_section);
+        gear_menu.append_section (null, meta_section);
         
         gear_but = new MenuButton();
         gear_but.valign = Align.CENTER;
