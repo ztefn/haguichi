@@ -8,7 +8,7 @@ Homepage: https://haguichi.net
 Package: haguichi
 Architecture: any
 Depends: libglib2.0-0 (>= 2.48), libglib2.0-bin (>= 2.48), libgtk-3-0 (>= 3.18), libnotify4 (>= 0.7.6), libayatana-appindicator3-1
-Recommends: bash, coreutils, dconf-cli, desktop-file-utils, dnsutils, iputils-ping | inetutils-ping, xdg-utils, policykit-1 | gksu | kdesudo, tar
+Recommends: bash, coreutils, desktop-file-utils, dnsutils, iputils-ping | inetutils-ping, xdg-utils, policykit-1 | gksu | kdesudo, tar
 Description: A graphical frontend for Hamachi
  Join, create and manage Hamachi networks in a breeze.
  .
