@@ -310,7 +310,7 @@ Options:
         preferences_label                          = _("_Preferences");
         shortcuts_label                            = _("_Keyboard Shortcuts");
         help_label                                 = _("_Help");
-        about_label                                = _("_About");
+        about_label                                = _("_About Haguichi");
         quit_label                                 = _("_Quit");
         
         refresh_tip                                = _("Refresh");
@@ -419,7 +419,7 @@ Options:
         attach_button_label                        = _("_Attach");
         attach_error_account_not_found             = _("Account not found");
         
-        config_label                               = _("Config_uration");
+        config_label                               = _("_Configuration");
         config_folder_label                        = _("_Open Folder");
         config_save_label                          = _("_Save a Backup…");
         config_save_title                          = _("Save a Backup");
