@@ -160,20 +160,20 @@ public class Headerbar : HeaderBar
         var filter_section = new GLib.Menu();
         filter_section.append_item (show_offline);
         
-        var preferences_section = new GLib.Menu();
-        preferences_section.append_item (preferences);
-        
         var meta_section = new GLib.Menu();
+        meta_section.append_item (preferences);
         meta_section.append_item (shortcuts);
         meta_section.append_item (help);
         meta_section.append_item (about);
-        meta_section.append_item (quit);
+        
+        var quit_section = new GLib.Menu();
+        quit_section.append_item (quit);
         
         gear_menu.append_submenu (Text.config_label, config_submenu);
         gear_menu.append_section (null, sort_section);
         gear_menu.append_section (null, filter_section);
-        gear_menu.append_section (null, preferences_section);
         gear_menu.append_section (null, meta_section);
+        gear_menu.append_section (null, quit_section);
         
         gear_but = new MenuButton();
         gear_but.valign = Align.CENTER;
