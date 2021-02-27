@@ -149,9 +149,12 @@ public class Headerbar : HeaderBar
         backup_section.append_item (save_config);
         backup_section.append_item (restore_config);
         
+        var open_section = new GLib.Menu();
+        open_section.append_item (open_config);
+        
         var config_submenu = new GLib.Menu();
-        config_submenu.append_item (open_config);
         config_submenu.append_section (null, backup_section);
+        config_submenu.append_section (null, open_section);
         
         var sort_section = new GLib.Menu();
         sort_section.append_item (sort_by_name);
