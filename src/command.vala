@@ -13,7 +13,6 @@ public class Command : Object
     public static string spawn_wrap;
     
     public static string sudo;
-    public static string sudo_args;
     public static string sudo_start;
     
     public static string terminal;
@@ -127,18 +126,12 @@ public class Command : Object
     public static void determine_sudo ()
     {
         sudo       = (string) Settings.super_user.val;
-        sudo_args  = "";
         sudo_start = "-- ";
         
         if (sudo == "auto")
         {
             sudo = get_available ({
                 "pkexec",
-                "gksudo",
-                "gksu",
-                "gnomesu",
-                "kdesudo",
-                "kdesu",
                 "sudo"
             });
         }
@@ -146,10 +139,6 @@ public class Command : Object
         if (sudo == "pkexec")
         {
             sudo_start = "";
-        }
-        else if (sudo.has_prefix ("gksu"))
-        {
-            sudo_args = "--sudo-mode -D \"" + Text.app_name + "\" ";
         }
         
         Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_sudo", sudo);
