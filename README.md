@@ -1,8 +1,14 @@
 
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/ztefn/haguichi/master/data/icons/hicolor/scalable/apps/haguichi.svg" alt="Haguichi" width="192">
+  <br />
   Haguichi
-  ========
+</h1>
 
-  Provides a graphical frontend for Hamachi on Linux.
+<p align="center">Provides a graphical frontend for Hamachi on Linux.</p>
+
+
+  ![Screenshot](https://haguichi.net/appdata/screenshot-1.png)
 
 
   Links
@@ -12,12 +18,6 @@
    * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
-
-
-  Screenshot
-  ----------
-
-  ![Screenshot](https://haguichi.net/appdata/screenshot-1.png)
 
 
   Donations
