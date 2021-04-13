@@ -8,22 +8,24 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-02-10 17:36+0100\n"
-"PO-Revision-Date: 2018-10-01 09:06+0000\n"
-"Last-Translator: Fedik <Unknown>\n"
+"PO-Revision-Date: 2021-04-09 07:09+0000\n"
+"Last-Translator: Aleksei Motsik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
-"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2018-10-01 17:32+0000\n"
-"X-Generator: Launchpad (build 18783)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2021-04-13 20:40+0000\n"
+"X-Generator: Launchpad (build 9327c982b35e4a485a3c716663ed8345e279c16e)\n"
+"Language: uk\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:295
 msgid "translator-credits"
-msgstr "Fedir Zinchuk https://launchpad.net/~fedikw"
+msgstr ""
+"Aleksei Motsik https://launchpad.net/~naghual80\n"
+"Fedir Zinchuk https://launchpad.net/~fedikw"
 
 #. Description used in about dialog.
 #: src/text.vala:297 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
@@ -238,7 +240,8 @@ msgstr "Hamachi не встановлено"
 
 #: src/text.vala:363
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Будь ласка, завантажте Hamachi та слідуйте інструкції зі встановлення."
+msgstr ""
+"Будь ласка, завантажте Hamachi та слідуйте інструкції зі встановлення."
 
 #: src/text.vala:364
 msgid "Hamachi version {0} is obsolete"
@@ -554,7 +557,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Впевнені, що бажаєте виселити користувача”{0}” з мережі “{1}”?"
 
 #: src/text.vala:461
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr "Якщо обрано, то користувач може приєднатись до мережі пізніше знову."
 
 #: src/text.vala:463
@@ -876,7 +880,7 @@ msgstr "Резервне копіювання та відновлення кат
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:18
 msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
-msgstr ""
+msgstr "Зверніть увагу: Для використання, Hamachi має бути встановленно"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
 msgid "Stephen Brandt"
@@ -922,17 +926,20 @@ msgstr "Згорнути всі мережі"
 msgid "Execute command"
 msgstr "Виконати команду"
 
-#~ msgid "_About"
-#~ msgstr "_Про програму"
-
-#~ msgid "_Donate"
-#~ msgstr "_Підтримати фінансово"
-
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Графічна оболонка Hamachi."
+
+#~ msgid "Config_uration"
+#~ msgstr "Налаштування"
 
 #~ msgid "_OK"
 #~ msgstr "_Гаразд"
 
 #~ msgid "_Refresh"
 #~ msgstr "_Оновити"
+
+#~ msgid "_About"
+#~ msgstr "_Про програму"
+
+#~ msgid "_Donate"
+#~ msgstr "_Підтримати фінансово"
