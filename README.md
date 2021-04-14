@@ -1,14 +1,12 @@
 
-<h1 align="center">
-  <img src="https://raw.githubusercontent.com/ztefn/haguichi/master/data/icons/hicolor/scalable/apps/haguichi.svg" alt="Haguichi" width="192">
-  <br />
-  Haguichi
-</h1>
-
-<p align="center">Provides a graphical frontend for Hamachi on Linux.</p>
-
-
-  ![Screenshot](https://haguichi.net/appdata/screenshot-1.png)
+<div align="center">
+  <h1>
+    <img src="data/icons/hicolor/scalable/apps/haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
+    Haguichi
+  </h1>
+  <h4>Provides a graphical frontend for Hamachi on Linux.</h4>
+  <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" />
+</div>
 
 
   Links
@@ -18,6 +16,16 @@
    * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
    * [Translations](https://translations.launchpad.net/haguichi)
+
+
+  Features
+  --------
+
+   * Searchable, sortable and collapsible network list
+   * Sidebar for easy access to details and actions
+   * Desktop notifications
+   * Fully customizable commands
+   * Backup and restore your Hamachi configuration folder
 
 
   Donations
