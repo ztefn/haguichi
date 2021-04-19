@@ -86,13 +86,13 @@ namespace Dialogs
             notify_member_offline_label   = new PreferencesLabel (Text.notify_on_member_offline, notify_member_offline_switch);
             
             appearance_box = new PreferencesBox (Text.appearance_group);
+#if ENABLE_APPINDICATOR || ENABLE_WINGPANEL_INDICATOR
+            appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
+#endif
             if (Haguichi.window_use_header_bar)
             {
                 appearance_box.add_row (prefer_dark_theme_label, prefer_dark_theme_switch, 1);
             }
-#if ENABLE_APPINDICATOR || ENABLE_WINGPANEL_INDICATOR
-            appearance_box.add_row (show_indicator_label, show_indicator_switch, 2);
-#endif
             
             var notify_box = new PreferencesBox (Text.notify_group);
             notify_box.add_row (notify_connection_loss_label, notify_connection_loss_switch, 1);
