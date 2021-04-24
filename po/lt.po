@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2018-09-29 19:29+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -84,11 +84,11 @@ msgstr "_Apie Haguichi"
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Įkelti iš naujo"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "Ieškoti"
 
@@ -180,7 +180,7 @@ msgstr "Konfliktuojantis adresas"
 msgid "C_onnect"
 msgstr "Prisi_jungti"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Prisijungti"
 
@@ -188,7 +188,7 @@ msgstr "Prisijungti"
 msgid "_Disconnect"
 msgstr "Atsij_ungti"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Atsijungti"
 
@@ -525,7 +525,7 @@ msgstr "Nežinoma klaida"
 msgid "Join request sent"
 msgstr "Prisijungimo prašymas išsiųstas"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Nuostatos"
 
@@ -885,7 +885,7 @@ msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr ""
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -897,35 +897,43 @@ msgstr "Rodyti žinyną"
 msgid "Show client information"
 msgstr "Rodyti kliento informaciją"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Atverti meniu"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Klaviatūros trumpiniai"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Išeiti"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "Tinklų sąrašas"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "Prisijungti prie tinklo"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "Sukurti tinklą"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "Rodyti/slėpti atsijungusius narius"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr "Išskleisti visus tinklus"
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr "Suskleisti visus tinklus"
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "Vykdyti komandą"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2018-11-01 13:38+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -85,11 +85,11 @@ msgstr "Haguichi について(_A)"
 msgid "_Quit"
 msgstr "終了(_Q)"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "更新"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "検索"
 
@@ -181,7 +181,7 @@ msgstr "アドレスが重複しています"
 msgid "C_onnect"
 msgstr "接続(_O)"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "接続"
 
@@ -189,7 +189,7 @@ msgstr "接続"
 msgid "_Disconnect"
 msgstr "切断(_D)"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "切断"
 
@@ -526,7 +526,7 @@ msgstr "不明なエラーです"
 msgid "Join request sent"
 msgstr "参加リクエストを送信しました"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "設定"
 
@@ -873,7 +873,7 @@ msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr ""
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -885,35 +885,43 @@ msgstr "ヘルプを表示"
 msgid "Show client information"
 msgstr "クライアントの情報を表示"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "メニューを開く"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "キーボードショートカットを表示する"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "終了"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "ネットワークリスト"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "ネットワークに参加"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "ネットワークを作成"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "オフラインメンバーの表示を切り替える"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr "すべてのネットワークを展開"
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr "すべてのネットワークを閉じる"
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "コマンドを実行"
 

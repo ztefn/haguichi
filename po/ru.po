@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2019-04-28 14:46+0000\n"
 "Last-Translator: Dmitrij Kiryanov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -74,7 +74,7 @@ msgstr "_Параметры"
 
 #: src/text.vala:311
 msgid "_Keyboard Shortcuts"
-msgstr "_Сочетания клавиш"
+msgstr "_Комбинации клавиш"
 
 #: src/text.vala:312
 msgid "_Help"
@@ -88,11 +88,11 @@ msgstr "_О приложении"
 msgid "_Quit"
 msgstr "В_ыход"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Обновить"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "Поиск"
 
@@ -184,7 +184,7 @@ msgstr "Конфликтующие адреса"
 msgid "C_onnect"
 msgstr "П_одключиться"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Подключиться"
 
@@ -192,7 +192,7 @@ msgstr "Подключиться"
 msgid "_Disconnect"
 msgstr "_Отключиться"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Отключиться"
 
@@ -529,7 +529,7 @@ msgstr "Неизвестная ошибка"
 msgid "Join request sent"
 msgstr "Запрос на подключение послан"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Параметры"
 
@@ -885,7 +885,7 @@ msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr ""
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -897,35 +897,43 @@ msgstr "Показать справку"
 msgid "Show client information"
 msgstr "Показать информацию о клиенте"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Открыть меню"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Комбинации клавиш"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Выход"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "Список сетей"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "Присоединиться к сети"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "Создать сеть"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "Показать / скрыть офлайн-пользователей"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr ""
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr ""
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr ""
 

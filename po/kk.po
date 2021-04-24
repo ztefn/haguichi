@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2017-07-30 17:21+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
@@ -69,7 +69,7 @@ msgstr "_Баптаулар"
 
 #: src/text.vala:311
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "П_ернетақта жарлықтары"
 
 #: src/text.vala:312
 msgid "_Help"
@@ -83,11 +83,11 @@ msgstr "Haguichi тур_алы"
 msgid "_Quit"
 msgstr "_Шығу"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Жаңарту"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr ""
 
@@ -179,7 +179,7 @@ msgstr "Жанжал (конфликтующие) бар адрестер"
 msgid "C_onnect"
 msgstr "Ба_йланысты орнату"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Байланысты орнату"
 
@@ -187,7 +187,7 @@ msgstr "Байланысты орнату"
 msgid "_Disconnect"
 msgstr "Б_айланысты үзу"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Байланысты үзу"
 
@@ -524,7 +524,7 @@ msgstr "Белгісіз қате"
 msgid "Join request sent"
 msgstr "Кіру сұранысы жіберілді"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Баптаулар"
 
@@ -875,7 +875,7 @@ msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr ""
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -887,39 +887,47 @@ msgstr ""
 msgid "Show client information"
 msgstr ""
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Мәзірді ашу"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Пернетақта жарлықтары"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Шығу"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 #, fuzzy
 msgid "Network List"
 msgstr "Желі толып тұр"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 #, fuzzy
 msgid "Join a network"
 msgstr "Желіге кіру"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 #, fuzzy
 msgid "Create a network"
 msgstr "Желі құру"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 #, fuzzy
 msgid "Show/hide offline members"
 msgstr "Желіге _қосылмаған мүшелерді көрсету"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr ""
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr ""
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 #, fuzzy
 msgid "Execute command"
 msgstr "Команданы өзгерту"

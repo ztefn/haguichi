@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2020-01-31 16:30+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -86,11 +86,11 @@ msgstr "_O programie"
 msgid "_Quit"
 msgstr "Za_kończ"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Odświeżenie"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "Wyszukiwanie"
 
@@ -182,7 +182,7 @@ msgstr "Konflikt adresu"
 msgid "C_onnect"
 msgstr "P_ołącz"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Połączenie"
 
@@ -190,7 +190,7 @@ msgstr "Połączenie"
 msgid "_Disconnect"
 msgstr "_Rozłącz"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Rozłączenie"
 
@@ -527,7 +527,7 @@ msgstr "Nieznany błąd"
 msgid "Join request sent"
 msgstr "Wysłano prośbę o dołączenie"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Preferencje"
 
@@ -895,7 +895,7 @@ msgstr ""
 "Proszę zauważyć: do użycia wymagana jest instalacja programu Hamachi na "
 "komputerze."
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -907,35 +907,43 @@ msgstr "Wyświetlenie pomocy"
 msgid "Show client information"
 msgstr "Wyświetlenie informacji o kliencie"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Otwarcie menu"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Skróty klawiszowe"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Zakończenie działania"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "Lista sieci"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "Dołączenie do sieci"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "Utworzenie sieci"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "Wyświetlenie/ukrycie członków w trybie offline"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr "Rozwinięcie wszystkich sieci"
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr "Zwinięcie wszystkich sieci"
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "Wykonanie polecenia"
 

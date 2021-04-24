@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2021-04-09 07:09+0000\n"
 "Last-Translator: Aleksei Motsik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2021-04-13 20:40+0000\n"
 "X-Generator: Launchpad (build 9327c982b35e4a485a3c716663ed8345e279c16e)\n"
-"Language: uk\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:295
@@ -72,7 +72,7 @@ msgstr "П_араметри"
 
 #: src/text.vala:311
 msgid "_Keyboard Shortcuts"
-msgstr "_Комбінації клавіш"
+msgstr "_Клавіатурні скорочення"
 
 #: src/text.vala:312
 msgid "_Help"
@@ -86,11 +86,11 @@ msgstr "_Про Haguichi"
 msgid "_Quit"
 msgstr "Ви_йти"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Оновити"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "Пошук"
 
@@ -182,7 +182,7 @@ msgstr "Конфліктуючі адреси"
 msgid "C_onnect"
 msgstr "П_ідключити"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Підключити"
 
@@ -190,7 +190,7 @@ msgstr "Підключити"
 msgid "_Disconnect"
 msgstr "_Відключити"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Відключити"
 
@@ -240,8 +240,7 @@ msgstr "Hamachi не встановлено"
 
 #: src/text.vala:363
 msgid "Please download Hamachi and follow the installation instructions."
-msgstr ""
-"Будь ласка, завантажте Hamachi та слідуйте інструкції зі встановлення."
+msgstr "Будь ласка, завантажте Hamachi та слідуйте інструкції зі встановлення."
 
 #: src/text.vala:364
 msgid "Hamachi version {0} is obsolete"
@@ -528,7 +527,7 @@ msgstr "Невідома помилка"
 msgid "Join request sent"
 msgstr "Запит на приєднання надіслано"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Налаштування"
 
@@ -557,8 +556,7 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Впевнені, що бажаєте виселити користувача”{0}” з мережі “{1}”?"
 
 #: src/text.vala:461
-msgid ""
-"If admitted, evicted members can rejoin the network at any later time."
+msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Якщо обрано, то користувач може приєднатись до мережі пізніше знову."
 
 #: src/text.vala:463
@@ -882,7 +880,7 @@ msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
 msgstr "Зверніть увагу: Для використання, Hamachi має бути встановленно"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -894,35 +892,43 @@ msgstr "Показати довідку"
 msgid "Show client information"
 msgstr "Показати дані клієнта"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Відкрити меню"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Клавіатурні скорочення"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Вийти"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "Список мереж"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "Приєднатись до мережі"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "Створити мережу"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "Показати/приховати неактивних користувачів"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr "Розгорнути всі мережі"
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr "Згорнути всі мережі"
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "Виконати команду"
 

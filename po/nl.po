@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-10 17:36+0100\n"
+"POT-Creation-Date: 2021-04-24 15:43+0200\n"
 "PO-Revision-Date: 2020-01-29 16:28+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
@@ -78,11 +78,11 @@ msgstr "_Over Haguichi"
 msgid "_Quit"
 msgstr "A_fsluiten"
 
-#: src/text.vala:316 data/ui/shortcuts-window.ui:68
+#: src/text.vala:316 data/ui/shortcuts-window.ui:80
 msgid "Refresh"
 msgstr "Verversen"
 
-#: src/text.vala:317 data/ui/shortcuts-window.ui:74
+#: src/text.vala:317 data/ui/shortcuts-window.ui:86
 msgid "Search"
 msgstr "Zoeken"
 
@@ -174,7 +174,7 @@ msgstr "Conflicterend adres"
 msgid "C_onnect"
 msgstr "_Verbinding maken"
 
-#: src/text.vala:347 data/ui/shortcuts-window.ui:27
+#: src/text.vala:347 data/ui/shortcuts-window.ui:33
 msgid "Connect"
 msgstr "Verbinding maken"
 
@@ -182,7 +182,7 @@ msgstr "Verbinding maken"
 msgid "_Disconnect"
 msgstr "_Verbinding verbreken"
 
-#: src/text.vala:349 data/ui/shortcuts-window.ui:33
+#: src/text.vala:349 data/ui/shortcuts-window.ui:39
 msgid "Disconnect"
 msgstr "Verbinding verbreken"
 
@@ -519,7 +519,7 @@ msgstr "Onbekende fout"
 msgid "Join request sent"
 msgstr "Uw toetredingsverzoek is ingediend"
 
-#: src/text.vala:451 data/ui/shortcuts-window.ui:39
+#: src/text.vala:451 data/ui/shortcuts-window.ui:45
 msgid "Preferences"
 msgstr "Voorkeuren"
 
@@ -873,7 +873,7 @@ msgstr ""
 "Let op: Vereist installatie van Hamachi op het systeem om volledig te kunnen "
 "gebruiken."
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:125
+#: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
 msgstr "Stephen Brandt"
 
@@ -885,35 +885,43 @@ msgstr "Hulp tonen"
 msgid "Show client information"
 msgstr "Client-informatie tonen"
 
-#: data/ui/shortcuts-window.ui:45
+#: data/ui/shortcuts-window.ui:27
+msgid "Open menu"
+msgstr "Menu openen"
+
+#: data/ui/shortcuts-window.ui:51
+msgid "Keyboard shortcuts"
+msgstr "Sneltoetsen"
+
+#: data/ui/shortcuts-window.ui:57
 msgid "Quit"
 msgstr "Afsluiten"
 
-#: data/ui/shortcuts-window.ui:52
+#: data/ui/shortcuts-window.ui:64
 msgid "Network List"
 msgstr "Netwerklijst"
 
-#: data/ui/shortcuts-window.ui:56
+#: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
 msgstr "Een netwerk toetreden"
 
-#: data/ui/shortcuts-window.ui:62
+#: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
 msgstr "Een netwerk aanmaken"
 
-#: data/ui/shortcuts-window.ui:80
+#: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
 msgstr "Offline leden tonen/verbergen"
 
-#: data/ui/shortcuts-window.ui:86
+#: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
 msgstr "Alle netwerken uitklappen"
 
-#: data/ui/shortcuts-window.ui:92
+#: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
 msgstr "Alle netwerken inklappen"
 
-#: data/ui/shortcuts-window.ui:98
+#: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "Opdracht uitvoeren"
 
