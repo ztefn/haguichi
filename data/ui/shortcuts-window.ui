@@ -23,6 +23,12 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
+                <property name="accelerator">F10</property>
+                <property name="title" translatable="yes">Open menu</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
                 <property name="accelerator">&lt;Ctrl&gt;O</property>
                 <property name="title" translatable="yes">Connect</property>
               </object>
@@ -37,6 +43,12 @@
               <object class="GtkShortcutsShortcut">
                 <property name="accelerator">&lt;Ctrl&gt;P</property>
                 <property name="title" translatable="yes">Preferences</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="accelerator">&lt;Ctrl&gt;question</property>
+                <property name="title" translatable="yes">Keyboard shortcuts</property>
               </object>
             </child>
             <child>
