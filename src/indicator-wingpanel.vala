@@ -63,7 +63,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     
     public Indicator ()
     {
-        Object (code_name: "haguichi-indicator", display_name: _("Haguichi Indicator"));
+        Object (code_name: "haguichi-indicator");
         
         try
         {
