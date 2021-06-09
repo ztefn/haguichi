@@ -28,6 +28,23 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.4.4" date="2021-06-09">
+      <description>
+        <p>Haguichi 1.4.4 has undergone a small spring cleanup and is ready to face the world:</p>
+        <ul>
+          <li>Added build support for libayatana-indicator as alternative to libappindicator (fixes issue #39).</li>
+          <li>Added invisible tooltips to action buttons in headerbar for screen readers and applications like Plotinus.</li>
+          <li>Tweaked action area margins for dialogs without headerbar.</li>
+          <li>Added Control+? accelerator for opening the shortcuts window.</li>
+          <li>Retired application menu and reorganized the primary menu to follow GNOME HIG.</li>
+          <li>Improved init system detection for systemctl by checking if the system has actually been booted with systemd (fixes issues #35 and #36).</li>
+          <li>Dropped support for gksu(do), gnomesu and kdesu(do) to gain super user privileges.</li>
+          <li>Removed dconf migration for settings in old schema location.</li>
+          <li>Fixed build warnings about deprecated methods and error handling.</li>
+          <li>Updated Ukrainian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.3" date="2020-10-03">
       <description>
         <p>Haguichi 1.4.3 has emerged to deliver a compilation of little fixes and tweaks:</p>
