@@ -71,6 +71,17 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.144.0" date="2021-06-09">
+      <description>
+        <ul>
+          <li>Tweaked action area margins for dialogs.</li>
+          <li>Added Control+? accelerator for opening the shortcuts window.</li>
+          <li>Added invisible tooltips to action buttons in headerbar for screen readers.</li>
+          <li>Reorganized the primary menu.</li>
+          <li>Updated Ukrainian translation.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.143.0" date="2020-10-03">
       <description>
         <ul>
