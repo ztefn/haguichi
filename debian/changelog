@@ -1,3 +1,9 @@
+com.github.ztefn.haguichi (1.144.0) juno; urgency=medium
+
+  * Stable release based on 1.4.4
+
+ -- Stephen Brandt <stephen@stephenbrandt.com>  Wed, 09 Jun 2021 16:47:37 +0200
+
 com.github.ztefn.haguichi (1.143.0) juno; urgency=medium
 
   * Stable release based on 1.4.3
