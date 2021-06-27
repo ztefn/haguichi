@@ -56,25 +56,29 @@ sources = [
     'window.vala'
 ]
 
+glib_dep = dependency('glib-2.0', version: '>= 2.48')
+gobject_dep = dependency('gobject-2.0')
+gtk_dep = dependency('gtk+-3.0', version: '>= 3.18')
+
 deps = [
     dependency('gio-2.0'),
     dependency('gio-unix-2.0'),
-    dependency('glib-2.0', version: '>= 2.48'),
-    dependency('gobject-2.0'),
-    dependency('gtk+-3.0', version: '>= 3.18'),
+    glib_dep,
+    gobject_dep,
+    gtk_dep,
     dependency('libnotify', version: '>= 0.7.6')
 ]
 
-gtk_version = dependency('gtk+-3.0').version()
+gtk_version = gtk_dep.version()
 
-if (gtk_version.version_compare('>= 3.20'))
+if gtk_version.version_compare('>= 3.20')
     add_project_arguments(
         ['-D', 'GTK_3_20'],
         language: 'vala'
     )
 endif
 
-if (gtk_version.version_compare('>= 3.22'))
+if gtk_version.version_compare('>= 3.22')
     add_project_arguments(
         ['-D', 'GTK_3_22'],
         language: 'vala'
@@ -106,7 +110,8 @@ if get_option('for-elementary')
         ['-D', 'FOR_ELEMENTARY'],
         language: 'vala'
     )
-    deps += dependency('granite', version: '>= 0.5')
+    granite_dep = dependency('granite')
+    deps += granite_dep
 endif
 
 if get_option('enable-wingpanel-indicator')
@@ -119,10 +124,10 @@ if get_option('enable-wingpanel-indicator')
         meson.project_name(),
         'indicator-wingpanel.vala',
         dependencies: [
-            dependency('glib-2.0'),
-            dependency('gobject-2.0'),
-            dependency('granite'),
-            dependency('gtk+-3.0'),
+            glib_dep,
+            gobject_dep,
+            granite_dep,
+            gtk_dep,
             wingpanel_dep
         ],
         install: true,
