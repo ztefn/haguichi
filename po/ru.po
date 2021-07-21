@@ -8,23 +8,24 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-24 15:43+0200\n"
-"PO-Revision-Date: 2019-04-28 14:46+0000\n"
-"Last-Translator: Dmitrij Kiryanov <Unknown>\n"
+"PO-Revision-Date: 2021-07-19 22:34+0000\n"
+"Last-Translator: Matvey <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
-"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2019-05-02 21:08+0000\n"
-"X-Generator: Launchpad (build 18953)\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2021-07-21 11:00+0000\n"
+"X-Generator: Launchpad (build 9c0cb2d219338e530974f0e5d7d00aa1bf8a7de3)\n"
+"Language: ru\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:295
 msgid "translator-credits"
 msgstr ""
 "Dmitrij Kiryanov https://launchpad.net/~kagaminep\n"
+"Matvey https://launchpad.net/~astrr\n"
 "jmb_kz https://launchpad.net/~jmb-kz\n"
 "Sergey Korolev https://launchpad.net/~slipped-on-blade\n"
 "Sergey Sedov https://launchpad.net/~serg-sedov"
@@ -558,7 +559,8 @@ msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
 
 #: src/text.vala:461
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Выгнанные участники всегда смогут заново подключиться к выбранной сети."
 
@@ -879,11 +881,12 @@ msgstr "Полностью настраиваемые команды"
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
 msgid "Backup and restore your Hamachi configuration folder"
 msgstr ""
+"Создать резервную копию и восстановить вашу папку конфигурации Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:18
 msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
-msgstr ""
+msgstr "Важно: Для использования необходим установленный Hamachi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
@@ -927,21 +930,15 @@ msgstr "Показать / скрыть офлайн-пользователей"
 
 #: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
-msgstr ""
+msgstr "Развернуть все сети"
 
 #: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
-msgstr ""
+msgstr "Свернуть все сети"
 
 #: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
-msgstr ""
-
-#~ msgid "_About"
-#~ msgstr "_О программе"
-
-#~ msgid "_Donate"
-#~ msgstr "_Пожертвовать"
+msgstr "Выполнить команду"
 
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Графическая оболочка к Hamachi"
@@ -951,3 +948,12 @@ msgstr ""
 
 #~ msgid "_Refresh"
 #~ msgstr "Об_новить"
+
+#~ msgid "_About"
+#~ msgstr "_О программе"
+
+#~ msgid "_Donate"
+#~ msgstr "_Пожертвовать"
+
+#~ msgid "Config_uration"
+#~ msgstr "_Настройки"
