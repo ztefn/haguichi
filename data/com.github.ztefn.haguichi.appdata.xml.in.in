@@ -40,6 +40,16 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.145.3" date="2021-09-18">
+      <description>
+        <p>Pinned stylesheet and icon theme</p>
+      </description>
+    </release>
+    <release version="1.145.2" date="2021-09-04">
+      <description>
+        <p>First release for elementary OS 6</p>
+      </description>
+    </release>
   </releases>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
