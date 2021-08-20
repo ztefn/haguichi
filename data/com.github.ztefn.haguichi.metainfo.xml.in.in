@@ -57,6 +57,46 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.153.0" date="2025-12-23">
+      <description>
+        <ul>
+          <li>Sidebar title is now shown in the headerbar when scrolled down.</li>
+          <li>Enabled automatic row selection in the network list when searching or after a row is collapsed or removed.</li>
+          <li>Return and Delete key presses are now passed on to the selected row when search entry is focused.</li>
+          <li>Search entry can now be refocused by pressing Ctrl+F while search mode is already active.</li>
+          <li>When using drag and drop to reorder a command the dragged row is now anchored to the point where the drag started.</li>
+          <li>Added option to duplicate existing commands.</li>
+          <li>Added toast with button to undo removal when removing a command.</li>
+          <li>Updated Swedish translation.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.152.0" date="2025-07-12">
+      <description>
+        <ul>
+          <li>Within "Add Command" and "Edit Command" dialogs command variables can now be inserted directly from the popover into the command entries.</li>
+          <li>Added more network list update interval options to preferences dialog.</li>
+          <li>Added debug information to about dialog.</li>
+          <li>Added Hungarian translation (thanks to therealmate).</li>
+          <li>Updated Polish and Portuguese translations.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.151.0" date="2025-02-19">
+      <description>
+        <ul>
+          <li>Redesigned user interface utilizing GTK4 and libadwaita.</li>
+          <li>Added preference for dark and light style or following the system mode.</li>
+          <li>Added support for multiple search terms when searching networks and members.</li>
+          <li>Changed online and total member count in sidebar to include the client itself.</li>
+          <li>Changed accelerator to open preferences to Control+,.</li>
+          <li>Changed default network list update interval to 30 seconds.</li>
+          <li>Implemented Xdp.Portal to request permission to run in the background and to set the status.</li>
+          <li>Added Finnish translation (thanks to Jiri Grönroos).</li>
+          <li>Updated Brazilian Portuguese, Dutch, Indonesian, Japanese, Lithuanian, Russian, Spanish and Ukrainian translations.</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
