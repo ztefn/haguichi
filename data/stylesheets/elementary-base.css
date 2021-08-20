@@ -72,6 +72,14 @@
 
 
 /*
+ * Remove margin from action area in about dialog
+ */
+.about-dialog .dialog-action-area {
+    margin: 0;
+}
+
+
+/*
  * Set styles for network nodes
  */
 

@@ -27,6 +27,8 @@ namespace Dialogs
                     website:            Text.app_website,
                     translator_credits: Text.app_translator_credits);
             
+            this.get_style_context().add_class ("about-dialog");
+            
             GlobalEvents.set_modal_dialog (this);
             
             show();
