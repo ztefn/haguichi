@@ -166,7 +166,11 @@ public class Utils : Object
         if (Haguichi.dialog_use_header_bar == false)
         {
             action_area.border_width = 0;
+#if FOR_ELEMENTARY
+            action_area.margin = 5;
+#else
             action_area.margin = 12;
+#endif
             action_area.margin_top = 0;
         }
     }
