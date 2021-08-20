@@ -36,7 +36,7 @@
 
   **enable-wingpanel-indicator**
 
-  This option enables wingpanel integration and additionally requires the *wingpanel-2.0* development package.
+  This option enables wingpanel integration and additionally requires the *wingpanel* development package.
 
     $ meson configure -Denable-wingpanel-indicator=true
 

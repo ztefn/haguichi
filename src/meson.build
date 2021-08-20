@@ -119,7 +119,7 @@ if get_option('enable-wingpanel-indicator')
         ['-D', 'ENABLE_WINGPANEL_INDICATOR'],
         language: 'vala'
     )
-    wingpanel_dep = dependency('wingpanel-2.0')
+    wingpanel_dep = dependency('wingpanel')
     shared_module(
         meson.project_name(),
         'indicator-wingpanel.vala',

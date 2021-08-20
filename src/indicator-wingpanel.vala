@@ -8,6 +8,8 @@
  * or (at your option) any later version.
  */
 
+using Gtk;
+
 [DBus (name = "com.github.ztefn.haguichi")]
 public interface AppSession : Object
 {
@@ -50,16 +52,16 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     private AppSession session;
     private GLib.Settings settings;
     
-    private Gtk.Grid? main_widget = null;
+    private Grid? main_widget = null;
     private Wingpanel.Widgets.OverlayIcon? display_widget = null;
-    private Wingpanel.Widgets.Switch show_item;
-    private Gtk.ModelButton connecting_item;
-    private Gtk.ModelButton connect_item;
-    private Gtk.ModelButton disconnect_item;
-    private Gtk.ModelButton join_item;
-    private Gtk.ModelButton create_item;
-    private Gtk.ModelButton info_item;
-    private Gtk.ModelButton quit_item;
+    private Granite.SwitchModelButton show_item;
+    private ModelButton connecting_item;
+    private ModelButton connect_item;
+    private ModelButton disconnect_item;
+    private ModelButton join_item;
+    private ModelButton create_item;
+    private ModelButton info_item;
+    private ModelButton quit_item;
     
     public Indicator ()
     {
@@ -97,7 +99,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     }
     
     // This method is called to get the widget that is displayed in the top bar
-    public override Gtk.Widget get_display_widget ()
+    public override Widget get_display_widget ()
     {
         // Check if the display widget is already created
         if (display_widget == null)
@@ -127,7 +129,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     }
     
     // This method is called to get the widget that is displayed in the popover
-    public override Gtk.Widget? get_widget ()
+    public override Widget? get_widget ()
     {
         // Check if the main widget is already created
         if (main_widget == null)
@@ -152,81 +154,81 @@ public class Haguichi.Indicator : Wingpanel.Indicator
         // Nothing to do here...
     }
     
-    private Gtk.Grid create_main_widget ()
+    private Grid create_main_widget ()
     {
-        var grid = new Gtk.Grid();
+        var grid = new Grid();
         
-        show_item = new Wingpanel.Widgets.Switch (_("_Show Haguichi").replace ("_", ""));
-        show_item.clicked.connect (() =>
+        show_item = new Granite.SwitchModelButton (_("_Show Haguichi").replace ("_", ""));
+        show_item.toggled.connect (() =>
         {
             if (show_item.active)
             {
-                session.hide();
+                session.show();
             }
             else
             {
-                session.show();
+                session.hide();
             }
         });
         
-        connecting_item = new Gtk.ModelButton();
+        connecting_item = new ModelButton();
         connecting_item.sensitive = false;
         connecting_item.text = _("Connecting…").replace ("…", "");
         
-        connect_item = new Gtk.ModelButton();
+        connect_item = new ModelButton();
         connect_item.text = _("C_onnect").replace ("_", "");
         connect_item.clicked.connect (() =>
         {
             session.start_hamachi();
         });
         
-        disconnect_item = new Gtk.ModelButton();
+        disconnect_item = new ModelButton();
         disconnect_item.text = _("_Disconnect").replace ("_", "");
         disconnect_item.clicked.connect (() =>
         {
             session.stop_hamachi();
         });
         
-        join_item = new Gtk.ModelButton();
+        join_item = new ModelButton();
         join_item.text = _("_Join Network…").replace ("_", "");
         join_item.clicked.connect (() =>
         {
             session.join_network();
         });
         
-        create_item = new Gtk.ModelButton();
+        create_item = new ModelButton();
         create_item.text = _("_Create Network…").replace ("_", "");
         create_item.clicked.connect (() =>
         {
             session.create_network();
         });
         
-        info_item = new Gtk.ModelButton();
+        info_item = new ModelButton();
         info_item.text = _("_Information").replace ("_", "");
         info_item.clicked.connect (() =>
         {
             session.information();
         });
         
-        quit_item = new Gtk.ModelButton();
+        quit_item = new ModelButton();
         quit_item.text = _("_Quit").replace ("_", "");
         quit_item.clicked.connect (() =>
         {
             session.quit_app();
         });
         
-        grid.attach (show_item,                         0,  0, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator(), 0,  1, 1, 1);
-        grid.attach (connecting_item,                   0,  2, 1, 1);
-        grid.attach (connect_item,                      0,  3, 1, 1);
-        grid.attach (disconnect_item,                   0,  4, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator(), 0,  5, 1, 1);
-        grid.attach (join_item,                         0,  6, 1, 1);
-        grid.attach (create_item,                       0,  7, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator(), 0,  8, 1, 1);
-        grid.attach (info_item,                         0,  9, 1, 1);
-        grid.attach (new Wingpanel.Widgets.Separator(), 0, 10, 1, 1);
-        grid.attach (quit_item,                         0, 11, 1, 1);
+        grid.attach (show_item,                             0,  0, 1, 1);
+        grid.attach (new Separator(Orientation.HORIZONTAL), 0,  1, 1, 1);
+        grid.attach (connecting_item,                       0,  2, 1, 1);
+        grid.attach (connect_item,                          0,  3, 1, 1);
+        grid.attach (disconnect_item,                       0,  4, 1, 1);
+        grid.attach (new Separator(Orientation.HORIZONTAL), 0,  5, 1, 1);
+        grid.attach (join_item,                             0,  6, 1, 1);
+        grid.attach (create_item,                           0,  7, 1, 1);
+        grid.attach (new Separator(Orientation.HORIZONTAL), 0,  8, 1, 1);
+        grid.attach (info_item,                             0,  9, 1, 1);
+        grid.attach (new Separator(Orientation.HORIZONTAL), 0, 10, 1, 1);
+        grid.attach (quit_item,                             0, 11, 1, 1);
         
         return grid;
     }
