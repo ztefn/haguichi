@@ -45,6 +45,28 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.146.1" date="2023-10-22">
+      <description>
+        <ul>
+          <li>Implemented rounded bottom corners.</li>
+          <li>Fixed styles for popover menus.</li>
+          <li>Added margin for toolbar buttons in commands editor.</li>
+          <li>Updated Spanish translation.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.146.0" date="2023-02-01">
+      <description>
+        <ul>
+          <li>Implemented separate thread and mode for configuring.</li>
+          <li>Improved display of long text input in commands editor.</li>
+          <li>Now using actual Gtk.SearchBar widget for search bar.</li>
+          <li>Now using pill style action buttons in message box.</li>
+          <li>Removed support for upstart to control the Hamachi service.</li>
+          <li>Removed Control+F1 as accelerator to open keyboard shortcuts window.</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>

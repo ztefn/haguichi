@@ -1,7 +1,7 @@
 project(
     'haguichi',
     ['vala', 'c'],
-    version: '1.4.7',
+    version: '1.146.1',
     default_options: ['prefix=/usr'],
     meson_version: '>= 0.40'
 )
