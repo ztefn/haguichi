@@ -1,9 +1,9 @@
 {
     "app-id": "com.github.ztefn.haguichi",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "3.38",
-    "sdk": "org.gnome.Sdk",
-    "command": "haguichi",
+    "runtime": "io.elementary.Platform",
+    "runtime-version": "6",
+    "sdk": "io.elementary.Sdk",
+    "command": "com.github.ztefn.haguichi",
     "finish-args": [
         "--filesystem=/var/lib/logmein-hamachi:ro",
 
@@ -33,10 +33,14 @@
         {
             "name": "haguichi",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Dfor-elementary=true",
+                "-Duse-rdnn-everywhere=true"
+            ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/ztefn/haguichi.git"
+                    "type": "dir",
+                    "path": "."
                 }
             ]
         }
