@@ -57,6 +57,54 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.152.0" date="2025-07-12">
+      <description>
+        <ul>
+          <li>Within "Add Command" and "Edit Command" dialogs command variables can now be inserted directly from the popover into the command entries.</li>
+          <li>Added more network list update interval options to preferences dialog.</li>
+          <li>Added debug information to about dialog.</li>
+          <li>Added Hungarian translation (thanks to therealmate).</li>
+          <li>Updated Polish and Portuguese translations.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.151.0" date="2025-02-19">
+      <description>
+        <ul>
+          <li>Redesigned user interface utilizing GTK4 and libadwaita.</li>
+          <li>Added preference for dark and light style or following the system mode.</li>
+          <li>Added support for multiple search terms when searching networks and members.</li>
+          <li>Changed online and total member count in sidebar to include the client itself.</li>
+          <li>Changed accelerator to open preferences to Control+,.</li>
+          <li>Changed default network list update interval to 30 seconds.</li>
+          <li>Implemented Xdp.Portal to request permission to run in the background and to set the status.</li>
+          <li>Added Finnish translation (thanks to Jiri Grönroos).</li>
+          <li>Updated Brazilian Portuguese, Dutch, Indonesian, Japanese, Lithuanian, Russian, Spanish and Ukrainian translations.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.146.1" date="2023-10-22">
+      <description>
+        <ul>
+          <li>Implemented rounded bottom corners.</li>
+          <li>Fixed styles for popover menus.</li>
+          <li>Added margin for toolbar buttons in commands editor.</li>
+          <li>Updated Spanish translation.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="1.146.0" date="2023-02-01">
+      <description>
+        <ul>
+          <li>Implemented separate thread and mode for configuring.</li>
+          <li>Improved display of long text input in commands editor.</li>
+          <li>Now using actual Gtk.SearchBar widget for search bar.</li>
+          <li>Now using pill style action buttons in message box.</li>
+          <li>Removed support for upstart to control the Hamachi service.</li>
+          <li>Removed Control+F1 as accelerator to open keyboard shortcuts window.</li>
+        </ul>
+      </description>
+    </release>
   </releases>
   <url type="homepage">https://haguichi.net</url>
   <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
