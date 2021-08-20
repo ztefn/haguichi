@@ -242,14 +242,27 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         // Request stylesheet for current theme
         string theme_name = Gtk.Settings.get_default().gtk_theme_name.down();
         
-        // Don't use sidebar class with elementary theme because it looks hideous
+        if (theme_name.has_prefix("io.elementary.stylesheet"))
+        {
+            theme_name = "elementary";
+        }
+        
+        // Add or remove classes for elementary theme
         if (theme_name == "elementary")
         {
-            sidebar.remove_style_class ("sidebar");
+            header_bar.connect_but.get_style_context().add_class ("raised");
+            
+            sidebar.info_action_bar.get_style_context().add_class ("flat");
+            sidebar.member_action_bar.get_style_context().add_class ("flat");
+            sidebar.network_action_bar.get_style_context().add_class ("flat");
         }
         else
         {
-            sidebar.add_style_class ("sidebar");
+            header_bar.connect_but.get_style_context().remove_class ("raised");
+            
+            sidebar.info_action_bar.get_style_context().remove_class ("flat");
+            sidebar.member_action_bar.get_style_context().remove_class ("flat");
+            sidebar.network_action_bar.get_style_context().remove_class ("flat");
         }
         
         if ((theme_name == "elementary") ||

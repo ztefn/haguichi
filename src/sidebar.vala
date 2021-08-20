@@ -34,9 +34,9 @@ public class Sidebar : Box
     
     private List<CommandButton> command_buttons;
     
-    private ActionBar info_action_bar;
-    private ActionBar network_action_bar;
-    private ActionBar member_action_bar;
+    public ActionBar info_action_bar;
+    public ActionBar network_action_bar;
+    public ActionBar member_action_bar;
     
     private Stack network_start_actions;
     private Stack network_end_actions;
@@ -394,6 +394,7 @@ public class Sidebar : Box
         scrolled_window = new ScrolledWindow (null, null);
         scrolled_window.add (scrolled_box);
         scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
+        scrolled_window.get_style_context().add_class ("sidebar");
         
         
         action_box = new Box (Orientation.VERTICAL, 0);
@@ -408,16 +409,6 @@ public class Sidebar : Box
         
         pack_start (scrolled_window,     true,  true,  0);
         pack_start (action_box_revealer, false, false, 0);
-    }
-    
-    public void add_style_class (string name)
-    {
-        scrolled_window.get_style_context().add_class (name);
-    }
-    
-    public void remove_style_class (string name)
-    {
-        scrolled_window.get_style_context().remove_class (name);
     }
     
     private void network_lock_changed ()

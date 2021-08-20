@@ -1,93 +1,23 @@
 @import url("resource:///com/github/ztefn/haguichi/stylesheets/elementary-base.css");
 
-/*
- * Set primary color for titlebar
- */
-
-@define-color colorPrimary #f44;
-
 
 /*
  * Set background color for connected and disconnected boxes
  */
 
 .connected-box {
-    background-color: shade(@bg_color, 1.1);
-}
-
-.disconnected-box {
     background-color: shade(@bg_color, 1.02);
 }
 
-
-/*
- * Improve "suggested-action" style for buttons in titlebar
- */
-
-.titlebar .image-button.suggested-action {
-    border: 1px solid alpha(#000, 0.2);
-    box-shadow:
-        0 1px 0 0 alpha(#fff, 0.25),
-        inset 0 1px 0 0 alpha(#fff, 0.25);
-}
-
-.titlebar .image-button.suggested-action:backdrop {
-    box-shadow: none;
-}
-
-.titlebar .image-button.suggested-action image {
-    color: #fff;
-    -gtk-icon-shadow: none;
-}
-
-.titlebar .image-button.suggested-action:backdrop image {
-    color: alpha(#fff, 0.7);
-}
-
-.titlebar .image-button.suggested-action:disabled image {
-    color: shade(@textColorPrimary, 1.5);
-    -gtk-icon-shadow: 0 1px @textColorPrimaryShadow;
-}
-
-.titlebar .image-button.suggested-action:disabled:backdrop {
-    border-color: shade(@textColorPrimary, 1.8);
-}
-
-.titlebar .image-button.suggested-action:active,
-.titlebar .image-button.suggested-action:active:hover,
-.titlebar .image-button.suggested-action:checked {
-    background-color: alpha(#fff, 0.8);
-    background-image: none;
-    border: 1px solid transparent;
-    box-shadow: none; 
-}
-
-.titlebar .image-button.suggested-action:checked:backdrop {
-    background-color: alpha(#fff, 0.7);
-    border-color: transparent;
-}
-
-.titlebar .image-button.suggested-action:active image,
-.titlebar .image-button.suggested-action:active:hover image,
-.titlebar .image-button.suggested-action:checked image {
-    color: shade(@colorPrimary, 0.9);
-    -gtk-icon-shadow: 0 1px alpha(#fff, 0.25);
-}
-
-.titlebar .image-button.suggested-action:checked:backdrop image {
-    color: shade(@colorPrimary, 1.1);
-}
-
-.titlebar .image-button.suggested-action:backdrop image {
-    -gtk-icon-shadow: none;
+.disconnected-box {
+    background-color: shade(@bg_color, 1.01);
 }
 
 
 /*
- * Fix missing "backdrop" style for disabled buttons in titlebar
- * https://github.com/elementary/stylesheet/issues/370
+ * Set border for network nodes
  */
 
-.titlebar .image-button:disabled:backdrop image {
-    color: shade(@textColorPrimary, 1.8);
+.network-node {
+    box-shadow: inset 0 0 0 1px alpha(#000, 0.2);
 }

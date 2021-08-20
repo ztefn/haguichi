@@ -14,7 +14,7 @@ public class Headerbar : HeaderBar
 {
     private string mode;
     
-    private ToggleButton connect_but;
+    public  ToggleButton connect_but;
     private MenuButton   network_but;
     private MenuButton   client_but;
     public  ToggleButton search_but;

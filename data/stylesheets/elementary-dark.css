@@ -1,10 +1,11 @@
 @import url("resource:///com/github/ztefn/haguichi/stylesheets/elementary-base.css");
 
+
 /*
- * Set primary color for titlebar
+ * Set accent color
  */
 
-@define-color colorPrimary mix(#000, @titlebar_color, 0.95);
+@define-color accent_color #f44;
 
 
 /*
@@ -12,77 +13,9 @@
  */
 
 .connected-box {
-    background-color: shade(@bg_color, 1.05);
+    background-color: shade(@bg_color, 1.13);
 }
 
 .disconnected-box {
-    background-color: shade(@bg_color, 1.02);
-}
-
-
-/*
- * Improve "suggested-action" style for buttons in titlebar
- */
-
-.titlebar .image-button.suggested-action {
-    border: 1px solid alpha(#000, 0.2);
-    box-shadow:
-        0 1px 0 0 alpha(#fff, 0.25),
-        inset 0 1px 0 0 alpha(#fff, 0.25);
-}
-
-.titlebar .image-button.suggested-action:backdrop {
-    box-shadow: none;
-}
-
-.titlebar .image-button.suggested-action image {
-    color: @selected_bg_color;
-    -gtk-icon-shadow: none;
-}
-
-.titlebar .image-button.suggested-action:backdrop image {
-    color: alpha(@selected_bg_color, 0.7);
-}
-
-.titlebar .image-button.suggested-action:disabled image {
-    color: @insensitive_color;
-}
-
-.titlebar .image-button.suggested-action:active,
-.titlebar .image-button.suggested-action:active:hover,
-.titlebar .image-button.suggested-action:checked {
-    background-color: @selected_bg_color;
-    background-image: none;
-    border: 1px solid transparent;
-    box-shadow: none; 
-}
-
-.titlebar .image-button.suggested-action:checked:backdrop {
-    background-color: alpha(@selected_bg_color, 0.8);
-    border-color: transparent;
-}
-
-.titlebar .image-button.suggested-action:active image,
-.titlebar .image-button.suggested-action:active:hover image,
-.titlebar .image-button.suggested-action:checked image {
-    color: @titlebar_color;
-    -gtk-icon-shadow: 0 1px shade(@selected_bg_color, 1.2);
-}
-
-.titlebar .image-button.suggested-action:checked:backdrop image {
-    color: @titlebar_color;
-}
-
-.titlebar .image-button.suggested-action:backdrop image {
-    -gtk-icon-shadow: none;
-}
-
-
-/*
- * Fix missing "backdrop" style for disabled buttons in titlebar
- * https://github.com/elementary/stylesheet/issues/370
- */
-
-.titlebar .image-button:disabled:backdrop image {
-    color: shade(@insensitive_color, 0.8);
+    background-color: shade(@bg_color, 1.08);
 }
