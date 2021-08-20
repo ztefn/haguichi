@@ -59,9 +59,6 @@ namespace Dialogs
         {
             Object (title: Text.preferences_title,
                     transient_for: Haguichi.window,
-#if FOR_ELEMENTARY
-                    deletable: false,
-#endif
                     modal: true,
                     resizable: false,
                     use_header_bar: (int) Haguichi.dialog_use_header_bar);
