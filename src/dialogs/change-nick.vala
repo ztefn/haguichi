@@ -12,7 +12,11 @@ using Gtk;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class ChangeNick : Granite.Dialog
+#else
     public class ChangeNick : Dialog
+#endif
     {
         private Label nick_label;
         private Entry nick_entry;

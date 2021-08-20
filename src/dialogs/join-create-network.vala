@@ -13,7 +13,11 @@ using Widgets;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class JoinCreateNetwork : Granite.Dialog
+#else
     public class JoinCreateNetwork : Dialog
+#endif
     {
         private string mode;
         

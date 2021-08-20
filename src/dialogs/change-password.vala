@@ -12,7 +12,11 @@ using Gtk;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class ChangePassword : Granite.Dialog
+#else
     public class ChangePassword : Dialog
+#endif
     {
         private string password;
         

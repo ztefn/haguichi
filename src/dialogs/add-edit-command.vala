@@ -12,7 +12,11 @@ using Gtk;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class AddEditCommand : Granite.Dialog
+#else
     public class AddEditCommand : Dialog
+#endif
     {
         private string mode;
         

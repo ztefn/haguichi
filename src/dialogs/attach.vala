@@ -13,7 +13,11 @@ using Widgets;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class Attach : Granite.Dialog
+#else
     public class Attach : Dialog
+#endif
     {
         private MessageBar message_bar;
         

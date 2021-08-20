@@ -13,7 +13,11 @@ using Widgets;
 
 namespace Dialogs
 {
+#if FOR_ELEMENTARY
+    public class Preferences : Granite.Dialog
+#else
     public class Preferences : Dialog
+#endif
     {
         public  CommandsEditor commands_editor;
         
