@@ -91,7 +91,9 @@ namespace Dialogs
 #endif
             if (Haguichi.window_use_header_bar)
             {
+#if !FOR_ELEMENTARY
                 appearance_box.add_row (prefer_dark_theme_label, prefer_dark_theme_switch, 1);
+#endif
             }
             
             var notify_box = new PreferencesBox (Text.notify_group);
