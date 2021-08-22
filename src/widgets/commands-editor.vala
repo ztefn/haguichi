@@ -29,6 +29,9 @@ public class CommandsEditor : Box
         border_width = 12;
         orientation  = Orientation.VERTICAL;
         
+#if FOR_ELEMENTARY
+        get_style_context().add_class ("frame");
+#endif
         get_style_context().add_class ("commands-editor");
         
         
@@ -128,7 +131,9 @@ public class CommandsEditor : Box
         
         
         ScrolledWindow sw = new ScrolledWindow (null, null);
+#if !FOR_ELEMENTARY
         sw.shadow_type = ShadowType.ETCHED_IN;
+#endif
         sw.get_style_context().set_junction_sides (JunctionSides.BOTTOM);
         sw.hscrollbar_policy = PolicyType.NEVER;
         sw.vscrollbar_policy = PolicyType.AUTOMATIC;
