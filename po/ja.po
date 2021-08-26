@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-24 15:43+0200\n"
-"PO-Revision-Date: 2018-11-01 13:38+0000\n"
+"PO-Revision-Date: 2021-08-24 23:48+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
-"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2018-11-01 19:20+0000\n"
-"X-Generator: Launchpad (build 18810)\n"
+"X-Launchpad-Export-Date: 2021-08-26 19:28+0000\n"
+"X-Generator: Launchpad (build 08c9dc00d1db3281cc70ee75454731854744f1ff)\n"
+"Language: ja\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:295
@@ -552,14 +552,12 @@ msgstr "承認されれば、後でいつでもネットワークに再参加す
 
 #: src/text.vala:460
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr ""
-"ネットワーク \"{1}\" からメンバー “{0}” を登録から抹消してもよろしいですか？"
+msgstr "ネットワーク \"{1}\" からメンバー “{0}” を登録から抹消してもよろしいですか？"
 
 #: src/text.vala:461
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"承認されれば、そのメンバーは後でいつでもネットワークに再参加することができま"
-"す。"
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加することができます。"
 
 #: src/text.vala:463
 msgid "Could not delete network “{0}”"
@@ -802,15 +800,13 @@ msgstr "ネットワーク {1} から {0} が離脱しました"
 #: src/text.vala:545
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: src/text.vala:551
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: src/text.vala:557
@@ -841,8 +837,7 @@ msgstr "Haguichi"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
-"簡単に Hamachi ネットワークに参加したり、作成したり、管理したりしましょう。"
+msgstr "簡単に Hamachi ネットワークに参加したり、作成したり、管理したりしましょう。"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
 msgid "Features:"
@@ -871,7 +866,7 @@ msgstr "Hamachi 設定フォルダーをバックアップし復元できます"
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:18
 msgid ""
 "Please note: Requires installation of Hamachi on the system in order to use."
-msgstr ""
+msgstr "ご注意ください: このアプリを使用するには、システムに Hamachi をインストールする必要があります。"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:42
 msgid "Stephen Brandt"
@@ -925,12 +920,6 @@ msgstr "すべてのネットワークを閉じる"
 msgid "Execute command"
 msgstr "コマンドを実行"
 
-#~ msgid "_About"
-#~ msgstr "このアプリケーションについて(_A)"
-
-#~ msgid "_Donate"
-#~ msgstr "寄付(_D)"
-
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Hamachi 用のグラフィカルフロントエンド"
 
@@ -939,3 +928,12 @@ msgstr "コマンドを実行"
 
 #~ msgid "_Refresh"
 #~ msgstr "更新(_R)"
+
+#~ msgid "_Donate"
+#~ msgstr "寄付(_D)"
+
+#~ msgid "_About"
+#~ msgstr "このアプリケーションについて(_A)"
+
+#~ msgid "Config_uration"
+#~ msgstr "設定(_U)"
