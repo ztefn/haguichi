@@ -1,7 +1,7 @@
 
 <div align="center">
   <h1>
-    <img src="data/icons/hicolor/scalable/apps/haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
+    <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux.</h4>
