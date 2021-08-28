@@ -279,7 +279,7 @@ public class IndicatorMenu : Gtk.Menu
     {
         // Check if there isn't already an animation going on when connecting
         if ((_mode == "Connecting") &&
-            (Haguichi.indicator.get_icon_name().has_prefix("haguichi-connecting")))
+            (Haguichi.indicator.get_icon_name().has_prefix(ICON_NAME + "-connecting")))
         {
             return;
         }

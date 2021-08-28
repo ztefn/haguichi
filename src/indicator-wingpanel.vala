@@ -37,11 +37,11 @@ public interface AppSession : Object
 
 public class Haguichi.Indicator : Wingpanel.Indicator
 {
-    private const string icon_connected    = "haguichi-connected-symbolic";
-    private const string icon_connecting1  = "haguichi-connecting-1-symbolic";
-    private const string icon_connecting2  = "haguichi-connecting-2-symbolic";
-    private const string icon_connecting3  = "haguichi-connecting-3-symbolic";
-    private const string icon_disconnected = "haguichi-disconnected-symbolic";
+    private const string icon_connected    = ICON_NAME + "-connected-symbolic";
+    private const string icon_connecting1  = ICON_NAME + "-connecting-1-symbolic";
+    private const string icon_connecting2  = ICON_NAME + "-connecting-2-symbolic";
+    private const string icon_connecting3  = ICON_NAME + "-connecting-3-symbolic";
+    private const string icon_disconnected = ICON_NAME + "-disconnected-symbolic";
     
     private bool bus_name_exists;
     private bool modal;
@@ -341,7 +341,7 @@ public class Haguichi.Indicator : Wingpanel.Indicator
     {
         // Check if there isn't already an animation going on when connecting
         if ((_mode == "Connecting") &&
-            (display_widget.get_main_icon_name().has_prefix("haguichi-connecting")))
+            (display_widget.get_main_icon_name().has_prefix(ICON_NAME + "-connecting")))
         {
             return;
         }

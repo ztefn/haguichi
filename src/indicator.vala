@@ -12,11 +12,11 @@ using AppIndicator;
 
 class HaguichiIndicator
 {
-    public string icon_connected    = "haguichi-connected";
-    public string icon_connecting1  = "haguichi-connecting-1";
-    public string icon_connecting2  = "haguichi-connecting-2";
-    public string icon_connecting3  = "haguichi-connecting-3";
-    public string icon_disconnected = "haguichi-disconnected";
+    public string icon_connected    = ICON_NAME + "-connected";
+    public string icon_connecting1  = ICON_NAME + "-connecting-1";
+    public string icon_connecting2  = ICON_NAME + "-connecting-2";
+    public string icon_connecting3  = ICON_NAME + "-connecting-3";
+    public string icon_disconnected = ICON_NAME + "-disconnected";
     
     private IndicatorMenu menu;
     private Indicator indicator;
