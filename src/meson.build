@@ -122,6 +122,7 @@ if get_option('enable-wingpanel-indicator')
     wingpanel_dep = dependency('wingpanel')
     shared_module(
         meson.project_name(),
+        config,
         'indicator-wingpanel.vala',
         dependencies: [
             glib_dep,
