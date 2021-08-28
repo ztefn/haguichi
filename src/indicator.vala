@@ -9,6 +9,7 @@
  */
 
 using AppIndicator;
+using Config;
 
 class HaguichiIndicator
 {

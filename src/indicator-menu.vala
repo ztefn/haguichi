@@ -8,6 +8,8 @@
  * or (at your option) any later version.
  */
 
+using Config;
+
 public class IndicatorMenu : Gtk.Menu
 {
     public string mode;

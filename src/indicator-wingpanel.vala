@@ -9,6 +9,7 @@
  */
 
 using Gtk;
+using Config;
 
 [DBus (name = "com.github.ztefn.haguichi")]
 public interface AppSession : Object
