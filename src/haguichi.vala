@@ -125,12 +125,12 @@ class Haguichi : Gtk.Application
         window = new HaguichiWindow();
         add_window (window);
         
+        preferences_dialog = new Dialogs.Preferences();
+        
 #if ENABLE_APPINDICATOR
         indicator = new HaguichiIndicator();
         indicator.active = (bool) Settings.show_indicator.val;
 #endif
-        
-        preferences_dialog = new Dialogs.Preferences();
         
         connection = new Connection();
         inhibitor = new Inhibitor();

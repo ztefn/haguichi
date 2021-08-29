@@ -61,6 +61,10 @@ class HaguichiIndicator
                 menu.hide_window();
             }
         });
+        indicator.connection_changed.connect ((ind, connected) =>
+        {
+            Haguichi.preferences_dialog.show_indicator_switch.sensitive = connected;
+        });
     }
     
     public string get_icon_name ()
