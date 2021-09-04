@@ -16,6 +16,14 @@ public class Bubble : Object
     {
         notification = new Notification (summary);
         notification.set_body (body);
+        
+        // On elementary OS set_icon is only used to set a badge icon,
+        // the app icon itself is automatically set based on application ID
+        // https://docs.elementary.io/develop/apis/notifications#badge-icons
+        if (Haguichi.current_desktop != "Pantheon")
+        {
+            notification.set_icon (new ThemedIcon(Config.ICON_NAME));
+        }
     }
     
     public void show ()
