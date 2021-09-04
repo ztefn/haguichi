@@ -65,8 +65,7 @@ deps = [
     dependency('gio-unix-2.0'),
     glib_dep,
     gobject_dep,
-    gtk_dep,
-    dependency('libnotify', version: '>= 0.7.6')
+    gtk_dep
 ]
 
 gtk_version = gtk_dep.version()

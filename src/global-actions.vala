@@ -13,6 +13,8 @@ public class GlobalActions
     public static SimpleAction connect;
     public static SimpleAction disconnect;
     
+    public static SimpleAction approve_reject;
+    
     public static SimpleAction join_network;
     public static SimpleAction create_network;
     
@@ -48,6 +50,28 @@ public class GlobalActions
         
         disconnect = new SimpleAction ("disconnect", null);
         disconnect.activate.connect (GlobalEvents.stop_hamachi);
+        
+        approve_reject = new SimpleAction ("approve-reject", VariantType.STRING_ARRAY);
+        approve_reject.activate.connect ((variant) =>
+        {
+            string[] args = variant.get_strv();
+            
+            if (args.length > 2)
+            {
+                string[] network_ids = {};
+                
+                for (int i = 2; i < args.length; i++)
+                {
+                    network_ids += args[i];
+                }
+                
+                GlobalEvents.approve_or_reject (args[0], args[1], network_ids);
+            }
+            else
+            {
+                Debug.log (Debug.domain.ERROR, "GlobalActions.approve_reject", "Too few arguments, expected \"action, client_id, network_id1, network_id2, ...\"");
+            }
+        });
         
         join_network = new SimpleAction ("join-network", null);
         join_network.activate.connect (GlobalEvents.join_network);
@@ -119,6 +143,7 @@ public class GlobalActions
         
         app.add_action (connect);
         app.add_action (disconnect);
+        app.add_action (approve_reject);
         app.add_action (join_network);
         app.add_action (create_network);
         app.add_action (refresh);

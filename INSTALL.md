@@ -13,15 +13,14 @@
    * valac (>= 0.30)
    * glib-2.0 (>= 2.48)
    * gtk+-3.0 (>= 3.18)
-   * libnotify (>= 0.7.6)
 
   On **Debian based distributions** you can install these packages by running the following command:
 
-    $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev libnotify-dev
+    $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev
 
   On **Solus** you can install these packages by running the following command:
 
-    $ sudo eopkg it -c system.devel vala glib2-devel libgtk-3-devel libnotify-devel
+    $ sudo eopkg it -c system.devel vala glib2-devel libgtk-3-devel
 
 
   Build options

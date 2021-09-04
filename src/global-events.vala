@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -209,6 +209,36 @@ public class GlobalEvents
         }
         
         HaguichiWindow.sidebar.show_tab ("Info", false);
+    }
+    
+    public static void approve_or_reject (string action, string client_id, string[] network_ids)
+    {
+        // Approve or reject member only if we are still connected
+        if (Controller.last_status >= 6)
+        {
+            Debug.log (Debug.domain.INFO, "GlobalEvents.approve_or_reject", "Go " + action + " join request for client " + client_id + " in network(s) " + string.joinv(", ", network_ids));
+            
+            foreach (string network_id in network_ids)
+            {
+                Network network = Haguichi.window.network_view.return_network_by_id (network_id);
+                
+                foreach (Member member in network.members)
+                {
+                    if ((member.client_id == client_id) &&
+                        (member.status.status_int == 3))
+                    {
+                        if (action == "approve")
+                        {
+                            member.approve();
+                        }
+                        else if (action == "reject")
+                        {
+                            member.reject();
+                        }
+                    }
+                }
+            }
+        }
     }
     
     public static void join_network ()
@@ -457,8 +487,6 @@ public class GlobalEvents
                 stop_hamachi();
             }
         }
-        
-        Notify.uninit();
         
         Debug.log (Debug.domain.INFO, "GlobalEvents.quit_app", "Quitting...");
         Haguichi.window.destroy();
