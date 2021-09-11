@@ -98,6 +98,13 @@ class Haguichi : Gtk.Application
         
         current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         
+#if FOR_ELEMENTARY
+        window_use_header_bar = true;
+        dialog_use_header_bar = false;
+        Gtk.Settings.get_default().set ("gtk-application-prefer-dark-theme", true);
+        Gtk.Settings.get_default().set ("gtk-theme-name", "io.elementary.stylesheet.blueberry");
+        Gtk.Settings.get_default().set ("gtk-icon-theme-name", "elementary");
+#else
         // Only on specific desktops we use header bars and possibly dark theme
         if ((current_desktop.contains ("GNOME")) ||
             (current_desktop == "Deepin") ||
@@ -118,6 +125,7 @@ class Haguichi : Gtk.Application
             	Settings.decorator_offset = 52;
             }
         }
+#endif
         
         GlobalActions.init (app);
         
