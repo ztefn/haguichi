@@ -35,7 +35,7 @@ public class Bubble : Object
     {
         // Unity desktop running NotifyOSD server doesn't support actions
         // https://wiki.ubuntu.com/NotifyOSD
-        return (Haguichi.current_desktop == "Unity") ? false : true;
+        return Haguichi.current_desktop.has_prefix ("Unity") ? false : true;
     }
     
     public void add_reconnect_action ()
