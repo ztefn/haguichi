@@ -31,23 +31,36 @@ public class Bubble : Object
         Haguichi.app.send_notification (null, notification);
     }
     
+    public bool server_supports_actions ()
+    {
+        // Unity desktop running NotifyOSD server doesn't support actions
+        // https://wiki.ubuntu.com/NotifyOSD
+        return (Haguichi.current_desktop == "Unity") ? false : true;
+    }
+    
     public void add_reconnect_action ()
     {
-        notification.add_button (Text.reconnect_label, "app.connect");
+        if (server_supports_actions())
+        {
+            notification.add_button (Text.reconnect_label, "app.connect");
+        }
     }
     
     public void add_approve_reject_actions (string client_id, string[] network_ids)
     {
-        string[] approve_args = {"approve", client_id};
-        string[] reject_args  = {"reject",  client_id};
-        
-        foreach (string network_id in network_ids)
+        if (server_supports_actions())
         {
-            approve_args += network_id;
-            reject_args  += network_id;
+            string[] approve_args = {"approve", client_id};
+            string[] reject_args  = {"reject",  client_id};
+            
+            foreach (string network_id in network_ids)
+            {
+                approve_args += network_id;
+                reject_args  += network_id;
+            }
+            
+            notification.add_button_with_target_value (Utils.remove_mnemonics (Text.approve_label), "app.approve-reject", approve_args);
+            notification.add_button_with_target_value (Utils.remove_mnemonics (Text.reject_label),  "app.approve-reject", reject_args);
         }
-        
-        notification.add_button_with_target_value (Utils.remove_mnemonics (Text.approve_label), "app.approve-reject", approve_args);
-        notification.add_button_with_target_value (Utils.remove_mnemonics (Text.reject_label),  "app.approve-reject", reject_args);
     }
 }
