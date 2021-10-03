@@ -93,8 +93,7 @@ public class Headerbar : HeaderBar
                 
                 copy_section.remove_all();
                 
-                if ((ipv4 != null) &&
-                    (ipv4 != ""))
+                if (ipv4 != null)
                 {
                     copy_section.append_item (copy_ipv4);
                 }

@@ -493,8 +493,7 @@ public class Sidebar : Box
         string ipv4 = address[0];
         string ipv6 = address[1];
         
-        if ((ipv4 == null) ||
-            (ipv4 == ""))
+        if (ipv4 == null)
         {
             ipv4_label.hide();
             ipv4_entry.hide();

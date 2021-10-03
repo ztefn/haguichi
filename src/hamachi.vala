@@ -23,7 +23,7 @@ public class Hamachi : Object
     
     public static void init ()
     {
-        ip_version   = "IPv4";
+        ip_version   = "";
         demo_account = "-";
         
         get_info();
@@ -260,18 +260,31 @@ public class Hamachi : Object
             
             ipv4 = mi.fetch_named ("ipv4");
             ipv6 = mi.fetch_named ("ipv6");
+            
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.get_address", "IPv4: " + ipv4);
+            Debug.log (Debug.domain.HAMACHI, "Hamachi.get_address", "IPv6: " + ipv6);
         }
         catch (RegexError e)
         {
             Debug.log (Debug.domain.ERROR, "Hamachi.get_address", e.message);
         }
         
-        if ((ipv4 != "") &&
+        if (ipv4 == "")
+        {
+            ipv4 = null;
+        }
+        
+        if (ipv6 == "")
+        {
+            ipv6 = null;
+        }
+        
+        if ((ipv4 != null) &&
             (ipv6 != null))
         {
             ip_version = "Both";
         }
-        else if (ipv4 != "")
+        else if (ipv4 != null)
         {
             ip_version = "IPv4";
         }
@@ -280,8 +293,7 @@ public class Hamachi : Object
             ip_version = "IPv6";
         }
         
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.get_address", "IPv4: " + ipv4);
-        Debug.log (Debug.domain.HAMACHI, "Hamachi.get_address", "IPv6: " + ipv6);
+        Debug.log (Debug.domain.HAMACHI, "Hamachi.get_address", "IP version: " + ip_version);
         
         return new string[] {ipv4, ipv6};
     }
