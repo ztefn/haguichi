@@ -111,13 +111,6 @@ public class Hamachi : Object
             // Systemd
             service = "systemctl {0} logmein-hamachi.service";
         }
-        else if ((init_system == "service") ||
-                 ((init_system == "auto") &&
-                  Command.exists ("service")))
-        {
-            // Upstart
-            service = "service logmein-hamachi {0}";
-        }
         else if ((init_system == "init.d") ||
                  ((init_system == "auto") &&
                   Utils.path_exists ("f", "/etc/init.d/logmein-hamachi")))

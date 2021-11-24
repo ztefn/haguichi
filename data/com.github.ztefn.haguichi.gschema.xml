@@ -4,9 +4,8 @@
   <enum id="com.github.ztefn.haguichi.commands.init-system">
     <value value="0" nick="auto"/>
     <value value="1" nick="systemctl"/>
-    <value value="2" nick="service"/>
-    <value value="3" nick="init.d"/>
-    <value value="4" nick="rc.d"/>
+    <value value="2" nick="init.d"/>
+    <value value="3" nick="rc.d"/>
   </enum>
 
   <enum id="com.github.ztefn.haguichi.commands.super-user">
