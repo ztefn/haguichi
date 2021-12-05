@@ -18,9 +18,21 @@
     <p>Please note: Requires installation of Hamachi on the system in order to use.</p>
   </description>
   <screenshots>
-    <screenshot width="1248" height="702" type="default">https://haguichi.net/appdata/screenshot-1.png</screenshot>
-    <screenshot width="1248" height="702">https://haguichi.net/appdata/screenshot-2.png</screenshot>
-    <screenshot width="1248" height="702">https://haguichi.net/appdata/screenshot-3.png</screenshot>
+    <screenshot type="default">
+      <image>https://haguichi.net/appdata/screenshot-1.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://haguichi.net/appdata/screenshot-2.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://haguichi.net/appdata/screenshot-3.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://haguichi.net/appdata/screenshot-4.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://haguichi.net/appdata/screenshot-5.png</image>
+    </screenshot>
   </screenshots>
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">com.github.ztefn.haguichi.desktop</launchable>
