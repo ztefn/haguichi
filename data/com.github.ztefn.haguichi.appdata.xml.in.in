@@ -40,6 +40,21 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.4.5" date="2021-12-08">
+      <description>
+        <p>Haguichi 1.4.5 is gifted with the following changes:</p>
+        <ul>
+          <li>Notifications are now send using GNotification instead of libnotify (fixes issue #47).</li>
+          <li>Removed support for upstart to control the Hamachi service.</li>
+          <li>Switch to show indicator is now disabled if there is no connection to a watcher.</li>
+          <li>Now using the RDNN com.github.ztefn.haguichi as prefix for the indicator icons.</li>
+          <li>Ported wingpanel indicator to version 3.</li>
+          <li>Updated elementary stylesheet to target version 6.</li>
+          <li>Updated Japanese and Russian translations.</li>
+          <li>Other minor fixes and improvements.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.4" date="2021-06-09">
       <description>
         <p>Haguichi 1.4.4 has undergone a small spring cleanup and is ready to face the world:</p>
