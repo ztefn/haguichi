@@ -12,6 +12,17 @@
 
 
 /*
+ * Set border radius and padding for welcome action buttons
+ */
+
+.welcome .suggested-action {
+    border-radius: 9999px;
+    -gtk-outline-radius: 9999px;
+    padding: 6px 28px;
+}
+
+
+/*
  * Set background color for connected and disconnected boxes
  */
 

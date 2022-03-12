@@ -30,7 +30,7 @@
 
 
 /*
- * Override font size for welcome headings
+ * Set font size for welcome headings
  */
 
 .welcome .h1 {
@@ -43,7 +43,18 @@
 
 
 /*
- * Override font size for sidebar headings
+ * Set border radius and padding for welcome action buttons
+ */
+
+.welcome .suggested-action {
+    border-radius: 9999px;
+    -gtk-outline-radius: 9999px;
+    padding: 8px 24px;
+}
+
+
+/*
+ * Set font size for sidebar headings
  */
 
 .sidebar .h2 {
