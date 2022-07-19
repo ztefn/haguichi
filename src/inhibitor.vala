@@ -66,11 +66,11 @@ public class Inhibitor : Object
                     // Restore the connection when internet is available again
                     Controller.wait_for_internet_cycle();
                 }
-                aquire();
+                acquire();
             }
         });
         
-        aquire();
+        acquire();
     }
 
     public void release ()
@@ -94,9 +94,9 @@ public class Inhibitor : Object
         }
     }
 
-    public void aquire ()
+    public void acquire ()
     {
-        Debug.log (Debug.domain.ENVIRONMENT, "Inhibitor.aquire", "Acquiring inhibit lock.");
+        Debug.log (Debug.domain.ENVIRONMENT, "Inhibitor.acquire", "Acquiring inhibit lock.");
         
         try
         {
@@ -104,7 +104,7 @@ public class Inhibitor : Object
         }
         catch (Error e)
         {
-            Debug.log (Debug.domain.ERROR, "Inhibitor.aquire", e.message);
+            Debug.log (Debug.domain.ERROR, "Inhibitor.acquire", e.message);
         }
     }
 }
