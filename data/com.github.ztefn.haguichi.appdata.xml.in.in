@@ -3,7 +3,7 @@
   <id>com.github.ztefn.haguichi</id>
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0+</project_license>
-  <name>Haguichi</name>
+  <name translate="no">Haguichi</name>
   <summary>A graphical frontend for Hamachi</summary>
   <description>
     <p>Join, create and manage Hamachi networks in a breeze.</p>
@@ -41,7 +41,7 @@
   </provides>
   <releases>
     <release version="1.4.5" date="2021-12-08">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.5 is gifted with the following changes:</p>
         <ul>
           <li>Notifications are now send using GNotification instead of libnotify (fixes issue #47).</li>
@@ -56,7 +56,7 @@
       </description>
     </release>
     <release version="1.4.4" date="2021-06-09">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.4 has undergone a small spring cleanup and is ready to face the world:</p>
         <ul>
           <li>Added build support for libayatana-indicator as alternative to libappindicator (fixes issue #39).</li>
@@ -73,7 +73,7 @@
       </description>
     </release>
     <release version="1.4.3" date="2020-10-03">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.3 has emerged to deliver a compilation of little fixes and tweaks:</p>
         <ul>
           <li>Fixed search entry leaving out the trigger character when activated by typing for the first time.</li>
@@ -90,7 +90,7 @@
       </description>
     </release>
     <release version="1.4.2" date="2019-12-18">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.2 is made up of the following list. Which has been checked twice:</p>
         <ul>
           <li>Implemented FileChooserNative for GTK+ version 3.20 and later.</li>
@@ -109,7 +109,7 @@
       </description>
     </release>
     <release version="1.4.1" date="2018-11-07">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.1 has embarked on a great journey packing the following changes:</p>
         <ul>
           <li>Initialization is now completely multi-threaded.</li>
@@ -132,7 +132,7 @@
       </description>
     </release>
     <release version="1.4.0" date="2018-05-10">
-      <description>
+      <description translate="no">
         <p>Haguichi 1.4.0 has washed ashore carrying bulk of new features and updates:</p>
         <ul>
           <li>Implemented shortcuts window for GTK+ version 3.20 and later.</li>
@@ -166,7 +166,7 @@
   <url type="help">https://haguichi.net/tips-and-tricks/</url>
   <url type="donation">https://haguichi.net/donate/</url>
   <url type="translate">https://translations.launchpad.net/haguichi</url>
-  <developer_name>Stephen Brandt</developer_name>
+  <developer_name translate="no">Stephen Brandt</developer_name>
   <update_contact>stephen_at_stephenbrandt.com</update_contact>
   <translation type="gettext">@GETTEXT_PACKAGE@</translation>
   <languages>
