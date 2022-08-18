@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2022 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -108,8 +108,9 @@ public class Controller : Object
                 configure_button.get_style_context().add_class ("suggested-action");
                 configure_button.clicked.connect (() =>
                 {
+                    configure_button.sensitive = false;
+                    Haguichi.window.set_mode ("Configuring");
                     Hamachi.configure();
-                    Controller.init();
                 });
                 
                 HaguichiWindow.message_box.set_message (Text.not_configured_heading, Text.not_configured_message);

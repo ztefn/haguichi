@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2022 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -572,6 +572,13 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         switch (mode)
         {
             case "Initializing":
+                Haguichi.session.mode_changed (mode);
+                header_bar.set_mode (mode);
+                break;
+                
+            case "Configuring":
+                message_box.show();
+                
                 Haguichi.session.mode_changed (mode);
                 header_bar.set_mode (mode);
                 break;

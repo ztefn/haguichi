@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2021 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2022 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -177,8 +177,21 @@ public class Hamachi : Object
     
     public static void configure ()
     {
+        new Thread<void*> (null, configure_thread);
+    }
+    
+    private static void* configure_thread ()
+    {
         string output = Command.return_output (Command.sudo + " " + Command.sudo_start + "bash -c \"" + Utils.format (service, "start", null, null) + "; " + Utils.format (service, "stop", null, null) + "; killall -9 hamachid &> /dev/null; echo \'Ipc.User      " + GLib.Environment.get_user_name() + "\' >> " + config_path + "; " + Utils.format (service, "start", null, null) + "; sleep 1\"");
         Debug.log (Debug.domain.HAMACHI, "Hamachi.configure", output);
+        
+        Idle.add_full (Priority.HIGH_IDLE, () =>
+        {
+            Controller.init();
+            return false;
+        });
+        
+        return null;
     }
     
     public static string start ()

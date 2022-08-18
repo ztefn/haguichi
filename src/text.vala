@@ -108,6 +108,7 @@ Options:
     public static string connected;
     public static string disconnected;
     public static string initializing;
+    public static string configuring;
     public static string connecting;
     public static string logging_in;
     public static string updating;
@@ -351,6 +352,7 @@ Options:
         connected                                  = _("Connected");
         disconnected                               = _("Disconnected");
         initializing                               = _("Initializing…");
+        configuring                                = _("Configuring…");
         connecting                                 = _("Connecting…");
         logging_in                                 = _("Logging in…");
         updating                                   = _("Updating…");
