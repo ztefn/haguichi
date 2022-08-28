@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-17 23:54+0200\n"
-"PO-Revision-Date: 2020-01-31 16:30+0000\n"
+"PO-Revision-Date: 2022-08-20 12:15+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "Language: pl\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2020-02-01 13:28+0000\n"
-"X-Generator: Launchpad (build 0a62c17273454a1313f81a74a2198ec30b44c7b6)\n"
+"X-Launchpad-Export-Date: 2022-08-28 16:12+0000\n"
+"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:296
@@ -212,7 +212,7 @@ msgstr "Inicjowanie…"
 
 #: src/text.vala:355
 msgid "Configuring…"
-msgstr ""
+msgstr "Konfigurowanie…"
 
 #: src/text.vala:356
 msgid "Connecting…"
@@ -948,6 +948,9 @@ msgstr "Wykonanie polecenia"
 
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Graficzny interfejs dla Hamachi."
+
+#~ msgid "Config_uration"
+#~ msgstr "Konfig_uracja"
 
 #~ msgid "_OK"
 #~ msgstr "_OK"

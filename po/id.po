@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-17 23:54+0200\n"
-"PO-Revision-Date: 2018-10-12 09:52+0000\n"
-"Last-Translator: Fattah Rizki H L <galamarv@gmail.com>\n"
+"PO-Revision-Date: 2022-08-28 16:05+0000\n"
+"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2018-10-12 19:24+0000\n"
-"X-Generator: Launchpad (build 18790)\n"
+"X-Launchpad-Export-Date: 2022-08-28 16:08+0000\n"
+"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:296
@@ -211,7 +211,7 @@ msgstr "Menginisialisasi…"
 
 #: src/text.vala:355
 msgid "Configuring…"
-msgstr ""
+msgstr "Mengkonfigurasi…"
 
 #: src/text.vala:356
 msgid "Connecting…"
@@ -918,6 +918,9 @@ msgstr "Sembunyikan semua jaringan"
 #: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
 msgstr "Jalankan perintah"
+
+#~ msgid "Config_uration"
+#~ msgstr "Konfig_urasi"
 
 #~ msgid "_About"
 #~ msgstr "Tent_ang"
