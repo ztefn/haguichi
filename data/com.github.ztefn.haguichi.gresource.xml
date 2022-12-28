@@ -7,7 +7,6 @@
     <file>elementary.css</file>
     <file>elementary-base.css</file>
     <file>elementary-dark.css</file>
-    <file>mint.css</file>
     <file>yaru.css</file>
   </gresource>
   <gresource prefix="/com/github/ztefn/haguichi/ui">
