@@ -131,9 +131,8 @@ public class GlobalEvents
         HaguichiWindow.header_bar.search_but.active = true;
         HaguichiWindow.header_bar.search_but.set_action_name ("app.stop-search");
         HaguichiWindow.header_bar.search_but.tooltip_text = "";
-        HaguichiWindow.search_bar_revealer.set_reveal_child (true);
         HaguichiWindow.search_entry.realize(); // Avoid Gtk-CRITICAL warning "gtk_widget_event: assertion 'WIDGET_REALIZED_FOR_EVENT (widget, event)' failed"
-        HaguichiWindow.search_entry.grab_focus();
+        HaguichiWindow.search_bar.search_mode_enabled = true;
         
         search_active = true;
     }
@@ -144,8 +143,7 @@ public class GlobalEvents
         HaguichiWindow.header_bar.search_but.set_action_name ("app.start-search");
         HaguichiWindow.header_bar.search_but.tooltip_text = Text.search_tip;
         HaguichiWindow.header_bar.search_but.has_tooltip = false;
-        HaguichiWindow.search_bar_revealer.set_reveal_child (false);
-        HaguichiWindow.search_entry.text = "";
+        HaguichiWindow.search_bar.search_mode_enabled = false;
         
         search_active = false;
     }

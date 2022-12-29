@@ -22,8 +22,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
     public static Sidebar sidebar;
     
     public static SearchEntry search_entry;
-    public static Toolbar search_bar;
-    public static Revealer search_bar_revealer;
+    public static SearchBar search_bar;
     
     public static int minimum_width;
     
@@ -79,22 +78,36 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         sidebar     = new Sidebar();
         
         search_entry = new SearchEntry();
-        search_entry.key_release_event.connect (search_entry_on_key_release);
+        search_entry.activate.connect (() =>
+        {
+            network_view.activate_selected_row();
+        });
         search_entry.search_changed.connect (() =>
         {
             network_view.refilter();
         });
         
-        ToolItem search_item = new ToolItem();
-        search_item.add (search_entry);
-        search_item.set_expand (true);
-        
-        search_bar = new Toolbar();
-        search_bar.add (search_item);
-        search_bar.get_style_context().add_class ("search-bar");
-        
-        search_bar_revealer = new Revealer();
-        search_bar_revealer.add (search_bar);
+        search_bar = new SearchBar();
+        search_bar.connect_entry (search_entry);
+        search_bar.notify["search-mode-enabled"].connect (() =>
+        {
+            if (search_bar.search_mode_enabled)
+            {
+                GlobalEvents.start_search();
+            }
+            else
+            {
+                GlobalEvents.stop_search();
+            }
+        });
+        // Ugly hack to make entry expand inside search bar
+        Revealer search_revealer = (Revealer) search_bar.get_child();
+        search_revealer.get_child().destroy();
+        Box search_box = new Box (Orientation.HORIZONTAL, 0);
+        search_box.margin = 6;
+        search_box.set_name ("tool_box");
+        search_box.pack_start (search_entry, true, true, 0);
+        search_revealer.add (search_box);
         
         
         // Connected Box
@@ -159,7 +172,7 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         Box left_box = new Box (Orientation.VERTICAL, 0);
         left_box.pack_start (message_bar,         false, false, 0);
-        left_box.pack_start (search_bar_revealer, false, false, 0);
+        left_box.pack_start (search_bar,          false, false, 0);
         left_box.pack_start (disconnected_box,    true,  true,  0);
         left_box.pack_start (connected_box,       true,  true,  0);
         
@@ -396,18 +409,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         return true;
     }
     
-    private bool search_entry_on_key_release (Gdk.EventKey event)
-    {
-        if ((event.keyval == Gdk.Key.Return) ||
-            (event.keyval == Gdk.Key.ISO_Enter) ||
-            (event.keyval == Gdk.Key.3270_Enter) ||
-            (event.keyval == Gdk.Key.KP_Enter))
-        {
-            network_view.activate_selected_row();
-        }
-        return false;
-    }
-    
     private bool on_key_press (Gdk.EventKey event)
     {
         if (Gdk.ModifierType.CONTROL_MASK in event.state)
@@ -457,10 +458,6 @@ public class HaguichiWindow : Gtk.ApplicationWindow
                         search_entry.grab_focus();
                     }
                 }
-            }
-            else if (event.keyval == Gdk.Key.Escape)
-            {
-                GlobalEvents.stop_search();
             }
             else if ((event.keyval == Gdk.Key.Delete) ||
                      (event.keyval == Gdk.Key.KP_Delete))
