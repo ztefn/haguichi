@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2023 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -36,9 +36,11 @@ public class CommandsEditorRow : ListBoxRow
         
         
         title = new Label (null);
+        title.ellipsize = Pango.EllipsizeMode.END;
         title.xalign = 0.0f;
         
         preview = new Label (null);
+        preview.ellipsize = Pango.EllipsizeMode.END;
         preview.margin_bottom = 2;
         preview.xalign = 0.0f;
         preview.get_style_context().add_class ("dim-label");
