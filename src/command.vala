@@ -164,7 +164,6 @@ public class Command : Object
         terminal = get_available ({
             "gnome-terminal",
             "mate-terminal",
-            "pantheon-terminal",
             "io.elementary.terminal",
             "kgx",
             "tilix",
@@ -186,7 +185,6 @@ public class Command : Object
             "nautilus",
             "caja",
             "nemo",
-            "pantheon-files",
             "io.elementary.files",
             "thunar",
             "dolphin",
