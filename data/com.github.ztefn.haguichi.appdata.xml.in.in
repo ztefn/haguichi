@@ -40,6 +40,22 @@
     <binary>@BINARY_NAME@</binary>
   </provides>
   <releases>
+    <release version="1.4.6" date="2023-04-30">
+      <description translate="no">
+        <p>Haguichi 1.4.6 was hatched breaking the following news:</p>
+        <ul>
+          <li>Implemented separate thread and mode for configuring.</li>
+          <li>Improved display of long text input in commands editor.</li>
+          <li>Now using actual Gtk.SearchBar widget for search bar.</li>
+          <li>Now using pill style action buttons in message box.</li>
+          <li>Added support for kgx (GNOME Console).</li>
+          <li>Dropped support for pantheon-terminal and pantheon-files.</li>
+          <li>Removed stylesheet for Mint themes.</li>
+          <li>Removed Control+F1 as accelerator to open keyboard shortcuts window.</li>
+          <li>Updated Brazilian Portuguese, French, Indonesian, Italian, Japanese, Lithuanian, Polish, Portuguese, Russian, Spanish, Swedish and Ukrainian translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.4.5" date="2021-12-08">
       <description translate="no">
         <p>Haguichi 1.4.5 is gifted with the following changes:</p>
