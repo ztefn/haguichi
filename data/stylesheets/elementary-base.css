@@ -83,8 +83,22 @@
 
 
 /*
+ * Set padding and margin for toolbar buttons in commands editor
+ */
+
+.preferences .commands-editor .inline-toolbar {
+    padding: 3px;
+}
+
+.preferences .commands-editor .inline-toolbar .image-button {
+    margin: 0 3px;
+}
+
+
+/*
  * Remove margin from action area in about dialog
  */
+
 .about-dialog .dialog-action-area {
     margin: 0;
 }
