@@ -11,7 +11,11 @@
 using Gtk;
 using Config;
 
+#if USE_LIBHANDY
+public class HaguichiWindow : Hdy.ApplicationWindow
+#else
 public class HaguichiWindow : Gtk.ApplicationWindow
+#endif
 {
     public static List<Gdk.Pixbuf> app_icons = new List<Gdk.Pixbuf>();
     
@@ -199,14 +203,18 @@ public class HaguichiWindow : Gtk.ApplicationWindow
         
         Box main_box = new Box (Orientation.VERTICAL, 0);
         
+#if !USE_LIBHANDY
         if (Haguichi.window_use_header_bar)
         {
             set_titlebar (header_bar);
         }
         else
         {
+#endif
             main_box.pack_start (header_bar, false, false, 0);
+#if !USE_LIBHANDY
         }
+#endif
         
         main_box.pack_start (message_box, true, true, 0);
         main_box.pack_start (content_box, true, true, 0);
@@ -379,6 +387,9 @@ public class HaguichiWindow : Gtk.ApplicationWindow
             {
                 minimum_width += 50;
             }
+#if USE_LIBHANDY
+            header_bar.populate();
+#endif
         }
         header_bar.show_hide_buttons (new_width, minimum_width);
     }

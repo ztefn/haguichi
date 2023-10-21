@@ -10,7 +10,11 @@
 
 using Gtk;
 
+#if USE_LIBHANDY
+public class Headerbar : Hdy.HeaderBar
+#else
 public class Headerbar : HeaderBar
+#endif
 {
     private string mode;
     
@@ -189,7 +193,12 @@ public class Headerbar : HeaderBar
         box.add (network_but);
         box.add (refresh_but);
         
-        
+#if USE_LIBHANDY
+    }
+    
+    public void populate ()
+    {
+#endif
         pack_start (connect_but);
         pack_start (client_but);
         pack_start (box);
@@ -280,7 +289,9 @@ public class Headerbar : HeaderBar
             
             if (Gtk.check_version (3, 18, 0) == null) // Add 50 pixels for GTK+ version 3.18 and later
             {
+#if !USE_LIBHANDY
                 minimum_width += 50;
+#endif
             }
         }
         else

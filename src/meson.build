@@ -113,6 +113,14 @@ if get_option('for-elementary')
     deps += granite_dep
 endif
 
+if get_option('use-libhandy') or get_option('for-elementary')
+    add_project_arguments(
+        ['-D', 'USE_LIBHANDY'],
+        language: 'vala'
+    )
+    deps += dependency('libhandy-1')
+endif
+
 if get_option('enable-wingpanel-indicator')
     add_project_arguments(
         ['-D', 'ENABLE_WINGPANEL_INDICATOR'],

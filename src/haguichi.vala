@@ -93,6 +93,9 @@ class Haguichi : Gtk.Application
         Debug.log (Debug.domain.ENVIRONMENT, "Haguichi.startup", "Running inside Flatpak sandbox: " + running_in_flatpak.to_string());
         Command.spawn_wrap = running_in_flatpak ? "flatpak-spawn --host " : "";
         
+#if USE_LIBHANDY
+        Hdy.init();
+#endif
         Text.init();
         Settings.init();
         
