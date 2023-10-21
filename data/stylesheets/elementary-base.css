@@ -142,8 +142,29 @@
  * https://github.com/elementary/stylesheet/issues/352
  */
 
-.haguichi-window .titlebar
-{
+.haguichi-window .titlebar {
     padding-top: 4px;
     padding-bottom: 4px;
+}
+
+
+/*
+ * Fix styles for popovers
+ */
+
+.haguichi-window popover > stack > box {
+  margin: -4px -10px;
+}
+
+.haguichi-window popover > stack separator {
+  margin: 3px 0;
+}
+
+.haguichi-window popover > stack modelbutton > arrow.left {
+  margin-top: -6px;
+  margin-bottom: -6px;
+}
+
+.haguichi-window popover > stack modelbutton > box:nth-child(2) > label {
+  font-weight: 700;
 }
