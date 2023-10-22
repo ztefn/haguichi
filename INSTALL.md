@@ -54,6 +54,13 @@
     $ meson configure -Dfor-ubuntu=true
 
 
+  **use-libhandy**
+
+  This option enables usage of libhandy for rounded bottom corners and additionally requires the *libhandy-1* development package.
+
+    $ meson configure -Duse-libhandy=true
+
+
   **use-rdnn-everywhere**
 
   This option enables usage of [RDNN](https://en.wikipedia.org/wiki/Reverse_domain_name_notation "Reverse Domain Name Notation") everywhere, specifically for binary and gettext package.
