@@ -113,7 +113,7 @@ if get_option('for-elementary')
     deps += granite_dep
 endif
 
-if get_option('use-libhandy') or get_option('for-elementary')
+if get_option('use-libhandy')
     add_project_arguments(
         ['-D', 'USE_LIBHANDY'],
         language: 'vala'
