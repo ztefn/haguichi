@@ -172,7 +172,7 @@ public class GlobalActions
         app.set_accels_for_action ("app.refresh", {"F5", "<Control>R"});
         app.set_accels_for_action ("app.start-search", {"<Control>F"});
         app.set_accels_for_action ("app." + Settings.show_offline_members.key_name, {"<Control>M"});
-        app.set_accels_for_action ("app.preferences", {"<Control>P"});
+        app.set_accels_for_action ("app.preferences", {"<Control>comma"});
         app.set_accels_for_action ("app.shortcuts", {"<Control>question"});
         app.set_accels_for_action ("app.info", {"F2"});
         app.set_accels_for_action ("app.help", {"F1"});
