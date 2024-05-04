@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-08-17 23:54+0200\n"
-"PO-Revision-Date: 2022-08-28 15:55+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"PO-Revision-Date: 2024-05-03 08:50+0000\n"
+"Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2022-08-28 16:00+0000\n"
-"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
+"X-Launchpad-Export-Date: 2024-05-04 12:32+0000\n"
+"X-Generator: Launchpad (build 35a32c5a77fa9bec38c797a42069c7b9f34c7cc5)\n"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/text.vala:296
@@ -211,7 +211,7 @@ msgstr "初期化しています…"
 
 #: src/text.vala:355
 msgid "Configuring…"
-msgstr "構成中…"
+msgstr "設定しています…"
 
 #: src/text.vala:356
 msgid "Connecting…"
@@ -351,7 +351,7 @@ msgstr "共有を見る(_B)"
 
 #: src/text.vala:396
 msgid "_Ping"
-msgstr "Ping を打つ(_P)"
+msgstr "Ping(_P)"
 
 #: src/text.vala:397
 msgid "_View Remote Desktop"
@@ -424,7 +424,7 @@ msgstr "アカウントと関連付ける"
 
 #: src/text.vala:420
 msgid "_Include all networks created by this client"
-msgstr "このクライアントで作った全てのネットワークを含める(_I)"
+msgstr "このクライアントで作ったすべてのネットワークを含む(_I)"
 
 #: src/text.vala:421
 msgid "_Attach"
@@ -444,7 +444,7 @@ msgstr "フォルダーを開く(_O)"
 
 #: src/text.vala:426
 msgid "_Save a Backup…"
-msgstr "バックアップ保存(_S)…"
+msgstr "バックアップを保存(_S)…"
 
 #: src/text.vala:427
 msgid "Save a Backup"
@@ -468,7 +468,7 @@ msgstr "設定を復元できませんでした"
 
 #: src/text.vala:432
 msgid "Archive does not contain expected files."
-msgstr "求めているファイルがアーカイブ内に見当たりません。"
+msgstr "期待したファイルがアーカイブ内に見当たりません。"
 
 #: src/text.vala:433
 msgid "All supported archives"
@@ -508,7 +508,7 @@ msgstr "パスワードが正しくありません"
 
 #: src/text.vala:445
 msgid "Network is full"
-msgstr "ネットワークが満員状態です"
+msgstr "ネットワークが混雑しています"
 
 #: src/text.vala:446
 msgid "Network is locked"
@@ -552,15 +552,16 @@ msgstr "ネットワーク “{0}” から離脱してもよろしいですか�
 
 #: src/text.vala:460
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr "承認されれば、後でいつでもネットワークに再参加することができます。"
+msgstr "承認されれば、後でいつでもネットワークに再参加できます。"
 
 #: src/text.vala:462
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "ネットワーク \"{1}\" からメンバー “{0}” を登録から抹消してもよろしいですか？"
+msgstr "ネットワーク “{1}” からメンバー “{0}” を登録抹消してもよろしいですか？"
 
 #: src/text.vala:463
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加することができます。"
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
+msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加できます。"
 
 #: src/text.vala:465
 msgid "Could not delete network “{0}”"
@@ -572,7 +573,7 @@ msgstr "ネットワーク “{0}” を離脱できませんでした"
 
 #: src/text.vala:467
 msgid "Could not evict member “{0}”"
-msgstr "メンバー “{0}” の登録を抹消できませんでした"
+msgstr "メンバー “{0}” を登録抹消できませんでした"
 
 #: src/text.vala:468
 msgid "Could not go online in the network “{0}”"
@@ -641,7 +642,7 @@ msgstr "状態で並び替え(_S)"
 
 #: src/text.vala:491
 msgid "C_onnect automatically on startup"
-msgstr "起動時に自動で接続する(_C)"
+msgstr "起動時に自動で接続(_O)"
 
 #: src/text.vala:492
 msgid "_Reconnect automatically when the connection is lost"
@@ -757,7 +758,7 @@ msgstr "すべての変更を元に戻してもよろしいですか？"
 
 #: src/text.vala:527
 msgid "If you revert all changes, the default commands will be restored."
-msgstr "すべての変更点を元に戻すと、既定のコマンドが復元されます。"
+msgstr "すべての変更を元に戻すと、デフォルトのコマンドが復元されます。"
 
 #: src/text.vala:529
 msgid "Hamachi lost connection"
@@ -832,7 +833,7 @@ msgstr[0] "{0} 秒以内に再接続します"
 #, c-format
 msgid "_Update the network list every %S _second"
 msgid_plural "_Update the network list every %S _seconds"
-msgstr[0] "%S 秒毎にネットワーク一覧をアップデート(_U)"
+msgstr[0] "%S 秒毎にネットワーク一覧を更新(_U)"
 
 #: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
 msgid "Join, create and manage Hamachi networks in a breeze."
@@ -869,11 +870,11 @@ msgstr "ご注意ください: このアプリを使用するには、システ�
 
 #: data/ui/shortcuts-window.ui:15
 msgid "Show help"
-msgstr "ヘルプを表示"
+msgstr "ヘルプを表示する"
 
 #: data/ui/shortcuts-window.ui:21
 msgid "Show client information"
-msgstr "クライアントの情報を表示"
+msgstr "クライアントの情報を表示する"
 
 #: data/ui/shortcuts-window.ui:27
 msgid "Open menu"
@@ -885,7 +886,7 @@ msgstr "キーボードショートカットを表示する"
 
 #: data/ui/shortcuts-window.ui:57
 msgid "Quit"
-msgstr "終了"
+msgstr "終了する"
 
 #: data/ui/shortcuts-window.ui:64
 msgid "Network List"
@@ -893,11 +894,11 @@ msgstr "ネットワークリスト"
 
 #: data/ui/shortcuts-window.ui:68
 msgid "Join a network"
-msgstr "ネットワークに参加"
+msgstr "ネットワークに参加する"
 
 #: data/ui/shortcuts-window.ui:74
 msgid "Create a network"
-msgstr "ネットワークを作成"
+msgstr "ネットワークを作成する"
 
 #: data/ui/shortcuts-window.ui:92
 msgid "Show/hide offline members"
@@ -905,7 +906,7 @@ msgstr "オフラインメンバーの表示を切り替える"
 
 #: data/ui/shortcuts-window.ui:98
 msgid "Expand all networks"
-msgstr "すべてのネットワークを展開"
+msgstr "すべてのネットワークを展開する"
 
 #: data/ui/shortcuts-window.ui:104
 msgid "Collapse all networks"
@@ -913,7 +914,7 @@ msgstr "すべてのネットワークを閉じる"
 
 #: data/ui/shortcuts-window.ui:110
 msgid "Execute command"
-msgstr "コマンドを実行"
+msgstr "コマンドを実行する"
 
 #~ msgid "A graphical frontend for Hamachi."
 #~ msgstr "Hamachi 用のグラフィカルフロントエンド"
