@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-17 23:54+0200\n"
+"POT-Creation-Date: 2024-06-09 21:52+0200\n"
 "PO-Revision-Date: 2020-01-29 16:28+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: \n"
@@ -14,924 +14,1017 @@ msgstr ""
 "X-Launchpad-Export-Date: 2020-01-29 16:32+0000\n"
 "X-Generator: Launchpad (build b8d1327fd820d6bf500589d6da587d5037c7d88e)\n"
 
-#. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/text.vala:296
-msgid "translator-credits"
-msgstr "Stephen Brandt https://launchpad.net/~ztefn"
+#. Name used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:5
+msgid "Haguichi"
+msgstr "Haguichi"
 
-#. Description used in about dialog.
-#: src/text.vala:298 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
-msgid "A graphical frontend for Hamachi"
-msgstr "Een grafische schil voor Hamachi"
-
-#. Generic name used in application launchers.
-#: src/text.vala:300
+#. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
+#: data/com.github.ztefn.haguichi.desktop.in.in:7
 msgid "Hamachi Network Manager"
 msgstr "Hamachi netwerkbeheerder"
 
-#. Description used in application launchers.
-#: src/text.vala:302
-msgid "Join and create local networks over the Internet"
-msgstr "Maak en treed toe tot lokale netwerken via het internet"
+#. Description used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
+msgid "Manage your Hamachi networks"
+msgstr "Beheer uw Hamachi-netwerken"
 
-#: src/text.vala:304
-msgid "_Close"
-msgstr "Sl_uiten"
+#. Keywords used for search in application launchers and software centers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:15
+msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
+msgstr "LogMeIn Hamachi;VPN;LAN;Netwerk;Internet;P2P;Peer;Client;GUI;Frontend;"
 
-#: src/text.vala:305
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
+msgid ""
+"Haguichi makes it a breeze to join, create and administer Hamachi networks."
+msgstr ""
+"Haguichi maakt het een fluitje van een cent om aan Hamachi-netwerken deel te "
+"nemen, of zelf aan te maken en te beheren."
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
+msgid "Features:"
+msgstr "Eigenschappen:"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:12
+msgid "Searchable, sortable and collapsible network list"
+msgstr "Doorzoekbare, sorteerbare en inklapbare netwerklijst"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:13
+msgid "Sidebar for easy access to details and actions"
+msgstr "Zijbalk voor snelle toegang tot details and acties"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
+msgid "Indicator support for quick access to primary actions"
+msgstr "Indicatorondersteuning voor snelle toegang to primaire acties"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
+msgid "Desktop notifications to stay up to date of network events"
+msgstr ""
+"Bureaubladnotificaties om op de hoogte te blijven van gebeurtenissen binnen "
+"het netwerk"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
+msgid "Commands that can be completely customized"
+msgstr "Opdrachten die volledig aangepast kunnen worden"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
+msgid "Backup and restore of your Hamachi configuration folder"
+msgstr "Backup en herstel van uw Hamachi-configuratiemap"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
+msgid ""
+"<em>Please note: Requires installation of Hamachi on the system in order to "
+"use.</em>"
+msgstr ""
+"<em>Let op: Vereist installatie van Hamachi op het systeem om volledig te "
+"kunnen gebruiken.</em>"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
+msgid "View your network list and client information"
+msgstr "Bekijk uw netwerklijst en client-informatie"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
+msgid "View selected member details"
+msgstr "Bekijk details van een geselecteerd lid"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
+msgid "View selected network details"
+msgstr "Bekijk details van een geselecteerd netwerk"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
+msgid "Search your network list"
+msgstr "Doorzoek uw netwerklijst"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
+msgid "Join or create networks"
+msgstr "Treed toe of maak nieuwe netwerken"
+
+#: data/ui/dialogs/add-edit-command.ui:18 data/ui/dialogs/attach.ui:21
+#: data/ui/dialogs/change-access.ui:19 data/ui/dialogs/change-password.ui:19
+#: data/ui/dialogs/join-create-network.ui:20 src/dialogs/confirm.vala:25
 msgid "_Cancel"
 msgstr "_Annuleren"
 
-#: src/text.vala:307
+#: data/ui/dialogs/add-edit-command.ui:24
 msgid "_Save"
 msgstr "Op_slaan"
 
-#: src/text.vala:308
-msgid "_Revert"
-msgstr "_Terugdraaien"
-
-#: src/text.vala:309
-msgid "_Delete"
-msgstr "_Verwijderen"
-
-#: src/text.vala:310
-msgid "_Information"
-msgstr "_Informatie"
-
-#: src/text.vala:311
-msgid "_Preferences"
-msgstr "_Voorkeuren"
-
-#: src/text.vala:312
-msgid "_Keyboard Shortcuts"
-msgstr "Snel_toetsen"
-
-#: src/text.vala:313
-msgid "_Help"
-msgstr "_Hulp"
-
-#: src/text.vala:314
-msgid "_About Haguichi"
-msgstr "_Over Haguichi"
-
-#: src/text.vala:315
-msgid "_Quit"
-msgstr "A_fsluiten"
-
-#: src/text.vala:317 data/ui/shortcuts-window.ui:80
-msgid "Refresh"
-msgstr "Verversen"
-
-#: src/text.vala:318 data/ui/shortcuts-window.ui:86
-msgid "Search"
-msgstr "Zoeken"
-
-#: src/text.vala:320
-msgid "_Show Haguichi"
-msgstr "_Haguichi tonen"
-
-#: src/text.vala:322
-msgid "Yes"
-msgstr "Ja"
-
-#: src/text.vala:323
-msgid "No"
-msgstr "Nee"
-
-#: src/text.vala:325
-msgid "_Hamachi output"
-msgstr "_Hamachi uitvoer"
-
-#: src/text.vala:327
-msgid "IPv4 address:"
-msgstr "IPv4-adres:"
-
-#: src/text.vala:328
-msgid "IPv6 address:"
-msgstr "IPv6-adres:"
-
-#: src/text.vala:329
-msgid "Client ID:"
-msgstr "Client-ID:"
-
-#: src/text.vala:330
-msgid "Status:"
-msgstr "Status:"
-
-#: src/text.vala:331
-msgid "Tunnel:"
-msgstr "Tunnel:"
-
-#: src/text.vala:332
-msgid "Connection:"
-msgstr "Verbinding:"
-
-#: src/text.vala:333
-msgid "Direct"
-msgstr "Direct"
-
-#: src/text.vala:334
-msgid "Relayed"
-msgstr "Omgeleid"
-
-#: src/text.vala:335
-msgid "Anonymous"
-msgstr "Anoniem"
-
-#: src/text.vala:336
-msgid "_Network ID:"
-msgstr "_Netwerk-ID:"
-
-#: src/text.vala:338
-msgid "_Password:"
-msgstr "_Wachtwoord:"
-
-#: src/text.vala:339
-msgid "_Nickname:"
-msgstr "_Bijnaam:"
-
-#: src/text.vala:342
-msgid "Offline"
-msgstr "Offline"
-
-#: src/text.vala:343
-msgid "Online"
-msgstr "Online"
-
-#: src/text.vala:344
-msgid "Unreachable"
-msgstr "Onbereikbaar"
-
-#: src/text.vala:345
-msgid "Protocol mismatch"
-msgstr "Protocol komt niet overeen"
-
-#: src/text.vala:346
-msgid "Conflicting address"
-msgstr "Conflicterend adres"
-
-#: src/text.vala:347
-msgid "C_onnect"
-msgstr "_Verbinding maken"
-
-#: src/text.vala:348 data/ui/shortcuts-window.ui:33
-msgid "Connect"
-msgstr "Verbinding maken"
-
-#: src/text.vala:349
-msgid "_Disconnect"
-msgstr "_Verbinding verbreken"
-
-#: src/text.vala:350 data/ui/shortcuts-window.ui:39
-msgid "Disconnect"
-msgstr "Verbinding verbreken"
-
-#: src/text.vala:351
-msgid "Reconnect"
-msgstr "Opnieuw verbinden"
-
-#: src/text.vala:352
-msgid "Connected"
-msgstr "Verbonden"
-
-#: src/text.vala:353
-msgid "Disconnected"
-msgstr "Niet verbonden"
-
-#: src/text.vala:354
-msgid "Initializing…"
-msgstr "Bezig met initialiseren…"
-
-#: src/text.vala:355
-msgid "Configuring…"
-msgstr "Bezig met configureren…"
-
-#: src/text.vala:356
-msgid "Connecting…"
-msgstr "Bezig met verbinden…"
-
-#: src/text.vala:357
-msgid "Logging in…"
-msgstr "Bezig met aanmelden…"
-
-#: src/text.vala:358
-msgid "Updating…"
-msgstr "Bezig met bijwerken…"
-
-#: src/text.vala:360
-msgid "Hamachi is not configured"
-msgstr "Hamachi is niet geconfigureerd"
-
-#: src/text.vala:361
-msgid "You need to configure Hamachi before you can connect."
-msgstr "Hamachi moet eerst worden geconfigureerd om te kunnen verbinden."
-
-#: src/text.vala:362
-msgid "C_onfigure"
-msgstr "_Configureren"
-
-#: src/text.vala:364
-msgid "Hamachi is not installed"
-msgstr "Hamachi is niet geïnstalleerd"
-
-#: src/text.vala:365
-msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Download Hamachi en volg daarna de installatieinstructies."
-
-#: src/text.vala:366
-msgid "Hamachi version {0} is obsolete"
-msgstr "Hamachi versie {0} is verouderd"
-
-#: src/text.vala:367
-msgid "Please download and install the latest Hamachi version."
-msgstr "Download en installeer een nieuwere versie van Hamachi."
-
-#: src/text.vala:368
-msgid "_Download"
-msgstr "_Downloaden"
-
-#: src/text.vala:370
-msgid "You are connected!"
-msgstr "U bent verbonden!"
-
-#: src/text.vala:371
-msgid "Click on the + button to add a network."
-msgstr "Klik op de + knop om een netwerk toe te voegen."
-
-#: src/text.vala:373
-msgid "Members:"
-msgstr "Leden:"
-
-#: src/text.vala:374
-msgid "{0} online, {1} total"
-msgstr "{0} online, {1} totaal"
-
-#: src/text.vala:375
-msgid "Owner:"
-msgstr "Eigenaar:"
-
-#: src/text.vala:376
-msgid "You"
-msgstr "Uzelf"
-
-#: src/text.vala:377
-msgid "Unknown"
-msgstr "Onbekend"
-
-#: src/text.vala:378
-msgid "Unavailable"
-msgstr "Niet beschikbaar"
-
-#: src/text.vala:379
-msgid "Awaiting approval"
-msgstr "Wacht op goedkeuring"
-
-#: src/text.vala:380
-msgid "Locked:"
-msgstr "Gesloten:"
-
-#: src/text.vala:381
-msgid "Approval:"
-msgstr "Goedkeuring:"
-
-#: src/text.vala:382
-msgid "Manually"
-msgstr "Handmatig"
-
-#: src/text.vala:383
-msgid "Automatically"
-msgstr "Automatisch"
-
-#: src/text.vala:384
-msgid "Capacity:"
-msgstr "Capaciteit:"
-
-#: src/text.vala:386
-msgid "_Go Online"
-msgstr "_Online gaan"
-
-#: src/text.vala:387
-msgid "_Go Offline"
-msgstr "_Offline gaan"
-
-#: src/text.vala:388
-msgid "_Leave"
-msgstr "_Verlaten"
-
-#: src/text.vala:389
-msgid "_Locked"
-msgstr "_Gesloten"
-
-#: src/text.vala:390
-msgid "_New Member Approval"
-msgstr "_Keuring nieuwe leden"
-
-#: src/text.vala:391
-msgid "_Automatically"
-msgstr "_Automatisch"
-
-#: src/text.vala:392
-msgid "_Manually"
-msgstr "_Handmatig"
-
-#: src/text.vala:393
-msgid "_Copy Network ID"
-msgstr "_Netwerk-ID kopiëren"
-
-#: src/text.vala:395
-msgid "_Browse Shares"
-msgstr "_Gedeelde mappen bladeren"
-
-#: src/text.vala:396
-msgid "_Ping"
-msgstr "_Pingen"
-
-#: src/text.vala:397
-msgid "_View Remote Desktop"
-msgstr "_Werkplek op afstand bekijken"
-
-#: src/text.vala:398
-msgid "_Approve"
-msgstr "_Goedkeuren"
-
-#: src/text.vala:399
-msgid "_Reject"
-msgstr "_Afwijzen"
-
-#. This action removes the selected member from the network.
-#: src/text.vala:401
-msgid "_Evict"
-msgstr "_Verwijderen"
-
-#: src/text.vala:402
-msgid "Copy IPv_4 Address"
-msgstr "IPv_4-adres kopiëren"
-
-#: src/text.vala:403
-msgid "Copy IPv_6 Address"
-msgstr "IPv_6-adres kopiëren"
-
-#: src/text.vala:404
-msgid "_Copy Client ID"
-msgstr "_Client-ID kopiëren"
-
-#: src/text.vala:406
-msgid "Change _Nickname…"
-msgstr "_Bijnaam wijzigen…"
-
-#: src/text.vala:407
-msgid "Change Nickname"
-msgstr "Bijnaam wijzigen"
-
-#: src/text.vala:408
-msgid "C_hange"
-msgstr "_Wijzigen"
-
-#: src/text.vala:410
-msgid "Change _Password…"
-msgstr "_Wachtwoord wijzigen…"
-
-#: src/text.vala:411
-msgid "Change Password"
-msgstr "Wachtwoord wijzigen"
-
-#: src/text.vala:412
-msgid "_New password:"
-msgstr "_Nieuw wachtwoord:"
-
-#: src/text.vala:414
-msgid "_Account:"
-msgstr "_Account:"
-
-#: src/text.vala:416
-msgid "Pending"
-msgstr "In afwachting"
-
-#: src/text.vala:418
-msgid "_Attach to Account…"
-msgstr "_Koppelen aan account…"
-
-#: src/text.vala:419
+#: data/ui/dialogs/add-edit-command.ui:52
+msgid "Label"
+msgstr "Label"
+
+#: data/ui/dialogs/add-edit-command.ui:59
+msgid "IPv4 Command"
+msgstr "IPv4-opdracht"
+
+#: data/ui/dialogs/add-edit-command.ui:66
+msgid "IPv6 Command"
+msgstr "IPv6-opdracht"
+
+#: data/ui/dialogs/add-edit-command.ui:73
+msgid "Priority"
+msgstr "Prioriteit"
+
+#: data/ui/dialogs/attach.ui:10
 msgid "Attach to Account"
 msgstr "Koppelen aan account"
 
-#: src/text.vala:420
-msgid "_Include all networks created by this client"
-msgstr "_Neem ook de door deze client aangemaakte netwerken mee"
-
-#: src/text.vala:421
+#: data/ui/dialogs/attach.ui:27
 msgid "_Attach"
 msgstr "_Koppelen"
 
-#: src/text.vala:422
-msgid "Account not found"
-msgstr "Account niet gevonden"
+#: data/ui/dialogs/attach.ui:56 data/ui/sidebar.ui:17 src/sidebar.vala:179
+msgid "Account"
+msgstr "Account"
 
-#: src/text.vala:424
-msgid "_Configuration"
-msgstr "_Configuratie"
+#: data/ui/dialogs/attach.ui:63
+msgid "Include all networks created by this client"
+msgstr "Neem ook de door deze client aangemaakte netwerken mee"
 
-#: src/text.vala:425
-msgid "_Open Folder"
-msgstr "Map _openen"
+#: data/ui/dialogs/change-access.ui:10 data/ui/sidebar.ui:133
+msgid "Change Access"
+msgstr "Toegang wijzigen"
 
-#: src/text.vala:426
-msgid "_Save a Backup…"
-msgstr "Reservekopie _maken…"
+#: data/ui/dialogs/change-access.ui:25 data/ui/dialogs/change-password.ui:25
+msgid "C_hange"
+msgstr "_Wijzigen"
 
-#: src/text.vala:427
-msgid "Save a Backup"
-msgstr "Reservekopie maken"
+#: data/ui/dialogs/change-access.ui:53
+msgid "Locked"
+msgstr "Gesloten"
 
-#: src/text.vala:428
-msgid "_Restore from Backup…"
-msgstr "Reservekopie _terugzetten…"
+#: data/ui/dialogs/change-access.ui:54
+msgid "Do not accept new network members"
+msgstr "Geen nieuwe leden in het netwerk toestaan"
 
-#: src/text.vala:429
-msgid "Restore from Backup"
-msgstr "Reservekopie terugzetten"
+#: data/ui/dialogs/change-access.ui:60
+msgid "Approval"
+msgstr "Goedkeuring"
 
-#: src/text.vala:430
-msgid "_Restore"
-msgstr "_Terugzetten"
+#: data/ui/dialogs/change-access.ui:64
+msgid "Automatically"
+msgstr "Automatisch"
 
-#: src/text.vala:431
-msgid "Could not restore configuration"
-msgstr "Reservekopie kan helaas niet worden teruggezet"
+#: data/ui/dialogs/change-access.ui:65
+msgid "Manually"
+msgstr "Handmatig"
 
-#: src/text.vala:432
-msgid "Archive does not contain expected files."
-msgstr "Het archief bevat niet de juiste bestanden."
+#: data/ui/dialogs/change-password.ui:10 data/ui/sidebar.ui:117
+msgid "Change Password"
+msgstr "Wachtwoord wijzigen"
 
-#: src/text.vala:433
-msgid "All supported archives"
-msgstr "Alle ondersteunde archieven"
+#: data/ui/dialogs/change-password.ui:53
+msgid "New Password"
+msgstr "Nieuw wachtwoord"
 
-#: src/text.vala:435
+#: data/ui/dialogs/join-create-network.ui:54 data/ui/sidebar.ui:108
+msgid "Network ID"
+msgstr "Netwerk-ID"
+
+#: data/ui/dialogs/join-create-network.ui:61
+msgid "Password"
+msgstr "Wachtwoord"
+
+#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:231 src/bubble.vala:58
+msgid "_Approve"
+msgstr "_Goedkeuren"
+
+#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:244 src/bubble.vala:59
+msgid "_Reject"
+msgstr "_Afwijzen"
+
+#: data/ui/menus/member-menu.ui:22
+msgid "Copy IPv_4 Address"
+msgstr "IPv_4-adres kopiëren"
+
+#: data/ui/menus/member-menu.ui:27
+msgid "Copy IPv_6 Address"
+msgstr "IPv_6-adres kopiëren"
+
+#: data/ui/menus/member-menu.ui:32
+msgid "_Copy Client ID"
+msgstr "_Client-ID kopiëren"
+
+#. This action removes the selected member from the network.
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+msgid "_Evict"
+msgstr "_Verwijderen"
+
+#: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
+msgid "_Details"
+msgstr "_Details"
+
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:519
+#: src/indicator.vala:114
 msgid "_Join Network…"
 msgstr "Netwerk _toetreden…"
 
-#: src/text.vala:436
-msgid "Join Network"
-msgstr "Netwerk toetreden"
-
-#: src/text.vala:437
-msgid "_Join"
-msgstr "_Toetreden"
-
-#: src/text.vala:439
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:523
+#: src/indicator.vala:119
 msgid "_Create Network…"
 msgstr "Netwerk _aanmaken…"
 
-#: src/text.vala:440
-msgid "Create Network"
-msgstr "Netwerk aanmaken"
+#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:151
+msgid "_Go Online"
+msgstr "_Online gaan"
 
-#: src/text.vala:441
-msgid "C_reate"
-msgstr "Aan_maken"
+#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:164
+msgid "_Go Offline"
+msgstr "_Offline gaan"
 
-#: src/text.vala:443
-msgid "Network not found"
-msgstr "Netwerk niet gevonden"
+#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+msgid "_Leave"
+msgstr "_Verlaten"
 
-#: src/text.vala:444
-msgid "Invalid password"
-msgstr "Het wachtwoord is onjuist"
+#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+msgid "_Delete"
+msgstr "_Verwijderen"
 
-#: src/text.vala:445
-msgid "Network is full"
-msgstr "Dit netwerk is vol"
+#: data/ui/menus/network-menu.ui:36
+msgid "Change _Access…"
+msgstr "_Toegang wijzigen…"
 
-#: src/text.vala:446
-msgid "Network is locked"
-msgstr "Dit netwerk is gesloten"
+#: data/ui/menus/network-menu.ui:41
+msgid "Change _Password…"
+msgstr "_Wachtwoord wijzigen…"
 
-#: src/text.vala:447
-msgid "Network already joined"
-msgstr "U bent al toegetreden tot dit netwerk"
+#: data/ui/menus/network-menu.ui:48
+msgid "_Copy Network ID"
+msgstr "_Netwerk-ID kopiëren"
 
-#: src/text.vala:448
-msgid "Network ID is already taken"
-msgstr "Dit netwerk-ID is al in gebruik"
-
-#: src/text.vala:449
-msgid "Unknown error"
-msgstr "Onbekende fout"
-
-#: src/text.vala:451
-msgid "Join request sent"
-msgstr "Uw toetredingsverzoek is ingediend"
-
-#: src/text.vala:453 data/ui/shortcuts-window.ui:45
-msgid "Preferences"
-msgstr "Voorkeuren"
-
-#: src/text.vala:454
-msgid "Information"
-msgstr "Informatie"
-
-#: src/text.vala:456
-msgid "Are you sure you want to delete the network “{0}”?"
-msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verwijderen?"
-
-#: src/text.vala:457
-msgid "If you delete a network, it will be permanently lost."
-msgstr "Als u een netwerk verwijderd kan dit niet meer worden hersteld."
-
-#: src/text.vala:459
-msgid "Are you sure you want to leave the network “{0}”?"
-msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verlaten?"
-
-#: src/text.vala:460
-msgid "If admitted, you can rejoin the network at any later time."
-msgstr ""
-"Indien toegestaan kunt u op een later moment opnieuw tot dit netwerk "
-"toetreden."
-
-#: src/text.vala:462
-msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "Weet u zeker dat u lid ‘{0}’ uit het netwerk ‘{1}’ wilt verwijderen?"
-
-#: src/text.vala:463
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"Indien toegestaan kunnen verwijderde leden op een later moment opnieuw tot "
-"dit netwerk toetreden."
-
-#: src/text.vala:465
-msgid "Could not delete network “{0}”"
-msgstr "Het netwerk ‘{0}’ kan niet worden verwijderd"
-
-#: src/text.vala:466
-msgid "Could not leave network “{0}”"
-msgstr "Het netwerk ‘{0}’ kan niet worden verlaten"
-
-#: src/text.vala:467
-msgid "Could not evict member “{0}”"
-msgstr "Het lid ‘{0}’ kan niet worden verwijderd"
-
-#: src/text.vala:468
-msgid "Could not go online in the network “{0}”"
-msgstr "Het online gaan in netwerk ‘{0}’ is mislukt"
-
-#: src/text.vala:469
-msgid "Could not go offline in the network “{0}”"
-msgstr "Het offline gaan in netwerk ‘{0}’ is mislukt"
-
-#: src/text.vala:471
-msgid "See output for details."
-msgstr "Zie de uitvoer voor details."
-
-#: src/text.vala:473 data/ui/shortcuts-window.ui:11
+#: data/ui/preferences.ui:6 data/ui/shortcuts.ui:10
 msgid "General"
 msgstr "Algemeen"
 
-#: src/text.vala:474
+#: data/ui/preferences.ui:12
+msgid "Configuration"
+msgstr "Configuratie"
+
+#: data/ui/preferences.ui:19
+msgid "Backup"
+msgstr "Reservekopie"
+
+#: data/ui/preferences.ui:30
+msgid "Open Folder"
+msgstr "Map openen"
+
+#: data/ui/preferences.ui:44 data/ui/widgets/command-entry-row.ui:46
+msgid "Nickname"
+msgstr "Bijnaam"
+
+#: data/ui/preferences.ui:51
+msgid "_Protocol"
+msgstr "_Protocol"
+
+#: data/ui/preferences.ui:56
+msgid "Both IPv4 and IPv6"
+msgstr "Zowel IPv4 als IPv6"
+
+#: data/ui/preferences.ui:57
+msgid "IPv4 only"
+msgstr "Alleen IPv4"
+
+#: data/ui/preferences.ui:58
+msgid "IPv6 only"
+msgstr "Alleen IPv6"
+
+#: data/ui/preferences.ui:68
+msgid "Behavior"
+msgstr "Gedrag"
+
+#: data/ui/preferences.ui:71
+msgid "_Network list update interval"
+msgstr "_Bijwerkinterval netwerklijst"
+
+#: data/ui/preferences.ui:77
+msgid "_Connect automatically on startup"
+msgstr "A_utomatisch verbinden bij opstarten"
+
+#: data/ui/preferences.ui:83
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "Automatisch een verbroken verbinding _herstellen"
+
+#: data/ui/preferences.ui:89
+msgid "_Disconnect on quit"
+msgstr "_Verbinding verbreken bij afsluiten"
+
+#: data/ui/preferences.ui:99 data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Opdrachten"
 
 #. In this context meaning "work environment".
-#: src/text.vala:476
+#: data/ui/preferences.ui:107
 msgid "Desktop"
 msgstr "Werkomgeving"
 
-#: src/text.vala:478
-msgid "Behavior"
-msgstr "Gedrag"
-
-#: src/text.vala:479
+#: data/ui/preferences.ui:110
 msgid "Appearance"
 msgstr "Uiterlijk"
 
-#: src/text.vala:480
-msgid "Notifications"
-msgstr "Notificaties"
+#: data/ui/preferences.ui:113
+msgid "_Style"
+msgstr "_Stijl"
 
-#: src/text.vala:482
-msgid "_Protocol:"
-msgstr "_Protocol:"
+#: data/ui/preferences.ui:130
+msgid "Follow System"
+msgstr "Systeem volgen"
 
-#: src/text.vala:483
-msgid "Both IPv4 and IPv6"
-msgstr "Zowel IPv4 als IPv6"
+#: data/ui/preferences.ui:141
+msgid "Light"
+msgstr "Licht"
 
-#: src/text.vala:484
-msgid "IPv4 only"
-msgstr "Alleen IPv4"
+#: data/ui/preferences.ui:153
+msgid "Dark"
+msgstr "Donker"
 
-#: src/text.vala:485
-msgid "IPv6 only"
-msgstr "Alleen IPv6"
-
-#: src/text.vala:487
-msgid "Show _Offline Members"
-msgstr "Offline _leden tonen"
-
-#: src/text.vala:488
-msgid "Sort by _Name"
-msgstr "Sorteren op _naam"
-
-#: src/text.vala:489
-msgid "Sort by _Status"
-msgstr "Sorteren op _status"
-
-#: src/text.vala:491
-msgid "C_onnect automatically on startup"
-msgstr "A_utomatisch verbinden bij opstarten"
-
-#: src/text.vala:492
-msgid "_Reconnect automatically when the connection is lost"
-msgstr "Automatisch een verbroken verbinding _herstellen"
-
-#: src/text.vala:493
-msgid "_Disconnect on quit"
-msgstr "_Verbinding verbreken bij afsluiten"
-
-#: src/text.vala:495
-msgid "Use _dark theme variant"
-msgstr "_Donkere themavariant gebruiken"
-
-#: src/text.vala:497
+#: data/ui/preferences.ui:163
 msgid "Show _indicator"
 msgstr "_Indicator tonen"
 
-#: src/text.vala:499
+#: data/ui/preferences.ui:172
+msgid "Notifications"
+msgstr "Notificaties"
+
+#: data/ui/preferences.ui:175
 msgid "Display notification when the connection is l_ost"
 msgstr "Een notificatie tonen wanneer de verbinding is v_erbroken"
 
-#: src/text.vala:500
+#: data/ui/preferences.ui:181
 msgid "Display notification when a member _joins"
 msgstr "Een notificatie tonen wanneer er een lid _toetreedt"
 
-#: src/text.vala:501
+#: data/ui/preferences.ui:187
 msgid "Display notification when a member _leaves"
 msgstr "Een notificatie tonen wanneer er een lid _uittreedt"
 
-#: src/text.vala:502
+#: data/ui/preferences.ui:193
 msgid "Display notification when a member comes o_nline"
 msgstr "Een notificatie tonen wanneer er een lid o_nline komt"
 
-#: src/text.vala:503
+#: data/ui/preferences.ui:199
 msgid "Display notification when a member goes o_ffline"
 msgstr "Een notificatie tonen wanneer er een lid o_ffline gaat"
 
-#: src/text.vala:505
-msgid "Error connecting"
-msgstr "Fout bij verbinden"
+#: data/ui/preferences.ui:211
+msgid "_Save a Backup…"
+msgstr "Reservekopie _maken…"
 
-#: src/text.vala:506
-msgid "Hamachi login failed"
-msgstr "Hamachi login is mislukt"
+#: data/ui/preferences.ui:215
+msgid "_Restore from Backup…"
+msgstr "Reservekopie _terugzetten…"
 
-#: src/text.vala:507
+#: data/ui/shortcuts.ui:14
+msgid "Show help"
+msgstr "Hulp tonen"
+
+#: data/ui/shortcuts.ui:20
+msgid "Show client information"
+msgstr "Client-informatie tonen"
+
+#: data/ui/shortcuts.ui:26
+msgid "Open menu"
+msgstr "Menu openen"
+
+#: data/ui/shortcuts.ui:32 data/ui/window.ui:209
+msgid "Connect"
+msgstr "Verbinding maken"
+
+#: data/ui/shortcuts.ui:38 data/ui/window.ui:221
+msgid "Disconnect"
+msgstr "Verbinding verbreken"
+
+#: data/ui/shortcuts.ui:44
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+#: data/ui/shortcuts.ui:50
+msgid "Keyboard shortcuts"
+msgstr "Sneltoetsen"
+
+#: data/ui/shortcuts.ui:56
+msgid "Quit"
+msgstr "Afsluiten"
+
+#: data/ui/shortcuts.ui:63 data/ui/window.ui:446
+msgid "Network List"
+msgstr "Netwerklijst"
+
+#: data/ui/shortcuts.ui:67
+msgid "Join a network"
+msgstr "Een netwerk toetreden"
+
+#: data/ui/shortcuts.ui:73
+msgid "Create a network"
+msgstr "Een netwerk aanmaken"
+
+#: data/ui/shortcuts.ui:79 data/ui/window.ui:201 data/ui/window.ui:278
+msgid "Refresh"
+msgstr "Verversen"
+
+#: data/ui/shortcuts.ui:85 data/ui/window.ui:231
+msgid "Search"
+msgstr "Zoeken"
+
+#: data/ui/shortcuts.ui:91
+msgid "Show/hide offline members"
+msgstr "Offline leden tonen/verbergen"
+
+#: data/ui/shortcuts.ui:97
+msgid "Expand all networks"
+msgstr "Alle netwerken uitklappen"
+
+#: data/ui/shortcuts.ui:103
+msgid "Collapse all networks"
+msgstr "Alle netwerken inklappen"
+
+#: data/ui/shortcuts.ui:109
+msgid "Execute command"
+msgstr "Opdracht uitvoeren"
+
+#: data/ui/sidebar.ui:13
+msgid "Information"
+msgstr "Informatie"
+
+#: data/ui/sidebar.ui:23
+msgid "Attach"
+msgstr "Koppelen"
+
+#: data/ui/sidebar.ui:35
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
+#: data/ui/widgets/command-entry-row.ui:52
+msgid "Client ID"
+msgstr "Client-ID"
+
+#: data/ui/sidebar.ui:52 data/ui/sidebar.ui:210
+msgid "IPv4 Address"
+msgstr "IPv4-adres"
+
+#: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
+msgid "IPv6 Address"
+msgstr "IPv6-adres"
+
+#: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
+msgid "Status"
+msgstr "Status"
+
+#: data/ui/sidebar.ui:85
+msgid "Leave Network"
+msgstr "Netwerk verlaten"
+
+#: data/ui/sidebar.ui:96
+msgid "Delete Network"
+msgstr "Netwerk verwijderen"
+
+#: data/ui/sidebar.ui:113
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: data/ui/sidebar.ui:129
+msgid "Members"
+msgstr "Leden"
+
+#: data/ui/sidebar.ui:145
+msgid "Capacity"
+msgstr "Capaciteit"
+
+#: data/ui/sidebar.ui:220
+msgid "Tunnel"
+msgstr "Tunnel"
+
+#: data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "Verbinding"
+
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
+msgid "Command Variables"
+msgstr "Opdrachtvariabelen"
+
+#: data/ui/widgets/command-entry-row.ui:40
+msgid "Address"
+msgstr "Adres"
+
+#: data/ui/widgets/command-entry-row.ui:67
+msgid "Terminal Emulator"
+msgstr "Terminalemulator"
+
+#: data/ui/widgets/command-entry-row.ui:73
+msgid "File Manager"
+msgstr "Bestandsbeheerder"
+
+#: data/ui/widgets/command-entry-row.ui:79
+msgid "Remote Desktop Viewer"
+msgstr "Werkplek op afstand"
+
+#: data/ui/widgets/commands-editor.ui:11
+msgid "_Restore Default"
+msgstr "_Standaard herstellen"
+
+#: data/ui/widgets/commands-editor.ui:34
+msgid "_Add Command…"
+msgstr "_Opdracht toevoegen"
+
+#: data/ui/widgets/commands-editor.ui:52
+msgid "_Browse Shares"
+msgstr "_Gedeelde mappen bladeren"
+
+#: data/ui/widgets/commands-editor.ui:55
+msgid "_View Remote Desktop"
+msgstr "_Werkplek op afstand bekijken"
+
+#: data/ui/widgets/commands-editor.ui:58
+msgid "_Ping"
+msgstr "_Pingen"
+
+#: data/ui/widgets/commands-editor-row.ui:17
+msgid "Default Action"
+msgstr "Standaardactie"
+
+#: data/ui/widgets/commands-editor-row.ui:34
+msgid "Options"
+msgstr "Opties"
+
+#: data/ui/widgets/commands-editor-row.ui:61
+msgid "_Edit…"
+msgstr "_Bewerken"
+
+#: data/ui/widgets/commands-editor-row.ui:67
+msgid "Move _Up"
+msgstr "Om_hoog verplaatsen"
+
+#: data/ui/widgets/commands-editor-row.ui:71
+msgid "Move _Down"
+msgstr "Om_laag verplaatsen"
+
+#: data/ui/widgets/commands-editor-row.ui:77
+msgid "_Set As Default Action"
+msgstr "_Als standaardactie instellen"
+
+#: data/ui/widgets/commands-editor-row.ui:83
+msgid "_Remove"
+msgstr "_Verwijderen"
+
+#: data/ui/widgets/sidebar-row.ui:10
+msgid "Copy"
+msgstr "Kopiëren"
+
+#: data/ui/window.ui:194 src/window.vala:404
+msgid "Initializing"
+msgstr "Bezig met initialiseren"
+
+#: data/ui/window.ui:240
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: data/ui/window.ui:257
+msgid "Search networks and members"
+msgstr "Zoek netwerken en leden"
+
+#: data/ui/window.ui:290
+msgid "Add Network"
+msgstr "Netwerk toevoegen"
+
+#: data/ui/window.ui:345
+msgid "You Are Connected!"
+msgstr "U bent verbonden!"
+
+#: data/ui/window.ui:346
+msgid "Click the + button to add a network"
+msgstr "Klik op de + knop om een netwerk toe te voegen"
+
+#: data/ui/window.ui:367
+msgid "No Results Found"
+msgstr "Geen resultaten gevonden"
+
+#: data/ui/window.ui:368
+msgid "Try a different search"
+msgstr "Probeer een andere zoekopdracht"
+
+#: data/ui/window.ui:385
+msgid "Please download Hamachi and follow the installation instructions"
+msgstr "Download Hamachi en volg daarna de installatieinstructies"
+
+#: data/ui/window.ui:391
+msgid "_Download"
+msgstr "_Downloaden"
+
+#: data/ui/window.ui:410
+msgid "Hamachi Is Not Configured"
+msgstr "Hamachi is niet geconfigureerd"
+
+#: data/ui/window.ui:411
+msgid "You need to configure Hamachi before you can connect"
+msgstr "Hamachi moet eerst worden geconfigureerd om te kunnen verbinden"
+
+#: data/ui/window.ui:417
+msgid "C_onfigure"
+msgstr "_Configureren"
+
+#: data/ui/window.ui:465 src/indicator.vala:126
+msgid "_Information"
+msgstr "_Informatie"
+
+#: data/ui/window.ui:472
+msgid "Sort by _Name"
+msgstr "Sorteren op _naam"
+
+#: data/ui/window.ui:478
+msgid "Sort by _Status"
+msgstr "Sorteren op _status"
+
+#: data/ui/window.ui:486
+msgid "Show _Offline Members"
+msgstr "Offline _leden tonen"
+
+#: data/ui/window.ui:493
+msgid "_Preferences"
+msgstr "_Voorkeuren"
+
+#: data/ui/window.ui:497
+msgid "_Keyboard Shortcuts"
+msgstr "Snel_toetsen"
+
+#: data/ui/window.ui:501
+msgid "_Help"
+msgstr "_Hulp"
+
+#: data/ui/window.ui:505
+msgid "_About Haguichi"
+msgstr "_Over Haguichi"
+
+#: data/ui/window.ui:511 src/indicator.vala:134
+msgid "_Quit"
+msgstr "A_fsluiten"
+
+#: src/bubble.vala:44
+msgid "Reconnect"
+msgstr "Opnieuw verbinden"
+
+#: src/controller.vala:283
 msgid "No internet connection"
 msgstr "Geen internetverbinding"
 
-#: src/text.vala:509
-msgid "Add"
-msgstr "Toevoegen"
+#: src/controller.vala:288 src/controller.vala:321
+msgid "Logging in"
+msgstr "Bezig met aanmelden"
 
-#: src/text.vala:510
-msgid "Add Command"
-msgstr "Opdracht toevoegen"
+#: src/controller.vala:348
+msgid "Error connecting"
+msgstr "Fout bij verbinden"
 
-#: src/text.vala:511
-msgid "_Add"
-msgstr "_Toevoegen"
+#: src/controller.vala:378
+msgid "Hamachi login failed"
+msgstr "Hamachi login is mislukt"
 
-#: src/text.vala:512
-msgid "Edit"
-msgstr "Bewerken"
+#: src/controller.vala:455
+msgid "Updating"
+msgstr "Bezig met bijwerken"
 
-#: src/text.vala:513
-msgid "Edit Command"
-msgstr "Opdracht bewerken"
+#: src/controller.vala:615 src/indicator.vala:87 src/window.vala:408
+msgid "Connected"
+msgstr "Verbonden"
 
-#: src/text.vala:514
-msgid "_Label:"
-msgstr "_Label:"
-
-#: src/text.vala:515
-msgid "IPv_4 command:"
-msgstr "IPv4-opdracht:"
-
-#: src/text.vala:516
-msgid "IPv_6 command:"
-msgstr "IPv_6-opdracht:"
-
-#: src/text.vala:517
-msgid "Use %A for address and %N for nickname"
-msgstr "Gebruik %A voor adres en %N voor bijnaam"
-
-#: src/text.vala:518
-msgid "_Priority:"
-msgstr "_Prioriteit:"
-
-#: src/text.vala:520
-msgid "Remove"
-msgstr "Verwijderen"
-
-#: src/text.vala:521
-msgid "Move up"
-msgstr "Omhoog verplaatsen"
-
-#: src/text.vala:522
-msgid "Move down"
-msgstr "Omlaag verplaatsen"
-
-#: src/text.vala:523
-msgid "Set as default action"
-msgstr "Als standaard opdrachten instellen"
-
-#: src/text.vala:525
-msgid "Revert all changes"
-msgstr "Alle veranderingen terugdraaien"
-
-#: src/text.vala:526
-msgid "Are you sure you want to revert all changes?"
-msgstr "Weet u zeker dat u alle veranderingen wilt terugdraaien?"
-
-#: src/text.vala:527
-msgid "If you revert all changes, the default commands will be restored."
-msgstr ""
-"Als u alle veranderingen terugdraait worden de standaard opdrachten hersteld."
-
-#: src/text.vala:529
-msgid "Hamachi lost connection"
-msgstr "Hamachi is niet meer verbonden"
-
-#: src/text.vala:530
-msgid "Member online"
-msgstr "Lid online"
-
-#: src/text.vala:531
-msgid "Member offline"
-msgstr "Lid offline"
-
-#: src/text.vala:532
-msgid "Member joined"
-msgstr "Lid toegetreden"
-
-#: src/text.vala:533
-msgid "Member left"
-msgstr "Lid uitgetreden"
-
-#. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/text.vala:535
-msgid "{0} came online in the network {1}"
-msgstr "{0} is in het netwerk {1} online gekomen"
-
-#. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/text.vala:537
-msgid "{0} went offline in the network {1}"
-msgstr "{0} is in het netwerk {1} offline gegaan"
-
-#. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/text.vala:539
-msgid "{0} joined the network {1}"
-msgstr "{0} is tot het netwerk {1} toegetreden"
-
-#. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/text.vala:541
-msgid "{0} left the network {1}"
-msgstr "{0} heeft het netwerk {1} verlaten"
-
-#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/text.vala:547
-msgid "{0} came online in the network {1} and {2} other network"
-msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk online gekomen"
-msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken online gekomen"
-
-#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/text.vala:553
-msgid "{0} went offline in the network {1} and {2} other network"
-msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk offline gegaan"
-msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken offline gegaan"
-
-#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/text.vala:559
-msgid "{0} joined the network {1} and {2} other network"
-msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} is tot het netwerk {1} en {2} ander netwerk toegetreden"
-msgstr[1] "{0} is tot het netwerk {1} en {2} andere netwerken toegetreden"
-
-#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/text.vala:565
-msgid "{0} left the network {1} and {2} other network"
-msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
-msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
-
-#: src/text.vala:570
+#: src/controller.vala:680
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Opnieuw verbinden in {0} seconde"
 msgstr[1] "Opnieuw verbinden in {0} seconden"
 
-#: src/text.vala:575
-#, c-format
-msgid "_Update the network list every %S _second"
-msgid_plural "_Update the network list every %S _seconds"
-msgstr[0] "_Werk de netwerklijst om de %S _seconde bij"
-msgstr[1] "_Werk de netwerklijst om de %S _seconden bij"
+#: src/controller.vala:705
+msgid "Hamachi Lost Connection"
+msgstr "Hamachi is niet meer verbonden"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
-msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr "Maak, treed toe en beheer Hamachi netwerken in een handomdraai."
+#: src/controller.vala:724
+msgid "Member Joined"
+msgstr "Lid toegetreden"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
-msgid "Features:"
-msgstr "Eigenschappen:"
+#. Notification bubble. For example: "T-800 joined the network Skynet".
+#: src/controller.vala:726
+msgid "{0} joined the network {1}"
+msgstr "{0} is tot het netwerk {1} toegetreden"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
-msgid "Searchable, sortable and collapsible network list"
-msgstr "Doorzoekbare, sorteerbare en inklapbare netwerklijst"
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+#: src/controller.vala:728
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} is tot het netwerk {1} en {2} ander netwerk toegetreden"
+msgstr[1] "{0} is tot het netwerk {1} en {2} andere netwerken toegetreden"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
-msgid "Sidebar for easy access to details and actions"
-msgstr "Zijbalk voor snelle toegang tot info and acties"
+#: src/controller.vala:754
+msgid "Member Left"
+msgstr "Lid uitgetreden"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-msgid "Desktop notifications"
-msgstr "Bureaubladnotificaties"
+#. Notification bubble. For example: "T-800 left the network Skynet".
+#: src/controller.vala:756
+msgid "{0} left the network {1}"
+msgstr "{0} heeft het netwerk {1} verlaten"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
-msgid "Fully customizable commands"
-msgstr "Volledig aanpasbare opdrachten"
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+#: src/controller.vala:758
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} heeft het netwerk {1} en {2} ander netwerk verlaten"
+msgstr[1] "{0} heeft het netwerk {1} en {2} andere netwerken verlaten"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Backup en herstel uw Hamachi configuratiemap"
+#: src/controller.vala:780
+msgid "Member Online"
+msgstr "Lid online"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:18
-msgid ""
-"Please note: Requires installation of Hamachi on the system in order to use."
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
+#: src/controller.vala:782
+msgid "{0} came online in the network {1}"
+msgstr "{0} is in het netwerk {1} online gekomen"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: src/controller.vala:784
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk online gekomen"
+msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken online gekomen"
+
+#: src/controller.vala:806
+msgid "Member Offline"
+msgstr "Lid offline"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
+#: src/controller.vala:808
+msgid "{0} went offline in the network {1}"
+msgstr "{0} is in het netwerk {1} offline gegaan"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+#: src/controller.vala:810
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} is in het netwerk {1} en {2} ander netwerk offline gegaan"
+msgstr[1] "{0} is in het netwerk {1} en {2} andere netwerken offline gegaan"
+
+#: src/dialogs/add-edit-command.vala:40
+msgid "Edit Command"
+msgstr "Opdracht bewerken"
+
+#: src/dialogs/add-edit-command.vala:40
+msgid "Add Command"
+msgstr "Opdracht toevoegen"
+
+#: src/dialogs/attach.vala:57
+msgid "Attach request sent"
+msgstr "Koppelverzoek is verzonden"
+
+#: src/dialogs/attach.vala:66
+msgid "Account not found"
+msgstr "Account niet gevonden"
+
+#: src/dialogs/join-create-network.vala:34
+msgid "Join Network"
+msgstr "Netwerk toetreden"
+
+#: src/dialogs/join-create-network.vala:34
+msgid "Create Network"
+msgstr "Netwerk aanmaken"
+
+#: src/dialogs/join-create-network.vala:36
+msgid "_Join"
+msgstr "_Toetreden"
+
+#: src/dialogs/join-create-network.vala:36
+msgid "C_reate"
+msgstr "Aan_maken"
+
+#: src/dialogs/join-create-network.vala:74
+msgid "Join request sent"
+msgstr "Toetredingsverzoek is verzonden"
+
+#: src/dialogs/join-create-network.vala:99
+msgid "Network not found"
+msgstr "Netwerk niet gevonden"
+
+#: src/dialogs/join-create-network.vala:103
+msgid "Invalid password"
+msgstr "Het wachtwoord is onjuist"
+
+#: src/dialogs/join-create-network.vala:105
+msgid "Network is full"
+msgstr "Dit netwerk is vol"
+
+#: src/dialogs/join-create-network.vala:107
+msgid "Network is locked"
+msgstr "Dit netwerk is gesloten"
+
+#: src/dialogs/join-create-network.vala:110
+msgid "Network already joined"
+msgstr "U bent al toegetreden tot dit netwerk"
+
+#: src/dialogs/join-create-network.vala:172
+msgid "Network ID is already taken"
+msgstr "Dit netwerk-ID is al in gebruik"
+
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
+#: src/network.vala:146
+msgid "Unknown"
+msgstr "Onbekend"
+
+#: src/hamachi.vala:570 src/window.vala:339
+msgid "Anonymous"
+msgstr "Anoniem"
+
+#: src/hamachi.vala:692 src/hamachi.vala:694
+msgid "Password changed"
+msgstr "Wachtwoord is gewijzigd"
+
+#: src/hamachi.vala:715
+msgid "Saving backup…"
+msgstr "Reservekopie wordt gemaakt…"
+
+#: src/hamachi.vala:732
+msgid "Backup saved"
+msgstr "Reservekopie is bewaard"
+
+#: src/hamachi.vala:732
+msgid "Failed to save backup"
+msgstr "Maken van reservekopie is mislukt"
+
+#: src/hamachi.vala:746
+msgid "Restoring backup…"
+msgstr "Reservekopie wordt teruggezet…"
+
+#: src/hamachi.vala:787
+msgid "Backup restored"
+msgstr "Reservekopie is teruggezet"
+
+#: src/hamachi.vala:787
+msgid "Failed to restore backup"
+msgstr "Terugzetten van reservekopie is mislukt"
+
+#: src/hamachi.vala:794
+msgid "Archive does not contain expected files"
+msgstr "Het archief bevat niet de juiste bestanden"
+
+#: src/indicator.vala:87 src/window.vala:406
+msgid "Connecting"
+msgstr "Bezig met verbinden"
+
+#: src/indicator.vala:87 src/window.vala:410
+msgid "Disconnected"
+msgstr "Niet verbonden"
+
+#: src/indicator.vala:95
+msgid "_Show Haguichi"
+msgstr "_Haguichi tonen"
+
+#: src/indicator.vala:106
+msgid "_Disconnect"
+msgstr "_Verbinding verbreken"
+
+#: src/indicator.vala:106
+msgid "C_onnect"
+msgstr "_Verbinding maken"
+
+#: src/member.vala:227
+msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
+msgstr "Weet u zeker dat u lid ‘{0}’ uit het netwerk ‘{1}’ wilt verwijderen?"
+
+#: src/member.vala:228
+msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
-"Let op: Vereist installatie van Hamachi op het systeem om volledig te kunnen "
-"gebruiken."
+"Indien toegestaan kunnen verwijderde leden op een later moment opnieuw tot "
+"dit netwerk toetreden."
 
-#: data/ui/shortcuts-window.ui:15
-msgid "Show help"
-msgstr "Hulp tonen"
+#: src/network.vala:136
+msgid "You"
+msgstr "Uzelf"
 
-#: data/ui/shortcuts-window.ui:21
-msgid "Show client information"
-msgstr "Client-informatie tonen"
+#: src/network.vala:329
+msgid "Are you sure you want to leave the network “{0}”?"
+msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verlaten?"
 
-#: data/ui/shortcuts-window.ui:27
-msgid "Open menu"
-msgstr "Menu openen"
+#: src/network.vala:330
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr ""
+"Indien toegestaan kunt u op een later moment opnieuw tot dit netwerk "
+"toetreden."
 
-#: data/ui/shortcuts-window.ui:51
-msgid "Keyboard shortcuts"
-msgstr "Sneltoetsen"
+#: src/network.vala:358
+msgid "Are you sure you want to delete the network “{0}”?"
+msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verwijderen?"
 
-#: data/ui/shortcuts-window.ui:57
-msgid "Quit"
-msgstr "Afsluiten"
+#: src/network.vala:359
+msgid "If you delete a network, it will be permanently lost."
+msgstr "Als u een netwerk verwijderd kan dit niet meer worden hersteld."
 
-#: data/ui/shortcuts-window.ui:64
-msgid "Network List"
-msgstr "Netwerklijst"
+#: src/preferences.vala:103
+msgid "Not present"
+msgstr "Niet aanwezig"
 
-#: data/ui/shortcuts-window.ui:68
-msgid "Join a network"
-msgstr "Een netwerk toetreden"
+#: src/preferences.vala:227
+msgid "All supported archives"
+msgstr "Alle ondersteunde archieven"
 
-#: data/ui/shortcuts-window.ui:74
-msgid "Create a network"
-msgstr "Een netwerk aanmaken"
+#: src/preferences.vala:247
+msgid "Save a Backup"
+msgstr "Reservekopie maken"
 
-#: data/ui/shortcuts-window.ui:92
-msgid "Show/hide offline members"
-msgstr "Offline leden tonen/verbergen"
+#: src/preferences.vala:269
+msgid "Restore from Backup"
+msgstr "Reservekopie terugzetten"
 
-#: data/ui/shortcuts-window.ui:98
-msgid "Expand all networks"
-msgstr "Alle netwerken uitklappen"
+#: src/preferences.vala:270 src/widgets/commands-editor.vala:56
+msgid "_Restore"
+msgstr "_Herstellen"
 
-#: data/ui/shortcuts-window.ui:104
-msgid "Collapse all networks"
-msgstr "Alle netwerken inklappen"
+#: src/preferences.vala:310
+msgid "Never"
+msgstr "Nooit"
 
-#: data/ui/shortcuts-window.ui:110
-msgid "Execute command"
-msgstr "Opdracht uitvoeren"
+#: src/sidebar.vala:161
+msgid "Unavailable"
+msgstr "Niet beschikbaar"
 
-#~ msgid "_About"
-#~ msgstr "I_nfo"
+#: src/sidebar.vala:179
+msgid "pending"
+msgstr "in afwachting"
 
-#~ msgid "A graphical frontend for Hamachi."
-#~ msgstr "Een grafische schil voor Hamachi."
+#: src/sidebar.vala:180
+msgid "Not attached"
+msgstr "Niet gekoppeld"
 
-#~ msgid "_OK"
-#~ msgstr "_OK"
+#: src/sidebar.vala:196
+msgid "{0} online, {1} total"
+msgstr "{0} online, {1} totaal"
 
-#~ msgid "_Refresh"
-#~ msgstr "_Verversen"
+#: src/status.vala:35
+msgid "Offline"
+msgstr "Offline"
 
-#~ msgid "_Donate"
-#~ msgstr "_Doneren"
+#: src/status.vala:39
+msgid "Online"
+msgstr "Online"
+
+#: src/status.vala:41 src/status.vala:75 src/status.vala:85
+msgid "Relayed"
+msgstr "Omgeleid"
+
+#: src/status.vala:48
+msgid "Unreachable"
+msgstr "Onbereikbaar"
+
+#: src/status.vala:52
+msgid "Awaiting approval"
+msgstr "Wacht op goedkeuring"
+
+#: src/status.vala:56
+msgid "Unknown error"
+msgstr "Onbekende fout"
+
+#: src/status.vala:60
+msgid "Protocol mismatch"
+msgstr "Protocol komt niet overeen"
+
+#: src/status.vala:62
+msgid "Conflicting address"
+msgstr "Conflicterend adres"
+
+#: src/status.vala:73
+msgid "Direct"
+msgstr "Direct"
+
+#: src/widgets/commands-editor.vala:54
+msgid "Restore default commands?"
+msgstr "Standaardopdrachten herstellen?"
+
+#: src/widgets/commands-editor.vala:55
+msgid "All customizations will be lost."
+msgstr "Alle aanpassingen zullen verloren gaan."
+
+#: src/window.vala:136
+msgid "Configuring"
+msgstr "Bezig met configureren"
+
+#. Translator credits. Put one translator per line, in the form of "NAME URL".
+#: src/window.vala:268
+msgid "translator-credits"
+msgstr "Stephen Brandt https://launchpad.net/~ztefn"
+
+#: src/window.vala:316
+msgid "Copied to clipboard"
+msgstr "Gekopieerd naar het klembord"
+
+#: src/window.vala:372
+msgid "Hamachi Is Not Installed"
+msgstr "Hamachi is niet geïnstalleerd"
+
+#: src/window.vala:374
+#, c-format
+msgid "Hamachi Version %s Is Obsolete"
+msgstr "Hamachi versie %s is verouderd"
+
+#: src/window.vala:473
+msgid ""
+"Haguichi will continue to run when its window is closed so that it can "
+"monitor the connection and send notifications."
+msgstr ""
+"Haguichi zal op de achtergrond blijven draaien voor het monitoren van de "
+"verbinding en het versturen van notificaties."

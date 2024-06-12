@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-17 23:54+0200\n"
+"POT-Creation-Date: 2024-06-09 21:52+0200\n"
 "PO-Revision-Date: 2022-08-28 15:56+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -20,8 +20,1014 @@ msgstr ""
 "X-Launchpad-Export-Date: 2022-08-28 16:00+0000\n"
 "X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
 
+#. Name used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:5
+msgid "Haguichi"
+msgstr "Haguichi"
+
+#. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
+#: data/com.github.ztefn.haguichi.desktop.in.in:7
+msgid "Hamachi Network Manager"
+msgstr "Сетевой менеджер Hamachi"
+
+#. Description used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
+msgid "Manage your Hamachi networks"
+msgstr ""
+
+#. Keywords used for search in application launchers and software centers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:15
+msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
+msgid ""
+"Haguichi makes it a breeze to join, create and administer Hamachi networks."
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
+msgid "Features:"
+msgstr "Возможности:"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:12
+msgid "Searchable, sortable and collapsible network list"
+msgstr "Список сетей с возможностью поиска, сортировки и складывания"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:13
+msgid "Sidebar for easy access to details and actions"
+msgstr "Боковая панель для быстрого доступа к деталям и действиям"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
+msgid "Indicator support for quick access to primary actions"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
+msgid "Desktop notifications to stay up to date of network events"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
+msgid "Commands that can be completely customized"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
+#, fuzzy
+msgid "Backup and restore of your Hamachi configuration folder"
+msgstr "Создать резервную копию и восстановить вашу папку конфигурации Hamachi"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
+msgid ""
+"<em>Please note: Requires installation of Hamachi on the system in order to "
+"use.</em>"
+msgstr "<em>Важно: Для использования необходим установленный Hamachi</em>"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
+#, fuzzy
+msgid "View your network list and client information"
+msgstr "Показать информацию о клиенте"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
+msgid "View selected member details"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
+msgid "View selected network details"
+msgstr ""
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
+#, fuzzy
+msgid "Search your network list"
+msgstr "Список сетей с возможностью поиска, сортировки и складывания"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
+#, fuzzy
+msgid "Join or create networks"
+msgstr "Присоединиться к сети"
+
+#: data/ui/dialogs/add-edit-command.ui:18 data/ui/dialogs/attach.ui:21
+#: data/ui/dialogs/change-access.ui:19 data/ui/dialogs/change-password.ui:19
+#: data/ui/dialogs/join-create-network.ui:20 src/dialogs/confirm.vala:25
+msgid "_Cancel"
+msgstr "О_тменить"
+
+#: data/ui/dialogs/add-edit-command.ui:24
+msgid "_Save"
+msgstr "Со_хранить"
+
+#: data/ui/dialogs/add-edit-command.ui:52
+msgid "Label"
+msgstr "Метка"
+
+#: data/ui/dialogs/add-edit-command.ui:59
+msgid "IPv4 Command"
+msgstr "IPv4 команда"
+
+#: data/ui/dialogs/add-edit-command.ui:66
+msgid "IPv6 Command"
+msgstr "IPv6 команда"
+
+#: data/ui/dialogs/add-edit-command.ui:73
+msgid "Priority"
+msgstr "Приоритет"
+
+#: data/ui/dialogs/attach.ui:10
+msgid "Attach to Account"
+msgstr "Прикрепить к учётной записи"
+
+#: data/ui/dialogs/attach.ui:27
+msgid "_Attach"
+msgstr "_Прикрепить"
+
+#: data/ui/dialogs/attach.ui:56 data/ui/sidebar.ui:17 src/sidebar.vala:179
+msgid "Account"
+msgstr "Учётная запись"
+
+#: data/ui/dialogs/attach.ui:63
+msgid "Include all networks created by this client"
+msgstr "Включить все сети, созданные этим клиентом"
+
+#: data/ui/dialogs/change-access.ui:10 data/ui/sidebar.ui:133
+#, fuzzy
+msgid "Change Access"
+msgstr "Изменить псевдоним"
+
+#: data/ui/dialogs/change-access.ui:25 data/ui/dialogs/change-password.ui:25
+msgid "C_hange"
+msgstr "_Изменить"
+
+#: data/ui/dialogs/change-access.ui:53
+msgid "Locked"
+msgstr "Заблокирован"
+
+#: data/ui/dialogs/change-access.ui:54
+msgid "Do not accept new network members"
+msgstr ""
+
+#: data/ui/dialogs/change-access.ui:60
+msgid "Approval"
+msgstr "Одобрение"
+
+#: data/ui/dialogs/change-access.ui:64
+msgid "Automatically"
+msgstr "Автоматически"
+
+#: data/ui/dialogs/change-access.ui:65
+msgid "Manually"
+msgstr "Вручную"
+
+#: data/ui/dialogs/change-password.ui:10 data/ui/sidebar.ui:117
+msgid "Change Password"
+msgstr "Смена пароля"
+
+#: data/ui/dialogs/change-password.ui:53
+msgid "New Password"
+msgstr "Новый пароль"
+
+#: data/ui/dialogs/join-create-network.ui:54 data/ui/sidebar.ui:108
+msgid "Network ID"
+msgstr "Идентификатор сети"
+
+#: data/ui/dialogs/join-create-network.ui:61
+msgid "Password"
+msgstr "Пароль"
+
+#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:231 src/bubble.vala:58
+msgid "_Approve"
+msgstr "_Одобрить"
+
+#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:244 src/bubble.vala:59
+msgid "_Reject"
+msgstr "_Отклонить"
+
+#: data/ui/menus/member-menu.ui:22
+msgid "Copy IPv_4 Address"
+msgstr "Копировать адрес IPv_4"
+
+#: data/ui/menus/member-menu.ui:27
+msgid "Copy IPv_6 Address"
+msgstr "Копировать адрес IPv_6"
+
+#: data/ui/menus/member-menu.ui:32
+msgid "_Copy Client ID"
+msgstr "_Скопировать идентификационный номер клиента"
+
+#. This action removes the selected member from the network.
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+msgid "_Evict"
+msgstr "_Выгнать"
+
+#: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
+msgid "_Details"
+msgstr ""
+
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:519
+#: src/indicator.vala:114
+msgid "_Join Network…"
+msgstr "_Подключиться к сети…"
+
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:523
+#: src/indicator.vala:119
+msgid "_Create Network…"
+msgstr "_Создать сеть…"
+
+#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:151
+msgid "_Go Online"
+msgstr "_Статус “в сети”"
+
+#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:164
+msgid "_Go Offline"
+msgstr "_Статус “не в сети”"
+
+#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+msgid "_Leave"
+msgstr "_Выйти"
+
+#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+msgid "_Delete"
+msgstr "_Удалить"
+
+#: data/ui/menus/network-menu.ui:36
+#, fuzzy
+msgid "Change _Access…"
+msgstr "Измени_ть псевдоним…"
+
+#: data/ui/menus/network-menu.ui:41
+msgid "Change _Password…"
+msgstr "Изменить _пароль…"
+
+#: data/ui/menus/network-menu.ui:48
+msgid "_Copy Network ID"
+msgstr "Ск_опировать идентификационный номер сети"
+
+#: data/ui/preferences.ui:6 data/ui/shortcuts.ui:10
+msgid "General"
+msgstr "Общие"
+
+#: data/ui/preferences.ui:12
+msgid "Configuration"
+msgstr "Настройки"
+
+#: data/ui/preferences.ui:19
+#, fuzzy
+msgid "Backup"
+msgstr "Создать резервную копию"
+
+#: data/ui/preferences.ui:30
+msgid "Open Folder"
+msgstr "Открыть папку"
+
+#: data/ui/preferences.ui:44 data/ui/widgets/command-entry-row.ui:46
+msgid "Nickname"
+msgstr "Псевдоним"
+
+#: data/ui/preferences.ui:51
+msgid "_Protocol"
+msgstr "_Протокол"
+
+#: data/ui/preferences.ui:56
+msgid "Both IPv4 and IPv6"
+msgstr "Оба, IPv4 и IPv6"
+
+#: data/ui/preferences.ui:57
+msgid "IPv4 only"
+msgstr "только IPv4"
+
+#: data/ui/preferences.ui:58
+msgid "IPv6 only"
+msgstr "только IPv6"
+
+#: data/ui/preferences.ui:68
+msgid "Behavior"
+msgstr "Поведение"
+
+#: data/ui/preferences.ui:71
+msgid "_Network list update interval"
+msgstr ""
+
+#: data/ui/preferences.ui:77
+msgid "_Connect automatically on startup"
+msgstr "_Автоматически подключаться при запуске"
+
+#: data/ui/preferences.ui:83
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "А_втоматически подключаться при потере соединения"
+
+#: data/ui/preferences.ui:89
+msgid "_Disconnect on quit"
+msgstr "_Отключаться при выходе"
+
+#: data/ui/preferences.ui:99 data/ui/sidebar.ui:194
+msgid "Commands"
+msgstr "Команды"
+
+#. In this context meaning "work environment".
+#: data/ui/preferences.ui:107
+msgid "Desktop"
+msgstr "Рабочий стол"
+
+#: data/ui/preferences.ui:110
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: data/ui/preferences.ui:113
+msgid "_Style"
+msgstr ""
+
+#: data/ui/preferences.ui:130
+msgid "Follow System"
+msgstr ""
+
+#: data/ui/preferences.ui:141
+msgid "Light"
+msgstr ""
+
+#: data/ui/preferences.ui:153
+msgid "Dark"
+msgstr ""
+
+#: data/ui/preferences.ui:163
+msgid "Show _indicator"
+msgstr "Показать _индикатор"
+
+#: data/ui/preferences.ui:172
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: data/ui/preferences.ui:175
+msgid "Display notification when the connection is l_ost"
+msgstr "Отобразить уведомления о _потере соединения"
+
+#: data/ui/preferences.ui:181
+msgid "Display notification when a member _joins"
+msgstr "П_оказывать уведомление, когда к сети подключается пользователь"
+
+#: data/ui/preferences.ui:187
+msgid "Display notification when a member _leaves"
+msgstr "По_казывать уведомление, когда пользователь отключается от сети"
+
+#: data/ui/preferences.ui:193
+msgid "Display notification when a member comes o_nline"
+msgstr "Пок_азывать уведомление, когда пользователь выходит в онлайн"
+
+#: data/ui/preferences.ui:199
+msgid "Display notification when a member goes o_ffline"
+msgstr "Пока_зывать уведомление, когда пользователь уходит из сети"
+
+#: data/ui/preferences.ui:211
+msgid "_Save a Backup…"
+msgstr "Сделать _резервную копию…"
+
+#: data/ui/preferences.ui:215
+msgid "_Restore from Backup…"
+msgstr "_Восстановить с резервной копии…"
+
+#: data/ui/shortcuts.ui:14
+msgid "Show help"
+msgstr "Показать справку"
+
+#: data/ui/shortcuts.ui:20
+msgid "Show client information"
+msgstr "Показать информацию о клиенте"
+
+#: data/ui/shortcuts.ui:26
+msgid "Open menu"
+msgstr "Открыть меню"
+
+#: data/ui/shortcuts.ui:32 data/ui/window.ui:209
+msgid "Connect"
+msgstr "Подключиться"
+
+#: data/ui/shortcuts.ui:38 data/ui/window.ui:221
+msgid "Disconnect"
+msgstr "Отключиться"
+
+#: data/ui/shortcuts.ui:44
+msgid "Preferences"
+msgstr "Параметры"
+
+#: data/ui/shortcuts.ui:50
+msgid "Keyboard shortcuts"
+msgstr "Комбинации клавиш"
+
+#: data/ui/shortcuts.ui:56
+msgid "Quit"
+msgstr "Выход"
+
+#: data/ui/shortcuts.ui:63 data/ui/window.ui:446
+msgid "Network List"
+msgstr "Список сетей"
+
+#: data/ui/shortcuts.ui:67
+msgid "Join a network"
+msgstr "Присоединиться к сети"
+
+#: data/ui/shortcuts.ui:73
+msgid "Create a network"
+msgstr "Создать сеть"
+
+#: data/ui/shortcuts.ui:79 data/ui/window.ui:201 data/ui/window.ui:278
+msgid "Refresh"
+msgstr "Обновить"
+
+#: data/ui/shortcuts.ui:85 data/ui/window.ui:231
+msgid "Search"
+msgstr "Поиск"
+
+#: data/ui/shortcuts.ui:91
+msgid "Show/hide offline members"
+msgstr "Показать / скрыть офлайн-пользователей"
+
+#: data/ui/shortcuts.ui:97
+msgid "Expand all networks"
+msgstr "Развернуть все сети"
+
+#: data/ui/shortcuts.ui:103
+msgid "Collapse all networks"
+msgstr "Свернуть все сети"
+
+#: data/ui/shortcuts.ui:109
+msgid "Execute command"
+msgstr "Выполнить команду"
+
+#: data/ui/sidebar.ui:13
+msgid "Information"
+msgstr "Сведения"
+
+#: data/ui/sidebar.ui:23
+msgid "Attach"
+msgstr "Прикрепить"
+
+#: data/ui/sidebar.ui:35
+msgid "Cancel"
+msgstr "Отменить"
+
+#: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
+#: data/ui/widgets/command-entry-row.ui:52
+msgid "Client ID"
+msgstr "Идентификатор клиента"
+
+#: data/ui/sidebar.ui:52 data/ui/sidebar.ui:210
+msgid "IPv4 Address"
+msgstr "IPv4 адрес"
+
+#: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
+msgid "IPv6 Address"
+msgstr "IPv6 адрес"
+
+#: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
+msgid "Status"
+msgstr "Статус"
+
+#: data/ui/sidebar.ui:85
+#, fuzzy
+msgid "Leave Network"
+msgstr "Создать сеть"
+
+#: data/ui/sidebar.ui:96
+#, fuzzy
+msgid "Delete Network"
+msgstr "Создать сеть"
+
+#: data/ui/sidebar.ui:113
+msgid "Owner"
+msgstr "Владелец"
+
+#: data/ui/sidebar.ui:129
+msgid "Members"
+msgstr "Члены"
+
+#: data/ui/sidebar.ui:145
+msgid "Capacity"
+msgstr "Вместимость"
+
+#: data/ui/sidebar.ui:220
+msgid "Tunnel"
+msgstr "Тоннель"
+
+#: data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "Подключение"
+
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
+#, fuzzy
+msgid "Command Variables"
+msgstr "Команды"
+
+#: data/ui/widgets/command-entry-row.ui:40
+msgid "Address"
+msgstr "Адрес"
+
+#: data/ui/widgets/command-entry-row.ui:67
+msgid "Terminal Emulator"
+msgstr ""
+
+#: data/ui/widgets/command-entry-row.ui:73
+msgid "File Manager"
+msgstr ""
+
+#: data/ui/widgets/command-entry-row.ui:79
+#, fuzzy
+msgid "Remote Desktop Viewer"
+msgstr "П_росмотр удалённого рабочего стола"
+
+#: data/ui/widgets/commands-editor.ui:11
+#, fuzzy
+msgid "_Restore Default"
+msgstr "_Восстановить"
+
+#: data/ui/widgets/commands-editor.ui:34
+msgid "_Add Command…"
+msgstr "_Добавить команду…"
+
+#: data/ui/widgets/commands-editor.ui:52
+msgid "_Browse Shares"
+msgstr "_Просмотр открытых каталогов"
+
+#: data/ui/widgets/commands-editor.ui:55
+msgid "_View Remote Desktop"
+msgstr "П_росмотр удалённого рабочего стола"
+
+#: data/ui/widgets/commands-editor.ui:58
+msgid "_Ping"
+msgstr "_Пинг"
+
+#: data/ui/widgets/commands-editor-row.ui:17
+#, fuzzy
+msgid "Default Action"
+msgstr "_Сохранить как действие по умолчанию"
+
+#: data/ui/widgets/commands-editor-row.ui:34
+msgid "Options"
+msgstr ""
+
+#: data/ui/widgets/commands-editor-row.ui:61
+msgid "_Edit…"
+msgstr "_Изменить…"
+
+#: data/ui/widgets/commands-editor-row.ui:67
+msgid "Move _Up"
+msgstr "В_верх"
+
+#: data/ui/widgets/commands-editor-row.ui:71
+msgid "Move _Down"
+msgstr "В_низ"
+
+#: data/ui/widgets/commands-editor-row.ui:77
+msgid "_Set As Default Action"
+msgstr "_Сохранить как действие по умолчанию"
+
+#: data/ui/widgets/commands-editor-row.ui:83
+msgid "_Remove"
+msgstr "_Удалить"
+
+#: data/ui/widgets/sidebar-row.ui:10
+msgid "Copy"
+msgstr ""
+
+#: data/ui/window.ui:194 src/window.vala:404
+msgid "Initializing"
+msgstr "Инициализация"
+
+#: data/ui/window.ui:240
+msgid "Main Menu"
+msgstr ""
+
+#: data/ui/window.ui:257
+#, fuzzy
+msgid "Search networks and members"
+msgstr "Сетевой менеджер Hamachi"
+
+#: data/ui/window.ui:290
+#, fuzzy
+msgid "Add Network"
+msgstr "Подключиться к сети"
+
+#: data/ui/window.ui:345
+msgid "You Are Connected!"
+msgstr "Вы подключены!"
+
+#: data/ui/window.ui:346
+msgid "Click the + button to add a network"
+msgstr "Нажмите кнопку + для добавления сети"
+
+#: data/ui/window.ui:367
+msgid "No Results Found"
+msgstr ""
+
+#: data/ui/window.ui:368
+msgid "Try a different search"
+msgstr ""
+
+#: data/ui/window.ui:385
+msgid "Please download Hamachi and follow the installation instructions"
+msgstr "Пожалуйста, скачайте Hamachi и следуйте инструкциям установки"
+
+#: data/ui/window.ui:391
+msgid "_Download"
+msgstr "_Загрузить"
+
+#: data/ui/window.ui:410
+msgid "Hamachi Is Not Configured"
+msgstr "Hamachi не настроен"
+
+#: data/ui/window.ui:411
+msgid "You need to configure Hamachi before you can connect"
+msgstr "Для подключения вам необходимо настроить Hamachi"
+
+#: data/ui/window.ui:417
+msgid "C_onfigure"
+msgstr "_Настроить"
+
+#: data/ui/window.ui:465 src/indicator.vala:126
+msgid "_Information"
+msgstr "_Информация"
+
+#: data/ui/window.ui:472
+msgid "Sort by _Name"
+msgstr "Упорядочить по _имени"
+
+#: data/ui/window.ui:478
+msgid "Sort by _Status"
+msgstr "Упорядочить по _статусу"
+
+#: data/ui/window.ui:486
+msgid "Show _Offline Members"
+msgstr "_Показывать тех, кто “не в сети”"
+
+#: data/ui/window.ui:493
+msgid "_Preferences"
+msgstr "_Параметры"
+
+#: data/ui/window.ui:497
+msgid "_Keyboard Shortcuts"
+msgstr "_Комбинации клавиш"
+
+#: data/ui/window.ui:501
+msgid "_Help"
+msgstr "П_омощь"
+
+#: data/ui/window.ui:505
+msgid "_About Haguichi"
+msgstr "_О приложении"
+
+#: data/ui/window.ui:511 src/indicator.vala:134
+msgid "_Quit"
+msgstr "В_ыход"
+
+#: src/bubble.vala:44
+msgid "Reconnect"
+msgstr "Подключиться повторно"
+
+#: src/controller.vala:283
+msgid "No internet connection"
+msgstr "Отсутствует соединение с интернет"
+
+#: src/controller.vala:288 src/controller.vala:321
+msgid "Logging in"
+msgstr "Авторизация"
+
+#: src/controller.vala:348
+msgid "Error connecting"
+msgstr "Ошибка при подключении"
+
+#: src/controller.vala:378
+msgid "Hamachi login failed"
+msgstr "Ошибка при подключении Hamachi"
+
+#: src/controller.vala:455
+msgid "Updating"
+msgstr "Обновление"
+
+#: src/controller.vala:615 src/indicator.vala:87 src/window.vala:408
+msgid "Connected"
+msgstr "Подключен"
+
+#: src/controller.vala:680
+msgid "Reconnecting in {0} second"
+msgid_plural "Reconnecting in {0} seconds"
+msgstr[0] "Повторное подключение через {0} секунду"
+msgstr[1] "Повторное подключение через {0} секунд"
+msgstr[2] "Повторное подключение через {0} секунд"
+
+#: src/controller.vala:705
+msgid "Hamachi Lost Connection"
+msgstr "Hamachi потерял соединение"
+
+#: src/controller.vala:724
+msgid "Member Joined"
+msgstr "Пользователь подключился"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet".
+#: src/controller.vala:726
+msgid "{0} joined the network {1}"
+msgstr "{0} подключился к сети {1}"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+#: src/controller.vala:728
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
+msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
+msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
+
+#: src/controller.vala:754
+msgid "Member Left"
+msgstr "Пользователь покинул сеть"
+
+#. Notification bubble. For example: "T-800 left the network Skynet".
+#: src/controller.vala:756
+msgid "{0} left the network {1}"
+msgstr "{0} покинул сеть {1}"
+
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+#: src/controller.vala:758
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
+msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
+msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
+
+#: src/controller.vala:780
+msgid "Member Online"
+msgstr "Пользователь в сети"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
+#: src/controller.vala:782
+msgid "{0} came online in the network {1}"
+msgstr "{0} вошел в сеть {1}"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: src/controller.vala:784
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
+msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
+msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
+
+#: src/controller.vala:806
+msgid "Member Offline"
+msgstr "Пользователь отключился"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
+#: src/controller.vala:808
+msgid "{0} went offline in the network {1}"
+msgstr "{0} отключился от сети {1}"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+#: src/controller.vala:810
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} ушел из сети {1} и ещё {2} сети"
+msgstr[1] "{0} ушел из сети {1} и ещё {2} сетей"
+msgstr[2] "{0} ушел из сети {1} и ещё {2} сетей"
+
+#: src/dialogs/add-edit-command.vala:40
+msgid "Edit Command"
+msgstr "Изменить команду"
+
+#: src/dialogs/add-edit-command.vala:40
+#, fuzzy
+msgid "Add Command"
+msgstr "_Добавить команду…"
+
+#: src/dialogs/attach.vala:57
+#, fuzzy
+msgid "Attach request sent"
+msgstr "Запрос на подключение послан"
+
+#: src/dialogs/attach.vala:66
+msgid "Account not found"
+msgstr "Учётная запись не найдена"
+
+#: src/dialogs/join-create-network.vala:34
+msgid "Join Network"
+msgstr "Подключиться к сети"
+
+#: src/dialogs/join-create-network.vala:34
+msgid "Create Network"
+msgstr "Создать сеть"
+
+#: src/dialogs/join-create-network.vala:36
+msgid "_Join"
+msgstr "_Подключиться"
+
+#: src/dialogs/join-create-network.vala:36
+msgid "C_reate"
+msgstr "_Создать"
+
+#: src/dialogs/join-create-network.vala:74
+msgid "Join request sent"
+msgstr "Запрос на подключение послан"
+
+#: src/dialogs/join-create-network.vala:99
+msgid "Network not found"
+msgstr "Сеть не найдена"
+
+#: src/dialogs/join-create-network.vala:103
+msgid "Invalid password"
+msgstr "Неправильный пароль"
+
+#: src/dialogs/join-create-network.vala:105
+msgid "Network is full"
+msgstr "Сеть переполнена"
+
+#: src/dialogs/join-create-network.vala:107
+msgid "Network is locked"
+msgstr "Сеть заблокирована"
+
+#: src/dialogs/join-create-network.vala:110
+msgid "Network already joined"
+msgstr "Вы уже подключены к этой сети"
+
+#: src/dialogs/join-create-network.vala:172
+msgid "Network ID is already taken"
+msgstr "Сеть с данным ID уже существует"
+
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
+#: src/network.vala:146
+msgid "Unknown"
+msgstr "Неизвестный"
+
+#: src/hamachi.vala:570 src/window.vala:339
+msgid "Anonymous"
+msgstr "Аноним"
+
+#: src/hamachi.vala:692 src/hamachi.vala:694
+#, fuzzy
+msgid "Password changed"
+msgstr "Пароль"
+
+#: src/hamachi.vala:715
+#, fuzzy
+msgid "Saving backup…"
+msgstr "Сделать _резервную копию…"
+
+#: src/hamachi.vala:732
+msgid "Backup saved"
+msgstr ""
+
+#: src/hamachi.vala:732
+msgid "Failed to save backup"
+msgstr ""
+
+#: src/hamachi.vala:746
+#, fuzzy
+msgid "Restoring backup…"
+msgstr "_Восстановить с резервной копии…"
+
+#: src/hamachi.vala:787
+msgid "Backup restored"
+msgstr ""
+
+#: src/hamachi.vala:787
+msgid "Failed to restore backup"
+msgstr ""
+
+#: src/hamachi.vala:794
+msgid "Archive does not contain expected files"
+msgstr "Архив не содержит необходимых файлов"
+
+#: src/indicator.vala:87 src/window.vala:406
+msgid "Connecting"
+msgstr "Подключение"
+
+#: src/indicator.vala:87 src/window.vala:410
+msgid "Disconnected"
+msgstr "Отключен"
+
+#: src/indicator.vala:95
+msgid "_Show Haguichi"
+msgstr "_Показать Haguichi"
+
+#: src/indicator.vala:106
+msgid "_Disconnect"
+msgstr "_Отключиться"
+
+#: src/indicator.vala:106
+msgid "C_onnect"
+msgstr "П_одключиться"
+
+#: src/member.vala:227
+msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
+msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
+
+#: src/member.vala:228
+msgid "If admitted, evicted members can rejoin the network at any later time."
+msgstr ""
+"Выгнанные участники всегда смогут заново подключиться к выбранной сети."
+
+#: src/network.vala:136
+msgid "You"
+msgstr "Вы"
+
+#: src/network.vala:329
+msgid "Are you sure you want to leave the network “{0}”?"
+msgstr "Вы уверены что хотите покинуть сеть «{0}»?"
+
+#: src/network.vala:330
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr "Вы всегда сможете заново подключиться к выбранной сети."
+
+#: src/network.vala:358
+msgid "Are you sure you want to delete the network “{0}”?"
+msgstr "Вы уверены что хотите удалить сеть «{0}»?"
+
+#: src/network.vala:359
+msgid "If you delete a network, it will be permanently lost."
+msgstr "Если вы удалите сеть, она удалиться без возможности восстановления."
+
+#: src/preferences.vala:103
+msgid "Not present"
+msgstr ""
+
+#: src/preferences.vala:227
+msgid "All supported archives"
+msgstr "Все поддерживаемые архивы"
+
+#: src/preferences.vala:247
+msgid "Save a Backup"
+msgstr "Создать резервную копию"
+
+#: src/preferences.vala:269
+msgid "Restore from Backup"
+msgstr "Восстановить из резервной копии"
+
+#: src/preferences.vala:270 src/widgets/commands-editor.vala:56
+msgid "_Restore"
+msgstr "_Восстановить"
+
+#: src/preferences.vala:310
+#, fuzzy
+msgid "Never"
+msgstr "_Восстановить"
+
+#: src/sidebar.vala:161
+msgid "Unavailable"
+msgstr "Недоступно"
+
+#: src/sidebar.vala:179
+msgid "pending"
+msgstr "ожидается"
+
+#: src/sidebar.vala:180
+msgid "Not attached"
+msgstr ""
+
+#: src/sidebar.vala:196
+msgid "{0} online, {1} total"
+msgstr "{0} в сети, {1} всего"
+
+#: src/status.vala:35
+msgid "Offline"
+msgstr "Не в сети"
+
+#: src/status.vala:39
+msgid "Online"
+msgstr "В сети"
+
+#: src/status.vala:41 src/status.vala:75 src/status.vala:85
+msgid "Relayed"
+msgstr "Через ретранслятор"
+
+#: src/status.vala:48
+msgid "Unreachable"
+msgstr "Недоступен"
+
+#: src/status.vala:52
+msgid "Awaiting approval"
+msgstr "Ожидание одобрения"
+
+#: src/status.vala:56
+msgid "Unknown error"
+msgstr "Неизвестная ошибка"
+
+#: src/status.vala:60
+msgid "Protocol mismatch"
+msgstr "Протокол не совпадает"
+
+#: src/status.vala:62
+msgid "Conflicting address"
+msgstr "Конфликтующие адреса"
+
+#: src/status.vala:73
+msgid "Direct"
+msgstr "Прямое"
+
+#: src/widgets/commands-editor.vala:54
+msgid "Restore default commands?"
+msgstr ""
+
+#: src/widgets/commands-editor.vala:55
+msgid "All customizations will be lost."
+msgstr ""
+
+#: src/window.vala:136
+msgid "Configuring"
+msgstr "Настройка"
+
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/text.vala:296
+#: src/window.vala:268
 msgid "translator-credits"
 msgstr ""
 "Dmitrij Kiryanov https://launchpad.net/~kagaminep\n"
@@ -30,924 +1036,21 @@ msgstr ""
 "Sergey Korolev https://launchpad.net/~slipped-on-blade\n"
 "Sergey Sedov https://launchpad.net/~serg-sedov"
 
-#. Description used in about dialog.
-#: src/text.vala:298 data/com.github.ztefn.haguichi.appdata.xml.in.in:7
-msgid "A graphical frontend for Hamachi"
-msgstr "Графическая оболочка к Hamachi"
+#: src/window.vala:316
+msgid "Copied to clipboard"
+msgstr ""
 
-#. Generic name used in application launchers.
-#: src/text.vala:300
-msgid "Hamachi Network Manager"
-msgstr "Сетевой менеджер Hamachi"
-
-#. Description used in application launchers.
-#: src/text.vala:302
-msgid "Join and create local networks over the Internet"
-msgstr "Создавайте и подключайтесь к локальным сетям в интернете"
-
-#: src/text.vala:304
-msgid "_Close"
-msgstr "_Закрыть"
-
-#: src/text.vala:305
-msgid "_Cancel"
-msgstr "О_тменить"
-
-#: src/text.vala:307
-msgid "_Save"
-msgstr "Со_хранить"
-
-#: src/text.vala:308
-msgid "_Revert"
-msgstr "_Восстановить"
-
-#: src/text.vala:309
-msgid "_Delete"
-msgstr "_Удалить"
-
-#: src/text.vala:310
-msgid "_Information"
-msgstr "_Информация"
-
-#: src/text.vala:311
-msgid "_Preferences"
-msgstr "_Параметры"
-
-#: src/text.vala:312
-msgid "_Keyboard Shortcuts"
-msgstr "_Комбинации клавиш"
-
-#: src/text.vala:313
-msgid "_Help"
-msgstr "П_омощь"
-
-#: src/text.vala:314
-msgid "_About Haguichi"
-msgstr "_О приложении"
-
-#: src/text.vala:315
-msgid "_Quit"
-msgstr "В_ыход"
-
-#: src/text.vala:317 data/ui/shortcuts-window.ui:80
-msgid "Refresh"
-msgstr "Обновить"
-
-#: src/text.vala:318 data/ui/shortcuts-window.ui:86
-msgid "Search"
-msgstr "Поиск"
-
-#: src/text.vala:320
-msgid "_Show Haguichi"
-msgstr "_Показать Haguichi"
-
-#: src/text.vala:322
-msgid "Yes"
-msgstr "Да"
-
-#: src/text.vala:323
-msgid "No"
-msgstr "Нет"
-
-#: src/text.vala:325
-msgid "_Hamachi output"
-msgstr "_Вывод Hamachi"
-
-#: src/text.vala:327
-msgid "IPv4 address:"
-msgstr "IPv4 адрес:"
-
-#: src/text.vala:328
-msgid "IPv6 address:"
-msgstr "IPv6 адрес:"
-
-#: src/text.vala:329
-msgid "Client ID:"
-msgstr "Идентификатор клиента:"
-
-#: src/text.vala:330
-msgid "Status:"
-msgstr "Статус:"
-
-#: src/text.vala:331
-msgid "Tunnel:"
-msgstr "Тоннель:"
-
-#: src/text.vala:332
-msgid "Connection:"
-msgstr "Подключение:"
-
-#: src/text.vala:333
-msgid "Direct"
-msgstr "Прямое"
-
-#: src/text.vala:334
-msgid "Relayed"
-msgstr "Через ретранслятор"
-
-#: src/text.vala:335
-msgid "Anonymous"
-msgstr "Аноним"
-
-#: src/text.vala:336
-msgid "_Network ID:"
-msgstr "_Идентификатор сети:"
-
-#: src/text.vala:338
-msgid "_Password:"
-msgstr "_Пароль:"
-
-#: src/text.vala:339
-msgid "_Nickname:"
-msgstr "П_севдоним:"
-
-#: src/text.vala:342
-msgid "Offline"
-msgstr "Не в сети"
-
-#: src/text.vala:343
-msgid "Online"
-msgstr "В сети"
-
-#: src/text.vala:344
-msgid "Unreachable"
-msgstr "Недоступен"
-
-#: src/text.vala:345
-msgid "Protocol mismatch"
-msgstr "Протокол не совпадает"
-
-#: src/text.vala:346
-msgid "Conflicting address"
-msgstr "Конфликтующие адреса"
-
-#: src/text.vala:347
-msgid "C_onnect"
-msgstr "П_одключиться"
-
-#: src/text.vala:348 data/ui/shortcuts-window.ui:33
-msgid "Connect"
-msgstr "Подключиться"
-
-#: src/text.vala:349
-msgid "_Disconnect"
-msgstr "_Отключиться"
-
-#: src/text.vala:350 data/ui/shortcuts-window.ui:39
-msgid "Disconnect"
-msgstr "Отключиться"
-
-#: src/text.vala:351
-msgid "Reconnect"
-msgstr "Подключиться повторно"
-
-#: src/text.vala:352
-msgid "Connected"
-msgstr "Подключен"
-
-#: src/text.vala:353
-msgid "Disconnected"
-msgstr "Отключен"
-
-#: src/text.vala:354
-msgid "Initializing…"
-msgstr "Инициализация…"
-
-#: src/text.vala:355
-msgid "Configuring…"
-msgstr "Настройка…"
-
-#: src/text.vala:356
-msgid "Connecting…"
-msgstr "Подключение…"
-
-#: src/text.vala:357
-msgid "Logging in…"
-msgstr "Авторизация…"
-
-#: src/text.vala:358
-msgid "Updating…"
-msgstr "Обновление…"
-
-#: src/text.vala:360
-msgid "Hamachi is not configured"
-msgstr "Hamachi не настроен"
-
-#: src/text.vala:361
-msgid "You need to configure Hamachi before you can connect."
-msgstr "Для подключения вам необходимо настроить Hamachi."
-
-#: src/text.vala:362
-msgid "C_onfigure"
-msgstr "_Настроить"
-
-#: src/text.vala:364
-msgid "Hamachi is not installed"
+#: src/window.vala:372
+msgid "Hamachi Is Not Installed"
 msgstr "Hamachi не установлен"
 
-#: src/text.vala:365
-msgid "Please download Hamachi and follow the installation instructions."
-msgstr "Пожалуйста, скачайте Hamachi и следуйте инструкциям установки."
-
-#: src/text.vala:366
-msgid "Hamachi version {0} is obsolete"
-msgstr "Версия Hamachi {0} устарела"
-
-#: src/text.vala:367
-msgid "Please download and install the latest Hamachi version."
-msgstr "Пожалуйста скачайте и установите новейшую версию."
-
-#: src/text.vala:368
-msgid "_Download"
-msgstr "_Загрузить"
-
-#: src/text.vala:370
-msgid "You are connected!"
-msgstr "Вы подключены!"
-
-#: src/text.vala:371
-msgid "Click on the + button to add a network."
-msgstr "Нажмите кнопку + для добавления сети."
-
-#: src/text.vala:373
-msgid "Members:"
-msgstr "Члены:"
-
-#: src/text.vala:374
-msgid "{0} online, {1} total"
-msgstr "{0} в сети, {1} всего"
-
-#: src/text.vala:375
-msgid "Owner:"
-msgstr "Владелец:"
-
-#: src/text.vala:376
-msgid "You"
-msgstr "Вы"
-
-#: src/text.vala:377
-msgid "Unknown"
-msgstr "Неизвестный"
-
-#: src/text.vala:378
-msgid "Unavailable"
-msgstr "Недоступно"
-
-#: src/text.vala:379
-msgid "Awaiting approval"
-msgstr "Ожидание одобрения"
-
-#: src/text.vala:380
-msgid "Locked:"
-msgstr "Заблокирован:"
-
-#: src/text.vala:381
-msgid "Approval:"
-msgstr "Одобрение:"
-
-#: src/text.vala:382
-msgid "Manually"
-msgstr "Вручную"
-
-#: src/text.vala:383
-msgid "Automatically"
-msgstr "Автоматически"
-
-#: src/text.vala:384
-msgid "Capacity:"
-msgstr "Вместимость:"
-
-#: src/text.vala:386
-msgid "_Go Online"
-msgstr "_Статус “в сети”"
-
-#: src/text.vala:387
-msgid "_Go Offline"
-msgstr "_Статус “не в сети”"
-
-#: src/text.vala:388
-msgid "_Leave"
-msgstr "_Выйти"
-
-#: src/text.vala:389
-msgid "_Locked"
-msgstr "_Заблокировано"
-
-#: src/text.vala:390
-msgid "_New Member Approval"
-msgstr "_Одобрение нового члена"
-
-#: src/text.vala:391
-msgid "_Automatically"
-msgstr "_Автоматически"
-
-#: src/text.vala:392
-msgid "_Manually"
-msgstr "_Вручную"
-
-#: src/text.vala:393
-msgid "_Copy Network ID"
-msgstr "Ск_опировать идентификационный номер сети"
-
-#: src/text.vala:395
-msgid "_Browse Shares"
-msgstr "_Просмотр открытых каталогов"
-
-#: src/text.vala:396
-msgid "_Ping"
-msgstr "_Пинг"
-
-#: src/text.vala:397
-msgid "_View Remote Desktop"
-msgstr "П_росмотр удалённого рабочего стола"
-
-#: src/text.vala:398
-msgid "_Approve"
-msgstr "_Одобрить"
-
-#: src/text.vala:399
-msgid "_Reject"
-msgstr "_Отклонить"
-
-#. This action removes the selected member from the network.
-#: src/text.vala:401
-msgid "_Evict"
-msgstr "_Выгнать"
-
-#: src/text.vala:402
-msgid "Copy IPv_4 Address"
-msgstr "Копировать адрес IPv_4"
-
-#: src/text.vala:403
-msgid "Copy IPv_6 Address"
-msgstr "Копировать адрес IPv_6"
-
-#: src/text.vala:404
-msgid "_Copy Client ID"
-msgstr "_Скопировать идентификационный номер клиента"
-
-#: src/text.vala:406
-msgid "Change _Nickname…"
-msgstr "Измени_ть псевдоним…"
-
-#: src/text.vala:407
-msgid "Change Nickname"
-msgstr "Изменить псевдоним"
-
-#: src/text.vala:408
-msgid "C_hange"
-msgstr "_Изменить"
-
-#: src/text.vala:410
-msgid "Change _Password…"
-msgstr "Изменить _пароль…"
-
-#: src/text.vala:411
-msgid "Change Password"
-msgstr "Смена пароля"
-
-#: src/text.vala:412
-msgid "_New password:"
-msgstr "_Новый пароль:"
-
-#: src/text.vala:414
-msgid "_Account:"
-msgstr "_Учётная запись:"
-
-#: src/text.vala:416
-msgid "Pending"
-msgstr "Ожидается"
-
-#: src/text.vala:418
-msgid "_Attach to Account…"
-msgstr "П_рикрепить к учётной записи…"
-
-#: src/text.vala:419
-msgid "Attach to Account"
-msgstr "Прикрепить к учётной записи"
-
-#: src/text.vala:420
-msgid "_Include all networks created by this client"
-msgstr "_Включить все сети, созданные этим клиентом"
-
-#: src/text.vala:421
-msgid "_Attach"
-msgstr "_Прикрепить"
-
-#: src/text.vala:422
-msgid "Account not found"
-msgstr "Учётная запись не найдена"
-
-#: src/text.vala:424
-msgid "_Configuration"
-msgstr "_Настройки"
-
-#: src/text.vala:425
-msgid "_Open Folder"
-msgstr "_Открыть папку"
-
-#: src/text.vala:426
-msgid "_Save a Backup…"
-msgstr "Сделать _резервную копию…"
-
-#: src/text.vala:427
-msgid "Save a Backup"
-msgstr "Создать резервную копию"
-
-#: src/text.vala:428
-msgid "_Restore from Backup…"
-msgstr "_Восстановить с резервной копии…"
-
-#: src/text.vala:429
-msgid "Restore from Backup"
-msgstr "Восстановить из резервной копии"
-
-#: src/text.vala:430
-msgid "_Restore"
-msgstr "_Восстановить"
-
-#: src/text.vala:431
-msgid "Could not restore configuration"
-msgstr "Невозможно восстановить настройки"
-
-#: src/text.vala:432
-msgid "Archive does not contain expected files."
-msgstr "Архив не содержит необходимых файлов."
-
-#: src/text.vala:433
-msgid "All supported archives"
-msgstr "Все поддерживаемые архивы"
-
-#: src/text.vala:435
-msgid "_Join Network…"
-msgstr "_Подключиться к сети…"
-
-#: src/text.vala:436
-msgid "Join Network"
-msgstr "Подключиться к сети"
-
-#: src/text.vala:437
-msgid "_Join"
-msgstr "_Подключиться"
-
-#: src/text.vala:439
-msgid "_Create Network…"
-msgstr "_Создать сеть…"
-
-#: src/text.vala:440
-msgid "Create Network"
-msgstr "Создать сеть"
-
-#: src/text.vala:441
-msgid "C_reate"
-msgstr "_Создать"
-
-#: src/text.vala:443
-msgid "Network not found"
-msgstr "Сеть не найдена"
-
-#: src/text.vala:444
-msgid "Invalid password"
-msgstr "Неправильный пароль"
-
-#: src/text.vala:445
-msgid "Network is full"
-msgstr "Сеть переполнена"
-
-#: src/text.vala:446
-msgid "Network is locked"
-msgstr "Сеть заблокирована"
-
-#: src/text.vala:447
-msgid "Network already joined"
-msgstr "Вы уже подключены к этой сети"
-
-#: src/text.vala:448
-msgid "Network ID is already taken"
-msgstr "Сеть с данным ID уже существует"
-
-#: src/text.vala:449
-msgid "Unknown error"
-msgstr "Неизвестная ошибка"
-
-#: src/text.vala:451
-msgid "Join request sent"
-msgstr "Запрос на подключение послан"
-
-#: src/text.vala:453 data/ui/shortcuts-window.ui:45
-msgid "Preferences"
-msgstr "Параметры"
-
-#: src/text.vala:454
-msgid "Information"
-msgstr "Сведения"
-
-#: src/text.vala:456
-msgid "Are you sure you want to delete the network “{0}”?"
-msgstr "Вы уверены что хотите удалить сеть «{0}»?"
-
-#: src/text.vala:457
-msgid "If you delete a network, it will be permanently lost."
-msgstr "Если вы удалите сеть, она удалиться без возможности восстановления."
-
-#: src/text.vala:459
-msgid "Are you sure you want to leave the network “{0}”?"
-msgstr "Вы уверены что хотите покинуть сеть «{0}»?"
-
-#: src/text.vala:460
-msgid "If admitted, you can rejoin the network at any later time."
-msgstr "Вы всегда сможете заново подключиться к выбранной сети."
-
-#: src/text.vala:462
-msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
-
-#: src/text.vala:463
-msgid "If admitted, evicted members can rejoin the network at any later time."
-msgstr ""
-"Выгнанные участники всегда смогут заново подключиться к выбранной сети."
-
-#: src/text.vala:465
-msgid "Could not delete network “{0}”"
-msgstr "Ошибка при удалении сети «{0}»"
-
-#: src/text.vala:466
-msgid "Could not leave network “{0}”"
-msgstr "Ошибка при попытке покинуть сеть «{0}»"
-
-#: src/text.vala:467
-msgid "Could not evict member “{0}”"
-msgstr "Ошибка при попытке выгнать «{0}»"
-
-#: src/text.vala:468
-msgid "Could not go online in the network “{0}”"
-msgstr "Невозможно выйти в онлайн сети «{0}»"
-
-#: src/text.vala:469
-msgid "Could not go offline in the network “{0}”"
-msgstr "Невозможно выйти в оффлайн сети «{0}»"
-
-#: src/text.vala:471
-msgid "See output for details."
-msgstr "Подробности смотрите в выводе."
-
-#: src/text.vala:473 data/ui/shortcuts-window.ui:11
-msgid "General"
-msgstr "Общие"
-
-#: src/text.vala:474
-msgid "Commands"
-msgstr "Команды"
-
-#. In this context meaning "work environment".
-#: src/text.vala:476
-msgid "Desktop"
-msgstr "Рабочий стол"
-
-#: src/text.vala:478
-msgid "Behavior"
-msgstr "Поведение"
-
-#: src/text.vala:479
-msgid "Appearance"
-msgstr "Внешний вид"
-
-#: src/text.vala:480
-msgid "Notifications"
-msgstr "Уведомления"
-
-#: src/text.vala:482
-msgid "_Protocol:"
-msgstr "_Протокол:"
-
-#: src/text.vala:483
-msgid "Both IPv4 and IPv6"
-msgstr "Оба, IPv4 и IPv6"
-
-#: src/text.vala:484
-msgid "IPv4 only"
-msgstr "только IPv4"
-
-#: src/text.vala:485
-msgid "IPv6 only"
-msgstr "только IPv6"
-
-#: src/text.vala:487
-msgid "Show _Offline Members"
-msgstr "_Показывать тех, кто “не в сети”"
-
-#: src/text.vala:488
-msgid "Sort by _Name"
-msgstr "Упорядочить по _имени"
-
-#: src/text.vala:489
-msgid "Sort by _Status"
-msgstr "Упорядочить по _статусу"
-
-#: src/text.vala:491
-msgid "C_onnect automatically on startup"
-msgstr "_Автоматически подключаться при запуске"
-
-#: src/text.vala:492
-msgid "_Reconnect automatically when the connection is lost"
-msgstr "А_втоматически подключаться при потере соединения"
-
-#: src/text.vala:493
-msgid "_Disconnect on quit"
-msgstr "_Отключаться при выходе"
-
-#: src/text.vala:495
-msgid "Use _dark theme variant"
-msgstr "Использовать _тёмный вариант темы"
-
-#: src/text.vala:497
-msgid "Show _indicator"
-msgstr "Показать _индикатор"
-
-#: src/text.vala:499
-msgid "Display notification when the connection is l_ost"
-msgstr "Отобразить уведомления о _потере соединения"
-
-#: src/text.vala:500
-msgid "Display notification when a member _joins"
-msgstr "П_оказывать уведомление, когда к сети подключается пользователь"
-
-#: src/text.vala:501
-msgid "Display notification when a member _leaves"
-msgstr "По_казывать уведомление, когда пользователь отключается от сети"
-
-#: src/text.vala:502
-msgid "Display notification when a member comes o_nline"
-msgstr "Пок_азывать уведомление, когда пользователь выходит в онлайн"
-
-#: src/text.vala:503
-msgid "Display notification when a member goes o_ffline"
-msgstr "Пока_зывать уведомление, когда пользователь уходит из сети"
-
-#: src/text.vala:505
-msgid "Error connecting"
-msgstr "Ошибка при подключении"
-
-#: src/text.vala:506
-msgid "Hamachi login failed"
-msgstr "Ошибка при подключении Hamachi"
-
-#: src/text.vala:507
-msgid "No internet connection"
-msgstr "Отсутствует соединение с интернет"
-
-#: src/text.vala:509
-msgid "Add"
-msgstr "Добавить"
-
-#: src/text.vala:510
-msgid "Add Command"
-msgstr "Добавить команду"
-
-#: src/text.vala:511
-msgid "_Add"
-msgstr "_Добавить"
-
-#: src/text.vala:512
-msgid "Edit"
-msgstr "Изменить"
-
-#: src/text.vala:513
-msgid "Edit Command"
-msgstr "Изменить команду"
-
-#: src/text.vala:514
-msgid "_Label:"
-msgstr "_Метка:"
-
-#: src/text.vala:515
-msgid "IPv_4 command:"
-msgstr "IPv_4 команда:"
-
-#: src/text.vala:516
-msgid "IPv_6 command:"
-msgstr "IPv_6 команда:"
-
-#: src/text.vala:517
-msgid "Use %A for address and %N for nickname"
-msgstr "Использовать %A для адреса и %N для псевдонима"
-
-#: src/text.vala:518
-msgid "_Priority:"
-msgstr "_Приоритет:"
-
-#: src/text.vala:520
-msgid "Remove"
-msgstr "Удалить"
-
-#: src/text.vala:521
-msgid "Move up"
-msgstr "Вверх"
-
-#: src/text.vala:522
-msgid "Move down"
-msgstr "Вниз"
-
-#: src/text.vala:523
-msgid "Set as default action"
-msgstr "Сохранить как действие по умолчанию"
-
-#: src/text.vala:525
-msgid "Revert all changes"
-msgstr "Отменить все изменения"
-
-#: src/text.vala:526
-msgid "Are you sure you want to revert all changes?"
-msgstr "Вы уверены что хотите отменить все изменения?"
-
-#: src/text.vala:527
-msgid "If you revert all changes, the default commands will be restored."
-msgstr ""
-"Если вы отмените все изменения, то будут восстановлены команды по умолчанию."
-
-#: src/text.vala:529
-msgid "Hamachi lost connection"
-msgstr "Hamachi потерял соединение"
-
-#: src/text.vala:530
-msgid "Member online"
-msgstr "Пользователь в сети"
-
-#: src/text.vala:531
-msgid "Member offline"
-msgstr "Пользователь отключился"
-
-#: src/text.vala:532
-msgid "Member joined"
-msgstr "Пользователь подключился"
-
-#: src/text.vala:533
-msgid "Member left"
-msgstr "Пользователь покинул сеть"
-
-#. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/text.vala:535
-msgid "{0} came online in the network {1}"
-msgstr "{0} вошел в сеть {1}"
-
-#. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/text.vala:537
-msgid "{0} went offline in the network {1}"
-msgstr "{0} отключился от сети {1}"
-
-#. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/text.vala:539
-msgid "{0} joined the network {1}"
-msgstr "{0} подключился к сети {1}"
-
-#. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/text.vala:541
-msgid "{0} left the network {1}"
-msgstr "{0} покинул сеть {1}"
-
-#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/text.vala:547
-msgid "{0} came online in the network {1} and {2} other network"
-msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
-msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
-msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
-
-#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/text.vala:553
-msgid "{0} went offline in the network {1} and {2} other network"
-msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0} ушел из сети {1} и ещё {2} сети"
-msgstr[1] "{0} ушел из сети {1} и ещё {2} сетей"
-msgstr[2] "{0} ушел из сети {1} и ещё {2} сетей"
-
-#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/text.vala:559
-msgid "{0} joined the network {1} and {2} other network"
-msgid_plural "{0} joined the network {1} and {2} other networks"
-msgstr[0] "{0} подключился к сети {1} и ещё {2} сети"
-msgstr[1] "{0} подключился к сети {1} и ещё {2} сетям"
-msgstr[2] "{0} подключился к сети {1} и ещё {2} сетям"
-
-#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/text.vala:565
-msgid "{0} left the network {1} and {2} other network"
-msgid_plural "{0} left the network {1} and {2} other networks"
-msgstr[0] "{0} покинул сеть {1} и ещё {2} сеть"
-msgstr[1] "{0} покинул сеть {1} и ещё {2} сети"
-msgstr[2] "{0} покинул сеть {1} и ещё {2} сетей"
-
-#: src/text.vala:570
-msgid "Reconnecting in {0} second"
-msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] "Повторное подключение через {0} секунду"
-msgstr[1] "Повторное подключение через {0} секунд"
-msgstr[2] "Повторное подключение через {0} секунд"
-
-#: src/text.vala:575
+#: src/window.vala:374
 #, c-format
-msgid "_Update the network list every %S _second"
-msgid_plural "_Update the network list every %S _seconds"
-msgstr[0] "_Обновлять сетевой список каждую %S _секунду"
-msgstr[1] "_Обновлять сетевой список каждые %S _секунды"
-msgstr[2] "_Обновлять сетевой список каждые %S _секунд"
+msgid "Hamachi Version %s Is Obsolete"
+msgstr "Версия Hamachi %s устарела"
 
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:9
-msgid "Join, create and manage Hamachi networks in a breeze."
-msgstr ""
-"Присоединяйтесь, создавайте и управляйте сетями Hamachi на одном дыхании."
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:10
-msgid "Features:"
-msgstr "Возможности:"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:12
-msgid "Searchable, sortable and collapsible network list"
-msgstr "Список сетей с возможностью поиска, сортировки и складывания"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:13
-msgid "Sidebar for easy access to details and actions"
-msgstr "Боковая панель для быстрого доступа к деталям и действиям"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:14
-msgid "Desktop notifications"
-msgstr "Уведомления на рабочем столе"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:15
-msgid "Fully customizable commands"
-msgstr "Полностью настраиваемые команды"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:16
-msgid "Backup and restore your Hamachi configuration folder"
-msgstr "Создать резервную копию и восстановить вашу папку конфигурации Hamachi"
-
-#: data/com.github.ztefn.haguichi.appdata.xml.in.in:18
+#: src/window.vala:473
 msgid ""
-"Please note: Requires installation of Hamachi on the system in order to use."
-msgstr "Важно: Для использования необходим установленный Hamachi"
-
-#: data/ui/shortcuts-window.ui:15
-msgid "Show help"
-msgstr "Показать справку"
-
-#: data/ui/shortcuts-window.ui:21
-msgid "Show client information"
-msgstr "Показать информацию о клиенте"
-
-#: data/ui/shortcuts-window.ui:27
-msgid "Open menu"
-msgstr "Открыть меню"
-
-#: data/ui/shortcuts-window.ui:51
-msgid "Keyboard shortcuts"
-msgstr "Комбинации клавиш"
-
-#: data/ui/shortcuts-window.ui:57
-msgid "Quit"
-msgstr "Выход"
-
-#: data/ui/shortcuts-window.ui:64
-msgid "Network List"
-msgstr "Список сетей"
-
-#: data/ui/shortcuts-window.ui:68
-msgid "Join a network"
-msgstr "Присоединиться к сети"
-
-#: data/ui/shortcuts-window.ui:74
-msgid "Create a network"
-msgstr "Создать сеть"
-
-#: data/ui/shortcuts-window.ui:92
-msgid "Show/hide offline members"
-msgstr "Показать / скрыть офлайн-пользователей"
-
-#: data/ui/shortcuts-window.ui:98
-msgid "Expand all networks"
-msgstr "Развернуть все сети"
-
-#: data/ui/shortcuts-window.ui:104
-msgid "Collapse all networks"
-msgstr "Свернуть все сети"
-
-#: data/ui/shortcuts-window.ui:110
-msgid "Execute command"
-msgstr "Выполнить команду"
-
-#~ msgid "A graphical frontend for Hamachi."
-#~ msgstr "Графическая оболочка к Hamachi"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "_Refresh"
-#~ msgstr "Об_новить"
-
-#~ msgid "_About"
-#~ msgstr "_О программе"
-
-#~ msgid "_Donate"
-#~ msgstr "_Пожертвовать"
-
-#~ msgid "Config_uration"
-#~ msgstr "_Настройки"
+"Haguichi will continue to run when its window is closed so that it can "
+"monitor the connection and send notifications."
+msgstr ""
