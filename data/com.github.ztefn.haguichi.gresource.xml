@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
-  <gresource prefix="/com/github/ztefn/haguichi/stylesheets">
-    <file>adwaita.css</file>
-    <file>adwaita-dark.css</file>
-    <file>default.css</file>
-    <file>elementary.css</file>
-    <file>elementary-base.css</file>
-    <file>elementary-dark.css</file>
-    <file>yaru.css</file>
+  <gresource prefix="/com/github/ztefn/haguichi">
+    <file>style.css</file>
+    <file>style-dark.css</file>
+    <file>style-hc.css</file>
+    <file preprocess="xml-stripblanks">ui/dialogs/add-edit-command.ui</file>
+    <file preprocess="xml-stripblanks">ui/dialogs/attach.ui</file>
+    <file preprocess="xml-stripblanks">ui/dialogs/change-access.ui</file>
+    <file preprocess="xml-stripblanks">ui/dialogs/change-password.ui</file>
+    <file preprocess="xml-stripblanks">ui/dialogs/join-create-network.ui</file>
+    <file preprocess="xml-stripblanks">ui/menus/member-menu.ui</file>
+    <file preprocess="xml-stripblanks">ui/menus/network-list-menu.ui</file>
+    <file preprocess="xml-stripblanks">ui/menus/network-menu.ui</file>
+    <file preprocess="xml-stripblanks">ui/network-list.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts.ui</file>
+    <file preprocess="xml-stripblanks">ui/sidebar.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/command-entry-row.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/command-variable-box.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/commands-editor.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/commands-editor-row.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/network-list-item.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/sidebar-row.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/sidebar-page.ui</file>
+    <file preprocess="xml-stripblanks">ui/window.ui</file>
   </gresource>
-  <gresource prefix="/com/github/ztefn/haguichi/ui">
-    <file preprocess="xml-stripblanks">shortcuts-window.ui</file>
+  <gresource prefix="/com/github/ztefn/haguichi/icons/scalable/actions">
+    <file preprocess="xml-stripblanks">info-symbolic.svg</file>
   </gresource>
 </gresources>

@@ -25,9 +25,15 @@
     <value value="1" nick="status"/>
   </enum>
 
+  <enum id="com.github.ztefn.haguichi.ui.color-scheme">
+    <value value="0" nick="system"/>
+    <value value="1" nick="light"/>
+    <value value="2" nick="dark"/>
+  </enum>
+
   <schema path="/com/github/ztefn/haguichi/" id="com.github.ztefn.haguichi">
     <key type="i" name="stamp">
-      <default>2</default>
+      <default>3</default>
     </key>
     <child schema="com.github.ztefn.haguichi.behavior" name="behavior"/>
     <child schema="com.github.ztefn.haguichi.commands" name="commands"/>
@@ -45,9 +51,6 @@
       <default>true</default>
     </key>
     <key type="b" name="reconnect-on-connection-loss">
-      <default>true</default>
-    </key>
-    <key type="b" name="update-network-list">
       <default>true</default>
     </key>
   </schema>
@@ -82,8 +85,8 @@
       <range min="15" max="3600"/>
     </key>
     <key type="i" name="update-interval">
-      <default>15</default>
-      <range min="0" max="999"/>
+      <default>30</default>
+      <range min="0" max="3600"/>
     </key>
   </schema>
 
@@ -94,17 +97,11 @@
     <key type="as" name="long-nicks">
       <default>[]</default>
     </key>
-    <key type="s" name="member-template-large">
-      <default><![CDATA['%N%_*<br><small>%S <i>%A</i></small>']]></default>
-    </key>
-    <key type="s" name="member-template-small">
+    <key type="s" name="member-template">
       <default><![CDATA['%N%_*']]></default>
     </key>
-    <key type="s" name="network-template-large">
-      <default><![CDATA['<b>%N</b> (%O/%T)%_*<br><small>%S</small>']]></default>
-    </key>
-    <key type="s" name="network-template-small">
-      <default><![CDATA['<b>%N</b> (%O/%T)%_*']]></default>
+    <key type="s" name="network-template">
+      <default><![CDATA['%N%_*']]></default>
     </key>
     <key type="b" name="show-offline-members">
       <default>true</default>
@@ -133,26 +130,17 @@
   </schema>
 
   <schema path="/com/github/ztefn/haguichi/ui/" id="com.github.ztefn.haguichi.ui">
+    <key name="color-scheme" enum="com.github.ztefn.haguichi.ui.color-scheme">
+      <default>'dark'</default>
+    </key>
     <key type="i" name="height">
-      <default>500</default>
-    </key>
-    <key type="i" name="position-x">
-      <default>120</default>
-    </key>
-    <key type="i" name="position-y">
-      <default>60</default>
-    </key>
-    <key type="b" name="prefer-dark-theme">
-      <default>true</default>
+      <default>480</default>
     </key>
     <key type="b" name="show-indicator">
       <default>true</default>
     </key>
-    <key type="i" name="sidebar-position">
-      <default>290</default>
-    </key>
     <key type="i" name="width">
-      <default>560</default>
+      <default>600</default>
     </key>
   </schema>
 

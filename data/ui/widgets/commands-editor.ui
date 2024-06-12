@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiCommandsEditor" parent="AdwPreferencesGroup">
+    <child type="header-suffix">
+      <object class="GtkButton" id="restore_button">
+        <signal name="clicked" handler="on_restore_commands"/>
+        <property name="name">restore-commands-button</property>
+        <property name="child">
+          <object class="AdwButtonContent">
+            <property name="icon-name">view-refresh-symbolic</property>
+            <property name="label" translatable="yes">_Restore Default</property>
+            <property name="use-underline">true</property>
+          </object>
+        </property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBox" id="list_box">
+        <signal name="row-activated" handler="on_row_activated"/>
+        <property name="selection-mode">none</property>
+        <child>
+          <object class="GtkListBoxRow">
+            <child>
+              <object class="GtkButton">
+                <signal name="clicked" handler="on_add_command"/>
+                <property name="name">add-command-button</property>
+                <property name="can-focus">false</property>
+                <property name="child">
+                  <object class="AdwButtonContent">
+                    <property name="icon-name">list-add-symbolic</property>
+                    <property name="label" translatable="yes">_Add Command…</property>
+                    <property name="use-underline">true</property>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <style>
+          <class name="boxed-list"/>
+        </style>
+      </object>
+    </child>
+  </template>
+  <!-- this menu is only used to add labels for the default commands from gschema to the gettext catalog -->
+  <menu id="default_commands_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Browse Shares</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_View Remote Desktop</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Ping</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

@@ -1,0 +1,37 @@
+#network-list > scrolledwindow > listview > row .network-node-online {
+  background: @green_2;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-online-relayed {
+  background: @blue_2;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-unreachable {
+  background: @red_1;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-unapproved {
+  background: @purple_1;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-error {
+  background: @yellow_2;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-offline {
+  background: @dark_1;
+}
+
+
+styleselector checkbutton.system {
+  background-image: linear-gradient(to bottom right, @view_fg_color 49.99%, @view_bg_color 50.01%);
+}
+
+styleselector checkbutton.light {
+  background-color: @view_fg_color;
+}
+
+styleselector checkbutton.dark {
+  background-color: @view_bg_color;
+}
+

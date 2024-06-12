@@ -1,45 +1,38 @@
-project(
-    'haguichi',
-    ['vala', 'c'],
-    version: '1.4.7',
-    default_options: ['prefix=/usr'],
-    meson_version: '>= 0.40'
+project('Haguichi', ['c', 'vala'],
+          version: '1.5.0',
+    meson_version: '>= 0.62.0',
+  default_options: ['prefix=/usr', 'warning_level=2', 'werror=false'],
 )
 
 app_name    = meson.project_name()
-app_id      = 'com.github.ztefn.' + app_name
+app_id      = 'com.github.ztefn.' + app_name.to_lower()
 app_version = meson.project_version()
-
-if get_option('use-rdnn-everywhere')
-    pkg_name = app_id
-else
-    pkg_name = app_name
-endif
-
-binary_name = pkg_name
-icon_name   = app_id
-gettext_pkg = pkg_name
+binary_name = app_name.to_lower()
+gettext_pkg = app_name.to_lower()
 
 add_project_arguments(
-    '-DGETTEXT_PACKAGE="' + gettext_pkg + '"',
-    language: 'c'
+  '-DG_LOG_DOMAIN="' + app_name + '"',
+  '-DGETTEXT_PACKAGE="' + gettext_pkg + '"',
+  language: 'c'
 )
 
 conf = configuration_data()
-conf.set('PACKAGE_NAME', pkg_name)
-conf.set('VERSION', app_version)
-conf.set('BINARY_NAME', binary_name)
-conf.set('ICON_NAME', icon_name)
+conf.set('APP_ID',          app_id)
+conf.set('APP_NAME',        app_name)
+conf.set('VERSION',         app_version)
+conf.set('BINARY_NAME',     binary_name)
 conf.set('GETTEXT_PACKAGE', gettext_pkg)
-conf.set('DATADIR', join_paths(get_option('prefix'), get_option('datadir')))
-conf.set('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+conf.set('LOCALEDIR',       get_option('prefix') / get_option('localedir'))
 
-i18n = import('i18n')
-
-po_dir = join_paths(meson.source_root(), 'po')
+i18n  = import('i18n')
+gnome = import('gnome')
 
 subdir('data')
 subdir('po')
 subdir('src')
 
-meson.add_install_script('meson_post_install.py')
+gnome.post_install(
+     glib_compile_schemas: true,
+    gtk_update_icon_cache: true,
+  update_desktop_database: true,
+)

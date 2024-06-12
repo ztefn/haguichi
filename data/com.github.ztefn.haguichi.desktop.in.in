@@ -1,12 +1,16 @@
 [Desktop Entry]
 Type=Application
+# Name used for display in application launchers.
 Name=Haguichi
+# Generic name used for display in some application launchers like Kickoff in KDE Plasma.
 GenericName=Hamachi Network Manager
 Exec=@BINARY_NAME@
 Terminal=false
-Comment=Join and create local networks over the Internet
-Icon=@ICON_NAME@
+# Description used for display in application launchers.
+Comment=Manage your Hamachi networks
+Icon=@APP_ID@
 Categories=GNOME;GTK;Network;P2P;
+# Keywords used for search in application launchers and software centers.
 Keywords=LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;
 StartupNotify=true
 X-GNOME-UsesNotifications=true

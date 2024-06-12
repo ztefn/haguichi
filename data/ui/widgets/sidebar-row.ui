@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiSidebarRow" parent="AdwActionRow">
+    <property name="subtitle-selectable">true</property>
+    <property name="focusable">false</property>
+    <child>
+      <object class="GtkButton" id="copy_button">
+        <property name="action-name">row.copy-value</property>
+        <property name="icon-name">edit-copy-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Copy</property>
+        <property name="valign">center</property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <style>
+      <class name="property"/>
+    </style>
+  </template>
+</interface>

@@ -1,107 +1,142 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2023 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
  * by the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-using Gtk;
+namespace Haguichi {
+    [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/widgets/commands-editor-row.ui")]
+    public class CommandsEditorRow : Adw.ActionRow {
+        private CommandsEditor editor;
 
-public class CommandsEditorRow : ListBoxRow
-{
-    public bool   is_active;
-    public bool   is_default;
-    public string label;
-    public string command_ipv4;
-    public string command_ipv6;
-    public string priority;
-    
-    private CommandsEditor editor;
-    private Label title;
-    private Label preview;
-    private Image img;
-    private Switch swh;
-    
-    public CommandsEditorRow (CommandsEditor _editor, bool _is_active, bool _is_default, string _label, string _command_ipv4, string _command_ipv6, string _priority)
-    {
-        editor       = _editor;
-        is_active    = _is_active;
-        is_default   = _is_default;
-        
-        activatable  = true;
-        selectable   = true;
-        
-        
-        title = new Label (null);
-        title.ellipsize = Pango.EllipsizeMode.END;
-        title.xalign = 0.0f;
-        
-        preview = new Label (null);
-        preview.ellipsize = Pango.EllipsizeMode.END;
-        preview.margin_bottom = 2;
-        preview.xalign = 0.0f;
-        preview.get_style_context().add_class ("dim-label");
-        
-        Box label_box = new Box (Orientation.VERTICAL, 0);
-        label_box.pack_start (title,   false, false, 0);
-        label_box.pack_end   (preview, false, false, 0);
-        label_box.valign = Align.CENTER;
-        
-        img = new Image();
-        
-        swh = new Switch();
-        swh.active = is_active;
-        swh.valign = Align.CENTER;
-        swh.state_set.connect ((state) =>
-        {
-            is_active = state;
-            editor.update_commands();
-            return false;
-        });
-        
-        Box box = new Box (Orientation.HORIZONTAL, 0);
-        box.border_width = 6;
-        box.pack_start (label_box, false, false, 4);
-        box.pack_start (img,       false, false, 8);
-        box.pack_end   (swh,       false, false, 6);
-        
-        add (box);
-        
-        
-        update (_label, _command_ipv4, _command_ipv6, _priority);
-        set_default (is_default);
-        
-        show_all();
-    }
-    
-    public void update (string _label, string _command_ipv4, string _command_ipv6, string _priority)
-    {
-        label        = _label;
-        command_ipv4 = _command_ipv4;
-        command_ipv6 = _command_ipv6;
-        priority     = _priority;
-        
-        string command = (priority == "IPv6") ? command_ipv6 : command_ipv4;
-        string address = (priority == "IPv6") ? "2620:9b::56d:f78e" : "25.123.456.78";
-        
-        title.label   = Utils.remove_mnemonics (_(label));
-        preview.label = Command.replace_variables (command, address, "Nick", "090-123-456");
-    }
-    
-    public void set_default (bool _is_default)
-    {
-        is_default = _is_default;
-        
-        if (is_default)
-        {
-            img.set_from_icon_name (Utils.get_available_theme_icon (editor.default_icon_names), IconSize.MENU);
+        public bool   is_active;
+        public bool   is_default;
+        public string label;
+        public string command_ipv4;
+        public string command_ipv6;
+        public string priority;
+
+        [GtkChild]
+        unowned Gtk.Image drag_handle;
+        [GtkChild]
+        unowned Gtk.Image default_emblem;
+        [GtkChild]
+        unowned Gtk.Switch command_switch;
+
+        construct {
+            install_action ("row.edit",        null, (Gtk.WidgetActionActivateFunc) on_edit);
+            install_action ("row.move-up",     null, (Gtk.WidgetActionActivateFunc) on_move_up);
+            install_action ("row.move-down",   null, (Gtk.WidgetActionActivateFunc) on_move_down);
+            install_action ("row.set-default", null, (Gtk.WidgetActionActivateFunc) on_set_deault);
+            install_action ("row.remove",      null, (Gtk.WidgetActionActivateFunc) on_remove);
+
+            drag_handle.icon_name = Utils.get_available_theme_icon ({
+                "list-drag-handle-symbolic",
+                "drag-handle-symbolic"
+            });
+
+            default_emblem.icon_name = Utils.get_available_theme_icon ({
+                "emblem-default-symbolic",
+                "emblem-ok-symbolic",
+                "object-select-symbolic",
+                "selection-mode-symbolic"
+            });
         }
-        else
-        {
-            img.clear();
+
+        public CommandsEditorRow (CommandsEditor _editor, bool _is_active, bool _is_default, string _label, string _command_ipv4, string _command_ipv6, string _priority) {
+            editor     = _editor;
+            is_active  = _is_active;
+            is_default = _is_default;
+
+            command_switch.active = is_active;
+            command_switch.state_set.connect ((state) => {
+                is_active = state;
+                editor.update_commands ();
+                return false;
+            });
+
+            update (_label, _command_ipv4, _command_ipv6, _priority);
+            set_default (is_default);
+        }
+
+        public void on_edit () {
+            editor.edit_command (this);
+        }
+
+        public void on_move_up () {
+            editor.move_command (this, get_index () - 1);
+        }
+
+        public void on_move_down () {
+            editor.move_command (this, get_index () + 1);
+        }
+
+        public void on_set_deault () {
+            editor.set_default (this);
+        }
+
+        public void on_remove () {
+            editor.remove_command (this);
+        }
+
+        [GtkCallback]
+        public Gdk.ContentProvider on_drag_prepare() {
+            return new Gdk.ContentProvider.for_value (this);
+        }
+
+        [GtkCallback]
+        public void on_drag_begin (Gdk.Drag drag) {
+            var drag_row = new CommandsEditorRow (editor, is_active, is_default, label, command_ipv4, command_ipv6, priority);
+            // Property 'use_underline' with value 'true' triggers a segmentation fault here,
+            // so turn it of and remove underscores manually
+            drag_row.use_underline = false;
+            drag_row.title = label.replace ("_", "");
+
+            var drag_widget = new Gtk.ListBox ();
+            drag_widget.set_size_request (get_width (), get_height ());
+            drag_widget.append (drag_row);
+            drag_widget.drag_highlight_row (drag_row);
+
+            var icon = Gtk.DragIcon.get_for_drag (drag) as Gtk.DragIcon;
+            icon.child = drag_widget;
+        }
+
+        [GtkCallback]
+        public bool on_drop (Gtk.DropTarget target, GLib.Value val, double x, double y) {
+            var row = (CommandsEditorRow) val;
+
+            if (row == this) {
+                // Do nothing if dropped onto itself
+                return false;
+            } else {
+                // Move dropped row to index of this
+                editor.move_command (row, get_index ());
+                return true;
+            }
+        }
+
+        public void update (string _label, string _command_ipv4, string _command_ipv6, string _priority) {
+            label        = _label;
+            command_ipv4 = _command_ipv4;
+            command_ipv6 = _command_ipv6;
+            priority     = _priority;
+
+            string command = (priority == "IPv6") ? command_ipv6 : command_ipv4;
+            string address = (priority == "IPv6") ? "2620:9b::56d:f78e" : "25.123.456.78";
+
+            title    = _(_label);
+            subtitle = Command.replace_variables (command, address, "Nick", "090-123-456");
+        }
+
+        public void set_default (bool _is_default) {
+            is_default = _is_default;
+            default_emblem.visible = is_default;
         }
     }
 }

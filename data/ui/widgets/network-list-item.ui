@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="GtkListItem">
+    <property name="focusable">true</property>
+    <property name="child">
+      <object class="GtkTreeExpander" id="expander">
+        <property name="focusable">false</property>
+        <binding name="list-row">
+          <lookup name="item">GtkListItem</lookup>
+        </binding>
+        <binding name="hide-expander">
+          <lookup name="hide-expander" type="HaguichiNetwork">
+            <lookup name="item">expander</lookup>
+          </lookup>
+        </binding>
+        <property name="child">
+          <object class="GtkBox">
+            <child>
+              <object class="GtkImage">
+                <property name="margin-end">6</property>
+                <property name="pixel-size">10</property>
+                <property name="valign">center</property>
+                <binding name="css-classes">
+                  <lookup name="node-css-classes" type="HaguichiNetwork">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+                <binding name="css-classes">
+                  <lookup name="node-css-classes" type="HaguichiMember">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="ellipsize">end</property>
+                <property name="use-markup">true</property>
+                <binding name="label">
+                  <lookup name="label" type="HaguichiNetwork">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+                <binding name="label">
+                  <lookup name="label" type="HaguichiMember">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+                <binding name="css-classes">
+                  <lookup name="label-css-classes" type="HaguichiNetwork">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+                <binding name="css-classes">
+                  <lookup name="label-css-classes" type="HaguichiMember">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+              </object>
+            </child>
+          </object>
+        </property>
+      </object>
+    </property>
+  </template>
+</interface>

@@ -1,63 +1,58 @@
-if get_option('for-elementary')
-    icon_themes = ['elementary/hicolor']
-else
-    icon_themes = ['hicolor']
-endif
-
-if get_option('for-ubuntu')
-    icon_themes += ['Yaru', 'ubuntu-mono-dark', 'ubuntu-mono-light']
-endif
-
-foreach theme : icon_themes
-    install_subdir(
-        'icons/' + theme,
-        install_dir: join_paths(get_option('datadir'), 'icons')
-    )
-endforeach
-
-appdata = app_id + '.appdata.xml'
-
-appdata_in = configure_file(
-    input: appdata + '.in.in',
-    output: appdata + '.in',
-    configuration: conf
-)
-
-i18n.merge_file(
-    type: 'xml',
-    input: appdata_in,
-    output: appdata,
-    po_dir: po_dir,
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'metainfo')
-)
-
 desktop = app_id + '.desktop'
 
 desktop_in = configure_file(
-    input: desktop + '.in.in',
-    output: desktop + '.in',
-    configuration: conf
+          input: desktop + '.in.in',
+         output: desktop + '.in',
+  configuration: conf
 )
 
-i18n.merge_file(
-    type: 'desktop',
-    input: desktop_in,
-    output: desktop,
-    po_dir: po_dir,
-    install: true,
-    install_dir: join_paths(get_option('datadir'), 'applications')
+desktop_file = i18n.merge_file(
+        input: desktop_in,
+       output: desktop,
+         type: 'desktop',
+       po_dir: '../po',
+      install: true,
+  install_dir: get_option('datadir') / 'applications'
 )
 
-gnome = import('gnome')
+desktop_utils = find_program('desktop-file-validate', required: false)
+if desktop_utils.found()
+  test('Validate desktop file', desktop_utils, args: [desktop_file])
+endif
 
-resources = gnome.compile_resources(
-    'haguichi-resources',
-    app_id + '.gresource.xml',
-    source_dir: ['stylesheets', 'ui']
+appstream = app_id + '.metainfo.xml'
+
+appstream_in = configure_file(
+          input: appstream + '.in.in',
+         output: appstream + '.in',
+  configuration: conf
 )
 
-install_data(
-    app_id + '.gschema.xml',
-    install_dir: join_paths(get_option('datadir'), 'glib-2.0', 'schemas')
+appstream_file = i18n.merge_file(
+        input: appstream_in,
+       output: appstream,
+       po_dir: '../po',
+      install: true,
+  install_dir: get_option('datadir') / 'metainfo'
 )
+
+appstreamcli = find_program('appstreamcli', required: false, disabler: true)
+test('Validate appstream file', appstreamcli,
+  args: ['validate', '--no-net', '--explain', appstream_file]
+)
+
+install_data(app_id + '.gschema.xml',
+  install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+)
+
+compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
+test('Validate schema file', compile_schemas,
+  args: ['--strict', '--dry-run', meson.current_source_dir()]
+)
+
+resources = gnome.compile_resources(app_name.to_lower() + '-resources', app_id + '.gresource.xml',
+      c_name: app_name.to_lower(),
+  source_dir: ['icons/resource', 'stylesheets']
+)
+
+subdir('icons')

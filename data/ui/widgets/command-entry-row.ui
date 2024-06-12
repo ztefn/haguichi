@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiCommandEntryRow" parent="AdwEntryRow">
+    <child type="suffix">
+      <object class="GtkMenuButton">
+        <property name="icon-name">info-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Command Variables</property>
+        <property name="valign">center</property>
+        <property name="popover">
+          <object class="GtkPopover">
+            <child>
+              <object class="GtkGrid">
+                <child>
+                  <object class="GtkLabel">
+                    <property name="label" translatable="yes">Command Variables</property>
+                    <property name="halign">center</property>
+                    <property name="margin-top">9</property>
+                    <property name="margin-start">9</property>
+                    <property name="margin-end">9</property>
+                    <property name="margin-bottom">9</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="column-span">2</property>
+                      <property name="row">0</property>
+                    </layout>
+                    <style>
+                      <class name="title-4"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <layout>
+                      <property name="column">0</property>
+                      <property name="row">1</property>
+                    </layout>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="address_var">
+                        <property name="title" translatable="yes">Address</property>
+                        <property name="variable">%A</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="nickname_var">
+                        <property name="title" translatable="yes">Nickname</property>
+                        <property name="variable">%N</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="client_id_var">
+                        <property name="title" translatable="yes">Client ID</property>
+                        <property name="variable">%ID</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <layout>
+                      <property name="column">1</property>
+                      <property name="row">1</property>
+                    </layout>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="terminal_var">
+                        <property name="title" translatable="yes">Terminal Emulator</property>
+                        <property name="variable">%TERMINAL</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="file_manager_var">
+                        <property name="title" translatable="yes">File Manager</property>
+                        <property name="variable">%FILEMANAGER</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="HaguichiCommandVariableBox" id="remote_desktop_var">
+                        <property name="title" translatable="yes">Remote Desktop Viewer</property>
+                        <property name="variable">%REMOTEDESKTOP</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+  </template>
+</interface>

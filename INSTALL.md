@@ -9,63 +9,35 @@
   The following development packages are required to build Haguichi:
 
    * gettext
-   * meson (>= 0.40)
-   * valac (>= 0.30)
-   * glib-2.0 (>= 2.48)
-   * gtk+-3.0 (>= 3.18)
+   * meson (>= 0.62)
+   * valac (>= 0.56)
+   * gee-0.8 (>= 0.20.6)
+   * glib-2.0 (>= 2.78)
+   * gtk4 (>= 4.12)
+   * libadwaita-1 (>= 1.4)
+   * libportal (>= 0.7.1)
+   * libportal-gtk4 (>= 0.7.1)
 
   On **Debian based distributions** you can install these packages by running the following command:
 
-    $ sudo apt install build-essential gettext meson valac libglib2.0-dev libgtk-3-dev
-
-  On **Solus** you can install these packages by running the following command:
-
-    $ sudo eopkg it -c system.devel vala glib2-devel libgtk-3-devel
+    $ sudo apt install build-essential gettext meson valac libgee-0.8-dev libglib2.0-dev libgtk-4-dev libadwaita-1-dev libportal-dev libportal-gtk4-dev
 
 
   Build options
   -------------
 
-  **enable-appindicator**
-
-  This option enables appindicator integration and additionally requires the *appindicator3-0.1* or *ayatana-appindicator3-0.1* development package.
-
-    $ meson configure -Denable-appindicator=true
-
-
-  **enable-wingpanel-indicator**
-
-  This option enables wingpanel integration and additionally requires the *wingpanel* development package.
-
-    $ meson configure -Denable-wingpanel-indicator=true
-
-
   **for-elementary**
 
-  This option enables full integration with elementary OS and additionally requires the *granite* development package.
+  This option enables elementary OS integration by installing elementary style application icons.
 
     $ meson configure -Dfor-elementary=true
 
 
   **for-ubuntu**
 
-  This option enables full integration with Ubuntu by installing ubuntu-mono and Yaru icons.
+  This option enables Ubuntu integration by installing Yaru style application icons.
 
     $ meson configure -Dfor-ubuntu=true
-
-
-  **use-libhandy**
-
-  This option enables usage of libhandy for rounded bottom corners and additionally requires the *libhandy-1* development package.
-
-    $ meson configure -Duse-libhandy=true
-
-
-  **use-rdnn-everywhere**
-
-  This option enables usage of [RDNN](https://en.wikipedia.org/wiki/Reverse_domain_name_notation "Reverse Domain Name Notation") everywhere, specifically for binary and gettext package.
-
-    $ meson configure -Duse-rdnn-everywhere=true
 
 
   Building

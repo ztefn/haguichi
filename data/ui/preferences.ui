@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiPreferences" parent="AdwPreferencesWindow">
+    <child>
+      <object class="AdwPreferencesPage" id="general_page">
+        <property name="title" translatable="yes">General</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="false">Hamachi</property>
+            <child>
+              <object class="AdwActionRow" id="configuration">
+                <property name="title" translatable="yes">Configuration</property>
+                <property name="subtitle-selectable">true</property>
+                <property name="use-underline">true</property>
+                <child>
+                  <object class="GtkMenuButton">
+                    <property name="valign">center</property>
+                    <property name="icon-name">document-save-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Backup</property>
+                    <property name="menu-model">backup_menu</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkButton">
+                    <property name="action-name">config.open</property>
+                    <property name="icon-name">folder-open-symbolic</property>
+                    <property name="tooltip-text" translatable="yes">Open Folder</property>
+                    <property name="valign">center</property>
+                    <style>
+                      <class name="flat"/>
+                    </style>
+                  </object>
+                </child>
+                <style>
+                  <class name="property"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="AdwEntryRow" id="nickname">
+                <property name="title" translatable="yes">Nickname</property>
+                <property name="use-underline">true</property>
+                <property name="show-apply-button">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwComboRow" id="protocol">
+                <property name="title" translatable="yes">_Protocol</property>
+                <property name="use-underline">true</property>
+                <property name="model">
+                  <object class="GtkStringList">
+                    <items>
+                      <item translatable="yes">Both IPv4 and IPv6</item>
+                      <item translatable="yes">IPv4 only</item>
+                      <item translatable="yes">IPv6 only</item>
+                    </items>
+                  </object>
+                </property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Behavior</property>
+            <child>
+              <object class="AdwComboRow" id="update_interval">
+                <property name="title" translatable="yes">_Network list update interval</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="connect_on_startup">
+                <property name="title" translatable="yes">_Connect automatically on startup</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="reconnect_on_connection_loss">
+                <property name="title" translatable="yes">_Reconnect automatically when the connection is lost</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="disconnect_on_quit">
+                <property name="title" translatable="yes">_Disconnect on quit</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesPage" id="commands_page">
+        <property name="title" translatable="yes">Commands</property>
+        <child>
+          <object class="HaguichiCommandsEditor" id="commands_editor"/>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwPreferencesPage" id="desktop_page">
+        <property name="title" translatable="yes" comments="In this context meaning &quot;work environment&quot;.">Desktop</property>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Appearance</property>
+            <child>
+              <object class="AdwActionRow">
+                <property name="title" translatable="yes">_Style</property>
+                <property name="use-underline">true</property>
+                <child>
+                  <object class="GtkBox">
+                    <property name="css-name">styleselector</property>
+                    <property name="orientation">horizontal</property>
+                    <property name="halign">end</property>
+                    <property name="valign">center</property>
+                    <property name="spacing">12</property>
+                    <child>
+                      <object class="GtkCheckButton" id="system">
+                        <style>
+                          <class name="system"/>
+                        </style>
+                        <property name="hexpand">true</property>
+                        <property name="halign">center</property>
+                        <property name="group">light</property>
+                        <property name="tooltip-text" translatable="yes">Follow System</property>
+                        <signal name="notify::active" handler="on_style_selection"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="light">
+                        <style>
+                          <class name="light"/>
+                        </style>
+                        <property name="hexpand">true</property>
+                        <property name="halign">center</property>
+                        <property name="tooltip-text" translatable="yes">Light</property>
+                        <signal name="notify::active" handler="on_style_selection"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="dark">
+                        <style>
+                          <class name="dark"/>
+                        </style>
+                        <property name="hexpand">true</property>
+                        <property name="halign">center</property>
+                        <property name="group">light</property>
+                        <property name="tooltip-text" translatable="yes">Dark</property>
+                        <signal name="notify::active" handler="on_style_selection"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="show_indicator">
+                <property name="title" translatable="yes">Show _indicator</property>
+                <property name="use-underline">true</property>
+                <property name="visible">false</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="title" translatable="yes">Notifications</property>
+            <child>
+              <object class="AdwSwitchRow" id="notify_on_connection_loss">
+                <property name="title" translatable="yes">Display notification when the connection is l_ost</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="notify_on_member_join">
+                <property name="title" translatable="yes">Display notification when a member _joins</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="notify_on_member_leave">
+                <property name="title" translatable="yes">Display notification when a member _leaves</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="notify_on_member_online">
+                <property name="title" translatable="yes">Display notification when a member comes o_nline</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+            <child>
+              <object class="AdwSwitchRow" id="notify_on_member_offline">
+                <property name="title" translatable="yes">Display notification when a member goes o_ffline</property>
+                <property name="use-underline">true</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+  <menu id="backup_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Save a Backup…</attribute>
+        <attribute name="action">config.save</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Restore from Backup…</attribute>
+        <attribute name="action">config.restore</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

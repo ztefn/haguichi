@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiSidebar" parent="AdwBin">
+    <child>
+      <object class="GtkStack" id="stack">
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">Information</property>
+            <property name="child">
+              <object class="GtkScrolledWindow">
+                <child>
+                  <object class="HaguichiSidebarPage">
+                    <property name="heading" translatable="yes">Information</property>
+                    <property name="heading-selectable">false</property>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="account_row">
+                        <property name="title" translatable="yes">Account</property>
+                        <property name="show-copy">false</property>
+                        <child>
+                          <object class="GtkButton" id="attach_button">
+                            <property name="action-name">win.attach</property>
+                            <property name="icon-name">mail-attachment-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Attach</property>
+                            <property name="valign">center</property>
+                            <property name="visible">false</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="cancel_button">
+                            <property name="action-name">win.attach-cancel</property>
+                            <property name="icon-name">action-unavailable-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Cancel</property>
+                            <property name="valign">center</property>
+                            <property name="visible">false</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="client_id_row">
+                        <property name="title" translatable="yes">Client ID</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="client_ipv4_row">
+                        <property name="title" translatable="yes">IPv4 Address</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="client_ipv6_row">
+                        <property name="title" translatable="yes">IPv6 Address</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="hamachi_row">
+                        <property name="title" translatable="no">Hamachi Version</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">Network</property>
+            <property name="child">
+              <object class="GtkScrolledWindow">
+                <child>
+                  <object class="HaguichiSidebarPage" id="network_page">
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="network_status_row">
+                        <property name="title" translatable="yes">Status</property>
+                        <property name="show-copy">false</property>
+                        <child>
+                          <object class="GtkButton" id="network_leave_button">
+                            <property name="icon-name">application-exit-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Leave Network</property>
+                            <property name="valign">center</property>
+                            <signal name="clicked" handler="on_network_leave"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkButton" id="network_delete_button">
+                            <property name="icon-name">user-trash-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Delete Network</property>
+                            <property name="valign">center</property>
+                            <signal name="clicked" handler="on_network_delete"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="network_id_row">
+                        <property name="title" translatable="yes">Network ID</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="network_owner_row">
+                        <property name="title" translatable="yes">Owner</property>
+                        <child>
+                          <object class="GtkButton" id="network_password_button">
+                            <property name="icon-name">dialog-password-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Change Password</property>
+                            <property name="valign">center</property>
+                            <signal name="clicked" handler="on_network_change_password"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="network_members_row">
+                        <property name="title" translatable="yes">Members</property>
+                        <property name="show-copy">false</property>
+                        <child>
+                          <object class="GtkButton" id="network_access_button">
+                            <property name="tooltip-text" translatable="yes">Change Access</property>
+                            <property name="valign">center</property>
+                            <signal name="clicked" handler="on_network_change_access"/>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="network_capacity_row">
+                        <property name="title" translatable="yes">Capacity</property>
+                        <property name="show-copy">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="network_go_online_button">
+                        <property name="label" translatable="yes">_Go Online</property>
+                        <property name="use-underline">true</property>
+                        <property name="can-shrink">true</property>
+                        <property name="halign">center</property>
+                        <signal name="clicked" handler="on_network_go_online"/>
+                        <style>
+                          <class name="pill"/>
+                          <class name="suggested-action"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="network_go_offline_button">
+                        <property name="label" translatable="yes">_Go Offline</property>
+                        <property name="use-underline">true</property>
+                        <property name="can-shrink">true</property>
+                        <property name="halign">center</property>
+                        <signal name="clicked" handler="on_network_go_offline"/>
+                        <style>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkStackPage">
+            <property name="name">Member</property>
+            <property name="child">
+              <object class="GtkScrolledWindow">
+                <child>
+                  <object class="HaguichiSidebarPage" id="member_page">
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_status_row">
+                        <property name="title" translatable="yes">Status</property>
+                        <property name="show-copy">false</property>
+                        <child>
+                          <object class="GtkMenuButton" id="member_command_menubutton">
+                            <property name="icon-name">computer-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Commands</property>
+                            <property name="valign">center</property>
+                            <style>
+                              <class name="flat"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_id_row">
+                        <property name="title" translatable="yes">Client ID</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_ipv4_row">
+                        <property name="title" translatable="yes">IPv4 Address</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_ipv6_row">
+                        <property name="title" translatable="yes">IPv6 Address</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_tunnel_row">
+                        <property name="title" translatable="yes">Tunnel</property>
+                      </object>
+                    </child>
+                    <child type="row">
+                      <object class="HaguichiSidebarRow" id="member_connection_row">
+                        <property name="title" translatable="yes">Connection</property>
+                        <property name="show-copy">false</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="member_approve_button">
+                        <property name="label" translatable="yes">_Approve</property>
+                        <property name="use-underline">true</property>
+                        <property name="can-shrink">true</property>
+                        <property name="halign">center</property>
+                        <signal name="clicked" handler="on_member_approve"/>
+                        <style>
+                          <class name="success"/>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="member_reject_button">
+                        <property name="label" translatable="yes">_Reject</property>
+                        <property name="use-underline">true</property>
+                        <property name="can-shrink">true</property>
+                        <property name="halign">center</property>
+                        <signal name="clicked" handler="on_member_reject"/>
+                        <style>
+                          <class name="error"/>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkButton" id="member_evict_button">
+                        <property name="label" translatable="yes">_Evict</property>
+                        <property name="use-underline">true</property>
+                        <property name="can-shrink">true</property>
+                        <property name="halign">center</property>
+                        <signal name="clicked" handler="on_member_evict"/>
+                        <style>
+                          <class name="error"/>
+                          <class name="pill"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

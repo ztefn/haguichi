@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkPopoverMenu" id="popover_menu">
+    <property name="halign">start</property>
+    <property name="has-arrow">false</property>
+    <property name="menu-model">menu_model</property>
+    <menu id="menu_model">
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Join Network…</attribute>
+          <attribute name="action">win.join-network</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Create Network…</attribute>
+          <attribute name="action">win.create-network</attribute>
+        </item>
+      </section>
+    </menu>
+  </object>
+</interface>

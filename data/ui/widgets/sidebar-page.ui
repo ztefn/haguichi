@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiSidebarPage" parent="GtkBox">
+    <property name="orientation">vertical</property>
+    <property name="spacing">15</property>
+    <property name="margin-start">12</property>
+    <property name="margin-end">12</property>
+    <property name="margin-bottom">12</property>
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="margin-start">26</property>
+        <property name="margin-end">26</property>
+        <property name="margin-bottom">2</property>
+        <property name="selectable">true</property>
+        <property name="wrap">true</property>
+        <property name="wrap-mode">char</property>
+        <style>
+          <class name="title-2"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkListBox" id="list_box">
+        <property name="selection-mode">none</property>
+        <style>
+          <class name="navigation-sidebar"/>
+        </style>
+      </object>
+    </child>
+  </template>
+</interface>

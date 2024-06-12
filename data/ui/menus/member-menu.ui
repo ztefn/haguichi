@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkPopoverMenu" id="popover_menu">
+    <property name="halign">start</property>
+    <property name="has-arrow">false</property>
+    <property name="menu-model">menu_model</property>
+    <menu id="menu_model">
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Approve</attribute>
+          <attribute name="action">member.approve</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Reject</attribute>
+          <attribute name="action">member.reject</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Copy IPv_4 Address</attribute>
+          <attribute name="action">member.copy-ipv4</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Copy IPv_6 Address</attribute>
+          <attribute name="action">member.copy-ipv6</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Copy Client ID</attribute>
+          <attribute name="action">member.copy-id</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes" comments="This action removes the selected member from the network.">_Evict</attribute>
+          <attribute name="action">member.evict</attribute>
+          <attribute name="accel">Delete</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Details</attribute>
+          <attribute name="action">member.details</attribute>
+          <attribute name="accel">F9</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+    </menu>
+  </object>
+</interface>

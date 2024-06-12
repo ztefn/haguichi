@@ -1,657 +1,485 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2022 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
  * by the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-using Gtk;
 using Config;
 
-#if USE_LIBHANDY
-public class HaguichiWindow : Hdy.ApplicationWindow
-#else
-public class HaguichiWindow : Gtk.ApplicationWindow
-#endif
-{
-    public static List<Gdk.Pixbuf> app_icons = new List<Gdk.Pixbuf>();
-    
-    public static AccelGroup accel_group;
-    public static Headerbar header_bar;
-    public static Widgets.MessageBar message_bar;
-    public static Widgets.MessageBox message_box;
-    public static Sidebar sidebar;
-    
-    public static SearchEntry search_entry;
-    public static SearchBar search_bar;
-    
-    public static int minimum_width;
-    
-    private int x;
-    private int y;
-    private int width;
-    private int height;
-    private int sidebar_pos;
-    
-    private bool minimized;
-    private bool maximized;
-    
-    public string mode;
-    
-    public Paned content_box;
-    public NetworkView network_view;
-    
-    private ScrolledWindow scrolled_window;
-    private EventBox empty_box;
-    private Box connected_box;
-    private Box disconnected_box;
-    
-    private Menus.JoinCreateMenu join_create_menu;
-    
-    private Spinner spinner;
-    
-    private CssProvider provider;
-    
-    public HaguichiWindow ()
-    {
-        Object (application: Haguichi.app, title: Text.app_name);
-        
-        try
-        {
-            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  16, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  24, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  32, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME,  48, IconLookupFlags.FORCE_SIZE));
-            app_icons.append (IconTheme.get_default().load_icon (ICON_NAME, 256, IconLookupFlags.FORCE_SIZE));
-        }
-        catch (Error e)
-        {
-            Debug.log (Debug.domain.ERROR, "HaguichiWindow.app_icons", e.message);
-        }
-        set_icon_list (app_icons);
-        
-        get_style_context().add_class ("haguichi-window");
-        
-        accel_group = new AccelGroup();
-        header_bar  = new Headerbar();
-        message_bar = new Widgets.MessageBar();
-        message_box = new Widgets.MessageBox();
-        sidebar     = new Sidebar();
-        
-        search_entry = new SearchEntry();
-        search_entry.activate.connect (() =>
-        {
-            network_view.activate_selected_row();
-        });
-        search_entry.search_changed.connect (() =>
-        {
-            network_view.refilter();
-        });
-        
-        search_bar = new SearchBar();
-        search_bar.connect_entry (search_entry);
-        search_bar.notify["search-mode-enabled"].connect (() =>
-        {
-            if (search_bar.search_mode_enabled)
-            {
-                GlobalEvents.start_search();
+namespace Haguichi {
+    [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/window.ui")]
+    public class Window : Adw.ApplicationWindow {
+        [GtkChild]
+        private unowned Adw.ToastOverlay toast_overlay;
+
+        [GtkChild]
+        public unowned Adw.OverlaySplitView split_view;
+        [GtkChild]
+        public unowned Adw.WindowTitle window_title;
+        [GtkChild]
+        public unowned Adw.StatusPage not_installed_status_page;
+        [GtkChild]
+        public unowned Sidebar sidebar;
+        [GtkChild]
+        public unowned NetworkList network_list;
+        [GtkChild]
+        private unowned Gtk.Button refresh_button;
+        [GtkChild]
+        public unowned Gtk.ToggleButton connect_button;
+        [GtkChild]
+        public unowned Gtk.ToggleButton disconnect_button;
+        [GtkChild]
+        public unowned Gtk.ToggleButton search_button;
+        [GtkChild]
+        public unowned Gtk.SearchBar search_bar;
+        [GtkChild]
+        public unowned Gtk.SearchEntry search_entry;
+        [GtkChild]
+        public unowned Gtk.Stack stack;
+        [GtkChild]
+        public unowned Gtk.Stack connected_stack;
+
+        [GtkChild]
+        public unowned Gtk.Spinner spinner;
+
+        [GtkChild]
+        private unowned Gtk.Button configure_button;
+
+        [GtkChild]
+        private unowned Gtk.Button overlay_refresh_button;
+        [GtkChild]
+        private unowned Gtk.MenuButton overlay_add_network_button;
+
+        private Xdp.Portal portal = new Xdp.Portal ();
+
+        public Gtk.Window modal_dialog;
+
+        public Window (Application app) {
+            Object (application: app, title: APP_NAME);
+
+            // KDE places the window icon in the headerbar, so only set it for other desktops
+            if (current_desktop != "KDE") {
+                icon_name = APP_ID;
             }
-            else
-            {
-                GlobalEvents.stop_search();
-            }
-        });
-        // Ugly hack to make entry expand inside search bar
-        Revealer search_revealer = (Revealer) search_bar.get_child();
-        search_revealer.get_child().destroy();
-        Box search_box = new Box (Orientation.HORIZONTAL, 0);
-        search_box.margin = 6;
-        search_box.set_name ("tool_box");
-        search_box.pack_start (search_entry, true, true, 0);
-        search_revealer.add (search_box);
-        
-        
-        // Connected Box
-        
-        network_view = new NetworkView();
-        
-        scrolled_window = new ScrolledWindow (null, null);
-        scrolled_window.add (network_view);
-        scrolled_window.set_policy (PolicyType.NEVER, PolicyType.AUTOMATIC);
-        
-        join_create_menu = new Menus.JoinCreateMenu();
-        
-        Widgets.MessageBox empty_message_box = new Widgets.MessageBox();
-        empty_message_box.set_message (Text.empty_list_heading, Text.empty_list_message);
-        
-        empty_box = new EventBox();
-        empty_box.add (empty_message_box);
-        empty_box.button_press_event.connect ((event) =>
-        {
-            if (event.button == 3)
-            {
-#if GTK_3_22
-                join_create_menu.popup_at_pointer (event);
-#else
-                join_create_menu.popup (null, null, null, 0, get_current_event_time());
-#endif
-                return true;
-            }
-            
-            return false;
-        });
-        
-        connected_box = new Box (Orientation.VERTICAL, 0);
-        connected_box.pack_start (scrolled_window, true, true, 0);
-        connected_box.pack_start (empty_box, true, true, 0);
-        connected_box.get_style_context().add_class ("connected-box");
-        
-        
-        // Disconnected Box
-        
-        spinner = new Spinner();
-        spinner.height_request = 20;
-        spinner.width_request  = 20;
-        
-        disconnected_box = new Box (Orientation.VERTICAL, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (spinner, false, false, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.pack_start (new Box (Orientation.VERTICAL, 0), true, true, 0);
-        disconnected_box.get_style_context().add_class ("disconnected-box");
-        
-        
-        // Content Box
-        
-        Box left_box = new Box (Orientation.VERTICAL, 0);
-        left_box.pack_start (message_bar,         false, false, 0);
-        left_box.pack_start (search_bar,          false, false, 0);
-        left_box.pack_start (disconnected_box,    true,  true,  0);
-        left_box.pack_start (connected_box,       true,  true,  0);
-        
-        sidebar_pos = (int) Settings.sidebar_position.val;
-        
-        content_box = new Paned (Orientation.HORIZONTAL);
-        content_box.pack1 (left_box, false, false);
-        content_box.pack2 (sidebar, false, true);
-        content_box.position = sidebar_pos;
-        content_box.set_size_request (-1, 180);
-        content_box.size_allocate.connect (() =>
-        {
-            Gdk.Window w = get_window();
-            
-            // Only update position when in normal window state
-            if (w != null && is_state_normal (w.get_state()))
-            {
-                sidebar_pos = content_box.position;
-            }
-        });
-        
-        
-        // Main VBox
-        
-        Box main_box = new Box (Orientation.VERTICAL, 0);
-        
-#if !USE_LIBHANDY
-        if (Haguichi.window_use_header_bar)
-        {
-            set_titlebar (header_bar);
+
+            var config = new Settings (APP_ID + ".config");
+            var list   = new Settings (APP_ID + ".network-list");
+            var ui     = new Settings (APP_ID + ".ui");
+
+            set_nick (demo_mode ? "Joe Demo" : Utils.parse_nick (config.get_string ("nickname")));
+
+            var sort_by = list.create_action ("sort-by");
+            add_action (sort_by);
+
+            var show_offline_members = list.create_action ("show-offline-members");
+            add_action (show_offline_members);
+
+            app.set_color_scheme ((int) ui.get_enum ("color-scheme"));
+
+            default_width  = ui.get_int ("width");
+            default_height = ui.get_int ("height");
+
+            ui.bind ("width",  this, "default-width",  DEFAULT);
+            ui.bind ("height", this, "default-height", DEFAULT);
+
+            indicator = new Indicator ();
+            indicator.active = ui.get_boolean ("show-indicator");
+
+            search_entry.search_changed.connect (()=> {
+                network_list.refilter ();
+            });
+
+            hide.connect (() => {
+                session.visibility_changed (false);
+                update_indicator_status ();
+            });
+            show.connect (() => {
+                session.visibility_changed (true);
+                update_indicator_status ();
+            });
         }
-        else
-        {
-#endif
-            main_box.pack_start (header_bar, false, false, 0);
-#if !USE_LIBHANDY
+
+        construct {
+            install_action ("win.connect",               null, (Gtk.WidgetActionActivateFunc) connect_action);
+            install_action ("win.disconnect",            null, (Gtk.WidgetActionActivateFunc) disconnect_action);
+            install_action ("win.join-network",          null, (Gtk.WidgetActionActivateFunc) join_network_action);
+            install_action ("win.create-network",        null, (Gtk.WidgetActionActivateFunc) create_network_action);
+            install_action ("win.attach",                null, (Gtk.WidgetActionActivateFunc) attach_action);
+            install_action ("win.attach-cancel",         null, (Gtk.WidgetActionActivateFunc) attach_cancel_action);
+            install_action ("win.start-search",          null, (Gtk.WidgetActionActivateFunc) start_search_action);
+            install_action ("win.refresh",               null, (Gtk.WidgetActionActivateFunc) refresh_action);
+            install_action ("win.toggle-sidebar",        null, (Gtk.WidgetActionActivateFunc) toggle_sidebar_action);
+            install_action ("win.cycle-mode",            null, (Gtk.WidgetActionActivateFunc) cycle_mode_action);
+            install_action ("win.expand-all-networks",   null, (Gtk.WidgetActionActivateFunc) expand_all_networks_action);
+            install_action ("win.collapse-all-networks", null, (Gtk.WidgetActionActivateFunc) collapse_all_networks_action);
+            install_action ("win.preferences",           null, (Gtk.WidgetActionActivateFunc) preferences_action);
+            install_action ("win.shortcuts",             null, (Gtk.WidgetActionActivateFunc) shortcuts_action);
+            install_action ("win.help",                  null, (Gtk.WidgetActionActivateFunc) help_action);
+            install_action ("win.info",                  null, (Gtk.WidgetActionActivateFunc) info_action);
+            install_action ("win.about",                 null, (Gtk.WidgetActionActivateFunc) about_action);
+            install_action ("win.quit",                  null, (Gtk.WidgetActionActivateFunc) quit_action);
         }
-#endif
-        
-        main_box.pack_start (message_box, true, true, 0);
-        main_box.pack_start (content_box, true, true, 0);
-        main_box.show_all();
-        
-        provider = new CssProvider();
-        StyleContext.add_provider_for_screen (this.get_screen(), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        
-        Gtk.Settings.get_default().notify["gtk-theme-name"].connect ((sender, property) =>
-        {
-            set_styles();
-        });
-        Gtk.Settings.get_default().notify["gtk-application-prefer-dark-theme"].connect ((sender, property) =>
-        {
-            set_styles();
-        });
-        set_styles();
-        
-        add_accel_group(accel_group);
-        
-        window_state_event.connect (on_state_changed);
-        configure_event.connect (on_configure);
-        delete_event.connect (on_win_delete);
-        key_press_event.connect (on_key_press);
-        
-        width  = (int) Settings.width.val  + Settings.decorator_offset;
-        height = (int) Settings.height.val + Settings.decorator_offset;
-        
-        x = (int) Settings.position_x.val;
-        y = (int) Settings.position_y.val;
-        
-        add (main_box);
-        set_default_size (width, height);
-        move (x, y);
-        
-        set_mode ("Initializing");
-        
-        if (Haguichi.hidden == false)
-        {
-            show();
+
+        [GtkCallback]
+        private void download_hamachi () {
+            Command.open_uri ("https://haguichi.net/redirect/?action=get-hamachi");
         }
-    }
-    
-    private void set_styles ()
-    {
-        // Request stylesheet for current theme
-        string theme_name = Gtk.Settings.get_default().gtk_theme_name.down();
-        
-        if (theme_name.has_prefix("io.elementary.stylesheet"))
-        {
-            theme_name = "elementary";
-        }
-        
-        // Add or remove classes for elementary theme
-        if (theme_name == "elementary")
-        {
-            header_bar.connect_but.get_style_context().add_class ("raised");
-            
-            sidebar.info_action_bar.get_style_context().add_class ("flat");
-            sidebar.member_action_bar.get_style_context().add_class ("flat");
-            sidebar.network_action_bar.get_style_context().add_class ("flat");
-        }
-        else
-        {
-            header_bar.connect_but.get_style_context().remove_class ("raised");
-            
-            sidebar.info_action_bar.get_style_context().remove_class ("flat");
-            sidebar.member_action_bar.get_style_context().remove_class ("flat");
-            sidebar.network_action_bar.get_style_context().remove_class ("flat");
-        }
-        
-        if ((theme_name == "elementary") ||
-            (theme_name == "adwaita"))
-        {
-            if (Gtk.Settings.get_default().gtk_application_prefer_dark_theme)
-            {
-                theme_name += "-dark";
+
+        [GtkCallback]
+        private void configure_hamachi () {
+            window_title.subtitle = _("Configuring");
+            configure_button.sensitive = false;
+            action_set_enabled ("win.refresh", false);
+            if (!demo_mode) {
+                Hamachi.configure ();
             }
         }
-        else if (theme_name.has_prefix ("yaru"))
-        {
-            theme_name = "yaru";
+
+        [GtkCallback]
+        private void go_back_button_clicked () {
+            split_view.show_sidebar = false;
         }
-        else
-        {
-            theme_name = "default";
+
+        public void connect_action () {
+            Controller.start_hamachi ();
         }
-        
-        Debug.log (Debug.domain.GUI, "Window.set_styles", "Loading " + theme_name + " stylesheet");
-        provider.load_from_resource ("/com/github/ztefn/haguichi/stylesheets/" + theme_name + ".css");
-    }
-    
-    private bool is_state_normal (Gdk.WindowState ws)
-    {
-        if ((Gdk.WindowState.FULLSCREEN in ws) ||
-            (Gdk.WindowState.MAXIMIZED in ws) ||
-            (Gdk.WindowState.TILED in ws))
-        {
-            return false;
+
+        public void disconnect_action () {
+            Controller.stop_hamachi ();
         }
-        else
-        {
+
+        public void join_network_action () {
+            add_network_action ("Join");
+        }
+
+        public void create_network_action () {
+            add_network_action ("Create");
+        }
+
+        private void add_network_action (string mode) {
+            var add_network = new JoinCreateNetworkDialog (mode);
+            show_dialog (add_network);
+        }
+
+        private void attach_action () {
+            var attach = new AttachDialog ();
+            show_dialog (attach);
+        }
+
+        private void attach_cancel_action () {
+            new Thread<void*> (null, () => {
+                Hamachi.cancel ();
+                return null;
+            });
+
+            sidebar.set_account ("-");
+        }
+
+        private void start_search_action () {
+            search_bar.search_mode_enabled = true;
+        }
+
+        private void refresh_action () {
+            if (Controller.last_status <= 1) {
+                Controller.init ();
+            } else if (Controller.last_status >= 6) {
+                Controller.update_connection ();
+            }
+        }
+
+        private void toggle_sidebar_action () {
+            if (split_view.collapsed == false) return;
+
+            toggle_sidebar ();
+        }
+
+        private void cycle_mode_action () {
+            if (!demo_mode) return;
+
+            var cur_mode = get_mode ();
+            var new_mode = "";
+            switch (cur_mode) {
+                case "Initializing":
+                    new_mode = "Disconnected";
+                    break;
+                case "Disconnected":
+                    new_mode = "Connecting";
+                    break;
+                case "Connecting":
+                    new_mode = "Connected";
+                    break;
+                case "Connected":
+                    new_mode = "Not installed";
+                    break;
+                case "Not installed":
+                    new_mode = "Not configured";
+                    break;
+                case "Not configured":
+                    new_mode = "Initializing";
+                    break;
+            }
+
+            debug ("new mode: %s", new_mode);
+            set_mode (new_mode);
+        }
+
+        public void expand_all_networks_action () {
+            network_list.set_all_rows_expanded (true);
+        }
+
+        public void collapse_all_networks_action () {
+            network_list.set_all_rows_expanded (false);
+        }
+
+        public void preferences_action () {
+            var prefs = new Preferences () {
+              application = app
+            };
+            show_dialog (prefs);
+        }
+
+        private void shortcuts_action () {
+            var builder = new Gtk.Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts.ui");
+            var shortcuts = (Gtk.ShortcutsWindow) builder.get_object ("shortcuts");
+            show_dialog (shortcuts);
+        }
+
+        private void help_action () {
+            Command.open_uri ("https://haguichi.net/faq/");
+        }
+
+        public void info_action () {
+            show_info ();
+        }
+
+        public void about_action () {
+            var developer_name = "Stephen Brandt";
+            var about = new Adw.AboutWindow () {
+                application_name   = APP_NAME,
+                application_icon   = APP_ID,
+                developer_name     = developer_name,
+                // Translator credits. Put one translator per line, in the form of "NAME URL".
+                translator_credits = _("translator-credits"),
+                version            = VERSION,
+                website            = "https://haguichi.net",
+                issue_url          = "https://github.com/ztefn/haguichi/issues",
+                copyright          = "© 2007-2024 " + developer_name,
+                license_type       = Gtk.License.GPL_3_0,
+            };
+            show_dialog (about);
+        }
+
+        public void quit_action () {
+            Controller.quit ();
+
+            if (modal_dialog != null) {
+                modal_dialog.destroy ();
+            }
+
+            hide ();
+
+            connection.save_long_nicks ();
+            session.quitted ();
+
+            debug ("quit_action: Bye!");
+            app.quit ();
+        }
+
+        public void show_dialog (Gtk.Window dialog) {
+            dialog.transient_for = this;
+            dialog.close_request.connect (() => {
+                modal_dialog = null;
+                session.modality_changed (false);
+                update_indicator_status ();
+                return false;
+            });
+            dialog.present ();
+
+            modal_dialog = dialog;
+            session.modality_changed (true);
+            update_indicator_status ();
+        }
+
+        public void show_toast (string title, uint timeout = 5) {
+            toast_overlay.add_toast (new Adw.Toast (title) {
+                timeout = timeout
+            });
+        }
+
+        public void show_copied_to_clipboard_toast () {
+            show_toast (_("Copied to clipboard"), 2);
+        }
+
+        public void show_info () {
+            network_list.unselect ();
+            split_view.show_sidebar = true;
+        }
+
+        public void toggle_sidebar () {
+            split_view.show_sidebar = !split_view.show_sidebar;
+        }
+
+        public void show_sidebar () {
+            split_view.show_sidebar = (default_width > 520);
+            split_view.pin_sidebar = false;
+        }
+
+        public void hide_sidebar () {
+            split_view.show_sidebar = false;
+            split_view.pin_sidebar = true;
+        }
+
+        public void set_nick (string nick) {
+            window_title.title = (nick == "") ? _("Anonymous") : nick;
+        }
+
+        public void set_connected_stack_page (string page) {
+            connected_stack.visible_child_name = page;
+        }
+
+        public string get_mode () {
+            return stack.visible_child_name;
+        }
+
+        public void set_mode (string mode) {
+            session.mode_changed (mode);
+
+            stack.visible_child_name = mode;
+
+            bool is_configured = mode.down ().contains ("connect");
+
+            action_set_enabled ("win.connect",              mode == "Disconnected");
+            action_set_enabled ("win.disconnect",           mode == "Connected");
+            action_set_enabled ("win.join-network",         mode == "Connected");
+            action_set_enabled ("win.create-network",       mode == "Connected");
+            action_set_enabled ("win.start-search",         mode == "Connected");
+            action_set_enabled ("win.refresh",              true);
+            action_set_enabled ("win.toggle-sidebar",       is_configured);
+            action_set_enabled ("win.info",                 is_configured);
+            action_set_enabled ("win.sort-by",              is_configured);
+            action_set_enabled ("win.show-offline-members", is_configured);
+
+            refresh_button.visible = (mode == "Not installed" || mode == "Not configured");
+
+            if (mode == "Not installed") {
+                if (demo_mode || Hamachi.version == "") {
+                    not_installed_status_page.title = _("Hamachi Is Not Installed");
+                } else {
+                    not_installed_status_page.title = _("Hamachi Version %s Is Obsolete").printf (Hamachi.version);
+                }
+            }
+
+            connect_button.visible = (mode == "Disconnected");
+            disconnect_button.visible = (mode == "Connecting" || mode == "Connected");
+
+            search_button.visible = is_configured;
+            search_button.sensitive = (mode == "Connected");
+            search_bar.sensitive = (mode == "Connected");
+            if (mode != "Connected") {
+                search_bar.search_mode_enabled = false;
+            }
+
+            if (is_configured) {
+                sidebar.attach_button.sensitive = (mode == "Connected");
+                sidebar.cancel_button.sensitive = (mode == "Connected");
+                show_sidebar ();
+            } else {
+                hide_sidebar ();
+            }
+
+            spinner.spinning = (mode == "Connecting");
+
+            configure_button.sensitive = (mode == "Not configured");
+
+            overlay_refresh_button.visible = (mode == "Connected");
+            overlay_add_network_button.visible = (mode == "Connected");
+
+            if (mode == "Initializing") {
+                window_title.subtitle = _("Initializing");
+            } else if (mode == "Connecting") {
+                window_title.subtitle = _("Connecting");
+            } else if (mode == "Connected") {
+                window_title.subtitle = _("Connected");
+            } else {
+                window_title.subtitle = _("Disconnected");
+                sidebar.show_page ("Information");
+            }
+
+            // Only sandboxed applications can set background status
+            if (Xdp.Portal.running_under_flatpak ()) {
+                set_background_status.begin ();
+            }
+
+            update_indicator_status ();
+        }
+
+        public async void set_background_status () {
+            try {
+                bool success = yield portal.set_background_status (window_title.subtitle, null);
+                if (!success) {
+                    warning ("set_background_status: Updating background status failed");
+                }
+            } catch (Error e) {
+                critical ("set_background_status: %s", e.message);
+            }
+        }
+
+        public void update_indicator_status () {
+            if (indicator != null) {
+                indicator.update_status (get_mode (), modal_dialog != null);
+            }
+        }
+
+        public override void hide () {
+            if (modal_dialog == null) {
+                base.hide ();
+            }
+        }
+
+        public override bool close_request () {
+            // If connecting or connected request to run in background
+            var mode = get_mode ();
+            if (mode == "Connecting" || mode == "Connected") {
+                request_background.begin ((obj, res) => {
+                    if (request_background.end (res)) {
+                        hide ();
+                    } else {
+                        destroy ();
+                    }
+                });
+            } else {
+                destroy ();
+            }
+
             return true;
         }
-    }
-    
-    private bool on_configure (Gdk.EventConfigure event)
-    {
-        move_resize();
-        return false;
-    }
-    
-    private void move_resize ()
-    {
-        Gdk.WindowState ws = get_window().get_state();
-        
-        // Return when not window is not visible, otherwise we might receive wrong position and size
-        if ((Gdk.WindowState.WITHDRAWN in ws) ||
-            (Gdk.WindowState.ICONIFIED in ws))
-        {
-            return;
-        }
-        
-        int new_x, new_y, new_width, new_height;
-        
-        get_position (out new_x, out new_y);
-        get_size (out new_width, out new_height);
-        
-        new_width  -= Settings.decorator_offset;
-        new_height -= Settings.decorator_offset;
-        
-        //print ("x: %d  y: %d  w: %d  h: %d\n", new_x, new_y, new_width, new_height);
-        
-        // Only update position and size when in normal window state
-        if (is_state_normal (ws))
-        {
-            x = new_x;
-            y = new_y;
-            
-            width  = new_width;
-            height = new_height;
-        }
-        
-        if (new_width > Settings.switch_layout_threshold)
-        {
-            network_view.set_layout_from_string ("large");
-        }
-        else
-        {
-            network_view.set_layout_from_string ("small");
-        }
-        
-        if (new_width > Settings.switch_sidebar_threshold)
-        {
-            sidebar.show();
-        }
-        else
-        {
-            sidebar.hide();
-        }
-        
-        if (minimum_width == 0)
-        {
-            get_preferred_width (out minimum_width, null);
-            minimum_width -= Settings.decorator_offset;
-            
-            // Add 50 pixels just for GTK+ version 3.18
-            if ((Gtk.check_version (3, 18, 0) == null) &&
-                (Gtk.check_version (3, 20, 0) != null))
-            {
-                minimum_width += 50;
+
+        public async bool request_background () {
+            var parent = Xdp.parent_new_gtk (this);
+
+            var command = new GenericArray<weak string> ();
+            command.add (APP_ID);
+            command.add ("--background");
+
+            try {
+                return yield portal.request_background (
+                    parent,
+                    _("Haguichi will continue to run when its window is closed so that it can monitor the connection and send notifications."),
+                    command,
+                    Xdp.BackgroundFlags.NONE,
+                    null
+                );
+            } catch (Error e) {
+                critical ("request_background: %s", e.message);
+                // If background portal is not available then return true to hide window
+                return true;
             }
-#if USE_LIBHANDY
-            header_bar.populate();
-#endif
-        }
-        header_bar.show_hide_buttons (new_width, minimum_width);
-    }
-    
-    public void save_geometry ()
-    {
-        Settings.position_x.val = x;
-        Settings.position_y.val = y;
-        Settings.width.val = width;
-        Settings.height.val = height;
-        Settings.sidebar_position.val = sidebar_pos;
-    }
-    
-    private bool on_state_changed (Gdk.EventWindowState event)
-    {
-        minimized = (bool) (Gdk.WindowState.ICONIFIED in event.new_window_state);
-        Debug.log (Debug.domain.GUI, "Window.on_state_changed", "Minimized: " + minimized.to_string());
-        
-        maximized = (bool) (Gdk.WindowState.MAXIMIZED in event.new_window_state);
-        Debug.log (Debug.domain.GUI, "Window.on_state_changed", "Maximized: " + maximized.to_string());
-        
-        return false;
-    }
-    
-    private bool on_win_delete ()
-    {
-        hide();
-        return true;
-    }
-    
-    private bool on_key_press (Gdk.EventKey event)
-    {
-        if (Gdk.ModifierType.CONTROL_MASK in event.state)
-        {
-            if (((event.keyval >= 49) &&         // "1"
-                 (event.keyval <= 57)) ||        // "9"
-                ((event.keyval >= 65457) &&      // "1" - NumPad
-                 (event.keyval <= 65465)))       // "9" - NumPad
-            {
-                int number = (int) event.keyval;
-                
-                if (number > 65456)
-                {
-                    number -= 65456;
-                }
-                else if (number > 48)
-                {
-                    number -= 48;
-                }
-                network_view.activate_command_by_number (number);
-            }
-            else if (event.keyval == Gdk.Key.bracketleft)
-            {
-                network_view.expand_all();
-            }
-            else if (event.keyval == Gdk.Key.bracketright)
-            {
-                network_view.collapse_all();
-            }
-        }
-        else if (!((Gdk.ModifierType.SUPER_MASK in event.state) ||
-                   (Gdk.ModifierType.MOD1_MASK in event.state)))
-        {
-            if (((event.keyval >= 48) &&         // "0"
-                 (event.keyval <= 122)) ||       // "z"
-                ((event.keyval >= 65456) &&      // "0" - NumPad
-                 (event.keyval <= 65465)))       // "9" - NumPad
-            {
-                if (GlobalActions.start_search.enabled)
-                {
-                    if (!GlobalEvents.search_active)
-                    {
-                        GlobalEvents.start_search();
-                    }
-                    else if (!search_entry.has_focus)
-                    {
-                        search_entry.grab_focus();
-                    }
-                }
-            }
-            else if ((event.keyval == Gdk.Key.Delete) ||
-                     (event.keyval == Gdk.Key.KP_Delete))
-            {
-                if ((!search_entry.has_focus) ||
-                    ((search_entry.cursor_position == search_entry.text_length) &&
-                     (search_entry.cursor_position == search_entry.selection_bound)))
-                {
-                    network_view.handle_delete_key_press();
-                }
-            }
-        }
-        
-        return false;
-    }
-    
-    public override void show ()
-    {
-        // Move window to the current desktop and correct for any desktop compositor deviation
-        
-        var window = get_window();
-        
-        if (window != null)
-        {
-#if GTK_3_22
-            var display  = get_display();
-            var monitor  = display.get_monitor_at_window (window);
-            var geometry = monitor.get_geometry();
-            
-            int screen_width  = geometry.width;
-            int screen_height = geometry.height;
-#else
-            int screen_width  = Gdk.Screen.width();
-            int screen_height = Gdk.Screen.height();
-#endif
-            
-            while (x < 0)
-            {
-                x += screen_width;
-            }
-            while (x > screen_width)
-            {
-                x -= screen_width;
-            }
-            
-            while (y < 0)
-            {
-                y += screen_height;
-            }
-            while (y > screen_height)
-            {
-                y -= screen_height;
-            }
-            
-            move (x, y);
-        }
-        
-        base.show();
-        
-        Haguichi.session.visibility_changed (true);
-    }    
-    
-    public override void hide ()
-    {
-        save_geometry();
-        
-        base.hide();
-        
-        Haguichi.session.visibility_changed (false);
-    }
-    
-    public void set_nick (string nick)
-    {
-        if (nick == "")
-        {
-            nick = Text.anonymous;
-        }
-        
-        header_bar.title = nick;
-    }
-    
-    public void update ()
-    {
-        if (Haguichi.connection.networks.length() == 0)
-        {
-            empty_box.show();
-            scrolled_window.hide();
-        }
-        else
-        {
-            empty_box.hide();
-            scrolled_window.show();
-        }
-        
-        sidebar.update();
-    }
-    
-    public void set_mode (string _mode)
-    {
-        mode = _mode;
-        
-        message_box.hide();
-        content_box.hide();
-        
-        switch (mode)
-        {
-            case "Initializing":
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                break;
-                
-            case "Configuring":
-                message_box.show();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                break;
-                
-            case "Countdown":
-                content_box.show();
-                
-                disconnected_box.show();
-                connected_box.hide();
-                
-                Haguichi.session.mode_changed ("Disconnected");
-                header_bar.set_mode (mode);
-                break;
-                
-            case "Connecting":
-                set_mode ("Disconnected");
-                mode = _mode;
-                
-                spinner.sensitive = true;
-                spinner.start();
-                
-                disconnected_box.show();
-                connected_box.hide();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                break;
-                
-            case "Connected":
-                content_box.show();
-                
-                spinner.hide();
-                
-                disconnected_box.hide();
-                connected_box.show();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                sidebar.set_mode (mode);
-                break;
-                
-            case "Disconnected":
-                content_box.show();
-                
-                spinner.sensitive = false;
-                spinner.stop();
-                spinner.show();
-                
-                disconnected_box.show();
-                connected_box.hide();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                sidebar.set_mode (mode);
-                break;
-                
-            case "Not configured":
-                message_box.show();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                break;
-                
-            case "Not installed":
-                message_box.show();
-                
-                Haguichi.session.mode_changed (mode);
-                header_bar.set_mode (mode);
-                break;
         }
     }
 }

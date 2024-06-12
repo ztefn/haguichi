@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiWindow" parent="AdwApplicationWindow">
+    <property name="default-width">600</property>
+    <property name="default-height">480</property>
+    <property name="width-request">320</property>
+    <property name="height-request">200</property>
+    <style>
+      <class name="view"/>
+    </style>
+    <child>
+      <object class="GtkShortcutController">
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;O</property>
+            <property name="action">action(win.connect)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;D</property>
+            <property name="action">action(win.disconnect)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;J</property>
+            <property name="action">action(win.join-network)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;N</property>
+            <property name="action">action(win.create-network)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;R</property>
+            <property name="action">action(win.refresh)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">F5</property>
+            <property name="action">action(win.refresh)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;F</property>
+            <property name="action">action(win.start-search)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">F9</property>
+            <property name="action">action(win.toggle-sidebar)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">F12</property>
+            <property name="action">action(win.cycle-mode)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;M</property>
+            <property name="action">action(win.show-offline-members)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;bracketleft</property>
+            <property name="action">action(win.expand-all-networks)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;bracketright</property>
+            <property name="action">action(win.collapse-all-networks)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;comma</property>
+            <property name="action">action(win.preferences)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;question</property>
+            <property name="action">action(win.shortcuts)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">F1</property>
+            <property name="action">action(win.help)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">F2</property>
+            <property name="action">action(win.info)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;Q</property>
+            <property name="action">action(win.quit)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;1</property>
+            <property name="action">action(win.run-command-1)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;2</property>
+            <property name="action">action(win.run-command-2)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;3</property>
+            <property name="action">action(win.run-command-3)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;4</property>
+            <property name="action">action(win.run-command-4)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;5</property>
+            <property name="action">action(win.run-command-5)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;6</property>
+            <property name="action">action(win.run-command-6)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;7</property>
+            <property name="action">action(win.run-command-7)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;8</property>
+            <property name="action">action(win.run-command-8)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Primary&gt;9</property>
+            <property name="action">action(win.run-command-9)</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwBreakpoint">
+        <condition>max-width: 520sp</condition>
+        <setter object="split_view" property="collapsed">true</setter>
+      </object>
+    </child>
+    <property name="content">
+      <object class="AdwToastOverlay" id="toast_overlay">
+        <child>
+          <object class="AdwOverlaySplitView" id="split_view">
+            <property name="min-sidebar-width">240</property>
+            <property name="max-sidebar-width">320</property>
+            <property name="sidebar-width-fraction">0.475</property>
+            <property name="sidebar-position">end</property>
+            <property name="show-sidebar">false</property>
+            <property name="pin-sidebar">true</property>
+            <property name="content">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar">
+                    <property name="title-widget">
+                      <object class="AdwWindowTitle" id="window_title">
+                        <property name="title">Haguichi</property>
+                        <property name="subtitle" translatable="yes">Initializing</property>
+                      </object>
+                    </property>
+                    <child type="start">
+                      <object class="GtkButton" id="refresh_button">
+                        <property name="action-name">win.refresh</property>
+                        <property name="icon-name">view-refresh-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Refresh</property>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child type="start">
+                      <object class="GtkToggleButton" id="connect_button">
+                        <property name="action-name">win.connect</property>
+                        <property name="icon-name">system-shutdown-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Connect</property>
+                        <property name="visible">false</property>
+                        <style>
+                          <class name="suggested-action"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child type="start">
+                      <object class="GtkToggleButton" id="disconnect_button">
+                        <property name="active">true</property>
+                        <property name="action-name">win.disconnect</property>
+                        <property name="icon-name">system-shutdown-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Disconnect</property>
+                        <property name="visible">false</property>
+                        <style>
+                          <class name="accent"/>
+                        </style>
+                      </object>
+                    </child>
+                    <child type="start">
+                      <object class="GtkToggleButton" id="search_button">
+                        <property name="icon-name">edit-find-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Search</property>
+                        <property name="active" bind-source="search_bar" bind-property="search_mode_enabled" bind-flags="sync-create"/>
+                        <property name="visible">false</property>
+                      </object>
+                    </child>
+                    <child type="end">
+                      <object class="GtkMenuButton">
+                        <property name="primary">true</property>
+                        <property name="icon-name">open-menu-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Main Menu</property>
+                        <property name="menu-model">primary_menu</property>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child type="top">
+                  <object class="AdwClamp">
+                    <property name="maximum-size">400</property>
+                    <property name="tightening-threshold">300</property>
+                    <child>
+                      <object class="GtkSearchBar" id="search_bar">
+                        <property name="key-capture-widget">HaguichiWindow</property>
+                        <property name="search_mode_enabled" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
+                        <child>
+                          <object class="GtkSearchEntry" id="search_entry">
+                            <property name="hexpand">true</property>
+                            <property name="placeholder-text" translatable="yes">Search networks and members</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <property name="content">
+                  <object class="GtkOverlay">
+                    <child type="overlay">
+                      <object class="GtkBox">
+                        <property name="orientation">vertical</property>
+                        <property name="halign">end</property>
+                        <property name="valign">end</property>
+                        <property name="margin-end">12</property>
+                        <property name="margin-bottom">12</property>
+                        <property name="spacing">9</property>
+                        <child>
+                          <object class="GtkButton" id="overlay_refresh_button">
+                            <property name="action-name">win.refresh</property>
+                            <property name="icon-name">view-refresh-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Refresh</property>
+                            <property name="halign">center</property>
+                            <property name="visible">false</property>
+                            <style>
+                              <class name="circular"/>
+                            </style>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkMenuButton" id="overlay_add_network_button">
+                            <property name="name">add-network-button</property>
+                            <property name="icon-name">list-add-symbolic</property>
+                            <property name="tooltip-text" translatable="yes">Add Network</property>
+                            <property name="direction">up</property>
+                            <property name="menu-model">add_network_menu</property>
+                            <property name="visible">false</property>
+                            <style>
+                              <class name="circular"/>
+                              <class name="suggested-action"/>
+                            </style>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkStack" id="stack">
+                        <property name="transition-type">crossfade</property>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Initializing</property>
+                            <property name="child">
+                              <object class="AdwBin"/>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Disconnected</property>
+                            <property name="child">
+                              <object class="AdwBin"/>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Connecting</property>
+                            <property name="child">
+                              <object class="GtkSpinner" id="spinner">
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <property name="margin-bottom">12</property>
+                                <property name="width-request">20</property>
+                                <property name="height-request">20</property>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Connected</property>
+                            <property name="child">
+                              <object class="GtkStack" id="connected_stack">
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="name">empty</property>
+                                    <property name="child">
+                                      <object class="AdwStatusPage">
+                                        <property name="title" translatable="yes">You Are Connected!</property>
+                                        <property name="description" translatable="yes">Click the + button to add a network</property>
+                                        <style>
+                                          <class name="compact"/>
+                                        </style>
+                                      </object>
+                                    </property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="name">network-list</property>
+                                    <property name="child">
+                                      <object class="HaguichiNetworkList" id="network_list"/>
+                                    </property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="name">no-results</property>
+                                    <property name="child">
+                                      <object class="AdwStatusPage">
+                                        <property name="title" translatable="yes">No Results Found</property>
+                                        <property name="description" translatable="yes">Try a different search</property>
+                                        <style>
+                                          <class name="compact"/>
+                                        </style>
+                                      </object>
+                                    </property>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Not installed</property>
+                            <property name="child">
+                              <object class="AdwStatusPage" id="not_installed_status_page">
+                                <property name="description" translatable="yes">Please download Hamachi and follow the installation instructions</property>
+                                <style>
+                                  <class name="compact"/>
+                                </style>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">_Download</property>
+                                    <property name="halign">center</property>
+                                    <property name="use-underline">true</property>
+                                    <signal name="clicked" handler="download_hamachi"/>
+                                    <style>
+                                      <class name="pill"/>
+                                      <class name="suggested-action"/>
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                        <child>
+                          <object class="GtkStackPage">
+                            <property name="name">Not configured</property>
+                            <property name="child">
+                              <object class="AdwStatusPage">
+                                <property name="title" translatable="yes">Hamachi Is Not Configured</property>
+                                <property name="description" translatable="yes">You need to configure Hamachi before you can connect</property>
+                                <style>
+                                  <class name="compact"/>
+                                </style>
+                                <child>
+                                  <object class="GtkButton" id="configure_button">
+                                    <property name="label" translatable="yes">C_onfigure</property>
+                                    <property name="halign">center</property>
+                                    <property name="use-underline">true</property>
+                                    <signal name="clicked" handler="configure_hamachi"/>
+                                    <style>
+                                      <class name="pill"/>
+                                      <class name="suggested-action"/>
+                                    </style>
+                                  </object>
+                                </child>
+                              </object>
+                            </property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </property>
+              </object>
+            </property>
+            <property name="sidebar">
+              <object class="AdwToolbarView">
+                <child type="top">
+                  <object class="AdwHeaderBar">
+                    <property name="show-title">False</property>
+                    <child type="start">
+                      <object class="GtkButton" id="go_back_button">
+                        <signal name="clicked" handler="go_back_button_clicked"/>
+                        <property name="icon-name">go-previous-symbolic</property>
+                        <property name="tooltip-text" translatable="yes">Network List</property>
+                        <property name="visible" bind-source="split_view" bind-property="collapsed" bind-flags="sync-create"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <property name="content">
+                  <object class="HaguichiSidebar" id="sidebar"/>
+                </property>
+              </object>
+            </property>
+          </object>
+        </child>
+      </object>
+    </property>
+  </template>
+  <menu id="primary_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Information</attribute>
+        <attribute name="action">win.info</attribute>
+        <attribute name="hidden-when">action-disabled</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Sort by _Name</attribute>
+        <attribute name="action">win.sort-by</attribute>
+        <attribute name="target">name</attribute>
+        <attribute name="hidden-when">action-disabled</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Sort by _Status</attribute>
+        <attribute name="action">win.sort-by</attribute>
+        <attribute name="target">status</attribute>
+        <attribute name="hidden-when">action-disabled</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Show _Offline Members</attribute>
+        <attribute name="action">win.show-offline-members</attribute>
+        <attribute name="hidden-when">action-disabled</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">win.preferences</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Keyboard Shortcuts</attribute>
+        <attribute name="action">win.shortcuts</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Help</attribute>
+        <attribute name="action">win.help</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_About Haguichi</attribute>
+        <attribute name="action">win.about</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Quit</attribute>
+        <attribute name="action">win.quit</attribute>
+      </item>
+    </section>
+  </menu>
+  <menu id="add_network_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Join Network…</attribute>
+        <attribute name="action">win.join-network</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Create Network…</attribute>
+        <attribute name="action">win.create-network</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

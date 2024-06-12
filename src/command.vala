@@ -1,354 +1,289 @@
-/*
+ /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2023 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
  * by the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-public class Command : Object
-{
-    public static string spawn_wrap;
-    
-    public static string sudo;
-    public static string sudo_start;
-    
-    public static string terminal;
-    public static string file_manager;
-    public static string remote_desktop;
-    
-    public static void init ()
-    {
-        determine_sudo();
-        determine_terminal();
-        determine_file_manager();
-        determine_remote_desktop();
-    }
-    
-    public static void execute (string command)
-    {
-        if (command == "")
-        {
-            return;
-        }
-        
-        try
-        {
-            GLib.Process.spawn_command_line_async (spawn_wrap + command);
-        }
-        catch (SpawnError e)
-        {
-            Debug.log (Debug.domain.ERROR, "Command.execute", e.message);
-        }
-    }
-    
-    public static string return_output (string command)
-    {
-        string output;
-        string error;
-        int    exit_status;
-        
-        try
-        {
-            GLib.Process.spawn_command_line_sync (spawn_wrap + command, out output, out error, out exit_status);
-            
-            if (error != "")
-            {
-                Debug.log (Debug.domain.ERROR, "Command.return_output", "stderr: " + error);
-            }
-        }
-        catch (SpawnError e)
-        {
-            error = e.message;
-            Debug.log (Debug.domain.ERROR, "Command.return_output", error);
-        }
-        
-        // We don't like NULL strings
-        if (output == null)
-        {
-            output = "";
-        }
-        
-        // When hamachi is busy try again after a little while
-        if (output.contains (".. failed, busy"))
-        {
-            Debug.log (Debug.domain.HAMACHI, "Command.return_output", "Hamachi is busy, waiting to try again...");
-            Thread.usleep (100000);
-            
-            output = return_output (command);
-        }
-        
-        // When there's no regular output we'd want to return the error if available
-        if ((output == "") && (error != ""))
-        {
-            return error;
-        }
-        else
-        {
-            return output;
-        }
-    }
-    
-    public static bool exists (string? command)
-    {
-        if (command == null)
-        {
-            return false;
-        }
-        
-        string output = return_output ("bash -c \"command -v " + command + " &>/dev/null || echo 'command not found'\"");
-        
-        if (output.contains ("command not found"))
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
-    }
-    
-    public static bool custom_exists (string command_ipv4, string command_ipv6)
-    {
-        if ((exists (replace_variables (command_ipv4, "", "", "").split (" ", 0)[0])) ||
-            (exists (replace_variables (command_ipv6, "", "", "").split (" ", 0)[0])))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-    
-    public static void determine_sudo ()
-    {
-        sudo       = (string) Settings.super_user.val;
-        sudo_start = "-- ";
-        
-        if (sudo == "auto")
-        {
-            sudo = get_available ({
-                "pkexec",
-                "sudo"
+namespace Haguichi {
+    public class Command : Object {
+        public static string spawn_wrap;
+
+        public static string sudo;
+        public static string sudo_start;
+
+        public static string terminal;
+        public static string file_manager;
+        public static string remote_desktop;
+
+        private static Menu commands_menu;
+        private static CustomCommand default_command;
+        private static Array<CustomCommand> active_commands;
+
+        private static Settings settings;
+
+        public static void init () {
+            settings = new Settings (Config.APP_ID + ".commands");
+
+            determine_sudo ();
+            determine_terminal ();
+            determine_file_manager ();
+            determine_remote_desktop ();
+
+            Idle.add_full (Priority.HIGH_IDLE, () => {
+                fill_custom_commands ();
+                return false;
             });
         }
-        
-        if (sudo == "pkexec")
-        {
-            sudo_start = "";
-        }
-        
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_sudo", sudo);
-    }
-    
-    private static string get_available (string[] commands)
-    {
-        // Check each command in the list for existence, and return immediately if it does
-        foreach (string cmd in commands)
-        {
-            if (exists (cmd))
-            {
-                return cmd;
+
+        public static void execute (string command) {
+            if (command == "") {
+                return;
+            }
+
+            try {
+                Process.spawn_command_line_async (spawn_wrap + command);
+            } catch (SpawnError e) {
+                critical ("execute: %s", e.message);
             }
         }
-        
-        // Return the first command as fallback
-        return commands[0];
-    }
-    
-    public static void determine_terminal ()
-    {
-        terminal = get_available ({
-            "gnome-terminal",
-            "mate-terminal",
-            "io.elementary.terminal",
-            "kgx",
-            "tilix",
-            "xfce4-terminal",
-            "konsole",
-            "deepin-terminal",
-            "qterminal",
-            "lxterminal",
-            "uxterm",
-            "xterm"
-        });
-        
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_terminal", terminal);
-    }
-    
-    public static void determine_file_manager ()
-    {
-        file_manager = get_available ({
-            "nautilus",
-            "caja",
-            "nemo",
-            "io.elementary.files",
-            "thunar",
-            "dolphin",
-            "dde-file-manager",
-            "pcmanfm-qt",
-            "pcmanfm"
-        });
-        
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_file_manager", file_manager);
-    }
-    
-    public static void determine_remote_desktop ()
-    {
-        remote_desktop = get_available ({
-            "vinagre",
-            "gvncviewer",
-            "krdc",
-            "vncviewer",
-            "xtightvncviewer",
-            "xvnc4viewer",
-            "rdesktop"
-        });
-        
-        Debug.log (Debug.domain.ENVIRONMENT, "Command.determine_remote_desktop", remote_desktop);
-    }
-    
-    public static string return_custom (Member? member, string command_ipv4, string command_ipv6, string priority)
-    {
-        string command = "";
-        string address = "";
-        
-        if (Hamachi.ip_version == "Both")
-        {
-            if (priority == "IPv4")
-            {
-                if (member.ipv4 != null)
-                {
-                    command = command_ipv4;
-                    address = member.ipv4;
+
+        public static string return_output (string command) {
+            string stdout;
+            string stderr;
+            int    exit_status;
+
+            try {
+                Process.spawn_command_line_sync (spawn_wrap + command, out stdout, out stderr, out exit_status);
+
+                if (stderr != "") {
+                    warning ("return_output stderr: %s", stderr);
                 }
-                else
-                {
-                    command = command_ipv6;
-                    address = member.ipv6;
+            } catch (SpawnError e) {
+                critical ("return_output: %s", e.message);
+            }
+
+            // We don't like NULL strings
+            if (stdout == null) {
+                stdout = "";
+            }
+
+            // When hamachi is busy try again after a little while
+            if (stdout.contains (".. failed, busy")) {
+                debug ("Hamachi is busy, waiting to try again...");
+                Thread.usleep (100000);
+
+                stdout = return_output (command);
+            }
+
+            // When there's no regular output we'd want to return the error if available
+            return (stdout == "" && stderr != "") ? stderr : stdout;
+        }
+
+        public static string return_output_with_timeout (int timeout, string command) {
+            return return_output ("timeout %d %s".printf (timeout, command));
+        }
+
+        public static bool exists (string? command) {
+            if (command == null) {
+                return false;
+            }
+
+            string stdout = return_output ("bash -c \"command -v " + command + " &>/dev/null || echo 'command not found'\"");
+            return !stdout.contains ("command not found");
+        }
+
+        public static void determine_sudo () {
+            sudo       = settings.get_string ("super-user");
+            sudo_start = "-- ";
+
+            if (sudo == "auto") {
+                sudo = get_available ({
+                    "pkexec",
+                    "sudo"
+                });
+            }
+
+            if (sudo == "pkexec") {
+                sudo_start = "";
+            }
+
+            debug ("determine_sudo: %s", sudo);
+        }
+
+        private static string get_available (string[] commands) {
+            // Check each command in the list for existence, and return immediately if it does
+            foreach (string cmd in commands) {
+                if (exists (cmd)) {
+                    return cmd;
                 }
             }
-            if (priority == "IPv6")
-            {
-                if (member.ipv6 != null)
-                {
-                    command = command_ipv6;
-                    address = member.ipv6;
+
+            // Return the first command as fallback
+            return commands[0];
+        }
+
+        public static void determine_terminal () {
+            terminal = get_available ({
+                "gnome-terminal",
+                "mate-terminal",
+                "io.elementary.terminal",
+                "kgx",
+                "tilix",
+                "xfce4-terminal",
+                "konsole",
+                "deepin-terminal",
+                "qterminal",
+                "lxterminal",
+                "uxterm",
+                "xterm"
+            });
+
+            debug ("determine_terminal: %s", terminal);
+        }
+
+        public static void determine_file_manager () {
+            file_manager = get_available ({
+                "nautilus",
+                "caja",
+                "nemo",
+                "io.elementary.files",
+                "thunar",
+                "dolphin",
+                "dde-file-manager",
+                "pcmanfm-qt",
+                "pcmanfm"
+            });
+
+            debug ("determine_file_manager: %s", file_manager);
+        }
+
+        public static void determine_remote_desktop () {
+            remote_desktop = get_available ({
+                "gvncviewer",
+                "krdc",
+                "vncviewer",
+                "xtightvncviewer",
+                "xvnc4viewer",
+                "rdesktop",
+                "vinagre"
+            });
+
+            debug ("determine_remote_desktop: %s", remote_desktop);
+        }
+
+        public static Menu get_commands_menu () {
+            if (commands_menu == null) {
+                commands_menu = new Menu ();
+            }
+
+            return commands_menu;
+        }
+
+        public static void fill_custom_commands () {
+            new Thread<void*> (null, () => {
+                // Initiate or clear existing commands
+                default_command = null;
+                active_commands = new Array<CustomCommand> ();
+                get_commands_menu ().remove_all ();
+
+                int number = 1;
+                string[] commands = settings.get_strv ("customizable");
+                foreach (string command_str in commands) {
+                    string[] command = command_str.split (";", 6);
+
+                    if (command.length == 6) {
+                        string is_active  = command[0];
+                        string is_default = command[1];
+                        string label      = command[2];
+                        string cmd_ipv4   = command[3].replace ("{COLON}", ";");
+                        string cmd_ipv6   = command[4].replace ("{COLON}", ";");
+                        string priority   = command[5];
+
+                        var custom_command = new CustomCommand (is_active, is_default, label, cmd_ipv4, cmd_ipv6, priority);
+                        if (custom_command.exists ()) {
+                            if (command[0] == "true") {
+                                win.install_action ("win.run-command-%d".printf (number), null, (Gtk.WidgetActionActivateFunc) run_command_action);
+                                active_commands.append_val (custom_command);
+                                commands_menu.append (_(label), "win.run-command-%d".printf (number));
+                                number ++;
+                            }
+                            if (command[1] == "true") {
+                                default_command = custom_command;
+                            }
+                        }
+                    }
                 }
-                else
-                {
-                    command = command_ipv4;
-                    address = member.ipv4;
+
+                return null;
+            });
+        }
+
+        public static void set_active_commands_enabled (Member member) {
+            if (active_commands != null) {
+                var number = 1;
+                foreach (CustomCommand command in active_commands) {
+                    // Enable if member is online or command doesn't use address variable
+                    var enabled = (member.status.status_int == 1 || (!command.cmd_ipv4.contains ("%A") && !command.cmd_ipv6.contains ("%A")));
+                    win.action_set_enabled ("win.run-command-%d".printf (number), enabled);
+                    number ++;
                 }
             }
         }
-        else if (Hamachi.ip_version == "IPv4")
-        {
-            command = command_ipv4;
-            address = member.ipv4;
+
+        public static string replace_variables (owned string command, string address, string nick, string id) {
+            try {
+                command = command.replace ("%A",  address);
+                command = command.replace ("%N",  nick   );
+                command = command.replace ("%ID", id     );
+
+                string execute = (terminal == "gnome-terminal") ? "--" : "-e";
+                string quote   = (terminal == "gnome-terminal") ? ""   : "\"";
+
+                command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + execute + " " + quote + "\\1" + quote);
+                command = command.replace ("%FILEMANAGER",   file_manager);
+                command = command.replace ("%REMOTEDESKTOP", remote_desktop);
+                command = command.replace ("{COLON}",        ";");
+            } catch (RegexError e) {
+                critical ("replace_variables: %s", e.message);
+            }
+
+            return (command != null) ? command : "";
         }
-        else if (Hamachi.ip_version == "IPv6")
-        {
-            command = command_ipv6;
-            address = member.ipv6;
-        }
-        
-        return replace_variables (command, address, member.nick, member.client_id);
-    }
-    
-    public static string replace_variables (owned string command, string address, string nick, string id)
-    {
-        try
-        {
-            command = command.replace ("%A",  address);
-            command = command.replace ("%N",  nick   );
-            command = command.replace ("%ID", id     );
-            
-            string execute = (terminal == "gnome-terminal") ? "--" : "-e";
-            string quote   = (terminal == "gnome-terminal") ? ""   : "\"";
-            
-            command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + execute + " " + quote + "\\1" + quote);
-            command = command.replace ("%FILEMANAGER", file_manager);
-            command = command.replace ("%REMOTEDESKTOP", remote_desktop);
-            command = command.replace ("{COLON}", ";");
-        }
-        catch (RegexError e)
-        {
-            Debug.log (Debug.domain.ERROR, "Command.replace_variables", e.message);
-        }
-        
-        return command;
-    }
-    
-    public static string[] return_default ()
-    {
-        string[] command  = new string[] {""};
-        string[] commands = (string[]) Settings.custom_commands.val;
-        
-        foreach (string _string in commands)
-        {
-            string[] _array = _string.split (";", 6);
-            
-            if ((_array.length == 6) &&
-                (_array[1] == "true") &&
-                (custom_exists (_array[3], _array[4])))
-            {
-                command = _array;
+
+        private void run_command_action (string action_name, Variant? parameter) {
+            var number = int.parse (action_name.replace ("win.run-command-", ""));
+            var index  = number - 1;
+            var member = win.network_list.get_selected_member ();
+
+            if (member != null && index < active_commands.length) {
+                var command = active_commands.index (index);
+                var cmd = command.return_for_member (member);
+                debug ("run_command_action: %s", cmd);
+                execute (cmd);
             }
         }
-        
-        return command;
-    }
-    
-    public static string[] return_by_number (int number)
-    {
-        string[] command  = new string[] {""};
-        string[] commands = (string[]) Settings.custom_commands.val;
-        
-        int count = 0;
-        
-        foreach (string _string in commands)
-        {
-            string[] _array = _string.split (";", 6);
-            
-            if ((_array.length == 6) &&
-                (_array[0] == "true") &&
-                (custom_exists (_array[3], _array[4])))
-            {
-                count ++;
-                
-                if (count == number)
-                {
-                    command = _array;
-                }
-            }
+
+        public static void execute_default_command (Member member) {
+            var cmd = default_command.return_for_member (member);
+            debug ("execute_default_command: %s", cmd);
+            execute (cmd);
         }
-        
-        return command;
-    }
-    
-    public static void open_uri (string uri)
-    {
-        try
-        {
-#if GTK_3_22
-            Gtk.show_uri_on_window (Haguichi.window, uri, Gdk.CURRENT_TIME);
-#else
-            Gtk.show_uri (null, uri, Gdk.CURRENT_TIME);
-#endif
+
+        public static void open_uri (string uri) {
+            debug ("open_uri: %s", uri);
+            new Gtk.UriLauncher (uri).launch.begin (win, null);
         }
-        catch (Error e)
-        {
-            Debug.log (Debug.domain.ERROR, "Command.open_uri", e.message);
-            
-            if (exists ("xdg-open"))
-            {
-                Debug.log (Debug.domain.ENVIRONMENT, "Command.open_uri", "Falling back to xdg-open");
-                execute ("xdg-open " + uri);
-            }
+
+        public static void open_file (string path) {
+            debug ("open_file: %s", path);
+            File file = File.new_for_path (path);
+            new Gtk.FileLauncher (file).launch.begin (win, null);
         }
     }
 }

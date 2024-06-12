@@ -1,15 +1,21 @@
 {
     "app-id": "com.github.ztefn.haguichi",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "46",
     "sdk": "org.gnome.Sdk",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.vala"
+    ],
     "command": "haguichi",
     "finish-args": [
+        "--device=dri",
+
         "--filesystem=/var/lib/logmein-hamachi:ro",
 
         "--system-talk-name=org.freedesktop.login1",
 
         "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.kde.StatusNotifierWatcher",
 
         "--share=network",
         "--share=ipc",
@@ -17,6 +23,10 @@
         "--socket=fallback-x11",
         "--socket=wayland"
     ],
+    "build-options": {
+        "append-path": "/usr/lib/sdk/vala/bin",
+        "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
+    },
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
@@ -30,6 +40,24 @@
         "*.a"
     ],
     "modules": [
+        {
+            "name": "libportal",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dbackend-gtk3=disabled",
+                "-Dbackend-gtk4=enabled",
+                "-Dbackend-qt5=disabled",
+                "-Ddocs=false",
+                "-Dtests=false"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/flatpak/libportal/releases/download/0.7.1/libportal-0.7.1.tar.xz",
+                    "sha256": "297b90b263fad22190a26b8c7e8ea938fe6b18fb936265e588927179920d3805"
+                }
+            ]
+        },
         {
             "name": "haguichi",
             "buildsystem": "meson",

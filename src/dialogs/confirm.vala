@@ -1,30 +1,42 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2020 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
  * by the Free Software Foundation, either version 3 of the License,
  * or (at your option) any later version.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-using Gtk;
+namespace Haguichi {
+    public class ConfirmDialog : Object {
+        public signal void confirm ();
 
-namespace Dialogs
-{
-    public class Confirm : Dialogs.Base
-    {
-        public Confirm (Window parent, string heading_text, string message_text, MessageType _message_type, string button_label)
-        {
-            base (parent, heading_text, message_text, _message_type);
-            
-            add_button (Text.cancel_label, ResponseType.CANCEL);
-            
-            Button ok_but = (Button) add_button (button_label, ResponseType.OK);
-            ok_but.get_style_context().add_class ((_message_type == MessageType.WARNING) ? "destructive-action" : "suggested-action");
-            ok_but.grab_default();
-            
-            run();
+        public ConfirmDialog (Gtk.Window win,
+                              string heading,
+                              string body,
+                              string confirm_label,
+                              Adw.ResponseAppearance response_appearance) {
+
+            var dialog = new Adw.MessageDialog (win, heading, body);
+
+            dialog.add_response ("cancel", _("_Cancel"));
+            dialog.add_response ("confirm", confirm_label);
+
+            dialog.set_response_appearance ("confirm", response_appearance);
+
+            dialog.default_response = "confirm";
+            dialog.close_response   = "cancel";
+
+            dialog.response.connect ((dialog, response) => {
+                if (response == "confirm") {
+                    confirm ();
+                }
+            });
+
+            dialog.present ();
         }
     }
 }

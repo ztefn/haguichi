@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiCommandVariableBox" parent="GtkBox">
+    <property name="accessible-role">group</property>
+    <property name="orientation">vertical</property>
+    <property name="margin-top">6</property>
+    <property name="margin-bottom">6</property>
+    <property name="margin-start">9</property>
+    <property name="margin-end">9</property>
+    <accessibility>
+      <relation name="labelled-by">title_label</relation>
+    </accessibility>
+    <child>
+      <object class="GtkLabel" id="title_label">
+        <property name="halign">start</property>
+        <style>
+          <class name="dim-label"/>
+          <class name="caption"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkLabel" id="variable_label">
+        <property name="halign">start</property>
+        <property name="selectable">true</property>
+        <property name="wrap">true</property>
+        <property name="xalign">0</property>
+      </object>
+    </child>
+  </template>
+</interface>

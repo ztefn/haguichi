@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiCommandsEditorRow" parent="AdwActionRow">
+    <property name="title-lines">1</property>
+    <property name="subtitle-lines">1</property>
+    <property name="use-underline">true</property>
+    <property name="activatable">true</property>
+    <child type="prefix">
+      <object class="GtkImage" id="drag_handle">
+        <style>
+          <class name="dim-label"/>
+        </style>
+      </object>
+    </child>
+    <child type="suffix">
+      <object class="GtkImage" id="default_emblem">
+        <property name="tooltip-text" translatable="yes">Default Action</property>
+        <property name="has-tooltip">true</property>
+        <property name="margin-start">6</property>
+        <property name="margin-end">12</property>
+        <style>
+          <class name="accent"/>
+        </style>
+      </object>
+    </child>
+    <child type="suffix">
+      <object class="GtkSwitch" id="command_switch">
+        <property name="valign">center</property>
+      </object>
+    </child>
+    <child type="suffix">
+      <object class="GtkMenuButton" id="command_menu_button">
+        <property name="icon-name">view-more-symbolic</property>
+        <property name="tooltip-text" translatable="yes">Options</property>
+        <property name="has-tooltip">false</property>
+        <property name="menu-model">command_row_menu</property>
+        <property name="valign">center</property>
+        <style>
+          <class name="flat"/>
+        </style>
+      </object>
+    </child>
+    <child>
+      <object class="GtkDragSource" id="drag_source">
+        <property name="actions">move</property>
+        <signal name="prepare" handler="on_drag_prepare"/>
+        <signal name="drag-begin" handler="on_drag_begin"/>
+      </object>
+    </child>
+    <child>
+      <object class="GtkDropTarget">
+        <property name="actions">move</property>
+        <property name="formats">HaguichiCommandsEditorRow</property>
+        <signal name="drop" handler="on_drop"/>
+      </object>
+    </child>
+  </template>
+  <menu id="command_row_menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Edit…</attribute>
+        <attribute name="action">row.edit</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Move _Up</attribute>
+        <attribute name="action">row.move-up</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Move _Down</attribute>
+        <attribute name="action">row.move-down</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Set As Default Action</attribute>
+        <attribute name="action">row.set-default</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Remove</attribute>
+        <attribute name="action">row.remove</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

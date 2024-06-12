@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiNetworkList" parent="AdwBin">
+    <property name="name">network-list</property>
+    <child>
+      <object class="GtkScrolledWindow" id="scrolled_window">
+        <child>
+          <object class="GtkListView" id="list_view">
+            <property name="tab-behavior">item</property>
+            <property name="factory">
+              <object class="GtkBuilderListItemFactory">
+                <property name="resource">/com/github/ztefn/haguichi/ui/widgets/network-list-item.ui</property>
+              </object>
+            </property>
+            <child>
+              <object class="GtkShortcutController">
+                <child>
+                  <object class="GtkShortcut">
+                    <property name="trigger">Menu</property>
+                    <property name="action">action(row.context-menu)</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkShortcut">
+                    <property name="trigger">&lt;Shift&gt;F10</property>
+                    <property name="action">action(row.context-menu)</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkShortcut">
+                    <property name="trigger">Right</property>
+                    <property name="action">action(row.expand)</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkShortcut">
+                    <property name="trigger">Left</property>
+                    <property name="action">action(row.collapse)</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkShortcut">
+                    <property name="trigger">Delete</property>
+                    <property name="action">action(row.delete)</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <signal name="activate" handler="on_activate"/>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

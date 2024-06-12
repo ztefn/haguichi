@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkPopoverMenu" id="popover_menu">
+    <property name="halign">start</property>
+    <property name="has-arrow">false</property>
+    <property name="menu-model">menu_model</property>
+    <menu id="menu_model">
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Go Online</attribute>
+          <attribute name="action">network.go-online</attribute>
+          <attribute name="accel">Return</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Go Offline</attribute>
+          <attribute name="action">network.go-offline</attribute>
+          <attribute name="accel">Return</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Leave</attribute>
+          <attribute name="action">network.leave</attribute>
+          <attribute name="accel">Delete</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">_Delete</attribute>
+          <attribute name="action">network.delete</attribute>
+          <attribute name="accel">Delete</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">Change _Access…</attribute>
+          <attribute name="action">network.change-access</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+        <item>
+          <attribute name="label" translatable="yes">Change _Password…</attribute>
+          <attribute name="action">network.change-password</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Copy Network ID</attribute>
+          <attribute name="action">network.copy-id</attribute>
+        </item>
+      </section>
+      <section>
+        <item>
+          <attribute name="label" translatable="yes">_Details</attribute>
+          <attribute name="action">network.details</attribute>
+          <attribute name="accel">F9</attribute>
+          <attribute name="hidden-when">action-disabled</attribute>
+        </item>
+      </section>
+    </menu>
+  </object>
+</interface>

@@ -24,9 +24,10 @@
 
    * Searchable, sortable and collapsible network list
    * Sidebar for easy access to details and actions
-   * Desktop notifications
-   * Fully customizable commands
-   * Backup and restore your Hamachi configuration folder
+   * Indicator support for quick access to primary actions
+   * Desktop notifications to stay up to date of network events
+   * Commands that can be completely customized
+   * Backup and restore of your Hamachi configuration folder
 
 
   Donations

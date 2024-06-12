@@ -1,0 +1,13 @@
+#network-list > scrolledwindow > listview > row.activatable:hover {
+  box-shadow: inset 0 0 0 1px @borders;
+}
+
+#network-list > scrolledwindow > listview > row:selected {
+  box-shadow: inset 0 0 0 1px alpha(@accent_color, .6);
+}
+
+
+#add-command-button {
+  box-shadow: none;
+}
+
