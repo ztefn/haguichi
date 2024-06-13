@@ -6,7 +6,7 @@
         <property name="title" translatable="yes">General</property>
         <child>
           <object class="AdwPreferencesGroup">
-            <property name="title" translatable="false">Hamachi</property>
+            <property name="title" translatable="no">Hamachi</property>
             <child>
               <object class="AdwActionRow" id="configuration">
                 <property name="title" translatable="yes">Configuration</property>
