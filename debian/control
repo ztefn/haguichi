@@ -26,12 +26,13 @@ Recommends: bash,
             policykit-1,
             tar,
             xdg-utils
-Description: A graphical frontend for Hamachi
- Join, create and manage Hamachi networks in a breeze.
+Description: Manage your Hamachi networks
+ Haguichi makes it a breeze to join, create and administer Hamachi networks.
  .
  Features:
   * Searchable, sortable and collapsible network list
   * Sidebar for easy access to details and actions
-  * Desktop notifications
-  * Fully customizable commands
-  * Backup and restore your Hamachi configuration folder
+  * Indicator support for quick access to primary actions
+  * Desktop notifications to stay up to date of network events
+  * Commands that can be completely customized
+  * Backup and restore of your Hamachi configuration folder
