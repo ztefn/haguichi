@@ -1,6 +1,6 @@
 project('Haguichi', ['c', 'vala'],
           version: '1.5.0',
-    meson_version: '>= 0.62.0',
+    meson_version: '>= 1.3.0',
   default_options: ['prefix=/usr', 'warning_level=2', 'werror=false'],
 )
 
