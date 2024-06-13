@@ -114,7 +114,7 @@ msgstr "_Uložiť"
 
 #: data/ui/dialogs/add-edit-command.ui:52
 msgid "Label"
-msgstr "Ští_tok"
+msgstr "Štítok"
 
 #: data/ui/dialogs/add-edit-command.ui:59
 msgid "IPv4 Command"
