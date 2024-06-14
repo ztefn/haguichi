@@ -9,7 +9,7 @@
   The following development packages are required to build Haguichi:
 
    * gettext
-   * meson (>= 0.62)
+   * meson (>= 1.3.0)
    * valac (>= 0.56)
    * gee-0.8 (>= 0.20.6)
    * glib-2.0 (>= 2.78)
