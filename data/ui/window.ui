@@ -268,8 +268,8 @@
                         <property name="orientation">vertical</property>
                         <property name="halign">end</property>
                         <property name="valign">end</property>
-                        <property name="margin-end">12</property>
-                        <property name="margin-bottom">12</property>
+                        <property name="margin-end">15</property>
+                        <property name="margin-bottom">15</property>
                         <property name="spacing">9</property>
                         <child>
                           <object class="GtkButton" id="overlay_refresh_button">
