@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-09 21:52+0200\n"
+"POT-Creation-Date: 2024-06-15 15:13+0200\n"
 "PO-Revision-Date: 2018-10-12 07:44+0000\n"
 "Last-Translator: enolp <enolp@softastur.org>\n"
 "Language-Team: Asturian <ast@li.org>\n"
@@ -212,7 +212,7 @@ msgid "_Copy Client ID"
 msgstr "_Copiar ID de veceru"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:232
 msgid "_Evict"
 msgstr "_Desagospiar"
 
@@ -238,11 +238,11 @@ msgstr "_Coneutase"
 msgid "_Go Offline"
 msgstr "_Desconeutase"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+#: data/ui/menus/network-menu.ui:22 src/network.vala:334
 msgid "_Leave"
 msgstr "_Colar"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+#: data/ui/menus/network-menu.ui:28 src/network.vala:363
 msgid "_Delete"
 msgstr "_Desaniciar"
 
@@ -473,6 +473,11 @@ msgstr "Direición IPv4"
 #: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
 msgid "IPv6 Address"
 msgstr "Direición IPv6"
+
+#: data/ui/sidebar.ui:62
+#, fuzzy
+msgid "Hamachi Version"
+msgstr "La version %s de Hamachi ta obsoleta"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
@@ -839,8 +844,8 @@ msgstr "Rede yá xunida"
 msgid "Network ID is already taken"
 msgstr "La ID de rede yá ta coyida"
 
-#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
-#: src/network.vala:146
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:123
+#: src/network.vala:148
 msgid "Unknown"
 msgstr "Desconozse"
 
@@ -903,33 +908,33 @@ msgstr "_Desconeutar"
 msgid "C_onnect"
 msgstr "C_oneutar"
 
-#: src/member.vala:227
+#: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "¿De xuru que quies desagospiar al miembru «{0}» de la rede «{0}»?"
 
-#: src/member.vala:228
+#: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Si se permite, los miembros desagospiaos puen xunise otra vegada cuando-yos "
 "pete."
 
-#: src/network.vala:136
+#: src/network.vala:138
 msgid "You"
 msgstr "Tu"
 
-#: src/network.vala:329
+#: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "¿De xuru que quies colar d'esta rede «{0}»?"
 
-#: src/network.vala:330
+#: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Si se permite, pues xunite otra vegada cuando te pete."
 
-#: src/network.vala:358
+#: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "¿De xuru que quies desaniciar la rede «{0}»?"
 
-#: src/network.vala:359
+#: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Si desanicies una rede, perderáse dafechu."
 
@@ -957,6 +962,20 @@ msgstr "_Restaurar"
 #, fuzzy
 msgid "Never"
 msgstr "_Revertir"
+
+#: src/preferences.vala:329
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/preferences.vala:333
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/sidebar.vala:161
 msgid "Unavailable"

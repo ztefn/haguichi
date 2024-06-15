@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-09 21:52+0200\n"
+"POT-Creation-Date: 2024-06-15 15:13+0200\n"
 "PO-Revision-Date: 2024-05-03 08:50+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -213,7 +213,7 @@ msgid "_Copy Client ID"
 msgstr "クライアント ID をコピー(_C)"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:232
 msgid "_Evict"
 msgstr "登録抹消(_E)"
 
@@ -239,11 +239,11 @@ msgstr "オンラインにする(_G)"
 msgid "_Go Offline"
 msgstr "オフラインにする(_G)"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+#: data/ui/menus/network-menu.ui:22 src/network.vala:334
 msgid "_Leave"
 msgstr "離脱する(_L)"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+#: data/ui/menus/network-menu.ui:28 src/network.vala:363
 msgid "_Delete"
 msgstr "削除(_D)"
 
@@ -475,6 +475,11 @@ msgstr "IPv4 アドレス"
 msgid "IPv6 Address"
 msgstr "IPv6 アドレス"
 
+#: data/ui/sidebar.ui:62
+#, fuzzy
+msgid "Hamachi Version"
+msgstr "Hamachi バージョン %s はサポート対象外です"
+
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "状態"
@@ -539,7 +544,7 @@ msgstr "復元(_R)"
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command…"
-msgstr "コマンドを追加…(_A)"
+msgstr "コマンドを追加(_A)…"
 
 #: data/ui/widgets/commands-editor.ui:52
 msgid "_Browse Shares"
@@ -564,7 +569,7 @@ msgstr ""
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
-msgstr "編集…(_E)"
+msgstr "編集(_E)…"
 
 #: data/ui/widgets/commands-editor-row.ui:67
 msgid "Move _Up"
@@ -782,7 +787,7 @@ msgstr "コマンドを編集"
 #: src/dialogs/add-edit-command.vala:40
 #, fuzzy
 msgid "Add Command"
-msgstr "コマンドを追加…(_A)"
+msgstr "コマンドを追加"
 
 #: src/dialogs/attach.vala:57
 #, fuzzy
@@ -837,8 +842,8 @@ msgstr "すでにネットワークに参加しています"
 msgid "Network ID is already taken"
 msgstr "Network ID はすでに存在します"
 
-#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
-#: src/network.vala:146
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:123
+#: src/network.vala:148
 msgid "Unknown"
 msgstr "不明"
 
@@ -901,31 +906,31 @@ msgstr "切断(_D)"
 msgid "C_onnect"
 msgstr "接続(_O)"
 
-#: src/member.vala:227
+#: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "ネットワーク “{1}” からメンバー “{0}” を登録抹消してもよろしいですか？"
 
-#: src/member.vala:228
+#: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加できます。"
 
-#: src/network.vala:136
+#: src/network.vala:138
 msgid "You"
 msgstr "あなた"
 
-#: src/network.vala:329
+#: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "ネットワーク “{0}” から離脱してもよろしいですか？"
 
-#: src/network.vala:330
+#: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "承認されれば、後でいつでもネットワークに再参加できます。"
 
-#: src/network.vala:358
+#: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "ネットワーク “{0}” を削除してもよろしいですか？"
 
-#: src/network.vala:359
+#: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
 msgstr "ネットワークを削除すると、そのネットワークは元に戻せなくなります。"
 
@@ -953,6 +958,18 @@ msgstr "復元(_R)"
 #, fuzzy
 msgid "Never"
 msgstr "元に戻す(_R)"
+
+#: src/preferences.vala:329
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] ""
+
+#: src/preferences.vala:333
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] ""
 
 #: src/sidebar.vala:161
 msgid "Unavailable"

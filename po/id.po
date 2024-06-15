@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-09 21:52+0200\n"
+"POT-Creation-Date: 2024-06-15 15:13+0200\n"
 "PO-Revision-Date: 2022-08-28 16:05+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -211,7 +211,7 @@ msgid "_Copy Client ID"
 msgstr "_Salin ID Klien"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:232
 msgid "_Evict"
 msgstr "_Keluarkan"
 
@@ -237,11 +237,11 @@ msgstr "_Masuk Jaringan"
 msgid "_Go Offline"
 msgstr "_Keluar Jaringan"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+#: data/ui/menus/network-menu.ui:22 src/network.vala:334
 msgid "_Leave"
 msgstr "_Pergi"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+#: data/ui/menus/network-menu.ui:28 src/network.vala:363
 msgid "_Delete"
 msgstr "_Hapus"
 
@@ -472,6 +472,11 @@ msgstr "Alamat IPv4"
 #: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
 msgid "IPv6 Address"
 msgstr "Alamat IPv6"
+
+#: data/ui/sidebar.ui:62
+#, fuzzy
+msgid "Hamachi Version"
+msgstr "Hamachi versi %s sudah kedaluwarsa"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
@@ -833,8 +838,8 @@ msgstr "Sudah bergabung dalam jaringan"
 msgid "Network ID is already taken"
 msgstr "ID jaringan telah digunakan"
 
-#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
-#: src/network.vala:146
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:123
+#: src/network.vala:148
 msgid "Unknown"
 msgstr "Tidak Dikenal"
 
@@ -897,34 +902,34 @@ msgstr "_Putus koneksi"
 msgid "C_onnect"
 msgstr "S_ambung"
 
-#: src/member.vala:227
+#: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr ""
 "Apakah anda yakin ingin mengeluarkan anggota “{0}”? dari jaringan “{1}”?"
 
-#: src/member.vala:228
+#: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jika diijinkan, anggota yang dikeluarkan dapat bergabung kembali ke jaringan "
 "ini."
 
-#: src/network.vala:136
+#: src/network.vala:138
 msgid "You"
 msgstr "Anda"
 
-#: src/network.vala:329
+#: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Apakah anda yakin untuk meninggalkan jaringan “{0}”?"
 
-#: src/network.vala:330
+#: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Jika diijinkan, anda dapat bergabung kembali ke jaringan ini."
 
-#: src/network.vala:358
+#: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Apakah anda yakin untuk menghapus jaringan “{0}”?"
 
-#: src/network.vala:359
+#: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Jika anda menghapus jaringan, maka akan hilang secara permanen."
 
@@ -952,6 +957,18 @@ msgstr "_Pulihkan"
 #, fuzzy
 msgid "Never"
 msgstr "_Kembalikan"
+
+#: src/preferences.vala:329
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] ""
+
+#: src/preferences.vala:333
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] ""
 
 #: src/sidebar.vala:161
 msgid "Unavailable"

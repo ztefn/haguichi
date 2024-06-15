@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-09 21:52+0200\n"
+"POT-Creation-Date: 2024-06-15 15:13+0200\n"
 "PO-Revision-Date: 2018-10-02 16:57+0000\n"
 "Last-Translator: Dimitar Dimitrov <Unknown>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -211,7 +211,7 @@ msgid "_Copy Client ID"
 msgstr "_Копирай Клиент"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:232
 msgid "_Evict"
 msgstr "_Изгони"
 
@@ -237,11 +237,11 @@ msgstr "_Отиди на линия"
 msgid "_Go Offline"
 msgstr "_Отиди извън линия"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+#: data/ui/menus/network-menu.ui:22 src/network.vala:334
 msgid "_Leave"
 msgstr "_Напусни"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+#: data/ui/menus/network-menu.ui:28 src/network.vala:363
 msgid "_Delete"
 msgstr "_Изтриване"
 
@@ -472,6 +472,11 @@ msgstr "IPv4 адрес"
 #: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
 msgid "IPv6 Address"
 msgstr "IPv6 адрес"
+
+#: data/ui/sidebar.ui:62
+#, fuzzy
+msgid "Hamachi Version"
+msgstr "Версията на Hamachi %s е устаряла"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
@@ -838,8 +843,8 @@ msgstr "Мрежата е вече добавена"
 msgid "Network ID is already taken"
 msgstr "Името на мрежата е заето"
 
-#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
-#: src/network.vala:146
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:123
+#: src/network.vala:148
 msgid "Unknown"
 msgstr "Неизвестен"
 
@@ -902,34 +907,34 @@ msgstr "_Изключи"
 msgid "C_onnect"
 msgstr "_Свързване"
 
-#: src/member.vala:227
+#: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr ""
 "Сигурни ли сте, че искате да изгоните потребител „{0}“ от мрежата „{1}“?"
 
-#: src/member.vala:228
+#: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Ако решите, изгонените членове могат да се включат отново в мрежата по всяко "
 "време."
 
-#: src/network.vala:136
+#: src/network.vala:138
 msgid "You"
 msgstr "Вие"
 
-#: src/network.vala:329
+#: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Сигурни ли сте, че искате да напуснете мрежата „{0}“?"
 
-#: src/network.vala:330
+#: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Ако решите, можете да се включите в мрежата по всяко време."
 
-#: src/network.vala:358
+#: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Сигурни ли сте, че искате да изтриете мрежата „{0}“?"
 
-#: src/network.vala:359
+#: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Ако изтриете мрежа, тя ще бъде перманентно загубена."
 
@@ -957,6 +962,20 @@ msgstr "_Възстанови"
 #, fuzzy
 msgid "Never"
 msgstr "_Връщане"
+
+#: src/preferences.vala:329
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/preferences.vala:333
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/sidebar.vala:161
 msgid "Unavailable"

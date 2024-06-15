@@ -59,7 +59,7 @@
                     </child>
                     <child type="row">
                       <object class="HaguichiSidebarRow" id="hamachi_row">
-                        <property name="title" translatable="no">Hamachi Version</property>
+                        <property name="title" translatable="yes">Hamachi Version</property>
                       </object>
                     </child>
                   </object>

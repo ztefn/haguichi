@@ -325,16 +325,12 @@ namespace Haguichi {
             }
         }
 
-        private static string get_interval_label (string singular, string plural, int interval) {
-            return ngettext (singular, plural, interval).replace ("%S", interval.to_string ());
-        }
-
         private static string get_seconds_interval_label (int interval) {
-            return get_interval_label ("%S second", "%S seconds", interval);
+            return ngettext ("%S second", "%S seconds", interval).replace ("%S", interval.to_string ());
         }
 
         private static string get_minutes_interval_label (int interval) {
-            return get_interval_label ("%S minute", "%S minutes", interval);
+            return ngettext ("%S minute", "%S minutes", interval).replace ("%S", interval.to_string ());
         }
     }
 }

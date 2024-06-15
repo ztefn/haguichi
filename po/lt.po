@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-09 21:52+0200\n"
+"POT-Creation-Date: 2024-06-15 15:13+0200\n"
 "PO-Revision-Date: 2023-10-25 20:08+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -218,7 +218,7 @@ msgid "_Copy Client ID"
 msgstr "_Kopijuoti kliento ID"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:230
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:232
 msgid "_Evict"
 msgstr "Išk_eldinti"
 
@@ -244,11 +244,11 @@ msgstr "Prisijun_gti"
 msgid "_Go Offline"
 msgstr "Atsijun_gti"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:332
+#: data/ui/menus/network-menu.ui:22 src/network.vala:334
 msgid "_Leave"
 msgstr "_Išeiti"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:361
+#: data/ui/menus/network-menu.ui:28 src/network.vala:363
 msgid "_Delete"
 msgstr "_Ištrinti"
 
@@ -479,6 +479,11 @@ msgstr "IPv4 adresas"
 #: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
 msgid "IPv6 Address"
 msgstr "IPv6 adresas"
+
+#: data/ui/sidebar.ui:62
+#, fuzzy
+msgid "Hamachi Version"
+msgstr "Hamachi versija %s yra pasenusi"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
@@ -850,8 +855,8 @@ msgstr "Prie tinklo jau prisijungta"
 msgid "Network ID is already taken"
 msgstr "Tinklo ID jau užimtas"
 
-#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:121
-#: src/network.vala:146
+#: src/hamachi.vala:549 src/member.vala:69 src/member.vala:123
+#: src/network.vala:148
 msgid "Unknown"
 msgstr "Nežinoma"
 
@@ -914,34 +919,34 @@ msgstr "Atsij_ungti"
 msgid "C_onnect"
 msgstr "Prisi_jungti"
 
-#: src/member.vala:227
+#: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Ar tikrai norite iškeldinti narį “{0}” iš tinklo “{1}”?"
 
-#: src/member.vala:228
+#: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Jei pritarsite, iškeldinti nariai vėliau, bet kuriuo metu gali iš naujo "
 "prisijungti prie tinklo."
 
-#: src/network.vala:136
+#: src/network.vala:138
 msgid "You"
 msgstr "Jūs"
 
-#: src/network.vala:329
+#: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Ar tikrai norite išeiti iš tinklo “{0}”?"
 
-#: src/network.vala:330
+#: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
 "Jei pritarsite, vėliau, bet kada galėsite iš naujo prisijungti prie tinklo."
 
-#: src/network.vala:358
+#: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Ar tikrai norite ištrinti tinklą “{0}”?"
 
-#: src/network.vala:359
+#: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Jeigu ištrinsite tinklą, jis bus negrįžtamai prarastas."
 
@@ -969,6 +974,22 @@ msgstr "Atku_rti"
 #, fuzzy
 msgid "Never"
 msgstr "_Grąžinti"
+
+#: src/preferences.vala:329
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: src/preferences.vala:333
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: src/sidebar.vala:161
 msgid "Unavailable"
