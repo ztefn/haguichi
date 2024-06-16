@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2020-01-29 16:28+0000\n"
+"PO-Revision-Date: 2024-06-16 12:53+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "Language: nl\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2020-01-29 16:32+0000\n"
-"X-Generator: Launchpad (build b8d1327fd820d6bf500589d6da587d5037c7d88e)\n"
+"X-Launchpad-Export-Date: 2024-06-16 13:00+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -157,7 +157,7 @@ msgstr "_Wijzigen"
 
 #: data/ui/dialogs/change-access.ui:53
 msgid "Locked"
-msgstr "Gesloten"
+msgstr "Vergrendeld"
 
 #: data/ui/dialogs/change-access.ui:54
 msgid "Do not accept new network members"
@@ -1033,7 +1033,7 @@ msgstr "Stephen Brandt https://launchpad.net/~ztefn"
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
-msgstr "Gekopieerd naar het klembord"
+msgstr "Gekopieerd naar klembord"
 
 #: src/window.vala:372
 msgid "Hamachi Is Not Installed"
