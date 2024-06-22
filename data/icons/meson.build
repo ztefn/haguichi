@@ -10,7 +10,7 @@ endif
 
 foreach theme : icon_themes
   install_subdir(theme,
-    follow_symlinks: false,
+    follow_symlinks: true,
         install_dir: get_option('datadir') / 'icons'
   )
 endforeach
