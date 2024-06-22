@@ -32,7 +32,7 @@ namespace Haguichi {
             menu = new Menu ();
 
             item = new StatusNotifierItem () {
-                id        = APP_ID,
+                id        = APP_ID + ".indicator",
                 category  = "ApplicationStatus",
                 title     = APP_NAME,
                 icon_name = APP_ID + "-disconnected" + icon_postfix,
