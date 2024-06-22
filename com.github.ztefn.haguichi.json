@@ -63,8 +63,8 @@
             "buildsystem": "meson",
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/ztefn/haguichi.git"
+                    "type": "dir",
+                    "path": "."
                 }
             ]
         }
