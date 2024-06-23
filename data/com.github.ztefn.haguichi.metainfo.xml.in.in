@@ -21,28 +21,37 @@
   <screenshots>
     <screenshot type="default">
       <caption>View your network list and client information</caption>
-      <image>https://haguichi.net/appdata/screenshot-1.png</image>
+      <image scale="2">https://haguichi.net/appdata/screenshot-1.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected member details</caption>
-      <image>https://haguichi.net/appdata/screenshot-2.png</image>
+      <image scale="2">https://haguichi.net/appdata/screenshot-2.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected network details</caption>
-      <image>https://haguichi.net/appdata/screenshot-3.png</image>
+      <image scale="2">https://haguichi.net/appdata/screenshot-3.png</image>
     </screenshot>
     <screenshot>
       <caption>Search your network list</caption>
-      <image>https://haguichi.net/appdata/screenshot-4.png</image>
+      <image scale="2">https://haguichi.net/appdata/screenshot-4.png</image>
     </screenshot>
     <screenshot>
       <caption>Join or create networks</caption>
-      <image>https://haguichi.net/appdata/screenshot-5.png</image>
+      <image scale="2">https://haguichi.net/appdata/screenshot-5.png</image>
     </screenshot>
   </screenshots>
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </recommends>
+  <requires>
+    <display_length compare="ge">360</display_length>
+    <internet>always</internet>
+  </requires>
   <branding>
-    <color type="primary" scheme_preference="light">#ffe0cc</color>
-    <color type="primary" scheme_preference="dark">#8e0700</color>
+    <color type="primary" scheme_preference="light">#ffdbbc</color>
+    <color type="primary" scheme_preference="dark">#f02b2b</color>
   </branding>
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
@@ -183,31 +192,10 @@
   <url type="help">https://haguichi.net/tips-and-tricks/</url>
   <url type="donation">https://haguichi.net/donate/</url>
   <url type="translate">https://translations.launchpad.net/haguichi</url>
+  <url type="vcs-browser">https://github.com/ztefn/haguichi</url>
   <developer id="com.stephenbrandt">
     <name translate="no">Stephen Brandt</name>
   </developer>
   <update_contact>stephen@stephenbrandt.com</update_contact>
   <translation type="gettext">@GETTEXT_PACKAGE@</translation>
-  <languages>
-    <lang percentage="100">ast</lang>
-    <lang percentage="100">bg</lang>
-    <lang percentage="96">cs</lang>
-    <lang percentage="89">de</lang>
-    <lang percentage="100">es</lang>
-    <lang percentage="100">fr</lang>
-    <lang percentage="100">id</lang>
-    <lang percentage="100">it</lang>
-    <lang percentage="100">ja</lang>
-    <lang percentage="89">kk</lang>
-    <lang percentage="100">lt</lang>
-    <lang percentage="100">nl</lang>
-    <lang percentage="100">pl</lang>
-    <lang percentage="100">pt</lang>
-    <lang percentage="100">pt_BR</lang>
-    <lang percentage="100">ru</lang>
-    <lang percentage="96">sk</lang>
-    <lang percentage="100">sv</lang>
-    <lang percentage="96">tr</lang>
-    <lang percentage="100">uk</lang>
-  </languages>
 </component>
