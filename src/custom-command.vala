@@ -33,7 +33,12 @@ namespace Haguichi {
                     Command.exists (Command.replace_variables (cmd_ipv6, "", "", "").split (" ", 0)[0]));
         }
 
-        public string return_for_member (Member? member) {
+        public bool enabled_for_member (Member member) {
+            // Enabled if member is online or command doesn't use address variable
+            return member.status.status_int == 1 || (!cmd_ipv4.contains ("%A") && !cmd_ipv6.contains ("%A"));
+        }
+
+        public string return_for_member (Member member) {
             string command = "";
             string address = "";
 

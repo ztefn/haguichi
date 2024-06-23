@@ -228,9 +228,7 @@ namespace Haguichi {
             if (active_commands != null) {
                 var number = 1;
                 foreach (CustomCommand command in active_commands) {
-                    // Enable if member is online or command doesn't use address variable
-                    var enabled = (member.status.status_int == 1 || (!command.cmd_ipv4.contains ("%A") && !command.cmd_ipv6.contains ("%A")));
-                    win.action_set_enabled ("win.run-command-%d".printf (number), enabled);
+                    win.action_set_enabled ("win.run-command-%d".printf (number), command.enabled_for_member (member));
                     number ++;
                 }
             }
@@ -270,9 +268,11 @@ namespace Haguichi {
         }
 
         public static void execute_default_command (Member member) {
-            var cmd = default_command.return_for_member (member);
-            debug ("execute_default_command: %s", cmd);
-            execute (cmd);
+            if (default_command.enabled_for_member (member)) {
+                var cmd = default_command.return_for_member (member);
+                debug ("execute_default_command: %s", cmd);
+                execute (cmd);
+            }
         }
 
         public static void open_uri (string uri) {
