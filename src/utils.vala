@@ -34,11 +34,11 @@ namespace Haguichi {
             var parsed_nick = nick;
 
             if (nick == "%USERNAME") {
-                parsed_nick = Environment.get_user_name();
+                parsed_nick = Environment.get_user_name ();
             } else if (nick == "%REALNAME") {
-                parsed_nick = Environment.get_real_name();
+                parsed_nick = Environment.get_real_name ();
             } else if (nick == "%HOSTNAME") {
-                parsed_nick = Environment.get_host_name();
+                parsed_nick = Environment.get_host_name ();
             }
 
             return parsed_nick;

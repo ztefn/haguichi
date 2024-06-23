@@ -35,7 +35,7 @@ namespace Haguichi {
         }
 
         public void on_copy_value () {
-            win.get_clipboard().set_text (subtitle);
+            win.get_clipboard ().set_text (subtitle);
             win.show_copied_to_clipboard_toast ();
         }
     }

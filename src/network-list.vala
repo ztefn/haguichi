@@ -356,7 +356,7 @@ namespace Haguichi {
         }
 
         private void copy_to_clipboard (string text) {
-            win.get_clipboard().set_text (text);
+            win.get_clipboard ().set_text (text);
             win.show_copied_to_clipboard_toast ();
         }
 

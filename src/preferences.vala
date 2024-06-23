@@ -241,7 +241,7 @@ namespace Haguichi {
         private void save_config () {
             debug ("config.save action activated");
 
-            var now = new DateTime.now_local();
+            var now = new DateTime.now_local ();
 
             var dialog = new Gtk.FileDialog () {
                 title        = _("Save a Backup"),
