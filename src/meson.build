@@ -46,7 +46,6 @@ deps = [
   dependency('libadwaita-1',   version: '>= 1.4'),
   dependency('libportal',      version: '>= 0.7.1'),
   dependency('libportal-gtk4', version: '>= 0.7.1'),
-  meson.get_compiler('vala').find_library('posix'),
 ]
 
 executable(binary_name, config, sources, resources,
