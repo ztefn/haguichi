@@ -337,7 +337,7 @@ public class StatusNotifierItem : Object {
     private uint dbus_menu_registration_id;
     private DBusStatusNotifierWatcher watcher;
 
-    private void on_bus_aquired(DBusConnection dbus_connection) {
+    private void on_bus_acquired(DBusConnection dbus_connection) {
         try {
             this.dbus_connection = dbus_connection;
             if (menu_model == null) dbus_menu = null;
@@ -363,7 +363,7 @@ public class StatusNotifierItem : Object {
                 }
             });
         } catch (IOError e) {
-            critical("on_bus_aquired: %s", e.message);
+            critical("on_bus_acquired: %s", e.message);
         }
     }
 
@@ -380,7 +380,7 @@ public class StatusNotifierItem : Object {
 
     public void init() {
         if (id == null) critical("StatusNotifierItem.id not set before initializing");
-        name_owner_id = Bus.own_name(BusType.SESSION, name, BusNameOwnerFlags.NONE, on_bus_aquired, on_name_acquired, () => warning("Could not acquire name: %s", name));
+        name_owner_id = Bus.own_name(BusType.SESSION, name, BusNameOwnerFlags.NONE, on_bus_acquired, on_name_acquired, () => warning("Could not acquire name: %s", name));
     }
 
     public void register() {
