@@ -82,6 +82,10 @@ namespace Haguichi {
 
             app.set_color_scheme ((int) ui.get_enum ("color-scheme"));
 
+            if (strv_contains (Intl.get_language_names (), "ru")) {
+                add_css_class ("custom");
+            }
+
             default_width  = ui.get_int ("width");
             default_height = ui.get_int ("height");
 
