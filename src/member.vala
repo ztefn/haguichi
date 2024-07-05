@@ -112,17 +112,10 @@ namespace Haguichi {
         private void get_long_nick (string _nick, bool _init) {
             new_nick = _nick;
 
-            if (_init == false && new_nick.length >= 25 && nick.length >= 25 && nick.has_prefix (new_nick)) {
+            if (_init == false && new_nick.length >= 25 && nick.length >= 25 && nick.has_prefix (new_nick.replace ("�", ""))) {
                 // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
             }
             else if (new_nick.length >= 25) {
-                // Set nick to "Unknown" initially when the string is not valid UTF-8 encoded to prevent Gtk and Pango warnings,
-                // which typically happens when multibyte characters get cut off in the network list
-
-                if (new_nick.validate () == false && _init == true) {
-                    nick = _("Unknown");
-                }
-
                 string cached_nick = get_long_nick_from_cache ();
 
                 if (cached_nick != null) {
@@ -139,9 +132,10 @@ namespace Haguichi {
             } else {
                 // Save passed nick
                 nick = new_nick;
-                set_label_markup ();
-                set_sort_strings ();
             }
+
+            set_label_markup ();
+            set_sort_strings ();
         }
 
         public void get_long_nick_thread () {
@@ -166,12 +160,20 @@ namespace Haguichi {
 
             set_label_markup ();
             set_sort_strings ();
+
+            // Update sidebar with new nick when selected
+            if (win.network_list.get_selected_item () == this) {
+                Idle.add_full (Priority.HIGH_IDLE, () => {
+                    win.sidebar.set_member (this);
+                    return false;
+                });
+            }
         }
 
         private string get_long_nick_from_cache () {
             string _nick = null;
 
-            if (new_nick.validate () == true && connection.has_long_nick (id) && connection.get_long_nick (id).has_prefix (new_nick)) {
+            if (connection.has_long_nick (id) && connection.get_long_nick (id).has_prefix (new_nick.replace ("�", ""))) {
                 _nick = connection.get_long_nick (id);
                 debug ("get_long_nick_from_cache: Retrieved long nick for client %s from cache: %s", id, _nick);
             }

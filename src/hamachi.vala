@@ -541,7 +541,8 @@ namespace Haguichi {
                             networks.append (network);
 
                             cur_network = network;
-                        } else if (s.index_of ("?") == 5) { // Line contains unapproved member
+                        } else if (s.index_of ("?") == 5) {
+                            // Line contains unapproved member
                             MatchInfo mi;
                             unapproved_member_regex.match (s, RegexMatchFlags.NOTEMPTY, out mi);
 
@@ -552,7 +553,14 @@ namespace Haguichi {
                             Member member = new Member (status, cur_network, null, null, nick, id, null);
 
                             cur_network.add_member (member);
-                        } else if (s.index_of ("-") == 10) { // Line contains normal member
+                        } else if (s.index_of ("-") == 10) {
+                            // Line contains normal member
+
+                            // UTF-8 multibyte characters in long nicknames may get cut off in the network list.
+                            // Therefore by calling the make_valid string function, bytes that could not be
+                            // interpreted as valid Unicode are replaced with the Unicode replacement character (U+FFFD).
+                            s = s.make_valid ();
+
                             MatchInfo mi;
                             normal_member_regex.match (s, RegexMatchFlags.NOTEMPTY, out mi);
 
