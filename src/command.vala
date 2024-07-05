@@ -275,7 +275,11 @@ namespace Haguichi {
             }
         }
 
-        public static void open_uri (string uri) {
+        public static void open_redirect_uri (string action) {
+            open_uri ("https://haguichi.net/redirect/?action=" + action + "&version=" + Config.VERSION + "&language=" + Intl.get_language_names ()[1]);
+        }
+
+        private static void open_uri (string uri) {
             debug ("open_uri: %s", uri);
             new Gtk.UriLauncher (uri).launch.begin (win, null);
         }

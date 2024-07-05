@@ -132,7 +132,7 @@ namespace Haguichi {
 
         [GtkCallback]
         private void download_hamachi () {
-            Command.open_uri ("https://haguichi.net/redirect/?action=get-hamachi");
+            Command.open_redirect_uri ("get-hamachi");
         }
 
         [GtkCallback]
@@ -255,7 +255,7 @@ namespace Haguichi {
         }
 
         private void help_action () {
-            Command.open_uri ("https://haguichi.net/faq/");
+            Command.open_redirect_uri ("help");
         }
 
         public void info_action () {
