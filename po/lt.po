@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2023-10-25 20:08+0000\n"
+"PO-Revision-Date: 2024-07-04 10:12+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "Language: lt\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2023-10-28 20:56+0000\n"
-"X-Generator: Launchpad (build 792da5ac485e849df1cf87044293bc2ee7a576ae)\n"
+"X-Launchpad-Export-Date: 2024-07-05 13:52+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -34,17 +34,21 @@ msgstr "Hamachi tinklo tvarkytuvė"
 #: data/com.github.ztefn.haguichi.desktop.in.in:11
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Tvarkyti Hamachi tinklus"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:15
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
+"LogMeIn Hamachi;VPN;LAN;Tinklas;Internetas;P2P;Lygiarangis;Klientas;Kliento "
+"programa;Grafinė naudotojo sąsaja;Vartotojo sąsaja;"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
 msgstr ""
+"Haguichi palengvina Hamachi tinklų kūrimą, administravimą bei prisijungimą "
+"prie jų."
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
@@ -63,21 +67,20 @@ msgstr ""
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
 msgstr ""
+"Indikatoriaus palaikymas, skirtas greitai prieigai prie pirminių veiksmų"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
-msgstr ""
+msgstr "Darbalaukio pranešimai, kad neatitrūktumėte nuo tinklo įvykių"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "Visiškai tinkinamos komandos"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
 msgstr ""
-"Galimybė daryti savo Hamachi konfigūracijos aplanko atsarginę kopiją ir ją "
-"atkurti"
+"Hamachi konfigūracijos aplanko atsarginės kopijos darymas ir atkūrimas"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
@@ -88,27 +91,24 @@ msgstr ""
 "sistemoje būtų įdiegta Hamachi.</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "Rodyti kliento informaciją"
+msgstr "Žiūrėkite tinklų sąrašą bei kliento informaciją"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "Žiūrėkite išsamesnę informaciją apie pasirinktą narį"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "Žiūrėkite išsamesnę informaciją apie pasirinktą tinklą"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
-#, fuzzy
 msgid "Search your network list"
-msgstr "Randamas, rikiuojamas ir suskleidžiamas tinklų sąrašas"
+msgstr "Atlikite paiešką tinklų sąraše"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "Prisijungti prie tinklo"
+msgstr "Kurkite ar prisijunkite prie tinklų"
 
 #: data/ui/dialogs/add-edit-command.ui:18 data/ui/dialogs/attach.ui:21
 #: data/ui/dialogs/change-access.ui:19 data/ui/dialogs/change-password.ui:19
@@ -153,9 +153,8 @@ msgid "Include all networks created by this client"
 msgstr "Įtraukti visus šio kliento sukurtus tinklus"
 
 #: data/ui/dialogs/change-access.ui:10 data/ui/sidebar.ui:133
-#, fuzzy
 msgid "Change Access"
-msgstr "Keisti slapyvardį"
+msgstr "Keisti prieigą"
 
 #: data/ui/dialogs/change-access.ui:25 data/ui/dialogs/change-password.ui:25
 msgid "C_hange"
@@ -167,7 +166,7 @@ msgstr "Užrakintas"
 
 #: data/ui/dialogs/change-access.ui:54
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Nepriimti naujų tinklo narių"
 
 #: data/ui/dialogs/change-access.ui:60
 msgid "Approval"
@@ -224,7 +223,7 @@ msgstr "Išk_eldinti"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "_Išsamiau"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:519
 #: src/indicator.vala:114
@@ -253,9 +252,8 @@ msgid "_Delete"
 msgstr "_Ištrinti"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "Keisti s_lapyvardį…"
+msgstr "Keisti _prieigą…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -274,9 +272,8 @@ msgid "Configuration"
 msgstr "Konfigūracija"
 
 #: data/ui/preferences.ui:19
-#, fuzzy
 msgid "Backup"
-msgstr "Įrašyti atsarginę kopiją"
+msgstr "Atsarginė kopija"
 
 #: data/ui/preferences.ui:30
 msgid "Open Folder"
@@ -308,7 +305,7 @@ msgstr "Elgsena"
 
 #: data/ui/preferences.ui:71
 msgid "_Network list update interval"
-msgstr ""
+msgstr "Ti_nklų sąrašo atnaujinimo intervalas"
 
 #: data/ui/preferences.ui:77
 msgid "_Connect automatically on startup"
@@ -337,19 +334,19 @@ msgstr "Išvaizda"
 
 #: data/ui/preferences.ui:113
 msgid "_Style"
-msgstr ""
+msgstr "_Stilius"
 
 #: data/ui/preferences.ui:130
 msgid "Follow System"
-msgstr ""
+msgstr "Sekti sistemos"
 
 #: data/ui/preferences.ui:141
 msgid "Light"
-msgstr ""
+msgstr "Šviesus"
 
 #: data/ui/preferences.ui:153
 msgid "Dark"
-msgstr ""
+msgstr "Tamsus"
 
 #: data/ui/preferences.ui:163
 msgid "Show _indicator"
@@ -481,23 +478,20 @@ msgid "IPv6 Address"
 msgstr "IPv6 adresas"
 
 #: data/ui/sidebar.ui:62
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "Hamachi versija %s yra pasenusi"
+msgstr "Hamachi versija"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "Būsena"
 
 #: data/ui/sidebar.ui:85
-#, fuzzy
 msgid "Leave Network"
-msgstr "Sukurti tinklą"
+msgstr "Išeiti iš tinklo"
 
 #: data/ui/sidebar.ui:96
-#, fuzzy
 msgid "Delete Network"
-msgstr "Sukurti tinklą"
+msgstr "Ištrinti tinklą"
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
@@ -521,9 +515,8 @@ msgstr "Ryšys"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "Komandos"
+msgstr "Komandų kintamieji"
 
 #: data/ui/widgets/command-entry-row.ui:40
 msgid "Address"
@@ -531,21 +524,19 @@ msgstr "Adresas"
 
 #: data/ui/widgets/command-entry-row.ui:67
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "Terminalo emuliatorius"
 
 #: data/ui/widgets/command-entry-row.ui:73
 msgid "File Manager"
-msgstr ""
+msgstr "Failų tvarkytuvė"
 
 #: data/ui/widgets/command-entry-row.ui:79
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "_Rodyti nuotolinį darbalaukį"
+msgstr "Nuotolinio darbalaukio žiūryklė"
 
 #: data/ui/widgets/commands-editor.ui:11
-#, fuzzy
 msgid "_Restore Default"
-msgstr "Atku_rti"
+msgstr "_Atkurti numatytąją"
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command…"
@@ -564,13 +555,12 @@ msgid "_Ping"
 msgstr "Ryšio _patikrinimas"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "Nustatyti kaip numatytąjį _veiksmą"
+msgstr "Numatytasis veiksmas"
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "Parametrai"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -594,7 +584,7 @@ msgstr "Š_alinti"
 
 #: data/ui/widgets/sidebar-row.ui:10
 msgid "Copy"
-msgstr ""
+msgstr "Kopijuoti"
 
 #: data/ui/window.ui:194 src/window.vala:404
 msgid "Initializing"
@@ -602,17 +592,15 @@ msgstr "Inicijuojama"
 
 #: data/ui/window.ui:240
 msgid "Main Menu"
-msgstr ""
+msgstr "Pagrindinis meniu"
 
 #: data/ui/window.ui:257
-#, fuzzy
 msgid "Search networks and members"
-msgstr "Hamachi tinklo tvarkytuvė"
+msgstr "Ieškoti tinklų ir narių"
 
 #: data/ui/window.ui:290
-#, fuzzy
 msgid "Add Network"
-msgstr "Prisijungti prie tinklo"
+msgstr "Pridėti tinklą"
 
 #: data/ui/window.ui:345
 msgid "You Are Connected!"
@@ -624,11 +612,11 @@ msgstr "Spauskite + mygtuką, kad pridėtumėte tinklą"
 
 #: data/ui/window.ui:367
 msgid "No Results Found"
-msgstr ""
+msgstr "Nerasta rezultatų"
 
 #: data/ui/window.ui:368
 msgid "Try a different search"
-msgstr ""
+msgstr "Bandykite kitokią paiešką"
 
 #: data/ui/window.ui:385
 msgid "Please download Hamachi and follow the installation instructions"
@@ -798,14 +786,12 @@ msgid "Edit Command"
 msgstr "Redaguoti komandą"
 
 #: src/dialogs/add-edit-command.vala:40
-#, fuzzy
 msgid "Add Command"
-msgstr "_Pridėti komandą…"
+msgstr "Pridėti komandą"
 
 #: src/dialogs/attach.vala:57
-#, fuzzy
 msgid "Attach request sent"
-msgstr "Prisijungimo prašymas išsiųstas"
+msgstr "Pridėjimo užklausa išsiųsta"
 
 #: src/dialogs/attach.vala:66
 msgid "Account not found"
@@ -865,35 +851,32 @@ msgid "Anonymous"
 msgstr "Anoniminis"
 
 #: src/hamachi.vala:692 src/hamachi.vala:694
-#, fuzzy
 msgid "Password changed"
-msgstr "Sla_ptažodis"
+msgstr "Slaptažodis pakeistas"
 
 #: src/hamachi.vala:715
-#, fuzzy
 msgid "Saving backup…"
-msgstr "Įrašyti at_sarginę kopiją…"
+msgstr "Įrašoma atsarginė kopija…"
 
 #: src/hamachi.vala:732
 msgid "Backup saved"
-msgstr ""
+msgstr "Atsarginė kopija įrašyta"
 
 #: src/hamachi.vala:732
 msgid "Failed to save backup"
-msgstr ""
+msgstr "Nepavyko įrašyti atsarginės kopijos"
 
 #: src/hamachi.vala:746
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "Atku_rti iš atsarginės kopijos…"
+msgstr "Atkuriama atsarginė kopija…"
 
 #: src/hamachi.vala:787
 msgid "Backup restored"
-msgstr ""
+msgstr "Atsarginė kopija atkurta"
 
 #: src/hamachi.vala:787
 msgid "Failed to restore backup"
-msgstr ""
+msgstr "Nepavyko atkurti atsarginės kopijos"
 
 #: src/hamachi.vala:794
 msgid "Archive does not contain expected files"
@@ -935,7 +918,7 @@ msgstr "Jūs"
 
 #: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
-msgstr "Ar tikrai norite išeiti iš tinklo “{0}”?"
+msgstr "Ar tikrai norite išeiti iš tinklo „{0}“?"
 
 #: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
@@ -952,7 +935,7 @@ msgstr "Jeigu ištrinsite tinklą, jis bus negrįžtamai prarastas."
 
 #: src/preferences.vala:103
 msgid "Not present"
-msgstr ""
+msgstr "Nėra"
 
 #: src/preferences.vala:227
 msgid "All supported archives"
@@ -971,25 +954,24 @@ msgid "_Restore"
 msgstr "Atku_rti"
 
 #: src/preferences.vala:310
-#, fuzzy
 msgid "Never"
-msgstr "_Grąžinti"
+msgstr "Niekada"
 
 #: src/preferences.vala:329
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%S sekundė"
+msgstr[1] "%S sekundės"
+msgstr[2] "%S sekundžių"
 
 #: src/preferences.vala:333
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%S minutė"
+msgstr[1] "%S minutės"
+msgstr[2] "%S minučių"
 
 #: src/sidebar.vala:161
 msgid "Unavailable"
@@ -1001,7 +983,7 @@ msgstr "laukiama"
 
 #: src/sidebar.vala:180
 msgid "Not attached"
-msgstr ""
+msgstr "Nepridėta"
 
 #: src/sidebar.vala:196
 msgid "{0} online, {1} total"
@@ -1045,11 +1027,11 @@ msgstr "Tiesioginis"
 
 #: src/widgets/commands-editor.vala:54
 msgid "Restore default commands?"
-msgstr ""
+msgstr "Atkurti numatytąsias komandas?"
 
 #: src/widgets/commands-editor.vala:55
 msgid "All customizations will be lost."
-msgstr ""
+msgstr "Visi tinkinimai bus prarasti."
 
 #: src/window.vala:136
 msgid "Configuring"
@@ -1062,7 +1044,7 @@ msgstr "Moo https://launchpad.net/~mooo"
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Nukopijuota į iškarpinę"
 
 #: src/window.vala:372
 msgid "Hamachi Is Not Installed"
@@ -1078,3 +1060,5 @@ msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
 msgstr ""
+"Haguichi tęs darbą, kai jos langas yra užvertas, kad galėtų stebėti ryšį ir "
+"siųsti pranešimus."
