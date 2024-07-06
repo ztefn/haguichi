@@ -193,8 +193,11 @@ approve  : auto".printf (id, name);
                         owner = id;
                         foreach (Member member in members) {
                             if (member.id == owner) {
-                                member.is_owner = true;
-                                member.set_label_markup ();
+                                Idle.add_full (Priority.HIGH_IDLE, () => {
+                                    member.is_owner = true;
+                                    member.set_label_markup ();
+                                    return false;
+                                });
                             }
                         }
                     }
