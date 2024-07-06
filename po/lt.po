@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2024-07-04 10:12+0000\n"
+"PO-Revision-Date: 2024-07-05 22:37+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2024-07-05 13:52+0000\n"
+"X-Launchpad-Export-Date: 2024-07-06 14:00+0000\n"
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
@@ -194,7 +194,7 @@ msgstr "Tinklo ID"
 
 #: data/ui/dialogs/join-create-network.ui:61
 msgid "Password"
-msgstr "Sla_ptažodis"
+msgstr "Slaptažodis"
 
 #: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:231 src/bubble.vala:58
 msgid "_Approve"
@@ -904,7 +904,7 @@ msgstr "Prisi_jungti"
 
 #: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "Ar tikrai norite iškeldinti narį “{0}” iš tinklo “{1}”?"
+msgstr "Ar tikrai norite iškeldinti narį „{0}“ iš tinklo „{1}“?"
 
 #: src/member.vala:230
 msgid "If admitted, evicted members can rejoin the network at any later time."
@@ -927,7 +927,7 @@ msgstr ""
 
 #: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
-msgstr "Ar tikrai norite ištrinti tinklą “{0}”?"
+msgstr "Ar tikrai norite ištrinti tinklą „{0}“?"
 
 #: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."

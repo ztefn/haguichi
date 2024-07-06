@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2024-06-16 19:20+0000\n"
+"PO-Revision-Date: 2024-07-01 04:25+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2024-06-22 12:04+0000\n"
+"X-Launchpad-Export-Date: 2024-07-06 14:08+0000\n"
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
@@ -531,7 +531,7 @@ msgstr "Visor de escritorios remotos"
 
 #: data/ui/widgets/commands-editor.ui:11
 msgid "_Restore Default"
-msgstr ""
+msgstr "_Restaurar valores predeterminados"
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command…"
@@ -842,15 +842,15 @@ msgstr "Anónima"
 
 #: src/hamachi.vala:692 src/hamachi.vala:694
 msgid "Password changed"
-msgstr ""
+msgstr "Contraseña cambiada"
 
 #: src/hamachi.vala:715
 msgid "Saving backup…"
-msgstr ""
+msgstr "Guardando copia de respaldo…"
 
 #: src/hamachi.vala:732
 msgid "Backup saved"
-msgstr ""
+msgstr "Copia de respaldo guardada"
 
 #: src/hamachi.vala:732
 msgid "Failed to save backup"
@@ -862,7 +862,7 @@ msgstr "Restaurando la copia de respaldo…"
 
 #: src/hamachi.vala:787
 msgid "Backup restored"
-msgstr ""
+msgstr "Copia de respaldo restaurada"
 
 #: src/hamachi.vala:787
 msgid "Failed to restore backup"
@@ -924,7 +924,7 @@ msgstr "Si elimina una red se perderá permanentemente."
 
 #: src/preferences.vala:103
 msgid "Not present"
-msgstr ""
+msgstr "No presente"
 
 #: src/preferences.vala:227
 msgid "All supported archives"
@@ -1033,7 +1033,7 @@ msgstr ""
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Se copió en el portapapeles"
 
 #: src/window.vala:372
 msgid "Hamachi Is Not Installed"
