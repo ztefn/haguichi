@@ -94,7 +94,7 @@ namespace Haguichi {
         public void on_drag_begin (Gdk.Drag drag) {
             var drag_row = new CommandsEditorRow (editor, is_active, is_default, label, command_ipv4, command_ipv6, priority);
             // Property 'use_underline' with value 'true' triggers a segmentation fault here,
-            // so turn it of and remove underscores manually
+            // so turn it off and remove underscores manually
             drag_row.use_underline = false;
             drag_row.title = label.replace ("_", "");
 
