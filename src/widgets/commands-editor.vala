@@ -166,12 +166,13 @@ namespace Haguichi {
             string command_ipv4 = row.command_ipv4.replace (";", "{COLON}");
             string command_ipv6 = row.command_ipv6.replace (";", "{COLON}");
 
-            return row.is_active.to_string () + ";" +
-                   row.is_default.to_string () + ";" +
-                   row.label + ";" +
-                   command_ipv4 + ";" +
-                   command_ipv6 + ";" +
-                   row.priority.to_string ();
+            return string.join (";",
+                row.is_active.to_string (),
+                row.is_default.to_string (),
+                row.label,
+                command_ipv4,
+                command_ipv6,
+                row.priority.to_string ());
         }
 
         private void set_button_sensitivity (string[] commands_string) {
