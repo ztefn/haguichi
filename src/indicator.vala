@@ -29,8 +29,6 @@ namespace Haguichi {
                 icon_postfix = "-symbolic";
             }
 
-            menu = new Menu ();
-
             item = new StatusNotifierItem () {
                 id        = APP_ID + ".indicator",
                 category  = "ApplicationStatus",
@@ -39,7 +37,6 @@ namespace Haguichi {
                 status    = "Active",
                 is_menu   = true,
             };
-            item.menu_model = menu;
             item.scroll.connect ((delta, orientation) => {
                 debug ("scroll delta %d, orientation %s", delta, orientation);
                 if (orientation.down () != "vertical") return;
@@ -81,7 +78,7 @@ namespace Haguichi {
             }
         }
 
-        public void update_status (string mode, bool modal) {
+        public void update_status (string mode, bool modal, bool visible) {
             set_icon (mode);
 
             var status_text = (mode == "Connected") ? _("Connected") : (mode == "Connecting") ? _("Connecting") : _("Disconnected");
@@ -94,7 +91,7 @@ namespace Haguichi {
 
             var show = new MenuItem (_("_Show Haguichi"), "app.toggle-window");
             show.set_attribute_value ("toggle-type", "checkmark");
-            show.set_attribute_value ("toggle-state", (int) win.visible);
+            show.set_attribute_value ("toggle-state", (int) visible);
             show.set_attribute_value ("enabled", !modal);
             menu.append_item (show);
 

@@ -94,6 +94,7 @@ namespace Haguichi {
 
             indicator = new Indicator ();
             indicator.active = ui.get_boolean ("show-indicator");
+            update_indicator_status ();
 
             search_entry.search_changed.connect (()=> {
                 network_list.refilter ();
@@ -436,7 +437,7 @@ namespace Haguichi {
 
         public void update_indicator_status () {
             if (indicator != null) {
-                indicator.update_status (get_mode (), modal_dialog != null);
+                indicator.update_status (get_mode (), modal_dialog != null, visible);
             }
         }
 
