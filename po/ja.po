@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2024-05-03 08:50+0000\n"
+"PO-Revision-Date: 2024-07-16 22:56+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "Language: ja\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2024-05-04 12:32+0000\n"
-"X-Generator: Launchpad (build 35a32c5a77fa9bec38c797a42069c7b9f34c7cc5)\n"
+"X-Launchpad-Export-Date: 2024-07-16 23:04+0000\n"
+"X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -33,17 +33,20 @@ msgstr "Hamachi ネットワークマネージャー"
 #: data/com.github.ztefn.haguichi.desktop.in.in:11
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Hamachi ネットワークを管理します"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:15
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
+"LogMeIn "
+"Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;ネットワーク;インターネット;"
+"ピア;クライアント;フロントエンド;"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
-msgstr ""
+msgstr "Haguichi を使うことで、Hamachi ネットワークへの参加・作成・管理が簡単になります。"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
@@ -59,51 +62,45 @@ msgstr "詳細やアクションに簡単にアクセスできるサイドバー
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
-msgstr ""
+msgstr "主要なアクションに素早くアクセスできるインジケーター"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
-msgstr ""
+msgstr "最新のネットワークイベントを確認できるデスクトップ通知"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "完全にカスタマイズ可能なコマンド"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr "Hamachi 設定フォルダーをバックアップし復元できます"
+msgstr "Hamachi 設定フォルダーのバックアップと復元"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
 "<em>Please note: Requires installation of Hamachi on the system in order to "
 "use.</em>"
-msgstr ""
-"<em>ご注意ください: このアプリを使用するには、システムに Hamachi をインストー"
-"ルする必要があります。</em>"
+msgstr "<em>ご注意ください: このアプリを使用するには、システムに Hamachi をインストールする必要があります。</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "クライアントの情報を表示する"
+msgstr "ネットワークリストとクライアントの情報を表示する"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "選択したメンバーの詳細を表示する"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "選択したネットワークの詳細を表示する"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
-#, fuzzy
 msgid "Search your network list"
-msgstr "検索・並べ替え・折りたたみ可能なネットワークリスト"
+msgstr "ネットワークリストを検索する"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "ネットワークに参加する"
+msgstr "ネットワークに参加・作成する"
 
 #: data/ui/dialogs/add-edit-command.ui:18 data/ui/dialogs/attach.ui:21
 #: data/ui/dialogs/change-access.ui:19 data/ui/dialogs/change-password.ui:19
@@ -148,9 +145,8 @@ msgid "Include all networks created by this client"
 msgstr "このクライアントで作ったすべてのネットワークを含む"
 
 #: data/ui/dialogs/change-access.ui:10 data/ui/sidebar.ui:133
-#, fuzzy
 msgid "Change Access"
-msgstr "ニックネームを変更"
+msgstr "アクセス権限を変更"
 
 #: data/ui/dialogs/change-access.ui:25 data/ui/dialogs/change-password.ui:25
 msgid "C_hange"
@@ -162,7 +158,7 @@ msgstr "ロック"
 
 #: data/ui/dialogs/change-access.ui:54
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "ネットワークメンバーの新規参加を拒否します"
 
 #: data/ui/dialogs/change-access.ui:60
 msgid "Approval"
@@ -219,7 +215,7 @@ msgstr "登録抹消(_E)"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "詳細(_D)"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:519
 #: src/indicator.vala:114
@@ -248,9 +244,8 @@ msgid "_Delete"
 msgstr "削除(_D)"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "ニックネームを変更(_N)…"
+msgstr "アクセス権限を変更(_A)…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -269,9 +264,8 @@ msgid "Configuration"
 msgstr "設定"
 
 #: data/ui/preferences.ui:19
-#, fuzzy
 msgid "Backup"
-msgstr "バックアップを保存"
+msgstr "バックアップ"
 
 #: data/ui/preferences.ui:30
 msgid "Open Folder"
@@ -303,7 +297,7 @@ msgstr "動作"
 
 #: data/ui/preferences.ui:71
 msgid "_Network list update interval"
-msgstr ""
+msgstr "ネットワークリストの更新間隔(_N)"
 
 #: data/ui/preferences.ui:77
 msgid "_Connect automatically on startup"
@@ -332,19 +326,19 @@ msgstr "外観"
 
 #: data/ui/preferences.ui:113
 msgid "_Style"
-msgstr ""
+msgstr "スタイル(_S)"
 
 #: data/ui/preferences.ui:130
 msgid "Follow System"
-msgstr ""
+msgstr "システムに従う"
 
 #: data/ui/preferences.ui:141
 msgid "Light"
-msgstr ""
+msgstr "明るい"
 
 #: data/ui/preferences.ui:153
 msgid "Dark"
-msgstr ""
+msgstr "暗い"
 
 #: data/ui/preferences.ui:163
 msgid "Show _indicator"
@@ -476,23 +470,20 @@ msgid "IPv6 Address"
 msgstr "IPv6 アドレス"
 
 #: data/ui/sidebar.ui:62
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "Hamachi バージョン %s はサポート対象外です"
+msgstr "Hamachi バージョン"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "状態"
 
 #: data/ui/sidebar.ui:85
-#, fuzzy
 msgid "Leave Network"
-msgstr "ネットワークを作成"
+msgstr "ネットワークを離脱"
 
 #: data/ui/sidebar.ui:96
-#, fuzzy
 msgid "Delete Network"
-msgstr "ネットワークを作成"
+msgstr "ネットワークを削除"
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
@@ -516,9 +507,8 @@ msgstr "接続状態"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "コマンド"
+msgstr "コマンド変数"
 
 #: data/ui/widgets/command-entry-row.ui:40
 msgid "Address"
@@ -526,21 +516,19 @@ msgstr "アドレス"
 
 #: data/ui/widgets/command-entry-row.ui:67
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "端末エミュレーター"
 
 #: data/ui/widgets/command-entry-row.ui:73
 msgid "File Manager"
-msgstr ""
+msgstr "ファイルマネージャー"
 
 #: data/ui/widgets/command-entry-row.ui:79
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "リモートデスクトップを開く(_V)"
+msgstr "リモートデスクトップビューアー"
 
 #: data/ui/widgets/commands-editor.ui:11
-#, fuzzy
 msgid "_Restore Default"
-msgstr "復元(_R)"
+msgstr "デフォルトに復元(_R)"
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command…"
@@ -559,13 +547,12 @@ msgid "_Ping"
 msgstr "Ping(_P)"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "デフォルトのアクションとして設定(_S)"
+msgstr "デフォルトのアクション"
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "オプション"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -589,7 +576,7 @@ msgstr "削除(_R)"
 
 #: data/ui/widgets/sidebar-row.ui:10
 msgid "Copy"
-msgstr ""
+msgstr "コピー"
 
 #: data/ui/window.ui:194 src/window.vala:404
 msgid "Initializing"
@@ -597,37 +584,35 @@ msgstr "初期化しています"
 
 #: data/ui/window.ui:240
 msgid "Main Menu"
-msgstr ""
+msgstr "メインメニュー"
 
 #: data/ui/window.ui:257
-#, fuzzy
 msgid "Search networks and members"
-msgstr "Hamachi ネットワークマネージャー"
+msgstr "ネットワークとメンバーを検索"
 
 #: data/ui/window.ui:290
-#, fuzzy
 msgid "Add Network"
-msgstr "ネットワークに参加"
+msgstr "ネットワークを追加"
 
 #: data/ui/window.ui:345
 msgid "You Are Connected!"
-msgstr "接続されました！"
+msgstr "接続されました!"
 
 #: data/ui/window.ui:346
 msgid "Click the + button to add a network"
-msgstr "+ ボタンをクリックしてネットワークを追加してください。"
+msgstr "+ ボタンをクリックしてネットワークを追加してください"
 
 #: data/ui/window.ui:367
 msgid "No Results Found"
-msgstr ""
+msgstr "見つかりませんでした"
 
 #: data/ui/window.ui:368
 msgid "Try a different search"
-msgstr ""
+msgstr "他のキーワードを試してください"
 
 #: data/ui/window.ui:385
 msgid "Please download Hamachi and follow the installation instructions"
-msgstr "Hamachi をダウンロードして手順に従いインストールしてください。"
+msgstr "Hamachi をダウンロードして手順に従いインストールしてください"
 
 #: data/ui/window.ui:391
 msgid "_Download"
@@ -639,7 +624,7 @@ msgstr "Hamachi が未設定です"
 
 #: data/ui/window.ui:411
 msgid "You need to configure Hamachi before you can connect"
-msgstr "接続する前に Hamachi を設定する必要があります。"
+msgstr "接続する前に Hamachi を設定する必要があります"
 
 #: data/ui/window.ui:417
 msgid "C_onfigure"
@@ -761,8 +746,7 @@ msgstr "ネットワーク {1} で {0} がオンラインになりました"
 #: src/controller.vala:784
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
 #: src/controller.vala:806
 msgid "Member Offline"
@@ -777,22 +761,19 @@ msgstr "ネットワーク {1} で {0} がオフラインになりました"
 #: src/controller.vala:810
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] ""
-"ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
+msgstr[0] "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
 #: src/dialogs/add-edit-command.vala:40
 msgid "Edit Command"
 msgstr "コマンドを編集"
 
 #: src/dialogs/add-edit-command.vala:40
-#, fuzzy
 msgid "Add Command"
 msgstr "コマンドを追加"
 
 #: src/dialogs/attach.vala:57
-#, fuzzy
 msgid "Attach request sent"
-msgstr "参加リクエストを送信しました"
+msgstr "関連付けリクエストを送信しました"
 
 #: src/dialogs/attach.vala:66
 msgid "Account not found"
@@ -852,39 +833,36 @@ msgid "Anonymous"
 msgstr "匿名"
 
 #: src/hamachi.vala:692 src/hamachi.vala:694
-#, fuzzy
 msgid "Password changed"
-msgstr "パスワード"
+msgstr "パスワードを変更しました"
 
 #: src/hamachi.vala:715
-#, fuzzy
 msgid "Saving backup…"
-msgstr "バックアップを保存(_S)…"
+msgstr "バックアップを保存しています…"
 
 #: src/hamachi.vala:732
 msgid "Backup saved"
-msgstr ""
+msgstr "バックアップを保存しました"
 
 #: src/hamachi.vala:732
 msgid "Failed to save backup"
-msgstr ""
+msgstr "バックアップの保存に失敗しました"
 
 #: src/hamachi.vala:746
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "バックアップから復元(_R)…"
+msgstr "バックアップから復元しています…"
 
 #: src/hamachi.vala:787
 msgid "Backup restored"
-msgstr ""
+msgstr "バックアップから復元しました"
 
 #: src/hamachi.vala:787
 msgid "Failed to restore backup"
-msgstr ""
+msgstr "バックアップからの復元に失敗しました"
 
 #: src/hamachi.vala:794
 msgid "Archive does not contain expected files"
-msgstr "期待したファイルがアーカイブ内に見当たりません。"
+msgstr "期待したファイルがアーカイブ内に見当たりません"
 
 #: src/indicator.vala:87 src/window.vala:406
 msgid "Connecting"
@@ -908,10 +886,11 @@ msgstr "接続(_O)"
 
 #: src/member.vala:229
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
-msgstr "ネットワーク “{1}” からメンバー “{0}” を登録抹消してもよろしいですか？"
+msgstr "ネットワーク “{1}” からメンバー “{0}” を登録抹消してもよろしいですか?"
 
 #: src/member.vala:230
-msgid "If admitted, evicted members can rejoin the network at any later time."
+msgid ""
+"If admitted, evicted members can rejoin the network at any later time."
 msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加できます。"
 
 #: src/network.vala:138
@@ -920,7 +899,7 @@ msgstr "あなた"
 
 #: src/network.vala:331
 msgid "Are you sure you want to leave the network “{0}”?"
-msgstr "ネットワーク “{0}” から離脱してもよろしいですか？"
+msgstr "ネットワーク “{0}” から離脱してもよろしいですか?"
 
 #: src/network.vala:332
 msgid "If admitted, you can rejoin the network at any later time."
@@ -928,7 +907,7 @@ msgstr "承認されれば、後でいつでもネットワークに再参加で
 
 #: src/network.vala:360
 msgid "Are you sure you want to delete the network “{0}”?"
-msgstr "ネットワーク “{0}” を削除してもよろしいですか？"
+msgstr "ネットワーク “{0}” を削除してもよろしいですか?"
 
 #: src/network.vala:361
 msgid "If you delete a network, it will be permanently lost."
@@ -936,7 +915,7 @@ msgstr "ネットワークを削除すると、そのネットワークは元に
 
 #: src/preferences.vala:103
 msgid "Not present"
-msgstr ""
+msgstr "存在しない"
 
 #: src/preferences.vala:227
 msgid "All supported archives"
@@ -955,21 +934,20 @@ msgid "_Restore"
 msgstr "復元(_R)"
 
 #: src/preferences.vala:310
-#, fuzzy
 msgid "Never"
-msgstr "元に戻す(_R)"
+msgstr "しない"
 
 #: src/preferences.vala:329
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
+msgstr[0] "%S 秒"
 
 #: src/preferences.vala:333
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
+msgstr[0] "%S 分"
 
 #: src/sidebar.vala:161
 msgid "Unavailable"
@@ -981,7 +959,7 @@ msgstr "保留中"
 
 #: src/sidebar.vala:180
 msgid "Not attached"
-msgstr ""
+msgstr "関連付けなし"
 
 #: src/sidebar.vala:196
 msgid "{0} online, {1} total"
@@ -1025,11 +1003,11 @@ msgstr "直接接続"
 
 #: src/widgets/commands-editor.vala:54
 msgid "Restore default commands?"
-msgstr ""
+msgstr "デフォルトのコマンドを復元しますか?"
 
 #: src/widgets/commands-editor.vala:55
 msgid "All customizations will be lost."
-msgstr ""
+msgstr "すべての個人設定が破棄されます。"
 
 #: src/window.vala:136
 msgid "Configuring"
@@ -1044,7 +1022,7 @@ msgstr ""
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "クリップボードにコピーしました"
 
 #: src/window.vala:372
 msgid "Hamachi Is Not Installed"
@@ -1059,4 +1037,4 @@ msgstr "Hamachi バージョン %s はサポート対象外です"
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
-msgstr ""
+msgstr "接続を監視し通知を送信できるよう、Haguichi はウィンドウを閉じても常駐します。"
