@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2022-08-28 16:05+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
+"PO-Revision-Date: 2024-07-25 06:57+0000\n"
+"Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2022-08-28 16:08+0000\n"
-"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
+"X-Launchpad-Export-Date: 2024-07-25 21:00+0000\n"
+"X-Generator: Launchpad (build 0f7b58d0a728e5e8f34556869262ccfa55217529)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -33,7 +33,7 @@ msgstr "Manajer Jaringan Hamachi"
 #: data/com.github.ztefn.haguichi.desktop.in.in:11
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Kelola jaringan Hamachi Anda"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:15
@@ -67,41 +67,39 @@ msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "Perintah yang dapat dikustomisasi sepenuhnya"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr "Cadangkan dan simpang ulang pelipat konfigurasi Hamachi anda"
+msgstr "Cadangkan dan pulihkan folder konfigurasi Hamachi Anda"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
 "<em>Please note: Requires installation of Hamachi on the system in order to "
 "use.</em>"
 msgstr ""
+"<em>Harap diperhatikan: Membutuhkan pemasangan Hamachi pada sistem agar "
+"dapat digunakan.</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "Tampilkan informasi klien"
+msgstr "Lihat daftar jaringan dan informasi klien Anda"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "Lihat rincian anggota yang dipilih"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "Lihat rincian jaringan yang dipilih"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
-#, fuzzy
 msgid "Search your network list"
-msgstr "Senarai Jaringan yang dapat ditelusuri, diurutkan dan diciutkan"
+msgstr "Cari daftar jaringan Anda"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "Bergabung dalam jaringan"
+msgstr "Bergabung atau buat jaringan"
 
 #: data/ui/dialogs/add-edit-command.ui:18 data/ui/dialogs/attach.ui:21
 #: data/ui/dialogs/change-access.ui:19 data/ui/dialogs/change-password.ui:19
@@ -146,9 +144,8 @@ msgid "Include all networks created by this client"
 msgstr "Sertakan seluruh jaringan yang dibuat oleh klien"
 
 #: data/ui/dialogs/change-access.ui:10 data/ui/sidebar.ui:133
-#, fuzzy
 msgid "Change Access"
-msgstr "Ganti Nama Panggilan"
+msgstr "Ubah Akses"
 
 #: data/ui/dialogs/change-access.ui:25 data/ui/dialogs/change-password.ui:25
 msgid "C_hange"
@@ -160,7 +157,7 @@ msgstr "Terkunci"
 
 #: data/ui/dialogs/change-access.ui:54
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Jangan terima anggota jaringan baru"
 
 #: data/ui/dialogs/change-access.ui:60
 msgid "Approval"
@@ -246,9 +243,8 @@ msgid "_Delete"
 msgstr "_Hapus"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "Ganti _Nama Panggilan…"
+msgstr "Ubah _Akses…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -267,9 +263,8 @@ msgid "Configuration"
 msgstr "Konfigurasi"
 
 #: data/ui/preferences.ui:19
-#, fuzzy
 msgid "Backup"
-msgstr "Simpan data cadangan"
+msgstr ""
 
 #: data/ui/preferences.ui:30
 msgid "Open Folder"
@@ -334,15 +329,15 @@ msgstr ""
 
 #: data/ui/preferences.ui:130
 msgid "Follow System"
-msgstr ""
+msgstr "Ikuti Sistem"
 
 #: data/ui/preferences.ui:141
 msgid "Light"
-msgstr ""
+msgstr "Terang"
 
 #: data/ui/preferences.ui:153
 msgid "Dark"
-msgstr ""
+msgstr "Gelap"
 
 #: data/ui/preferences.ui:163
 msgid "Show _indicator"
@@ -474,23 +469,20 @@ msgid "IPv6 Address"
 msgstr "Alamat IPv6"
 
 #: data/ui/sidebar.ui:62
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "Hamachi versi %s sudah kedaluwarsa"
+msgstr "Versi Hamachi"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "Status"
 
 #: data/ui/sidebar.ui:85
-#, fuzzy
 msgid "Leave Network"
-msgstr "Buat Jaringan"
+msgstr "Keluar dari Jaringan"
 
 #: data/ui/sidebar.ui:96
-#, fuzzy
 msgid "Delete Network"
-msgstr "Buat Jaringan"
+msgstr "Hapus Jaringan"
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
@@ -514,9 +506,8 @@ msgstr "Koneksi"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "Perintah"
+msgstr "Variabel Perintah"
 
 #: data/ui/widgets/command-entry-row.ui:40
 msgid "Address"
@@ -528,17 +519,15 @@ msgstr ""
 
 #: data/ui/widgets/command-entry-row.ui:73
 msgid "File Manager"
-msgstr ""
+msgstr "Pengelola Berkas"
 
 #: data/ui/widgets/command-entry-row.ui:79
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "_Lihat Remote Destop"
+msgstr ""
 
 #: data/ui/widgets/commands-editor.ui:11
-#, fuzzy
 msgid "_Restore Default"
-msgstr "_Pulihkan"
+msgstr ""
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command…"
@@ -557,13 +546,12 @@ msgid "_Ping"
 msgstr "_Ping"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "_Set sebagai tindakan default"
+msgstr ""
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "Pilihan"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -587,7 +575,7 @@ msgstr "_Hapus"
 
 #: data/ui/widgets/sidebar-row.ui:10
 msgid "Copy"
-msgstr ""
+msgstr "Salin"
 
 #: data/ui/window.ui:194 src/window.vala:404
 msgid "Initializing"
@@ -595,17 +583,15 @@ msgstr "Menginisialisasi"
 
 #: data/ui/window.ui:240
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Utama"
 
 #: data/ui/window.ui:257
-#, fuzzy
 msgid "Search networks and members"
-msgstr "Manajer Jaringan Hamachi"
+msgstr "Cari jaringan dan anggota"
 
 #: data/ui/window.ui:290
-#, fuzzy
 msgid "Add Network"
-msgstr "Bergabung ke dalam jaringan"
+msgstr "Tambah Jaringan"
 
 #: data/ui/window.ui:345
 msgid "You Are Connected!"
@@ -617,11 +603,11 @@ msgstr "Klik tombol + untuk menambah jaringan"
 
 #: data/ui/window.ui:367
 msgid "No Results Found"
-msgstr ""
+msgstr "Tak Ada Hasil yang Ditemukan"
 
 #: data/ui/window.ui:368
 msgid "Try a different search"
-msgstr ""
+msgstr "Coba pencarian lain"
 
 #: data/ui/window.ui:385
 msgid "Please download Hamachi and follow the installation instructions"
@@ -781,14 +767,12 @@ msgid "Edit Command"
 msgstr "Sunting Perintah"
 
 #: src/dialogs/add-edit-command.vala:40
-#, fuzzy
 msgid "Add Command"
-msgstr "_Tambah Perintah…"
+msgstr "Tambah Perintah"
 
 #: src/dialogs/attach.vala:57
-#, fuzzy
 msgid "Attach request sent"
-msgstr "Permintaan bergabung terkirim"
+msgstr ""
 
 #: src/dialogs/attach.vala:66
 msgid "Account not found"
@@ -848,14 +832,12 @@ msgid "Anonymous"
 msgstr "Anonim"
 
 #: src/hamachi.vala:692 src/hamachi.vala:694
-#, fuzzy
 msgid "Password changed"
-msgstr "Kata Sandi"
+msgstr "Kata sandi diubah"
 
 #: src/hamachi.vala:715
-#, fuzzy
 msgid "Saving backup…"
-msgstr "_Simpan data cadangan…"
+msgstr ""
 
 #: src/hamachi.vala:732
 msgid "Backup saved"
@@ -866,9 +848,8 @@ msgid "Failed to save backup"
 msgstr ""
 
 #: src/hamachi.vala:746
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "_Pulihkan dari data cadangan…"
+msgstr ""
 
 #: src/hamachi.vala:787
 msgid "Backup restored"
@@ -954,21 +935,20 @@ msgid "_Restore"
 msgstr "_Pulihkan"
 
 #: src/preferences.vala:310
-#, fuzzy
 msgid "Never"
-msgstr "_Kembalikan"
+msgstr "Jangan Pernah"
 
 #: src/preferences.vala:329
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
+msgstr[0] "%S detik"
 
 #: src/preferences.vala:333
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
+msgstr[0] "%S menit"
 
 #: src/sidebar.vala:161
 msgid "Unavailable"
@@ -980,7 +960,7 @@ msgstr "tertunda"
 
 #: src/sidebar.vala:180
 msgid "Not attached"
-msgstr ""
+msgstr "Tidak dilampirkan"
 
 #: src/sidebar.vala:196
 msgid "{0} online, {1} total"
@@ -1038,12 +1018,13 @@ msgstr "Mengkonfigurasi"
 #: src/window.vala:268
 msgid "translator-credits"
 msgstr ""
+"Abdul Munif Hanafi https://launchpad.net/~hahnavi\n"
 "Fattah Rizki https://launchpad.net/~galamarv\n"
 "Hertatijanto Hartono https://launchpad.net/~dvertx"
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Disalin ke papan klip"
 
 #: src/window.vala:372
 msgid "Hamachi Is Not Installed"
@@ -1059,3 +1040,5 @@ msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
 msgstr ""
+"Haguichi akan terus berjalan ketika jendelanya ditutup sehingga dapat "
+"memantau koneksi dan mengirimkan notifikasi."
