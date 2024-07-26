@@ -1,4 +1,4 @@
-<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 16 16">
- <path style="color:#000000;enable-background:new" d="m9 16h5.0261l-6.4675-7.0253-3.0369 2.1483z" fill="#bebebe"/>
- <path opacity=".35" style="color:#000000;enable-background:new" d="m9 1h5.0261l-6.9064 7.5-2.5893 2.632-2.4368-2.632z" fill="#bebebe"/>
+<svg version="1.1" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+ <path d="m8.0004 16h5.0261l-6.4675-7.0253-3.0369 2.1483z" fill="#bebebe"/>
+ <path d="m8.0004 1h5.0261l-6.9064 7.5-2.5893 2.632-2.4368-2.632z" fill="#bebebe" opacity=".35"/>
 </svg>

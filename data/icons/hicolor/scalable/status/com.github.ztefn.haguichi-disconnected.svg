@@ -1,12 +1,6 @@
-<svg id="SVGRoot" version="1.1" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
- <g>
-  <g transform="translate(0,-172)" enable-background="new">
-   <path d="m24 234 80-50v4.0001l-46.303 50-17.36 17.547-16.337-17.547z" color="#000000" enable-background="new" fill="#c0bfbc"/>
-   <path d="m70.303 184h33.697l-46.303 50-17.36 17.547-16.337-17.547z" color="#000000" enable-background="new" fill="#deddda"/>
-  </g>
-  <g transform="translate(0,-172)" enable-background="new">
-   <path d="m70.303 288h33.697v-4.0001l-63.663-32.453-0.05833 3.94z" color="#000000" enable-background="new" fill="#9a9996"/>
-   <path d="m70.303 284h33.697l-43.361-46.835-20.361 14.322z" color="#000000" enable-background="new" fill="#c0bfbc"/>
-  </g>
- </g>
+<svg width="128" height="128" version="1.0" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+ <path d="m16 62 88-54v4l-50.933 54.154-19.067 18.846-18-19z" fill="#c0bfbc"/>
+ <path d="m67 8.0001h37l-50.933 53.846-19.067 19.154-18-19.154z" fill="#deddda"/>
+ <path d="m66.933 120h37.067v-4l-70-35-4e-6 4z" fill="#9a9996"/>
+ <path d="m66.933 116h37.067l-47.697-50.746-22.397 15.732z" fill="#c0bfbc"/>
 </svg>
