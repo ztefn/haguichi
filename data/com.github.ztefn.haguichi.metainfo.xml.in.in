@@ -53,7 +53,7 @@
   </requires>
   <branding>
     <color type="primary" scheme_preference="light">#ffdbbc</color>
-    <color type="primary" scheme_preference="dark">#f02b2b</color>
+    <color type="primary" scheme_preference="dark">#910e08</color>
   </branding>
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
