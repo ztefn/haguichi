@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-15 15:13+0200\n"
-"PO-Revision-Date: 2024-07-25 06:57+0000\n"
+"PO-Revision-Date: 2024-07-27 14:48+0000\n"
 "Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
 "Language: id\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2024-07-25 21:00+0000\n"
-"X-Generator: Launchpad (build 0f7b58d0a728e5e8f34556869262ccfa55217529)\n"
+"X-Launchpad-Export-Date: 2024-08-03 10:52+0000\n"
+"X-Generator: Launchpad (build e3ace39cea497a5ecb83e8fb6dd8e7e169f02939)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -214,7 +214,7 @@ msgstr "_Keluarkan"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "_Rincian"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:519
 #: src/indicator.vala:114
@@ -325,7 +325,7 @@ msgstr "Tampilan"
 
 #: data/ui/preferences.ui:113
 msgid "_Style"
-msgstr ""
+msgstr "_Gaya"
 
 #: data/ui/preferences.ui:130
 msgid "Follow System"
@@ -515,7 +515,7 @@ msgstr "Alamat"
 
 #: data/ui/widgets/command-entry-row.ui:67
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "Emulator Terminal"
 
 #: data/ui/widgets/command-entry-row.ui:73
 msgid "File Manager"
@@ -916,7 +916,7 @@ msgstr "Jika anda menghapus jaringan, maka akan hilang secara permanen."
 
 #: src/preferences.vala:103
 msgid "Not present"
-msgstr ""
+msgstr "Tidak ada"
 
 #: src/preferences.vala:227
 msgid "All supported archives"
