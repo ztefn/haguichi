@@ -134,6 +134,7 @@ namespace Haguichi {
                 "mate-terminal",
                 "io.elementary.terminal",
                 "kgx",
+                "ptyxis",
                 "tilix",
                 "xfce4-terminal",
                 "konsole",
@@ -240,10 +241,12 @@ namespace Haguichi {
                 command = command.replace ("%N",  nick   );
                 command = command.replace ("%ID", id     );
 
-                string execute = (terminal == "gnome-terminal") ? "--" : "-e";
-                string quote   = (terminal == "gnome-terminal") ? ""   : "\"";
+                bool use_double_dash = strv_contains ({"gnome-terminal", "ptyxis"}, terminal);
 
-                command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + execute + " " + quote + "\\1" + quote);
+                string option = use_double_dash ? "--" : "-e";
+                string quote  = use_double_dash ? ""   : "\"";
+
+                command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
                 command = command.replace ("%FILEMANAGER",   file_manager);
                 command = command.replace ("%REMOTEDESKTOP", remote_desktop);
                 command = command.replace ("{COLON}",        ";");
