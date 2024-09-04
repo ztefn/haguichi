@@ -2,8 +2,7 @@
 <interface>
   <template class="HaguichiCommandEntryRow" parent="AdwEntryRow">
     <child type="suffix">
-      <object class="GtkMenuButton">
-        <property name="icon-name">info-symbolic</property>
+      <object class="GtkMenuButton" id="menu_button">
         <property name="tooltip-text" translatable="yes">Command Variables</property>
         <property name="valign">center</property>
         <property name="popover">

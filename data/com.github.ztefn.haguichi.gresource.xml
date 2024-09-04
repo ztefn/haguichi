@@ -25,7 +25,4 @@
     <file preprocess="xml-stripblanks">ui/widgets/sidebar-page.ui</file>
     <file preprocess="xml-stripblanks">ui/window.ui</file>
   </gresource>
-  <gresource prefix="/com/github/ztefn/haguichi/icons/scalable/actions">
-    <file preprocess="xml-stripblanks">info-symbolic.svg</file>
-  </gresource>
 </gresources>

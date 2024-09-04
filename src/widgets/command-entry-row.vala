@@ -14,6 +14,9 @@ namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/widgets/command-entry-row.ui")]
     public class CommandEntryRow : Adw.EntryRow {
         [GtkChild]
+        public unowned Gtk.MenuButton menu_button;
+
+        [GtkChild]
         public unowned CommandVariableBox address_var;
         [GtkChild]
         public unowned CommandVariableBox nickname_var;
@@ -25,5 +28,13 @@ namespace Haguichi {
         public unowned CommandVariableBox file_manager_var;
         [GtkChild]
         public unowned CommandVariableBox remote_desktop_var;
+
+        construct {
+            menu_button.icon_name = Utils.get_available_theme_icon ({
+                "info-symbolic",
+                "help-info-symbolic",
+                "help-about-symbolic"
+            });
+        }
     }
 }

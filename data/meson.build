@@ -52,7 +52,7 @@ test('Validate schema file', compile_schemas,
 
 resources = gnome.compile_resources(app_name.to_lower() + '-resources', app_id + '.gresource.xml',
       c_name: app_name.to_lower(),
-  source_dir: ['icons/resource', 'stylesheets']
+  source_dir: ['stylesheets']
 )
 
 subdir('icons')
