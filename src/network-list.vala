@@ -379,8 +379,10 @@ namespace Haguichi {
                 add_network (network);
             }
 
-            // Make sure the scrollbar is at top most position
-            list_view.scroll_to (0, ListScrollFlags.NONE, null);
+            if (store.n_items > 0) {
+                // Make sure the scrollbar is at top most position
+                list_view.scroll_to (0, ListScrollFlags.NONE, null);
+            }
         }
 
         public void add_network (Network network) {
