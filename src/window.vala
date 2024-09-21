@@ -46,7 +46,7 @@ namespace Haguichi {
         public unowned Gtk.Stack connected_stack;
 
         [GtkChild]
-        public unowned Gtk.Spinner spinner;
+        public unowned Throbber throbber;
 
         [GtkChild]
         private unowned Gtk.Button configure_button;
@@ -398,7 +398,7 @@ namespace Haguichi {
                 hide_sidebar ();
             }
 
-            spinner.spinning = (mode == "Connecting");
+            throbber.spinning = (mode == "Connecting");
 
             configure_button.sensitive = (mode == "Not configured");
 

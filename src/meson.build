@@ -36,6 +36,7 @@ sources = [
   'widgets/commands-editor-row.vala',
   'widgets/sidebar-row.vala',
   'widgets/sidebar-page.vala',
+  'widgets/throbber.vala',
   'window.vala',
 ]
 
@@ -47,6 +48,13 @@ deps = [
   dependency('libportal',      version: '>= 0.7.1'),
   dependency('libportal-gtk4', version: '>= 0.7.1'),
 ]
+
+if dependency('libadwaita-1').version().version_compare('>= 1.6')
+  add_project_arguments(
+    ['-D', 'ADW_1_6'],
+    language: 'vala'
+  )
+endif
 
 executable(binary_name, config, sources, resources,
   dependencies: deps,
