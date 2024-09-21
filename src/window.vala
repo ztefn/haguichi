@@ -58,7 +58,7 @@ namespace Haguichi {
 
         private Xdp.Portal portal = new Xdp.Portal ();
 
-        public Gtk.Window modal_dialog;
+        public Gtk.Widget modal_dialog;
 
         public Window (Application app) {
             Object (application: app, title: APP_NAME);
@@ -296,18 +296,34 @@ namespace Haguichi {
             app.quit ();
         }
 
-        public void show_dialog (Gtk.Window dialog) {
-            dialog.transient_for = this;
-            dialog.close_request.connect (() => {
-                modal_dialog = null;
-                session.modality_changed (false);
-                update_indicator_status ();
-                return false;
-            });
-            dialog.present ();
+        public void show_dialog (Gtk.Widget widget) {
+            if (widget is Gtk.Window) {
+                var dialog = (Gtk.Window) widget;
+                dialog.transient_for = this;
+                dialog.close_request.connect (() => {
+                    set_modal_dialog (null);
+                    return false;
+                });
+                dialog.present ();
 
+                set_modal_dialog (dialog);
+            }
+#if ADW_1_6
+            else if (widget is Adw.Dialog) {
+                var dialog = (Adw.Dialog) widget;
+                dialog.closed.connect (() => {
+                    set_modal_dialog (null);
+                });
+                dialog.present (this);
+
+                set_modal_dialog (dialog);
+            }
+#endif
+        }
+
+        private void set_modal_dialog (Gtk.Widget? dialog) {
             modal_dialog = dialog;
-            session.modality_changed (true);
+            session.modality_changed (dialog == null ? false : true);
             update_indicator_status ();
         }
 
