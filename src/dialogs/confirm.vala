@@ -38,7 +38,15 @@ namespace Haguichi {
                 }
             });
 
-            win.show_dialog (dialog);
+            if (parent == win) {
+                win.show_dialog (dialog);
+            } else {
+#if ADW_1_6
+                dialog.present (parent);
+#else
+                dialog.present ();
+#endif
+            }
         }
     }
 }
