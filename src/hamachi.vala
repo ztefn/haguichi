@@ -718,7 +718,11 @@ namespace Haguichi {
             return output;
         }
 
+#if ADW_1_6
+        public static void save_config (string path, Adw.PreferencesDialog window) {
+#else
         public static void save_config (string path, Adw.PreferencesWindow window) {
+#endif
             new Thread<void*> (null, () => {
                 var save_toast = new Adw.Toast (_("Saving backup…")) {
                     timeout = 0
@@ -745,7 +749,11 @@ namespace Haguichi {
             });
         }
 
+#if ADW_1_6
+        public static void restore_config (string path, Adw.PreferencesDialog window) {
+#else
         public static void restore_config (string path, Adw.PreferencesWindow window) {
+#endif
             new Thread<void*> (null, () => {
                 string output = Command.return_output ("tar -tvf '%s'".printf (path));
                 debug ("restore_config: Listing archive contents...\n%s", output);

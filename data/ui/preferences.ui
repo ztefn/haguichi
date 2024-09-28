@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiPreferences" parent="AdwPreferencesWindow">
+  <template class="HaguichiPreferences">
     <child>
       <object class="AdwPreferencesPage" id="general_page">
         <property name="title" translatable="yes">General</property>

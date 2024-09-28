@@ -244,9 +244,18 @@ namespace Haguichi {
 
         public void preferences_action () {
             var prefs = new Preferences () {
-              application = app
+#if ADW_1_6
+                search_enabled = true
+#else
+                application = app
+#endif
             };
+#if ADW_1_6
+            prefs.present (null);
+            show_dialog (prefs.get_root ());
+#else
             show_dialog (prefs);
+#endif
         }
 
         private void shortcuts_action () {

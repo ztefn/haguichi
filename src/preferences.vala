@@ -12,7 +12,11 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/preferences.ui")]
+#if ADW_1_6
+    public class Preferences : Adw.PreferencesDialog {
+#else
     public class Preferences : Adw.PreferencesWindow {
+#endif
         private Settings config;
         private Settings behavior;
         private Settings notifications;
@@ -250,7 +254,7 @@ namespace Haguichi {
                 filters      = get_file_filters ()
             };
 
-            dialog.save.begin (this, null, (obj, res) => {
+            dialog.save.begin (win, null, (obj, res) => {
                 try {
                     var file = dialog.save.end (res);
                     var path = file.get_path ();
@@ -272,7 +276,7 @@ namespace Haguichi {
                 filters      = get_file_filters ()
             };
 
-            dialog.open.begin (this, null, (obj, res) => {
+            dialog.open.begin (win, null, (obj, res) => {
                 try {
                     var file = dialog.open.end (res);
                     var path = file.get_path ();
