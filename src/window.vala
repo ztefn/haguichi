@@ -168,8 +168,15 @@ namespace Haguichi {
         }
 
         private void add_network_action (string mode) {
-            var add_network = new JoinCreateNetworkDialog (mode);
-            show_dialog (add_network);
+            new Thread<void*> (null, () => {
+                Idle.add_full (Priority.HIGH_IDLE, () => {
+                    var add_network = new JoinCreateNetworkDialog (mode);
+                    show_dialog (add_network);
+                    return false;
+                });
+
+                return null;
+            });
         }
 
         private void attach_action () {
