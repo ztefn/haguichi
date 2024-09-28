@@ -265,7 +265,11 @@ namespace Haguichi {
 
         public void about_action () {
             var developer_name = "Stephen Brandt";
+#if ADW_1_6
+            var about = new Adw.AboutDialog () {
+#else
             var about = new Adw.AboutWindow () {
+#endif
                 application_name   = APP_NAME,
                 application_icon   = APP_ID,
                 developer_name     = developer_name,
@@ -277,7 +281,12 @@ namespace Haguichi {
                 copyright          = "© 2007-2024 " + developer_name,
                 license_type       = Gtk.License.GPL_3_0,
             };
+#if ADW_1_6
+            about.present (null);
+            show_dialog (about.get_root ());
+#else
             show_dialog (about);
+#endif
         }
 
         public void quit_action () {
@@ -300,6 +309,7 @@ namespace Haguichi {
             if (widget is Gtk.Window) {
                 var dialog = (Gtk.Window) widget;
                 dialog.transient_for = this;
+                dialog.modal = true;
                 dialog.close_request.connect (() => {
                     set_modal_dialog (null);
                     return false;
