@@ -1028,7 +1028,7 @@ msgstr "Configurando"
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/window.vala:268
 msgid "translator-credits"
-msgstr "Rodrigo de Avila https://launchpad.net/~rodrigo.avila"
+msgstr "Rodrigo de Avila https://launchpad.net/~rdeavila"
 
 #: src/window.vala:316
 msgid "Copied to clipboard"
