@@ -259,7 +259,10 @@ namespace Haguichi {
             };
 #if ADW_1_6
             prefs.present (null);
-            show_dialog (prefs.get_root ());
+            var win = (Gtk.Window) prefs.get_root ();
+            win.default_height = 581;
+            win.resizable = true;
+            show_dialog (win);
 #else
             show_dialog (prefs);
 #endif
