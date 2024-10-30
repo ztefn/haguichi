@@ -151,7 +151,7 @@ namespace Haguichi {
         private void set_member_command_menubutton_visible () {
             member_command_menubutton.visible = member != null &&
                                                 member.status.status_int != 3 &&
-                                                Command.get_commands_menu ().get_n_items () > 1;
+                                                Command.get_commands_menu ().get_n_items () > 0;
         }
 
         private void set_version () {
