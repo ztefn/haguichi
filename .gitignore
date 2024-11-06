@@ -1,0 +1,7 @@
+_build
+build
+bin
+obj
+*.userprefs
+*~
+.*

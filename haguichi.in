@@ -1,0 +1,3 @@
+#!/bin/sh
+
+exec mono "@BINDIR@/@APP_NAME@.exe" "$@"

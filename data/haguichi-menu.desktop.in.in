@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=@APP_NAME@
+GenericName=Zero Configuration VPN
+Exec=@BINARY_NAME@
+Terminal=false
+Comment=Join and create local networks over the Internet
+Icon=@ICON_NAME@
+Categories=Network;P2P;GTK;GNOME;
