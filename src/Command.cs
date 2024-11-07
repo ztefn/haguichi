@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -310,7 +310,8 @@ public static class Command
                 output = "timeout";
                 p.Kill ();
             }
-            
+
+            p.WaitForExit ();
             p.Close ();
             p.Dispose ();
         }
