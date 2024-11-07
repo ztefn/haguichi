@@ -1,14 +1,17 @@
 project('Haguichi', 'cs',
+          version: '1.0.27',
     meson_version: '>= 0.59.0',
   default_options: ['prefix=/usr', 'sysconfdir=/etc'],
 )
 
+app_version = meson.project_version()
 app_name    = meson.project_name()
 binary_name = app_name.to_lower()
 icon_name   = app_name.to_lower()
 gettext_pkg = app_name.to_lower()
 
 conf = configuration_data()
+conf.set('VERSION',         app_version)
 conf.set('APP_NAME',        app_name)
 conf.set('BINARY_NAME',     binary_name)
 conf.set('ICON_NAME',       icon_name)

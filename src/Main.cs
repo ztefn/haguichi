@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -80,8 +80,8 @@ class Haguichi
         
         Platform.Init ();
         
-        Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Config.Settings.LocalePath );
-        Catalog.Init ( TextStrings.appName.ToLower (), Config.Settings.LocalePath );
+        Debug.Log ( Debug.Domain.Environment, "Main", "Using the following path for locales: " + Defines.LOCALEDIR );
+        Catalog.Init ( TextStrings.appName.ToLower (), Defines.LOCALEDIR );
         
         TextStrings.Init ();
         Command.Init ();

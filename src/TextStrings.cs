@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -25,12 +25,12 @@ public static class TextStrings
 {
     
     public const  string appName                = "Haguichi";
-    public const  string appVersion             = "1.0.26";
-    public const  string appWebsite             = "http://www.haguichi.net/";
+    public const  string appVersion             = Defines.VERSION;
+    public const  string appWebsite             = "https://haguichi.net";
     public const  string appWebsiteLabel        = "www.haguichi.net";
     public static string appComments;
     public static string appDescription;
-    public static string appCopyright           = "Copyright © 2007-2015 Stephen Brandt";
+    public static string appCopyright           = "Copyright © 2007-2024 Stephen Brandt";
     public const  string appLicense             =
 @"Haguichi is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published
@@ -48,7 +48,7 @@ Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.";
     
     public const  string appInfo                =
 @"Haguichi, a graphical frontend for Hamachi.
-Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>";
+Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>";
             
     public const  string appHelp                =
 @"Usage:
@@ -131,8 +131,8 @@ Türkçe (tr)
     Fedir Zinchuk <fedikw>
 ";
     
-    public const  string helpURL                = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=help";
-    public const  string getHamachiURL          = "http://www.haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
+    public const  string helpURL                = "https://haguichi.net/redirect/?version=" + appVersion + "&action=help";
+    public const  string getHamachiURL          = "https://haguichi.net/redirect/?version=" + appVersion + "&action=get-hamachi";
     
     public static string showApp;
     

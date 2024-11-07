@@ -1,3 +1,9 @@
+defines = configure_file(
+          input: 'Defines.cs.in',
+         output: 'Defines.cs',
+  configuration: conf
+)
+
 sources = [
   'Command.cs',
   'CommandsEditor.cs',
@@ -71,7 +77,7 @@ foreach size : ['12', '18']
   endforeach
 endforeach
 
-executable(app_name, sources,
+executable(app_name, defines, sources,
   dependencies: deps,
        cs_args: args,
        install: true,

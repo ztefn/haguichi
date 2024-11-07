@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -27,7 +27,6 @@ namespace Config
     public static class Settings
     {
         
-        public static string LocalePath                     = AppDomain.CurrentDomain.BaseDirectory + "../../share/locale";
         public static string ConfPath                       = "/apps/" + TextStrings.appName.ToLower () + "/";
         public static string DemoListPath                   = null;
         

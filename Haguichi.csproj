@@ -183,6 +183,7 @@
     <Compile Include="src\Connection.cs" />
     <Compile Include="src\Controller.cs" />
     <Compile Include="src\Debug.cs" />
+    <Compile Include="src\Defines.cs.in" />
     <Compile Include="src\GlobalEvents.cs" />
     <Compile Include="src\Hamachi.cs" />
     <Compile Include="src\Main.cs" />
