@@ -17,9 +17,9 @@
    * dbus-sharp-glib-2.0 (>= 0.6.0)
    * notify-sharp (>= 0.4.0)
 
-  On **Debian based distributions** you can install these packages by running the following command:
+  On **Fedora** you can install these packages by running the following command:
 
-    $ sudo apt install build-essential gettext meson mono-mcs libmono-cil-dev libglib2.0-cil-dev libgtk2.0-cil-dev libdbus2.0-cil-dev libdbus-glib2.0-cil-dev libnotify-cil-dev
+    $ sudo dnf install gettext meson mono-core gtk-sharp2-devel gnome-sharp-devel dbus-sharp-devel dbus-sharp-glib-devel notify-sharp-devel
 
 
   Build options
