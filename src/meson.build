@@ -59,6 +59,12 @@ deps = [
 ]
 
 args = ['-reference:Mono.Posix']
+
+if get_option('enable-appindicator')
+  deps += dependency('appindicator-sharp-0.1')
+  args += '-define:ENABLE_APPINDICATOR'
+endif
+
 icon_path = '../data/icons/hicolor/'
 
 foreach size : ['16', '22', '24', '32', '48', '64']

@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -32,10 +32,7 @@ public class GlobalEvents
         
         MainWindow.quickMenu.SetModality ( ( dialog != null ) );
         
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.SetModality ( ( dialog != null ) );
-        }
+        Platform.appSession.FireModalityChanged ( dialog != null );
         
     }
     
@@ -389,10 +386,7 @@ public class GlobalEvents
             }
         }
         
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.QuitApp ();
-        }
+        Platform.appSession.FireQuitted ();
         
         Debug.Log ( Debug.Domain.Environment, "GlobalEvents.QuitApp", "Unregistering process" );
         Platform.UnregisterSession ();

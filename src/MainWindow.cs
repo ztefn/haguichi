@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -53,6 +53,8 @@ public class MainWindow
     private static VBox connectedBox;
     private static HBox disconnectedBox;
     
+    public static string lastMode;
+    
     
     public MainWindow ()
     {
@@ -87,6 +89,8 @@ public class MainWindow
         appIcons [4] = IconTheme.Default.LoadIcon ( "haguichi", 48, IconLookupFlags.UseBuiltin );
         appIcons [5] = IconTheme.Default.LoadIcon ( "haguichi", 64, IconLookupFlags.UseBuiltin );
         
+        quickMenu = new Menus.QuickMenu ();
+        
         panelIcon = new PanelIcon ();
         panelIcon.Activate += ToggleMainWindow; 
         panelIcon.PopupMenu += StatusIconPopupHandler;
@@ -96,7 +100,6 @@ public class MainWindow
         statusBar = new Statusbar ();
         statusBar.HasResizeGrip = true;
         
-        quickMenu = new Menus.QuickMenu ();
         menuBar = new Menus.Menubar ();
         
         messageBar = new Widgets.MessageBar ();
@@ -236,20 +239,14 @@ public class MainWindow
                 window.Hide ();
                 
                 quickMenu.SetVisibility ( false );
-                if ( Platform.IndicatorSession != null )
-                {
-                    Platform.IndicatorSession.SetVisibility ( false );    
-                }
+                Platform.appSession.FireVisibilityChanged ( false );
             }
             else
             {
                 window.Show ();
                 
                 quickMenu.SetVisibility ( true );
-                if ( Platform.IndicatorSession != null )
-                {
-                    Platform.IndicatorSession.SetVisibility ( true );    
-                }
+                Platform.appSession.FireVisibilityChanged ( true );
             }
         }
         else
@@ -393,15 +390,7 @@ public class MainWindow
     public static void ShowTrayIcon ( bool show )
     {
         
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.Show ( show );
-            panelIcon.Visible = false;
-        }
-        else
-        {
-            panelIcon.Visible = show;
-        }
+        panelIcon.Visible = show;
         
     }
     
@@ -444,12 +433,22 @@ public class MainWindow
     }
     
     
+    public static bool Visible
+    {
+        
+        get {
+            return window.Visible;
+        }
+        
+    }
+    
+    
     public static void Show ( object o, EventArgs args )
     {
         
         Show ();
         
-    }    
+    }
     
     
     public static void Show ()
@@ -464,10 +463,7 @@ public class MainWindow
         }
         
         quickMenu.SetVisibility ( true );
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.SetVisibility ( true );    
-        }
+        Platform.appSession.FireVisibilityChanged ( true );
         
         
         // Move window to the current desktop and correct for any desktop compositor deviation
@@ -511,10 +507,7 @@ public class MainWindow
         window.Hide ();
         
         quickMenu.SetVisibility ( false );
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.SetVisibility ( false );    
-        }
+        Platform.appSession.FireVisibilityChanged ( false );
         
     }
 
@@ -534,18 +527,17 @@ public class MainWindow
 
     private static void SetIndicatorMode ( string mode )
     {
-
-        if ( Platform.IndicatorSession != null )
-        {
-            Platform.IndicatorSession.SetMode ( mode );
-        }
-
+        
+        Platform.appSession.FireModeChanged ( mode );
+        
     }
     
     
     public static void SetMode ( string mode )
     {
-
+        
+        lastMode = mode;
+        
         switch ( mode )
         {
             

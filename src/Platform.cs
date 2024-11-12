@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -26,13 +26,11 @@ using DBus;
 public static class Platform
 {
     
-    public const string appBusName = "org." + TextStrings.appName;
-    public const string indicatorBusName = "org." + TextStrings.appName + ".appindicator";
+    public const string appBusName = "com.github.ztefn.haguichi";
     
     private static Bus bus;
     private static ObjectPath path;
-    private static ApplicationSession appSession;
-    private static IndicatorSession indicatorSession;
+    public static ApplicationSession appSession;
     
     
     [DllImport ( "libc" )] // Linux
@@ -49,7 +47,7 @@ public static class Platform
         BusG.Init ();
         
         bus  = Bus.Session;
-        path = new ObjectPath ( "/org/" + TextStrings.appName );
+        path = new ObjectPath ( "/com/github/ztefn/haguichi" );
         
         if ( Platform.ActiveSession () )
         {
@@ -65,7 +63,6 @@ public static class Platform
             Debug.Log ( Debug.Domain.Environment, "Main", "Registering session" );
             
             RegisterSession ();
-            Command.Execute ( "haguichi-appindicator" );
             
             SetProcessName ();
         }
@@ -125,30 +122,6 @@ public static class Platform
         
         bus.ReleaseName ( appBusName );
         
-    }
-    
-    
-    public static IndicatorSession IndicatorSession
-    {
-        get
-        {
-            if ( indicatorSession != null )
-            {
-                return indicatorSession;
-            }
-            
-            if ( bus.NameHasOwner ( indicatorBusName ) )
-            {
-                indicatorSession = bus.GetObject <IndicatorSession> ( indicatorBusName, path );
-                return indicatorSession;
-            }
-            
-            return null;
-        }
-        set
-        {
-            indicatorSession = value;
-        }
     }
     
 }

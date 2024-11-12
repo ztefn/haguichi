@@ -9,6 +9,17 @@ foreach size : ['16', '22', '24', '32', '48', '64', '256']
   )
 endforeach
 
+foreach size : ['16', '22', '24', '48']
+  foreach state : ['connected', 'connecting-1', 'connecting-2', 'connecting-3', 'disconnected']
+    icon_dir = size + 'x' + size
+
+    install_data(
+          sources: 'hicolor' / size + 'x' + size / icon_name + '-' + state + '.png',
+      install_dir: themes_dir / 'hicolor' / icon_dir / 'status',
+    )
+  endforeach
+endforeach
+
 if get_option('for-ubuntu')
   foreach theme : ['ubuntu-mono-dark', 'ubuntu-mono-light']
     foreach size : ['16', '22', '24']

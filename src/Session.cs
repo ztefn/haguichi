@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -112,26 +112,68 @@ public class ApplicationSession : MarshalByRefObject
         
     }
     
-}
-
-
-[Interface ( Platform.indicatorBusName )]
-public class IndicatorSession : MarshalByRefObject
-{
     
-    public void Show ( bool show )
-    {}
+    public string GetMode ()
+    {
+        
+        return MainWindow.lastMode;
+        
+    }
     
-    public void SetVisibility ( bool visible )
-    {}
     
-    public void SetModality ( bool modal )
-    {}
+    public bool GetModality ()
+    {
+        
+        return Haguichi.modalDialog != null;
+        
+    }
     
-    public void SetMode ( string mode )
-    {}
     
-    public void QuitApp ()
-    {}
+    public bool GetVisibility ()
+    {
+        
+        return MainWindow.Visible;
+        
+    }
+    
+    
+    public delegate void ModeChangedEvent (string mode);
+    public event ModeChangedEvent ModeChanged;
+    internal void FireModeChanged (string mode)
+    {
+        
+        ModeChanged?.Invoke (mode);
+        
+    }
+    
+    
+    public delegate void ModalityChangedEvent (bool modal);
+    public event ModalityChangedEvent ModalityChanged;
+    internal void FireModalityChanged (bool modal)
+    {
+        
+        ModalityChanged?.Invoke (modal);
+        
+    }
+    
+    
+    public delegate void VisibilityChangedEvent (bool visible);
+    public event VisibilityChangedEvent VisibilityChanged;
+    internal void FireVisibilityChanged (bool visible)
+    {
+        
+        VisibilityChanged?.Invoke (visible);
+        
+    }
+    
+    
+    public delegate void QuitEvent ();
+    public event QuitEvent Quitted;
+    internal void FireQuitted ()
+    {
+        
+        Quitted?.Invoke ();
+        
+    }
     
 }

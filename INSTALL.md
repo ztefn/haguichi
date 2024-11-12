@@ -25,6 +25,13 @@
   Build options
   -------------
 
+  **enable-appindicator**
+
+  This option enables appindicator integration and additionally requires the *appindicator-sharp-0.1* development package.
+
+    $ meson configure -Denable-appindicator=true
+
+
   **for-ubuntu**
 
   This option enables Ubuntu integration by installing ubuntu-mono status icons.

@@ -1,6 +1,6 @@
 /*
  * Haguichi, a graphical frontend for Hamachi.
- * Copyright © 2007-2015 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright © 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
  * 
  * Haguichi is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -21,6 +21,9 @@ using System;
 using Gtk;
 using Gdk;
 
+#if ENABLE_APPINDICATOR
+using AppIndicator;
+#endif
 
 public class PanelIcon : StatusIcon
 {
@@ -33,6 +36,10 @@ public class PanelIcon : StatusIcon
     private string connecting2  = "haguichi-connecting-2";
     private string connecting3  = "haguichi-connecting-3";
     private string disconnected = "haguichi-disconnected";
+    
+#if ENABLE_APPINDICATOR
+    private static ApplicationIndicator indicator;
+#endif
     
     
     public PanelIcon ()
@@ -64,6 +71,33 @@ public class PanelIcon : StatusIcon
         
         this.IconName = disconnected;
         
+#if ENABLE_APPINDICATOR
+        indicator = new ApplicationIndicator ( "haguichi",
+                                               "haguichi-disconnected",
+                                               Category.ApplicationStatus );
+
+        indicator.Status = AppIndicator.Status.Active;
+        indicator.Menu = MainWindow.quickMenu;
+        indicator.ScrollEvent += delegate ( object o, AppIndicator.ScrollEventArgs args )
+        {
+            // Never hide the main window when a modal dialog is being shown
+            if ( Haguichi.modalDialog != null )
+            {
+                return;
+            }
+            
+            // Show the main window when scrolling up and hide it when scrolling down
+            if ( args.Direction == ScrollDirection.Up )
+            {
+                MainWindow.Show ();
+            }
+            else if ( args.Direction == ScrollDirection.Down )
+            {
+                MainWindow.Hide ();
+            }
+        };
+#endif
+        
     }
     
     
@@ -84,24 +118,36 @@ public class PanelIcon : StatusIcon
             case "Connected":
             
                 this.IconName = connected;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = connected;
+#endif
             
                 break;
                 
             case "Disconnected":
             
                 this.IconName = disconnected;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = disconnected;
+#endif
             
                 break;
             
             case "Not configured":
             
                 this.IconName = disconnected;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = disconnected;
+#endif
             
                 break;
             
             case "Not installed":
             
                 this.IconName = disconnected;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = disconnected;
+#endif
             
                 break;
             
@@ -118,16 +164,25 @@ public class PanelIcon : StatusIcon
             if ( animIcon == 0 )
             {
                 this.IconName = connecting1;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = connecting1;
+#endif
                 animIcon      = 1;
             }
             else if ( animIcon == 1 )
             {
                 this.IconName = connecting2;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = connecting2;
+#endif
                 animIcon      = 2;
             }
             else
             {
                 this.IconName = connecting3;
+#if ENABLE_APPINDICATOR
+                indicator.IconName = connecting3;
+#endif
                 animIcon      = 0;
             }
             
