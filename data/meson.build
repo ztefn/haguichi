@@ -8,7 +8,7 @@ desktop_in = configure_file(
 
 desktop_file = i18n.merge_file(
         input: desktop_in,
-       output: desktop,
+       output: app_name.to_lower() + '.desktop',
          type: 'desktop',
        po_dir: '../po',
       install: true,
