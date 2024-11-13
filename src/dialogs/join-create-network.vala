@@ -14,13 +14,12 @@ namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/join-create-network.ui")]
     public class JoinCreateNetworkDialog : Adw.Window {
         private string mode;
-        private Adw.Toast toast;
 
         [GtkChild]
-        unowned Adw.ToastOverlay toast_overlay;
-
+        unowned Gtk.Revealer revealer;
         [GtkChild]
-        unowned Gtk.Button cancel_button;
+        unowned Gtk.Label message_label;
+
         [GtkChild]
         unowned Gtk.Button add_button;
 
@@ -96,20 +95,20 @@ namespace Haguichi {
                     if (output.contains (".. failed, network not found")) {
                         id_entry.add_css_class ("error");
                         id_entry.grab_focus_without_selecting ();
-                        show_toast (_("Network not found"));
+                        show_message (_("Network not found"));
                     } else if (output.contains (".. failed, invalid password")) {
                         password_entry.add_css_class ("error");
                         password_entry.grab_focus_without_selecting ();
-                        show_toast (_("Invalid password"));
+                        show_message (_("Invalid password"));
                     } else if (output.contains (".. failed, the network is full")) {
-                        show_toast (_("Network is full"));
+                        show_message (_("Network is full"));
                     } else if (output.contains (".. failed, network is locked")) {
-                        show_toast (_("Network is locked"));
+                        show_message (_("Network is locked"));
                     } else if (output.contains (".. failed, you are already a member") ||
                                output.contains (".. failed, you are an owner")) {
-                        show_toast (_("Network already joined"));
+                        show_message (_("Network already joined"));
                     } else {
-                        show_toast (output.strip ());
+                        show_message (output.strip ());
                     }
 
                     return false;
@@ -169,9 +168,9 @@ namespace Haguichi {
                     if (output.contains (".. failed, network name is already taken")) {
                         id_entry.add_css_class ("error");
                         id_entry.grab_focus_without_selecting ();
-                        show_toast (_("Network ID is already taken"));
+                        show_message (_("Network ID is already taken"));
                     } else {
-                        show_toast (output.strip ());
+                        show_message (output.strip ());
                     }
 
                     return false;
@@ -183,7 +182,7 @@ namespace Haguichi {
 
         [GtkCallback]
         private void entry_changed () {
-            dismiss_toast ();
+            dismiss_message ();
 
             id_entry.remove_css_class ("error");
             password_entry.remove_css_class ("error");
@@ -193,20 +192,18 @@ namespace Haguichi {
         }
 
         private void set_buttons_sensitivity (bool sensitive) {
-            cancel_button.sensitive = sensitive;
             add_button.sensitive = sensitive;
         }
 
-        private void show_toast (string title) {
-            dismiss_toast ();
-            toast = new Adw.Toast (title);
-            toast_overlay.add_toast (toast);
+        private void show_message (string message) {
+            if (message != "") {
+                revealer.reveal_child = true;
+                message_label.label = message;
+            }
         }
 
-        private void dismiss_toast () {
-            if (toast != null) {
-                toast.dismiss ();
-            }
+        private void dismiss_message () {
+            revealer.reveal_child = false;
         }
     }
 }

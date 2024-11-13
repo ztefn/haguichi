@@ -13,13 +13,11 @@
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/attach.ui")]
     public class AttachDialog : Adw.Window {
-        private Adw.Toast toast;
-
         [GtkChild]
-        unowned Adw.ToastOverlay toast_overlay;
-
+        unowned Gtk.Revealer revealer;
         [GtkChild]
-        unowned Gtk.Button cancel_button;
+        unowned Gtk.Label message_label;
+
         [GtkChild]
         unowned Gtk.Button attach_button;
 
@@ -63,9 +61,9 @@ namespace Haguichi {
                             output.contains (".. failed, [248]")) {
                             account_entry.add_css_class ("error");
                             account_entry.grab_focus_without_selecting ();
-                            show_toast (_("Account not found"));
+                            show_message (_("Account not found"));
                         } else {
-                            show_toast (output.strip ());
+                            show_message (output.strip ());
                         }
                     }
 
@@ -78,26 +76,24 @@ namespace Haguichi {
 
         [GtkCallback]
         private void entry_changed () {
-            dismiss_toast ();
+            dismiss_message ();
             account_entry.remove_css_class ("error");
             attach_button.sensitive = account_entry.text.length > 0;
         }
 
         private void set_buttons_sensitivity (bool sensitive) {
-            cancel_button.sensitive = sensitive;
             attach_button.sensitive = sensitive;
         }
 
-        private void show_toast (string title) {
-            dismiss_toast ();
-            toast = new Adw.Toast (title);
-            toast_overlay.add_toast (toast);
+        private void show_message (string message) {
+            if (message != "") {
+                revealer.reveal_child = true;
+                message_label.label = message;
+            }
         }
 
-        private void dismiss_toast () {
-            if (toast != null) {
-                toast.dismiss ();
-            }
+        private void dismiss_message () {
+            revealer.reveal_child = false;
         }
     }
 }

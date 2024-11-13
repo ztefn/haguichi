@@ -3,74 +3,78 @@
   <template class="HaguichiJoinCreateNetworkDialog" parent="AdwWindow">
     <property name="modal">true</property>
     <property name="default-widget">add_button</property>
-    <property name="default-width">440</property>
-    <property name="default-height">182</property>
-    <property name="width-request">360</property>
-    <property name="height-request">150</property>
+    <property name="default-width">360</property>
+    <property name="resizable">false</property>
     <property name="content">
-      <object class="AdwToastOverlay" id="toast_overlay">
-        <child>
-          <object class="AdwToolbarView">
-            <child type="top">
-              <object class="GtkHeaderBar">
-                <property name="show-title-buttons">false</property>
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar"/>
+        </child>
+        <property name="content">
+          <object class="AdwClamp">
+            <child>
+              <object class="GtkBox">
+                <property name="margin-start">12</property>
+                <property name="margin-end">12</property>
+                <property name="orientation">vertical</property>
                 <child>
-                  <object class="GtkButton" id="cancel_button">
-                    <property name="action-name">window.close</property>
-                    <property name="label" translatable="yes">_Cancel</property>
-                    <property name="use-underline">true</property>
+                  <object class="GtkListBox">
+                    <property name="margin-top">6</property>
+                    <property name="margin-bottom">3</property>
+                    <property name="hexpand">true</property>
+                    <property name="valign">start</property>
+                    <property name="selection-mode">none</property>
+                    <style>
+                      <class name="boxed-list"/>
+                    </style>
+                    <child>
+                      <object class="AdwEntryRow" id="id_entry">
+                        <property name="title" translatable="yes">Network ID</property>
+                        <property name="activates-default">true</property>
+                        <signal name="changed" handler="entry_changed"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="AdwPasswordEntryRow" id="password_entry">
+                        <property name="title" translatable="yes">Password</property>
+                        <property name="activates-default">true</property>
+                        <signal name="changed" handler="entry_changed"/>
+                      </object>
+                    </child>
                   </object>
                 </child>
-                <child type="end">
+                <child>
+                  <object class="GtkRevealer" id="revealer">
+                    <child>
+                      <object class="GtkLabel" id="message_label">
+                        <property name="halign">start</property>
+                        <property name="margin-top">9</property>
+                        <property name="wrap">true</property>
+                        <style>
+                          <class name="error"/>
+                        </style>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+                <child>
                   <object class="GtkButton" id="add_button">
                     <property name="use-underline">true</property>
+                    <property name="halign">center</property>
+                    <property name="margin-top">15</property>
+                    <property name="margin-bottom">18</property>
                     <property name="sensitive">false</property>
                     <signal name="clicked" handler="add_network"/>
                     <style>
+                      <class name="pill"/>
                       <class name="suggested-action"/>
                     </style>
                   </object>
                 </child>
               </object>
             </child>
-            <property name="content">
-              <object class="GtkScrolledWindow">
-                <child>
-                  <object class="AdwClamp">
-                    <child>
-                      <object class="GtkListBox">
-                        <property name="margin-start">12</property>
-                        <property name="margin-top">12</property>
-                        <property name="margin-bottom">12</property>
-                        <property name="margin-end">12</property>
-                        <property name="hexpand">true</property>
-                        <property name="valign">start</property>
-                        <property name="selection-mode">none</property>
-                        <style>
-                          <class name="boxed-list"/>
-                        </style>
-                        <child>
-                          <object class="AdwEntryRow" id="id_entry">
-                            <property name="title" translatable="yes">Network ID</property>
-                            <property name="activates-default">true</property>
-                            <signal name="changed" handler="entry_changed"/>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="AdwPasswordEntryRow" id="password_entry">
-                            <property name="title" translatable="yes">Password</property>
-                            <property name="activates-default">true</property>
-                            <signal name="changed" handler="entry_changed"/>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </property>
           </object>
-        </child>
+        </property>
       </object>
     </property>
     <child>
