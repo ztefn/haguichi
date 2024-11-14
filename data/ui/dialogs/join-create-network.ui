@@ -3,7 +3,7 @@
   <template class="HaguichiJoinCreateNetworkDialog" parent="AdwWindow">
     <property name="modal">true</property>
     <property name="default-widget">add_button</property>
-    <property name="default-width">360</property>
+    <property name="default-width">400</property>
     <property name="resizable">false</property>
     <property name="content">
       <object class="AdwToolbarView">
