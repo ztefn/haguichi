@@ -12,7 +12,11 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/change-password.ui")]
+#if ADW_1_6
+    public class ChangePasswordDialog : Adw.Dialog {
+#else
     public class ChangePasswordDialog : Adw.Window {
+#endif
         private Network network;
 
         [GtkChild]
@@ -20,6 +24,10 @@ namespace Haguichi {
 
         public ChangePasswordDialog (Network _network) {
             network = _network;
+#if !ADW_1_6
+            height_request = 100;
+            resizable = false;
+#endif
         }
 
         [GtkCallback]

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiJoinCreateNetworkDialog" parent="AdwWindow">
-    <property name="modal">true</property>
+  <template class="HaguichiJoinCreateNetworkDialog">
     <property name="default-widget">add_button</property>
-    <property name="default-width">400</property>
-    <property name="resizable">false</property>
-    <property name="content">
+    <child>
       <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar"/>
@@ -76,7 +73,7 @@
           </object>
         </property>
       </object>
-    </property>
+    </child>
     <child>
       <object class="GtkShortcutController">
         <property name="scope">managed</property>

@@ -12,7 +12,11 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/attach.ui")]
+#if ADW_1_6
+    public class AttachDialog : Adw.Dialog {
+#else
     public class AttachDialog : Adw.Window {
+#endif
         [GtkChild]
         unowned Gtk.Revealer revealer;
         [GtkChild]
@@ -25,6 +29,12 @@ namespace Haguichi {
         unowned Adw.EntryRow account_entry;
         [GtkChild]
         unowned Adw.SwitchRow include_networks_switch;
+
+        public AttachDialog () {
+#if !ADW_1_6
+            resizable = false;
+#endif
+        }
 
         [GtkCallback]
         private void attach () {

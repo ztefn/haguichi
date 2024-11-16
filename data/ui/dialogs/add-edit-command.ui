@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiAddEditCommandDialog" parent="AdwWindow">
-    <property name="modal">true</property>
+  <template class="HaguichiAddEditCommandDialog">
     <property name="default-widget">save_button</property>
-    <property name="default-width">440</property>
-    <property name="resizable">false</property>
-    <property name="content">
+    <child>
       <object class="AdwToolbarView">
         <child type="top">
           <object class="AdwHeaderBar"/>
@@ -87,7 +84,7 @@
           </object>
         </property>
       </object>
-    </property>
+    </child>
     <child>
       <object class="GtkShortcutController">
         <property name="scope">managed</property>

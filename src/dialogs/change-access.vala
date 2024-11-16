@@ -12,7 +12,11 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/change-access.ui")]
+#if ADW_1_6
+    public class ChangeAccessDialog : Adw.Dialog {
+#else
     public class ChangeAccessDialog : Adw.Window {
+#endif
         private Network network;
 
         [GtkChild]
@@ -21,6 +25,9 @@ namespace Haguichi {
         unowned Adw.ComboRow approval;
 
         public ChangeAccessDialog (Network _network) {
+#if !ADW_1_6
+            resizable = false;
+#endif
             network = _network;
 
             locked.active      = network.lock_state == "locked";

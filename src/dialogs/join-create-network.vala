@@ -12,7 +12,11 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/join-create-network.ui")]
+#if ADW_1_6
+    public class JoinCreateNetworkDialog : Adw.Dialog {
+#else
     public class JoinCreateNetworkDialog : Adw.Window {
+#endif
         private string mode;
 
         [GtkChild]
@@ -31,7 +35,9 @@ namespace Haguichi {
         public JoinCreateNetworkDialog (string _mode) {
             mode  = _mode;
             title = (mode == "Join") ? _("Join Network") : _("Create Network");
-
+#if !ADW_1_6
+            resizable = false;
+#endif
             add_button.label = (mode == "Join") ? _("_Join") : _("C_reate");
         }
 
