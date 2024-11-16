@@ -301,11 +301,9 @@ namespace Haguichi {
                 license_type       = Gtk.License.GPL_3_0,
             };
 #if ADW_1_6
-            about.present (null);
-            show_dialog (about.get_root ());
-#else
-            show_dialog (about);
+            about.width_request = 320;
 #endif
+            show_dialog (about);
         }
 
         public void quit_action () {
