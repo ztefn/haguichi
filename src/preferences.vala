@@ -79,6 +79,9 @@ namespace Haguichi {
         unowned Adw.SwitchRow notify_on_member_offline;
 
         construct {
+#if ADW_1_6
+            ((Adw.BreakpointBin) general_page.get_ancestor (typeof (Adw.BreakpointBin))).width_request = 320;
+#endif
             general_page.icon_name = Utils.get_available_theme_icon ({
                 "applications-system-symbolic",
                 "emblem-system-symbolic",
