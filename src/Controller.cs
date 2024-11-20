@@ -20,7 +20,6 @@
 using System;
 using System.Collections;
 using System.Net;
-using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
 using System.Threading;
 using Gtk;
@@ -260,7 +259,7 @@ public static class Controller
     {
         
         Debug.Log ( Debug.Domain.Info, "Controller.HasInternetConnection", "Trying ping..." );
-        bool success = new Ping ().Send ( IPAddress.Parse ( "8.8.8.8" ), 1000 ).Status == IPStatus.Success;
+        bool success = Command.ReturnOutput ( "bash", "-c \"ping -c1 -W1 8.8.8.8 53 2>&1\"" ).Contains ( "0% packet loss" );
         
         if ( !success )
         {
