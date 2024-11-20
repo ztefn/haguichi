@@ -14,7 +14,7 @@ foreach size : ['16', '22', '24', '48']
     icon_dir = size + 'x' + size
 
     install_data(
-          sources: 'hicolor' / size + 'x' + size / icon_name + '-' + state + '.png',
+          sources: 'hicolor' / icon_dir / icon_name + '-' + state + '.png',
       install_dir: themes_dir / 'hicolor' / icon_dir / 'status',
     )
   endforeach
