@@ -15,21 +15,23 @@ desktop_file = i18n.merge_file(
   install_dir: get_option('datadir') / 'applications'
 )
 
-autostart = app_name.to_lower() + '-autostart.desktop'
+if not get_option('flatpak')
+  autostart = app_name.to_lower() + '-autostart.desktop'
 
-autostart_in = configure_file(
-          input: autostart + '.in.in',
-         output: autostart + '.in',
-  configuration: conf
-)
+  autostart_in = configure_file(
+            input: autostart + '.in.in',
+           output: autostart + '.in',
+    configuration: conf
+  )
 
-i18n.merge_file(
-        input: autostart_in,
-       output: autostart,
-         type: 'desktop',
-       po_dir: '../po',
-      install: true,
-  install_dir: get_option('sysconfdir') / 'xdg' / 'autostart'
-)
+  i18n.merge_file(
+          input: autostart_in,
+         output: autostart,
+           type: 'desktop',
+         po_dir: '../po',
+        install: true,
+    install_dir: get_option('sysconfdir') / 'xdg' / 'autostart'
+  )
+endif
 
 subdir('icons')

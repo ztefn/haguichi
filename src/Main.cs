@@ -18,12 +18,15 @@
  */
 
 using System;
+using System.IO;
 using Gtk;
 using Mono.Unix;
 
 
 class Haguichi
 {
+    
+    public static bool runningInFlatpak;
     
     public static MainWindow mainWindow;
     public static Dialogs.About aboutDialog;
@@ -77,6 +80,9 @@ class Haguichi
         }
         
         Debug.Log ( Debug.Domain.Info, "Main", "Greetings, I am " + TextStrings.appName + " " + TextStrings.appVersion );
+        
+        runningInFlatpak = File.Exists ( "/.flatpak-info" );
+        Debug.Log ( Debug.Domain.Environment, "Main", "Running inside Flatpak sandbox: " + runningInFlatpak );
         
         Platform.Init ();
         

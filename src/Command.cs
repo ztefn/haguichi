@@ -269,6 +269,12 @@ public static class Command
     public static void Execute ( string filename, string args )
     {
         
+        if (Haguichi.runningInFlatpak)
+        {
+            args = "--host " + filename + " " + args;
+            filename = "flatpak-spawn";
+        }
+        
         try
         {
             Process p = new Process ();
@@ -289,6 +295,12 @@ public static class Command
     
     public static string ReturnOutput ( string filename, string args )
     {
+        
+        if (Haguichi.runningInFlatpak)
+        {
+            args = "--host " + filename + " " + args;
+            filename = "flatpak-spawn";
+        }
         
         string output = "error";
         

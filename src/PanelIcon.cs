@@ -38,6 +38,7 @@ public class PanelIcon : StatusIcon
     private string disconnected = "haguichi-disconnected";
     
 #if ENABLE_APPINDICATOR
+    private string icon_prefix  = "com.github.ztefn.";
     private static ApplicationIndicator indicator;
 #endif
     
@@ -119,7 +120,7 @@ public class PanelIcon : StatusIcon
             
                 this.IconName = connected;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = connected;
+                indicator.IconName = icon_prefix + connected;
 #endif
             
                 break;
@@ -128,7 +129,7 @@ public class PanelIcon : StatusIcon
             
                 this.IconName = disconnected;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = disconnected;
+                indicator.IconName = icon_prefix + disconnected;
 #endif
             
                 break;
@@ -137,7 +138,7 @@ public class PanelIcon : StatusIcon
             
                 this.IconName = disconnected;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = disconnected;
+                indicator.IconName = icon_prefix + disconnected;
 #endif
             
                 break;
@@ -146,7 +147,7 @@ public class PanelIcon : StatusIcon
             
                 this.IconName = disconnected;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = disconnected;
+                indicator.IconName = icon_prefix + disconnected;
 #endif
             
                 break;
@@ -165,7 +166,7 @@ public class PanelIcon : StatusIcon
             {
                 this.IconName = connecting1;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = connecting1;
+                indicator.IconName = icon_prefix + connecting1;
 #endif
                 animIcon      = 1;
             }
@@ -173,7 +174,7 @@ public class PanelIcon : StatusIcon
             {
                 this.IconName = connecting2;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = connecting2;
+                indicator.IconName = icon_prefix + connecting2;
 #endif
                 animIcon      = 2;
             }
@@ -181,7 +182,7 @@ public class PanelIcon : StatusIcon
             {
                 this.IconName = connecting3;
 #if ENABLE_APPINDICATOR
-                indicator.IconName = connecting3;
+                indicator.IconName = icon_prefix + connecting3;
 #endif
                 animIcon      = 0;
             }
