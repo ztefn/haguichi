@@ -1,0 +1,432 @@
+{
+    "app-id": "com.github.ztefn.haguichi",
+    "sdk": "org.freedesktop.Sdk",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "22.08",
+    "command": "haguichi",
+    "finish-args": [
+        "--filesystem=home",
+        "--filesystem=/var/lib/logmein-hamachi",
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--own-name=org.Haguichi",
+        "--own-name=org.Haguichi.appindicator",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.kde.StatusNotifierWatcher",
+        /* workaround for dbus-sharp quirk, where it connects unconditionally to the system bus */
+        "--system-talk-name=org.freedesktop.DBus"
+    ],
+    "rename-icon": "haguichi",
+    "rename-desktop-file": "haguichi.desktop",
+    "rename-appdata-file": "haguichi.metainfo.xml",
+    "cleanup": [
+       "*.la",
+        "/include",
+        "/lib/gtk-sharp-2.0",
+        "/lib/mono-source-libs",
+        "/lib/pkgconfig",
+        "/share/aclocal",
+        "/share/gapi-2.0",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/mono-2.0",
+        "/share/sgml",
+        "/share/xml"
+    ],
+    "modules": [
+        {
+            "name": "mono",
+            "config-opts": [
+                "--disable-boehm",
+                "--disable-libraries",
+                "--with-ikvm-native=no",
+                "--with-mcs-docs=no",
+                "--with-profile4=no"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2",
+                    "sha256": "18cb38a670e51609c36c687ed90ad42cfedabeffd0a2dc5f7f0c46249eb8dbef"
+                },
+                /* Mono 4 TermInfo not compatible with ncurses6.1... */
+                {
+                    "type": "patch",
+                    "paths": [
+                      "mono-terminfo-ncurses6.patch",
+                      "mono-terminfo-integer-fix.patch",
+                      "mono-sysmacros-header.patch"
+                    ]
+                }
+            ]
+        },
+        "shared-modules/gtk2/gtk2.json",
+        {
+            "name": "libglade",
+            "config-opts": [
+                "--disable-gtk-doc"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/libglade/2.6/libglade-2.6.4.tar.bz2",
+                    "sha256": "64361e7647839d36ed8336d992fd210d3e8139882269bed47dc4674980165dec"
+                },
+                {
+                    "type": "shell",
+                    "commands": [ "autoreconf -vfi" ]
+                }
+            ]
+        },
+        {
+            "name": "gtk-sharp",
+            "config-opts": [
+                "--disable-monodoc",
+                "--disable-man"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.mono-project.com/sources/gtk-sharp212/gtk-sharp-2.12.45.tar.gz",
+                    "sha256": "02680578e4535441064aac21d33315daa009d742cab8098ac8b2749d86fffb6a"
+                }
+            ]
+        },
+        "shared-modules/dbus-glib/dbus-glib.json",
+        {
+            "name": "gconf",
+            "config-opts": [
+                "--disable-introspection",
+                "--disable-gtk-doc",
+                "--disable-orbit",
+                "--disable-static",
+                "--disable-defaults-service",
+                "--disable-gsettings-backend",
+                "--without-openldap"
+            ],
+            "cleanup": [ "/bin/gconf-merge-tree" ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/GConf/3.2/GConf-3.2.6.tar.xz",
+                    "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
+                },
+                {
+                    "type": "patch",
+                    "path": "gconf-change-service-name.patch"
+                },
+                {
+                    "type": "shell",
+                    "commands": [ "autoreconf -vfi" ]
+                }
+            ]
+        },
+        {
+            "name": "gconf-sharp",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gnome-sharp/2.24/gnome-sharp-2.24.2.tar.bz2",
+                    "sha256": "122b1e03966d63ec3389decf5440fb94285907d1b6be48352dcf6aca292cf7b0"
+                },
+                {
+                    "type": "shell",
+                    "commands": [ "autoreconf -vfi" ]
+                }
+            ]
+        },
+        {
+            "name": "dbus-sharp",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mono/dbus-sharp",
+                    "commit": "2686c4f15d56de301ef506047840814874c8e74f"
+                }
+            ]
+        },
+        {
+            "name": "dbus-sharp-glib",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mono/dbus-sharp-glib",
+                    "commit": "9c003f566efa7cbcb413d6b374ccb15ec8abb330"
+                },
+                {
+                    "type": "patch",
+                    "path": "dbus-sharp-glib-no-system.patch"
+                }
+            ]
+        },
+        {
+            "name": "notify-sharp",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/meebey/notify-sharp",
+                    "commit": "28d2f659985241be222c145719ee5d75aa02b9ee"
+                },
+                {
+                    "type": "patch",
+                    "path": "notify-sharp-compiler-fix.patch"
+                }
+            ]
+        },
+        {
+            "name": "gnome-common",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://ftp.gnome.org/pub/GNOME/sources/gnome-common/3.18/gnome-common-3.18.0.tar.xz",
+                    "sha256": "22569e370ae755e04527b76328befc4c73b62bfd4a572499fde116b8318af8cf"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "libdbusmenu",
+            "build-options": {
+                "cflags": "-DGLIB_DISABLE_DEPRECATION_WARNINGS"
+            },
+            "config-opts": [
+                "--disable-dumper",
+                "--disable-introspection",
+                "--disable-static",
+                "--disable-vala",
+                "--with-gtk=2"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://archive.ubuntu.com/ubuntu/pool/main/libd/libdbusmenu/libdbusmenu_16.04.1+18.10.20180917.orig.tar.gz",
+                    "sha512": "af9f1d58b1eb1b2d6f9a963713779cffc624fd291dc3ac2a32e94908f43b8e4ac49d1ebd7c729aa1e2ad7ae56979704c2000e60d5399bb0fa571cbab54651028"
+                }
+            ],
+            "cleanup": [
+                "/libexec",
+                "/share/libdbusmenu"
+            ]
+        },
+        {
+            "name": "perl-file-which",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/File-Which-1.23.tar.gz",
+                    "sha256": "b79dc2244b2d97b6f27167fc3b7799ef61a179040f3abd76ce1e0a3b0bc4e078"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-alien-build",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Build-2.21.tar.gz",
+                    "sha256": "ebdd6dac2ed2f7fdd5f9a464021124048d1697307dfb1a77af267952e80b07d2"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-path-tiny",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Path-Tiny-0.112.tar.gz",
+                    "sha256": "813df2d140c65f795daefd8eca18e61194ecac7050c5406a069db86dea31cc3a"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-file-chdir",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/File-chdir-0.1010.tar.gz",
+                    "sha256": "efc121f40bd7a0f62f8ec9b8bc70f7f5409d81cd705e37008596c8efc4452b01"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-capture-tiny",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/D/DA/DAGOLDEN/Capture-Tiny-0.48.tar.gz",
+                    "sha256": "6c23113e87bad393308c90a207013e505f659274736638d8c79bac9c67cc3e19"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-alien-libxml2",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/P/PL/PLICEASE/Alien-Libxml2-0.16.tar.gz",
+                    "sha256": "56f06a58054f788dcef8d3b6669fb47d172e9ca0b7a12d0241d9cf7835a53b97"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-xml-libxml",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/XML-LibXML-2.0204.tar.gz",
+                    "sha256": "bd48b539ad4b3d419658db7e69811f3b5fe88c6fa3dd25b30bc83f7f203d2f36"
+                }
+            ],
+            "post-install": [
+                "find /app/lib/perl5 -type f -exec chmod u+w {} \\;"
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "perl-xml-sax-base",
+            "buildsystem": "simple",
+            "build-commands": [
+                "perl Makefile.PL",
+                "make install"
+            ],
+            "build-options": {
+                "env": {
+                    "PERL5LIB": "/app/lib/perl5",
+                    "PERL_MM_OPT": "INSTALL_BASE=/app"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://cpan.metacpan.org/authors/id/G/GR/GRANTM/XML-SAX-Base-1.09.tar.gz",
+                    "sha256": "66cb355ba4ef47c10ca738bd35999723644386ac853abbeb5132841f5e8a2ad0"
+                }
+            ],
+            "cleanup": [ "*" ]
+        },
+        {
+            "name": "libappindicator",
+            "config-opts": [
+                "--disable-introspection",
+                "--disable-static",
+                "--disable-mono-test",
+                "--disable-tests",
+                "--with-gtk=2"
+            ],
+            "build-options": {
+                "env": {
+                    "CSC": "/app/bin/mcs",
+                    "PERL5LIB": "/app/lib/perl5"
+                }
+            },
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "http://archive.ubuntu.com/ubuntu/pool/main/liba/libappindicator/libappindicator_12.10.1+20.04.20200408.1.orig.tar.gz",
+                    "sha256": "c9f3be3b8b23a459162b258712db29d345bde8fe9bfefe235cacd6db07599b06",
+                    "strip-components": 0
+                }
+            ]
+        },
+        {
+            "name": "haguichi",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Denable-appindicator=true",
+                "-Dflatpak=true"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".."
+                }
+            ]
+        }
+    ]
+}
+

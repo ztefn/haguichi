@@ -2,6 +2,7 @@ _build
 build
 bin
 obj
+repo
 *.userprefs
 *~
 .*

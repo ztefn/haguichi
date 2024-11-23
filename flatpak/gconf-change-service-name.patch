@@ -1,0 +1,75 @@
+diff -Naur GConf-3.2.6~/gconf/gconf-dbus.c GConf-3.2.6/gconf/gconf-dbus.c
+--- GConf-3.2.6~/gconf/gconf-dbus.c	2012-10-23 22:13:49.000000000 +0100
++++ GConf-3.2.6/gconf/gconf-dbus.c	2019-06-20 11:30:43.737642941 +0100
+@@ -41,7 +41,7 @@
+ #define d(x) 
+ 
+ #define DAEMON_NAME_OWNER_CHANGED_RULE \
+-    "type='signal',member='NameOwnerChanged',arg0='org.gnome.GConf'"
++    "type='signal',member='NameOwnerChanged',arg0='" GCONF_DBUS_SERVICE "'"
+ #define NOTIFY_RULE \
+     "type='method_call',interface='org.gnome.GConf.Database',member='Notify'"
+ #define DAEMON_DISCONNECTED_RULE \
+diff -Naur GConf-3.2.6~/gconf/gconf-dbus-utils.h GConf-3.2.6/gconf/gconf-dbus-utils.h
+--- GConf-3.2.6~/gconf/gconf-dbus-utils.h	2019-06-20 12:00:12.716631676 +0100
++++ GConf-3.2.6/gconf/gconf-dbus-utils.h	2019-06-20 11:27:07.398742530 +0100
+@@ -25,7 +25,7 @@
+ #include <gconf/gconf.h>
+ #include <gconf/gconf-value.h>
+ 
+-#define GCONF_DBUS_SERVICE                  "org.gnome.GConf"
++#define GCONF_DBUS_SERVICE                  "com.github.ztefn.haguichi.GConf"
+ 
+ #define GCONF_DBUS_SERVER_INTERFACE         "org.gnome.GConf.Server"
+ #define GCONF_DBUS_DATABASE_INTERFACE       "org.gnome.GConf.Database"
+diff -Naur GConf-3.2.6~/gconf/gconfd.c GConf-3.2.6/gconf/gconfd.c
+--- GConf-3.2.6~/gconf/gconfd.c	2012-04-26 02:12:49.000000000 +0100
++++ GConf-3.2.6/gconf/gconfd.c	2019-06-20 11:29:47.880964917 +0100
+@@ -653,7 +653,7 @@
+ 
+   dbus_connection_set_exit_on_disconnect (connection, FALSE);
+ 
+-  result = dbus_bus_request_name (connection, "org.gnome.GConf",
++  result = dbus_bus_request_name (connection, "com.github.ztefn.haguichi.GConf",
+                                   0, &bus_error);
+ 
+   if (dbus_error_is_set (&bus_error))
+diff -Naur GConf-3.2.6~/gconf/Makefile.am GConf-3.2.6/gconf/Makefile.am
+--- GConf-3.2.6~/gconf/Makefile.am	2013-01-22 01:09:35.000000000 +0000
++++ GConf-3.2.6/gconf/Makefile.am	2019-06-20 11:30:19.289346957 +0100
+@@ -162,17 +162,17 @@
+ CLEANFILES += $(gir_DATA) $(typelibs_DATA)
+ endif
+ 
+-EXTRA_DIST=GConfX.idl default.path.in org.gnome.GConf.service.in gconfmarshal.list regenerate-enum-header.sh regenerate-enum-footer.sh
++EXTRA_DIST=GConfX.idl default.path.in com.github.ztefn.haguichi.GConf.service.in gconfmarshal.list regenerate-enum-header.sh regenerate-enum-footer.sh
+ 
+ default.path: $(srcdir)/default.path.in
+ 	sed -e 's,[@]sysgconfdir[@],$(sysgconfdir),g' \
+ 		<$(srcdir)/default.path.in >default.path
+-org.gnome.GConf.service:  $(srcdir)/org.gnome.GConf.service.in
++com.github.ztefn.haguichi.GConf.service:  $(srcdir)/com.github.ztefn.haguichi.GConf.service.in
+ 	sed -e 's,[@]libexecdir[@],$(libexecdir),g' \
+-		<$(srcdir)/org.gnome.GConf.service.in >org.gnome.GConf.service
++		<$(srcdir)/com.github.ztefn.haguichi.GConf.service.in >com.github.ztefn.haguichi.GConf.service
+ 
+ servicedir = $(datadir)/dbus-1/services
+-service_DATA = org.gnome.GConf.service
++service_DATA = com.github.ztefn.haguichi.GConf.service
+ 
+ install-data-local: default.path
+ 	$(mkinstalldirs) $(DESTDIR)$(sysgconfdir)/$(MAJOR_VERSION)
+diff -Naur GConf-3.2.6~/gconf/org.gnome.GConf.service.in GConf-3.2.6/gconf/org.gnome.GConf.service.in
+--- GConf-3.2.6~/gconf/org.gnome.GConf.service.in	2011-08-16 03:59:31.000000000 +0100
++++ GConf-3.2.6/gconf/org.gnome.GConf.service.in	1970-01-01 01:00:00.000000000 +0100
+@@ -1,3 +0,0 @@
+-[D-BUS Service]
+-Name=org.gnome.GConf
+-Exec=@libexecdir@/gconfd-2
+diff -Naur GConf-3.2.6~/gconf/com.github.ztefn.haguichi.GConf.service.in GConf-3.2.6/gconf/com.github.ztefn.haguichi.GConf.service.in
+--- GConf-3.2.6~/gconf/com.github.ztefn.haguichi.GConf.service.in	1970-01-01 01:00:00.000000000 +0100
++++ GConf-3.2.6/gconf/com.github.ztefn.haguichi.GConf.service.in	2019-06-20 11:32:04.146608084 +0100
+@@ -0,0 +1,3 @@
++[D-BUS Service]
++Name=com.github.ztefn.haguichi.GConf
++Exec=@libexecdir@/gconfd-2
