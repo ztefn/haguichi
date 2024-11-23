@@ -15,6 +15,11 @@ desktop_file = i18n.merge_file(
   install_dir: get_option('datadir') / 'applications'
 )
 
+desktop_utils = find_program('desktop-file-validate', required: false)
+if desktop_utils.found()
+  test('Validate desktop file', desktop_utils, args: [desktop_file])
+endif
+
 if not get_option('flatpak')
   autostart = app_name.to_lower() + '-autostart.desktop'
 
@@ -33,5 +38,26 @@ if not get_option('flatpak')
     install_dir: get_option('sysconfdir') / 'xdg' / 'autostart'
   )
 endif
+
+appstream = app_name.to_lower() + '.metainfo.xml'
+
+appstream_in = configure_file(
+          input: appstream + '.in.in',
+         output: appstream + '.in',
+  configuration: conf
+)
+
+appstream_file = i18n.merge_file(
+        input: appstream_in,
+       output: appstream,
+       po_dir: '../po',
+      install: true,
+  install_dir: get_option('datadir') / 'metainfo'
+)
+
+appstreamcli = find_program('appstreamcli', required: false, disabler: true)
+test('Validate appstream file', appstreamcli,
+  args: ['validate', '--no-net', '--explain', appstream_file]
+)
 
 subdir('icons')

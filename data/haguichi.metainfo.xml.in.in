@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>@APP_ID@</id>
+  <metadata_license>CC0</metadata_license>
+  <project_license>GPL-2.0-or-later</project_license>
+  <name translate="no">@APP_NAME@</name>
+  <summary>Manage your Hamachi networks</summary>
+  <description>
+    <p>Haguichi makes it a breeze to join, create and administer Hamachi networks.</p>
+    <p>Features:</p>
+    <ul>
+      <li>Searchable, sortable and collapsible network list</li>
+      <li>Indicator support for quick access to primary actions</li>
+      <li>Desktop notifications to stay up to date of network events</li>
+      <li>Commands that can be completely customized</li>
+      <li>Backup and restore of your Hamachi configuration folder</li>
+    </ul>
+    <p><em>Please note: Requires installation of Hamachi on the system in order to use.</em></p>
+  </description>
+  <screenshots>
+    <screenshot>
+      <caption>Disconnected Main Window</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-disconnected.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Connected Main Window</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-connected.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Search Network List</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-search.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Information Dialog</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/information-dialog.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>General Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-general.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Commands Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-commands.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Desktop Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-desktop.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>About Dialog</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/about-dialog.png</image>
+    </screenshot>
+  </screenshots>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </supports>
+  <recommends>
+    <internet>always</internet>
+  </recommends>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <branding>
+    <color type="primary" scheme_preference="light">#ffdbbc</color>
+    <color type="primary" scheme_preference="dark">#910e08</color>
+  </branding>
+  <content_rating type="oars-1.1" />
+  <launchable type="desktop-id">@APP_ID@.desktop</launchable>
+  <releases>
+    <release version="1.0.26" date="2015-01-17">
+      <description translate="no">
+        <p>Haguichi 1.0.26 introduces search in the network list to filter networks and clients. Just start typing to trigger this feature. If that's a little too easy for your taste you can also navigate to Edit → Find in the menubar or press Ctrl+F. Complete list of changes:</p>
+        <ul>
+          <li>Added a searchbar to filter networks and clients in the treeview.</li>
+          <li>Added accelerators for the actions Join Network (Ctrl+J), Create Network (Ctrl+N) and Show Offline Members (Ctrl+M).</li>
+          <li>Activating the treeview row will not trigger the default command anymore if the selected member is not online.</li>
+          <li>Swapped out dependency on ndesk-dbus(-glib) for dbus-sharp(-glib).</li>
+          <li>Humanity panel icons are not included anymore because that theme has become outdated.</li>
+          <li>Added complete Slovak translation (thanks to Zdeněk Kopš).</li>
+          <li>Updated Czech, Kazakh and Turkish translations.</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://haguichi.net</url>
+  <url type="bugtracker">https://github.com/ztefn/haguichi/issues</url>
+  <url type="faq">https://haguichi.net/faq/</url>
+  <url type="help">https://haguichi.net/tips-and-tricks/</url>
+  <url type="donation">https://haguichi.net/donate/</url>
+  <url type="translate">https://translations.launchpad.net/haguichi</url>
+  <url type="vcs-browser">https://github.com/ztefn/haguichi</url>
+  <developer id="com.stephenbrandt">
+    <name translate="no">Stephen Brandt</name>
+  </developer>
+  <update_contact>stephen@stephenbrandt.com</update_contact>
+  <translation type="gettext">@GETTEXT_PACKAGE@</translation>
+</component>
