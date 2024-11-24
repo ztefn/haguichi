@@ -35,6 +35,9 @@ namespace Config
         public static bool WinMinimized                     = false;
         public static bool WinMaximized                     = false;
         
+        public static int NetworkListIconSizeSmall          = 16;
+        public static int NetworkListIconSizeLarge          = 24;
+        
         public static Key ConnectOnStartup                  = new Key ( "behavior/connect_on_startup", false );
         public static Key ReconnectOnConnectionLoss         = new Key ( "behavior/reconnect_on_connection_loss", true );
         public static Key DisconnectOnQuit                  = new Key ( "behavior/disconnect_on_quit", true );
@@ -54,8 +57,6 @@ namespace Config
         public static Key WinHeight                         = new Key ( "main_window/height", 480 );
         public static Key MemberTemplateSmall               = new Key ( "main_window/member_template_small", "%N%_*" );
         public static Key MemberTemplateLarge               = new Key ( "main_window/member_template_large", "%N%_*<br><span size=\"smaller\">%S <i>%A</i></span>" );
-        public static Key NetworkListIconSizeSmall          = new Key ( "main_window/network_list_icon_size_small", 12 );
-        public static Key NetworkListIconSizeLarge          = new Key ( "main_window/network_list_icon_size_large", 18 );
         public static Key NetworkListLayout                 = new Key ( "main_window/network_list_layout", "normal" );
         public static Key NetworkTemplateSmall              = new Key ( "main_window/network_template_small", "<b>%N</b> (%O/%T)%_*" );
         public static Key NetworkTemplateLarge              = new Key ( "main_window/network_template_large", "<b>%N</b> (%O/%T)%_*<br><span size=\"smaller\">%S</span>" );

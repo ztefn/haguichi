@@ -113,9 +113,7 @@ namespace Config
             if ( ( key == Config.Settings.NetworkTemplateSmall.KeyName ) ||
                  ( key == Config.Settings.NetworkTemplateLarge.KeyName ) ||
                  ( key == Config.Settings.MemberTemplateSmall.KeyName ) ||
-                 ( key == Config.Settings.MemberTemplateLarge.KeyName ) ||
-                 ( key == Config.Settings.NetworkListIconSizeSmall.KeyName ) ||
-                 ( key == Config.Settings.NetworkListIconSizeLarge.KeyName ) )
+                 ( key == Config.Settings.MemberTemplateLarge.KeyName ) )
             {
                 MainWindow.networkView.SetLayout ();
             }

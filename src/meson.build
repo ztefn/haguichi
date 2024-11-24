@@ -77,7 +77,7 @@ foreach size : ['16', '22', '24', '48']
   endforeach
 endforeach
 
-foreach size : ['12', '18']
+foreach size : ['16', '24']
   foreach node : ['error', 'offline', 'online', 'online-relayed', 'unapproved', 'unreachable']
     args += '-resource:' + icon_path + size + 'x' + size + '/' + icon_name + '-node-' + node + '.png,' + size + 'x' + size + '.node-' + node
   endforeach

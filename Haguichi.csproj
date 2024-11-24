@@ -62,23 +62,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-offline.png">
-      <LogicalName>12x12.node-offline</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-offline.png">
+      <LogicalName>16x16.node-offline</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-online.png">
-      <LogicalName>12x12.node-online</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-online.png">
+      <LogicalName>16x16.node-online</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-unapproved.png">
-      <LogicalName>12x12.node-unapproved</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-unapproved.png">
+      <LogicalName>16x16.node-unapproved</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-unreachable.png">
-      <LogicalName>12x12.node-unreachable</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-unreachable.png">
+      <LogicalName>16x16.node-unreachable</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-online-relayed.png">
-      <LogicalName>12x12.node-online-relayed</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-online-relayed.png">
+      <LogicalName>16x16.node-online-relayed</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\12x12\haguichi-node-error.png">
-      <LogicalName>12x12.node-error</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-node-error.png">
+      <LogicalName>16x16.node-error</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi.png">
       <LogicalName>16x16.haguichi</LogicalName>
@@ -98,23 +98,23 @@
     <EmbeddedResource Include="data\icons\hicolor\16x16\haguichi-disconnected.png">
       <LogicalName>16x16.disconnected</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-offline.png">
-      <LogicalName>18x18.node-offline</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-offline.png">
+      <LogicalName>24x24.node-offline</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-online.png">
-      <LogicalName>18x18.node-online</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-online.png">
+      <LogicalName>24x24.node-online</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-unapproved.png">
-      <LogicalName>18x18.node-unapproved</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-unapproved.png">
+      <LogicalName>24x24.node-unapproved</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-unreachable.png">
-      <LogicalName>18x18.node-unreachable</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-unreachable.png">
+      <LogicalName>24x24.node-unreachable</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-online-relayed.png">
-      <LogicalName>18x18.node-online-relayed</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-online-relayed.png">
+      <LogicalName>24x24.node-online-relayed</LogicalName>
     </EmbeddedResource>
-    <EmbeddedResource Include="data\icons\hicolor\18x18\haguichi-node-error.png">
-      <LogicalName>18x18.node-error</LogicalName>
+    <EmbeddedResource Include="data\icons\hicolor\24x24\haguichi-node-error.png">
+      <LogicalName>24x24.node-error</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="data\icons\hicolor\22x22\haguichi.png">
       <LogicalName>22x22.haguichi</LogicalName>

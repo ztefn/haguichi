@@ -102,14 +102,14 @@ public class NetworkView : TreeView
         currentLayout = ( string ) Config.Settings.NetworkListLayout.Value;
         if ( currentLayout == "large" )
         {
-            iconCell.Width = ( int ) Config.Settings.NetworkListIconSizeLarge.Value + 4;
+            iconCell.Width = Config.Settings.NetworkListIconSizeLarge + 4;
             
             networkTemplate = ( string ) Config.Settings.NetworkTemplateLarge.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateLarge.Value;
         }
         else
         {
-            iconCell.Width = ( int ) Config.Settings.NetworkListIconSizeSmall.Value + 4;
+            iconCell.Width = Config.Settings.NetworkListIconSizeSmall + 4;
             
             networkTemplate = ( string ) Config.Settings.NetworkTemplateSmall.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateSmall.Value;
@@ -353,11 +353,11 @@ public class NetworkView : TreeView
         
         if ( currentLayout == "large" )
         {
-            return ( int ) Config.Settings.NetworkListIconSizeLarge.Value;
+            return Config.Settings.NetworkListIconSizeLarge;
         }
         else
         {
-            return ( int ) Config.Settings.NetworkListIconSizeSmall.Value;
+            return Config.Settings.NetworkListIconSizeSmall;
         }
         
     }
@@ -1124,7 +1124,7 @@ public class NetworkView : TreeView
             networkTemplate = ( string ) Config.Settings.NetworkTemplateLarge.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateLarge.Value;
             
-            SetNetworkListIconSize ( ( int ) Config.Settings.NetworkListIconSizeLarge.Value );
+            SetNetworkListIconSize ( Config.Settings.NetworkListIconSizeLarge );
         }
         else
         {
@@ -1133,7 +1133,7 @@ public class NetworkView : TreeView
             networkTemplate = ( string ) Config.Settings.NetworkTemplateSmall.Value;
             memberTemplate  = ( string ) Config.Settings.MemberTemplateSmall.Value;
             
-            SetNetworkListIconSize ( ( int ) Config.Settings.NetworkListIconSizeSmall.Value );
+            SetNetworkListIconSize ( Config.Settings.NetworkListIconSizeSmall );
         }
         
     }
