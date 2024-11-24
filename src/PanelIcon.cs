@@ -159,8 +159,12 @@ public class PanelIcon : StatusIcon
     public void SetVisibility ( bool visible )
     {
         
-        Visible = visible;
+#if ENABLE_APPINDICATOR
+        Visible = false;
         indicator.Status = visible ? AppIndicator.Status.Active : AppIndicator.Status.Passive;
+#else
+        Visible = visible;
+#endif
         
     }
 
