@@ -163,7 +163,7 @@ namespace Dialogs
             
             GroupBox trayBox = new GroupBox ( TextStrings.notifyGroup );
             trayBox.AddWidget ( showTrayIcon );
-            trayBox.AddWidget ( hbox1 );
+            //trayBox.AddWidget ( hbox1 );
             trayBox.AddWidget ( notifyOnConnectionLoss );
             trayBox.AddWidget ( notifyOnMemberJoin );
             trayBox.AddWidget ( notifyOnMemberLeave );
