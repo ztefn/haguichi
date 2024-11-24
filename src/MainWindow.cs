@@ -430,7 +430,7 @@ public class MainWindow
     public static void ShowTrayIcon ( bool show )
     {
         
-        panelIcon.Visible = show;
+        panelIcon.SetVisibility ( show );
         
     }
     

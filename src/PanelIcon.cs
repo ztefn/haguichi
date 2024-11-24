@@ -77,7 +77,6 @@ public class PanelIcon : StatusIcon
                                                "haguichi-disconnected",
                                                Category.ApplicationStatus );
 
-        indicator.Status = AppIndicator.Status.Active;
         indicator.Menu = MainWindow.quickMenu;
         indicator.ScrollEvent += delegate ( object o, AppIndicator.ScrollEventArgs args )
         {
@@ -153,6 +152,15 @@ public class PanelIcon : StatusIcon
                 break;
             
         }
+        
+    }
+    
+    
+    public void SetVisibility ( bool visible )
+    {
+        
+        Visible = visible;
+        indicator.Status = visible ? AppIndicator.Status.Active : AppIndicator.Status.Passive;
         
     }
 
