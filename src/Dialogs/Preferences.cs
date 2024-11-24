@@ -47,11 +47,11 @@ namespace Dialogs
         public  CheckButton notifyOnMemberOffline;
         
         private HBox ipBox;
-        private GroupBox hamachiBox;
-        
         private HBox intervalBox;
         
         public  ComboBox ipCombo;
+        public  ComboBox schemeCombo;
+        
         public  SpinButton intervalSpin;
         
         private Label intervalLabel;
@@ -75,8 +75,33 @@ namespace Dialogs
             closeBut = new Button ( Stock.Close );
             closeBut.Clicked += delegate
             {
-                this.Hide ();            
+                this.Hide ();
             };
+            
+            
+            schemeCombo = new ComboBox ( new string [] { TextStrings.schemeSystem, TextStrings.schemeDark, TextStrings.schemeLight } );
+            schemeCombo.Active = ( int ) Utilities.ColorSchemeToInt ( ( string ) Config.Settings.ColorScheme.Value );
+            schemeCombo.Changed += delegate
+            {
+                Config.Settings.ColorScheme.Value = Utilities.ColorSchemeToString ( schemeCombo.Active );
+            };
+            
+            Label schemeLabel = new Label ();
+            schemeLabel.TextWithMnemonic = TextStrings.schemeLabel + "  ";
+            schemeLabel.MnemonicWidget = ipCombo;
+            
+            HBox schemeBox = new HBox ();
+            schemeBox.Add ( schemeLabel );
+            schemeBox.Add ( schemeCombo );
+            
+            Box.BoxChild bc5 = ( ( Box.BoxChild ) ( schemeBox [ schemeLabel ] ) );
+            bc5.Expand = false;
+            
+            Box.BoxChild bc6 = ( ( Box.BoxChild ) ( schemeBox [ schemeCombo ] ) );
+            bc6.Expand = false;
+            
+            GroupBox appearanceBox = new GroupBox ( "Appearance" );
+            appearanceBox.AddWidget ( schemeBox );
             
             
             showTrayIcon = new CheckButton ( TextStrings.checkboxShowTrayIcon );
@@ -150,11 +175,12 @@ namespace Dialogs
                 startInTray.Sensitive = false;
             }
             
-            VBox appearanceBox = new VBox ();
-            appearanceBox.Add ( trayBox );
-            appearanceBox.Add ( new SpaceBox () );
+            VBox desktopBox = new VBox ();
+            desktopBox.Add ( appearanceBox );
+            desktopBox.Add ( trayBox );
+            desktopBox.Add ( new SpaceBox () );
             
-            Box.BoxChild trayBoxC = ( ( Box.BoxChild ) ( appearanceBox [ trayBox ] ) );
+            Box.BoxChild trayBoxC = ( ( Box.BoxChild ) ( desktopBox [ trayBox ] ) );
             trayBoxC.Expand = false;
             
             
@@ -164,7 +190,7 @@ namespace Dialogs
             ipCombo.Active = ( int ) Utilities.ProtocolToInt ( ( string ) Config.Settings.Protocol.Value );
             ipCombo.Changed += delegate
             {
-                Config.Settings.Protocol.Value = Utilities.ProtocolToString ( ipCombo.Active );            
+                Config.Settings.Protocol.Value = Utilities.ProtocolToString ( ipCombo.Active );
             };
             
             Label ipLabel = new Label ();
@@ -181,21 +207,21 @@ namespace Dialogs
             Box.BoxChild bc4 = ( ( Box.BoxChild ) ( ipBox [ ipCombo ] ) );
             bc4.Expand = false;
             
-            hamachiBox = new GroupBox ( "Hamachi" );
+            GroupBox hamachiBox = new GroupBox ( "Hamachi" );
             hamachiBox.AddWidget ( ipBox );
             
             connectOnStartup = new CheckButton ( TextStrings.connectOnStartup );
             connectOnStartup.Active = ( bool ) Config.Settings.ConnectOnStartup.Value;
             connectOnStartup.Toggled += delegate
             {
-                Config.Settings.ConnectOnStartup.Value = connectOnStartup.Active;       
+                Config.Settings.ConnectOnStartup.Value = connectOnStartup.Active;
             };
             
             reconnectOnConnectionLoss = new CheckButton ( TextStrings.reconnectOnConnectionLoss );
             reconnectOnConnectionLoss.Active = ( bool ) Config.Settings.ReconnectOnConnectionLoss.Value;
             reconnectOnConnectionLoss.Toggled += delegate
             {
-                Config.Settings.ReconnectOnConnectionLoss.Value = reconnectOnConnectionLoss.Active;       
+                Config.Settings.ReconnectOnConnectionLoss.Value = reconnectOnConnectionLoss.Active;
             };
             
             disconnectOnQuit = new CheckButton ( TextStrings.disconnectOnQuit );
@@ -234,21 +260,21 @@ namespace Dialogs
             behaviorBox.AddWidget ( disconnectOnQuit );
             behaviorBox.AddWidget ( intervalBox );
             
-            VBox systemBox = new VBox ();
-            systemBox.Add ( hamachiBox );
-            systemBox.Add ( behaviorBox );
-            systemBox.Add ( new SpaceBox () );
+            VBox generalBox = new VBox ();
+            generalBox.Add ( hamachiBox );
+            generalBox.Add ( behaviorBox );
+            generalBox.Add ( new SpaceBox () );
             
-            Box.BoxChild hamachiBoxC = ( ( Box.BoxChild ) ( systemBox [ hamachiBox ] ) );
-            hamachiBoxC.Expand = false; 
+            Box.BoxChild hamachiBoxC = ( ( Box.BoxChild ) ( generalBox [ hamachiBox ] ) );
+            hamachiBoxC.Expand = false;
                         
-            Box.BoxChild behaviorBoxC = ( ( Box.BoxChild ) ( systemBox [ behaviorBox ] ) );
+            Box.BoxChild behaviorBoxC = ( ( Box.BoxChild ) ( generalBox [ behaviorBox ] ) );
             behaviorBoxC.Expand = false;
             
             Notebook notebook = new Notebook ();
-            notebook.AppendPage ( systemBox, new Label ( TextStrings.generalTab ) );
+            notebook.AppendPage ( generalBox, new Label ( TextStrings.generalTab ) );
             notebook.AppendPage ( commandsEditor, new Label ( TextStrings.commandsTab ) );
-            notebook.AppendPage ( appearanceBox, new Label ( TextStrings.desktopTab ) );
+            notebook.AppendPage ( desktopBox, new Label ( TextStrings.desktopTab ) );
             
             
             HButtonBox buttonBox = new HButtonBox ();

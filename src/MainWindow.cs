@@ -61,6 +61,12 @@ public class MainWindow
     
         Application.Init ();
         
+        UpdateThemeName ();
+        Platform.desktopSession.SettingChanged += delegate ( string namesp, string key, object val )
+        {
+            UpdateThemeName ();
+        };
+        
         IconTheme.AddBuiltinIcon ( "haguichi", 16, Gdk.Pixbuf.LoadFromResource ( "16x16.haguichi" ) );
         IconTheme.AddBuiltinIcon ( "haguichi", 22, Gdk.Pixbuf.LoadFromResource ( "22x22.haguichi" ) );
         IconTheme.AddBuiltinIcon ( "haguichi", 24, Gdk.Pixbuf.LoadFromResource ( "24x24.haguichi" ) );
@@ -261,6 +267,40 @@ public class MainWindow
     {
         
         return window;
+        
+    }
+    
+    
+    public static void UpdateThemeName ()
+    {
+        
+        string theme  = "Adwaita";
+        
+        if ( ( string ) Config.Settings.ColorScheme.Value == "dark" )
+        {
+            theme += "-dark";
+        }
+        else if ( ( string ) Config.Settings.ColorScheme.Value == "system" )
+        {
+            try
+            {
+                // 0: No preference
+                // 1: Prefer dark appearance
+                // 2: Prefer light appearance
+                object scheme = Platform.desktopSession.ReadOne ( "org.freedesktop.appearance", "color-scheme" );
+            
+                if ( ( uint ) scheme == 1 )
+                {
+                    theme += "-dark";
+                }
+            }
+            catch ( Exception e )
+            {
+                Debug.Log ( Debug.Domain.Error, "MainWindow", e.Message );
+            }
+        }
+        
+        Settings.Default.SetStringProperty ("gtk-theme-name", theme, "");
         
     }
     

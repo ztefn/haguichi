@@ -72,6 +72,56 @@ public static class Utilities
     }
     
     
+    public static string ColorSchemeToString ( int scheme )
+    {
+        
+        string output = "";
+        
+        switch ( scheme )
+        {
+            case 0:
+                output = "System";
+                break;
+            
+            case 1:
+                output = "Dark";
+                break;
+            
+            case 2:
+                output = "Light";
+                break;
+        }
+        
+        return output.ToLower ();
+        
+    }
+    
+    
+    public static int ColorSchemeToInt ( string scheme )
+    {
+        
+        int output = 0;
+        
+        switch ( scheme.ToLower () )
+        {
+            case "system":
+                output = 0;
+                break;
+            
+            case "dark":
+                output = 1;
+                break;
+            
+            case "light":
+                output = 2;
+                break;
+        }
+        
+        return output;
+        
+    }
+    
+    
     public static string ProtocolToString ( int protocol )
     {
         

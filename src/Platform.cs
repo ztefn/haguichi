@@ -27,10 +27,12 @@ public static class Platform
 {
     
     public const string appBusName = "com.github.ztefn.haguichi";
+    public const string desktopBusName = "org.freedesktop.portal.Desktop";
     
     private static Bus bus;
     private static ObjectPath path;
     public static ApplicationSession appSession;
+    public static DesktopSession desktopSession;
     
     
     [DllImport ( "libc" )] // Linux
@@ -113,6 +115,8 @@ public static class Platform
         
         bus.RequestName ( appBusName );
         bus.Register ( path, appSession );
+        
+        desktopSession = Bus.Session.GetObject <DesktopSession> ( desktopBusName, new ObjectPath ( "/org/freedesktop/portal/desktop" ) );
         
     }
     

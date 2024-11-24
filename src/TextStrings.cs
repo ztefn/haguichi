@@ -308,6 +308,11 @@ Türkçe (tr)
     public static string protocolIPv4;
     public static string protocolIPv6;
     
+    public static string schemeLabel;
+    public static string schemeSystem;
+    public static string schemeDark;
+    public static string schemeLight;
+    
     public static string updateLabel;
     public static string checkboxShowAlternatingRowColors;
     public static string layoutNormal;
@@ -548,6 +553,11 @@ Türkçe (tr)
         protocolBoth                        = Catalog.GetString ( "Both IPv4 and IPv6" );
         protocolIPv4                        = Catalog.GetString ( "IPv4 only" );
         protocolIPv6                        = Catalog.GetString ( "IPv6 only" );
+        
+        schemeLabel                         = Catalog.GetString ( "_Style:" );
+        schemeSystem                        = Catalog.GetString ( "Follow system" );
+        schemeDark                          = Catalog.GetString ( "Dark" );
+        schemeLight                         = Catalog.GetString ( "Light" );
         
         updateLabel                         = Catalog.GetString ( "_Update Network List" );
         checkboxShowAlternatingRowColors    = Catalog.GetString ( "Show Alt_ernating Row Colors" );

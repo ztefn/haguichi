@@ -50,6 +50,7 @@ namespace Config
         public static Key ReconnectInterval                 = new Key ( "config/reconnect_interval", 30.0 );
         public static Key UpdateInterval                    = new Key ( "config/update_interval", 15.0 );
         public static Key CollapsedNetworks                 = new Key ( "main_window/collapsed_networks", new string [] {} );
+        public static Key ColorScheme                       = new Key ( "main_window/color_scheme", "system" );
         public static Key WinHeight                         = new Key ( "main_window/height", 480 );
         public static Key MemberTemplateSmall               = new Key ( "main_window/member_template_small", "%N%_*" );
         public static Key MemberTemplateLarge               = new Key ( "main_window/member_template_large", "%N%_*<br><span size=\"smaller\">%S <i>%A</i></span>" );

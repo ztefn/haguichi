@@ -19,6 +19,7 @@
 
 using System;
 using DBus;
+using org.freedesktop.DBus;
 
 
 [Interface ( Platform.appBusName )]
@@ -177,3 +178,17 @@ public class ApplicationSession : MarshalByRefObject
     }
     
 }
+
+
+public delegate void SettingChangedHandler ( string namesp, string key, object val );
+
+[Interface ( "org.freedesktop.portal.Settings" )]
+public interface DesktopSession : Introspectable
+{
+    
+    object ReadOne ( string namesp, string val );
+    
+    event SettingChangedHandler SettingChanged;
+    
+}
+

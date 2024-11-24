@@ -119,6 +119,11 @@ namespace Config
             {
                 MainWindow.networkView.SetLayout ();
             }
+            else if ( key == Config.Settings.ColorScheme.KeyName )
+            {
+                MainWindow.UpdateThemeName ();
+                Haguichi.preferencesDialog.schemeCombo.Active = ( int ) Utilities.ColorSchemeToInt ( ( string ) _value );
+            }
             else if ( key == Config.Settings.Nickname.KeyName )
             {
                 GlobalEvents.UpdateNick ( ( string ) _value );
