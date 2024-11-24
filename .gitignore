@@ -3,6 +3,7 @@ build
 bin
 obj
 repo
+*.flatpak
 *.userprefs
 *~
 .*
