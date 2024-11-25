@@ -274,7 +274,7 @@ public class MainWindow
     public static void UpdateThemeName ()
     {
         
-        string theme  = "Adwaita";
+        string theme = Settings.Default.ThemeName.Replace ( "-dark", "" );
         
         if ( ( string ) Config.Settings.ColorScheme.Value == "dark" )
         {
