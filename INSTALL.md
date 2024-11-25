@@ -45,7 +45,7 @@
   To build Haguichi, run the following commands:
 
     $ mkdir build && cd build
-    $ meson ..
+    $ meson setup ..
     $ ninja
 
 
