@@ -23,6 +23,11 @@
     $ sudo apt install build-essential gettext meson valac libgee-0.8-dev libglib2.0-dev libgtk-4-dev libadwaita-1-dev libportal-dev libportal-gtk4-dev
 
 
+  On **Fedora** you can install these packages by running the following command:
+
+    $ sudo dnf install gettext meson vala libgee-devel gtk4-devel libadwaita-devel libportal-devel libportal-gtk4-devel
+
+
   Build options
   -------------
 
@@ -46,7 +51,7 @@
   To build Haguichi, run the following commands:
 
     $ mkdir build && cd build
-    $ meson ..
+    $ meson setup ..
     $ ninja
 
 
