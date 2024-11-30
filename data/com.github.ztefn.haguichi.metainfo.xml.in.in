@@ -60,13 +60,13 @@
   <releases>
     <release version="1.5.1" date="2024-12-01">
       <description translate="no">
-        <p>Haguichi 1.5.1 is ready for the holiday season:</p>
+        <p>Haguichi 1.5.1 has put on its bow tie and is ready to celebrate the holiday season:</p>
         <ul>
           <li>Modernized layout for all input dialogs.</li>
           <li>Now using Adw.Dialog as base for all dialogs when libadwaita 1.6 is available.</li>
           <li>Now using Adw.Spinner instead of Gtk.Spinner when libadwaita 1.6 is available.</li>
           <li>Fixed showing commands menu button if there is only one item present.</li>
-          <li>Added support for ptyxis.</li>
+          <li>Added support for Ptyxis.</li>
           <li>Added Finnish translation.</li>
           <li>Updated Indonesian and Russian translation.</li>
           <li>Other minor fixes and improvements.</li>
