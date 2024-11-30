@@ -58,29 +58,44 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.5.1" date="2024-12-01">
+      <description translate="no">
+        <p>Haguichi 1.5.1 is ready for the holiday season:</p>
+        <ul>
+          <li>Modernized layout for all input dialogs.</li>
+          <li>Now using Adw.Dialog as base for all dialogs when libadwaita 1.6 is available.</li>
+          <li>Now using Adw.Spinner instead of Gtk.Spinner when libadwaita 1.6 is available.</li>
+          <li>Fixed showing commands menu button if there is only one item present.</li>
+          <li>Added support for ptyxis.</li>
+          <li>Added Finnish translation.</li>
+          <li>Updated Indonesian and Russian translation.</li>
+          <li>Other minor fixes and improvements.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.0" date="2024-07-20">
       <description translate="no">
         <p>Haguichi 1.5.0 has been rebuild completely from the ground up featuring a redesigned user interface that takes advantage of GTK 4 and libadwaita:</p>
         <ul>
-          <li>Implemented AdwOverlaySplitView to display the network list and sidebar side by side or as an overlay.</li>
+          <li>Implemented Adw.OverlaySplitView to display the network list and sidebar side by side or as an overlay.</li>
           <li>Added support for color schemes offering dark, light or system preferred scheme.</li>
-          <li>Ported the network list from deprecated GtkTreeView to GtkListView.</li>
+          <li>Ported the network list from deprecated Gtk.TreeView to Gtk.ListView.</li>
           <li>Rearranged "Add Network" and "Refresh" buttons as floating overlay buttons above the network list.</li>
           <li>Created new "Change Access" dialog for networks to set lock and approval mode combined.</li>
-          <li>Improved sidebar layout based on AdwActionRows.</li>
-          <li>Implemented AdwPreferencesWindow making all preferences searchable.</li>
+          <li>Improved sidebar layout based on Adw.ActionRows.</li>
+          <li>Implemented Adw.PreferencesWindow making all preferences searchable.</li>
           <li>Moved configuration and nickname settings to preferences window.</li>
           <li>Added support for drag and drop to reorder configured commands in preferences window.</li>
           <li>Added info button to the "Add Command" and "Edit Command" dialogs to show all available command variables in a popover.</li>
           <li>Now making use of Toasts for any in-app notifications.</li>
-          <li>Utilized GtkBuilder UI definitions to describe nearly all interface objects and eliminate lots of boilerplate code.</li>
+          <li>Utilized Gtk.Builder UI definitions to describe nearly all interface objects and eliminate lots of boilerplate code.</li>
           <li>Added support for multiple search terms by separating them using a "⎵" (space) or "+" (plus) to find only results matching both terms and by using a "," (comma) to find results matching either term.</li>
           <li>Now displays a message if there are no results found instead of showing an empty network list.</li>
           <li>Online and total member count in sidebar now includes the client itself.</li>
           <li>Networks are now automatically selected immediately after you create or join them.</li>
           <li>Hamachi is now automatically restarted if the hamachi set-pass command hangs when changing the network password.</li>
           <li>Reimplemented indicator to communicate with the SNI D-Bus interface directly and drop dependency on appindicator libraries that don't support GTK 4.</li>
-          <li>Implemented XdpPortal to request permission to run in the background and to set background status when doing so.</li>
+          <li>Implemented Xdp.Portal to request permission to run in the background and to set background status when doing so.</li>
           <li>Renamed --hidden command line option to --background or -b for short.</li>
           <li>Changed accelerator to open preferences to Control+, following the GNOME standard for keyboard shortcuts.</li>
           <li>Changed default network list update interval to 30 seconds.</li>
@@ -88,54 +103,6 @@
           <li>Added line "StartupNotify=true" to .desktop file so that a spinning cursor is shown on launch.</li>
           <li>Now using standard GLib functions for message logging so that important errors are written to the system logs.</li>
           <li>Updated Brazilian Portuguese, Dutch, Japanese, Lithuanian, Spanish and Ukrainian translations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.6" date="2023-04-30">
-      <description translate="no">
-        <p>Haguichi 1.4.6 was hatched breaking the following news:</p>
-        <ul>
-          <li>Implemented separate thread and mode for configuring.</li>
-          <li>Improved display of long text input in commands editor.</li>
-          <li>Now using actual Gtk.SearchBar widget for search bar.</li>
-          <li>Now using pill style action buttons in message box.</li>
-          <li>Added support for kgx (GNOME Console).</li>
-          <li>Dropped support for pantheon-terminal and pantheon-files.</li>
-          <li>Removed stylesheet for Mint themes.</li>
-          <li>Removed Control+F1 as accelerator to open keyboard shortcuts window.</li>
-          <li>Updated Brazilian Portuguese, French, Indonesian, Italian, Japanese, Lithuanian, Polish, Portuguese, Russian, Spanish, Swedish and Ukrainian translations.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.5" date="2021-12-08">
-      <description translate="no">
-        <p>Haguichi 1.4.5 is gifted with the following changes:</p>
-        <ul>
-          <li>Notifications are now send using GNotification instead of libnotify (fixes issue #47).</li>
-          <li>Removed support for upstart to control the Hamachi service.</li>
-          <li>Switch to show indicator is now disabled if there is no connection to a watcher.</li>
-          <li>Now using the RDNN com.github.ztefn.haguichi as prefix for the indicator icons.</li>
-          <li>Ported wingpanel indicator to version 3.</li>
-          <li>Updated elementary stylesheet to target version 6.</li>
-          <li>Updated Japanese and Russian translations.</li>
-          <li>Other minor fixes and improvements.</li>
-        </ul>
-      </description>
-    </release>
-    <release version="1.4.4" date="2021-06-09">
-      <description translate="no">
-        <p>Haguichi 1.4.4 has undergone a small spring cleanup and is ready to face the world:</p>
-        <ul>
-          <li>Added build support for libayatana-indicator as alternative to libappindicator (fixes issue #39).</li>
-          <li>Added invisible tooltips to action buttons in headerbar for screen readers and applications like Plotinus.</li>
-          <li>Tweaked action area margins for dialogs without headerbar.</li>
-          <li>Added Control+? accelerator for opening the shortcuts window.</li>
-          <li>Retired application menu and reorganized the primary menu to follow GNOME HIG.</li>
-          <li>Improved init system detection for systemctl by checking if the system has actually been booted with systemd (fixes issues #35 and #36).</li>
-          <li>Dropped support for gksu(do), gnomesu and kdesu(do) to gain super user privileges.</li>
-          <li>Removed dconf migration for settings in old schema location.</li>
-          <li>Fixed build warnings about deprecated methods and error handling.</li>
-          <li>Updated Ukrainian translation.</li>
         </ul>
       </description>
     </release>
