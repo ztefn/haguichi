@@ -59,6 +59,7 @@
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
     <release version="1.5.1" date="2024-12-01">
+      <url>https://haguichi.net/news/release151/</url>
       <description translate="no">
         <p>Haguichi 1.5.1 has put on its bow tie and is ready to celebrate the holiday season:</p>
         <ul>
@@ -67,13 +68,14 @@
           <li>Now using Adw.Spinner instead of Gtk.Spinner when libadwaita 1.6 is available.</li>
           <li>Fixed showing commands menu button if there is only one item present.</li>
           <li>Added support for Ptyxis.</li>
-          <li>Added Finnish translation.</li>
+          <li>Added Finnish translation (thanks to Jiri Grönroos).</li>
           <li>Updated Indonesian and Russian translation.</li>
           <li>Other minor fixes and improvements.</li>
         </ul>
       </description>
     </release>
     <release version="1.5.0" date="2024-07-20">
+      <url>https://haguichi.net/news/release150/</url>
       <description translate="no">
         <p>Haguichi 1.5.0 has been rebuild completely from the ground up featuring a redesigned user interface that takes advantage of GTK 4 and libadwaita:</p>
         <ul>
