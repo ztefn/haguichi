@@ -14,10 +14,6 @@
     <source media="(prefers-color-scheme: dark)" srcset="data/screenshots/dark/main-window-connected.png?raw=true">
     <img alt="Main Window Connected Screenshot" src="data/screenshots/light/main-window-connected.png?raw=true">
   </picture>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="data/screenshots/dark/main-window-search.png?raw=true">
-    <img alt="Main Window Search Screenshot" src="data/screenshots/light/main-window-search.png?raw=true">
-  </picture>
 </div>
 
 
