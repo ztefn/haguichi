@@ -6,7 +6,18 @@
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux.</h4>
-  <img src="data/screenshots/main-window-connected.png?raw=true" alt="Screenshot" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="data/screenshots/dark/main-window-disconnected.png?raw=true">
+    <img alt="Main Window Disconnected Screenshot" src="data/screenshots/light/main-window-disconnected.png?raw=true">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="data/screenshots/dark/main-window-connected.png?raw=true">
+    <img alt="Main Window Connected Screenshot" src="data/screenshots/light/main-window-connected.png?raw=true">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="data/screenshots/dark/main-window-search.png?raw=true">
+    <img alt="Main Window Search Screenshot" src="data/screenshots/light/main-window-search.png?raw=true">
+  </picture>
 </div>
 
 
