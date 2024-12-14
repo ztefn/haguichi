@@ -44,9 +44,10 @@
                   <object class="GtkRevealer" id="revealer">
                     <child>
                       <object class="GtkLabel" id="message_label">
-                        <property name="halign">start</property>
+                        <property name="halign">fill</property>
                         <property name="margin-top">9</property>
                         <property name="wrap">true</property>
+                        <property name="xalign">0</property>
                         <style>
                           <class name="error"/>
                         </style>
