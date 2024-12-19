@@ -444,7 +444,9 @@ namespace Haguichi {
         }
 
         public void remove_all () {
+            skip_save_collapsed_networks = true;
             store.remove_all ();
+            skip_save_collapsed_networks = false;
         }
 
         public void sort () {
