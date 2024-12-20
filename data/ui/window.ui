@@ -314,7 +314,40 @@
                           <object class="GtkStackPage">
                             <property name="name">Disconnected</property>
                             <property name="child">
-                              <object class="AdwBin"/>
+                              <object class="GtkStack" id="disconnected_stack">
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="name">empty</property>
+                                    <property name="child">
+                                      <object class="AdwBin"/>
+                                    </property>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkStackPage">
+                                    <property name="name">restore</property>
+                                    <property name="child">
+                                      <object class="AdwStatusPage" id="restore_status_page">
+                                        <property name="title" translatable="yes">Hamachi Lost Connection</property>
+                                        <style>
+                                          <class name="compact"/>
+                                        </style>
+                                        <child>
+                                          <object class="GtkButton">
+                                            <property name="label" translatable="yes">_Cancel</property>
+                                            <property name="halign">center</property>
+                                            <property name="use-underline">true</property>
+                                            <signal name="clicked" handler="cancel_restore"/>
+                                            <style>
+                                              <class name="pill"/>
+                                            </style>
+                                          </object>
+                                        </child>
+                                      </object>
+                                    </property>
+                                  </object>
+                                </child>
+                              </object>
                             </property>
                           </object>
                         </child>

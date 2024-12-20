@@ -44,6 +44,10 @@ namespace Haguichi {
         public unowned Gtk.Stack stack;
         [GtkChild]
         public unowned Gtk.Stack connected_stack;
+        [GtkChild]
+        public unowned Gtk.Stack disconnected_stack;
+        [GtkChild]
+        public unowned Adw.StatusPage restore_status_page;
 
         [GtkChild]
         public unowned Throbber throbber;
@@ -144,6 +148,12 @@ namespace Haguichi {
             if (!demo_mode) {
                 Hamachi.configure ();
             }
+        }
+
+        [GtkCallback]
+        private void cancel_restore () {
+            Controller.restore = false;
+            Controller.connection_stopped ();
         }
 
         [GtkCallback]
@@ -374,6 +384,16 @@ namespace Haguichi {
 
         public void set_connected_stack_page (string page) {
             connected_stack.visible_child_name = page;
+        }
+
+        public void set_disconnected_stack_page (string page) {
+            disconnected_stack.visible_child_name = page;
+        }
+
+        public void set_restore_countdown (int countdown) {
+            restore_status_page.description = ngettext ("Reconnecting in {0} second",
+                                                        "Reconnecting in {0} seconds",
+                                                        countdown).replace ("{0}", countdown.to_string ());
         }
 
         public string get_mode () {

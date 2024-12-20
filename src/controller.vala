@@ -409,6 +409,7 @@ namespace Haguichi {
         }
 
         public static void connection_stopped () {
+            win.set_disconnected_stack_page ("empty");
             win.set_mode ("Disconnected");
 
             // Stop update interval
@@ -666,6 +667,8 @@ namespace Haguichi {
             debug ("restore_connection_cycle: Trying to reconnect...");
 
             restore_countdown = config.get_int ("reconnect-interval");
+            win.set_restore_countdown (restore_countdown);
+            win.set_disconnected_stack_page ("restore");
             Timeout.add (1000, restore_connection);
         }
 
@@ -676,10 +679,7 @@ namespace Haguichi {
                 if (restore_countdown == 0) {
                     start_hamachi ();
                 } else {
-                    win.window_title.subtitle = ngettext (
-                        "Reconnecting in {0} second",
-                        "Reconnecting in {0} seconds",
-                        restore_countdown).replace ("{0}", restore_countdown.to_string ());
+                    win.set_restore_countdown (restore_countdown);
                     return true;
                 }
             }
