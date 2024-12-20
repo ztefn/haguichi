@@ -166,13 +166,13 @@ namespace Haguichi {
                 string output;
 
                 if (demo_mode) {
-                    output = "
+                    output = """
 id       : %s
 name     : %s
 type     : Mesh
 owner    : This computer
 status   : unlocked
-approve  : auto".printf (id, name);
+approve  : auto""".printf (id, name);
                 } else {
                     output = Command.return_output ("hamachi network \"%s\"".printf (Utils.clean_string (id)));
                 }
