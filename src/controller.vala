@@ -701,7 +701,8 @@ namespace Haguichi {
         }
 
         public static void notify_connection_lost () {
-            if (notifications.get_boolean ("connection-loss")) {
+            // Display notification only if preference is set and window is not currently active
+            if (notifications.get_boolean ("connection-loss") && !(win.visible && win.is_active)) {
                 Bubble bubble = new Bubble (_("Hamachi Lost Connection"), null);
                 bubble.add_reconnect_action ();
                 bubble.show ();
