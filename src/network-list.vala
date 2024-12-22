@@ -389,9 +389,9 @@ namespace Haguichi {
             if (restore_search_text != null) {
                 win.search_bar.search_mode_enabled = true;
                 win.search_entry.text = restore_search_text;
+                // Clear variable
+                restore_search_text = null;
             }
-
-            clear_state ();
         }
 
         public void add_network (Network network) {
@@ -412,32 +412,42 @@ namespace Haguichi {
                 set_row_expanded (network, false);
             }
 
-            uint pos = find_selection_model_position (network);
-
             // Connect to expanded signal on row to save collapsed networks
-            var row = (TreeListRow) selection_model.model.get_item (pos);
-            row.notify["expanded"].connect (() => {
+            tree_list_model.get_row (find_tree_model_position (network)).notify["expanded"].connect (() => {
                 save_collapsed_networks ();
             });
 
             // Select specified item
             if (select_network_id == network.id) {
+                uint pos = -1;
                 if (select_member_id != null) {
-                    pos = find_selection_model_position (network.return_member_by_id (select_member_id));
+                    Member member = network.return_member_by_id (select_member_id);
+                    if (member != null) {
+                        pos = find_selection_model_position (member);
+                    }
+                } else {
+                    pos = find_selection_model_position (network);
                 }
-                selection_model.selected = pos;
 
-                // Scroll to item after network list is fully updated
-                new Thread<void*> (null, () => {
-                    Thread.usleep (100000);
+                // Only continue if selection is visible
+                if (pos < selection_model.n_items) {
+                    // Scroll to and select item after network list is fully updated
+                    new Thread<void*> (null, () => {
+                        Thread.usleep (100000);
 
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
-                        list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
-                        return false;
+                        Idle.add_full (Priority.HIGH_IDLE, () => {
+                            list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
+                            selection_model.selected = pos;
+                            return false;
+                        });
+
+                        return null;
                     });
+                }
 
-                    return null;
-                });
+                // Clear variables
+                select_member_id  = null;
+                select_network_id = null;
             }
         }
 
