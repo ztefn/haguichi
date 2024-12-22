@@ -409,6 +409,9 @@ namespace Haguichi {
         }
 
         public static void connection_stopped () {
+            if (restore) {
+                win.network_list.save_state ();
+            }
             win.set_disconnected_stack_page ("empty");
             win.set_mode ("Disconnected");
 

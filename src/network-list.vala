@@ -40,6 +40,8 @@ namespace Haguichi {
 
         public string  network_label_template;
         public string  member_label_template;
+        public string  restore_search_text;
+        public string  select_member_id;
         public string  select_network_id;
 
         construct {
@@ -383,6 +385,13 @@ namespace Haguichi {
                 // Make sure the scrollbar is at top most position
                 list_view.scroll_to (0, ListScrollFlags.NONE, null);
             }
+
+            if (restore_search_text != null) {
+                win.search_bar.search_mode_enabled = true;
+                win.search_entry.text = restore_search_text;
+            }
+
+            clear_state ();
         }
 
         public void add_network (Network network) {
@@ -411,17 +420,19 @@ namespace Haguichi {
                 save_collapsed_networks ();
             });
 
-            // Select newly added network
+            // Select specified item
             if (select_network_id == network.id) {
+                if (select_member_id != null) {
+                    pos = find_selection_model_position (network.return_member_by_id (select_member_id));
+                }
                 selection_model.selected = pos;
 
-                // Scroll to newly added network after network list is fully updated
+                // Scroll to item after network list is fully updated
                 new Thread<void*> (null, () => {
                     Thread.usleep (100000);
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
                         list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
-                        select_network_id = null;
                         return false;
                     });
 
@@ -483,6 +494,27 @@ namespace Haguichi {
             if (item != null) {
                 selection_model.unselect_item (find_selection_model_position (item));
             }
+        }
+
+        public void save_state () {
+            if (win.search_bar.search_mode_enabled) {
+                restore_search_text = win.search_entry.text;
+            }
+
+            var item = get_selected_item ();
+
+            if (item is Network) {
+                select_network_id = item.id;
+            } else if (item is Member) {
+                select_member_id  = item.id;
+                select_network_id = item.network.id;
+            }
+        }
+
+        public void clear_state () {
+            restore_search_text = null;
+            select_member_id    = null;
+            select_network_id   = null;
         }
 
         public void selection_changed () {

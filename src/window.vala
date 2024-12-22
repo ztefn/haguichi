@@ -154,6 +154,7 @@ namespace Haguichi {
         private void cancel_restore () {
             Controller.restore = false;
             Controller.connection_stopped ();
+            network_list.clear_state ();
         }
 
         [GtkCallback]

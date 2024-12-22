@@ -131,6 +131,16 @@ namespace Haguichi {
             }
         }
 
+        public Member? return_member_by_id (string id) {
+            foreach (Member member in members) {
+                if (member.id == id) {
+                    return member;
+                }
+            }
+
+            return null;
+        }
+
         public string return_owner_string () {
             string _owner;
 

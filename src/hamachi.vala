@@ -695,9 +695,9 @@ namespace Haguichi {
                 Idle.add_full (Priority.HIGH_IDLE, () => {
                     if (output.has_suffix (" ..")) {
                         warning ("set_password: command hanged, restarting hamachi...");
-                        Controller.restart_hamachi ();
-                        win.network_list.select_network_id = network_id;
+                        win.network_list.save_state ();
                         win.show_toast (_("Password changed"));
+                        Controller.restart_hamachi ();
                     } else if (output.contains (".. ok")) {
                         win.show_toast (_("Password changed"));
                     } else {
