@@ -44,7 +44,7 @@ namespace Haguichi {
                 // Show window when scrolling up and hide it when scrolling down
                 if (delta < 0) {
                     win.present ();
-                } else if (delta > 0) {
+                } else {
                     win.hide ();
                 }
             });
