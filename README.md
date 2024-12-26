@@ -5,7 +5,7 @@
     <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
     Haguichi
   </h1>
-  <h4>Provides a graphical frontend for Hamachi on Linux.</h4>
+  <h4>Provides a graphical frontend for Hamachi on Linux</h4>
   <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" width="722" />
 </div>
 
@@ -33,9 +33,7 @@
   Donations
   ---------
 
-  Support development by making a donation! You can donate any amount you wish by clicking on the PayPal logo below.
-
-  [<img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png" height="26" alt="PayPal" />](https://www.paypal.me/ztefn)
+  Support development by making a donation! You can donate any amount you wish via [PayPal](https://www.paypal.me/ztefn).
 
 
   License
