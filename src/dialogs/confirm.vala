@@ -14,7 +14,7 @@ namespace Haguichi {
     public class ConfirmDialog : Object {
         public signal void confirm ();
 
-        public ConfirmDialog (Gtk.Window parent,
+        public ConfirmDialog (Gtk.Widget parent,
                               string heading,
                               string body,
                               string confirm_label,
@@ -22,7 +22,7 @@ namespace Haguichi {
 #if ADW_1_6
             var dialog = new Adw.AlertDialog (heading, body);
 #else
-            var dialog = new Adw.MessageDialog (parent, heading, body);
+            var dialog = new Adw.MessageDialog ((Gtk.Window) parent, heading, body);
 #endif
             dialog.add_response ("cancel", _("_Cancel"));
             dialog.add_response ("confirm", confirm_label);

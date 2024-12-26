@@ -162,19 +162,19 @@ namespace Haguichi {
             split_view.show_sidebar = false;
         }
 
-        public void connect_action () {
+        private void connect_action () {
             Controller.start_hamachi ();
         }
 
-        public void disconnect_action () {
+        private void disconnect_action () {
             Controller.stop_hamachi ();
         }
 
-        public void join_network_action () {
+        private void join_network_action () {
             add_network_action ("Join");
         }
 
-        public void create_network_action () {
+        private void create_network_action () {
             add_network_action ("Create");
         }
 
@@ -245,15 +245,15 @@ namespace Haguichi {
             set_mode (new_mode);
         }
 
-        public void expand_all_networks_action () {
+        private void expand_all_networks_action () {
             network_list.set_all_rows_expanded (true);
         }
 
-        public void collapse_all_networks_action () {
+        private void collapse_all_networks_action () {
             network_list.set_all_rows_expanded (false);
         }
 
-        public void preferences_action () {
+        private void preferences_action () {
             var prefs = new Preferences () {
 #if ADW_1_6
                 search_enabled = true
@@ -274,11 +274,11 @@ namespace Haguichi {
             Command.open_redirect_uri ("help");
         }
 
-        public void info_action () {
+        private void info_action () {
             show_info ();
         }
 
-        public void about_action () {
+        private void about_action () {
             var developer_name = "Stephen Brandt";
 #if ADW_1_6
             var about = new Adw.AboutDialog () {
@@ -302,7 +302,7 @@ namespace Haguichi {
             show_dialog (about);
         }
 
-        public void quit_action () {
+        private void quit_action () {
             Controller.quit ();
 
             if (modal_dialog != null) {
@@ -318,7 +318,13 @@ namespace Haguichi {
             app.quit ();
         }
 
+        public void trigger_action (string action_name) {
+            activate_action_variant ("win." + action_name, null);
+        }
+
         public void show_dialog (Gtk.Widget widget) {
+            if (modal_dialog != null) return;
+
             if (widget is Gtk.Window) {
                 var dialog = (Gtk.Window) widget;
                 dialog.transient_for = this;

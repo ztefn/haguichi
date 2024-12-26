@@ -22,40 +22,40 @@ namespace Haguichi {
         }
 
         public void start_hamachi () throws Error {
-            win.connect_action ();
+            win.trigger_action ("connect");
         }
 
         public void stop_hamachi () throws Error {
-            win.disconnect_action ();
+            win.trigger_action ("disconnect");
         }
 
         public void join_network () throws Error {
             win.present ();
-            win.join_network_action ();
+            win.trigger_action ("join-network");
         }
 
         public void create_network () throws Error {
             win.present ();
-            win.create_network_action ();
+            win.trigger_action ("create-network");
         }
 
         public void information () throws Error {
             win.present ();
-            win.info_action ();
+            win.trigger_action ("info");
         }
 
         public void preferences () throws Error {
             win.present ();
-            win.preferences_action ();
+            win.trigger_action ("preferences");
         }
 
         public void about () throws Error {
             win.present ();
-            win.about_action ();
+            win.trigger_action ("about");
         }
 
         public void quit_app () throws Error {
-            win.quit_action ();
+            win.trigger_action ("quit");
         }
 
         public string get_mode () throws Error {

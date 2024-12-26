@@ -50,7 +50,12 @@ namespace Haguichi {
 
         [GtkCallback]
         private void on_restore_commands () {
-            dialog = new ConfirmDialog ((Gtk.Window) get_root (),
+#if ADW_1_6
+            var parent = (Adw.Dialog) get_ancestor (typeof (Adw.Dialog));
+#else
+            var parent = (Gtk.Window) get_root ();
+#endif
+            dialog = new ConfirmDialog (parent,
                                         _("Restore default commands?"),
                                         _("All customizations will be lost."),
                                         _("_Restore"),

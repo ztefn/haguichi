@@ -156,30 +156,30 @@ namespace Haguichi {
         }
 
         private void connect_action () {
-            win.connect_action ();
+            win.trigger_action ("connect");
         }
 
         private void disconnect_action () {
-            win.disconnect_action ();
+            win.trigger_action ("disconnect");
         }
 
         public void join_network_action () {
             win.present ();
-            win.join_network_action ();
+            win.trigger_action ("join-network");
         }
 
         public void create_network_action () {
             win.present ();
-            win.create_network_action ();
+            win.trigger_action ("create-network");
         }
 
         private void info_action () {
             win.present ();
-            win.info_action ();
+            win.trigger_action ("info");
         }
 
         private void quit_action () {
-            win.quit_action ();
+            win.trigger_action ("quit");
         }
 
         private void approve_reject_action (SimpleAction action, Variant? param) {
