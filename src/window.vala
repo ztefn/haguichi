@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -293,7 +293,7 @@ namespace Haguichi {
                 version            = VERSION,
                 website            = "https://haguichi.net",
                 issue_url          = "https://github.com/ztefn/haguichi/issues",
-                copyright          = "© 2007-2024 " + developer_name,
+                copyright          = "© 2007-2025 " + developer_name,
                 license_type       = Gtk.License.GPL_3_0,
             };
 #if ADW_1_6
