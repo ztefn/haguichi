@@ -21,6 +21,8 @@ namespace Haguichi {
         public static string file_manager;
         public static string remote_desktop;
 
+        private static string flatpak_list;
+
         private static Menu commands_menu;
         private static CustomCommand default_command;
         private static Array<CustomCommand> active_commands;
@@ -29,6 +31,11 @@ namespace Haguichi {
 
         public static void init () {
             settings = new Settings (Config.APP_ID + ".commands");
+
+            if (Command.exists ("flatpak")) {
+                flatpak_list = Command.return_output ("flatpak list");
+                debug ("flatpak_list:\n%s", flatpak_list);
+            }
 
             determine_sudo ();
             determine_terminal ();
@@ -90,33 +97,50 @@ namespace Haguichi {
         }
 
         public static bool exists (string? command) {
-            if (command == null) {
+            if (command == null || command == "") {
                 return false;
             }
 
-            string stdout = return_output ("bash -c \"command -v " + command + " &>/dev/null || echo 'command not found'\"");
-            return !stdout.contains ("command not found");
+            bool result;
+            if (command.has_prefix ("flatpak run ")) {
+                try {
+                    // Extract application ID and check for its presence in the list
+                    MatchInfo mi;
+                    new Regex ("""^flatpak run (?<id>[a-zA-Z0-9\.\_\-]+).*?$""").match (command, 0, out mi);
+                    string id = mi.fetch_named ("id");
+                    result = (flatpak_list != null && flatpak_list.contains ("\t%s\t".printf (id)));
+                } catch (RegexError e) {
+                    critical ("exists: %s", e.message);
+                    return false;
+                }
+            } else {
+                string stdout = return_output ("bash -c \"command -v " + command.split (" ", 0)[0] + " &>/dev/null || echo 'command not found'\"");
+                result = !stdout.contains ("command not found");
+            }
+
+            debug ("exists: %s %s", command, result.to_string ());
+            return result;
         }
 
-        public static void determine_sudo () {
+        private static void determine_sudo () {
             sudo       = settings.get_string ("super-user");
-            sudo_start = "-- ";
+            sudo_start = "";
 
             if (sudo == "auto") {
                 sudo = get_available ({
                     "pkexec",
                     "sudo"
-                });
+                }, "");
             }
 
-            if (sudo == "pkexec") {
-                sudo_start = "";
+            if (sudo == "sudo") {
+                sudo_start = "-- ";
             }
 
             debug ("determine_sudo: %s", sudo);
         }
 
-        private static string get_available (string[] commands) {
+        private static string get_available (string[] commands, string? fallback) {
             // Check each command in the list for existence, and return immediately if it does
             foreach (string cmd in commands) {
                 if (exists (cmd)) {
@@ -124,12 +148,15 @@ namespace Haguichi {
                 }
             }
 
-            // Return the first command as fallback
-            return commands[0];
+            // Return fallback if no command is available
+            return fallback;
         }
 
-        public static void determine_terminal () {
+        private static void determine_terminal () {
             terminal = get_available ({
+                "flatpak run app.devsuite.Ptyxis",
+                "flatpak run org.gnome.Console",
+                "flatpak run org.kde.konsole",
                 "gnome-terminal",
                 "mate-terminal",
                 "io.elementary.terminal",
@@ -143,13 +170,15 @@ namespace Haguichi {
                 "lxterminal",
                 "uxterm",
                 "xterm"
-            });
+            }, "gnome-terminal");
 
             debug ("determine_terminal: %s", terminal);
         }
 
-        public static void determine_file_manager () {
+        private static void determine_file_manager () {
             file_manager = get_available ({
+                "flatpak run org.gnome.Nautilus",
+                "flatpak run org.kde.dolphin",
                 "nautilus",
                 "caja",
                 "nemo",
@@ -159,13 +188,14 @@ namespace Haguichi {
                 "dde-file-manager",
                 "pcmanfm-qt",
                 "pcmanfm"
-            });
+            }, "nautilus");
 
             debug ("determine_file_manager: %s", file_manager);
         }
 
-        public static void determine_remote_desktop () {
+        private static void determine_remote_desktop () {
             remote_desktop = get_available ({
+                "flatpak run org.kde.krdc",
                 "gvncviewer",
                 "krdc",
                 "vncviewer",
@@ -173,7 +203,7 @@ namespace Haguichi {
                 "xvnc4viewer",
                 "rdesktop",
                 "vinagre"
-            });
+            }, "gvncviewer");
 
             debug ("determine_remote_desktop: %s", remote_desktop);
         }
@@ -241,7 +271,7 @@ namespace Haguichi {
                 command = command.replace ("%N",  nick   );
                 command = command.replace ("%ID", id     );
 
-                bool use_double_dash = strv_contains ({"gnome-terminal", "ptyxis"}, terminal);
+                bool use_double_dash = strv_contains ({"gnome-terminal", "ptyxis", "flatpak run app.devsuite.Ptyxis"}, terminal);
 
                 string option = use_double_dash ? "--" : "-e";
                 string quote  = use_double_dash ? ""   : "\"";

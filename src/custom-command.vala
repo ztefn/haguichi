@@ -29,8 +29,8 @@ namespace Haguichi {
         }
 
         public bool exists () {
-            return (Command.exists (Command.replace_variables (cmd_ipv4, "", "", "").split (" ", 0)[0]) ||
-                    Command.exists (Command.replace_variables (cmd_ipv6, "", "", "").split (" ", 0)[0]));
+            return Command.exists (Command.replace_variables (cmd_ipv4, "", "", "")) ||
+                   Command.exists (Command.replace_variables (cmd_ipv6, "", "", ""));
         }
 
         public bool enabled_for_member (Member member) {
