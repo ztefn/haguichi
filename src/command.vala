@@ -33,7 +33,7 @@ namespace Haguichi {
             settings = new Settings (Config.APP_ID + ".commands");
 
             if (Command.exists ("flatpak")) {
-                flatpak_list = Command.return_output ("flatpak list");
+                flatpak_list = Command.return_output ("flatpak list --app");
                 debug ("flatpak_list:\n%s", flatpak_list);
             }
 
@@ -105,8 +105,9 @@ namespace Haguichi {
             if (command.has_prefix ("flatpak run ")) {
                 try {
                     // Extract application ID and check for its presence in the list
+                    // Ignore any OPTIONS and ARGUMENTS from the command string and find the application ID by its reverse-DNS format
                     MatchInfo mi;
-                    new Regex ("""^flatpak run (?<id>[a-zA-Z0-9\.\_\-]+).*?$""").match (command, 0, out mi);
+                    new Regex ("""^flatpak run.*? (?<id>[a-zA-Z0-9][a-zA-Z0-9\.\_\-]+[a-zA-Z0-9]).*?$""").match (command, 0, out mi);
                     string id = mi.fetch_named ("id");
                     result = (flatpak_list != null && flatpak_list.contains ("\t%s\t".printf (id)));
                 } catch (RegexError e) {
