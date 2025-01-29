@@ -1,0 +1,310 @@
+@import url("resource:///com/github/ztefn/haguichi/base.css");
+
+@define-color accent_color #f44;
+
+
+/*
+ * Fix background glitch for window controls in dark mode when window is unfocused
+ * https://github.com/elementary/stylesheet/issues/1311
+ */
+
+windowcontrols button {
+  background: none;
+}
+
+
+/*
+ * Decrease margins on main window controls
+ */
+
+#main-window windowcontrols.start {
+  margin-right: 0;
+}
+
+#main-window windowcontrols.end {
+  margin-left: 9px;
+}
+
+
+/*
+ * Add missing styles for pill buttons
+ * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/style-classes.html#pill
+ */
+
+button.pill {
+  border-radius: 9999px;
+  padding: 8px 20px;
+}
+
+
+/*
+ * Fix foreground color for focused destructive buttons in message dialogs
+ */
+
+.messagedialog button.destructive:focus {
+  color: white;
+}
+
+
+/*
+ * Fix foreground color for dragged rows in light mode
+ * https://github.com/elementary/stylesheet/issues/1314
+ */
+
+list.boxed-list > row {
+  color: @fg_color;
+}
+
+
+/*
+ * Fix edit icon appearing only on hover
+ * https://github.com/elementary/stylesheet/issues/1313
+ */
+
+list.boxed-list > row.entry .edit-icon {
+  opacity: 1;
+}
+
+
+/*
+ * Add missing styles for property rows
+ * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/style-classes.html#property-rows
+ */
+
+row.property label.title {
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+
+row.property label.subtitle {
+  font-size: 1em;
+  opacity: 1;
+}
+
+
+/*
+ * Add missing styles for overlay split view
+ * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/class.OverlaySplitView.html
+ */
+
+overlay-split-view widget:not(.sidebar-pane) > toolbarview,
+overlay-split-view widget:not(.sidebar-pane) > toolbarview searchbar,
+overlay-split-view widget:not(.sidebar-pane) > toolbarview listview {
+  background-color: white;
+}
+
+overlay-split-view widget.sidebar-pane > toolbarview {
+  background-color: mix(@SILVER_100, @SILVER_300, 0.225);
+  border-left: 1px solid @menu_separator;
+}
+
+
+/*
+ * Remove background and add some extra padding for sidebar rows
+ */
+
+overlay-split-view .rich-list {
+  background: none;
+}
+
+overlay-split-view .rich-list row {
+  padding: 6px 12px;
+}
+
+
+/*
+ * Modify the color of the lock icon depending on its state
+ */
+
+overlay-split-view .rich-list row button.success image {
+  filter: hue-rotate(40deg) saturate(2);
+}
+
+overlay-split-view .rich-list row button.warning image {
+  filter: hue-rotate(20deg) saturate(5);
+}
+
+overlay-split-view .rich-list row button.error image {
+  filter: hue-rotate(-50deg) saturate(3);
+}
+
+
+/*
+ * Set styles for connection button in title bar
+ */
+
+#connect-button,
+#disconnect-button {
+  border: 1px solid alpha(#000, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 1px 0 0 alpha(#fff, 0.25),
+              inset 0 1px 0 0 alpha(#fff, 0.25);
+}
+
+#connect-button:not(:disabled) {
+  background-color: @selected_bg_color;
+}
+
+#disconnect-button {
+  background-color: @accent_color;
+}
+
+#disconnect-button:backdrop {
+  background-color: alpha(@accent_color, 0.9);
+}
+
+#disconnect-button image {
+  color: shade(@accent_color, 0.5);
+  -gtk-icon-shadow: 0 1px shade(@accent_color, 1.2);
+}
+
+#connect-button:focus,
+#disconnect-button:focus {
+  outline-color: alpha(@accent_color, 0.3);
+  outline-width: 2px;
+  outline-style: solid;
+}
+
+
+/*
+ * Set styles for network list overlay buttons
+ */
+
+#overlay-refresh-button {
+  background-color: alpha(@SILVER_300, 0.5);
+}
+
+#add-network-button button {
+  padding: 8px;
+}
+
+
+/*
+ * Set padding for rows in network list
+ */
+
+#network-list > scrolledwindow > listview > row {
+  padding: 6px;
+}
+
+
+/*
+ * Increase font weight for network labels
+ */
+
+#network-list > scrolledwindow > listview > row .network-label {
+  font-weight: 600;
+}
+
+
+/*
+ * Set styles for network nodes
+ */
+
+#network-list > scrolledwindow > listview > row .network-node {
+  border-radius: 50%;
+  margin-left: 6px;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-online {
+  background: @LIME_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-online-relayed {
+  background: @BLUEBERRY_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-unreachable {
+  background: @ORANGE_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-unapproved {
+  background: @STRAWBERRY_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-error {
+  background: @BANANA_500;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-offline {
+  background: alpha(@SILVER_500, 0.6);
+}
+
+
+/*
+ * Remove padding on empty bottom action bar
+ */
+
+#preferences viewswitcherbar actionbar {
+  padding: 0;
+}
+
+
+/*
+ * Headings for AdwPreferencesGroup lacks styling
+ * https://github.com/elementary/stylesheet/issues/1310
+ */
+
+#preferences preferencesgroup label.heading {
+  font-weight: 700;
+  margin: 9px 0 12px 0;
+  opacity: 0.8;
+}
+
+
+/*
+ * Add margin to restore button and remove background in disabled state
+ */
+
+#restore-commands-button {
+  margin: 6px 0;
+}
+
+#restore-commands-button:disabled {
+  background: none;
+  box-shadow: none;
+}
+
+
+/*
+ * Add styling for command variables popover
+ */
+
+menubutton.command-variables popover contents {
+  padding: 8px;
+}
+
+menubutton.command-variables popover contents label.caption {
+  font-size: 0.85em;
+}
+
+
+/*
+ * Override some properties for style selector
+ */
+
+styleselector {
+  margin: 0;
+}
+
+styleselector checkbutton:checked {
+  box-shadow: inset 0 0 0 2px @accent_color;
+}
+
+styleselector checkbutton.system {
+  background-image: linear-gradient(to bottom right, @SILVER_100 49.99%, @BLACK_500 50.01%);
+}
+
+styleselector checkbutton.light {
+  background-color: @SILVER_100;
+}
+
+styleselector checkbutton.dark {
+  background-color: @BLACK_500;
+}
+
+styleselector checkbutton radio:checked {
+  background-color: @accent_color;
+  color: @SILVER_100;
+}
+

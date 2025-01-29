@@ -18,6 +18,15 @@ namespace Haguichi {
         [GtkChild]
         unowned Gtk.ListBox list_box;
 
+#if FOR_ELEMENTARY
+        construct {
+            label.margin_start = 12;
+            label.margin_end = 12;
+
+            list_box.add_css_class ("rich-list");
+        }
+#endif
+
         public string heading {
             get {
                 return label.label;

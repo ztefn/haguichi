@@ -33,7 +33,7 @@
 
   **for-elementary**
 
-  This option enables elementary OS integration by installing elementary style application icons.
+  This option enables elementary OS integration and additionally requires the *granite-7* development package.
 
     $ meson configure -Dfor-elementary=true
 

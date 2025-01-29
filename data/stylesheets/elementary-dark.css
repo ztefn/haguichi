@@ -1,0 +1,43 @@
+@import url("resource:///com/github/ztefn/haguichi/elementary.css");
+
+
+/*
+ * Override background colors for overlay split view
+ */
+
+overlay-split-view widget:not(.sidebar-pane) > toolbarview,
+overlay-split-view widget:not(.sidebar-pane) > toolbarview searchbar,
+overlay-split-view widget:not(.sidebar-pane) > toolbarview listview {
+  background-color: mix(@BLACK_500, @BLACK_700, 0.075);
+}
+
+overlay-split-view widget.sidebar-pane > toolbarview {
+  background-color: mix(@BLACK_300, @BLACK_500, 0.725);
+}
+
+
+/*
+ * Override background color for network list refresh button
+ */
+
+#overlay-refresh-button {
+  background-color: alpha(@BLACK_300, 0.5);
+}
+
+
+/*
+ * Override background colors for network nodes
+ */
+
+#network-list > scrolledwindow > listview > row .network-node-unapproved {
+  background: @STRAWBERRY_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-error {
+  background: @BANANA_300;
+}
+
+#network-list > scrolledwindow > listview > row .network-node-offline {
+  background: alpha(@SILVER_300, 0.6);
+}
+

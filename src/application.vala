@@ -73,6 +73,10 @@ namespace Haguichi {
                 Environment.set_variable ("G_MESSAGES_DEBUG", APP_NAME, true);
             }
 
+#if FOR_ELEMENTARY
+            Granite.init ();
+#endif
+
             app = new Application ();
             return app.run (args);
         }
@@ -89,6 +93,11 @@ namespace Haguichi {
 
             current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             debug ("current_desktop: %s", current_desktop);
+
+#if FOR_ELEMENTARY
+            Gtk.Settings.get_default().set ("gtk-theme-name", "io.elementary.stylesheet.strawberry");
+            Gtk.Settings.get_default().set ("gtk-icon-theme-name", "elementary");
+#endif
 
             connection = new Connection ();
             inhibitor  = new Inhibitor ();
@@ -117,6 +126,7 @@ namespace Haguichi {
 
                 if (!run_in_background) {
                     win.present ();
+                    win.set_focus (null);
                 }
             } else {
                 win.present ();

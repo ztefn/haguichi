@@ -134,6 +134,51 @@ namespace Haguichi {
                 }
             });
 
+#if FOR_ELEMENTARY
+            // Workaround for styling issue with AdwViewSwitcher
+            // https://github.com/elementary/stylesheet/issues/1312
+            var navigation_page = general_page.get_ancestor (typeof (Adw.NavigationPage));
+            if (navigation_page != null) {
+                var view_switcher = (Gtk.Widget) navigation_page
+                    .get_first_child () // AdwBreakPointBin breakpoint_bin
+                        .get_first_child () // AdwToolbarView
+                            .get_first_child () // GtkStack content_stack
+                            .get_next_sibling () // GtkRevealer
+                                .get_first_child () // GtkWindowHandle
+                                    .get_first_child () // GtkBox
+                                        .get_first_child () // AdwHeaderBar
+                                            .get_first_child () // GtkWindowHandle
+                                                .get_first_child () // GtkCenterBox
+                                                    .get_first_child () // AdwGizmo
+                                                    .get_next_sibling () // AdwBin
+                                                        .get_first_child () // GtkStack title_stack
+                                                            .get_first_child () // GtkStack view_switcher_stack
+                                                                .get_first_child (); // AdwViewSwitcher view_switcher
+
+                // If the view switcher was found then add the "linked" class
+                if (view_switcher is Adw.ViewSwitcher) {
+                    ((Adw.ViewSwitcher) view_switcher).add_css_class ("linked");
+                }
+            }
+
+            // Workaround for missing adw-entry-apply-symbolic icon in elementary icon theme
+            // https://github.com/elementary/icons/issues/1333
+            if (!Utils.get_icon_theme ().has_icon ("adw-entry-apply-symbolic")) {
+                var image = (Gtk.Widget) nickname
+                    .get_first_child () // GtkBox header
+                        .get_first_child () // GtkBox prefixes
+                        .get_next_sibling () // AdwGizmo editable_area
+                        .get_next_sibling () // GtkImage indicator
+                        .get_next_sibling () // GtkButton apply_button
+                            .get_first_child (); // GtkImage
+
+                // If the image was found then change the icon to one that we know exists
+                if (image is Gtk.Image) {
+                    ((Gtk.Image) image).icon_name = "object-select-symbolic";
+                }
+            }
+#endif
+
             protocol.selected = (int) config.get_enum ("protocol");
             protocol.notify["selected-item"].connect ((sender, property) => {
                 var i = (int) protocol.selected;

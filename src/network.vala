@@ -110,7 +110,7 @@ namespace Haguichi {
 
         public void set_row_css_classes () {
             node_css_classes  = new string[] {"network-node", status.get_css_classes ()};
-            label_css_classes = new string[] {status.status_int == 0 ? "dim-label" : ""};
+            label_css_classes = new string[] {"network-label", status.status_int == 0 ? "dim-label" : ""};
         }
 
         public void set_sort_strings () {

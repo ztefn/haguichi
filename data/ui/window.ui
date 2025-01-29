@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <template class="HaguichiWindow" parent="AdwApplicationWindow">
+    <property name="name">main-window</property>
     <property name="default-width">600</property>
     <property name="default-height">480</property>
     <property name="width-request">320</property>
@@ -187,7 +188,7 @@
             <property name="content">
               <object class="AdwToolbarView">
                 <child type="top">
-                  <object class="AdwHeaderBar">
+                  <object class="AdwHeaderBar" id="header_bar">
                     <property name="title-widget">
                       <object class="AdwWindowTitle" id="window_title">
                         <property name="title">Haguichi</property>
@@ -199,14 +200,17 @@
                         <property name="action-name">win.refresh</property>
                         <property name="icon-name">view-refresh-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Refresh</property>
+                        <property name="valign">center</property>
                         <property name="visible">false</property>
                       </object>
                     </child>
                     <child type="start">
                       <object class="GtkToggleButton" id="connect_button">
+                        <property name="name">connect-button</property>
                         <property name="action-name">win.connect</property>
                         <property name="icon-name">system-shutdown-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Connect</property>
+                        <property name="valign">center</property>
                         <property name="visible">false</property>
                         <style>
                           <class name="suggested-action"/>
@@ -215,10 +219,12 @@
                     </child>
                     <child type="start">
                       <object class="GtkToggleButton" id="disconnect_button">
+                        <property name="name">disconnect-button</property>
                         <property name="active">true</property>
                         <property name="action-name">win.disconnect</property>
                         <property name="icon-name">system-shutdown-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Disconnect</property>
+                        <property name="valign">center</property>
                         <property name="visible">false</property>
                         <style>
                           <class name="accent"/>
@@ -230,6 +236,7 @@
                         <property name="icon-name">edit-find-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Search</property>
                         <property name="active" bind-source="search_bar" bind-property="search_mode_enabled" bind-flags="sync-create"/>
+                        <property name="valign">center</property>
                         <property name="visible">false</property>
                       </object>
                     </child>
@@ -239,6 +246,7 @@
                         <property name="icon-name">open-menu-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Main Menu</property>
                         <property name="menu-model">primary_menu</property>
+                        <property name="valign">center</property>
                       </object>
                     </child>
                   </object>
@@ -273,6 +281,7 @@
                         <property name="spacing">9</property>
                         <child>
                           <object class="GtkButton" id="overlay_refresh_button">
+                            <property name="name">overlay-refresh-button</property>
                             <property name="action-name">win.refresh</property>
                             <property name="icon-name">view-refresh-symbolic</property>
                             <property name="tooltip-text" translatable="yes">Refresh</property>
@@ -475,6 +484,7 @@
                         <signal name="clicked" handler="go_back_button_clicked"/>
                         <property name="icon-name">go-previous-symbolic</property>
                         <property name="tooltip-text" translatable="yes">Network List</property>
+                        <property name="valign">center</property>
                         <property name="visible" bind-source="split_view" bind-property="collapsed" bind-flags="sync-create"/>
                       </object>
                     </child>

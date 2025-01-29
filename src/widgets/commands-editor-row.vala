@@ -100,6 +100,10 @@ namespace Haguichi {
 
             var drag_widget = new Gtk.ListBox ();
             drag_widget.set_size_request (get_width (), get_height ());
+#if FOR_ELEMENTARY
+            // Add "boxed-list" class to get some styling on our dragged row
+            drag_widget.add_css_class ("boxed-list");
+#endif
             drag_widget.append (drag_row);
             drag_widget.drag_highlight_row (drag_row);
 

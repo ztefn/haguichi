@@ -64,6 +64,13 @@ namespace Haguichi {
 
         public Gtk.Widget modal_dialog;
 
+#if FOR_ELEMENTARY
+        private static Gtk.CssProvider provider;
+
+        [GtkChild]
+        public unowned Adw.HeaderBar header_bar;
+#endif
+
         public Window (Application app) {
             Object (application: app, title: APP_NAME);
 
@@ -89,6 +96,22 @@ namespace Haguichi {
             if (strv_contains (Intl.get_language_names (), "ru")) {
                 add_css_class ("custom");
             }
+
+#if FOR_ELEMENTARY
+            // Update stylesheet when dark mode is turned on or off
+            Adw.StyleManager.get_default ().notify["dark"].connect (load_stylesheet);
+            load_stylesheet ();
+
+            // Move search button to the right because the close button takes up a lot of space on the left
+            search_button.unparent ();
+            header_bar.pack_end (search_button);
+            ((Gtk.Box) search_button.get_ancestor (typeof (Gtk.Box))).spacing = 0;
+
+            // Add CSS classes to toggle button inside the menu button to get correct styling
+            var toggle_button = (Gtk.ToggleButton) overlay_add_network_button.get_first_child ();
+            toggle_button.add_css_class ("circular");
+            toggle_button.add_css_class ("suggested-action");
+#endif
 
             default_width  = ui.get_int ("width");
             default_height = ui.get_int ("height");
@@ -134,6 +157,16 @@ namespace Haguichi {
             install_action ("win.about",                 null, (Gtk.WidgetActionActivateFunc) about_action);
             install_action ("win.quit",                  null, (Gtk.WidgetActionActivateFunc) quit_action);
         }
+
+#if FOR_ELEMENTARY
+        private void load_stylesheet () {
+            if (provider == null) {
+                provider = new Gtk.CssProvider ();
+            }
+            provider.load_from_resource ("/com/github/ztefn/haguichi/elementary" + (Adw.StyleManager.get_default ().dark ? "-dark" : "") + ".css");
+            get_style_context ().add_provider_for_display (Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+#endif
 
         [GtkCallback]
         private void download_hamachi () {

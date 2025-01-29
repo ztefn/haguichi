@@ -1,0 +1,62 @@
+statuspage > scrolledwindow > viewport > box {
+  margin-top: 6px;
+}
+
+
+#restore-commands-button image {
+  transform: scaleX(-1);
+}
+
+
+#add-command-button {
+  background: none;
+  padding: 9px;
+}
+
+
+styleselector {
+  margin: 9px 0;
+}
+
+styleselector checkbutton {
+  background-clip: content-box;
+  border-radius: 9999px;
+  box-shadow: inset 0 0 0 1px alpha(currentColor, 0.15);
+  min-height: 30px;
+  min-width: 30px;
+  outline-offset: 1px;
+  padding: 1px;
+}
+
+styleselector checkbutton:checked {
+  box-shadow: inset 0 0 0 2px @accent_bg_color;
+}
+
+styleselector checkbutton.system {
+  background-image: linear-gradient(to bottom right, @view_bg_color 49.99%, @view_fg_color 50.01%);
+}
+
+styleselector checkbutton.light {
+  background-color: @view_bg_color;
+}
+
+styleselector checkbutton.dark {
+  background-color: @view_fg_color;
+}
+
+styleselector checkbutton radio {
+  -gtk-icon-source: none;
+  background: none;
+  border: none;
+  box-shadow: none;
+  min-height: 12px;
+  min-width: 12px;
+  padding: 2px;
+  transform: translate(16px, 10px);
+}
+styleselector checkbutton radio:checked {
+  -gtk-icon-source: -gtk-icontheme("object-select-symbolic");
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+

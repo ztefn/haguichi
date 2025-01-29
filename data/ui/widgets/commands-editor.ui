@@ -35,6 +35,9 @@
                     <property name="use-underline">true</property>
                   </object>
                 </property>
+                <style>
+                  <class name="flat"/>
+                </style>
               </object>
             </child>
           </object>

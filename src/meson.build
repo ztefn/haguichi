@@ -56,6 +56,14 @@ if dependency('libadwaita-1').version().version_compare('>= 1.6')
   )
 endif
 
+if get_option('for-elementary')
+  deps += dependency('granite-7')
+  add_project_arguments(
+    ['-D', 'FOR_ELEMENTARY'],
+    language: 'vala'
+  )
+endif
+
 executable(binary_name, config, sources, resources,
   dependencies: deps,
        install: true,
