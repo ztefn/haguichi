@@ -1,15 +1,8 @@
 {
     "app-id": "com.github.ztefn.haguichi",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "49",
-    "sdk": "org.gnome.Sdk",
-    "sdk-extensions": [
-        "org.freedesktop.Sdk.Extension.vala"
-    ],
-    "build-options": {
-        "append-path": "/usr/lib/sdk/vala/bin",
-        "prepend-ld-library-path": "/usr/lib/sdk/vala/lib"
-    },
+    "runtime": "io.elementary.Platform",
+    "runtime-version": "8.2",
+    "sdk": "io.elementary.Sdk",
     "command": "haguichi",
     "finish-args": [
         "--device=dri",
@@ -19,7 +12,6 @@
         "--system-talk-name=org.freedesktop.login1",
 
         "--talk-name=org.freedesktop.Flatpak",
-        "--talk-name=org.kde.StatusNotifierWatcher",
 
         "--share=network",
         "--share=ipc",
@@ -41,27 +33,11 @@
     ],
     "modules": [
         {
-            "name": "libportal",
-            "buildsystem": "meson",
-            "config-opts": [
-                "-Dbackend-gtk3=disabled",
-                "-Dbackend-gtk4=enabled",
-                "-Dbackend-qt5=disabled",
-                "-Dbackend-qt6=disabled",
-                "-Ddocs=false",
-                "-Dtests=false"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://github.com/flatpak/libportal/releases/download/0.9.1/libportal-0.9.1.tar.xz",
-                    "sha256": "de801ee349ed3c255a9af3c01b1a401fab5b3fc1c35eb2fd7dfb35d4b8194d7f"
-                }
-            ]
-        },
-        {
             "name": "haguichi",
             "buildsystem": "meson",
+            "config-opts": [
+                "-Dfor-elementary=true"
+            ],
             "sources": [
                 {
                     "type": "dir",
