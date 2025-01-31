@@ -97,13 +97,15 @@ namespace Haguichi {
                 }
             });
 
+#if FOR_ELEMENTARY
+            network_leave_button.icon_name = "system-log-out";
+#else
             // Use different leave icon for Yaru and elementary themes
             var theme_name = Utils.get_icon_theme ().theme_name;
-            if (theme_name.has_prefix ("Yaru")) {
+            if (theme_name.has_prefix ("Yaru") || theme_name == "elementary") {
                 network_leave_button.icon_name = "system-log-out-symbolic";
-            } else if (theme_name == "elementary") {
-                network_leave_button.icon_name = "system-log-out";
             }
+#endif
         }
 
         [GtkCallback]
