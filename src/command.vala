@@ -163,6 +163,7 @@ namespace Haguichi {
                 "io.elementary.terminal",
                 "kgx",
                 "ptyxis",
+                "ghostty",
                 "tilix",
                 "xfce4-terminal",
                 "konsole",
