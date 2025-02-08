@@ -300,6 +300,22 @@ namespace Haguichi {
         private void shortcuts_action () {
             var builder = new Gtk.Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts.ui");
             var shortcuts = (Gtk.ShortcutsWindow) builder.get_object ("shortcuts");
+#if FOR_ELEMENTARY
+            // Find the search button so that we can fix its appearance
+            var toggle_button = (Gtk.Widget) shortcuts
+                .get_first_child () // GtkBox
+                .get_next_sibling () // GtkHeaderBar
+                    .get_first_child () // GtkWindowHandle
+                        .get_first_child () // GtkCenterBox
+                            .get_first_child () // GtkBox
+                                .get_first_child () // GtkWindowControls
+                                .get_next_sibling (); // GtkToggleButton
+
+            // If the search button was found then change the vertical alignment
+            if (toggle_button is Gtk.ToggleButton) {
+                ((Gtk.ToggleButton) toggle_button).valign = Gtk.Align.CENTER;
+            }
+#endif
             show_dialog (shortcuts);
         }
 

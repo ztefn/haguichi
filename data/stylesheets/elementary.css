@@ -27,6 +27,24 @@ windowcontrols button {
 
 
 /*
+ * Give shortcuts window a flat appearance
+ */
+
+window.shortcuts headerbar,
+window.shortcuts searchbar {
+  background: none;
+  box-shadow: none;
+}
+
+window.shortcuts shortcut .keycap {
+  background: alpha(black, 0.08);
+  border: none;
+  box-shadow: 0 1px 0 0 alpha(black, 0.15);
+  color: alpha(@fg_color, 0.78);
+}
+
+
+/*
  * Add missing styles for pill buttons
  * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/style-classes.html#pill
  */
