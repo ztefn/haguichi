@@ -23,7 +23,7 @@ Recommends: bash,
             coreutils,
             dnsutils,
             iputils-ping,
-            policykit-1,
+            pkexec,
             tar,
             xdg-utils
 Description: Manage your Hamachi networks
