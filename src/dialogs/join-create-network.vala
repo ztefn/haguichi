@@ -35,7 +35,9 @@ namespace Haguichi {
         public JoinCreateNetworkDialog (string _mode) {
             mode  = _mode;
             title = (mode == "Join") ? _("Join Network") : _("Create Network");
-#if !ADW_1_6
+#if ADW_1_6
+            content_width = 400;
+#else
             resizable = false;
 #endif
             add_button.label = (mode == "Join") ? _("_Join") : _("C_reate");

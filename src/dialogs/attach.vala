@@ -31,7 +31,9 @@ namespace Haguichi {
         unowned Adw.SwitchRow include_networks_switch;
 
         public AttachDialog () {
-#if !ADW_1_6
+#if ADW_1_6
+            content_width = 400;
+#else
             resizable = false;
 #endif
         }

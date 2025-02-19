@@ -25,7 +25,9 @@ namespace Haguichi {
         unowned Adw.ComboRow approval;
 
         public ChangeAccessDialog (Network _network) {
-#if !ADW_1_6
+#if ADW_1_6
+            content_width = 400;
+#else
             resizable = false;
 #endif
             network = _network;

@@ -24,7 +24,9 @@ namespace Haguichi {
 
         public ChangePasswordDialog (Network _network) {
             network = _network;
-#if !ADW_1_6
+#if ADW_1_6
+            content_width = 400;
+#else
             height_request = 100;
             resizable = false;
 #endif
