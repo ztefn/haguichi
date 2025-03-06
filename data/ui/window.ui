@@ -340,6 +340,7 @@
                                         <property name="title" translatable="yes">Hamachi Lost Connection</property>
                                         <style>
                                           <class name="compact"/>
+                                          <class name="numeric"/>
                                         </style>
                                         <child>
                                           <object class="GtkButton">
