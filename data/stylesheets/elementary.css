@@ -56,6 +56,16 @@ button.pill {
 
 
 /*
+ * Add missing styles for tabular numerals
+ * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/style-classes.html#typography-styles
+ */
+
+.numeric {
+  font-feature-settings: "tnum";
+}
+
+
+/*
  * Fix foreground color for focused destructive buttons in message dialogs
  */
 
