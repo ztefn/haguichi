@@ -616,8 +616,8 @@ msgid "You Are Connected!"
 msgstr "Қосылыс сәтті орнатылды!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Желі қосу үшін + батырмасын басыңыз"
+msgid "Use the + button to add a network"
+msgstr "Желі қосу үшін + түймесін пайдаланыңыз"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"

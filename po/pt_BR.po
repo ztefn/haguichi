@@ -603,8 +603,8 @@ msgid "You Are Connected!"
 msgstr "Você está conectado!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Clique no botão + para adicionar uma rede"
+msgid "Use the + button to add a network"
+msgstr "Use o botão + para adicionar uma rede"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"

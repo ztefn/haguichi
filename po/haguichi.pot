@@ -597,7 +597,7 @@ msgid "You Are Connected!"
 msgstr ""
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
+msgid "Use the + button to add a network"
 msgstr ""
 
 #: data/ui/window.ui:398

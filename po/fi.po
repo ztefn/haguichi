@@ -598,8 +598,8 @@ msgid "You Are Connected!"
 msgstr "Yhteys muodostettu!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Napsauta + lisätäksesi verkon"
+msgid "Use the + button to add a network"
+msgstr "Käytä + painiketta lisätäksesi verkon"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"

@@ -608,8 +608,8 @@ msgid "You Are Connected!"
 msgstr "Jūs esate prisijungę!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Spauskite + mygtuką, kad pridėtumėte tinklą"
+msgid "Use the + button to add a network"
+msgstr "Naudokite + mygtuką, kad pridėtumėte tinklą"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"

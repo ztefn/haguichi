@@ -600,8 +600,8 @@ msgid "You Are Connected!"
 msgstr "Anda terhubung!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Klik tombol + untuk menambah jaringan"
+msgid "Use the + button to add a network"
+msgstr "Gunakan tombol + untuk menambahkan jaringan"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"

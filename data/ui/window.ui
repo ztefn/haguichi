@@ -384,7 +384,7 @@
                                     <property name="child">
                                       <object class="AdwStatusPage">
                                         <property name="title" translatable="yes">You Are Connected!</property>
-                                        <property name="description" translatable="yes">Click the + button to add a network</property>
+                                        <property name="description" translatable="yes">Use the + button to add a network</property>
                                         <style>
                                           <class name="compact"/>
                                         </style>

@@ -615,8 +615,8 @@ msgid "You Are Connected!"
 msgstr "¡Tas coneutáu!"
 
 #: data/ui/window.ui:377
-msgid "Click the + button to add a network"
-msgstr "Primi nel botón + p'amestar una rede"
+msgid "Use the + button to add a network"
+msgstr "Usa'l botón + p'amestar una rede"
 
 #: data/ui/window.ui:398
 msgid "No Results Found"
