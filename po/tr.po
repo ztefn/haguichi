@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 17:13+0100\n"
+"POT-Creation-Date: 2025-03-09 18:24+0100\n"
 "PO-Revision-Date: 2018-03-07 17:01+0000\n"
 "Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -126,7 +126,7 @@ msgstr "_Kaydet"
 msgid "Attach to Account"
 msgstr "Hesaba Ekle"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:179
+#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "Hesap"
 
@@ -212,12 +212,12 @@ msgstr "_At"
 msgid "_Details"
 msgstr ""
 
-#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:550
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:561
 #: src/indicator.vala:111
 msgid "_Join Network…"
 msgstr "_Ağa katıl…"
 
-#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:554
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:565
 #: src/indicator.vala:116
 msgid "_Create Network…"
 msgstr "_Ağ Kur…"
@@ -230,11 +230,11 @@ msgstr "_Çevrimiçi Ol"
 msgid "_Go Offline"
 msgstr "_Çevrimdışı Ol"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:337
+#: data/ui/menus/network-menu.ui:22 src/network.vala:347
 msgid "_Leave"
 msgstr "_Ayrıl"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:366
+#: data/ui/menus/network-menu.ui:28 src/network.vala:376
 msgid "_Delete"
 msgstr "_Sil"
 
@@ -251,125 +251,125 @@ msgstr "Şifreyi _Değiştir…"
 msgid "_Copy Network ID"
 msgstr "_Ağ Kimliğini Kopyala"
 
-#: data/ui/preferences.ui:6 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
 msgid "General"
 msgstr "Genel"
 
-#: data/ui/preferences.ui:12
+#: data/ui/preferences.ui:13
 msgid "Configuration"
 msgstr "Yapılandırma"
 
-#: data/ui/preferences.ui:19
+#: data/ui/preferences.ui:20
 #, fuzzy
 msgid "Backup"
 msgstr "Yedek Al"
 
-#: data/ui/preferences.ui:30
+#: data/ui/preferences.ui:31
 msgid "Open Folder"
 msgstr "Klasör Aç"
 
-#: data/ui/preferences.ui:44 data/ui/widgets/command-entry-row.ui:45
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
 msgid "Nickname"
 msgstr "Takma ad"
 
-#: data/ui/preferences.ui:51
+#: data/ui/preferences.ui:52
 msgid "_Protocol"
 msgstr "_Protokol"
 
-#: data/ui/preferences.ui:56
+#: data/ui/preferences.ui:57
 msgid "Both IPv4 and IPv6"
 msgstr "IPv4 ve IPv6"
 
-#: data/ui/preferences.ui:57
+#: data/ui/preferences.ui:58
 msgid "IPv4 only"
 msgstr "Sadece IPv4"
 
-#: data/ui/preferences.ui:58
+#: data/ui/preferences.ui:59
 msgid "IPv6 only"
 msgstr "Sadece IPv6"
 
-#: data/ui/preferences.ui:68
+#: data/ui/preferences.ui:69
 msgid "Behavior"
 msgstr "İşleyiş"
 
-#: data/ui/preferences.ui:71
+#: data/ui/preferences.ui:72
 msgid "_Network list update interval"
 msgstr ""
 
-#: data/ui/preferences.ui:77
+#: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
 msgstr "A_çılışta otomatik bağlan"
 
-#: data/ui/preferences.ui:83
+#: data/ui/preferences.ui:84
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
 
-#: data/ui/preferences.ui:89
+#: data/ui/preferences.ui:90
 msgid "_Disconnect on quit"
 msgstr "_Çıkışta bağlantıyı kopar"
 
-#: data/ui/preferences.ui:99 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Komutlar"
 
 #. In this context meaning "work environment".
-#: data/ui/preferences.ui:107
+#: data/ui/preferences.ui:108
 msgid "Desktop"
 msgstr "Masaüstü"
 
-#: data/ui/preferences.ui:110
+#: data/ui/preferences.ui:111
 msgid "Appearance"
 msgstr "Gürünüm"
 
-#: data/ui/preferences.ui:113
+#: data/ui/preferences.ui:114
 msgid "_Style"
 msgstr ""
 
-#: data/ui/preferences.ui:130
+#: data/ui/preferences.ui:131
 msgid "Follow System"
 msgstr ""
 
-#: data/ui/preferences.ui:141
+#: data/ui/preferences.ui:142
 msgid "Light"
 msgstr ""
 
-#: data/ui/preferences.ui:153
+#: data/ui/preferences.ui:154
 msgid "Dark"
 msgstr ""
 
-#: data/ui/preferences.ui:163
+#: data/ui/preferences.ui:164
 msgid "Show _indicator"
 msgstr "Göstergeyi göster"
 
-#: data/ui/preferences.ui:172
+#: data/ui/preferences.ui:173
 msgid "Notifications"
 msgstr "Bildirimler"
 
-#: data/ui/preferences.ui:175
+#: data/ui/preferences.ui:176
 msgid "Display notification when the connection is l_ost"
 msgstr "Bağ_lantı koptuğunda bildir"
 
-#: data/ui/preferences.ui:181
+#: data/ui/preferences.ui:182
 msgid "Display notification when a member _joins"
 msgstr "Üyeler _bağlandığında bildir"
 
-#: data/ui/preferences.ui:187
+#: data/ui/preferences.ui:188
 msgid "Display notification when a member _leaves"
 msgstr "Üyeler _ayrıldığında bildir"
 
-#: data/ui/preferences.ui:193
+#: data/ui/preferences.ui:194
 msgid "Display notification when a member comes o_nline"
 msgstr "Üyeler ç_evrimiçi olduğunda bildir"
 
-#: data/ui/preferences.ui:199
+#: data/ui/preferences.ui:200
 msgid "Display notification when a member goes o_ffline"
 msgstr "Üyeler çe_vrimdışı olduğunda bildir"
 
-#: data/ui/preferences.ui:211
+#: data/ui/preferences.ui:212
 msgid "_Save a Backup…"
 msgstr "Yedek al..."
 
-#: data/ui/preferences.ui:215
+#: data/ui/preferences.ui:216
 msgid "_Restore from Backup…"
 msgstr "Yedekten ge_ri yükle"
 
@@ -385,11 +385,11 @@ msgstr "İstemci bilgisini göster"
 msgid "Open menu"
 msgstr "Menüyü aç"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:209
+#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
 msgid "Connect"
 msgstr "Bağlan"
 
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:221
+#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
 msgid "Disconnect"
 msgstr "Bağlantıyı Kes"
 
@@ -405,7 +405,7 @@ msgstr "Klavye kısayolları"
 msgid "Quit"
 msgstr "Çık"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:477
+#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
 msgid "Network List"
 msgstr "Ağ Listesi"
 
@@ -417,11 +417,11 @@ msgstr "Bir ağa katıl"
 msgid "Create a network"
 msgstr "Bit ağ oluştur"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:201 data/ui/window.ui:278
+#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "Tazele"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:231
+#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
 msgid "Search"
 msgstr "Arama"
 
@@ -454,7 +454,7 @@ msgid "Cancel"
 msgstr "İptal"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:51
+#: data/ui/widgets/command-entry-row.ui:47
 msgid "Client ID"
 msgstr "İstemci Kimliği"
 
@@ -511,19 +511,19 @@ msgstr "Bağlantı"
 msgid "Command Variables"
 msgstr "Komutlar"
 
-#: data/ui/widgets/command-entry-row.ui:39
+#: data/ui/widgets/command-entry-row.ui:35
 msgid "Address"
 msgstr "Adresi"
 
-#: data/ui/widgets/command-entry-row.ui:66
+#: data/ui/widgets/command-entry-row.ui:62
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:72
+#: data/ui/widgets/command-entry-row.ui:68
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:78
+#: data/ui/widgets/command-entry-row.ui:74
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "_Uzak Masaüstüne Bak"
@@ -537,15 +537,15 @@ msgstr "Ge_ri Yükle"
 msgid "_Add Command…"
 msgstr "Komut _Ekle…"
 
-#: data/ui/widgets/commands-editor.ui:52
+#: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
 msgstr "_Paylaşımları Gözden Geçir"
 
-#: data/ui/widgets/commands-editor.ui:55
+#: data/ui/widgets/commands-editor.ui:58
 msgid "_View Remote Desktop"
 msgstr "_Uzak Masaüstüne Bak"
 
-#: data/ui/widgets/commands-editor.ui:58
+#: data/ui/widgets/commands-editor.ui:61
 msgid "_Ping"
 msgstr "_Ping"
 
@@ -582,100 +582,101 @@ msgstr "_Kaldır"
 msgid "Copy"
 msgstr ""
 
-#: data/ui/window.ui:194 src/window.vala:457
+#: data/ui/window.ui:195 src/window.vala:513
 msgid "Initializing"
 msgstr ""
 
-#: data/ui/window.ui:240
+#: data/ui/window.ui:247
 msgid "Main Menu"
 msgstr ""
 
-#: data/ui/window.ui:257
+#: data/ui/window.ui:265
 msgid "Search networks and members"
 msgstr ""
 
-#: data/ui/window.ui:290
+#: data/ui/window.ui:299
 #, fuzzy
 msgid "Add Network"
 msgstr "Ağa Bağlan"
 
-#: data/ui/window.ui:331 src/controller.vala:705
+#. Display notification only if preference is set and window is not currently active
+#: data/ui/window.ui:340 src/controller.vala:709
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi bağlantısı koptu"
 
-#: data/ui/window.ui:337 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
 msgid "_Cancel"
 msgstr "İ_ptal"
 
-#: data/ui/window.ui:376
+#: data/ui/window.ui:386
 msgid "You Are Connected!"
 msgstr "Bağlandınız!"
 
-#: data/ui/window.ui:377
+#: data/ui/window.ui:387
 msgid "Use the + button to add a network"
 msgstr "Bir ağ eklemek için + düğmesini kullanın"
 
-#: data/ui/window.ui:398
+#: data/ui/window.ui:408
 msgid "No Results Found"
 msgstr ""
 
-#: data/ui/window.ui:399
+#: data/ui/window.ui:409
 msgid "Try a different search"
 msgstr ""
 
-#: data/ui/window.ui:416
+#: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
 msgstr "Lütfen Hamachi'yi indirin ve kurulum yönergelerini takip edin"
 
-#: data/ui/window.ui:422
+#: data/ui/window.ui:432
 msgid "_Download"
 msgstr "_İndir"
 
-#: data/ui/window.ui:441
+#: data/ui/window.ui:451
 msgid "Hamachi Is Not Configured"
 msgstr "Hamachi yapılandırılmamış"
 
-#: data/ui/window.ui:442
+#: data/ui/window.ui:452
 msgid "You need to configure Hamachi before you can connect"
 msgstr "Bağlanmadan önce Hamachi'yi yapılandırmalısınız"
 
-#: data/ui/window.ui:448
+#: data/ui/window.ui:458
 msgid "C_onfigure"
 msgstr "_Yapılandır"
 
-#: data/ui/window.ui:496 src/indicator.vala:123
+#: data/ui/window.ui:507 src/indicator.vala:123
 msgid "_Information"
 msgstr "_Bilgi"
 
-#: data/ui/window.ui:503
+#: data/ui/window.ui:514
 msgid "Sort by _Name"
 msgstr "_Ada Göre Sırala"
 
-#: data/ui/window.ui:509
+#: data/ui/window.ui:520
 msgid "Sort by _Status"
 msgstr "_Duruma Göre Sırala"
 
-#: data/ui/window.ui:517
+#: data/ui/window.ui:528
 msgid "Show _Offline Members"
 msgstr "_Çevrimdışı üyeler"
 
-#: data/ui/window.ui:524
+#: data/ui/window.ui:535
 msgid "_Preferences"
 msgstr "_Tercihler"
 
-#: data/ui/window.ui:528
+#: data/ui/window.ui:539
 msgid "_Keyboard Shortcuts"
 msgstr "_Klavye Kısayolları"
 
-#: data/ui/window.ui:532
+#: data/ui/window.ui:543
 msgid "_Help"
 msgstr "_Yardım"
 
-#: data/ui/window.ui:536
+#: data/ui/window.ui:547
 msgid "_About Haguichi"
 msgstr "Haguichi _Hakkında"
 
-#: data/ui/window.ui:542 src/indicator.vala:131
+#: data/ui/window.ui:553 src/indicator.vala:131
 msgid "_Quit"
 msgstr "Çı_k"
 
@@ -699,73 +700,73 @@ msgstr "Bağlanma hatası"
 msgid "Hamachi login failed"
 msgstr "Hamachi girişi başarısız oldu"
 
-#: src/controller.vala:456
+#: src/controller.vala:459
 msgid "Updating"
 msgstr "Güncelleniyor"
 
-#: src/controller.vala:616 src/indicator.vala:84 src/window.vala:461
+#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
 msgid "Connected"
 msgstr "Bağlandı"
 
-#: src/controller.vala:724
+#: src/controller.vala:728
 msgid "Member Joined"
 msgstr "Üye bağlandı"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:726
+#: src/controller.vala:730
 msgid "{0} joined the network {1}"
 msgstr "{0}, {1} ağına bağlandı"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:728
+#: src/controller.vala:732
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağa katıldı"
 msgstr[1] "{0}, {1} ve {2} başka ağa katıldı"
 
-#: src/controller.vala:754
+#: src/controller.vala:758
 msgid "Member Left"
 msgstr "Üye ayrıldı"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:756
+#: src/controller.vala:760
 msgid "{0} left the network {1}"
 msgstr "{0}, {1} ağından ayrıldı"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:758
+#: src/controller.vala:762
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
 msgstr[1] "{0}, {1} ve {2} başka ağdan ayrıldı"
 
-#: src/controller.vala:780
+#: src/controller.vala:784
 msgid "Member Online"
 msgstr "Üye çevrimiçi"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:782
+#: src/controller.vala:786
 msgid "{0} came online in the network {1}"
 msgstr "{0}, {1} ağında çevrimiçi oldu"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:784
+#: src/controller.vala:788
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağda çevrimiçi oldu"
 msgstr[1] "{0}, {1} ve {2} başka ağda çevrimiçi oldu"
 
-#: src/controller.vala:806
+#: src/controller.vala:810
 msgid "Member Offline"
 msgstr "Üye çevrimdışı"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:808
+#: src/controller.vala:812
 msgid "{0} went offline in the network {1}"
 msgstr "{0}, {1} ağında çevrimdışı oldu"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:810
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağda çevrimdışı oldu"
@@ -780,12 +781,12 @@ msgstr "Komutu Düzenle"
 msgid "Add Command"
 msgstr "Komut _Ekle…"
 
-#: src/dialogs/attach.vala:65
+#: src/dialogs/attach.vala:67
 #, fuzzy
 msgid "Attach request sent"
 msgstr "Katılma isteği gönderildi"
 
-#: src/dialogs/attach.vala:74
+#: src/dialogs/attach.vala:76
 msgid "Account not found"
 msgstr "Hesap bulunamadı"
 
@@ -797,51 +798,51 @@ msgstr "Ağa Bağlan"
 msgid "Create Network"
 msgstr "Ağ Kur"
 
-#: src/dialogs/join-create-network.vala:41
+#: src/dialogs/join-create-network.vala:43
 msgid "_Join"
 msgstr "_Bağlan"
 
-#: src/dialogs/join-create-network.vala:41
+#: src/dialogs/join-create-network.vala:43
 msgid "C_reate"
 msgstr "O_luştur"
 
-#: src/dialogs/join-create-network.vala:79
+#: src/dialogs/join-create-network.vala:81
 msgid "Join request sent"
 msgstr "Katılma isteği gönderildi"
 
-#: src/dialogs/join-create-network.vala:104
+#: src/dialogs/join-create-network.vala:106
 msgid "Network not found"
 msgstr "Ağ bulunamadı"
 
-#: src/dialogs/join-create-network.vala:108
+#: src/dialogs/join-create-network.vala:110
 msgid "Invalid password"
 msgstr "Geçersiz şifre"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:112
 msgid "Network is full"
 msgstr "Ağ dolu"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:114
 msgid "Network is locked"
 msgstr "Ağ kilitli"
 
-#: src/dialogs/join-create-network.vala:115
+#: src/dialogs/join-create-network.vala:117
 msgid "Network already joined"
 msgstr "Zaten ağa bağlanılmış."
 
-#: src/dialogs/join-create-network.vala:177
+#: src/dialogs/join-create-network.vala:179
 msgid "Network ID is already taken"
 msgstr "Ağ kimliği zaten alınmış"
 
-#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:148
+#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: src/hamachi.vala:578 src/window.vala:382
+#: src/hamachi.vala:578 src/window.vala:438
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: src/hamachi.vala:700 src/hamachi.vala:702
+#: src/hamachi.vala:699 src/hamachi.vala:702
 #, fuzzy
 msgid "Password changed"
 msgstr "Parola"
@@ -876,11 +877,11 @@ msgstr ""
 msgid "Archive does not contain expected files"
 msgstr "Arşiv beklenen dosyaları içermiyor"
 
-#: src/indicator.vala:84 src/window.vala:459
+#: src/indicator.vala:84 src/window.vala:515
 msgid "Connecting"
 msgstr "Bağlanıyor"
 
-#: src/indicator.vala:84 src/window.vala:463
+#: src/indicator.vala:84 src/window.vala:519
 msgid "Disconnected"
 msgstr "Bağlantı Kesildi"
 
@@ -906,23 +907,23 @@ msgstr ""
 "Kabul edilirlerse, atılan üyeler ağa başka bir zamanda tekrar "
 "bağlanabilirler."
 
-#: src/network.vala:138
+#: src/network.vala:148
 msgid "You"
 msgstr "Siz"
 
-#: src/network.vala:334
+#: src/network.vala:344
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "“{0}” ağından ayrılmak istediğinize emin misiniz?"
 
-#: src/network.vala:335
+#: src/network.vala:345
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Kabul edildiyseniz, ağa başka bir zamanda tekrar bağlanabilirsiniz."
 
-#: src/network.vala:363
+#: src/network.vala:373
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "”{0}” ağını silmek istedeğinizden emin misiniz?"
 
-#: src/network.vala:364
+#: src/network.vala:374
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Eğer bir ağı silerseniz tamamen kaybedilir."
 
@@ -930,54 +931,54 @@ msgstr "Eğer bir ağı silerseniz tamamen kaybedilir."
 msgid "Not present"
 msgstr ""
 
-#: src/preferences.vala:234
+#: src/preferences.vala:279
 msgid "All supported archives"
 msgstr "Tüm desteklenen arşivler"
 
-#: src/preferences.vala:254
+#: src/preferences.vala:299
 msgid "Save a Backup"
 msgstr "Yedek Al"
 
-#: src/preferences.vala:276
+#: src/preferences.vala:321
 msgid "Restore from Backup"
 msgstr "Yedekten Geri Yükle"
 
-#: src/preferences.vala:277 src/widgets/commands-editor.vala:56
+#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
 msgid "_Restore"
 msgstr "Ge_ri Yükle"
 
-#: src/preferences.vala:317
+#: src/preferences.vala:362
 #, fuzzy
 msgid "Never"
 msgstr "_Eskiye dön"
 
-#: src/preferences.vala:336
+#: src/preferences.vala:381
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/preferences.vala:340
+#: src/preferences.vala:385
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/sidebar.vala:161
+#: src/sidebar.vala:166
 msgid "Unavailable"
 msgstr "Geçerli değil"
 
-#: src/sidebar.vala:179
+#: src/sidebar.vala:184
 msgid "pending"
 msgstr "beklemede"
 
-#: src/sidebar.vala:180
+#: src/sidebar.vala:185
 msgid "Not attached"
 msgstr ""
 
-#: src/sidebar.vala:196
+#: src/sidebar.vala:201
 msgid "{0} online, {1} total"
 msgstr "{0} çevrimiçi, {1} toplam"
 
@@ -1017,45 +1018,45 @@ msgstr "Konfigrasyon adresi"
 msgid "Direct"
 msgstr "Direk"
 
-#: src/widgets/commands-editor.vala:54
+#: src/widgets/commands-editor.vala:59
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "All customizations will be lost."
 msgstr ""
 
-#: src/window.vala:145
+#: src/window.vala:178
 msgid "Configuring"
 msgstr ""
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:291
+#: src/window.vala:341
 msgid "translator-credits"
 msgstr ""
 "Aytunç Yeni https://launchpad.net/~aytuncyeni\n"
 "Kudret Emre https://launchpad.net/~kudretemre"
 
-#: src/window.vala:359
+#: src/window.vala:415
 msgid "Copied to clipboard"
 msgstr ""
 
-#: src/window.vala:394
+#: src/window.vala:450
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Tekrar bağlanılıyor {0} saniye"
 msgstr[1] "Tekrar bağlanılıyor {0} saniye"
 
-#: src/window.vala:425
+#: src/window.vala:481
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi kurulmamış."
 
-#: src/window.vala:427
+#: src/window.vala:483
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi sürümü %s uygun değil"
 
-#: src/window.vala:526
+#: src/window.vala:582
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."

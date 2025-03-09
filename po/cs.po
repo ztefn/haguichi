@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-12-20 17:13+0100\n"
+"POT-Creation-Date: 2025-03-09 18:24+0100\n"
 "PO-Revision-Date: 2018-03-31 00:09+0000\n"
 "Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
@@ -126,7 +126,7 @@ msgstr "_Uložit"
 msgid "Attach to Account"
 msgstr "Připojit k účtu"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:179
+#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "Účet"
 
@@ -212,12 +212,12 @@ msgstr "_Vyhodit"
 msgid "_Details"
 msgstr ""
 
-#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:550
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:561
 #: src/indicator.vala:111
 msgid "_Join Network…"
 msgstr "_Vstoupit do sítě…"
 
-#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:554
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:565
 #: src/indicator.vala:116
 msgid "_Create Network…"
 msgstr "_Vytvořit síť…"
@@ -230,11 +230,11 @@ msgstr "_Jít online"
 msgid "_Go Offline"
 msgstr "_Jít offline"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:337
+#: data/ui/menus/network-menu.ui:22 src/network.vala:347
 msgid "_Leave"
 msgstr "_Opustit"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:366
+#: data/ui/menus/network-menu.ui:28 src/network.vala:376
 msgid "_Delete"
 msgstr "_Smazat"
 
@@ -251,125 +251,125 @@ msgstr "Změnit _heslo…"
 msgid "_Copy Network ID"
 msgstr "_Kopírovat ID sítě"
 
-#: data/ui/preferences.ui:6 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
 msgid "General"
 msgstr "Obecné"
 
-#: data/ui/preferences.ui:12
+#: data/ui/preferences.ui:13
 msgid "Configuration"
 msgstr "Konfigurace"
 
-#: data/ui/preferences.ui:19
+#: data/ui/preferences.ui:20
 #, fuzzy
 msgid "Backup"
 msgstr "Uložit Zálohu"
 
-#: data/ui/preferences.ui:30
+#: data/ui/preferences.ui:31
 msgid "Open Folder"
 msgstr "Otevřít složku"
 
-#: data/ui/preferences.ui:44 data/ui/widgets/command-entry-row.ui:45
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
 msgid "Nickname"
 msgstr "Přezdívka"
 
-#: data/ui/preferences.ui:51
+#: data/ui/preferences.ui:52
 msgid "_Protocol"
 msgstr "_Protokol"
 
-#: data/ui/preferences.ui:56
+#: data/ui/preferences.ui:57
 msgid "Both IPv4 and IPv6"
 msgstr "Oba IPv4 a IPv6"
 
-#: data/ui/preferences.ui:57
+#: data/ui/preferences.ui:58
 msgid "IPv4 only"
 msgstr "Pouze IPv4"
 
-#: data/ui/preferences.ui:58
+#: data/ui/preferences.ui:59
 msgid "IPv6 only"
 msgstr "Pouze IPv6"
 
-#: data/ui/preferences.ui:68
+#: data/ui/preferences.ui:69
 msgid "Behavior"
 msgstr "Chování"
 
-#: data/ui/preferences.ui:71
+#: data/ui/preferences.ui:72
 msgid "_Network list update interval"
 msgstr ""
 
-#: data/ui/preferences.ui:77
+#: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
 msgstr "Přip_ojit automaticky při spuštění"
 
-#: data/ui/preferences.ui:83
+#: data/ui/preferences.ui:84
 msgid "_Reconnect automatically when the connection is lost"
 msgstr "Automaticky obnovit spojení, pokud bylo zt_raceno"
 
-#: data/ui/preferences.ui:89
+#: data/ui/preferences.ui:90
 msgid "_Disconnect on quit"
 msgstr "O_dpojit při ukončení"
 
-#: data/ui/preferences.ui:99 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Příkazy"
 
 #. In this context meaning "work environment".
-#: data/ui/preferences.ui:107
+#: data/ui/preferences.ui:108
 msgid "Desktop"
 msgstr "Plocha"
 
-#: data/ui/preferences.ui:110
+#: data/ui/preferences.ui:111
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: data/ui/preferences.ui:113
+#: data/ui/preferences.ui:114
 msgid "_Style"
 msgstr ""
 
-#: data/ui/preferences.ui:130
+#: data/ui/preferences.ui:131
 msgid "Follow System"
 msgstr ""
 
-#: data/ui/preferences.ui:141
+#: data/ui/preferences.ui:142
 msgid "Light"
 msgstr ""
 
-#: data/ui/preferences.ui:153
+#: data/ui/preferences.ui:154
 msgid "Dark"
 msgstr ""
 
-#: data/ui/preferences.ui:163
+#: data/ui/preferences.ui:164
 msgid "Show _indicator"
 msgstr "Zobrazit _indikátor"
 
-#: data/ui/preferences.ui:172
+#: data/ui/preferences.ui:173
 msgid "Notifications"
 msgstr "Upozornění"
 
-#: data/ui/preferences.ui:175
+#: data/ui/preferences.ui:176
 msgid "Display notification when the connection is l_ost"
 msgstr "Z_obrazit upozornění pokud je spojení ztraceno"
 
-#: data/ui/preferences.ui:181
+#: data/ui/preferences.ui:182
 msgid "Display notification when a member _joins"
 msgstr "Zobrazit upozornění pokud se člen připo_jí"
 
-#: data/ui/preferences.ui:187
+#: data/ui/preferences.ui:188
 msgid "Display notification when a member _leaves"
 msgstr "Zobrazit upozornění pokud se č_len odpojí"
 
-#: data/ui/preferences.ui:193
+#: data/ui/preferences.ui:194
 msgid "Display notification when a member comes o_nline"
 msgstr "Zobrazit upozornění, když člen změní stav na o_nline"
 
-#: data/ui/preferences.ui:199
+#: data/ui/preferences.ui:200
 msgid "Display notification when a member goes o_ffline"
 msgstr "Zobrazit upozornění, když člen změní stav na o_ffline"
 
-#: data/ui/preferences.ui:211
+#: data/ui/preferences.ui:212
 msgid "_Save a Backup…"
 msgstr "_Uložit zálohu…"
 
-#: data/ui/preferences.ui:215
+#: data/ui/preferences.ui:216
 msgid "_Restore from Backup…"
 msgstr "_Obnovit ze zálohy…"
 
@@ -385,11 +385,11 @@ msgstr "Zobrazit informace o klientovi"
 msgid "Open menu"
 msgstr "Otevřít nabídku"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:209
+#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
 msgid "Connect"
 msgstr "Připojit"
 
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:221
+#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
 msgid "Disconnect"
 msgstr "Odpojit"
 
@@ -405,7 +405,7 @@ msgstr "Klávesové zkratky"
 msgid "Quit"
 msgstr "Ukončit"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:477
+#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
 msgid "Network List"
 msgstr "Seznam sítí"
 
@@ -417,11 +417,11 @@ msgstr "Připojit se k síti"
 msgid "Create a network"
 msgstr "Vytvořit síť"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:201 data/ui/window.ui:278
+#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "Obnovit"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:231
+#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
 msgid "Search"
 msgstr "Hledat"
 
@@ -454,7 +454,7 @@ msgid "Cancel"
 msgstr "Zrušit"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:51
+#: data/ui/widgets/command-entry-row.ui:47
 msgid "Client ID"
 msgstr "ID klienta"
 
@@ -511,19 +511,19 @@ msgstr "Spojení"
 msgid "Command Variables"
 msgstr "Příkazy"
 
-#: data/ui/widgets/command-entry-row.ui:39
+#: data/ui/widgets/command-entry-row.ui:35
 msgid "Address"
 msgstr "Adresa"
 
-#: data/ui/widgets/command-entry-row.ui:66
+#: data/ui/widgets/command-entry-row.ui:62
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:72
+#: data/ui/widgets/command-entry-row.ui:68
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:78
+#: data/ui/widgets/command-entry-row.ui:74
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "_Zobrazit vzdálenou plochu"
@@ -537,15 +537,15 @@ msgstr "O_bnovit"
 msgid "_Add Command…"
 msgstr "_Přidat příkaz…"
 
-#: data/ui/widgets/commands-editor.ui:52
+#: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
 msgstr "P_rocházet sdílené"
 
-#: data/ui/widgets/commands-editor.ui:55
+#: data/ui/widgets/commands-editor.ui:58
 msgid "_View Remote Desktop"
 msgstr "_Zobrazit vzdálenou plochu"
 
-#: data/ui/widgets/commands-editor.ui:58
+#: data/ui/widgets/commands-editor.ui:61
 msgid "_Ping"
 msgstr "_Ping"
 
@@ -582,100 +582,101 @@ msgstr "_Odstranit"
 msgid "Copy"
 msgstr ""
 
-#: data/ui/window.ui:194 src/window.vala:457
+#: data/ui/window.ui:195 src/window.vala:513
 msgid "Initializing"
 msgstr ""
 
-#: data/ui/window.ui:240
+#: data/ui/window.ui:247
 msgid "Main Menu"
 msgstr ""
 
-#: data/ui/window.ui:257
+#: data/ui/window.ui:265
 msgid "Search networks and members"
 msgstr ""
 
-#: data/ui/window.ui:290
+#: data/ui/window.ui:299
 #, fuzzy
 msgid "Add Network"
 msgstr "Vstoupit do sítě"
 
-#: data/ui/window.ui:331 src/controller.vala:705
+#. Display notification only if preference is set and window is not currently active
+#: data/ui/window.ui:340 src/controller.vala:709
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi spojení ztraceno"
 
-#: data/ui/window.ui:337 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: data/ui/window.ui:376
+#: data/ui/window.ui:386
 msgid "You Are Connected!"
 msgstr "Jste připojen!"
 
-#: data/ui/window.ui:377
+#: data/ui/window.ui:387
 msgid "Use the + button to add a network"
 msgstr "Použijte tlačítko + pro přidání sítě"
 
-#: data/ui/window.ui:398
+#: data/ui/window.ui:408
 msgid "No Results Found"
 msgstr ""
 
-#: data/ui/window.ui:399
+#: data/ui/window.ui:409
 msgid "Try a different search"
 msgstr ""
 
-#: data/ui/window.ui:416
+#: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
 msgstr "Stáhněte si Hamachi a postupujte dle instalačních instrukcí"
 
-#: data/ui/window.ui:422
+#: data/ui/window.ui:432
 msgid "_Download"
 msgstr "_Stáhnout"
 
-#: data/ui/window.ui:441
+#: data/ui/window.ui:451
 msgid "Hamachi Is Not Configured"
 msgstr "Hamachi není nastaveno"
 
-#: data/ui/window.ui:442
+#: data/ui/window.ui:452
 msgid "You need to configure Hamachi before you can connect"
 msgstr "Před připojením je třeba Hamachi nastavit"
 
-#: data/ui/window.ui:448
+#: data/ui/window.ui:458
 msgid "C_onfigure"
 msgstr "_Nastavit"
 
-#: data/ui/window.ui:496 src/indicator.vala:123
+#: data/ui/window.ui:507 src/indicator.vala:123
 msgid "_Information"
 msgstr "_Informace"
 
-#: data/ui/window.ui:503
+#: data/ui/window.ui:514
 msgid "Sort by _Name"
 msgstr "Řadit dle _jména"
 
-#: data/ui/window.ui:509
+#: data/ui/window.ui:520
 msgid "Sort by _Status"
 msgstr "Řadit dle _stavu"
 
-#: data/ui/window.ui:517
+#: data/ui/window.ui:528
 msgid "Show _Offline Members"
 msgstr "Zobrazit členy _offline"
 
-#: data/ui/window.ui:524
+#: data/ui/window.ui:535
 msgid "_Preferences"
 msgstr "_Nastavení"
 
-#: data/ui/window.ui:528
+#: data/ui/window.ui:539
 msgid "_Keyboard Shortcuts"
 msgstr "_Klávesové zkratky"
 
-#: data/ui/window.ui:532
+#: data/ui/window.ui:543
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: data/ui/window.ui:536
+#: data/ui/window.ui:547
 msgid "_About Haguichi"
 msgstr "O _aplikaci Haguichi"
 
-#: data/ui/window.ui:542 src/indicator.vala:131
+#: data/ui/window.ui:553 src/indicator.vala:131
 msgid "_Quit"
 msgstr "U_končit"
 
@@ -699,76 +700,76 @@ msgstr "Chyba při připojování"
 msgid "Hamachi login failed"
 msgstr "Přihlášení Hamachi selhalo"
 
-#: src/controller.vala:456
+#: src/controller.vala:459
 msgid "Updating"
 msgstr "Aktualizuje se"
 
-#: src/controller.vala:616 src/indicator.vala:84 src/window.vala:461
+#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
 msgid "Connected"
 msgstr "Připojen"
 
-#: src/controller.vala:724
+#: src/controller.vala:728
 msgid "Member Joined"
 msgstr "Člen přidán"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:726
+#: src/controller.vala:730
 msgid "{0} joined the network {1}"
 msgstr "{0} přidán do sítě {1}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:728
+#: src/controller.vala:732
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} se připojil do sítě {1} a {2} další sítě"
 msgstr[1] "{0} se připojil do sítě {1} a {2} dalších sítí"
 msgstr[2] "{0} se připojil do sítě {1} a {2} dalších sítí"
 
-#: src/controller.vala:754
+#: src/controller.vala:758
 msgid "Member Left"
 msgstr "Člen odešel"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:756
+#: src/controller.vala:760
 msgid "{0} left the network {1}"
 msgstr "{0} opustil síť {1}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:758
+#: src/controller.vala:762
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} opustil síť {1} a {2} další síť"
 msgstr[1] "{0} opustil síť {1} a {2} další sítě"
 msgstr[2] "{0} opustil síť {1} a {2} dalších sítí"
 
-#: src/controller.vala:780
+#: src/controller.vala:784
 msgid "Member Online"
 msgstr "Člen online"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:782
+#: src/controller.vala:786
 msgid "{0} came online in the network {1}"
 msgstr "{0} je online v síti {1}"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:784
+#: src/controller.vala:788
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} je online v síti {1} a {2} další síti"
 msgstr[1] "{0} je online v síti {1} a {2} dalších sítí"
 msgstr[2] "{0} je online v síti {1} a {2} dalších sítí"
 
-#: src/controller.vala:806
+#: src/controller.vala:810
 msgid "Member Offline"
 msgstr "Člen offline"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:808
+#: src/controller.vala:812
 msgid "{0} went offline in the network {1}"
 msgstr "{0} je offline ze sítě {1}"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:810
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} je offline v síti {1} a {2} další síti"
@@ -784,12 +785,12 @@ msgstr "Upravit příkaz"
 msgid "Add Command"
 msgstr "_Přidat příkaz…"
 
-#: src/dialogs/attach.vala:65
+#: src/dialogs/attach.vala:67
 #, fuzzy
 msgid "Attach request sent"
 msgstr "Žádost o připojení zaslána"
 
-#: src/dialogs/attach.vala:74
+#: src/dialogs/attach.vala:76
 msgid "Account not found"
 msgstr "Účet nenalezen"
 
@@ -801,51 +802,51 @@ msgstr "Vstoupit do sítě"
 msgid "Create Network"
 msgstr "Vytvořit síť"
 
-#: src/dialogs/join-create-network.vala:41
+#: src/dialogs/join-create-network.vala:43
 msgid "_Join"
 msgstr "Vstou_pit"
 
-#: src/dialogs/join-create-network.vala:41
+#: src/dialogs/join-create-network.vala:43
 msgid "C_reate"
 msgstr "V_ytvořit"
 
-#: src/dialogs/join-create-network.vala:79
+#: src/dialogs/join-create-network.vala:81
 msgid "Join request sent"
 msgstr "Žádost o připojení zaslána"
 
-#: src/dialogs/join-create-network.vala:104
+#: src/dialogs/join-create-network.vala:106
 msgid "Network not found"
 msgstr "Síť nenalezena"
 
-#: src/dialogs/join-create-network.vala:108
+#: src/dialogs/join-create-network.vala:110
 msgid "Invalid password"
 msgstr "Neplatné heslo"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:112
 msgid "Network is full"
 msgstr "Síť je plná"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:114
 msgid "Network is locked"
 msgstr "Síť je zamčená"
 
-#: src/dialogs/join-create-network.vala:115
+#: src/dialogs/join-create-network.vala:117
 msgid "Network already joined"
 msgstr "Síť je již připojena"
 
-#: src/dialogs/join-create-network.vala:177
+#: src/dialogs/join-create-network.vala:179
 msgid "Network ID is already taken"
 msgstr "ID sítě je již používáno"
 
-#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:148
+#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
 msgid "Unknown"
 msgstr "Neznámý"
 
-#: src/hamachi.vala:578 src/window.vala:382
+#: src/hamachi.vala:578 src/window.vala:438
 msgid "Anonymous"
 msgstr "Anonymní"
 
-#: src/hamachi.vala:700 src/hamachi.vala:702
+#: src/hamachi.vala:699 src/hamachi.vala:702
 #, fuzzy
 msgid "Password changed"
 msgstr "Heslo"
@@ -880,11 +881,11 @@ msgstr ""
 msgid "Archive does not contain expected files"
 msgstr "Archiv neobsahuje očekávané soubory"
 
-#: src/indicator.vala:84 src/window.vala:459
+#: src/indicator.vala:84 src/window.vala:515
 msgid "Connecting"
 msgstr "Připojuje se"
 
-#: src/indicator.vala:84 src/window.vala:463
+#: src/indicator.vala:84 src/window.vala:519
 msgid "Disconnected"
 msgstr "Odpojen"
 
@@ -908,23 +909,23 @@ msgstr "Opravdu vyhodit člena „{0}“ ze sítě „{1}“?"
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Pokud potvrdíte, mohou se vyloučení členi později opět připojit."
 
-#: src/network.vala:138
+#: src/network.vala:148
 msgid "You"
 msgstr "Vy"
 
-#: src/network.vala:334
+#: src/network.vala:344
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Opravdu chcete opustit síť „{0}“?"
 
-#: src/network.vala:335
+#: src/network.vala:345
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Pokud potvrdíte, můžete se opět připojit kdykoliv později."
 
-#: src/network.vala:363
+#: src/network.vala:373
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Opravdu chcete smazat síť „{0}“?"
 
-#: src/network.vala:364
+#: src/network.vala:374
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Pokud síť odstraníte, bude nenávratně ztracena."
 
@@ -932,28 +933,28 @@ msgstr "Pokud síť odstraníte, bude nenávratně ztracena."
 msgid "Not present"
 msgstr ""
 
-#: src/preferences.vala:234
+#: src/preferences.vala:279
 msgid "All supported archives"
 msgstr "Všechny podporované archivy"
 
-#: src/preferences.vala:254
+#: src/preferences.vala:299
 msgid "Save a Backup"
 msgstr "Uložit Zálohu"
 
-#: src/preferences.vala:276
+#: src/preferences.vala:321
 msgid "Restore from Backup"
 msgstr "Obnovit ze zálohy"
 
-#: src/preferences.vala:277 src/widgets/commands-editor.vala:56
+#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
 msgid "_Restore"
 msgstr "O_bnovit"
 
-#: src/preferences.vala:317
+#: src/preferences.vala:362
 #, fuzzy
 msgid "Never"
 msgstr "_Vrátit"
 
-#: src/preferences.vala:336
+#: src/preferences.vala:381
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
@@ -961,7 +962,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/preferences.vala:340
+#: src/preferences.vala:385
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
@@ -969,19 +970,19 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: src/sidebar.vala:161
+#: src/sidebar.vala:166
 msgid "Unavailable"
 msgstr "Nedostupný"
 
-#: src/sidebar.vala:179
+#: src/sidebar.vala:184
 msgid "pending"
 msgstr "čekající"
 
-#: src/sidebar.vala:180
+#: src/sidebar.vala:185
 msgid "Not attached"
 msgstr ""
 
-#: src/sidebar.vala:196
+#: src/sidebar.vala:201
 msgid "{0} online, {1} total"
 msgstr "{0} připojeno, {1} celkem"
 
@@ -1021,46 +1022,46 @@ msgstr "Konflikt adres"
 msgid "Direct"
 msgstr "Přímý"
 
-#: src/widgets/commands-editor.vala:54
+#: src/widgets/commands-editor.vala:59
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "All customizations will be lost."
 msgstr ""
 
-#: src/window.vala:145
+#: src/window.vala:178
 msgid "Configuring"
 msgstr ""
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:291
+#: src/window.vala:341
 msgid "translator-credits"
 msgstr ""
 "Jan Bažant https://launchpad.net/~brbla\n"
 "Zdeněk Kopš https://launchpad.net/~zdenekkops"
 
-#: src/window.vala:359
+#: src/window.vala:415
 msgid "Copied to clipboard"
 msgstr ""
 
-#: src/window.vala:394
+#: src/window.vala:450
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Obnova připojení za {0} sekundu"
 msgstr[1] "Obnova připojení za {0} sekundy"
 msgstr[2] "Obnova připojení za {0} sekund"
 
-#: src/window.vala:425
+#: src/window.vala:481
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi není nainstalováno"
 
-#: src/window.vala:427
+#: src/window.vala:483
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi verze %s je zastaralá"
 
-#: src/window.vala:526
+#: src/window.vala:582
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
