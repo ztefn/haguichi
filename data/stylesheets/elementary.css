@@ -299,10 +299,14 @@ overlay-split-view .rich-list row button.error image {
  */
 
 menubutton.command-variables popover contents {
-  padding: 8px;
+  padding: 2px 8px 8px;
 }
 
-menubutton.command-variables popover contents label.caption {
+menubutton.command-variables popover contents button label {
+  font-weight: 400;
+}
+
+menubutton.command-variables popover contents button label.caption {
   font-size: 0.85em;
 }
 
