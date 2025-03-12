@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="HaguichiCommandVariableButton" parent="GtkButton">
+    <signal name="clicked" handler="on_insert_value"/>
+    <accessibility>
+      <relation name="labelled-by">title_label</relation>
+      <relation name="described-by">variable_label</relation>
+    </accessibility>
+    <style>
+      <class name="flat"/>
+    </style>
+    <child>
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkLabel" id="title_label">
+            <property name="halign">start</property>
+            <style>
+              <class name="dim-label"/>
+              <class name="caption"/>
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkLabel" id="variable_label">
+            <property name="halign">start</property>
+            <style>
+              <class name="body"/>
+            </style>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

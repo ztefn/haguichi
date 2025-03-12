@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -17,24 +17,16 @@ namespace Haguichi {
         public unowned Gtk.MenuButton menu_button;
 
         [GtkChild]
-        public unowned CommandVariableBox address_var;
+        public unowned CommandVariableButton address_var;
         [GtkChild]
-        public unowned CommandVariableBox nickname_var;
+        public unowned CommandVariableButton nickname_var;
         [GtkChild]
-        public unowned CommandVariableBox client_id_var;
+        public unowned CommandVariableButton client_id_var;
         [GtkChild]
-        public unowned CommandVariableBox terminal_var;
+        public unowned CommandVariableButton terminal_var;
         [GtkChild]
-        public unowned CommandVariableBox file_manager_var;
+        public unowned CommandVariableButton file_manager_var;
         [GtkChild]
-        public unowned CommandVariableBox remote_desktop_var;
-
-        construct {
-            menu_button.icon_name = Utils.get_available_theme_icon ({
-                "info-symbolic",
-                "help-info-symbolic",
-                "help-about-symbolic"
-            });
-        }
+        public unowned CommandVariableButton remote_desktop_var;
     }
 }

@@ -3,6 +3,7 @@
   <template class="HaguichiCommandEntryRow" parent="AdwEntryRow">
     <child type="suffix">
       <object class="GtkMenuButton" id="menu_button">
+        <property name="icon-name">insert-text-symbolic</property>
         <property name="tooltip-text" translatable="yes">Command Variables</property>
         <property name="valign">center</property>
         <property name="popover">
@@ -31,19 +32,19 @@
                       <property name="row">1</property>
                     </layout>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="address_var">
+                      <object class="HaguichiCommandVariableButton" id="address_var">
                         <property name="title" translatable="yes">Address</property>
                         <property name="variable">%A</property>
                       </object>
                     </child>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="nickname_var">
+                      <object class="HaguichiCommandVariableButton" id="nickname_var">
                         <property name="title" translatable="yes">Nickname</property>
                         <property name="variable">%N</property>
                       </object>
                     </child>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="client_id_var">
+                      <object class="HaguichiCommandVariableButton" id="client_id_var">
                         <property name="title" translatable="yes">Client ID</property>
                         <property name="variable">%ID</property>
                       </object>
@@ -58,19 +59,19 @@
                       <property name="row">1</property>
                     </layout>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="terminal_var">
+                      <object class="HaguichiCommandVariableButton" id="terminal_var">
                         <property name="title" translatable="yes">Terminal Emulator</property>
                         <property name="variable">%TERMINAL</property>
                       </object>
                     </child>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="file_manager_var">
+                      <object class="HaguichiCommandVariableButton" id="file_manager_var">
                         <property name="title" translatable="yes">File Manager</property>
                         <property name="variable">%FILEMANAGER</property>
                       </object>
                     </child>
                     <child>
-                      <object class="HaguichiCommandVariableBox" id="remote_desktop_var">
+                      <object class="HaguichiCommandVariableButton" id="remote_desktop_var">
                         <property name="title" translatable="yes">Remote Desktop Viewer</property>
                         <property name="variable">%REMOTEDESKTOP</property>
                       </object>

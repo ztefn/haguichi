@@ -20,7 +20,7 @@
     <file preprocess="xml-stripblanks">ui/shortcuts.ui</file>
     <file preprocess="xml-stripblanks">ui/sidebar.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/command-entry-row.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/command-variable-box.ui</file>
+    <file preprocess="xml-stripblanks">ui/widgets/command-variable-button.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/commands-editor.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/commands-editor-row.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/network-list-item.ui</file>

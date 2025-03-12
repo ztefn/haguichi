@@ -13,7 +13,7 @@ data/ui/preferences.ui
 data/ui/shortcuts.ui
 data/ui/sidebar.ui
 data/ui/widgets/command-entry-row.ui
-data/ui/widgets/command-variable-box.ui
+data/ui/widgets/command-variable-button.ui
 data/ui/widgets/commands-editor.ui
 data/ui/widgets/commands-editor-row.ui
 data/ui/widgets/network-list-item.ui
@@ -46,7 +46,7 @@ src/status.vala
 src/status-notifier-item.vala
 src/utils.vala
 src/widgets/command-entry-row.vala
-src/widgets/command-variable-box.vala
+src/widgets/command-variable-button.vala
 src/widgets/commands-editor.vala
 src/widgets/commands-editor-row.vala
 src/widgets/sidebar-row.vala

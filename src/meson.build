@@ -31,7 +31,7 @@ sources = [
   'status-notifier-item.vala',
   'utils.vala',
   'widgets/command-entry-row.vala',
-  'widgets/command-variable-box.vala',
+  'widgets/command-variable-button.vala',
   'widgets/commands-editor.vala',
   'widgets/commands-editor-row.vala',
   'widgets/sidebar-row.vala',
