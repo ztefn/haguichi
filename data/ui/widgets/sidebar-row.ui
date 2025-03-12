@@ -5,10 +5,10 @@
     <property name="focusable">false</property>
     <child>
       <object class="GtkButton" id="copy_button">
-        <property name="action-name">row.copy-value</property>
         <property name="icon-name">edit-copy-symbolic</property>
         <property name="tooltip-text" translatable="yes">Copy</property>
         <property name="valign">center</property>
+        <signal name="clicked" handler="on_copy_value"/>
         <style>
           <class name="flat"/>
         </style>

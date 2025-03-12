@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -20,10 +20,6 @@ namespace Haguichi {
         private Gtk.Widget action_button;
 #endif
 
-        construct {
-            install_action ("row.copy-value", null, (Gtk.WidgetActionActivateFunc) on_copy_value);
-        }
-
         public void set_value (string? value) {
             subtitle = value;
             visible = (value != null && value != "");
@@ -38,7 +34,8 @@ namespace Haguichi {
             }
         }
 
-        public void on_copy_value () {
+        [GtkCallback]
+        private void on_copy_value () {
             win.get_clipboard ().set_text (subtitle);
             win.show_copied_to_clipboard_toast ();
         }
