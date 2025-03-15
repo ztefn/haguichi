@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-10-08 17:37+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -115,7 +115,7 @@ msgstr "IPv6-komento"
 msgid "Priority"
 msgstr "Prioriteetti"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Tallenna"
 
@@ -262,7 +262,7 @@ msgstr "Varmuuskopio"
 msgid "Open Folder"
 msgstr "Avaa kansio"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Nimimerkki"
 
@@ -448,7 +448,7 @@ msgid "Cancel"
 msgstr "Peru"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Asiakkaan tunniste"
 
@@ -496,24 +496,24 @@ msgstr "Tunneli"
 msgid "Connection"
 msgstr "Yhteys"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "Komennon muuttujat"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Osoite"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "Pääte-emulaattori"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "Tiedostonhallinta"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "Etätyöpöydän käyttö"
 
@@ -522,8 +522,8 @@ msgid "_Restore Default"
 msgstr "_Palauta oletus"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Lisää komento…"
+msgid "_Add Command"
+msgstr "_Lisää komento"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -565,7 +565,7 @@ msgstr "_Aseta oletustoiminnoksi"
 msgid "_Remove"
 msgstr "_Poista"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "Kopioi"
 
@@ -758,11 +758,11 @@ msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Muokkaa komentoa"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "Lisää komento"
 

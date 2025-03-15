@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2022-08-20 12:15+0000\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -123,7 +123,7 @@ msgstr "Polecenie IPv6"
 msgid "Priority"
 msgstr "Priorytet"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Zapisz"
 
@@ -273,7 +273,7 @@ msgstr "Zapisz kopię zapasową"
 msgid "Open Folder"
 msgstr "Otwórz katalog"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Pseudonim"
 
@@ -459,7 +459,7 @@ msgid "Cancel"
 msgstr "Anuluj"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Identyfikator klienta"
 
@@ -510,25 +510,25 @@ msgstr "Tunel"
 msgid "Connection"
 msgstr "Połączenie"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 #, fuzzy
 msgid "Command Variables"
 msgstr "Polecenia"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Adres"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "_Wyświetl zdalny pulpit"
@@ -539,8 +539,8 @@ msgid "_Restore Default"
 msgstr "P_rzywróć"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Dodaj polecenie…"
+msgid "_Add Command"
+msgstr "_Dodaj polecenie"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -583,7 +583,7 @@ msgstr "_Ustaw jako domyślne działanie"
 msgid "_Remove"
 msgstr "_Usuń"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr ""
 
@@ -788,14 +788,13 @@ msgstr[1] ""
 msgstr[2] ""
 "Użytkownik {0} przeszedł do trybu offline w sieci {1} i {2} innych sieciach"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Modyfikuj polecenie"
 
-#: src/dialogs/add-edit-command.vala:43
-#, fuzzy
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
-msgstr "_Dodaj polecenie…"
+msgstr "Dodaj polecenie"
 
 #: src/dialogs/attach.vala:67
 #, fuzzy

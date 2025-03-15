@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2018-04-03 19:12+0000\n"
 "Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
@@ -118,7 +118,7 @@ msgstr "IPv6 príkaz"
 msgid "Priority"
 msgstr "Priorita"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Uložiť"
 
@@ -268,7 +268,7 @@ msgstr "Uložiť zálohu"
 msgid "Open Folder"
 msgstr "Otvoriť zložku"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Prezývka"
 
@@ -454,7 +454,7 @@ msgid "Cancel"
 msgstr "Zrušiť"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "ID klienta"
 
@@ -505,25 +505,25 @@ msgstr "Tunel"
 msgid "Connection"
 msgstr "Spojenie"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 #, fuzzy
 msgid "Command Variables"
 msgstr "Príkazy"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Adresa"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "_Zobraziť vzdialenú plochu"
@@ -534,8 +534,8 @@ msgid "_Restore Default"
 msgstr "O_bnoviť"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "P_ridať príkaz…"
+msgid "_Add Command"
+msgstr "P_ridať príkaz"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -578,7 +578,7 @@ msgstr "Nastaviť ako _predvolenú akciu"
 msgid "_Remove"
 msgstr "_Odstrániť"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr ""
 
@@ -776,14 +776,13 @@ msgstr[0] "{0} je offline v sieti {1} a {2} ďalšej sieti"
 msgstr[1] "{0} je offline v sieti {1} a {2} ďalších sietí"
 msgstr[2] "{0} je offline v sieti {1} a {2} ďalších sietí"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Upraviť príkaz"
 
-#: src/dialogs/add-edit-command.vala:43
-#, fuzzy
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
-msgstr "P_ridať príkaz…"
+msgstr "Pridať príkaz"
 
 #: src/dialogs/attach.vala:67
 #, fuzzy

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-07-16 22:56+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -121,7 +121,7 @@ msgstr "IPv6 コマンド"
 msgid "Priority"
 msgstr "優先度"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "保存(_S)"
 
@@ -268,7 +268,7 @@ msgstr "バックアップ"
 msgid "Open Folder"
 msgstr "フォルダーを開く"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "ニックネーム"
 
@@ -454,7 +454,7 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "クライアント ID"
 
@@ -502,24 +502,24 @@ msgstr "トンネル"
 msgid "Connection"
 msgstr "接続状態"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "コマンド変数"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "アドレス"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "端末エミュレーター"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "ファイルマネージャー"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "リモートデスクトップビューアー"
 
@@ -528,8 +528,8 @@ msgid "_Restore Default"
 msgstr "デフォルトに復元(_R)"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "コマンドを追加(_A)…"
+msgid "_Add Command"
+msgstr "コマンドを追加(_A)"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -571,7 +571,7 @@ msgstr "デフォルトのアクションとして設定(_S)"
 msgid "_Remove"
 msgstr "削除(_R)"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "コピー"
 
@@ -762,11 +762,11 @@ msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "コマンドを編集"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "コマンドを追加"
 

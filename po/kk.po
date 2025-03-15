@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2017-07-30 17:21+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
@@ -117,7 +117,7 @@ msgstr "IPv6 команда"
 msgid "Priority"
 msgstr "Басымдылық"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Сақтау"
 
@@ -267,7 +267,7 @@ msgstr "Резервті көшірмені сақтау"
 msgid "Open Folder"
 msgstr "Буманы ашу"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Ник"
 
@@ -458,7 +458,7 @@ msgid "Cancel"
 msgstr "Бас тарту"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Клиент ID-і"
 
@@ -509,25 +509,25 @@ msgstr "Тоннель"
 msgid "Connection"
 msgstr "Қосылыс"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 #, fuzzy
 msgid "Command Variables"
 msgstr "Командалар"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Адрес"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "Қашықтаған жұмыс үстелді _қарау"
@@ -538,8 +538,8 @@ msgid "_Restore Default"
 msgstr "Қайта орнына қай_тару"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "Команданы қ_осу…"
+msgid "_Add Command"
+msgstr "Команданы қ_осу"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -582,7 +582,7 @@ msgstr "_Қалыпты әрекет ретінде орнату"
 msgid "_Remove"
 msgstr "_Өшіру"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr ""
 
@@ -776,14 +776,13 @@ msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} {1} және {2} басқа желіден ажыратылды"
 msgstr[1] "{0} {1} және {2} басқа желілерінен ажыратылды"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Команданы өзгерту"
 
-#: src/dialogs/add-edit-command.vala:43
-#, fuzzy
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
-msgstr "Команданы қ_осу…"
+msgstr "Команданы қосу"
 
 #: src/dialogs/attach.vala:67
 #, fuzzy

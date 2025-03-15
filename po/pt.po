@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2022-08-28 16:05+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: none\n"
@@ -123,7 +123,7 @@ msgstr "Comando IPv6"
 msgid "Priority"
 msgstr "Prioridade"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Gravar"
 
@@ -273,7 +273,7 @@ msgstr "Gravar uma Cópia de Segurança"
 msgid "Open Folder"
 msgstr "Abrir Pasta"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Alcunha"
 
@@ -459,7 +459,7 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "ID de Cliente"
 
@@ -510,25 +510,25 @@ msgstr "Túnel"
 msgid "Connection"
 msgstr "Conexão"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 #, fuzzy
 msgid "Command Variables"
 msgstr "Comandos"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Endereço"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr ""
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 #, fuzzy
 msgid "Remote Desktop Viewer"
 msgstr "_Ver Computador Remoto"
@@ -539,8 +539,8 @@ msgid "_Restore Default"
 msgstr "_Restaurar"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Adicionar Comando…"
+msgid "_Add Command"
+msgstr "_Adicionar Comando"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -583,7 +583,7 @@ msgstr "_Definir como ação padrão"
 msgid "_Remove"
 msgstr "_Remover"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr ""
 
@@ -778,14 +778,13 @@ msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} ficou desligado na rede {1} e {2} outra rede"
 msgstr[1] "{0} ficou desligado na rede {1} e {2} outras redes"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Editar Comando"
 
-#: src/dialogs/add-edit-command.vala:43
-#, fuzzy
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
-msgstr "_Adicionar Comando…"
+msgstr "Adicionar Comando"
 
 #: src/dialogs/attach.vala:67
 #, fuzzy

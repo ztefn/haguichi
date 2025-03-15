@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-08-30 16:46+0000\n"
 "Last-Translator: Alexey Fedorov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -120,7 +120,7 @@ msgstr "IPv6 команда"
 msgid "Priority"
 msgstr "Приоритет"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "Со_хранить"
 
@@ -267,7 +267,7 @@ msgstr "Резервное копирование"
 msgid "Open Folder"
 msgstr "Открыть папку"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Псевдоним"
 
@@ -453,7 +453,7 @@ msgid "Cancel"
 msgstr "Отменить"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Идентификатор клиента"
 
@@ -501,24 +501,24 @@ msgstr "Тоннель"
 msgid "Connection"
 msgstr "Подключение"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "Переменные команд"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Адрес"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "Эмулятор терминала"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "Управление файлами"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "Просмотр удалённых рабочих столов"
 
@@ -527,8 +527,8 @@ msgid "_Restore Default"
 msgstr "По _умолчанию"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Добавить команду…"
+msgid "_Add Command"
+msgstr "_Добавить команду"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -570,7 +570,7 @@ msgstr "_Сохранить как действие по умолчанию"
 msgid "_Remove"
 msgstr "_Удалить"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "Копировать"
 
@@ -767,11 +767,11 @@ msgstr[0] "{0} ушел из сети {1} и ещё {2} сети"
 msgstr[1] "{0} ушел из сети {1} и ещё {2} сетей"
 msgstr[2] "{0} ушел из сети {1} и ещё {2} сетей"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Изменить команду"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "Добавить команду"
 

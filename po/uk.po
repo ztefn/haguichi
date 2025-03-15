@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-06-15 18:01+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -119,7 +119,7 @@ msgstr "IPv6 команда"
 msgid "Priority"
 msgstr "Пріоритет"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "З_берегти"
 
@@ -266,7 +266,7 @@ msgstr "Резервування"
 msgid "Open Folder"
 msgstr "Відкрити теку"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Псевдонім"
 
@@ -452,7 +452,7 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "ІД клієнта"
 
@@ -500,24 +500,24 @@ msgstr "Тунель"
 msgid "Connection"
 msgstr "З'єднання"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "Змінні для команди"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Адреса"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "Емулятор терміналу"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "Менеджер файлів"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "Перегляд віддаленого робочого столу"
 
@@ -526,8 +526,8 @@ msgid "_Restore Default"
 msgstr "_Відновити типові значення"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Додати команду…"
+msgid "_Add Command"
+msgstr "_Додати команду"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -569,7 +569,7 @@ msgstr "_Встановити як типова дія"
 msgid "_Remove"
 msgstr "_Видалити"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "Копіювати"
 
@@ -766,11 +766,11 @@ msgstr[0] "{0} покинув мережу {1} та в мережу {2}"
 msgstr[1] "{0} покинув мережу {1} та інші мережі {2}"
 msgstr[2] "{0} покинув мережу {1} та інші мережі {2}"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Змінити команду"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "Додати команду"
 

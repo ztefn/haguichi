@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-07-01 04:25+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -121,7 +121,7 @@ msgstr "Orden IPv6"
 msgid "Priority"
 msgstr "Prioridad"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "_Guardar"
 
@@ -268,7 +268,7 @@ msgstr "Copia de respaldo"
 msgid "Open Folder"
 msgstr "Abrir carpeta"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Apodo"
 
@@ -454,7 +454,7 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Id. de cliente"
 
@@ -502,24 +502,24 @@ msgstr "Túnel"
 msgid "Connection"
 msgstr "Conexión"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "Variables de orden"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Dirección"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "Emulador de terminal"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "Gestor de archivos"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "Visor de escritorios remotos"
 
@@ -528,8 +528,8 @@ msgid "_Restore Default"
 msgstr "_Restaurar valores predeterminados"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Añadir una orden…"
+msgid "_Add Command"
+msgstr "_Añadir una orden"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -571,7 +571,7 @@ msgstr "_Predeterminar acción"
 msgid "_Remove"
 msgstr "_Quitar"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "Copiar"
 
@@ -764,11 +764,11 @@ msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} se desconectó en la red {1} y en {2} red más"
 msgstr[1] "{0} se desconectó en la red {1} y en otras {2} redes"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Editar la orden"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "Añadir una orden"
 

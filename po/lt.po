@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-09 18:24+0100\n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
 "PO-Revision-Date: 2024-07-05 22:37+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -125,7 +125,7 @@ msgstr "IPv_6 komanda"
 msgid "Priority"
 msgstr "Pirmenybė"
 
-#: data/ui/dialogs/add-edit-command.ui:70
+#: data/ui/dialogs/add-edit-command.ui:57
 msgid "_Save"
 msgstr "Į_rašyti"
 
@@ -272,7 +272,7 @@ msgstr "Atsarginė kopija"
 msgid "Open Folder"
 msgstr "Atverti aplanką"
 
-#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:41
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
 msgid "Nickname"
 msgstr "Slapyvardis"
 
@@ -458,7 +458,7 @@ msgid "Cancel"
 msgstr "Atsisakyti"
 
 #: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
-#: data/ui/widgets/command-entry-row.ui:47
+#: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Kliento ID"
 
@@ -506,24 +506,24 @@ msgstr "Tunelis"
 msgid "Connection"
 msgstr "Ryšys"
 
-#: data/ui/widgets/command-entry-row.ui:6
-#: data/ui/widgets/command-entry-row.ui:14
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
 msgstr "Komandų kintamieji"
 
-#: data/ui/widgets/command-entry-row.ui:35
+#: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
 msgstr "Adresas"
 
-#: data/ui/widgets/command-entry-row.ui:62
+#: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
 msgstr "Terminalo emuliatorius"
 
-#: data/ui/widgets/command-entry-row.ui:68
+#: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
 msgstr "Failų tvarkytuvė"
 
-#: data/ui/widgets/command-entry-row.ui:74
+#: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
 msgstr "Nuotolinio darbalaukio žiūryklė"
 
@@ -532,8 +532,8 @@ msgid "_Restore Default"
 msgstr "_Atkurti numatytąją"
 
 #: data/ui/widgets/commands-editor.ui:34
-msgid "_Add Command…"
-msgstr "_Pridėti komandą…"
+msgid "_Add Command"
+msgstr "_Pridėti komandą"
 
 #: data/ui/widgets/commands-editor.ui:55
 msgid "_Browse Shares"
@@ -575,7 +575,7 @@ msgstr "Nustatyti kaip numatytąjį _veiksmą"
 msgid "_Remove"
 msgstr "Š_alinti"
 
-#: data/ui/widgets/sidebar-row.ui:10
+#: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
 msgstr "Kopijuoti"
 
@@ -772,11 +772,11 @@ msgstr[0] "{0} atsijungė tinkle {1} ir {2} kitame tinkle"
 msgstr[1] "{0} atsijungė tinkle {1} ir {2} kituose tinkluose"
 msgstr[2] "{0} atsijungė tinkle {1} ir {2} kitų tinklų"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Edit Command"
 msgstr "Redaguoti komandą"
 
-#: src/dialogs/add-edit-command.vala:43
+#: src/dialogs/add-edit-command.vala:81
 msgid "Add Command"
 msgstr "Pridėti komandą"
 
