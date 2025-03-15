@@ -48,19 +48,6 @@
                     <child>
                       <object class="AdwActionRow" id="priority">
                         <property name="title" translatable="yes">Priority</property>
-                        <child>
-                          <object class="GtkCheckButton" id="priority_ipv4">
-                            <property name="label" translatable="no">IPv4</property>
-                            <property name="valign">center</property>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkCheckButton" id="priority_ipv6">
-                            <property name="label" translatable="no">IPv6</property>
-                            <property name="group">priority_ipv4</property>
-                            <property name="valign">center</property>
-                          </object>
-                        </child>
                       </object>
                     </child>
                   </object>

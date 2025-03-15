@@ -49,9 +49,18 @@ deps = [
   dependency('libportal-gtk4', version: '>= 0.7.1'),
 ]
 
-if dependency('libadwaita-1').version().version_compare('>= 1.6')
+adw_version = dependency('libadwaita-1').version()
+
+if adw_version.version_compare('>= 1.6')
   add_project_arguments(
     ['-D', 'ADW_1_6'],
+    language: 'vala'
+  )
+endif
+
+if adw_version.version_compare('>= 1.7')
+  add_project_arguments(
+    ['-D', 'ADW_1_7'],
     language: 'vala'
   )
 endif
