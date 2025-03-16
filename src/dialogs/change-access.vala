@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -46,7 +46,7 @@ namespace Haguichi {
             win.sidebar.set_network (network);
 
             new Thread<void*> (null, () => {
-                Hamachi.set_access (network.id, locked.active ? "lock" : "unlock", approval.selected == 1 ? "manual" : "auto");
+                Hamachi.set_access (network.id, locked.active ? "lock" : "unlock", network.approve);
                 network.updating = false;
 
                 return null;
