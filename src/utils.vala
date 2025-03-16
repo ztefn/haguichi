@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -49,9 +49,11 @@ namespace Haguichi {
         }
 
         public static string get_available_theme_icon (string[] icon_names) {
+            var icon_theme = get_icon_theme ();
+
             // Check each icon name in the list for existence, and return immediately if it does
             foreach (string icon_name in icon_names) {
-                if (get_icon_theme ().has_icon (icon_name)) {
+                if (icon_theme.has_icon (icon_name)) {
                     return icon_name;
                 }
             }
