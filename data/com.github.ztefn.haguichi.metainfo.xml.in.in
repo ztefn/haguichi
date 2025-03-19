@@ -77,20 +77,9 @@
     <release version="1.5.0" date="2024-07-20">
       <url>https://haguichi.net/news/release150/</url>
       <description translate="no">
-        <p>Haguichi 1.5.0 has been rebuild completely from the ground up featuring a redesigned user interface that takes advantage of GTK 4 and libadwaita:</p>
+        <p>Haguichi 1.5.0 has been rebuild completely from the ground up:</p>
         <ul>
-          <li>Implemented Adw.OverlaySplitView to display the network list and sidebar side by side or as an overlay.</li>
-          <li>Added support for color schemes offering dark, light or system preferred scheme.</li>
-          <li>Ported the network list from deprecated Gtk.TreeView to Gtk.ListView.</li>
-          <li>Rearranged "Add Network" and "Refresh" buttons as floating overlay buttons above the network list.</li>
-          <li>Created new "Change Access" dialog for networks to set lock and approval mode combined.</li>
-          <li>Improved sidebar layout based on Adw.ActionRows.</li>
-          <li>Implemented Adw.PreferencesWindow making all preferences searchable.</li>
-          <li>Moved configuration and nickname settings to preferences window.</li>
-          <li>Added support for drag and drop to reorder configured commands in preferences window.</li>
-          <li>Added info button to the "Add Command" and "Edit Command" dialogs to show all available command variables in a popover.</li>
-          <li>Now making use of Toasts for any in-app notifications.</li>
-          <li>Utilized Gtk.Builder UI definitions to describe nearly all interface objects and eliminate lots of boilerplate code.</li>
+          <li>Redesigned user interface using GTK 4 and libadwaita.</li>
           <li>Added support for multiple search terms by separating them using a "⎵" (space) or "+" (plus) to find only results matching both terms and by using a "," (comma) to find results matching either term.</li>
           <li>Now displays a message if there are no results found instead of showing an empty network list.</li>
           <li>Online and total member count in sidebar now includes the client itself.</li>
