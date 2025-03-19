@@ -26,9 +26,11 @@ namespace Haguichi {
             15_SECONDS = 15,
             30_SECONDS = 30,
              1_MINUTE  = 60,
+             2_MINUTES = 120,
              5_MINUTES = 300,
             10_MINUTES = 600,
             15_MINUTES = 900,
+            30_MINUTES = 1800,
             NEVER      = 0,
         }
 
@@ -340,19 +342,23 @@ namespace Haguichi {
             var interval = config.get_int ("update-interval");
 
             if (interval == 0) {
-              return 6; // Never
+              return 8; // Never
             } else if (interval < 30) {
               return 0; // 15 seconds
             } else if (interval < 60) {
               return 1; // 30 seconds
-            } else if (interval < 300) {
+            } else if (interval < 120) {
               return 2; // 1 minute
+            } else if (interval < 300) {
+              return 3; // 2 minutes
             } else if (interval < 600) {
-              return 3; // 5 minutes
+              return 4; // 5 minutes
             } else if (interval < 900) {
-              return 4; // 10 minutes
+              return 5; // 10 minutes
+            } else if (interval < 1800) {
+              return 6; // 15 minutes
             } else {
-              return 5; // 15 minutes
+              return 7; // 30 minutes
             }
         }
 
@@ -366,12 +372,16 @@ namespace Haguichi {
                     return get_seconds_interval_label (30);
                 case UpdateInterval.1_MINUTE:
                     return get_minutes_interval_label (1);
+                case UpdateInterval.2_MINUTES:
+                    return get_minutes_interval_label (2);
                 case UpdateInterval.5_MINUTES:
                     return get_minutes_interval_label (5);
                 case UpdateInterval.10_MINUTES:
                     return get_minutes_interval_label (10);
                 case UpdateInterval.15_MINUTES:
                     return get_minutes_interval_label (15);
+                case UpdateInterval.30_MINUTES:
+                    return get_minutes_interval_label (30);
                 default:
                     return "";
             }
