@@ -12,9 +12,9 @@
    * meson (>= 1.3.0)
    * valac (>= 0.56)
    * gee-0.8 (>= 0.20.6)
-   * glib-2.0 (>= 2.78)
-   * gtk4 (>= 4.12)
-   * libadwaita-1 (>= 1.4)
+   * glib-2.0 (>= 2.80)
+   * gtk4 (>= 4.14)
+   * libadwaita-1 (>= 1.5)
    * libportal (>= 0.7.1)
    * libportal-gtk4 (>= 0.7.1)
 

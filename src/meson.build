@@ -42,28 +42,23 @@ sources = [
 
 deps = [
   dependency('gee-0.8',        version: '>= 0.20.6'),
-  dependency('gio-unix-2.0',   version: '>= 2.78'),
-  dependency('gtk4',           version: '>= 4.12'),
-  dependency('libadwaita-1',   version: '>= 1.4'),
+  dependency('gio-unix-2.0',   version: '>= 2.80'),
+  dependency('gtk4',           version: '>= 4.14'),
+  dependency('libadwaita-1',   version: '>= 1.5'),
   dependency('libportal',      version: '>= 0.7.1'),
   dependency('libportal-gtk4', version: '>= 0.7.1'),
 ]
 
 adw_version = dependency('libadwaita-1').version()
 
-if adw_version.version_compare('>= 1.6')
-  add_project_arguments(
-    ['-D', 'ADW_1_6'],
-    language: 'vala'
-  )
-endif
-
-if adw_version.version_compare('>= 1.7')
-  add_project_arguments(
-    ['-D', 'ADW_1_7'],
-    language: 'vala'
-  )
-endif
+foreach minor_version : ['6', '7']
+  if adw_version.version_compare('>= 1.' + minor_version)
+    add_project_arguments(
+      ['-D', 'ADW_1_' + minor_version],
+      language: 'vala'
+    )
+  endif
+endforeach
 
 if get_option('for-elementary')
   deps += dependency('granite-7')
