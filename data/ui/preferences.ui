@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiPreferences">
+  <template class="HaguichiPreferences" parent="AdwPreferencesDialog">
     <property name="name">preferences</property>
     <child>
       <object class="AdwPreferencesPage" id="general_page">

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiAttachDialog">
+  <template class="HaguichiAttachDialog" parent="AdwDialog">
+    <property name="content-width">400</property>
     <property name="default-widget">attach_button</property>
     <property name="title" translatable="yes">Attach to Account</property>
     <child>

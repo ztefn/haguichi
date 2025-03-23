@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiAddEditCommandDialog">
+  <template class="HaguichiAddEditCommandDialog" parent="AdwDialog">
+    <property name="content-width">440</property>
     <property name="default-widget">save_button</property>
     <child>
       <object class="AdwToolbarView">

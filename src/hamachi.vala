@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -718,18 +718,14 @@ namespace Haguichi {
             return output;
         }
 
-#if ADW_1_6
-        public static void save_config (string path, Adw.PreferencesDialog window) {
-#else
-        public static void save_config (string path, Adw.PreferencesWindow window) {
-#endif
+        public static void save_config (string path, Adw.PreferencesDialog dialog) {
             new Thread<void*> (null, () => {
                 var save_toast = new Adw.Toast (_("Saving backup…")) {
                     timeout = 0
                 };
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
-                    window.add_toast (save_toast);
+                    dialog.add_toast (save_toast);
                     return false;
                 });
 
@@ -741,7 +737,7 @@ namespace Haguichi {
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
                     save_toast.dismiss ();
-                    window.add_toast (new Adw.Toast (output.contains (DATA_PATH)? _("Backup saved") : _("Failed to save backup")));
+                    dialog.add_toast (new Adw.Toast (output.contains (DATA_PATH)? _("Backup saved") : _("Failed to save backup")));
                     return false;
                 });
 
@@ -749,11 +745,7 @@ namespace Haguichi {
             });
         }
 
-#if ADW_1_6
-        public static void restore_config (string path, Adw.PreferencesDialog window) {
-#else
-        public static void restore_config (string path, Adw.PreferencesWindow window) {
-#endif
+        public static void restore_config (string path, Adw.PreferencesDialog dialog) {
             new Thread<void*> (null, () => {
                 string output = Command.return_output ("tar -tvf '%s'".printf (path));
                 debug ("restore_config: Listing archive contents...\n%s", output);
@@ -764,7 +756,7 @@ namespace Haguichi {
                     };
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
-                        window.add_toast (restore_toast);
+                        dialog.add_toast (restore_toast);
                         Controller.stop_hamachi ();
                         return false;
                     });
@@ -800,14 +792,14 @@ namespace Haguichi {
                     Idle.add_full (Priority.HIGH_IDLE, () => {
                         Controller.init ();
                         restore_toast.dismiss ();
-                        window.add_toast (new Adw.Toast (output.contains (DATA_PATH) ? _("Backup restored") : _("Failed to restore backup")));
+                        dialog.add_toast (new Adw.Toast (output.contains (DATA_PATH) ? _("Backup restored") : _("Failed to restore backup")));
                         return false;
                     });
                 } else {
                     debug ("restore_config: Archive doesn't contain %s", DATA_PATH);
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
-                        window.add_toast (new Adw.Toast (_("Archive does not contain expected files")));
+                        dialog.add_toast (new Adw.Toast (_("Archive does not contain expected files")));
                         return false;
                     });
                 }

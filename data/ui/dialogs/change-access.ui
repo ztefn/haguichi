@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiChangeAccessDialog">
+  <template class="HaguichiChangeAccessDialog" parent="AdwDialog">
+    <property name="content-width">400</property>
     <property name="default-widget">change_button</property>
     <property name="title" translatable="yes">Change Access</property>
     <child>

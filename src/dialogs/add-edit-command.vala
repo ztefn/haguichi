@@ -12,11 +12,7 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/add-edit-command.ui")]
-#if ADW_1_6
     public class AddEditCommandDialog : Adw.Dialog {
-#else
-    public class AddEditCommandDialog : Adw.Window {
-#endif
         private string mode;
         private CommandsEditor editor;
 
@@ -93,16 +89,8 @@ namespace Haguichi {
 #endif
 
             set_state ();
-#if ADW_1_6
-            content_width = 440;
+
             present (_editor);
-#else
-            default_width = 440;
-            modal = true;
-            resizable = false;
-            transient_for = (Gtk.Window) _editor.get_root ();
-            present ();
-#endif
         }
 
         [GtkCallback]

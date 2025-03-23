@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <template class="HaguichiJoinCreateNetworkDialog">
+  <template class="HaguichiJoinCreateNetworkDialog" parent="AdwDialog">
+    <property name="content-width">400</property>
     <property name="default-widget">add_button</property>
     <child>
       <object class="AdwToolbarView">

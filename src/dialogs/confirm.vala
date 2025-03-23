@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -19,11 +19,9 @@ namespace Haguichi {
                               string body,
                               string confirm_label,
                               Adw.ResponseAppearance response_appearance) {
-#if ADW_1_6
+
             var dialog = new Adw.AlertDialog (heading, body);
-#else
-            var dialog = new Adw.MessageDialog ((Gtk.Window) parent, heading, body);
-#endif
+
             dialog.add_response ("cancel", _("_Cancel"));
             dialog.add_response ("confirm", confirm_label);
 
@@ -41,11 +39,7 @@ namespace Haguichi {
             if (parent == win) {
                 win.show_dialog (dialog);
             } else {
-#if ADW_1_6
                 dialog.present (parent);
-#else
-                dialog.present ();
-#endif
             }
         }
     }
