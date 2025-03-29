@@ -88,7 +88,7 @@ namespace Haguichi {
 
             debug ("Greetings, I am %s %s", APP_NAME, VERSION);
 
-            debug ("running_under_flatpak: %s", Xdp.Portal.running_under_flatpak ().to_string());
+            debug ("running_under_flatpak: %s", Xdp.Portal.running_under_flatpak ().to_string ());
             Command.spawn_wrap = Xdp.Portal.running_under_flatpak () ? "flatpak-spawn --host " : "";
 
             current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");

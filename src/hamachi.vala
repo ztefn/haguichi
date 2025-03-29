@@ -254,8 +254,7 @@ namespace Haguichi {
                 ipv6 = null;
             }
 
-            if ((ipv4 != null) &&
-                (ipv6 != null)) {
+            if (ipv4 != null && ipv6 != null) {
                 ip_version = "Both";
             } else if (ipv4 != null) {
                 ip_version = "IPv4";
@@ -737,7 +736,7 @@ namespace Haguichi {
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
                     save_toast.dismiss ();
-                    dialog.add_toast (new Adw.Toast (output.contains (DATA_PATH)? _("Backup saved") : _("Failed to save backup")));
+                    dialog.add_toast (new Adw.Toast (output.contains (DATA_PATH) ? _("Backup saved") : _("Failed to save backup")));
                     return false;
                 });
 
