@@ -82,5 +82,61 @@ namespace Haguichi {
             debug ("path_exists: Path %s was not found", path);
             return false;
         }
+
+        public static string get_debug_info () {
+            var kernel   = Command.return_output ("uname -sri").strip ();
+            var distro   = Command.return_output ("lsb_release -ds").strip ();
+            var codename = Command.return_output ("lsb_release -cs").strip ();
+            var initsys  = Command.return_output ("ps -p 1 -o comm=").strip ();
+            var engine   = Command.return_output ("cat %s".printf (Hamachi.CONFIG_PATH));
+
+            return """
+Haguichi: %s
+Distribution: %s
+Codename: %s
+Kernel: %s
+GLib: %s.%s.%s
+GTK: %s.%s.%s
+Adwaita: %s
+Locale: %s
+Desktop: %s
+Session: %s
+Flatpak: %s
+Hamachi: %s
+IP mode: %s
+Service: %s
+Init: %s
+Sudo: %s
+Terminal: %s
+File manager: %s
+Remote desktop: %s
+Engine override:
+%s""".printf (
+                Config.VERSION,
+                distro,
+                codename,
+                kernel,
+                Version.MAJOR.to_string (),
+                Version.MINOR.to_string (),
+                Version.MICRO.to_string (),
+                Gtk.MAJOR_VERSION.to_string (),
+                Gtk.MINOR_VERSION.to_string (),
+                Gtk.MICRO_VERSION.to_string (),
+                Adw.VERSION_S,
+                Environment.get_variable ("LANG"),
+                Environment.get_variable ("XDG_CURRENT_DESKTOP"),
+                Environment.get_variable ("XDG_SESSION_TYPE"),
+                Xdp.Portal.running_under_flatpak ().to_string (),
+                Hamachi.version,
+                Hamachi.ip_version,
+                Hamachi.service,
+                initsys,
+                Command.sudo,
+                Command.exists (Command.terminal)       ? Command.terminal       : null,
+                Command.exists (Command.file_manager)   ? Command.file_manager   : null,
+                Command.exists (Command.remote_desktop) ? Command.remote_desktop : null,
+                engine
+            ).chug ();
+        }
     }
 }

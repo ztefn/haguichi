@@ -326,19 +326,26 @@ namespace Haguichi {
         private void about_action () {
             var developer_name = "Stephen Brandt";
             var about = new Adw.AboutDialog () {
-                application_name   = APP_NAME,
-                application_icon   = APP_ID,
-                developer_name     = developer_name,
+                application_name    = APP_NAME,
+                application_icon    = APP_ID,
+                copyright           = "© 2007-2025 " + developer_name,
+                debug_info_filename = "haguichi-debug-info_" + new DateTime.now_local ().format ("%Y-%m-%dT%H:%M") + ".txt",
+                developer_name      = developer_name,
+                issue_url           = "https://github.com/ztefn/haguichi/issues",
+                license_type        = Gtk.License.GPL_3_0,
                 // Translator credits. Put one translator per line, in the form of "NAME URL".
-                translator_credits = _("translator-credits"),
-                version            = VERSION,
-                website            = "https://haguichi.net",
-                issue_url          = "https://github.com/ztefn/haguichi/issues",
-                copyright          = "© 2007-2025 " + developer_name,
-                license_type       = Gtk.License.GPL_3_0,
+                translator_credits  = _("translator-credits"),
+                version             = VERSION,
+                website             = "https://haguichi.net",
+                width_request       = 320
             };
-            about.width_request = 320;
             show_dialog (about);
+
+            // Get debug information in a separate thread
+            new Thread<void*> (null, () => {
+                about.debug_info = Utils.get_debug_info ();
+                return null;
+            });
         }
 
         private void quit_action () {

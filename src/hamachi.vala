@@ -20,8 +20,7 @@ namespace Haguichi {
         public  static string demo_account;
         public  static string last_info;
         public  static string last_list;
-
-        private static string service;
+        public  static string service;
 
         public static void init () {
             ip_version   = "";
