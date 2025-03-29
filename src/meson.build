@@ -68,6 +68,13 @@ if get_option('for-elementary')
   )
 endif
 
+if get_option('for-ubuntu')
+  add_project_arguments(
+    ['-D', 'FOR_UBUNTU'],
+    language: 'vala'
+  )
+endif
+
 executable(binary_name, config, sources, resources,
   dependencies: deps,
        install: true,
