@@ -130,9 +130,7 @@ namespace Haguichi {
             var secondary_click_gesture = new GestureClick () {
                 button = Gdk.BUTTON_SECONDARY
             };
-            // NOTE: Using "released" instead of "pressed" to prevent row from being highlighted infinitely
-            // https://gitlab.gnome.org/GNOME/gtk/-/issues/5468
-            secondary_click_gesture.released.connect ((n_press, x, y) => {
+            secondary_click_gesture.pressed.connect ((n_press, x, y) => {
                 var widget = pick (x, y, PickFlags.DEFAULT);
                 if (widget is ListView) {
                     show_context_menu (null, (int) x, (int) y);
