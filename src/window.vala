@@ -343,7 +343,7 @@ namespace Haguichi {
             if (Utils.get_icon_theme ().theme_name.has_prefix ("Yaru")) {
                 about.artists = {
                     "Sam Hewitt https://github.com/snwh",
-                    "ubuntujaggers https://github.com/ubuntujaggers"
+                    "Stuart Jaggers https://github.com/ubuntujaggers"
                 };
             }
 #endif
