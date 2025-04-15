@@ -70,9 +70,8 @@ msgid "Commands that can be completely customized"
 msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr "Yapılandırma geri yüklenemedi"
+msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
@@ -81,9 +80,8 @@ msgid ""
 msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "İstemci bilgisini göster"
+msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
@@ -98,9 +96,8 @@ msgid "Search your network list"
 msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "Bir ağa katıl"
+msgstr ""
 
 #: data/ui/dialogs/add-edit-command.ui:29
 msgid "Label"
@@ -139,9 +136,8 @@ msgid "_Attach"
 msgstr "_Ekle"
 
 #: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
-#, fuzzy
 msgid "Change Access"
-msgstr "Takma Adı Değiştir"
+msgstr ""
 
 #: data/ui/dialogs/change-access.ui:30
 msgid "Locked"
@@ -239,9 +235,8 @@ msgid "_Delete"
 msgstr "_Sil"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "Takma _Adı Değiştir…"
+msgstr ""
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -260,9 +255,8 @@ msgid "Configuration"
 msgstr "Yapılandırma"
 
 #: data/ui/preferences.ui:20
-#, fuzzy
 msgid "Backup"
-msgstr "Yedek Al"
+msgstr ""
 
 #: data/ui/preferences.ui:31
 msgid "Open Folder"
@@ -367,11 +361,11 @@ msgstr "Üyeler çe_vrimdışı olduğunda bildir"
 
 #: data/ui/preferences.ui:212
 msgid "_Save a Backup…"
-msgstr "Yedek al..."
+msgstr "_Yedek al…"
 
 #: data/ui/preferences.ui:216
 msgid "_Restore from Backup…"
-msgstr "Yedekten ge_ri yükle"
+msgstr "Yedekten ge_ri yükle…"
 
 #: data/ui/shortcuts.ui:14
 msgid "Show help"
@@ -467,23 +461,20 @@ msgid "IPv6 Address"
 msgstr "IPv6 adresi"
 
 #: data/ui/sidebar.ui:62
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "Hamachi sürümü %s uygun değil"
+msgstr ""
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "Durum"
 
 #: data/ui/sidebar.ui:85
-#, fuzzy
 msgid "Leave Network"
-msgstr "Ağ Kur"
+msgstr ""
 
 #: data/ui/sidebar.ui:96
-#, fuzzy
 msgid "Delete Network"
-msgstr "Ağ Kur"
+msgstr ""
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
@@ -507,9 +498,8 @@ msgstr "Bağlantı"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "Komutlar"
+msgstr ""
 
 #: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
@@ -524,14 +514,12 @@ msgid "File Manager"
 msgstr ""
 
 #: data/ui/widgets/command-entry-row.ui:75
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "_Uzak Masaüstüne Bak"
+msgstr ""
 
 #: data/ui/widgets/commands-editor.ui:11
-#, fuzzy
 msgid "_Restore Default"
-msgstr "Ge_ri Yükle"
+msgstr ""
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command"
@@ -550,9 +538,8 @@ msgid "_Ping"
 msgstr "_Ping"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "_Varsayılan Eylem Olarak Ayarla"
+msgstr ""
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
@@ -595,9 +582,8 @@ msgid "Search networks and members"
 msgstr ""
 
 #: data/ui/window.ui:299
-#, fuzzy
 msgid "Add Network"
-msgstr "Ağa Bağlan"
+msgstr ""
 
 #. Display notification only if preference is set and window is not currently active
 #: data/ui/window.ui:340 src/controller.vala:709
@@ -781,9 +767,8 @@ msgid "Add Command"
 msgstr "Komut Ekle"
 
 #: src/dialogs/attach.vala:67
-#, fuzzy
 msgid "Attach request sent"
-msgstr "Katılma isteği gönderildi"
+msgstr ""
 
 #: src/dialogs/attach.vala:76
 msgid "Account not found"
@@ -842,14 +827,12 @@ msgid "Anonymous"
 msgstr "Anonim"
 
 #: src/hamachi.vala:699 src/hamachi.vala:702
-#, fuzzy
 msgid "Password changed"
-msgstr "Parola"
+msgstr ""
 
 #: src/hamachi.vala:727
-#, fuzzy
 msgid "Saving backup…"
-msgstr "Yedek al..."
+msgstr ""
 
 #: src/hamachi.vala:744
 msgid "Backup saved"
@@ -860,9 +843,8 @@ msgid "Failed to save backup"
 msgstr ""
 
 #: src/hamachi.vala:762
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "Yedekten ge_ri yükle"
+msgstr ""
 
 #: src/hamachi.vala:803
 msgid "Backup restored"
@@ -947,9 +929,8 @@ msgid "_Restore"
 msgstr "Ge_ri Yükle"
 
 #: src/preferences.vala:362
-#, fuzzy
 msgid "Never"
-msgstr "_Eskiye dön"
+msgstr ""
 
 #: src/preferences.vala:381
 #, c-format
