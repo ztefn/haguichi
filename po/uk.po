@@ -756,7 +756,7 @@ msgstr "Користувач відключився"
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: src/controller.vala:812
 msgid "{0} went offline in the network {1}"
-msgstr "{0} покинув  мережу {1}"
+msgstr "{0} покинув мережу {1}"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: src/controller.vala:814

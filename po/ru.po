@@ -479,7 +479,7 @@ msgstr "Покинуть сеть"
 
 #: data/ui/sidebar.ui:96
 msgid "Delete Network"
-msgstr "Удалить  сеть"
+msgstr "Удалить сеть"
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
