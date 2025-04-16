@@ -16,7 +16,6 @@
    * [Homepage](https://haguichi.net)
    * [Download](https://haguichi.net/download/)
    * [Bug tracker](https://github.com/ztefn/haguichi/issues)
-   * [Translations](https://translations.launchpad.net/haguichi)
 
 
   Features
@@ -28,6 +27,12 @@
    * Desktop notifications to stay up to date of network events
    * Commands that can be completely customized
    * Backup and restore of your Hamachi configuration folder
+
+
+  Translations
+  ------------
+
+  You can help translate Haguichi via [Launchpad](https://translations.launchpad.net/haguichi) or [Weblate](https://hosted.weblate.org/projects/haguichi/haguichi/).
 
 
   Donations

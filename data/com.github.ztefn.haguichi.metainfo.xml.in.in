@@ -103,7 +103,7 @@
   <url type="faq">https://haguichi.net/faq/</url>
   <url type="help">https://haguichi.net/tips-and-tricks/</url>
   <url type="donation">https://haguichi.net/donate/</url>
-  <url type="translate">https://translations.launchpad.net/haguichi</url>
+  <url type="translate">https://github.com/ztefn/haguichi#translations</url>
   <url type="vcs-browser">https://github.com/ztefn/haguichi</url>
   <developer id="com.stephenbrandt">
     <name translate="no">Stephen Brandt</name>
