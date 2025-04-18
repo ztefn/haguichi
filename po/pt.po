@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 00:11+0100\n"
-"PO-Revision-Date: 2022-08-28 16:05+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2025-04-18 20:16+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/haguichi/"
+"haguichi/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.11.1-dev\n"
 "X-Launchpad-Export-Date: 2022-08-28 16:08+0000\n"
-"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:5
@@ -33,17 +34,19 @@ msgstr "Administrador de Rede Hamachi"
 #: data/com.github.ztefn.haguichi.desktop.in.in:11
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Gira as suas redes Hamachi"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:15
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
-msgstr ""
+msgstr "LogMeIn Hamachi;VPN;LAN;Rede;Internet;P2P;Peer;Client;GUI;Frontend;"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
 msgstr ""
+"Haguichi facilita muito a participação, criação e administração de redes "
+"Hamachi."
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
@@ -59,22 +62,21 @@ msgstr "Barra lateral para um acesso fácil aos detalhes e ações"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
-msgstr ""
+msgstr "Suporte para indicadores para acesso rápido às principais ações"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
 msgstr ""
+"Notificações na área de trabalho para manter-se atualizado sobre os eventos "
+"da rede"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "Comandos que podem ser completamente personalizados"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr ""
-"Faça uma cópia de segurança para restaurar a sua pasta de configuração do "
-"Hamachi"
+msgstr "Backup e restauração da sua pasta de configuração do Hamachi"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
@@ -85,27 +87,24 @@ msgstr ""
 "em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "Mostrar informação do cliente"
+msgstr "Visualize a lista da sua rede e informações do cliente"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "Visualizar pormenores do membro selecionado"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "Visualizar pormenores da rede selecionada"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
-#, fuzzy
 msgid "Search your network list"
-msgstr "Lista de redes com pesquisa, ordenação e agrupamento"
+msgstr "Pesquisar a sua lista de redes"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "Juntar-se a uma rede"
+msgstr "Participar ou criar redes"
 
 #: data/ui/dialogs/add-edit-command.ui:29
 msgid "Label"
@@ -144,9 +143,8 @@ msgid "_Attach"
 msgstr "_Anexar"
 
 #: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
-#, fuzzy
 msgid "Change Access"
-msgstr "Alterar Alcunha"
+msgstr "Alterar Acesso"
 
 #: data/ui/dialogs/change-access.ui:30
 msgid "Locked"
@@ -154,7 +152,7 @@ msgstr "Trancado"
 
 #: data/ui/dialogs/change-access.ui:31
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Não aceitar novos membros na rede"
 
 #: data/ui/dialogs/change-access.ui:37
 msgid "Approval"
@@ -215,7 +213,7 @@ msgstr "_Expulsar"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "_Detalhes"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:561
 #: src/indicator.vala:111
@@ -244,9 +242,8 @@ msgid "_Delete"
 msgstr "_Apagar"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "_Alterar Alcunha…"
+msgstr "Alterar _Acesso…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -265,9 +262,8 @@ msgid "Configuration"
 msgstr "Configuração"
 
 #: data/ui/preferences.ui:20
-#, fuzzy
 msgid "Backup"
-msgstr "Gravar uma Cópia de Segurança"
+msgstr "Backup"
 
 #: data/ui/preferences.ui:31
 msgid "Open Folder"
@@ -299,7 +295,7 @@ msgstr "Comportamento"
 
 #: data/ui/preferences.ui:72
 msgid "_Network list update interval"
-msgstr ""
+msgstr "Intervalo de atualização da lista de _redes"
 
 #: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
@@ -328,19 +324,19 @@ msgstr "Aparência"
 
 #: data/ui/preferences.ui:114
 msgid "_Style"
-msgstr ""
+msgstr "_Estilo"
 
 #: data/ui/preferences.ui:131
 msgid "Follow System"
-msgstr ""
+msgstr "Seguir o Tema do Sistema"
 
 #: data/ui/preferences.ui:142
 msgid "Light"
-msgstr ""
+msgstr "Claro"
 
 #: data/ui/preferences.ui:154
 msgid "Dark"
-msgstr ""
+msgstr "Escuro"
 
 #: data/ui/preferences.ui:164
 msgid "Show _indicator"
@@ -472,23 +468,20 @@ msgid "IPv6 Address"
 msgstr "Endereço IPv6"
 
 #: data/ui/sidebar.ui:62
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "A versão do Hamachi %s é obsoleta"
+msgstr "Versões do Hamachi"
 
 #: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
 msgid "Status"
 msgstr "Estado"
 
 #: data/ui/sidebar.ui:85
-#, fuzzy
 msgid "Leave Network"
-msgstr "Criar Rede"
+msgstr "Sair da Rede"
 
 #: data/ui/sidebar.ui:96
-#, fuzzy
 msgid "Delete Network"
-msgstr "Criar Rede"
+msgstr "Apagar Rede"
 
 #: data/ui/sidebar.ui:113
 msgid "Owner"
@@ -512,9 +505,8 @@ msgstr "Conexão"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "Comandos"
+msgstr "Variáveis de Comando"
 
 #: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
@@ -522,21 +514,19 @@ msgstr "Endereço"
 
 #: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "Emulador de Terminal"
 
 #: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
-msgstr ""
+msgstr "Gestor de Ficheiros"
 
 #: data/ui/widgets/command-entry-row.ui:75
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "_Ver Computador Remoto"
+msgstr "Visualizador de Área de Trabalho Remota"
 
 #: data/ui/widgets/commands-editor.ui:11
-#, fuzzy
 msgid "_Restore Default"
-msgstr "_Restaurar"
+msgstr "_Restaurar Padrão"
 
 #: data/ui/widgets/commands-editor.ui:34
 msgid "_Add Command"
@@ -555,13 +545,12 @@ msgid "_Ping"
 msgstr "_Ping"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "_Definir como ação padrão"
+msgstr "Ação Padrão"
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "Opções"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -585,7 +574,7 @@ msgstr "_Remover"
 
 #: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
-msgstr ""
+msgstr "Copiar"
 
 #: data/ui/window.ui:195 src/window.vala:513
 msgid "Initializing"
@@ -593,17 +582,15 @@ msgstr "A inicializar"
 
 #: data/ui/window.ui:247
 msgid "Main Menu"
-msgstr ""
+msgstr "Menu Principal"
 
 #: data/ui/window.ui:265
-#, fuzzy
 msgid "Search networks and members"
-msgstr "Administrador de Rede Hamachi"
+msgstr "Pesquisar redes e membros"
 
 #: data/ui/window.ui:299
-#, fuzzy
 msgid "Add Network"
-msgstr "Juntar-se à Rede"
+msgstr "Adicionar Rede"
 
 #. Display notification only if preference is set and window is not currently active
 #: data/ui/window.ui:340 src/controller.vala:709
@@ -624,11 +611,11 @@ msgstr "Use o botão + para adicionar uma rede"
 
 #: data/ui/window.ui:408
 msgid "No Results Found"
-msgstr ""
+msgstr "Nenhum Resultado Encontrado"
 
 #: data/ui/window.ui:409
 msgid "Try a different search"
-msgstr ""
+msgstr "Tentar uma pesquisa diferente"
 
 #: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
@@ -787,9 +774,8 @@ msgid "Add Command"
 msgstr "Adicionar Comando"
 
 #: src/dialogs/attach.vala:67
-#, fuzzy
 msgid "Attach request sent"
-msgstr "Pedido de adesão enviado"
+msgstr "Solicitação de anexação enviada"
 
 #: src/dialogs/attach.vala:76
 msgid "Account not found"
@@ -848,35 +834,32 @@ msgid "Anonymous"
 msgstr "Anónimo"
 
 #: src/hamachi.vala:699 src/hamachi.vala:702
-#, fuzzy
 msgid "Password changed"
-msgstr "Senha"
+msgstr "Palavra-passe alterada"
 
 #: src/hamachi.vala:727
-#, fuzzy
 msgid "Saving backup…"
-msgstr "_Gravar uma Cópia de Segurança…"
+msgstr "A gravar backup…"
 
 #: src/hamachi.vala:744
 msgid "Backup saved"
-msgstr ""
+msgstr "Backup gravado"
 
 #: src/hamachi.vala:744
 msgid "Failed to save backup"
-msgstr ""
+msgstr "Falha ao gravar o backup"
 
 #: src/hamachi.vala:762
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "_Restaurar de uma Cópia de Segurança…"
+msgstr "A restaurar backup…"
 
 #: src/hamachi.vala:803
 msgid "Backup restored"
-msgstr ""
+msgstr "Backup restaurado"
 
 #: src/hamachi.vala:803
 msgid "Failed to restore backup"
-msgstr ""
+msgstr "Falha ao restaurar o backup"
 
 #: src/hamachi.vala:810
 msgid "Archive does not contain expected files"
@@ -935,7 +918,7 @@ msgstr "Se apagar uma rede, esta vai ser perdida permanentemente."
 
 #: src/preferences.vala:110
 msgid "Not present"
-msgstr ""
+msgstr "Ausente"
 
 #: src/preferences.vala:279
 msgid "All supported archives"
@@ -954,23 +937,22 @@ msgid "_Restore"
 msgstr "_Restaurar"
 
 #: src/preferences.vala:362
-#, fuzzy
 msgid "Never"
-msgstr "_Reverter"
+msgstr "Nunca"
 
 #: src/preferences.vala:381
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S segundo"
+msgstr[1] "%S segundos"
 
 #: src/preferences.vala:385
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S minuto"
+msgstr[1] "%S minutos"
 
 #: src/sidebar.vala:166
 msgid "Unavailable"
@@ -982,7 +964,7 @@ msgstr "pendente"
 
 #: src/sidebar.vala:185
 msgid "Not attached"
-msgstr ""
+msgstr "Não anexado"
 
 #: src/sidebar.vala:201
 msgid "{0} online, {1} total"
@@ -1026,11 +1008,11 @@ msgstr "Direto"
 
 #: src/widgets/commands-editor.vala:59
 msgid "Restore default commands?"
-msgstr ""
+msgstr "Restaurar comandos padrão?"
 
 #: src/widgets/commands-editor.vala:60
 msgid "All customizations will be lost."
-msgstr ""
+msgstr "Todas as customizações serão perdidas."
 
 #: src/window.vala:178
 msgid "Configuring"
@@ -1039,11 +1021,13 @@ msgstr "A configurar"
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/window.vala:341
 msgid "translator-credits"
-msgstr "André Barata https://github.com/rottenpants466"
+msgstr ""
+"André Barata https://github.com/rottenpants466\n"
+"Silvério Santos https://hosted.weblate.org/user/ssantos/"
 
 #: src/window.vala:415
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Copiado para a área de transferência"
 
 #: src/window.vala:450
 msgid "Reconnecting in {0} second"
@@ -1065,3 +1049,5 @@ msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
 msgstr ""
+"Haguichi continuará em execução quando a janela for fechada para que possa "
+"monitorar a conexão e enviar notificações."
