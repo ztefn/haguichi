@@ -94,9 +94,13 @@ namespace Haguichi {
             current_desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
             debug ("current_desktop: %s", current_desktop);
 
+            var gtk_settings = Gtk.Settings.get_default ();
+            // Never show window icon inside the headerbar
+            gtk_settings.gtk_decoration_layout = gtk_settings.gtk_decoration_layout.replace ("icon", "");
 #if FOR_ELEMENTARY
-            Gtk.Settings.get_default().set ("gtk-theme-name", "io.elementary.stylesheet.strawberry");
-            Gtk.Settings.get_default().set ("gtk-icon-theme-name", "elementary");
+            // Pin stylesheet and icon theme on elementary OS
+            gtk_settings.set ("gtk-theme-name", "io.elementary.stylesheet.strawberry");
+            gtk_settings.set ("gtk-icon-theme-name", "elementary");
 #endif
 
             connection = new Connection ();

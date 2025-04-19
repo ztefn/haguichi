@@ -72,12 +72,7 @@ namespace Haguichi {
 #endif
 
         public Window (Application app) {
-            Object (application: app, title: APP_NAME);
-
-            // KDE places the window icon in the headerbar, so only set it for other desktops
-            if (current_desktop != "KDE") {
-                icon_name = APP_ID;
-            }
+            Object (application: app, title: APP_NAME, icon_name: APP_ID);
 
             var config = new Settings (APP_ID + ".config");
             var list   = new Settings (APP_ID + ".network-list");
