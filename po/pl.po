@@ -609,7 +609,7 @@ msgstr "_Anuluj"
 
 #: data/ui/window.ui:386
 msgid "You Are Connected!"
-msgstr "Nie połączono"
+msgstr "Jesteś połączony!"
 
 #: data/ui/window.ui:387
 msgid "Use the + button to add a network"
