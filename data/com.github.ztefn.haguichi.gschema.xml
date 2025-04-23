@@ -134,13 +134,13 @@
       <default>'dark'</default>
     </key>
     <key type="i" name="height">
-      <default>480</default>
+      <default>466</default>
     </key>
     <key type="b" name="show-indicator">
       <default>true</default>
     </key>
     <key type="i" name="width">
-      <default>600</default>
+      <default>582</default>
     </key>
   </schema>
 
