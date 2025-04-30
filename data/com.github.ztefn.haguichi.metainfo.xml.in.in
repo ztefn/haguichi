@@ -58,6 +58,28 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.5.2" date="2025-04-30">
+      <url>https://haguichi.net/news/release152/</url>
+      <description translate="no">
+        <p>Haguichi 1.5.2 sends up white smoke to announce its newest changes:</p>
+        <ul>
+          <li>Implemented Adw.StatusPage to show the connection restore countdown with an additional cancel button.</li>
+          <li>Connection loss notification will not be displayed if the window is already focused.</li>
+          <li>Selected node and search text is now saved when restoring connection.</li>
+          <li>Within "Add Command" and "Edit Command" dialogs command variables can now be inserted directly from the popover into the command entries.</li>
+          <li>Now using Adw.ToggleGroup instead of grouped Gtk.CheckButtons to select IP version priority when libadwaita 1.7 is available.</li>
+          <li>Now using Adw.Dialog based widgets starting from libadwaita 1.5 instead of 1.6.</li>
+          <li>Added more network list update interval options to preferences dialog.</li>
+          <li>Added support for Flatpak commands.</li>
+          <li>Added support for Ghostty.</li>
+          <li>Added debug information to about dialog.</li>
+          <li>Updated Yaru icons for Ubuntu builds to use a smaller square for optical compensation (thanks again to ubuntujaggers).</li>
+          <li>Updated Polish and Portuguese translations.</li>
+          <li>Bumped minimum required versions of GLib (2.80) and GTK (4.14) and libadwaita (1.5).</li>
+          <li>Other minor fixes, improvements and optimizations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.1" date="2024-12-01">
       <url>https://haguichi.net/news/release151/</url>
       <description translate="no">
