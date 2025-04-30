@@ -6,7 +6,7 @@
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux</h4>
-  <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" width="722" />
+  <img src="https://haguichi.net/appdata/screenshot-1.png" alt="Screenshot" width="704" />
 </div>
 
 
