@@ -13,6 +13,7 @@ gettext_pkg = app_name.to_lower()
 add_project_arguments(
   '-DG_LOG_DOMAIN="' + app_name + '"',
   '-DGETTEXT_PACKAGE="' + gettext_pkg + '"',
+  '-w',
   language: 'c'
 )
 
