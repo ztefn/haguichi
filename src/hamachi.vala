@@ -87,6 +87,8 @@ namespace Haguichi {
         }
 
         public static void determine_service () {
+            service = "";
+
             var settings = new Settings (Config.APP_ID + ".commands");
             string init_system = settings.get_string ("init-system");
 
