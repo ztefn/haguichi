@@ -502,7 +502,7 @@ namespace Haguichi {
 
             throbber.spinning = (mode == "Connecting");
 
-            configure_button.sensitive = (mode == "Not configured");
+            configure_button.sensitive = (mode == "Not configured" && Hamachi.service != "");
 
             overlay_refresh_button.visible = (mode == "Connected");
             overlay_add_network_button.visible = (mode == "Connected");
