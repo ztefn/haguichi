@@ -356,11 +356,11 @@ msgstr "Értesítés megjelenítése, ha egy tag _kilép"
 
 #: data/ui/preferences.ui:194
 msgid "Display notification when a member comes o_nline"
-msgstr "Értesítés megjelenítése, ha egy tag _online állapotba kerül"
+msgstr "Értesítés megjelenítése, ha egy tag o_nline állapotba kerül"
 
 #: data/ui/preferences.ui:200
 msgid "Display notification when a member goes o_ffline"
-msgstr "Értesítés megjelenítése, ha egy tag _offline állapotba kerül"
+msgstr "Értesítés megjelenítése, ha egy tag o_ffline állapotba kerül"
 
 #: data/ui/preferences.ui:212
 msgid "_Save a Backup…"
@@ -647,7 +647,7 @@ msgstr "Rendezés _állapot szerint"
 
 #: data/ui/window.ui:528
 msgid "Show _Offline Members"
-msgstr "Offline tagok megjelenítése"
+msgstr "_Offline tagok megjelenítése"
 
 #: data/ui/window.ui:535
 msgid "_Preferences"
@@ -655,7 +655,7 @@ msgstr "_Beállítások"
 
 #: data/ui/window.ui:539
 msgid "_Keyboard Shortcuts"
-msgstr "B_illentyűparancsok"
+msgstr "_Billentyűparancsok"
 
 #: data/ui/window.ui:543
 msgid "_Help"
@@ -957,7 +957,7 @@ msgstr "Nem elérhető"
 
 #: src/sidebar.vala:184
 msgid "pending"
-msgstr "Folyamatban"
+msgstr "folyamatban"
 
 #: src/sidebar.vala:185
 msgid "Not attached"
@@ -1018,9 +1018,7 @@ msgstr "Konfigurálás folyamatban"
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/window.vala:341
 msgid "translator-credits"
-msgstr ""
-"fordítók\n"
-"therealmate https://github.com/therealmate"
+msgstr "therealmate https://github.com/therealmate"
 
 #: src/window.vala:415
 msgid "Copied to clipboard"
