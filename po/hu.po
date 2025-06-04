@@ -1,0 +1,1050 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the haguichi package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: haguichi\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-16 00:11+0100\n"
+"PO-Revision-Date: 2025-06-04 13:14+0000\n"
+"Last-Translator: therealmate <hellogaming91@gmail.com>\n"
+"Language-Team: Hungarian <https://hosted.weblate.org/projects/haguichi/"
+"haguichi/hu/>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.12-dev\n"
+
+#. Name used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:5
+msgid "Haguichi"
+msgstr "Haguichi"
+
+#. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
+#: data/com.github.ztefn.haguichi.desktop.in.in:7
+msgid "Hamachi Network Manager"
+msgstr "Hamachi hálózatkezelő"
+
+#. Description used for display in application launchers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
+msgid "Manage your Hamachi networks"
+msgstr "Kezelje Hamachi-hálózatait"
+
+#. Keywords used for search in application launchers and software centers.
+#: data/com.github.ztefn.haguichi.desktop.in.in:15
+msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
+msgstr ""
+"LogMeIn Hamachi;VPN;LAN;Hálózat;Internet;P2P;Partner;Kliens;Grafikus felület;"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
+msgid ""
+"Haguichi makes it a breeze to join, create and administer Hamachi networks."
+msgstr ""
+"A Haguichi leegyszerűsíti a Hamachi hálózatokhoz való csatlakozást, "
+"létrehozást és kezelést."
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
+msgid "Features:"
+msgstr "Funkciók:"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:12
+msgid "Searchable, sortable and collapsible network list"
+msgstr "Kereshető, rendezhető és összecsukható hálózatlista"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:13
+msgid "Sidebar for easy access to details and actions"
+msgstr "Oldalsáv a részletekhez és műveletekhez való gyors hozzáféréshez"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
+msgid "Indicator support for quick access to primary actions"
+msgstr "Indikátor támogatás az elsődleges műveletek gyors eléréséhez"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
+msgid "Desktop notifications to stay up to date of network events"
+msgstr "Asztali értesítések a hálózati események nyomon követéséhez"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
+msgid "Commands that can be completely customized"
+msgstr "Teljesen testreszabható parancsok"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
+msgid "Backup and restore of your Hamachi configuration folder"
+msgstr "A Hamachi konfigurációs mappa biztonsági mentése és visszaállítása"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
+msgid ""
+"<em>Please note: Requires installation of Hamachi on the system in order to "
+"use.</em>"
+msgstr "<em>Figyelem: A használathoz a Hamachi telepítése szükséges.</em>"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
+msgid "View your network list and client information"
+msgstr "Hálózatlista és kliensinformációk megtekintése"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
+msgid "View selected member details"
+msgstr "Kijelölt tag adatainak megtekintése"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
+msgid "View selected network details"
+msgstr "Kijelölt hálózat adatainak megtekintése"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
+msgid "Search your network list"
+msgstr "Keresés a hálózatlistában"
+
+#: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
+msgid "Join or create networks"
+msgstr "Csatlakozz egy hálózathoz vagy készíts egyet"
+
+#: data/ui/dialogs/add-edit-command.ui:29
+msgid "Label"
+msgstr "Címke"
+
+#: data/ui/dialogs/add-edit-command.ui:36
+msgid "IPv4 Command"
+msgstr "IPv4 parancs"
+
+#: data/ui/dialogs/add-edit-command.ui:43
+msgid "IPv6 Command"
+msgstr "IPv6 parancs"
+
+#: data/ui/dialogs/add-edit-command.ui:50
+msgid "Priority"
+msgstr "Prioritás"
+
+#: data/ui/dialogs/add-edit-command.ui:57
+msgid "_Save"
+msgstr "_Mentés"
+
+#: data/ui/dialogs/attach.ui:5
+msgid "Attach to Account"
+msgstr "Fiókhoz csatolás"
+
+#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
+msgid "Account"
+msgstr "Fiók"
+
+#: data/ui/dialogs/attach.ui:37
+msgid "Include all networks created by this client"
+msgstr "Ezzel a klienssel létrehozott összes hálózat megjelenítése"
+
+#: data/ui/dialogs/attach.ui:60
+msgid "_Attach"
+msgstr "_Csatolás"
+
+#: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
+msgid "Change Access"
+msgstr "Hozzáférés módosítása"
+
+#: data/ui/dialogs/change-access.ui:30
+msgid "Locked"
+msgstr "Zárolva"
+
+#: data/ui/dialogs/change-access.ui:31
+msgid "Do not accept new network members"
+msgstr "Ne fogadjon új hálózati tagokat"
+
+#: data/ui/dialogs/change-access.ui:37
+msgid "Approval"
+msgstr "Jóváhagyás"
+
+#: data/ui/dialogs/change-access.ui:41
+msgid "Automatically"
+msgstr "Automatikusan"
+
+#: data/ui/dialogs/change-access.ui:42
+msgid "Manually"
+msgstr "Manuálisan"
+
+#: data/ui/dialogs/change-access.ui:52 data/ui/dialogs/change-password.ui:38
+msgid "C_hange"
+msgstr "_Módosítás"
+
+#: data/ui/dialogs/change-password.ui:5 data/ui/sidebar.ui:117
+msgid "Change Password"
+msgstr "Jelszó módosítása"
+
+#: data/ui/dialogs/change-password.ui:30
+msgid "New Password"
+msgstr "Új jelszó"
+
+#: data/ui/dialogs/join-create-network.ui:29 data/ui/sidebar.ui:108
+msgid "Network ID"
+msgstr "Hálózat azonosító"
+
+#: data/ui/dialogs/join-create-network.ui:36
+msgid "Password"
+msgstr "Jelszó"
+
+#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:231 src/bubble.vala:58
+msgid "_Approve"
+msgstr "_Jóváhagyás"
+
+#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:244 src/bubble.vala:59
+msgid "_Reject"
+msgstr "_Elutasítás"
+
+#: data/ui/menus/member-menu.ui:22
+msgid "Copy IPv_4 Address"
+msgstr "IPv_4 cím másolása"
+
+#: data/ui/menus/member-menu.ui:27
+msgid "Copy IPv_6 Address"
+msgstr "IPv_6 cím másolása"
+
+#: data/ui/menus/member-menu.ui:32
+msgid "_Copy Client ID"
+msgstr "Kliens azonosító _másolása"
+
+#. This action removes the selected member from the network.
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:234
+msgid "_Evict"
+msgstr "_Eltávolítás"
+
+#: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
+msgid "_Details"
+msgstr "_Részletek"
+
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:561
+#: src/indicator.vala:111
+msgid "_Join Network…"
+msgstr "_Csatlakozás hálózathoz…"
+
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:565
+#: src/indicator.vala:116
+msgid "_Create Network…"
+msgstr "_Hálózat létrehozása…"
+
+#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:151
+msgid "_Go Online"
+msgstr "_Online mód"
+
+#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:164
+msgid "_Go Offline"
+msgstr "_Offline mód"
+
+#: data/ui/menus/network-menu.ui:22 src/network.vala:347
+msgid "_Leave"
+msgstr "_Kilépés"
+
+#: data/ui/menus/network-menu.ui:28 src/network.vala:376
+msgid "_Delete"
+msgstr "_Törlés"
+
+#: data/ui/menus/network-menu.ui:36
+msgid "Change _Access…"
+msgstr "Hozzáférés _módosítása…"
+
+#: data/ui/menus/network-menu.ui:41
+msgid "Change _Password…"
+msgstr "Jelszó _módosítása…"
+
+#: data/ui/menus/network-menu.ui:48
+msgid "_Copy Network ID"
+msgstr "_Hálózati azonosító másolása"
+
+#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
+msgid "General"
+msgstr "Általános"
+
+#: data/ui/preferences.ui:13
+msgid "Configuration"
+msgstr "Konfigurálás"
+
+#: data/ui/preferences.ui:20
+msgid "Backup"
+msgstr "Biztonsági mentés"
+
+#: data/ui/preferences.ui:31
+msgid "Open Folder"
+msgstr "Mappa megnyitása"
+
+#: data/ui/preferences.ui:45 data/ui/widgets/command-entry-row.ui:42
+msgid "Nickname"
+msgstr "Becenév"
+
+#: data/ui/preferences.ui:52
+msgid "_Protocol"
+msgstr "_Protokoll"
+
+#: data/ui/preferences.ui:57
+msgid "Both IPv4 and IPv6"
+msgstr "IPv4 és IPv6 is"
+
+#: data/ui/preferences.ui:58
+msgid "IPv4 only"
+msgstr "Csak IPv4"
+
+#: data/ui/preferences.ui:59
+msgid "IPv6 only"
+msgstr "Csak IPv6"
+
+#: data/ui/preferences.ui:69
+msgid "Behavior"
+msgstr "Viselkedés"
+
+#: data/ui/preferences.ui:72
+msgid "_Network list update interval"
+msgstr "_Hálózatlista frissítési gyakorisága"
+
+#: data/ui/preferences.ui:78
+msgid "_Connect automatically on startup"
+msgstr "_Automatikus csatlakozás indításkor"
+
+#: data/ui/preferences.ui:84
+msgid "_Reconnect automatically when the connection is lost"
+msgstr "_Automatikus újracsatlakozás kapcsolat megszakadásakor"
+
+#: data/ui/preferences.ui:90
+msgid "_Disconnect on quit"
+msgstr "_Kapcsolat bontása kilépéskor"
+
+#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
+msgid "Commands"
+msgstr "Parancsok"
+
+#. In this context meaning "work environment".
+#: data/ui/preferences.ui:108
+msgid "Desktop"
+msgstr "Asztal"
+
+#: data/ui/preferences.ui:111
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: data/ui/preferences.ui:114
+msgid "_Style"
+msgstr "_Stílus"
+
+#: data/ui/preferences.ui:131
+msgid "Follow System"
+msgstr "Rendszertéma követése"
+
+#: data/ui/preferences.ui:142
+msgid "Light"
+msgstr "Világos"
+
+#: data/ui/preferences.ui:154
+msgid "Dark"
+msgstr "Sötét"
+
+#: data/ui/preferences.ui:164
+msgid "Show _indicator"
+msgstr "_Indikátor megjelenítése"
+
+#: data/ui/preferences.ui:173
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: data/ui/preferences.ui:176
+msgid "Display notification when the connection is l_ost"
+msgstr "Értesítés megjelenítése, ha a kapcsolat megsz_akad"
+
+#: data/ui/preferences.ui:182
+msgid "Display notification when a member _joins"
+msgstr "Értesítés megjelenítése, ha egy tag _csatlakozik"
+
+#: data/ui/preferences.ui:188
+msgid "Display notification when a member _leaves"
+msgstr "Értesítés megjelenítése, ha egy tag _kilép"
+
+#: data/ui/preferences.ui:194
+msgid "Display notification when a member comes o_nline"
+msgstr "Értesítés megjelenítése, ha egy tag _online állapotba kerül"
+
+#: data/ui/preferences.ui:200
+msgid "Display notification when a member goes o_ffline"
+msgstr "Értesítés megjelenítése, ha egy tag _offline állapotba kerül"
+
+#: data/ui/preferences.ui:212
+msgid "_Save a Backup…"
+msgstr "_Biztonsági mentés…"
+
+#: data/ui/preferences.ui:216
+msgid "_Restore from Backup…"
+msgstr "_Visszaállítás biztonsági mentésből…"
+
+#: data/ui/shortcuts.ui:14
+msgid "Show help"
+msgstr "Súgó megjelenítése"
+
+#: data/ui/shortcuts.ui:20
+msgid "Show client information"
+msgstr "Kliensinformációk megjelenítése"
+
+#: data/ui/shortcuts.ui:26
+msgid "Open menu"
+msgstr "Menü megnyitása"
+
+#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
+msgid "Connect"
+msgstr "Csatlakozás"
+
+#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
+msgid "Disconnect"
+msgstr "Kapcsolat bontása"
+
+#: data/ui/shortcuts.ui:44
+msgid "Preferences"
+msgstr "Beállítások"
+
+#: data/ui/shortcuts.ui:50
+msgid "Keyboard shortcuts"
+msgstr "Billentyűparancsok"
+
+#: data/ui/shortcuts.ui:56
+msgid "Quit"
+msgstr "Kilépés"
+
+#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
+msgid "Network List"
+msgstr "Hálózatlista"
+
+#: data/ui/shortcuts.ui:67
+msgid "Join a network"
+msgstr "Csatlakozás egy hálózathoz"
+
+#: data/ui/shortcuts.ui:73
+msgid "Create a network"
+msgstr "Hálózat létrehozása"
+
+#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
+msgid "Refresh"
+msgstr "Frissítés"
+
+#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
+msgid "Search"
+msgstr "Keresés"
+
+#: data/ui/shortcuts.ui:91
+msgid "Show/hide offline members"
+msgstr "Offline tagok megjelenítése/elrejtése"
+
+#: data/ui/shortcuts.ui:97
+msgid "Expand all networks"
+msgstr "Összes hálózat kibontása"
+
+#: data/ui/shortcuts.ui:103
+msgid "Collapse all networks"
+msgstr "Összes hálózat összecsukása"
+
+#: data/ui/shortcuts.ui:109
+msgid "Execute command"
+msgstr "Parancs végrehajtása"
+
+#: data/ui/sidebar.ui:13
+msgid "Information"
+msgstr "Információ"
+
+#: data/ui/sidebar.ui:23
+msgid "Attach"
+msgstr "Csatolás"
+
+#: data/ui/sidebar.ui:35
+msgid "Cancel"
+msgstr "Mégse"
+
+#: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
+#: data/ui/widgets/command-entry-row.ui:48
+msgid "Client ID"
+msgstr "Kliens azonosító"
+
+#: data/ui/sidebar.ui:52 data/ui/sidebar.ui:210
+msgid "IPv4 Address"
+msgstr "IPv4 cím"
+
+#: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
+msgid "IPv6 Address"
+msgstr "IPv6 cím"
+
+#: data/ui/sidebar.ui:62
+msgid "Hamachi Version"
+msgstr "Hamachi verzió"
+
+#: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
+msgid "Status"
+msgstr "Állapot"
+
+#: data/ui/sidebar.ui:85
+msgid "Leave Network"
+msgstr "Kilépés a hálózatból"
+
+#: data/ui/sidebar.ui:96
+msgid "Delete Network"
+msgstr "Hálózat törlése"
+
+#: data/ui/sidebar.ui:113
+msgid "Owner"
+msgstr "Tulajdonos"
+
+#: data/ui/sidebar.ui:129
+msgid "Members"
+msgstr "Tagok"
+
+#: data/ui/sidebar.ui:145
+msgid "Capacity"
+msgstr "Kapacitás"
+
+#: data/ui/sidebar.ui:220
+msgid "Tunnel"
+msgstr "Alagút"
+
+#: data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "Kapcsolat"
+
+#: data/ui/widgets/command-entry-row.ui:7
+#: data/ui/widgets/command-entry-row.ui:15
+msgid "Command Variables"
+msgstr "Parancsváltozók"
+
+#: data/ui/widgets/command-entry-row.ui:36
+msgid "Address"
+msgstr "Cím"
+
+#: data/ui/widgets/command-entry-row.ui:63
+msgid "Terminal Emulator"
+msgstr "Terminálemulátor"
+
+#: data/ui/widgets/command-entry-row.ui:69
+msgid "File Manager"
+msgstr "Fájlkezelő"
+
+#: data/ui/widgets/command-entry-row.ui:75
+msgid "Remote Desktop Viewer"
+msgstr "Távoli asztal néző"
+
+#: data/ui/widgets/commands-editor.ui:11
+msgid "_Restore Default"
+msgstr "_Alapértelmezés visszaállítása"
+
+#: data/ui/widgets/commands-editor.ui:34
+msgid "_Add Command"
+msgstr "_Parancs hozzáadása"
+
+#: data/ui/widgets/commands-editor.ui:55
+msgid "_Browse Shares"
+msgstr "_Megosztások böngészése"
+
+#: data/ui/widgets/commands-editor.ui:58
+msgid "_View Remote Desktop"
+msgstr "_Távoli asztal megtekintése"
+
+#: data/ui/widgets/commands-editor.ui:61
+msgid "_Ping"
+msgstr "_Pingelés"
+
+#: data/ui/widgets/commands-editor-row.ui:17
+msgid "Default Action"
+msgstr "Alapértelmezett művelet"
+
+#: data/ui/widgets/commands-editor-row.ui:34
+msgid "Options"
+msgstr "Beállítások"
+
+#: data/ui/widgets/commands-editor-row.ui:61
+msgid "_Edit…"
+msgstr "_Szerkesztés…"
+
+#: data/ui/widgets/commands-editor-row.ui:67
+msgid "Move _Up"
+msgstr "Mozgatás _fel"
+
+#: data/ui/widgets/commands-editor-row.ui:71
+msgid "Move _Down"
+msgstr "Mozgatás _le"
+
+#: data/ui/widgets/commands-editor-row.ui:77
+msgid "_Set As Default Action"
+msgstr "_Beállítás alapértelmezett műveletként"
+
+#: data/ui/widgets/commands-editor-row.ui:83
+msgid "_Remove"
+msgstr "_Eltávolítás"
+
+#: data/ui/widgets/sidebar-row.ui:9
+msgid "Copy"
+msgstr "Másolás"
+
+#: data/ui/window.ui:195 src/window.vala:513
+msgid "Initializing"
+msgstr "Inicializálás"
+
+#: data/ui/window.ui:247
+msgid "Main Menu"
+msgstr "Főmenü"
+
+#: data/ui/window.ui:265
+msgid "Search networks and members"
+msgstr "Hálózatok és tagok keresése"
+
+#: data/ui/window.ui:299
+msgid "Add Network"
+msgstr "Hálózat hozzáadása"
+
+#. Display notification only if preference is set and window is not currently active
+#: data/ui/window.ui:340 src/controller.vala:709
+msgid "Hamachi Lost Connection"
+msgstr "Megszakadt a kapcsolat a Hamachival"
+
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: data/ui/window.ui:386
+msgid "You Are Connected!"
+msgstr "Csatlakozva!"
+
+#: data/ui/window.ui:387
+msgid "Use the + button to add a network"
+msgstr "Használja a + gombot hálózat hozzáadásához"
+
+#: data/ui/window.ui:408
+msgid "No Results Found"
+msgstr "Nincs találat"
+
+#: data/ui/window.ui:409
+msgid "Try a different search"
+msgstr "Próbáljon meg más keresést"
+
+#: data/ui/window.ui:426
+msgid "Please download Hamachi and follow the installation instructions"
+msgstr "Kérjük, töltse le a Hamachit, és kövesse a telepítési utasításokat"
+
+#: data/ui/window.ui:432
+msgid "_Download"
+msgstr "_Letöltés"
+
+#: data/ui/window.ui:451
+msgid "Hamachi Is Not Configured"
+msgstr "A Hamachi nincs konfigurálva"
+
+#: data/ui/window.ui:452
+msgid "You need to configure Hamachi before you can connect"
+msgstr "A csatlakozás előtt konfigurálnia kell a Hamachit"
+
+#: data/ui/window.ui:458
+msgid "C_onfigure"
+msgstr "_Konfigurálás"
+
+#: data/ui/window.ui:507 src/indicator.vala:123
+msgid "_Information"
+msgstr "_Információ"
+
+#: data/ui/window.ui:514
+msgid "Sort by _Name"
+msgstr "Rendezés _név szerint"
+
+#: data/ui/window.ui:520
+msgid "Sort by _Status"
+msgstr "Rendezés _állapot szerint"
+
+#: data/ui/window.ui:528
+msgid "Show _Offline Members"
+msgstr "Offline tagok megjelenítése"
+
+#: data/ui/window.ui:535
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: data/ui/window.ui:539
+msgid "_Keyboard Shortcuts"
+msgstr "B_illentyűparancsok"
+
+#: data/ui/window.ui:543
+msgid "_Help"
+msgstr "_Súgó"
+
+#: data/ui/window.ui:547
+msgid "_About Haguichi"
+msgstr "_A Haguichi névjegye"
+
+#: data/ui/window.ui:553 src/indicator.vala:131
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: src/bubble.vala:44
+msgid "Reconnect"
+msgstr "Újracsatlakozás"
+
+#: src/controller.vala:283
+msgid "No internet connection"
+msgstr "Nincs internetkapcsolat"
+
+#: src/controller.vala:288 src/controller.vala:321
+msgid "Logging in"
+msgstr "Bejelentkezés"
+
+#: src/controller.vala:348
+msgid "Error connecting"
+msgstr "Csatlakozási hiba"
+
+#: src/controller.vala:378
+msgid "Hamachi login failed"
+msgstr "Hamachi bejelentkezés sikertelen"
+
+#: src/controller.vala:459
+msgid "Updating"
+msgstr "Frissítés folyamatban"
+
+#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
+msgid "Connected"
+msgstr "Csatlakozva"
+
+#: src/controller.vala:728
+msgid "Member Joined"
+msgstr "Új tag csatlakozott"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet".
+#: src/controller.vala:730
+msgid "{0} joined the network {1}"
+msgstr "{0} csatlakozott a(z) {1} hálózathoz"
+
+#. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
+#: src/controller.vala:732
+msgid "{0} joined the network {1} and {2} other network"
+msgid_plural "{0} joined the network {1} and {2} other networks"
+msgstr[0] "{0} csatlakozott a(z) {1} hálózathoz és még {2} másik hálózathoz"
+msgstr[1] "{0} csatlakozott a(z) {1} hálózathoz és még {2} másik hálózathoz"
+
+#: src/controller.vala:758
+msgid "Member Left"
+msgstr "Tag kilépett"
+
+#. Notification bubble. For example: "T-800 left the network Skynet".
+#: src/controller.vala:760
+msgid "{0} left the network {1}"
+msgstr "{0} kilépett a(z) {1} hálózatból"
+
+#. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
+#: src/controller.vala:762
+msgid "{0} left the network {1} and {2} other network"
+msgid_plural "{0} left the network {1} and {2} other networks"
+msgstr[0] "{0} kilépett a(z) {1} hálózatból és még {2} másik hálózatból"
+msgstr[1] "{0} kilépett a(z) {1} hálózatból és még {2} másik hálózatból"
+
+#: src/controller.vala:784
+msgid "Member Online"
+msgstr "Tag online"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet".
+#: src/controller.vala:786
+msgid "{0} came online in the network {1}"
+msgstr "{0} online lett a(z) {1} hálózatban"
+
+#. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
+#: src/controller.vala:788
+msgid "{0} came online in the network {1} and {2} other network"
+msgid_plural "{0} came online in the network {1} and {2} other networks"
+msgstr[0] "{0} online lett a(z) {1} hálózatban és még {2} másik hálózatban"
+msgstr[1] "{0} online lett a(z) {1} hálózatban és még {2} másik hálózatban"
+
+#: src/controller.vala:810
+msgid "Member Offline"
+msgstr "Tag offline"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet".
+#: src/controller.vala:812
+msgid "{0} went offline in the network {1}"
+msgstr "{0} offline lett a(z) {1} hálózatban"
+
+#. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
+#: src/controller.vala:814
+msgid "{0} went offline in the network {1} and {2} other network"
+msgid_plural "{0} went offline in the network {1} and {2} other networks"
+msgstr[0] "{0} offline lett a(z) {1} hálózatban és még {2} másik hálózatban"
+msgstr[1] "{0} offline lett a(z) {1} hálózatban és még {2} másik hálózatban"
+
+#: src/dialogs/add-edit-command.vala:81
+msgid "Edit Command"
+msgstr "Parancs szerkesztése"
+
+#: src/dialogs/add-edit-command.vala:81
+msgid "Add Command"
+msgstr "Parancs hozzáadása"
+
+#: src/dialogs/attach.vala:67
+msgid "Attach request sent"
+msgstr "Csatolási kérelem elküldve"
+
+#: src/dialogs/attach.vala:76
+msgid "Account not found"
+msgstr "Fiók nem található"
+
+#: src/dialogs/join-create-network.vala:37
+msgid "Join Network"
+msgstr "Csatlakozás a hálózathoz"
+
+#: src/dialogs/join-create-network.vala:37
+msgid "Create Network"
+msgstr "Hálózat létrehozása"
+
+#: src/dialogs/join-create-network.vala:43
+msgid "_Join"
+msgstr "_Csatlakozás"
+
+#: src/dialogs/join-create-network.vala:43
+msgid "C_reate"
+msgstr "_Létrehozás"
+
+#: src/dialogs/join-create-network.vala:81
+msgid "Join request sent"
+msgstr "Csatlakozási kérelem elküldve"
+
+#: src/dialogs/join-create-network.vala:106
+msgid "Network not found"
+msgstr "A hálózat nem található"
+
+#: src/dialogs/join-create-network.vala:110
+msgid "Invalid password"
+msgstr "Érvénytelen jelszó"
+
+#: src/dialogs/join-create-network.vala:112
+msgid "Network is full"
+msgstr "A hálózat megtelt"
+
+#: src/dialogs/join-create-network.vala:114
+msgid "Network is locked"
+msgstr "A hálózat zárolva van"
+
+#: src/dialogs/join-create-network.vala:117
+msgid "Network already joined"
+msgstr "Már csatlakozott ehhez a hálózathoz"
+
+#: src/dialogs/join-create-network.vala:179
+msgid "Network ID is already taken"
+msgstr "A hálózat azonosítója már foglalt"
+
+#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: src/hamachi.vala:578 src/window.vala:438
+msgid "Anonymous"
+msgstr "Névtelen"
+
+#: src/hamachi.vala:699 src/hamachi.vala:702
+msgid "Password changed"
+msgstr "Jelszó megváltoztatva"
+
+#: src/hamachi.vala:727
+msgid "Saving backup…"
+msgstr "Biztonsági mentés mentése…"
+
+#: src/hamachi.vala:744
+msgid "Backup saved"
+msgstr "Biztonsági mentés elmentve"
+
+#: src/hamachi.vala:744
+msgid "Failed to save backup"
+msgstr "Nem sikerült elmenteni a biztonsági mentést"
+
+#: src/hamachi.vala:762
+msgid "Restoring backup…"
+msgstr "Biztonsági mentés visszaállítása…"
+
+#: src/hamachi.vala:803
+msgid "Backup restored"
+msgstr "Biztonsági mentés visszaállítva"
+
+#: src/hamachi.vala:803
+msgid "Failed to restore backup"
+msgstr "Nem sikerült visszaállítani a biztonsági mentést"
+
+#: src/hamachi.vala:810
+msgid "Archive does not contain expected files"
+msgstr "Az archívum nem tartalmazza a szükséges fájlokat"
+
+#: src/indicator.vala:84 src/window.vala:515
+msgid "Connecting"
+msgstr "Csatlakozás"
+
+#: src/indicator.vala:84 src/window.vala:519
+msgid "Disconnected"
+msgstr "Kapcsolat bontva"
+
+#: src/indicator.vala:92
+msgid "_Show Haguichi"
+msgstr "_Haguichi megjelenítése"
+
+#: src/indicator.vala:103
+msgid "_Disconnect"
+msgstr "_Kapcsolat bontása"
+
+#: src/indicator.vala:103
+msgid "C_onnect"
+msgstr "K_apcsolódás"
+
+#: src/member.vala:231
+msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
+msgstr ""
+"Biztosan el szeretné távolítani a következő tagot a(z) „{1}” hálózatból: "
+"„{0}”?"
+
+#: src/member.vala:232
+msgid "If admitted, evicted members can rejoin the network at any later time."
+msgstr ""
+"Ha visszaveszik őket, az eltávolított tagok később újra csatlakozhatnak a "
+"hálózathoz."
+
+#: src/network.vala:148
+msgid "You"
+msgstr "Te"
+
+#: src/network.vala:344
+msgid "Are you sure you want to leave the network “{0}”?"
+msgstr "Biztosan el szeretne hagyni a(z) „{0}” hálózatot?"
+
+#: src/network.vala:345
+msgid "If admitted, you can rejoin the network at any later time."
+msgstr "Ha visszaveszik, később bármikor újra csatlakozhat a hálózathoz."
+
+#: src/network.vala:373
+msgid "Are you sure you want to delete the network “{0}”?"
+msgstr "Biztosan törölni szeretné a(z) „{0}” hálózatot?"
+
+#: src/network.vala:374
+msgid "If you delete a network, it will be permanently lost."
+msgstr "Ha törli a hálózatot, az véglegesen el fog veszni."
+
+#: src/preferences.vala:110
+msgid "Not present"
+msgstr "Nincs jelen"
+
+#: src/preferences.vala:279
+msgid "All supported archives"
+msgstr "Minden támogatott archívum"
+
+#: src/preferences.vala:299
+msgid "Save a Backup"
+msgstr "Biztonsági mentés mentése"
+
+#: src/preferences.vala:321
+msgid "Restore from Backup"
+msgstr "Visszaállítás biztonsági mentésből"
+
+#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
+msgid "_Restore"
+msgstr "_Visszaállítás"
+
+#: src/preferences.vala:362
+msgid "Never"
+msgstr "Soha"
+
+#: src/preferences.vala:381
+#, c-format
+msgid "%S second"
+msgid_plural "%S seconds"
+msgstr[0] "%S másodperc"
+msgstr[1] "%S másodperc"
+
+#: src/preferences.vala:385
+#, c-format
+msgid "%S minute"
+msgid_plural "%S minutes"
+msgstr[0] "%S perc"
+msgstr[1] "%S perc"
+
+#: src/sidebar.vala:166
+msgid "Unavailable"
+msgstr "Nem elérhető"
+
+#: src/sidebar.vala:184
+msgid "pending"
+msgstr "Folyamatban"
+
+#: src/sidebar.vala:185
+msgid "Not attached"
+msgstr "Nem csatolt"
+
+#: src/sidebar.vala:201
+msgid "{0} online, {1} total"
+msgstr "{0} online, {1} összesen"
+
+#: src/status.vala:35
+msgid "Offline"
+msgstr "Offline"
+
+#: src/status.vala:39
+msgid "Online"
+msgstr "Online"
+
+#: src/status.vala:41 src/status.vala:75 src/status.vala:85
+msgid "Relayed"
+msgstr "Továbbított"
+
+#: src/status.vala:48
+msgid "Unreachable"
+msgstr "Elérhetetlen"
+
+#: src/status.vala:52
+msgid "Awaiting approval"
+msgstr "Jóváhagyásra vár"
+
+#: src/status.vala:56
+msgid "Unknown error"
+msgstr "Ismeretlen hiba"
+
+#: src/status.vala:60
+msgid "Protocol mismatch"
+msgstr "Protokoll-eltérés"
+
+#: src/status.vala:62
+msgid "Conflicting address"
+msgstr "Ütköző cím"
+
+#: src/status.vala:73
+msgid "Direct"
+msgstr "Közvetlen"
+
+#: src/widgets/commands-editor.vala:59
+msgid "Restore default commands?"
+msgstr "Visszaállítja az alapértelmezett parancsokat?"
+
+#: src/widgets/commands-editor.vala:60
+msgid "All customizations will be lost."
+msgstr "Minden testreszabás el fog veszni."
+
+#: src/window.vala:178
+msgid "Configuring"
+msgstr "Konfigurálás folyamatban"
+
+#. Translator credits. Put one translator per line, in the form of "NAME URL".
+#: src/window.vala:341
+msgid "translator-credits"
+msgstr ""
+"fordítók\n"
+"therealmate https://github.com/therealmate"
+
+#: src/window.vala:415
+msgid "Copied to clipboard"
+msgstr "Másolva a vágólapra"
+
+#: src/window.vala:450
+msgid "Reconnecting in {0} second"
+msgid_plural "Reconnecting in {0} seconds"
+msgstr[0] "Újrakapcsolódás {0} másodperc múlva"
+msgstr[1] "Újrakapcsolódás {0} másodperc múlva"
+
+#: src/window.vala:481
+msgid "Hamachi Is Not Installed"
+msgstr "A Hamachi nincs telepítve"
+
+#: src/window.vala:483
+#, c-format
+msgid "Hamachi Version %s Is Obsolete"
+msgstr "A Hamachi %s verziója elavult"
+
+#: src/window.vala:582
+msgid ""
+"Haguichi will continue to run when its window is closed so that it can "
+"monitor the connection and send notifications."
+msgstr ""
+"A Haguichi az ablak bezárása után is futni fog, hogy figyelhesse a "
+"kapcsolatot és értesítéseket küldhessen."
