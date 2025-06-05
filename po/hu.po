@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-03-16 00:11+0100\n"
-"PO-Revision-Date: 2025-06-04 13:14+0000\n"
+"PO-Revision-Date: 2025-06-05 15:01+0000\n"
 "Last-Translator: therealmate <hellogaming91@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/hu/>\n"
@@ -473,7 +473,7 @@ msgstr "Állapot"
 
 #: data/ui/sidebar.ui:85
 msgid "Leave Network"
-msgstr "Kilépés a hálózatból"
+msgstr "Hálózat elhagyása"
 
 #: data/ui/sidebar.ui:96
 msgid "Delete Network"
@@ -655,7 +655,7 @@ msgstr "_Beállítások"
 
 #: data/ui/window.ui:539
 msgid "_Keyboard Shortcuts"
-msgstr "_Billentyűparancsok"
+msgstr "Bi_llentyűparancsok"
 
 #: data/ui/window.ui:543
 msgid "_Help"
@@ -957,7 +957,7 @@ msgstr "Nem elérhető"
 
 #: src/sidebar.vala:184
 msgid "pending"
-msgstr "folyamatban"
+msgstr "függőben"
 
 #: src/sidebar.vala:185
 msgid "Not attached"
