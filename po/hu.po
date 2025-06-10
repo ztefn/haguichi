@@ -200,7 +200,7 @@ msgstr "IPv_6 cím másolása"
 
 #: data/ui/menus/member-menu.ui:32
 msgid "_Copy Client ID"
-msgstr "Kliens azonosító _másolása"
+msgstr "_Kliens azonosító másolása"
 
 #. This action removes the selected member from the network.
 #: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:234
@@ -239,15 +239,15 @@ msgstr "_Törlés"
 
 #: data/ui/menus/network-menu.ui:36
 msgid "Change _Access…"
-msgstr "Hozzáférés _módosítása…"
+msgstr "_Hozzáférés módosítása…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
-msgstr "Jelszó _módosítása…"
+msgstr "_Jelszó módosítása…"
 
 #: data/ui/menus/network-menu.ui:48
 msgid "_Copy Network ID"
-msgstr "_Hálózati azonosító másolása"
+msgstr "Hálózati _azonosító másolása"
 
 #: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
 msgid "General"
@@ -295,11 +295,11 @@ msgstr "_Hálózatlista frissítési gyakorisága"
 
 #: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
-msgstr "_Automatikus csatlakozás indításkor"
+msgstr "Automatikus _csatlakozás indításkor"
 
 #: data/ui/preferences.ui:84
 msgid "_Reconnect automatically when the connection is lost"
-msgstr "_Automatikus újracsatlakozás kapcsolat megszakadásakor"
+msgstr "Automatikus új_racsatlakozás kapcsolat megszakadásakor"
 
 #: data/ui/preferences.ui:90
 msgid "_Disconnect on quit"
@@ -396,7 +396,7 @@ msgstr "Beállítások"
 
 #: data/ui/shortcuts.ui:50
 msgid "Keyboard shortcuts"
-msgstr "Billentyűparancsok"
+msgstr "Gyorsbillentyűk"
 
 #: data/ui/shortcuts.ui:56
 msgid "Quit"
@@ -643,7 +643,7 @@ msgstr "Rendezés _név szerint"
 
 #: data/ui/window.ui:520
 msgid "Sort by _Status"
-msgstr "Rendezés _állapot szerint"
+msgstr "Rendezés álla_pot szerint"
 
 #: data/ui/window.ui:528
 msgid "Show _Offline Members"
@@ -655,7 +655,7 @@ msgstr "_Beállítások"
 
 #: data/ui/window.ui:539
 msgid "_Keyboard Shortcuts"
-msgstr "Bi_llentyűparancsok"
+msgstr "_Gyorsbillentyűk"
 
 #: data/ui/window.ui:543
 msgid "_Help"
@@ -663,7 +663,7 @@ msgstr "_Súgó"
 
 #: data/ui/window.ui:547
 msgid "_About Haguichi"
-msgstr "_A Haguichi névjegye"
+msgstr "A _Haguichi névjegye"
 
 #: data/ui/window.ui:553 src/indicator.vala:131
 msgid "_Quit"
