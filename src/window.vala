@@ -289,8 +289,13 @@ namespace Haguichi {
         }
 
         private void shortcuts_action () {
-            var builder = new Gtk.Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts.ui");
+#if ADW_1_8
+            var builder = new Gtk.Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts-dialog.ui");
+            var shortcuts = (Adw.ShortcutsDialog) builder.get_object ("shortcuts");
+#else
+            var builder = new Gtk.Builder.from_resource ("/com/github/ztefn/haguichi/ui/shortcuts-window.ui");
             var shortcuts = (Gtk.ShortcutsWindow) builder.get_object ("shortcuts");
+#endif
 #if FOR_ELEMENTARY
             // Find the search button so that we can fix its appearance
             var toggle_button = (Gtk.Widget) shortcuts

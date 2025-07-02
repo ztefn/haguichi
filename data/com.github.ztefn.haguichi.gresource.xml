@@ -17,7 +17,8 @@
     <file preprocess="xml-stripblanks">ui/menus/network-menu.ui</file>
     <file preprocess="xml-stripblanks">ui/network-list.ui</file>
     <file preprocess="xml-stripblanks">ui/preferences.ui</file>
-    <file preprocess="xml-stripblanks">ui/shortcuts.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts-dialog.ui</file>
+    <file preprocess="xml-stripblanks">ui/shortcuts-window.ui</file>
     <file preprocess="xml-stripblanks">ui/sidebar.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/command-entry-row.ui</file>
     <file preprocess="xml-stripblanks">ui/widgets/command-variable-button.ui</file>

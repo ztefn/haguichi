@@ -51,7 +51,7 @@ deps = [
 
 adw_version = dependency('libadwaita-1').version()
 
-foreach minor_version : ['6', '7']
+foreach minor_version : ['6', '7', '8']
   if adw_version.version_compare('>= 1.' + minor_version)
     add_project_arguments(
       ['-D', 'ADW_1_' + minor_version],

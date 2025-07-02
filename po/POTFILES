@@ -10,7 +10,8 @@ data/ui/menus/network-list-menu.ui
 data/ui/menus/network-menu.ui
 data/ui/network-list.ui
 data/ui/preferences.ui
-data/ui/shortcuts.ui
+data/ui/shortcuts-dialog.ui
+data/ui/shortcuts-window.ui
 data/ui/sidebar.ui
 data/ui/widgets/command-entry-row.ui
 data/ui/widgets/command-variable-button.ui
