@@ -22,26 +22,6 @@
             <property name="title" translatable="yes">Open menu</property>
           </object>
         </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwShortcutsSection">
-        <child>
-          <object class="AdwShortcutsItem">
-            <property name="accelerator">&lt;Primary&gt;O</property>
-            <property name="title" translatable="yes">Connect</property>
-          </object>
-        </child>
-        <child>
-          <object class="AdwShortcutsItem">
-            <property name="accelerator">&lt;Primary&gt;D</property>
-            <property name="title" translatable="yes">Disconnect</property>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwShortcutsSection">
         <child>
           <object class="AdwShortcutsItem">
             <property name="accelerator">&lt;Primary&gt;comma</property>
@@ -64,6 +44,23 @@
     </child>
     <child>
       <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Connection</property>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="accelerator">&lt;Primary&gt;O</property>
+            <property name="title" translatable="yes">Connect</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwShortcutsItem">
+            <property name="accelerator">&lt;Primary&gt;D</property>
+            <property name="title" translatable="yes">Disconnect</property>
+          </object>
+        </child>
+      </object>
+    </child>
+    <child>
+      <object class="AdwShortcutsSection">
         <property name="title" translatable="yes">Network List</property>
         <child>
           <object class="AdwShortcutsItem">
@@ -77,10 +74,6 @@
             <property name="title" translatable="yes">Create a network</property>
           </object>
         </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwShortcutsSection">
         <child>
           <object class="AdwShortcutsItem">
             <property name="accelerator">&lt;Primary&gt;R F5</property>
@@ -93,10 +86,6 @@
             <property name="title" translatable="yes">Search</property>
           </object>
         </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwShortcutsSection">
         <child>
           <object class="AdwShortcutsItem">
             <property name="accelerator">&lt;Primary&gt;M</property>
@@ -119,6 +108,7 @@
     </child>
     <child>
       <object class="AdwShortcutsSection">
+        <property name="title" translatable="yes">Commands</property>
         <child>
           <object class="AdwShortcutsItem">
             <property name="accelerator">&lt;Primary&gt;1...9</property>
