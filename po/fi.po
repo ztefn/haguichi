@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 00:11+0100\n"
+"POT-Creation-Date: 2025-07-05 17:34+0200\n"
 "PO-Revision-Date: 2024-10-08 17:37+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "X-Generator: Launchpad (build 6341c735b243a0768c3cb66edf85737937cab327)\n"
 
 #. Name used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:5
+#: data/com.github.ztefn.haguichi.desktop.in.in:4
 msgid "Haguichi"
 msgstr "Haguichi"
 
 #. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
-#: data/com.github.ztefn.haguichi.desktop.in.in:7
+#: data/com.github.ztefn.haguichi.desktop.in.in:6
 msgid "Hamachi Network Manager"
 msgstr "Hamachi-verkkohallinta"
 
 #. Description used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
 msgstr "Hallitse Hamachi-verkkojasi"
 
 #. Keywords used for search in application launchers and software centers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:15
+#: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
 
@@ -99,83 +99,83 @@ msgstr ""
 msgid "Join or create networks"
 msgstr "Liity verkkoon tai luo omia verkkoja"
 
-#: data/ui/dialogs/add-edit-command.ui:29
+#: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
 msgstr ""
 
-#: data/ui/dialogs/add-edit-command.ui:36
+#: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
 msgstr "IPv4-komento"
 
-#: data/ui/dialogs/add-edit-command.ui:43
+#: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
 msgstr "IPv6-komento"
 
-#: data/ui/dialogs/add-edit-command.ui:50
+#: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
 msgstr "Prioriteetti"
 
-#: data/ui/dialogs/add-edit-command.ui:57
+#: data/ui/dialogs/add-edit-command.ui:58
 msgid "_Save"
 msgstr "_Tallenna"
 
-#: data/ui/dialogs/attach.ui:5
+#: data/ui/dialogs/attach.ui:6
 msgid "Attach to Account"
 msgstr "Liitä tiliin"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
+#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "Tili"
 
-#: data/ui/dialogs/attach.ui:37
+#: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
 msgstr ""
 
-#: data/ui/dialogs/attach.ui:60
+#: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
 msgstr "_Liitä"
 
-#: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
+#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:133
 msgid "Change Access"
 msgstr ""
 
-#: data/ui/dialogs/change-access.ui:30
+#: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
 msgstr "Lukittu"
 
-#: data/ui/dialogs/change-access.ui:31
+#: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
 msgstr "Älä hyväksy uusia verkkojäseniä"
 
-#: data/ui/dialogs/change-access.ui:37
+#: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
 msgstr "Hyväksyntä"
 
-#: data/ui/dialogs/change-access.ui:41
+#: data/ui/dialogs/change-access.ui:42
 msgid "Automatically"
 msgstr "Automaattisesti"
 
-#: data/ui/dialogs/change-access.ui:42
+#: data/ui/dialogs/change-access.ui:43
 msgid "Manually"
 msgstr "Manuaalisesti"
 
-#: data/ui/dialogs/change-access.ui:52 data/ui/dialogs/change-password.ui:38
+#: data/ui/dialogs/change-access.ui:53 data/ui/dialogs/change-password.ui:39
 msgid "C_hange"
 msgstr ""
 
-#: data/ui/dialogs/change-password.ui:5 data/ui/sidebar.ui:117
+#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:117
 msgid "Change Password"
 msgstr "Vaihda salasana"
 
-#: data/ui/dialogs/change-password.ui:30
+#: data/ui/dialogs/change-password.ui:31
 msgid "New Password"
 msgstr "Uusi salasana"
 
-#: data/ui/dialogs/join-create-network.ui:29 data/ui/sidebar.ui:108
+#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:108
 msgid "Network ID"
 msgstr "Verkon tunniste"
 
-#: data/ui/dialogs/join-create-network.ui:36
+#: data/ui/dialogs/join-create-network.ui:37
 msgid "Password"
 msgstr "Salasana"
 
@@ -246,7 +246,8 @@ msgstr "Vaihda _salasana…"
 msgid "_Copy Network ID"
 msgstr "_Kopioi verkon tunniste"
 
-#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts-dialog.ui:6
+#: data/ui/shortcuts-window.ui:10
 msgid "General"
 msgstr "Yleiset"
 
@@ -302,7 +303,8 @@ msgstr "Y_hdistä automaattisesti uudelleen kun yhteys on katkennut"
 msgid "_Disconnect on quit"
 msgstr "_Katkaise yhteys lopettaessa"
 
-#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
+#: data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Komennot"
 
@@ -367,71 +369,80 @@ msgstr "_Tallenna varmuuskopio…"
 msgid "_Restore from Backup…"
 msgstr "_Palauta varmuuskopiosta…"
 
-#: data/ui/shortcuts.ui:14
+#: data/ui/shortcuts-dialog.ui:10 data/ui/shortcuts-window.ui:14
 msgid "Show help"
 msgstr "Näytä ohje"
 
-#: data/ui/shortcuts.ui:20
+#: data/ui/shortcuts-dialog.ui:16 data/ui/shortcuts-window.ui:20
 msgid "Show client information"
 msgstr ""
 
-#: data/ui/shortcuts.ui:26
+#: data/ui/shortcuts-dialog.ui:22 data/ui/shortcuts-window.ui:26
 msgid "Open menu"
 msgstr "Avaa valikko"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
-msgid "Connect"
-msgstr "Yhdistä"
-
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
-msgid "Disconnect"
-msgstr "Katkaise yhteys"
-
-#: data/ui/shortcuts.ui:44
+#: data/ui/shortcuts-dialog.ui:28 data/ui/shortcuts-window.ui:44
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: data/ui/shortcuts.ui:50
+#: data/ui/shortcuts-dialog.ui:34 data/ui/shortcuts-window.ui:50
 msgid "Keyboard shortcuts"
 msgstr "Pikanäppäimet"
 
-#: data/ui/shortcuts.ui:56
+#: data/ui/shortcuts-dialog.ui:40 data/ui/shortcuts-window.ui:56
 msgid "Quit"
 msgstr "Lopeta"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "Yhteys"
+
+#: data/ui/shortcuts-dialog.ui:51 data/ui/shortcuts-window.ui:32
+#: data/ui/window.ui:212
+msgid "Connect"
+msgstr "Yhdistä"
+
+#: data/ui/shortcuts-dialog.ui:57 data/ui/shortcuts-window.ui:38
+#: data/ui/window.ui:226
+msgid "Disconnect"
+msgstr "Katkaise yhteys"
+
+#: data/ui/shortcuts-dialog.ui:64 data/ui/shortcuts-window.ui:63
+#: data/ui/window.ui:487
 msgid "Network List"
 msgstr "Verkkoluettelo"
 
-#: data/ui/shortcuts.ui:67
+#: data/ui/shortcuts-dialog.ui:68 data/ui/shortcuts-window.ui:67
 msgid "Join a network"
 msgstr "Liity verkkoon"
 
-#: data/ui/shortcuts.ui:73
+#: data/ui/shortcuts-dialog.ui:74 data/ui/shortcuts-window.ui:73
 msgid "Create a network"
 msgstr "Luo verkko"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
+#: data/ui/shortcuts-dialog.ui:80 data/ui/shortcuts-window.ui:79
+#: data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "Päivitä"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
+#: data/ui/shortcuts-dialog.ui:86 data/ui/shortcuts-window.ui:85
+#: data/ui/window.ui:237
 msgid "Search"
 msgstr "Etsi"
 
-#: data/ui/shortcuts.ui:91
+#: data/ui/shortcuts-dialog.ui:92 data/ui/shortcuts-window.ui:91
 msgid "Show/hide offline members"
 msgstr ""
 
-#: data/ui/shortcuts.ui:97
+#: data/ui/shortcuts-dialog.ui:98 data/ui/shortcuts-window.ui:97
 msgid "Expand all networks"
 msgstr "Laajenna kaikki verkot"
 
-#: data/ui/shortcuts.ui:103
+#: data/ui/shortcuts-dialog.ui:104 data/ui/shortcuts-window.ui:103
 msgid "Collapse all networks"
 msgstr "Supista kaikki verkot"
 
-#: data/ui/shortcuts.ui:109
+#: data/ui/shortcuts-dialog.ui:115 data/ui/shortcuts-window.ui:109
 msgid "Execute command"
 msgstr "Suorita komento"
 
@@ -491,10 +502,6 @@ msgstr "Kapasiteetti"
 #: data/ui/sidebar.ui:220
 msgid "Tunnel"
 msgstr "Tunneli"
-
-#: data/ui/sidebar.ui:225
-msgid "Connection"
-msgstr "Yhteys"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
@@ -569,7 +576,7 @@ msgstr "_Poista"
 msgid "Copy"
 msgstr "Kopioi"
 
-#: data/ui/window.ui:195 src/window.vala:513
+#: data/ui/window.ui:195 src/window.vala:516
 msgid "Initializing"
 msgstr "Alustetaan"
 
@@ -585,12 +592,11 @@ msgstr "Etsi verkkoja ja jäseniä"
 msgid "Add Network"
 msgstr "Lisää verkko"
 
-#. Display notification only if preference is set and window is not currently active
-#: data/ui/window.ui:340 src/controller.vala:709
+#: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi-yhteys katkennut"
 
-#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:25
 msgid "_Cancel"
 msgstr "_Peru"
 
@@ -690,131 +696,131 @@ msgstr "Hamachi-kirjautuminen epäonnistui"
 msgid "Updating"
 msgstr "Päivitetään"
 
-#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
+#: src/controller.vala:622 src/indicator.vala:84 src/window.vala:520
 msgid "Connected"
 msgstr "Yhdistetty"
 
-#: src/controller.vala:728
+#: src/controller.vala:730
 msgid "Member Joined"
 msgstr "Jäsen liittyi"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:730
+#: src/controller.vala:732
 msgid "{0} joined the network {1}"
 msgstr "{0} liittyi verkkoon {1}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:732
+#: src/controller.vala:734
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/controller.vala:758
+#: src/controller.vala:760
 msgid "Member Left"
 msgstr "Jäsen poistui"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:760
+#: src/controller.vala:762
 msgid "{0} left the network {1}"
 msgstr "{0} poistui verkosta {1}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:762
+#: src/controller.vala:764
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/controller.vala:784
+#: src/controller.vala:786
 msgid "Member Online"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:786
+#: src/controller.vala:788
 msgid "{0} came online in the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:788
+#: src/controller.vala:790
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/controller.vala:810
+#: src/controller.vala:812
 msgid "Member Offline"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:812
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1}"
 msgstr ""
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:814
+#: src/controller.vala:816
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Edit Command"
 msgstr "Muokkaa komentoa"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Add Command"
 msgstr "Lisää komento"
 
-#: src/dialogs/attach.vala:67
+#: src/dialogs/attach.vala:55
 msgid "Attach request sent"
 msgstr "Liitospyyntö lähetetty"
 
-#: src/dialogs/attach.vala:76
+#: src/dialogs/attach.vala:64
 msgid "Account not found"
 msgstr "Tiliä ei löytynyt"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Join Network"
 msgstr "Liity verkkoon"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Create Network"
 msgstr "Luo verkko"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "_Join"
 msgstr "Liit_y"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "C_reate"
 msgstr "_Luo"
 
-#: src/dialogs/join-create-network.vala:81
+#: src/dialogs/join-create-network.vala:73
 msgid "Join request sent"
 msgstr "Liittymispyyntö lähetetty"
 
-#: src/dialogs/join-create-network.vala:106
+#: src/dialogs/join-create-network.vala:98
 msgid "Network not found"
 msgstr "Verkkoa ei löytynyt"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:102
 msgid "Invalid password"
 msgstr "Virheellinen salasana"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:104
 msgid "Network is full"
 msgstr "Verkko on täynnä"
 
-#: src/dialogs/join-create-network.vala:114
+#: src/dialogs/join-create-network.vala:106
 msgid "Network is locked"
 msgstr "Verkko on lukittu"
 
-#: src/dialogs/join-create-network.vala:117
+#: src/dialogs/join-create-network.vala:109
 msgid "Network already joined"
 msgstr "Liitytty jo verkkoon"
 
-#: src/dialogs/join-create-network.vala:179
+#: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
 msgstr "Verkon tunniste on jo käytössä"
 
@@ -822,7 +828,7 @@ msgstr "Verkon tunniste on jo käytössä"
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: src/hamachi.vala:578 src/window.vala:438
+#: src/hamachi.vala:578 src/window.vala:441
 msgid "Anonymous"
 msgstr "Anonyymi"
 
@@ -830,39 +836,39 @@ msgstr "Anonyymi"
 msgid "Password changed"
 msgstr "Salasana vaihdettu"
 
-#: src/hamachi.vala:727
+#: src/hamachi.vala:723
 msgid "Saving backup…"
 msgstr "Tallennetaan varmuuskopio…"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Backup saved"
 msgstr "Varmuuskopio tallennettu"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Failed to save backup"
 msgstr "Varmuuskopion tallentaminen epäonnistui"
 
-#: src/hamachi.vala:762
+#: src/hamachi.vala:754
 msgid "Restoring backup…"
 msgstr "Palautetaan varmuuskopiosta…"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Backup restored"
 msgstr "Varmuuskopio palautettu"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Failed to restore backup"
 msgstr "Varmuuskopion palauttaminen epäonnistui"
 
-#: src/hamachi.vala:810
+#: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
 msgstr "Arkisto ei sisällä odotettuja tiedostoja"
 
-#: src/indicator.vala:84 src/window.vala:515
+#: src/indicator.vala:84 src/window.vala:518
 msgid "Connecting"
 msgstr "Yhdistetään"
 
-#: src/indicator.vala:84 src/window.vala:519
+#: src/indicator.vala:84 src/window.vala:522
 msgid "Disconnected"
 msgstr "Yhteys katkaistu"
 
@@ -906,38 +912,38 @@ msgstr "Haluatko varmasti poistaa verkon “{0}”?"
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Jos poistat verkon, se katoaa pysyvästi."
 
-#: src/preferences.vala:110
+#: src/preferences.vala:107
 msgid "Not present"
 msgstr "Ei läsnä"
 
-#: src/preferences.vala:279
+#: src/preferences.vala:276
 msgid "All supported archives"
 msgstr "Kaikki tuetut arkistot"
 
-#: src/preferences.vala:299
+#: src/preferences.vala:296
 msgid "Save a Backup"
 msgstr "Tallenna varmuuskopio"
 
-#: src/preferences.vala:321
+#: src/preferences.vala:318
 msgid "Restore from Backup"
 msgstr "Palauta varmuuskopiosta"
 
-#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
+#: src/preferences.vala:319 src/widgets/commands-editor.vala:57
 msgid "_Restore"
 msgstr "_Palauta"
 
-#: src/preferences.vala:362
+#: src/preferences.vala:363
 msgid "Never"
 msgstr "Ei koskaan"
 
-#: src/preferences.vala:381
+#: src/preferences.vala:386
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
 msgstr[0] "%S sekunti"
 msgstr[1] "%S sekuntia"
 
-#: src/preferences.vala:385
+#: src/preferences.vala:390
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
@@ -996,43 +1002,43 @@ msgstr ""
 msgid "Direct"
 msgstr "Suora"
 
-#: src/widgets/commands-editor.vala:59
+#: src/widgets/commands-editor.vala:55
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:60
+#: src/widgets/commands-editor.vala:56
 msgid "All customizations will be lost."
 msgstr ""
 
-#: src/window.vala:178
+#: src/window.vala:173
 msgid "Configuring"
 msgstr "Määritetään asetuksia"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:341
+#: src/window.vala:337
 msgid "translator-credits"
 msgstr "Jiri Grönroos https://launchpad.net/~jiri-gronroos"
 
-#: src/window.vala:415
+#: src/window.vala:418
 msgid "Copied to clipboard"
 msgstr "Kopioitu leikepöydälle"
 
-#: src/window.vala:450
+#: src/window.vala:453
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Yhdistetään uudelleen {0} sekunnin kuluttua"
 msgstr[1] "Yhdistetään uudelleen {0} sekunnin kuluttua"
 
-#: src/window.vala:481
+#: src/window.vala:484
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi ei ole asennettu"
 
-#: src/window.vala:483
+#: src/window.vala:486
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi-versio %s on vanhentunut"
 
-#: src/window.vala:582
+#: src/window.vala:585
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 00:11+0100\n"
+"POT-Creation-Date: 2025-07-05 17:34+0200\n"
 "PO-Revision-Date: 2024-06-15 18:01+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -21,23 +21,23 @@ msgstr ""
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:5
+#: data/com.github.ztefn.haguichi.desktop.in.in:4
 msgid "Haguichi"
 msgstr "Haguichi"
 
 #. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
-#: data/com.github.ztefn.haguichi.desktop.in.in:7
+#: data/com.github.ztefn.haguichi.desktop.in.in:6
 msgid "Hamachi Network Manager"
 msgstr "Hamachi менеджер мереж"
 
 #. Description used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
 msgstr "Керування мережами Hamachi"
 
 #. Keywords used for search in application launchers and software centers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:15
+#: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 
@@ -103,83 +103,83 @@ msgstr "Пошук у списку мереж"
 msgid "Join or create networks"
 msgstr "Приєднатися або створити мережу"
 
-#: data/ui/dialogs/add-edit-command.ui:29
+#: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
 msgstr "Мітка"
 
-#: data/ui/dialogs/add-edit-command.ui:36
+#: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
 msgstr "IPv4 команда"
 
-#: data/ui/dialogs/add-edit-command.ui:43
+#: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
 msgstr "IPv6 команда"
 
-#: data/ui/dialogs/add-edit-command.ui:50
+#: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
 msgstr "Пріоритет"
 
-#: data/ui/dialogs/add-edit-command.ui:57
+#: data/ui/dialogs/add-edit-command.ui:58
 msgid "_Save"
 msgstr "З_берегти"
 
-#: data/ui/dialogs/attach.ui:5
+#: data/ui/dialogs/attach.ui:6
 msgid "Attach to Account"
 msgstr "Приєднати до облікового запису"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
+#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "Обліковий запис"
 
-#: data/ui/dialogs/attach.ui:37
+#: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
 msgstr "Включно всі мережі створені цим клієнтом"
 
-#: data/ui/dialogs/attach.ui:60
+#: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
 msgstr "_Приєднати"
 
-#: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
+#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:133
 msgid "Change Access"
 msgstr "Зімнити доступ"
 
-#: data/ui/dialogs/change-access.ui:30
+#: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
 msgstr "Блоковано"
 
-#: data/ui/dialogs/change-access.ui:31
+#: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
 msgstr "Не приймати нових учасників мережі"
 
-#: data/ui/dialogs/change-access.ui:37
+#: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
 msgstr "Підтверджено"
 
-#: data/ui/dialogs/change-access.ui:41
+#: data/ui/dialogs/change-access.ui:42
 msgid "Automatically"
 msgstr "Автоматично"
 
-#: data/ui/dialogs/change-access.ui:42
+#: data/ui/dialogs/change-access.ui:43
 msgid "Manually"
 msgstr "Власноруч"
 
-#: data/ui/dialogs/change-access.ui:52 data/ui/dialogs/change-password.ui:38
+#: data/ui/dialogs/change-access.ui:53 data/ui/dialogs/change-password.ui:39
 msgid "C_hange"
 msgstr "_Змінити"
 
-#: data/ui/dialogs/change-password.ui:5 data/ui/sidebar.ui:117
+#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:117
 msgid "Change Password"
 msgstr "Змінити пароль"
 
-#: data/ui/dialogs/change-password.ui:30
+#: data/ui/dialogs/change-password.ui:31
 msgid "New Password"
 msgstr "Новий пароль"
 
-#: data/ui/dialogs/join-create-network.ui:29 data/ui/sidebar.ui:108
+#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:108
 msgid "Network ID"
 msgstr "ІД мережі"
 
-#: data/ui/dialogs/join-create-network.ui:36
+#: data/ui/dialogs/join-create-network.ui:37
 msgid "Password"
 msgstr "Пароль"
 
@@ -250,7 +250,8 @@ msgstr "Змінити _Пароль…"
 msgid "_Copy Network ID"
 msgstr "_Копіювати ІД Мережі"
 
-#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts-dialog.ui:6
+#: data/ui/shortcuts-window.ui:10
 msgid "General"
 msgstr "Загальне"
 
@@ -306,7 +307,8 @@ msgstr "П_ере-підключатись автоматично, коли з'�
 msgid "_Disconnect on quit"
 msgstr "_Відключатись при виході"
 
-#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
+#: data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Команди"
 
@@ -371,71 +373,80 @@ msgstr "_Зберегти резервну копію…"
 msgid "_Restore from Backup…"
 msgstr "_Відновити з резервної копії…"
 
-#: data/ui/shortcuts.ui:14
+#: data/ui/shortcuts-dialog.ui:10 data/ui/shortcuts-window.ui:14
 msgid "Show help"
 msgstr "Показати довідку"
 
-#: data/ui/shortcuts.ui:20
+#: data/ui/shortcuts-dialog.ui:16 data/ui/shortcuts-window.ui:20
 msgid "Show client information"
 msgstr "Показати дані клієнта"
 
-#: data/ui/shortcuts.ui:26
+#: data/ui/shortcuts-dialog.ui:22 data/ui/shortcuts-window.ui:26
 msgid "Open menu"
 msgstr "Відкрити меню"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
-msgid "Connect"
-msgstr "Підключити"
-
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
-msgid "Disconnect"
-msgstr "Відключити"
-
-#: data/ui/shortcuts.ui:44
+#: data/ui/shortcuts-dialog.ui:28 data/ui/shortcuts-window.ui:44
 msgid "Preferences"
 msgstr "Налаштування"
 
-#: data/ui/shortcuts.ui:50
+#: data/ui/shortcuts-dialog.ui:34 data/ui/shortcuts-window.ui:50
 msgid "Keyboard shortcuts"
 msgstr "Клавіатурні скорочення"
 
-#: data/ui/shortcuts.ui:56
+#: data/ui/shortcuts-dialog.ui:40 data/ui/shortcuts-window.ui:56
 msgid "Quit"
 msgstr "Вийти"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "З'єднання"
+
+#: data/ui/shortcuts-dialog.ui:51 data/ui/shortcuts-window.ui:32
+#: data/ui/window.ui:212
+msgid "Connect"
+msgstr "Підключити"
+
+#: data/ui/shortcuts-dialog.ui:57 data/ui/shortcuts-window.ui:38
+#: data/ui/window.ui:226
+msgid "Disconnect"
+msgstr "Відключити"
+
+#: data/ui/shortcuts-dialog.ui:64 data/ui/shortcuts-window.ui:63
+#: data/ui/window.ui:487
 msgid "Network List"
 msgstr "Список мереж"
 
-#: data/ui/shortcuts.ui:67
+#: data/ui/shortcuts-dialog.ui:68 data/ui/shortcuts-window.ui:67
 msgid "Join a network"
 msgstr "Приєднатись до мережі"
 
-#: data/ui/shortcuts.ui:73
+#: data/ui/shortcuts-dialog.ui:74 data/ui/shortcuts-window.ui:73
 msgid "Create a network"
 msgstr "Створити мережу"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
+#: data/ui/shortcuts-dialog.ui:80 data/ui/shortcuts-window.ui:79
+#: data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "Оновити"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
+#: data/ui/shortcuts-dialog.ui:86 data/ui/shortcuts-window.ui:85
+#: data/ui/window.ui:237
 msgid "Search"
 msgstr "Пошук"
 
-#: data/ui/shortcuts.ui:91
+#: data/ui/shortcuts-dialog.ui:92 data/ui/shortcuts-window.ui:91
 msgid "Show/hide offline members"
 msgstr "Показати/приховати неактивних користувачів"
 
-#: data/ui/shortcuts.ui:97
+#: data/ui/shortcuts-dialog.ui:98 data/ui/shortcuts-window.ui:97
 msgid "Expand all networks"
 msgstr "Розгорнути всі мережі"
 
-#: data/ui/shortcuts.ui:103
+#: data/ui/shortcuts-dialog.ui:104 data/ui/shortcuts-window.ui:103
 msgid "Collapse all networks"
 msgstr "Згорнути всі мережі"
 
-#: data/ui/shortcuts.ui:109
+#: data/ui/shortcuts-dialog.ui:115 data/ui/shortcuts-window.ui:109
 msgid "Execute command"
 msgstr "Виконати команду"
 
@@ -495,10 +506,6 @@ msgstr "Місткість"
 #: data/ui/sidebar.ui:220
 msgid "Tunnel"
 msgstr "Тунель"
-
-#: data/ui/sidebar.ui:225
-msgid "Connection"
-msgstr "З'єднання"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
@@ -573,7 +580,7 @@ msgstr "_Видалити"
 msgid "Copy"
 msgstr "Копіювати"
 
-#: data/ui/window.ui:195 src/window.vala:513
+#: data/ui/window.ui:195 src/window.vala:516
 msgid "Initializing"
 msgstr "Ініціалізація"
 
@@ -589,12 +596,11 @@ msgstr "Пошук мереж і учасників"
 msgid "Add Network"
 msgstr "Додати мережу"
 
-#. Display notification only if preference is set and window is not currently active
-#: data/ui/window.ui:340 src/controller.vala:709
+#: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi втратив підключення"
 
-#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:25
 msgid "_Cancel"
 msgstr "_Скасувати"
 
@@ -694,135 +700,135 @@ msgstr "Помилка входу Hamachi"
 msgid "Updating"
 msgstr "Оновлення"
 
-#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
+#: src/controller.vala:622 src/indicator.vala:84 src/window.vala:520
 msgid "Connected"
 msgstr "З'єднано"
 
-#: src/controller.vala:728
+#: src/controller.vala:730
 msgid "Member Joined"
 msgstr "Користувач підключився"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:730
+#: src/controller.vala:732
 msgid "{0} joined the network {1}"
 msgstr "{0} підключився до мережі {1}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:732
+#: src/controller.vala:734
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} під’єднався до мережі {1} та до мережі {2}"
 msgstr[1] "{0} під’єднався до мережі {1} та до інших мереж {2}"
 msgstr[2] "{0} під’єднався до мережі {1} та до інших мереж {2}"
 
-#: src/controller.vala:758
+#: src/controller.vala:760
 msgid "Member Left"
 msgstr "Користувач покинув мережу"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:760
+#: src/controller.vala:762
 msgid "{0} left the network {1}"
 msgstr "{0} покинув мережу {1}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:762
+#: src/controller.vala:764
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} від’єднався від мережі {1} та від мережі {2}"
 msgstr[1] "{0} від’єднався від мережі {1} та від інших мереж {2}"
 msgstr[2] "{0} від’єднався від мережі {1} та від інших мереж {2}"
 
-#: src/controller.vala:784
+#: src/controller.vala:786
 msgid "Member Online"
 msgstr "Учасники в мережі"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:786
+#: src/controller.vala:788
 msgid "{0} came online in the network {1}"
 msgstr "{0} з’єявився в мережі {1}"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:788
+#: src/controller.vala:790
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} з’явився в мережі {1} та в мережі {2}"
 msgstr[1] "{0} з’явився в мережі {1} та в {2} інших мережах"
 msgstr[2] "{0} з’явився в мережі {1} та в {2} інших мережах"
 
-#: src/controller.vala:810
+#: src/controller.vala:812
 msgid "Member Offline"
 msgstr "Користувач відключився"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:812
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1}"
 msgstr "{0} покинув мережу {1}"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:814
+#: src/controller.vala:816
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} покинув мережу {1} та в мережу {2}"
 msgstr[1] "{0} покинув мережу {1} та інші мережі {2}"
 msgstr[2] "{0} покинув мережу {1} та інші мережі {2}"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Edit Command"
 msgstr "Змінити команду"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Add Command"
 msgstr "Додати команду"
 
-#: src/dialogs/attach.vala:67
+#: src/dialogs/attach.vala:55
 msgid "Attach request sent"
 msgstr "Запит на додавання надіслано"
 
-#: src/dialogs/attach.vala:76
+#: src/dialogs/attach.vala:64
 msgid "Account not found"
 msgstr "Обліковий запис не знайдено"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Join Network"
 msgstr "Приєднати мережу"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Create Network"
 msgstr "Створити мережу"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "_Join"
 msgstr "При_єднати"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "C_reate"
 msgstr "С_творити"
 
-#: src/dialogs/join-create-network.vala:81
+#: src/dialogs/join-create-network.vala:73
 msgid "Join request sent"
 msgstr "Запит на приєднання надіслано"
 
-#: src/dialogs/join-create-network.vala:106
+#: src/dialogs/join-create-network.vala:98
 msgid "Network not found"
 msgstr "Мережу не знайдено"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:102
 msgid "Invalid password"
 msgstr "Хибний пароль"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:104
 msgid "Network is full"
 msgstr "Мережа немає вільних місць"
 
-#: src/dialogs/join-create-network.vala:114
+#: src/dialogs/join-create-network.vala:106
 msgid "Network is locked"
 msgstr "Мережа заблокована"
 
-#: src/dialogs/join-create-network.vala:117
+#: src/dialogs/join-create-network.vala:109
 msgid "Network already joined"
 msgstr "Мережа вже приєднана"
 
-#: src/dialogs/join-create-network.vala:179
+#: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
 msgstr "Ідентифікатор мережі вже використовуються"
 
@@ -830,7 +836,7 @@ msgstr "Ідентифікатор мережі вже використовую�
 msgid "Unknown"
 msgstr "Невідомо"
 
-#: src/hamachi.vala:578 src/window.vala:438
+#: src/hamachi.vala:578 src/window.vala:441
 msgid "Anonymous"
 msgstr "Анонімний"
 
@@ -838,39 +844,39 @@ msgstr "Анонімний"
 msgid "Password changed"
 msgstr "Пароль змінено"
 
-#: src/hamachi.vala:727
+#: src/hamachi.vala:723
 msgid "Saving backup…"
 msgstr "Збереження резервної копії…"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Backup saved"
 msgstr "Резервну копію збережено"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Failed to save backup"
 msgstr "Помилка збереження резервної копії"
 
-#: src/hamachi.vala:762
+#: src/hamachi.vala:754
 msgid "Restoring backup…"
 msgstr "Відновлення з резервної копії…"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Backup restored"
 msgstr "Резервну копію відновлено"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Failed to restore backup"
 msgstr "Помилка відновлення з резервної копії"
 
-#: src/hamachi.vala:810
+#: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
 msgstr "Архів не містить очікуваних файлів"
 
-#: src/indicator.vala:84 src/window.vala:515
+#: src/indicator.vala:84 src/window.vala:518
 msgid "Connecting"
 msgstr "З’єднання"
 
-#: src/indicator.vala:84 src/window.vala:519
+#: src/indicator.vala:84 src/window.vala:522
 msgid "Disconnected"
 msgstr "Роз’єднано"
 
@@ -914,31 +920,31 @@ msgstr "Впевнені, що бажаєте вилучити мережу “{
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Після вилучення, мережу буде втрачено."
 
-#: src/preferences.vala:110
+#: src/preferences.vala:107
 msgid "Not present"
 msgstr "Відсутній"
 
-#: src/preferences.vala:279
+#: src/preferences.vala:276
 msgid "All supported archives"
 msgstr "Усі підтримувані архіви"
 
-#: src/preferences.vala:299
+#: src/preferences.vala:296
 msgid "Save a Backup"
 msgstr "Зберегти резервну копію"
 
-#: src/preferences.vala:321
+#: src/preferences.vala:318
 msgid "Restore from Backup"
 msgstr "Відновити з резервної копії"
 
-#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
+#: src/preferences.vala:319 src/widgets/commands-editor.vala:57
 msgid "_Restore"
 msgstr "_Відновити"
 
-#: src/preferences.vala:362
+#: src/preferences.vala:363
 msgid "Never"
 msgstr "Ніколи"
 
-#: src/preferences.vala:381
+#: src/preferences.vala:386
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
@@ -946,7 +952,7 @@ msgstr[0] "%S секунда"
 msgstr[1] "%S секунди"
 msgstr[2] "%S секунд"
 
-#: src/preferences.vala:385
+#: src/preferences.vala:390
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
@@ -1006,46 +1012,46 @@ msgstr "Конфліктуючі адреси"
 msgid "Direct"
 msgstr "Безпосередній"
 
-#: src/widgets/commands-editor.vala:59
+#: src/widgets/commands-editor.vala:55
 msgid "Restore default commands?"
 msgstr "Відновити типові команди?"
 
-#: src/widgets/commands-editor.vala:60
+#: src/widgets/commands-editor.vala:56
 msgid "All customizations will be lost."
 msgstr "Всі налаштування буде втрачено"
 
-#: src/window.vala:178
+#: src/window.vala:173
 msgid "Configuring"
 msgstr "Налаштування"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:341
+#: src/window.vala:337
 msgid "translator-credits"
 msgstr ""
 "Aleksei Motsik https://launchpad.net/~naghual80\n"
 "Fedir Zinchuk https://launchpad.net/~fedikw"
 
-#: src/window.vala:415
+#: src/window.vala:418
 msgid "Copied to clipboard"
 msgstr "Скопійовано до буфера обміну"
 
-#: src/window.vala:450
+#: src/window.vala:453
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Перепід’єднання через {0} секунду"
 msgstr[1] "Перепід’єднання через {0} секунди"
 msgstr[2] "Перепід’єднання через {0} секунд"
 
-#: src/window.vala:481
+#: src/window.vala:484
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi не встановлено"
 
-#: src/window.vala:483
+#: src/window.vala:486
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Версія %s Hamachi є застарілою"
 
-#: src/window.vala:582
+#: src/window.vala:585
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."

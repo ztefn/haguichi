@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 00:11+0100\n"
+"POT-Creation-Date: 2025-07-05 17:34+0200\n"
 "PO-Revision-Date: 2024-07-01 04:25+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:5
+#: data/com.github.ztefn.haguichi.desktop.in.in:4
 msgid "Haguichi"
 msgstr "Haguichi"
 
 #. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
-#: data/com.github.ztefn.haguichi.desktop.in.in:7
+#: data/com.github.ztefn.haguichi.desktop.in.in:6
 msgid "Hamachi Network Manager"
 msgstr "Gestor de redes de Hamachi"
 
 #. Description used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
 msgstr "Gestione sus redes de Hamachi"
 
 #. Keywords used for search in application launchers and software centers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:15
+#: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr "LogMeIn Hamachi;VPN;LAN;Red;Internet;P2P;Par;Cliente;GUI;Interfaz;"
 
@@ -105,83 +105,83 @@ msgstr "Busque en su lista de redes"
 msgid "Join or create networks"
 msgstr "Únase a redes o cree nuevas"
 
-#: data/ui/dialogs/add-edit-command.ui:29
+#: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
 msgstr "Etiqueta"
 
-#: data/ui/dialogs/add-edit-command.ui:36
+#: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
 msgstr "Orden IPv4"
 
-#: data/ui/dialogs/add-edit-command.ui:43
+#: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
 msgstr "Orden IPv6"
 
-#: data/ui/dialogs/add-edit-command.ui:50
+#: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
 msgstr "Prioridad"
 
-#: data/ui/dialogs/add-edit-command.ui:57
+#: data/ui/dialogs/add-edit-command.ui:58
 msgid "_Save"
 msgstr "_Guardar"
 
-#: data/ui/dialogs/attach.ui:5
+#: data/ui/dialogs/attach.ui:6
 msgid "Attach to Account"
 msgstr "Adjuntar a la cuenta"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
+#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "Cuenta"
 
-#: data/ui/dialogs/attach.ui:37
+#: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
 msgstr "Incluir todas las redes creadas por este cliente"
 
-#: data/ui/dialogs/attach.ui:60
+#: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
 msgstr "_Adjuntar"
 
-#: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
+#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:133
 msgid "Change Access"
 msgstr "Cambiar acceso"
 
-#: data/ui/dialogs/change-access.ui:30
+#: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
 msgstr "Bloqueado"
 
-#: data/ui/dialogs/change-access.ui:31
+#: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
 msgstr "No aceptar miembros nuevos en la red"
 
-#: data/ui/dialogs/change-access.ui:37
+#: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
 msgstr "Aprobado"
 
-#: data/ui/dialogs/change-access.ui:41
+#: data/ui/dialogs/change-access.ui:42
 msgid "Automatically"
 msgstr "Automáticamente"
 
-#: data/ui/dialogs/change-access.ui:42
+#: data/ui/dialogs/change-access.ui:43
 msgid "Manually"
 msgstr "Manualmente"
 
-#: data/ui/dialogs/change-access.ui:52 data/ui/dialogs/change-password.ui:38
+#: data/ui/dialogs/change-access.ui:53 data/ui/dialogs/change-password.ui:39
 msgid "C_hange"
 msgstr "Ca_mbiar"
 
-#: data/ui/dialogs/change-password.ui:5 data/ui/sidebar.ui:117
+#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:117
 msgid "Change Password"
 msgstr "Cambiar contraseña"
 
-#: data/ui/dialogs/change-password.ui:30
+#: data/ui/dialogs/change-password.ui:31
 msgid "New Password"
 msgstr "Contraseña nueva"
 
-#: data/ui/dialogs/join-create-network.ui:29 data/ui/sidebar.ui:108
+#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:108
 msgid "Network ID"
 msgstr "Id. de red"
 
-#: data/ui/dialogs/join-create-network.ui:36
+#: data/ui/dialogs/join-create-network.ui:37
 msgid "Password"
 msgstr "Contraseña"
 
@@ -252,7 +252,8 @@ msgstr "Ca_mbiar contraseña…"
 msgid "_Copy Network ID"
 msgstr "_Copiar id. de red"
 
-#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts-dialog.ui:6
+#: data/ui/shortcuts-window.ui:10
 msgid "General"
 msgstr "General"
 
@@ -308,7 +309,8 @@ msgstr "_Reconectar cuando se pierda la conexión"
 msgid "_Disconnect on quit"
 msgstr "_Desconectar al salir"
 
-#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
+#: data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "Órdenes"
 
@@ -373,71 +375,80 @@ msgstr "_Guardar una copia de seguridad…"
 msgid "_Restore from Backup…"
 msgstr "_Restaurar desde la copia de seguridad…"
 
-#: data/ui/shortcuts.ui:14
+#: data/ui/shortcuts-dialog.ui:10 data/ui/shortcuts-window.ui:14
 msgid "Show help"
 msgstr "Mostrar la ayuda"
 
-#: data/ui/shortcuts.ui:20
+#: data/ui/shortcuts-dialog.ui:16 data/ui/shortcuts-window.ui:20
 msgid "Show client information"
 msgstr "Mostrar la información del cliente"
 
-#: data/ui/shortcuts.ui:26
+#: data/ui/shortcuts-dialog.ui:22 data/ui/shortcuts-window.ui:26
 msgid "Open menu"
 msgstr "Abrir menú"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
-msgid "Connect"
-msgstr "Conectar"
-
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
-msgid "Disconnect"
-msgstr "Desconectar"
-
-#: data/ui/shortcuts.ui:44
+#: data/ui/shortcuts-dialog.ui:28 data/ui/shortcuts-window.ui:44
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: data/ui/shortcuts.ui:50
+#: data/ui/shortcuts-dialog.ui:34 data/ui/shortcuts-window.ui:50
 msgid "Keyboard shortcuts"
 msgstr "Atajos del teclado"
 
-#: data/ui/shortcuts.ui:56
+#: data/ui/shortcuts-dialog.ui:40 data/ui/shortcuts-window.ui:56
 msgid "Quit"
 msgstr "Salir"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "Conexión"
+
+#: data/ui/shortcuts-dialog.ui:51 data/ui/shortcuts-window.ui:32
+#: data/ui/window.ui:212
+msgid "Connect"
+msgstr "Conectar"
+
+#: data/ui/shortcuts-dialog.ui:57 data/ui/shortcuts-window.ui:38
+#: data/ui/window.ui:226
+msgid "Disconnect"
+msgstr "Desconectar"
+
+#: data/ui/shortcuts-dialog.ui:64 data/ui/shortcuts-window.ui:63
+#: data/ui/window.ui:487
 msgid "Network List"
 msgstr "Lista de redes"
 
-#: data/ui/shortcuts.ui:67
+#: data/ui/shortcuts-dialog.ui:68 data/ui/shortcuts-window.ui:67
 msgid "Join a network"
 msgstr "Unirse a una red"
 
-#: data/ui/shortcuts.ui:73
+#: data/ui/shortcuts-dialog.ui:74 data/ui/shortcuts-window.ui:73
 msgid "Create a network"
 msgstr "Crear una red"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
+#: data/ui/shortcuts-dialog.ui:80 data/ui/shortcuts-window.ui:79
+#: data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "Actualizar"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
+#: data/ui/shortcuts-dialog.ui:86 data/ui/shortcuts-window.ui:85
+#: data/ui/window.ui:237
 msgid "Search"
 msgstr "Buscar"
 
-#: data/ui/shortcuts.ui:91
+#: data/ui/shortcuts-dialog.ui:92 data/ui/shortcuts-window.ui:91
 msgid "Show/hide offline members"
 msgstr "Mostrar u ocultar miembros desconectados"
 
-#: data/ui/shortcuts.ui:97
+#: data/ui/shortcuts-dialog.ui:98 data/ui/shortcuts-window.ui:97
 msgid "Expand all networks"
 msgstr "Expandir todas las redes"
 
-#: data/ui/shortcuts.ui:103
+#: data/ui/shortcuts-dialog.ui:104 data/ui/shortcuts-window.ui:103
 msgid "Collapse all networks"
 msgstr "Contraer todas las redes"
 
-#: data/ui/shortcuts.ui:109
+#: data/ui/shortcuts-dialog.ui:115 data/ui/shortcuts-window.ui:109
 msgid "Execute command"
 msgstr "Ejecutar orden"
 
@@ -497,10 +508,6 @@ msgstr "Capacidad"
 #: data/ui/sidebar.ui:220
 msgid "Tunnel"
 msgstr "Túnel"
-
-#: data/ui/sidebar.ui:225
-msgid "Connection"
-msgstr "Conexión"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
@@ -575,7 +582,7 @@ msgstr "_Quitar"
 msgid "Copy"
 msgstr "Copiar"
 
-#: data/ui/window.ui:195 src/window.vala:513
+#: data/ui/window.ui:195 src/window.vala:516
 msgid "Initializing"
 msgstr "Inicializando"
 
@@ -591,12 +598,11 @@ msgstr "Buscar redes y miembros"
 msgid "Add Network"
 msgstr "Añadir red"
 
-#. Display notification only if preference is set and window is not currently active
-#: data/ui/window.ui:340 src/controller.vala:709
+#: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi ha perdido la conexión"
 
-#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:25
 msgid "_Cancel"
 msgstr "_Cancelar"
 
@@ -696,131 +702,131 @@ msgstr "Ha fallado el inicio de sesión de Hamachi"
 msgid "Updating"
 msgstr "Actualizando"
 
-#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
+#: src/controller.vala:622 src/indicator.vala:84 src/window.vala:520
 msgid "Connected"
 msgstr "Conectado"
 
-#: src/controller.vala:728
+#: src/controller.vala:730
 msgid "Member Joined"
 msgstr "Se ha unido un miembro"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:730
+#: src/controller.vala:732
 msgid "{0} joined the network {1}"
 msgstr "{0} se ha unido a la red {1}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:732
+#: src/controller.vala:734
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} se ha unido a la red {1} y a otra {2} red más"
 msgstr[1] "{0} se ha unido a la red {1} y a otras {2} redes"
 
-#: src/controller.vala:758
+#: src/controller.vala:760
 msgid "Member Left"
 msgstr "Se ha ido un miembro"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:760
+#: src/controller.vala:762
 msgid "{0} left the network {1}"
 msgstr "{o} han abandonado la red {1}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:762
+#: src/controller.vala:764
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} ha dejado la red {1} y {2} red más"
 msgstr[1] "{0} ha dejado la red {1} y otras {2} redes"
 
-#: src/controller.vala:784
+#: src/controller.vala:786
 msgid "Member Online"
 msgstr "Miembros conectados"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:786
+#: src/controller.vala:788
 msgid "{0} came online in the network {1}"
 msgstr "{0} se ha conectado a la red {1}"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:788
+#: src/controller.vala:790
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} se ha conectado en la red {1} y en {2} red más"
 msgstr[1] "{0} se ha conectado en la red {1} y en otras {2} redes"
 
-#: src/controller.vala:810
+#: src/controller.vala:812
 msgid "Member Offline"
 msgstr "Miembros desconectados"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:812
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1}"
 msgstr "{0} se ha desconectado de la red {1}"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:814
+#: src/controller.vala:816
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} se desconectó en la red {1} y en {2} red más"
 msgstr[1] "{0} se desconectó en la red {1} y en otras {2} redes"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Edit Command"
 msgstr "Editar la orden"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Add Command"
 msgstr "Añadir una orden"
 
-#: src/dialogs/attach.vala:67
+#: src/dialogs/attach.vala:55
 msgid "Attach request sent"
 msgstr ""
 
-#: src/dialogs/attach.vala:76
+#: src/dialogs/attach.vala:64
 msgid "Account not found"
 msgstr "Cuenta no encontrada"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Join Network"
 msgstr "Unirse a la red"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Create Network"
 msgstr "Crear red"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "_Join"
 msgstr "_Unirse"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "C_reate"
 msgstr "C_rear"
 
-#: src/dialogs/join-create-network.vala:81
+#: src/dialogs/join-create-network.vala:73
 msgid "Join request sent"
 msgstr "Solicitud de unión enviada"
 
-#: src/dialogs/join-create-network.vala:106
+#: src/dialogs/join-create-network.vala:98
 msgid "Network not found"
 msgstr "Red no encontrada"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:102
 msgid "Invalid password"
 msgstr "Contraseña incorrecta"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:104
 msgid "Network is full"
 msgstr "La red está llena"
 
-#: src/dialogs/join-create-network.vala:114
+#: src/dialogs/join-create-network.vala:106
 msgid "Network is locked"
 msgstr "Red bloqueada"
 
-#: src/dialogs/join-create-network.vala:117
+#: src/dialogs/join-create-network.vala:109
 msgid "Network already joined"
 msgstr "Ya se ha unido a esta red"
 
-#: src/dialogs/join-create-network.vala:179
+#: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
 msgstr "El identificador de red ya está en uso"
 
@@ -828,7 +834,7 @@ msgstr "El identificador de red ya está en uso"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: src/hamachi.vala:578 src/window.vala:438
+#: src/hamachi.vala:578 src/window.vala:441
 msgid "Anonymous"
 msgstr "Anónima"
 
@@ -836,39 +842,39 @@ msgstr "Anónima"
 msgid "Password changed"
 msgstr "Contraseña cambiada"
 
-#: src/hamachi.vala:727
+#: src/hamachi.vala:723
 msgid "Saving backup…"
 msgstr "Guardando copia de respaldo…"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Backup saved"
 msgstr "Copia de respaldo guardada"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Failed to save backup"
 msgstr "No se pudo guardar la copia de respaldo"
 
-#: src/hamachi.vala:762
+#: src/hamachi.vala:754
 msgid "Restoring backup…"
 msgstr "Restaurando la copia de respaldo…"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Backup restored"
 msgstr "Copia de respaldo restaurada"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Failed to restore backup"
 msgstr "No se pudo restaurar la copia de respaldo"
 
-#: src/hamachi.vala:810
+#: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
 msgstr "El archivador no contiene los archivos esperados"
 
-#: src/indicator.vala:84 src/window.vala:515
+#: src/indicator.vala:84 src/window.vala:518
 msgid "Connecting"
 msgstr "Conectando"
 
-#: src/indicator.vala:84 src/window.vala:519
+#: src/indicator.vala:84 src/window.vala:522
 msgid "Disconnected"
 msgstr "Desconectado"
 
@@ -914,38 +920,38 @@ msgstr "¿Confirma que quiere eliminar la red «{0}»?"
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Si elimina una red se perderá permanentemente."
 
-#: src/preferences.vala:110
+#: src/preferences.vala:107
 msgid "Not present"
 msgstr "No presente"
 
-#: src/preferences.vala:279
+#: src/preferences.vala:276
 msgid "All supported archives"
 msgstr "Todos los archivadores compatibles"
 
-#: src/preferences.vala:299
+#: src/preferences.vala:296
 msgid "Save a Backup"
 msgstr "Guardar una copia de seguridad"
 
-#: src/preferences.vala:321
+#: src/preferences.vala:318
 msgid "Restore from Backup"
 msgstr "Restaurar desde la copia de seguridad"
 
-#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
+#: src/preferences.vala:319 src/widgets/commands-editor.vala:57
 msgid "_Restore"
 msgstr "_Restaurar"
 
-#: src/preferences.vala:362
+#: src/preferences.vala:363
 msgid "Never"
 msgstr "Nunca"
 
-#: src/preferences.vala:381
+#: src/preferences.vala:386
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
 msgstr[0] "%S segundo"
 msgstr[1] "%S segundos"
 
-#: src/preferences.vala:385
+#: src/preferences.vala:390
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
@@ -1004,45 +1010,45 @@ msgstr "Dirección en conflicto"
 msgid "Direct"
 msgstr "Directa"
 
-#: src/widgets/commands-editor.vala:59
+#: src/widgets/commands-editor.vala:55
 msgid "Restore default commands?"
 msgstr "¿Quiere restaurar las órdenes predeterminadas?"
 
-#: src/widgets/commands-editor.vala:60
+#: src/widgets/commands-editor.vala:56
 msgid "All customizations will be lost."
 msgstr "Se perderán todas las personalizaciones."
 
-#: src/window.vala:178
+#: src/window.vala:173
 msgid "Configuring"
 msgstr "Configurando"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:341
+#: src/window.vala:337
 msgid "translator-credits"
 msgstr ""
 "Adolfo Jayme Barrientos https://launchpad.net/~fitojb\n"
 "Eduardo Parra https://launchpad.net/~soker"
 
-#: src/window.vala:415
+#: src/window.vala:418
 msgid "Copied to clipboard"
 msgstr "Se copió en el portapapeles"
 
-#: src/window.vala:450
+#: src/window.vala:453
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Reconexión en {0} segundo"
 msgstr[1] "Reconexión en {0} segundos"
 
-#: src/window.vala:481
+#: src/window.vala:484
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi no está instalado"
 
-#: src/window.vala:483
+#: src/window.vala:486
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "La versión %s de Hamachi está obsoleta"
 
-#: src/window.vala:582
+#: src/window.vala:585
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 00:11+0100\n"
+"POT-Creation-Date: 2025-07-05 17:34+0200\n"
 "PO-Revision-Date: 2024-07-16 22:56+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -20,23 +20,23 @@ msgstr ""
 "X-Generator: Launchpad (build bbfa2351d9d6a9ddfe262109428f7bf5516e65d1)\n"
 
 #. Name used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:5
+#: data/com.github.ztefn.haguichi.desktop.in.in:4
 msgid "Haguichi"
 msgstr "Haguichi"
 
 #. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
-#: data/com.github.ztefn.haguichi.desktop.in.in:7
+#: data/com.github.ztefn.haguichi.desktop.in.in:6
 msgid "Hamachi Network Manager"
 msgstr "Hamachi ネットワークマネージャー"
 
 #. Description used for display in application launchers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:11
+#: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
 msgstr "Hamachi ネットワークを管理します"
 
 #. Keywords used for search in application launchers and software centers.
-#: data/com.github.ztefn.haguichi.desktop.in.in:15
+#: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
 "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;ネット"
@@ -105,83 +105,83 @@ msgstr "ネットワークリストを検索する"
 msgid "Join or create networks"
 msgstr "ネットワークに参加・作成する"
 
-#: data/ui/dialogs/add-edit-command.ui:29
+#: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
 msgstr "ラベル"
 
-#: data/ui/dialogs/add-edit-command.ui:36
+#: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
 msgstr "IPv4 コマンド"
 
-#: data/ui/dialogs/add-edit-command.ui:43
+#: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
 msgstr "IPv6 コマンド"
 
-#: data/ui/dialogs/add-edit-command.ui:50
+#: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
 msgstr "優先度"
 
-#: data/ui/dialogs/add-edit-command.ui:57
+#: data/ui/dialogs/add-edit-command.ui:58
 msgid "_Save"
 msgstr "保存(_S)"
 
-#: data/ui/dialogs/attach.ui:5
+#: data/ui/dialogs/attach.ui:6
 msgid "Attach to Account"
 msgstr "アカウントと関連付ける"
 
-#: data/ui/dialogs/attach.ui:30 data/ui/sidebar.ui:17 src/sidebar.vala:184
+#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:17 src/sidebar.vala:184
 msgid "Account"
 msgstr "アカウント"
 
-#: data/ui/dialogs/attach.ui:37
+#: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
 msgstr "このクライアントで作ったすべてのネットワークを含む"
 
-#: data/ui/dialogs/attach.ui:60
+#: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
 msgstr "関連付ける(_A)"
 
-#: data/ui/dialogs/change-access.ui:5 data/ui/sidebar.ui:133
+#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:133
 msgid "Change Access"
 msgstr "アクセス権限を変更"
 
-#: data/ui/dialogs/change-access.ui:30
+#: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
 msgstr "ロック"
 
-#: data/ui/dialogs/change-access.ui:31
+#: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
 msgstr "ネットワークメンバーの新規参加を拒否します"
 
-#: data/ui/dialogs/change-access.ui:37
+#: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
 msgstr "承認"
 
-#: data/ui/dialogs/change-access.ui:41
+#: data/ui/dialogs/change-access.ui:42
 msgid "Automatically"
 msgstr "自動"
 
-#: data/ui/dialogs/change-access.ui:42
+#: data/ui/dialogs/change-access.ui:43
 msgid "Manually"
 msgstr "手動"
 
-#: data/ui/dialogs/change-access.ui:52 data/ui/dialogs/change-password.ui:38
+#: data/ui/dialogs/change-access.ui:53 data/ui/dialogs/change-password.ui:39
 msgid "C_hange"
 msgstr "変更(_H)"
 
-#: data/ui/dialogs/change-password.ui:5 data/ui/sidebar.ui:117
+#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:117
 msgid "Change Password"
 msgstr "パスワードを変更"
 
-#: data/ui/dialogs/change-password.ui:30
+#: data/ui/dialogs/change-password.ui:31
 msgid "New Password"
 msgstr "新しいパスワード"
 
-#: data/ui/dialogs/join-create-network.ui:29 data/ui/sidebar.ui:108
+#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:108
 msgid "Network ID"
 msgstr "ネットワーク ID"
 
-#: data/ui/dialogs/join-create-network.ui:36
+#: data/ui/dialogs/join-create-network.ui:37
 msgid "Password"
 msgstr "パスワード"
 
@@ -252,7 +252,8 @@ msgstr "パスワードを変更(_P)…"
 msgid "_Copy Network ID"
 msgstr "ネットワーク ID をコピー(_C)"
 
-#: data/ui/preferences.ui:7 data/ui/shortcuts.ui:10
+#: data/ui/preferences.ui:7 data/ui/shortcuts-dialog.ui:6
+#: data/ui/shortcuts-window.ui:10
 msgid "General"
 msgstr "一般"
 
@@ -308,7 +309,8 @@ msgstr "接続が切れたら自動で再接続する(_R)"
 msgid "_Disconnect on quit"
 msgstr "終了時に接続を切る(_D)"
 
-#: data/ui/preferences.ui:100 data/ui/sidebar.ui:194
+#: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
+#: data/ui/sidebar.ui:194
 msgid "Commands"
 msgstr "コマンド"
 
@@ -373,71 +375,80 @@ msgstr "バックアップを保存(_S)…"
 msgid "_Restore from Backup…"
 msgstr "バックアップから復元(_R)…"
 
-#: data/ui/shortcuts.ui:14
+#: data/ui/shortcuts-dialog.ui:10 data/ui/shortcuts-window.ui:14
 msgid "Show help"
 msgstr "ヘルプを表示する"
 
-#: data/ui/shortcuts.ui:20
+#: data/ui/shortcuts-dialog.ui:16 data/ui/shortcuts-window.ui:20
 msgid "Show client information"
 msgstr "クライアントの情報を表示する"
 
-#: data/ui/shortcuts.ui:26
+#: data/ui/shortcuts-dialog.ui:22 data/ui/shortcuts-window.ui:26
 msgid "Open menu"
 msgstr "メニューを開く"
 
-#: data/ui/shortcuts.ui:32 data/ui/window.ui:212
-msgid "Connect"
-msgstr "接続"
-
-#: data/ui/shortcuts.ui:38 data/ui/window.ui:226
-msgid "Disconnect"
-msgstr "切断"
-
-#: data/ui/shortcuts.ui:44
+#: data/ui/shortcuts-dialog.ui:28 data/ui/shortcuts-window.ui:44
 msgid "Preferences"
 msgstr "設定"
 
-#: data/ui/shortcuts.ui:50
+#: data/ui/shortcuts-dialog.ui:34 data/ui/shortcuts-window.ui:50
 msgid "Keyboard shortcuts"
 msgstr "キーボードショートカットを表示する"
 
-#: data/ui/shortcuts.ui:56
+#: data/ui/shortcuts-dialog.ui:40 data/ui/shortcuts-window.ui:56
 msgid "Quit"
 msgstr "終了する"
 
-#: data/ui/shortcuts.ui:63 data/ui/window.ui:487
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:225
+msgid "Connection"
+msgstr "接続状態"
+
+#: data/ui/shortcuts-dialog.ui:51 data/ui/shortcuts-window.ui:32
+#: data/ui/window.ui:212
+msgid "Connect"
+msgstr "接続"
+
+#: data/ui/shortcuts-dialog.ui:57 data/ui/shortcuts-window.ui:38
+#: data/ui/window.ui:226
+msgid "Disconnect"
+msgstr "切断"
+
+#: data/ui/shortcuts-dialog.ui:64 data/ui/shortcuts-window.ui:63
+#: data/ui/window.ui:487
 msgid "Network List"
 msgstr "ネットワークリスト"
 
-#: data/ui/shortcuts.ui:67
+#: data/ui/shortcuts-dialog.ui:68 data/ui/shortcuts-window.ui:67
 msgid "Join a network"
 msgstr "ネットワークに参加する"
 
-#: data/ui/shortcuts.ui:73
+#: data/ui/shortcuts-dialog.ui:74 data/ui/shortcuts-window.ui:73
 msgid "Create a network"
 msgstr "ネットワークを作成する"
 
-#: data/ui/shortcuts.ui:79 data/ui/window.ui:202 data/ui/window.ui:287
+#: data/ui/shortcuts-dialog.ui:80 data/ui/shortcuts-window.ui:79
+#: data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
 msgstr "更新"
 
-#: data/ui/shortcuts.ui:85 data/ui/window.ui:237
+#: data/ui/shortcuts-dialog.ui:86 data/ui/shortcuts-window.ui:85
+#: data/ui/window.ui:237
 msgid "Search"
 msgstr "検索"
 
-#: data/ui/shortcuts.ui:91
+#: data/ui/shortcuts-dialog.ui:92 data/ui/shortcuts-window.ui:91
 msgid "Show/hide offline members"
 msgstr "オフラインメンバーの表示を切り替える"
 
-#: data/ui/shortcuts.ui:97
+#: data/ui/shortcuts-dialog.ui:98 data/ui/shortcuts-window.ui:97
 msgid "Expand all networks"
 msgstr "すべてのネットワークを展開する"
 
-#: data/ui/shortcuts.ui:103
+#: data/ui/shortcuts-dialog.ui:104 data/ui/shortcuts-window.ui:103
 msgid "Collapse all networks"
 msgstr "すべてのネットワークを閉じる"
 
-#: data/ui/shortcuts.ui:109
+#: data/ui/shortcuts-dialog.ui:115 data/ui/shortcuts-window.ui:109
 msgid "Execute command"
 msgstr "コマンドを実行する"
 
@@ -497,10 +508,6 @@ msgstr "最大同時接続数"
 #: data/ui/sidebar.ui:220
 msgid "Tunnel"
 msgstr "トンネル"
-
-#: data/ui/sidebar.ui:225
-msgid "Connection"
-msgstr "接続状態"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
@@ -575,7 +582,7 @@ msgstr "削除(_R)"
 msgid "Copy"
 msgstr "コピー"
 
-#: data/ui/window.ui:195 src/window.vala:513
+#: data/ui/window.ui:195 src/window.vala:516
 msgid "Initializing"
 msgstr "初期化しています"
 
@@ -591,12 +598,11 @@ msgstr "ネットワークとメンバーを検索"
 msgid "Add Network"
 msgstr "ネットワークを追加"
 
-#. Display notification only if preference is set and window is not currently active
-#: data/ui/window.ui:340 src/controller.vala:709
+#: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi の接続が切れました"
 
-#: data/ui/window.ui:347 src/dialogs/confirm.vala:27
+#: data/ui/window.ui:347 src/dialogs/confirm.vala:25
 msgid "_Cancel"
 msgstr "キャンセル(_C)"
 
@@ -696,129 +702,129 @@ msgstr "Hamachi のログインに失敗しました"
 msgid "Updating"
 msgstr "更新しています"
 
-#: src/controller.vala:619 src/indicator.vala:84 src/window.vala:517
+#: src/controller.vala:622 src/indicator.vala:84 src/window.vala:520
 msgid "Connected"
 msgstr "接続済み"
 
-#: src/controller.vala:728
+#: src/controller.vala:730
 msgid "Member Joined"
 msgstr "メンバーが参加しました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:730
+#: src/controller.vala:732
 msgid "{0} joined the network {1}"
 msgstr "ネットワーク {1} に {0} が参加しました"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:732
+#: src/controller.vala:734
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークに {0} が参加しました"
 
-#: src/controller.vala:758
+#: src/controller.vala:760
 msgid "Member Left"
 msgstr "メンバーが離脱しました"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:760
+#: src/controller.vala:762
 msgid "{0} left the network {1}"
 msgstr "ネットワーク {1} から {0} が離脱しました"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:762
+#: src/controller.vala:764
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "ネットワーク {1} とその他 {2} のネットワークから {0} が離脱しました"
 
-#: src/controller.vala:784
+#: src/controller.vala:786
 msgid "Member Online"
 msgstr "メンバーがオンラインになりました"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:786
+#: src/controller.vala:788
 msgid "{0} came online in the network {1}"
 msgstr "ネットワーク {1} で {0} がオンラインになりました"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:788
+#: src/controller.vala:790
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオンラインになりました"
 
-#: src/controller.vala:810
+#: src/controller.vala:812
 msgid "Member Offline"
 msgstr "メンバーがオフラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:812
+#: src/controller.vala:814
 msgid "{0} went offline in the network {1}"
 msgstr "ネットワーク {1} で {0} がオフラインになりました"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:814
+#: src/controller.vala:816
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] ""
 "ネットワーク {1} とその他 {2} のネットワークで {0} がオフラインになりました"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Edit Command"
 msgstr "コマンドを編集"
 
-#: src/dialogs/add-edit-command.vala:81
+#: src/dialogs/add-edit-command.vala:77
 msgid "Add Command"
 msgstr "コマンドを追加"
 
-#: src/dialogs/attach.vala:67
+#: src/dialogs/attach.vala:55
 msgid "Attach request sent"
 msgstr "関連付けリクエストを送信しました"
 
-#: src/dialogs/attach.vala:76
+#: src/dialogs/attach.vala:64
 msgid "Account not found"
 msgstr "アカウントが見つかりませんでした"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Join Network"
 msgstr "ネットワークに参加"
 
-#: src/dialogs/join-create-network.vala:37
+#: src/dialogs/join-create-network.vala:33
 msgid "Create Network"
 msgstr "ネットワークを作成"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "_Join"
 msgstr "参加(_J)"
 
-#: src/dialogs/join-create-network.vala:43
+#: src/dialogs/join-create-network.vala:35
 msgid "C_reate"
 msgstr "作成(_R)"
 
-#: src/dialogs/join-create-network.vala:81
+#: src/dialogs/join-create-network.vala:73
 msgid "Join request sent"
 msgstr "参加リクエストを送信しました"
 
-#: src/dialogs/join-create-network.vala:106
+#: src/dialogs/join-create-network.vala:98
 msgid "Network not found"
 msgstr "ネットワークが見つかりません"
 
-#: src/dialogs/join-create-network.vala:110
+#: src/dialogs/join-create-network.vala:102
 msgid "Invalid password"
 msgstr "パスワードが正しくありません"
 
-#: src/dialogs/join-create-network.vala:112
+#: src/dialogs/join-create-network.vala:104
 msgid "Network is full"
 msgstr "ネットワークが混雑しています"
 
-#: src/dialogs/join-create-network.vala:114
+#: src/dialogs/join-create-network.vala:106
 msgid "Network is locked"
 msgstr "ネットワークがロックされています"
 
-#: src/dialogs/join-create-network.vala:117
+#: src/dialogs/join-create-network.vala:109
 msgid "Network already joined"
 msgstr "すでにネットワークに参加しています"
 
-#: src/dialogs/join-create-network.vala:179
+#: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
 msgstr "Network ID はすでに存在します"
 
@@ -826,7 +832,7 @@ msgstr "Network ID はすでに存在します"
 msgid "Unknown"
 msgstr "不明"
 
-#: src/hamachi.vala:578 src/window.vala:438
+#: src/hamachi.vala:578 src/window.vala:441
 msgid "Anonymous"
 msgstr "匿名"
 
@@ -834,39 +840,39 @@ msgstr "匿名"
 msgid "Password changed"
 msgstr "パスワードを変更しました"
 
-#: src/hamachi.vala:727
+#: src/hamachi.vala:723
 msgid "Saving backup…"
 msgstr "バックアップを保存しています…"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Backup saved"
 msgstr "バックアップを保存しました"
 
-#: src/hamachi.vala:744
+#: src/hamachi.vala:740
 msgid "Failed to save backup"
 msgstr "バックアップの保存に失敗しました"
 
-#: src/hamachi.vala:762
+#: src/hamachi.vala:754
 msgid "Restoring backup…"
 msgstr "バックアップから復元しています…"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Backup restored"
 msgstr "バックアップから復元しました"
 
-#: src/hamachi.vala:803
+#: src/hamachi.vala:795
 msgid "Failed to restore backup"
 msgstr "バックアップからの復元に失敗しました"
 
-#: src/hamachi.vala:810
+#: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
 msgstr "期待したファイルがアーカイブ内に見当たりません"
 
-#: src/indicator.vala:84 src/window.vala:515
+#: src/indicator.vala:84 src/window.vala:518
 msgid "Connecting"
 msgstr "接続しています"
 
-#: src/indicator.vala:84 src/window.vala:519
+#: src/indicator.vala:84 src/window.vala:522
 msgid "Disconnected"
 msgstr "未接続"
 
@@ -910,37 +916,37 @@ msgstr "ネットワーク “{0}” を削除してもよろしいですか?"
 msgid "If you delete a network, it will be permanently lost."
 msgstr "ネットワークを削除すると、そのネットワークは元に戻せなくなります。"
 
-#: src/preferences.vala:110
+#: src/preferences.vala:107
 msgid "Not present"
 msgstr "存在しない"
 
-#: src/preferences.vala:279
+#: src/preferences.vala:276
 msgid "All supported archives"
 msgstr "すべてのサポートされたアーカイブ"
 
-#: src/preferences.vala:299
+#: src/preferences.vala:296
 msgid "Save a Backup"
 msgstr "バックアップを保存"
 
-#: src/preferences.vala:321
+#: src/preferences.vala:318
 msgid "Restore from Backup"
 msgstr "バックアップから復元"
 
-#: src/preferences.vala:322 src/widgets/commands-editor.vala:61
+#: src/preferences.vala:319 src/widgets/commands-editor.vala:57
 msgid "_Restore"
 msgstr "復元(_R)"
 
-#: src/preferences.vala:362
+#: src/preferences.vala:363
 msgid "Never"
 msgstr "しない"
 
-#: src/preferences.vala:381
+#: src/preferences.vala:386
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
 msgstr[0] "%S 秒"
 
-#: src/preferences.vala:385
+#: src/preferences.vala:390
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
@@ -998,44 +1004,44 @@ msgstr "アドレスが重複しています"
 msgid "Direct"
 msgstr "直接接続"
 
-#: src/widgets/commands-editor.vala:59
+#: src/widgets/commands-editor.vala:55
 msgid "Restore default commands?"
 msgstr "デフォルトのコマンドを復元しますか?"
 
-#: src/widgets/commands-editor.vala:60
+#: src/widgets/commands-editor.vala:56
 msgid "All customizations will be lost."
 msgstr "すべての個人設定が破棄されます。"
 
-#: src/window.vala:178
+#: src/window.vala:173
 msgid "Configuring"
 msgstr "設定しています"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:341
+#: src/window.vala:337
 msgid "translator-credits"
 msgstr ""
 "Ryo Nakano https://launchpad.net/~ryonakaknock3\n"
 "Satoru Matsumoto https://launchpad.net/~helios-reds"
 
-#: src/window.vala:415
+#: src/window.vala:418
 msgid "Copied to clipboard"
 msgstr "クリップボードにコピーしました"
 
-#: src/window.vala:450
+#: src/window.vala:453
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "{0} 秒以内に再接続します"
 
-#: src/window.vala:481
+#: src/window.vala:484
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi がインストールされていません"
 
-#: src/window.vala:483
+#: src/window.vala:486
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi バージョン %s はサポート対象外です"
 
-#: src/window.vala:582
+#: src/window.vala:585
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
