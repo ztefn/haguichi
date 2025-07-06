@@ -74,6 +74,7 @@ namespace Haguichi {
             }
 
 #if FOR_ELEMENTARY
+            Gtk.init ();
             Granite.init ();
 #endif
 
