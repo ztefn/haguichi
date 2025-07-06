@@ -29,7 +29,7 @@ namespace Haguichi {
 
         [GtkChild]
         unowned Adw.ActionRow priority;
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
         private Adw.ToggleGroup priority_group;
         private Adw.Toggle priority_ipv4;
         private Adw.Toggle priority_ipv6;
@@ -39,7 +39,7 @@ namespace Haguichi {
 #endif
 
         construct {
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
             priority_ipv4 = new Adw.Toggle () {
                 label = name = "IPv4"
             };
@@ -81,7 +81,7 @@ namespace Haguichi {
             command_ipv4_entry.text = command_ipv4;
             command_ipv6_entry.text = command_ipv6;
 
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
             priority_group.active_name = priority;
 #else
             priority_ipv4.active = (priority == "IPv4");
@@ -95,7 +95,7 @@ namespace Haguichi {
 
         [GtkCallback]
         private void save_command () {
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
             var ip_mode = priority_group.active_name;
 #else
             var ip_mode = priority_ipv6.active ? "IPv6" : "IPv4";
@@ -113,7 +113,7 @@ namespace Haguichi {
         private void set_state () {
             var ipv4 = command_ipv4_entry.text.length;
             var ipv6 = command_ipv6_entry.text.length;
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
             priority_ipv4.enabled = ipv4 > 0;
             priority_ipv6.enabled = ipv6 > 0;
 #else
@@ -121,13 +121,13 @@ namespace Haguichi {
             priority_ipv6.sensitive = ipv6 > 0;
 #endif
             if (ipv4 == 0 && ipv6 > 0) {
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
                 priority_group.active_name = "IPv6";
 #else
                 priority_ipv6.active = true;
 #endif
             } else if (ipv4 > 0 && ipv6 == 0) {
-#if ADW_1_7
+#if ADW_1_7 && !FOR_ELEMENTARY
                 priority_group.active_name = "IPv4";
 #else
                 priority_ipv4.active = true;
