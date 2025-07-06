@@ -269,18 +269,6 @@ overlay-split-view .rich-list row button.error image {
 
 
 /*
- * Headings for AdwPreferencesGroup lacks styling
- * https://github.com/elementary/stylesheet/issues/1310
- */
-
-#preferences preferencesgroup label.heading {
-  font-weight: 700;
-  margin: 9px 0 12px 0;
-  opacity: 0.8;
-}
-
-
-/*
  * Add margin to restore button and remove background in disabled state
  */
 
