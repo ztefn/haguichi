@@ -66,11 +66,21 @@ button.pill {
 
 
 /*
- * Fix foreground color for focused destructive buttons in message dialogs
+ * Fix styles for alert dialogs
  */
 
-.messagedialog button.destructive:focus {
-  color: white;
+dialog.alert .message-area,
+dialog.alert .response-area {
+  padding: 12px;
+}
+
+dialog.alert .message-area .heading-bin > label {
+  font-size: 1.22em;
+  font-weight: 500;
+  letter-spacing: initial;
+  margin: 0;
+  opacity: 1;
+  padding: 0 3px 12px;
 }
 
 
