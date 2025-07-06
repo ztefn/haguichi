@@ -279,12 +279,8 @@ overlay-split-view .rich-list row button.error image {
 
 
 /*
- * Add margin to restore button and remove background in disabled state
+ * Remove background of restore button in disabled state
  */
-
-#restore-commands-button {
-  margin: 6px 0;
-}
 
 #restore-commands-button:disabled {
   background: none;

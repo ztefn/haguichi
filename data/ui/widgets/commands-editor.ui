@@ -5,6 +5,7 @@
       <object class="GtkButton" id="restore_button">
         <signal name="clicked" handler="on_restore_commands"/>
         <property name="name">restore-commands-button</property>
+        <property name="valign">center</property>
         <property name="child">
           <object class="AdwButtonContent">
             <property name="icon-name">view-refresh-symbolic</property>
