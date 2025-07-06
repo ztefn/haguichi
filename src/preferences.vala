@@ -161,17 +161,26 @@ namespace Haguichi {
             // Workaround for missing adw-entry-apply-symbolic icon in elementary icon theme
             // https://github.com/elementary/icons/issues/1333
             if (!Utils.get_icon_theme ().has_icon ("adw-entry-apply-symbolic")) {
-                var image = (Gtk.Widget) nickname
+                var button = (Gtk.Widget) nickname
                     .get_first_child () // GtkBox header
                         .get_first_child () // GtkBox prefixes
                         .get_next_sibling () // AdwGizmo editable_area
-                        .get_next_sibling () // GtkImage indicator
-                        .get_next_sibling () // GtkButton apply_button
-                            .get_first_child (); // GtkImage
+                            .get_first_child () // GtkLabel empty_title
+                            .get_next_sibling () // GtkLabel title
+                            .get_next_sibling () // GtkText text
+                            .get_next_sibling () // GtkImage indicator
+                            .get_next_sibling (); // GtkButton apply_button
 
-                // If the image was found then change the icon to one that we know exists
-                if (image is Gtk.Image) {
-                    ((Gtk.Image) image).icon_name = "object-select-symbolic";
+                // If the button was found then change the icon to one that we know exists
+                if (button is Gtk.Button) {
+                    ((Gtk.Button) button).halign = Gtk.Align.CENTER;
+
+                    var image = button.get_first_child (); // GtkImage
+
+                    // If the image was found then change the icon to one that we know exists
+                    if (image is Gtk.Image) {
+                        ((Gtk.Image) image).icon_name = "object-select-symbolic";
+                    }
                 }
             }
 #endif
