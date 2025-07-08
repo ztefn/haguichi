@@ -66,6 +66,17 @@ button.pill {
 
 
 /*
+ * Add missing styles for statuspage titles
+ */
+
+statuspage .title {
+  font-size: 18pt;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+
+/*
  * Fix styles for alert dialogs
  */
 
