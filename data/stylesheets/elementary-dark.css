@@ -8,11 +8,11 @@
 overlay-split-view widget:not(.sidebar-pane) > toolbarview,
 overlay-split-view widget:not(.sidebar-pane) > toolbarview searchbar,
 overlay-split-view widget:not(.sidebar-pane) > toolbarview listview {
-  background-color: mix(@BLACK_500, @BLACK_700, 0.075);
+  background-color: @insensitive_bg_color;
 }
 
-overlay-split-view widget.sidebar-pane > toolbarview {
-  background-color: mix(@BLACK_300, @BLACK_500, 0.725);
+overlay-split-view widget.sidebar-pane {
+  background-color: @base_color;
 }
 
 

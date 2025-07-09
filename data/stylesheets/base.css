@@ -52,7 +52,12 @@ styleselector checkbutton radio {
   min-height: 12px;
   min-width: 12px;
   padding: 2px;
+}
+styleselector checkbutton radio:dir(ltr) {
   transform: translate(16px, 10px);
+}
+styleselector checkbutton radio:dir(rtl) {
+  transform: translate(-16px, 10px);
 }
 styleselector checkbutton radio:checked {
   -gtk-icon-source: -gtk-icontheme("object-select-symbolic");

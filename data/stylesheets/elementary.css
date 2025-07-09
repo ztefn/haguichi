@@ -17,12 +17,18 @@ windowcontrols button {
  * Decrease margins on main window controls
  */
 
-#main-window windowcontrols.start {
+#main-window windowcontrols.start:dir(ltr) {
   margin-right: 0;
 }
+#main-window windowcontrols.start:dir(rtl) {
+  margin-left: 0;
+}
 
-#main-window windowcontrols.end {
+#main-window windowcontrols.end:dir(ltr) {
   margin-left: 9px;
+}
+#main-window windowcontrols.end:dir(rtl) {
+  margin-right: 9px;
 }
 
 
@@ -139,12 +145,19 @@ row.property label.subtitle {
 overlay-split-view widget:not(.sidebar-pane) > toolbarview,
 overlay-split-view widget:not(.sidebar-pane) > toolbarview searchbar,
 overlay-split-view widget:not(.sidebar-pane) > toolbarview listview {
-  background-color: white;
+  background-color: @base_color;
 }
 
-overlay-split-view widget.sidebar-pane > toolbarview {
-  background-color: mix(@SILVER_100, @SILVER_300, 0.225);
+overlay-split-view widget.sidebar-pane {
+  background-color: @insensitive_bg_color;
+}
+overlay-split-view widget.sidebar-pane:dir(ltr) {
   border-left: 1px solid @menu_separator;
+  border-right: none;
+}
+overlay-split-view widget.sidebar-pane:dir(rtl) {
+  border-left: none;
+  border-right: 1px solid @menu_separator;
 }
 
 
@@ -252,7 +265,12 @@ overlay-split-view .rich-list row button.error image {
 
 #network-list > scrolledwindow > listview > row .network-node {
   border-radius: 50%;
+}
+#network-list > scrolledwindow > listview > row .network-node:dir(ltr) {
   margin-left: 6px;
+}
+#network-list > scrolledwindow > listview > row .network-node:dir(rtl) {
+  margin-right: 6px;
 }
 
 #network-list > scrolledwindow > listview > row .network-node-online {
