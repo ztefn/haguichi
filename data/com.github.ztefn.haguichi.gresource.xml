@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/com/github/ztefn/haguichi">
-    <file>base.css</file>
-    <file>elementary.css</file>
-    <file>elementary-dark.css</file>
-    <file>style.css</file>
-    <file>style-dark.css</file>
-    <file>style-hc.css</file>
-    <file preprocess="xml-stripblanks">ui/dialogs/add-edit-command.ui</file>
-    <file preprocess="xml-stripblanks">ui/dialogs/attach.ui</file>
-    <file preprocess="xml-stripblanks">ui/dialogs/change-access.ui</file>
-    <file preprocess="xml-stripblanks">ui/dialogs/change-password.ui</file>
-    <file preprocess="xml-stripblanks">ui/dialogs/join-create-network.ui</file>
-    <file preprocess="xml-stripblanks">ui/menus/member-menu.ui</file>
-    <file preprocess="xml-stripblanks">ui/menus/network-list-menu.ui</file>
-    <file preprocess="xml-stripblanks">ui/menus/network-menu.ui</file>
-    <file preprocess="xml-stripblanks">ui/network-list.ui</file>
-    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
-    <file preprocess="xml-stripblanks">ui/shortcuts-dialog.ui</file>
-    <file preprocess="xml-stripblanks">ui/shortcuts-window.ui</file>
-    <file preprocess="xml-stripblanks">ui/sidebar.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/command-entry-row.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/command-variable-button.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/commands-editor.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/commands-editor-row.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/network-list-item.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/sidebar-row.ui</file>
-    <file preprocess="xml-stripblanks">ui/widgets/sidebar-page.ui</file>
-    <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file compressed="true">base.css</file>
+    <file compressed="true">elementary.css</file>
+    <file compressed="true">elementary-dark.css</file>
+    <file compressed="true">style.css</file>
+    <file compressed="true">style-dark.css</file>
+    <file compressed="true">style-hc.css</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/dialogs/add-edit-command.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/dialogs/attach.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/dialogs/change-access.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/dialogs/change-password.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/dialogs/join-create-network.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/menus/member-menu.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/menus/network-list-menu.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/menus/network-menu.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/network-list.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/shortcuts-dialog.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/shortcuts-window.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/sidebar.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/command-entry-row.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/command-variable-button.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/commands-editor.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/commands-editor-row.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/network-list-item.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/sidebar-row.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/widgets/sidebar-page.ui</file>
+    <file compressed="true" preprocess="xml-stripblanks">ui/window.ui</file>
   </gresource>
 </gresources>
