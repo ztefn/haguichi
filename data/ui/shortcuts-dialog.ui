@@ -76,7 +76,7 @@
         </child>
         <child>
           <object class="AdwShortcutsItem">
-            <property name="accelerator">&lt;Primary&gt;R F5</property>
+            <property name="accelerator">F5 &lt;Primary&gt;R</property>
             <property name="title" translatable="yes">Refresh</property>
           </object>
         </child>
