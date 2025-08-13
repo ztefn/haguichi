@@ -33,6 +33,15 @@ windowcontrols button {
 
 
 /*
+ * Set minimum height for main window headerbars
+ */
+
+#main-window headerbar {
+  min-height: 27px;
+}
+
+
+/*
  * Give shortcuts window a flat appearance
  */
 
