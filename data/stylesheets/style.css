@@ -1,4 +1,4 @@
-@import url("resource:///com/github/ztefn/haguichi/base.css");
+@import "base.css";
 
 window.custom .suggested-action {
   color: @dark_4;
