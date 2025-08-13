@@ -20,6 +20,9 @@ namespace Haguichi {
         private unowned Gtk.Stack stack;
 
         [GtkChild]
+        private unowned Gtk.ScrolledWindow scrolled_window;
+
+        [GtkChild]
         private unowned SidebarPage network_page;
         [GtkChild]
         private unowned SidebarPage member_page;
@@ -109,6 +112,11 @@ namespace Haguichi {
         }
 
         [GtkCallback]
+        public void set_reveal_sidebar_title () {
+            win.sidebar_title_revealer.reveal_child = (scrolled_window.vadjustment.value >= 24);
+        }
+
+        [GtkCallback]
         private void on_network_leave () {
             network.leave ();
         }
@@ -190,6 +198,8 @@ namespace Haguichi {
         public void set_network (Network _network) {
             network = _network;
 
+            win.sidebar_title.title = network.name;
+
             int total, online;
             network.return_member_count (out total, out online);
 
@@ -222,6 +232,8 @@ namespace Haguichi {
 
         public void set_member (Member _member) {
             member = _member;
+
+            win.sidebar_title.title = member.nick;
 
             member_page.heading              = member.nick;
 
@@ -256,6 +268,10 @@ namespace Haguichi {
         }
 
         public void show_page (string page) {
+            if (page == "Information") {
+                win.sidebar_title.title = _("Information");
+            }
+
             stack.visible_child_name = page;
         }
     }

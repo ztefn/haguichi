@@ -2,13 +2,19 @@
 <interface>
   <template class="HaguichiSidebar" parent="AdwBin">
     <child>
-      <object class="GtkStack" id="stack">
+      <object class="GtkScrolledWindow" id="scrolled_window">
+        <property name="vadjustment">
+          <object class="GtkAdjustment">
+            <signal name="value_changed" handler="set_reveal_sidebar_title"/>
+          </object>
+        </property>
         <child>
-          <object class="GtkStackPage">
-            <property name="name">Information</property>
-            <property name="child">
-              <object class="GtkScrolledWindow">
-                <child>
+          <object class="GtkStack" id="stack">
+            <property name="vhomogeneous">false</property>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">Information</property>
+                <property name="child">
                   <object class="HaguichiSidebarPage">
                     <property name="heading" translatable="yes">Information</property>
                     <property name="heading-selectable">false</property>
@@ -63,17 +69,13 @@
                       </object>
                     </child>
                   </object>
-                </child>
+                </property>
               </object>
-            </property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkStackPage">
-            <property name="name">Network</property>
-            <property name="child">
-              <object class="GtkScrolledWindow">
-                <child>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">Network</property>
+                <property name="child">
                   <object class="HaguichiSidebarPage" id="network_page">
                     <child type="row">
                       <object class="HaguichiSidebarRow" id="network_status_row">
@@ -172,17 +174,13 @@
                       </object>
                     </child>
                   </object>
-                </child>
+                </property>
               </object>
-            </property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkStackPage">
-            <property name="name">Member</property>
-            <property name="child">
-              <object class="GtkScrolledWindow">
-                <child>
+            </child>
+            <child>
+              <object class="GtkStackPage">
+                <property name="name">Member</property>
+                <property name="child">
                   <object class="HaguichiSidebarPage" id="member_page">
                     <child type="row">
                       <object class="HaguichiSidebarRow" id="member_status_row">
@@ -266,9 +264,9 @@
                       </object>
                     </child>
                   </object>
-                </child>
+                </property>
               </object>
-            </property>
+            </child>
           </object>
         </child>
       </object>

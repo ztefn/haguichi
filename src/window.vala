@@ -27,6 +27,10 @@ namespace Haguichi {
         [GtkChild]
         public unowned Sidebar sidebar;
         [GtkChild]
+        public unowned Gtk.Revealer sidebar_title_revealer;
+        [GtkChild]
+        public unowned Adw.WindowTitle sidebar_title;
+        [GtkChild]
         public unowned NetworkList network_list;
         [GtkChild]
         private unowned Gtk.Button refresh_button;
