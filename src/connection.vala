@@ -51,7 +51,6 @@ namespace Haguichi {
 
         public void clear_networks () {
             networks = new List<Network> ();
-            win.network_list.remove_all ();
         }
 
         public bool has_long_nick (string client_id) {
