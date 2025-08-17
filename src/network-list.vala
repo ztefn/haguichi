@@ -382,14 +382,37 @@ namespace Haguichi {
             if (store.n_items > 0) {
                 // Make sure the scrollbar is at top most position
                 list_view.scroll_to (0, ListScrollFlags.NONE, null);
+
+                // Select specified item
+                if (select_network_id != null) {
+                    foreach (Network network in connection.networks) {
+                        if (select_network_id == network.id) {
+                            uint pos = -1;
+                            if (select_member_id != null) {
+                                Member member = network.return_member_by_id (select_member_id);
+                                if (member != null) {
+                                    pos = find_selection_model_position (member);
+                                }
+                            } else {
+                                pos = find_selection_model_position (network);
+                            }
+
+                            // Only continue if selection is visible
+                            if (pos < selection_model.n_items) {
+                                list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
+                                selection_model.selected = pos;
+                            }
+                        }
+                    }
+                }
             }
 
             if (restore_search_text != null) {
                 win.search_bar.search_mode_enabled = true;
                 win.search_entry.text = restore_search_text;
-                // Clear variable
-                restore_search_text = null;
             }
+
+            clear_state ();
         }
 
         public void add_network (Network network) {
@@ -414,39 +437,6 @@ namespace Haguichi {
             tree_list_model.get_row (find_tree_model_position (network)).notify["expanded"].connect (() => {
                 save_collapsed_networks ();
             });
-
-            // Select specified item
-            if (select_network_id == network.id) {
-                uint pos = -1;
-                if (select_member_id != null) {
-                    Member member = network.return_member_by_id (select_member_id);
-                    if (member != null) {
-                        pos = find_selection_model_position (member);
-                    }
-                } else {
-                    pos = find_selection_model_position (network);
-                }
-
-                // Only continue if selection is visible
-                if (pos < selection_model.n_items) {
-                    // Scroll to and select item after network list is fully updated
-                    new Thread<void*> (null, () => {
-                        Thread.usleep (100000);
-
-                        Idle.add_full (Priority.HIGH_IDLE, () => {
-                            list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
-                            selection_model.selected = pos;
-                            return false;
-                        });
-
-                        return null;
-                    });
-                }
-
-                // Clear variables
-                select_member_id  = null;
-                select_network_id = null;
-            }
         }
 
         public void remove_network (Network network) {
