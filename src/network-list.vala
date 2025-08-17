@@ -387,7 +387,7 @@ namespace Haguichi {
             remove_all ();
 
             foreach (Network network in connection.networks) {
-                add_network (network);
+                add_network (network, false);
             }
 
             if (store.n_items > 0) {
@@ -395,27 +395,7 @@ namespace Haguichi {
                 list_view.scroll_to (0, ListScrollFlags.NONE, null);
 
                 // Select specified item
-                if (select_network_id != null) {
-                    foreach (Network network in connection.networks) {
-                        if (select_network_id == network.id) {
-                            uint pos = -1;
-                            if (select_member_id != null) {
-                                Member member = network.return_member_by_id (select_member_id);
-                                if (member != null) {
-                                    pos = find_selection_model_position (member);
-                                }
-                            } else {
-                                pos = find_selection_model_position (network);
-                            }
-
-                            // Only continue if selection is visible
-                            if (pos < selection_model.n_items) {
-                                list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
-                                selection_model.selected = pos;
-                            }
-                        }
-                    }
-                }
+                select_item ();
             }
 
             if (restore_search_text != null) {
@@ -426,7 +406,7 @@ namespace Haguichi {
             clear_state ();
         }
 
-        public void add_network (Network network) {
+        public void add_network (Network network, bool select) {
             store.append (network);
 
             network.init ();
@@ -448,6 +428,10 @@ namespace Haguichi {
             tree_list_model.get_row (find_tree_model_position (network)).notify["expanded"].connect (() => {
                 save_collapsed_networks ();
             });
+
+            if (select) {
+                select_item ();
+            }
         }
 
         public void remove_network (Network network) {
@@ -498,6 +482,30 @@ namespace Haguichi {
             }
 
             return null;
+        }
+
+        private void select_item () {
+            if (select_network_id != null) {
+                foreach (Network network in connection.networks) {
+                    if (select_network_id == network.id) {
+                        uint pos = -1;
+                        if (select_member_id != null) {
+                            Member member = network.return_member_by_id (select_member_id);
+                            if (member != null) {
+                                pos = find_selection_model_position (member);
+                            }
+                        } else {
+                            pos = find_selection_model_position (network);
+                        }
+
+                        // Only continue if selection is visible
+                        if (pos < selection_model.n_items) {
+                            list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
+                            selection_model.selected = pos;
+                        }
+                    }
+                }
+            }
         }
 
         public void unselect () {

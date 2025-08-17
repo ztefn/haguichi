@@ -37,7 +37,7 @@ namespace Haguichi {
 
         public void add_network (Network network) {
             networks.append (network);
-            win.network_list.add_network (network);
+            win.network_list.add_network (network, true);
         }
 
         public void remove_network (Network network) {
