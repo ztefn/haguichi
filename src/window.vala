@@ -231,6 +231,7 @@ namespace Haguichi {
 
         private void start_search_action () {
             search_bar.search_mode_enabled = true;
+            search_entry.grab_focus ();
         }
 
         private void refresh_action () {
