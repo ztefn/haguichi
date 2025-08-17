@@ -238,12 +238,15 @@ approve  : auto""".printf (id, name);
         public void remove_member (Member member) {
             members.remove (member);
 
+            win.network_list.autoselect (true);
+
             uint position;
             store.find (member, out position);
             store.remove (position);
 
-            show_hide_expander ();
             win.network_list.selection_changed ();
+
+            show_hide_expander ();
         }
 
         public void go_online () {

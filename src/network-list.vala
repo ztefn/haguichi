@@ -79,6 +79,7 @@ namespace Haguichi {
                     sort_by = settings.get_string ("sort-by");
                     sort ();
                 } else if (key == "show-offline-members") {
+                    autoselect (true);
                     show_offline_members = settings.get_boolean ("show-offline-members");
                     refilter ();
                 }
@@ -103,11 +104,21 @@ namespace Haguichi {
             });
 
             filter_model = new FilterListModel (sort_model, filter);
+            filter_model.items_changed.connect (() => {
+                if (Controller.last_status >= 6) {
+                    // When items are added or removed from the model no selection-changed signal will be emitted
+                    // so we need to listen to items-changed as well and manually call selection_changed()
+                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                        selection_changed ();
+                        return false;
+                    });
+                }
+            });
 
             selection_model = new SingleSelection (filter_model);
             selection_model.autoselect = false;
             selection_model.can_unselect = true;
-            selection_model.selection_changed.connect ((position) => {
+            selection_model.selection_changed.connect (() => {
                 selection_changed ();
             });
 
@@ -440,6 +451,8 @@ namespace Haguichi {
         }
 
         public void remove_network (Network network) {
+            autoselect (true);
+
             uint position;
             store.find (network, out position);
             store.remove (position);
@@ -464,6 +477,7 @@ namespace Haguichi {
 
         public void refilter () {
             filter.changed (FilterChange.DIFFERENT);
+            selection_changed ();
             set_connected_stack_page ();
         }
 
@@ -496,6 +510,10 @@ namespace Haguichi {
             }
         }
 
+        public void autoselect (bool autoselect) {
+            selection_model.autoselect = autoselect;
+        }
+
         public void save_state () {
             if (win.search_bar.search_mode_enabled) {
                 restore_search_text = win.search_entry.text;
@@ -518,6 +536,8 @@ namespace Haguichi {
         }
 
         public void selection_changed () {
+            autoselect (false);
+
             var item = get_selected_item ();
 
             if (item is Network) {

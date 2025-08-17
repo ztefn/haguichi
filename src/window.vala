@@ -122,7 +122,8 @@ namespace Haguichi {
             indicator.active = ui.get_boolean ("show-indicator");
             update_indicator_status ();
 
-            search_entry.search_changed.connect (()=> {
+            search_entry.search_changed.connect (() => {
+                network_list.autoselect (search_entry.text.length > 0);
                 network_list.refilter ();
             });
 
