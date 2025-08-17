@@ -177,7 +177,7 @@ namespace Haguichi {
         }
 
         [GtkCallback]
-        private void on_activate () {
+        public void on_activate () {
             var item = get_selected_item ();
 
             if (item is Network) {

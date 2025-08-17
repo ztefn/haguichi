@@ -126,6 +126,9 @@ namespace Haguichi {
                 network_list.autoselect (search_entry.text.length > 0);
                 network_list.refilter ();
             });
+            search_entry.activate.connect (() => {
+                network_list.on_activate ();
+            });
 
             hide.connect (() => {
                 session.visibility_changed (false);
