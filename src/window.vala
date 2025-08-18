@@ -122,6 +122,23 @@ namespace Haguichi {
             indicator.active = ui.get_boolean ("show-indicator");
             update_indicator_status ();
 
+            // Create controller to capture Delete key presses in the search entry
+            // and activate row delete action when there is no actual text to delete
+            var key_controller = new Gtk.EventControllerKey ();
+            key_controller.propagation_phase = Gtk.PropagationPhase.CAPTURE;
+            key_controller.key_pressed.connect ((keyval, keycode, state) => {
+                if (keyval == Gdk.Key.Delete) {
+                    if (search_entry.cursor_position == search_entry.text.length) {
+                        network_list.on_delete_row ();
+                        // Stop propagation
+                        return true;
+                    }
+                }
+                // Continue propagation
+                return false;
+            });
+
+            search_entry.add_controller (key_controller);
             search_entry.search_changed.connect (() => {
                 network_list.autoselect (search_entry.text.length > 0);
                 network_list.refilter ();

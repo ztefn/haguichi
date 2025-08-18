@@ -207,7 +207,7 @@ namespace Haguichi {
             }
         }
 
-        private void on_delete_row () {
+        public void on_delete_row () {
             var item = get_selected_item ();
 
             if (item is Network) {
