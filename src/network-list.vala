@@ -104,14 +104,11 @@ namespace Haguichi {
             });
 
             filter_model = new FilterListModel (sort_model, filter);
-            filter_model.items_changed.connect (() => {
+            filter_model.items_changed.connect_after (() => {
                 if (Controller.last_status >= 6) {
                     // When items are added or removed from the model no selection-changed signal will be emitted
                     // so we need to listen to items-changed as well and manually call selection_changed()
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
-                        selection_changed ();
-                        return false;
-                    });
+                    selection_changed ();
                 }
             });
 
