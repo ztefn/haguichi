@@ -15,6 +15,9 @@ namespace Haguichi {
     public class CommandsEditorRow : Adw.ActionRow {
         private CommandsEditor editor;
 
+        private double drag_x = 0;
+        private double drag_y = 0;
+
         public bool   is_active;
         public bool   is_default;
         public string label;
@@ -86,12 +89,17 @@ namespace Haguichi {
         }
 
         [GtkCallback]
-        public Gdk.ContentProvider on_drag_prepare() {
+        public Gdk.ContentProvider on_drag_prepare (double x, double y) {
+            drag_x = x;
+            drag_y = y;
+
             return new Gdk.ContentProvider.for_value (this);
         }
 
         [GtkCallback]
-        public void on_drag_begin (Gdk.Drag drag) {
+        public void on_drag_begin (Gtk.DragSource source, Gdk.Drag drag) {
+            drag.set_hotspot ((int) drag_x, (int) drag_y);
+
             var drag_row = new CommandsEditorRow (editor, is_active, is_default, label, command_ipv4, command_ipv6, priority);
             // Property 'use_underline' with value 'true' triggers a segmentation fault here,
             // so turn it off and remove underscores manually
