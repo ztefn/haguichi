@@ -508,8 +508,6 @@ namespace Haguichi {
 
             if (item != null) {
                 selection_model.unselect_item (find_selection_model_position (item));
-            } else {
-                selection_changed ();
             }
         }
 
