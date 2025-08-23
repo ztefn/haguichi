@@ -105,11 +105,9 @@ namespace Haguichi {
 
             filter_model = new FilterListModel (sort_model, filter);
             filter_model.items_changed.connect_after (() => {
-                if (Controller.last_status >= 6) {
-                    // When items are added or removed from the model no selection-changed signal will be emitted
-                    // so we need to listen to items-changed as well and manually call selection_changed()
-                    selection_changed ();
-                }
+                // When items are added or removed from the model no selection-changed signal will be emitted
+                // so we need to listen to items-changed as well and manually call selection_changed()
+                selection_changed ();
             });
 
             selection_model = new SingleSelection (filter_model);
@@ -541,7 +539,10 @@ namespace Haguichi {
         }
 
         public void selection_changed () {
-            autoselect (false);
+            Idle.add_full (Priority.HIGH_IDLE, () => {
+                autoselect (false);
+                return false;
+            });
 
             var item = get_selected_item ();
 
