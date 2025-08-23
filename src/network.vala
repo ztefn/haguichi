@@ -244,8 +244,6 @@ approve  : auto""".printf (id, name);
             store.find (member, out position);
             store.remove (position);
 
-            win.network_list.selection_changed ();
-
             show_hide_expander ();
         }
 
