@@ -133,7 +133,11 @@ Engine override:
                 Gtk.MICRO_VERSION.to_string (),
                 Adw.VERSION_S,
                 app.style_manager.color_scheme.to_string ().replace ("ADW_COLOR_SCHEME_", "").down (),
+#if ADW_1_6
                 app.style_manager.accent_color.to_string ().replace ("ADW_ACCENT_COLOR_", "").down (),
+#else
+                "(not available)",
+#endif
                 app.style_manager.high_contrast.to_string (),
                 gtk_settings.gtk_theme_name,
                 gtk_settings.gtk_icon_theme_name,
