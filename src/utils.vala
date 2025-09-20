@@ -84,6 +84,8 @@ namespace Haguichi {
         }
 
         public static string get_debug_info () {
+            var gtk_settings = Gtk.Settings.get_default ();
+
             var kernel   = Command.return_output ("uname -sri").strip ();
             var distro   = Command.return_output ("lsb_release -ds").strip ();
             var codename = Command.return_output ("lsb_release -cs").strip ();
@@ -98,6 +100,13 @@ Kernel: %s
 GLib: %s.%s.%s
 GTK: %s.%s.%s
 Adwaita: %s
+Color scheme: %s
+Accent color: %s
+High contrast: %s
+Theme: %s
+Icons: %s
+Font: %s
+Decoration layout: %s
 Locale: %s
 Desktop: %s
 Session: %s
@@ -123,6 +132,13 @@ Engine override:
                 Gtk.MINOR_VERSION.to_string (),
                 Gtk.MICRO_VERSION.to_string (),
                 Adw.VERSION_S,
+                app.style_manager.color_scheme.to_string ().replace ("ADW_COLOR_SCHEME_", "").down (),
+                app.style_manager.accent_color.to_string ().replace ("ADW_ACCENT_COLOR_", "").down (),
+                app.style_manager.high_contrast.to_string (),
+                gtk_settings.gtk_theme_name,
+                gtk_settings.gtk_icon_theme_name,
+                gtk_settings.gtk_font_name,
+                gtk_settings.gtk_decoration_layout,
                 Environment.get_variable ("LANG"),
                 Environment.get_variable ("XDG_CURRENT_DESKTOP"),
                 Environment.get_variable ("XDG_SESSION_TYPE"),
