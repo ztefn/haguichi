@@ -436,10 +436,7 @@ namespace Haguichi {
             store.find (network, out position);
             store.remove (position);
 
-            // Show empty status page when the last network has been removed
-            if (store.n_items == 0) {
-                set_connected_stack_page ();
-            }
+            refilter ();
         }
 
         public void remove_all () {
