@@ -170,6 +170,7 @@ namespace Haguichi {
                 "deepin-terminal",
                 "qterminal",
                 "lxterminal",
+                "cosmic-term",
                 "uxterm",
                 "xterm"
             }, "gnome-terminal");
@@ -189,7 +190,8 @@ namespace Haguichi {
                 "dolphin",
                 "dde-file-manager",
                 "pcmanfm-qt",
-                "pcmanfm"
+                "pcmanfm",
+                "cosmic-files"
             }, "nautilus");
 
             debug ("determine_file_manager: %s", file_manager);
