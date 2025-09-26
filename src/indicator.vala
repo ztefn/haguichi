@@ -23,6 +23,7 @@ namespace Haguichi {
         public Indicator () {
             // Only on specific desktops we use symbolic icons
             if (current_desktop.contains ("GNOME") ||
+                current_desktop == "COSMIC" ||
                 current_desktop == "MATE" ||
                 current_desktop == "Pantheon" ||
                 current_desktop == "X-Cinnamon") {
