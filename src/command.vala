@@ -275,7 +275,12 @@ namespace Haguichi {
                 command = command.replace ("%N",  nick   );
                 command = command.replace ("%ID", id     );
 
-                bool use_double_dash = strv_contains ({"gnome-terminal", "ptyxis", "flatpak run app.devsuite.Ptyxis"}, terminal);
+                bool use_double_dash = strv_contains ({
+                    "gnome-terminal",
+                    "ptyxis",
+                    "flatpak run app.devsuite.Ptyxis",
+                    "cosmic-term"
+                }, terminal);
 
                 string option = use_double_dash ? "--" : "-e";
                 string quote  = use_double_dash ? ""   : "\"";
