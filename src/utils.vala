@@ -87,15 +87,13 @@ namespace Haguichi {
             var gtk_settings = Gtk.Settings.get_default ();
 
             var kernel   = Command.return_output ("uname -sri").strip ();
-            var distro   = Command.return_output ("lsb_release -ds").strip ();
-            var codename = Command.return_output ("lsb_release -cs").strip ();
+            var distro   = Command.return_output ("awk -F= '/^PRETTY_NAME/ {gsub(/\"/,\"\"); print $2}' /etc/os-release").strip ();
             var initsys  = Command.return_output ("ps -p 1 -o comm=").strip ();
             var engine   = Command.return_output ("cat %s".printf (Hamachi.CONFIG_PATH));
 
             return """
 Haguichi: %s
 Distribution: %s
-Codename: %s
 Kernel: %s
 GLib: %s.%s.%s
 GTK: %s.%s.%s
@@ -123,7 +121,6 @@ Engine override:
 %s""".printf (
                 Config.VERSION,
                 distro,
-                codename,
                 kernel,
                 Version.MAJOR.to_string (),
                 Version.MINOR.to_string (),
