@@ -45,9 +45,9 @@ namespace Haguichi {
             });
 
             default_emblem.icon_name = Utils.get_available_theme_icon ({
+                "object-select-symbolic",
                 "emblem-default-symbolic",
                 "emblem-ok-symbolic",
-                "object-select-symbolic",
                 "selection-mode-symbolic"
             });
         }
