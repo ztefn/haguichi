@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-05 17:34+0200\n"
+"POT-Creation-Date: 2025-10-11 15:19+0200\n"
 "PO-Revision-Date: 2024-07-27 14:48+0000\n"
 "Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -125,7 +125,7 @@ msgstr "_Simpan"
 msgid "Attach to Account"
 msgstr "Lampirkan ke Akun"
 
-#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:17 src/sidebar.vala:184
+#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:23 src/sidebar.vala:192
 msgid "Account"
 msgstr "Akun"
 
@@ -137,7 +137,7 @@ msgstr "Sertakan seluruh jaringan yang dibuat oleh klien"
 msgid "_Attach"
 msgstr "L_ampirkan"
 
-#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:133
+#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:135
 msgid "Change Access"
 msgstr "Ubah Akses"
 
@@ -165,7 +165,7 @@ msgstr "Secara Manual"
 msgid "C_hange"
 msgstr "Uba_h"
 
-#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:117
+#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:119
 msgid "Change Password"
 msgstr "Ubah Sandi"
 
@@ -173,7 +173,7 @@ msgstr "Ubah Sandi"
 msgid "New Password"
 msgstr "Sandi baru"
 
-#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:108
+#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:110
 msgid "Network ID"
 msgstr "ID Jaringan"
 
@@ -181,11 +181,11 @@ msgstr "ID Jaringan"
 msgid "Password"
 msgstr "Kata Sandi"
 
-#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:231 src/bubble.vala:58
+#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:229 src/bubble.vala:58
 msgid "_Approve"
 msgstr "_Setujui"
 
-#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:244 src/bubble.vala:59
+#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:242 src/bubble.vala:59
 msgid "_Reject"
 msgstr "_Tolak"
 
@@ -202,7 +202,7 @@ msgid "_Copy Client ID"
 msgstr "_Salin ID Klien"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:257 src/member.vala:234
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:255 src/member.vala:234
 msgid "_Evict"
 msgstr "_Keluarkan"
 
@@ -210,29 +210,29 @@ msgstr "_Keluarkan"
 msgid "_Details"
 msgstr "_Rincian"
 
-#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:561
-#: src/indicator.vala:111
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:570
+#: src/indicator.vala:112
 msgid "_Join Network…"
 msgstr "_Bergabung ke dalam Jaringan…"
 
-#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:565
-#: src/indicator.vala:116
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:574
+#: src/indicator.vala:117
 msgid "_Create Network…"
 msgstr "_Buat Jaringan…"
 
-#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:151
+#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:153
 msgid "_Go Online"
 msgstr "_Masuk Jaringan"
 
-#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:164
+#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:166
 msgid "_Go Offline"
 msgstr "_Keluar Jaringan"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:347
+#: data/ui/menus/network-menu.ui:22 src/network.vala:348
 msgid "_Leave"
 msgstr "_Pergi"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:376
+#: data/ui/menus/network-menu.ui:28 src/network.vala:377
 msgid "_Delete"
 msgstr "_Hapus"
 
@@ -306,7 +306,7 @@ msgid "_Disconnect on quit"
 msgstr "_Diskonek ketika keluar"
 
 #: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
-#: data/ui/sidebar.ui:194
+#: data/ui/sidebar.ui:192
 msgid "Commands"
 msgstr "Perintah"
 
@@ -395,7 +395,7 @@ msgstr "Pintasan papan tik"
 msgid "Quit"
 msgstr "Keluar"
 
-#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:225
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:223
 msgid "Connection"
 msgstr "Koneksi"
 
@@ -410,7 +410,7 @@ msgid "Disconnect"
 msgstr "Putus koneksi"
 
 #: data/ui/shortcuts-dialog.ui:64 data/ui/shortcuts-window.ui:63
-#: data/ui/window.ui:487
+#: data/ui/window.ui:496
 msgid "Network List"
 msgstr "Senarai Jaringan"
 
@@ -448,60 +448,60 @@ msgstr "Sembunyikan semua jaringan"
 msgid "Execute command"
 msgstr "Jalankan perintah"
 
-#: data/ui/sidebar.ui:13
+#: data/ui/sidebar.ui:19 data/ui/window.ui:487 src/sidebar.vala:272
 msgid "Information"
 msgstr "Informasi"
 
-#: data/ui/sidebar.ui:23
+#: data/ui/sidebar.ui:29
 msgid "Attach"
 msgstr "Lampirkan"
 
-#: data/ui/sidebar.ui:35
+#: data/ui/sidebar.ui:41
 msgid "Cancel"
 msgstr "Batal"
 
-#: data/ui/sidebar.ui:47 data/ui/sidebar.ui:205
+#: data/ui/sidebar.ui:53 data/ui/sidebar.ui:203
 #: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "ID Klien"
 
-#: data/ui/sidebar.ui:52 data/ui/sidebar.ui:210
+#: data/ui/sidebar.ui:58 data/ui/sidebar.ui:208
 msgid "IPv4 Address"
 msgstr "Alamat IPv4"
 
-#: data/ui/sidebar.ui:57 data/ui/sidebar.ui:215
+#: data/ui/sidebar.ui:63 data/ui/sidebar.ui:213
 msgid "IPv6 Address"
 msgstr "Alamat IPv6"
 
-#: data/ui/sidebar.ui:62
+#: data/ui/sidebar.ui:68
 msgid "Hamachi Version"
 msgstr "Versi Hamachi"
 
-#: data/ui/sidebar.ui:80 data/ui/sidebar.ui:189
+#: data/ui/sidebar.ui:82 data/ui/sidebar.ui:187
 msgid "Status"
 msgstr "Status"
 
-#: data/ui/sidebar.ui:85
+#: data/ui/sidebar.ui:87
 msgid "Leave Network"
 msgstr "Keluar dari Jaringan"
 
-#: data/ui/sidebar.ui:96
+#: data/ui/sidebar.ui:98
 msgid "Delete Network"
 msgstr "Hapus Jaringan"
 
-#: data/ui/sidebar.ui:113
+#: data/ui/sidebar.ui:115
 msgid "Owner"
 msgstr "Pemilik"
 
-#: data/ui/sidebar.ui:129
+#: data/ui/sidebar.ui:131
 msgid "Members"
 msgstr "Anggota"
 
-#: data/ui/sidebar.ui:145
+#: data/ui/sidebar.ui:147
 msgid "Capacity"
 msgstr "Kapasitas"
 
-#: data/ui/sidebar.ui:220
+#: data/ui/sidebar.ui:218
 msgid "Tunnel"
 msgstr "Tunnel"
 
@@ -526,23 +526,23 @@ msgstr "Pengelola Berkas"
 msgid "Remote Desktop Viewer"
 msgstr ""
 
-#: data/ui/widgets/commands-editor.ui:11
+#: data/ui/widgets/commands-editor.ui:12
 msgid "_Restore Default"
 msgstr ""
 
-#: data/ui/widgets/commands-editor.ui:34
+#: data/ui/widgets/commands-editor.ui:35
 msgid "_Add Command"
 msgstr "_Tambah Perintah"
 
-#: data/ui/widgets/commands-editor.ui:55
+#: data/ui/widgets/commands-editor.ui:56
 msgid "_Browse Shares"
 msgstr "_Menelusuri Shares"
 
-#: data/ui/widgets/commands-editor.ui:58
+#: data/ui/widgets/commands-editor.ui:59
 msgid "_View Remote Desktop"
 msgstr "_Lihat Remote Destop"
 
-#: data/ui/widgets/commands-editor.ui:61
+#: data/ui/widgets/commands-editor.ui:62
 msgid "_Ping"
 msgstr "_Ping"
 
@@ -558,19 +558,23 @@ msgstr "Pilihan"
 msgid "_Edit…"
 msgstr "_Sunting…"
 
-#: data/ui/widgets/commands-editor-row.ui:67
+#: data/ui/widgets/commands-editor-row.ui:65
+msgid "Du_plicate…"
+msgstr "_Duplikat…"
+
+#: data/ui/widgets/commands-editor-row.ui:71
 msgid "Move _Up"
 msgstr "Pindah ke _atas"
 
-#: data/ui/widgets/commands-editor-row.ui:71
+#: data/ui/widgets/commands-editor-row.ui:75
 msgid "Move _Down"
 msgstr "Pindah ke _bawah"
 
-#: data/ui/widgets/commands-editor-row.ui:77
+#: data/ui/widgets/commands-editor-row.ui:81
 msgid "_Set As Default Action"
 msgstr "_Set sebagai tindakan default"
 
-#: data/ui/widgets/commands-editor-row.ui:83
+#: data/ui/widgets/commands-editor-row.ui:87
 msgid "_Remove"
 msgstr "_Hapus"
 
@@ -578,7 +582,7 @@ msgstr "_Hapus"
 msgid "Copy"
 msgstr "Salin"
 
-#: data/ui/window.ui:195 src/window.vala:516
+#: data/ui/window.ui:195 src/window.vala:542
 msgid "Initializing"
 msgstr "Menginisialisasi"
 
@@ -638,39 +642,39 @@ msgstr "Anda harus mengkonfigurasi Hamachi sebelum anda dapat terhubung"
 msgid "C_onfigure"
 msgstr "K_onfigurasi"
 
-#: data/ui/window.ui:507 src/indicator.vala:123
+#: data/ui/window.ui:516 src/indicator.vala:124
 msgid "_Information"
 msgstr "_Informasi"
 
-#: data/ui/window.ui:514
+#: data/ui/window.ui:523
 msgid "Sort by _Name"
 msgstr "Urutkan berdasar _Nama"
 
-#: data/ui/window.ui:520
+#: data/ui/window.ui:529
 msgid "Sort by _Status"
 msgstr "Urutkan berdasar _Status"
 
-#: data/ui/window.ui:528
+#: data/ui/window.ui:537
 msgid "Show _Offline Members"
 msgstr "Tampilkan Anggota _Luring"
 
-#: data/ui/window.ui:535
+#: data/ui/window.ui:544
 msgid "_Preferences"
 msgstr "_Preferensi"
 
-#: data/ui/window.ui:539
+#: data/ui/window.ui:548
 msgid "_Keyboard Shortcuts"
 msgstr "Pintasan Papan Ti_k"
 
-#: data/ui/window.ui:543
+#: data/ui/window.ui:552
 msgid "_Help"
 msgstr "_Bantuan"
 
-#: data/ui/window.ui:547
+#: data/ui/window.ui:556
 msgid "_About Haguichi"
 msgstr "Tent_ang Haguichi"
 
-#: data/ui/window.ui:553 src/indicator.vala:131
+#: data/ui/window.ui:562 src/indicator.vala:132
 msgid "_Quit"
 msgstr "_Keluar"
 
@@ -698,7 +702,7 @@ msgstr "Login Hamachi gagal"
 msgid "Updating"
 msgstr "Memperbarui"
 
-#: src/controller.vala:622 src/indicator.vala:84 src/window.vala:520
+#: src/controller.vala:622 src/indicator.vala:85 src/window.vala:546
 msgid "Connected"
 msgstr "Terhubung"
 
@@ -826,7 +830,7 @@ msgstr "ID jaringan telah digunakan"
 msgid "Unknown"
 msgstr "Tidak Dikenal"
 
-#: src/hamachi.vala:578 src/window.vala:441
+#: src/hamachi.vala:578 src/window.vala:467
 msgid "Anonymous"
 msgstr "Anonim"
 
@@ -862,23 +866,23 @@ msgstr ""
 msgid "Archive does not contain expected files"
 msgstr "Arsip tidak berisi file yang sesuai"
 
-#: src/indicator.vala:84 src/window.vala:518
+#: src/indicator.vala:85 src/window.vala:544
 msgid "Connecting"
 msgstr "Menghubungkan"
 
-#: src/indicator.vala:84 src/window.vala:522
+#: src/indicator.vala:85 src/window.vala:548
 msgid "Disconnected"
 msgstr "Koneksi terputus"
 
-#: src/indicator.vala:92
+#: src/indicator.vala:93
 msgid "_Show Haguichi"
 msgstr "_Tampilkan Haguichi"
 
-#: src/indicator.vala:103
+#: src/indicator.vala:104
 msgid "_Disconnect"
 msgstr "_Putus koneksi"
 
-#: src/indicator.vala:103
+#: src/indicator.vala:104
 msgid "C_onnect"
 msgstr "S_ambung"
 
@@ -897,19 +901,19 @@ msgstr ""
 msgid "You"
 msgstr "Anda"
 
-#: src/network.vala:344
+#: src/network.vala:345
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Apakah anda yakin untuk meninggalkan jaringan “{0}”?"
 
-#: src/network.vala:345
+#: src/network.vala:346
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Jika diijinkan, anda dapat bergabung kembali ke jaringan ini."
 
-#: src/network.vala:373
+#: src/network.vala:374
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Apakah anda yakin untuk menghapus jaringan “{0}”?"
 
-#: src/network.vala:374
+#: src/network.vala:375
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Jika anda menghapus jaringan, maka akan hilang secara permanen."
 
@@ -917,51 +921,51 @@ msgstr "Jika anda menghapus jaringan, maka akan hilang secara permanen."
 msgid "Not present"
 msgstr "Tidak ada"
 
-#: src/preferences.vala:276
+#: src/preferences.vala:285
 msgid "All supported archives"
 msgstr "Semua arsip yang didukung"
 
-#: src/preferences.vala:296
+#: src/preferences.vala:305
 msgid "Save a Backup"
 msgstr "Simpan data cadangan"
 
-#: src/preferences.vala:318
+#: src/preferences.vala:327
 msgid "Restore from Backup"
 msgstr "Pulihkan dari data cadangan"
 
-#: src/preferences.vala:319 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
 msgid "_Restore"
 msgstr "_Pulihkan"
 
-#: src/preferences.vala:363
+#: src/preferences.vala:372
 msgid "Never"
 msgstr "Jangan Pernah"
 
-#: src/preferences.vala:386
+#: src/preferences.vala:395
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
 msgstr[0] "%S detik"
 
-#: src/preferences.vala:390
+#: src/preferences.vala:399
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
 msgstr[0] "%S menit"
 
-#: src/sidebar.vala:166
+#: src/sidebar.vala:174
 msgid "Unavailable"
 msgstr "Tidak Tersedia"
 
-#: src/sidebar.vala:184
+#: src/sidebar.vala:192
 msgid "pending"
 msgstr "tertunda"
 
-#: src/sidebar.vala:185
+#: src/sidebar.vala:193
 msgid "Not attached"
 msgstr "Tidak dilampirkan"
 
-#: src/sidebar.vala:201
+#: src/sidebar.vala:211
 msgid "{0} online, {1} total"
 msgstr "{0} daring, {1} total"
 
@@ -1009,37 +1013,37 @@ msgstr ""
 msgid "All customizations will be lost."
 msgstr ""
 
-#: src/window.vala:173
+#: src/window.vala:198
 msgid "Configuring"
 msgstr "Mengkonfigurasi"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:337
+#: src/window.vala:363
 msgid "translator-credits"
 msgstr ""
 "Abdul Munif Hanafi https://launchpad.net/~hahnavi\n"
 "Fattah Rizki https://launchpad.net/~galamarv\n"
 "Hertatijanto Hartono https://launchpad.net/~dvertx"
 
-#: src/window.vala:418
+#: src/window.vala:444
 msgid "Copied to clipboard"
 msgstr "Disalin ke papan klip"
 
-#: src/window.vala:453
+#: src/window.vala:479
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Mencoba koneksi ulang dalam {0} detik"
 
-#: src/window.vala:484
+#: src/window.vala:510
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi belum dipasang"
 
-#: src/window.vala:486
+#: src/window.vala:512
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi versi %s sudah kedaluwarsa"
 
-#: src/window.vala:585
+#: src/window.vala:611
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
