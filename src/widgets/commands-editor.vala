@@ -108,6 +108,10 @@ namespace Haguichi {
             new Haguichi.AddEditCommandDialog ("Edit", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
         }
 
+        public void duplicate_command (CommandsEditorRow row) {
+            new Haguichi.AddEditCommandDialog ("Add", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
+        }
+
         private void clear () {
             foreach (CommandsEditorRow row in rows) {
                 list_box.remove (row);

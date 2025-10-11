@@ -34,6 +34,7 @@ namespace Haguichi {
 
         construct {
             install_action ("row.edit",        null, (Gtk.WidgetActionActivateFunc) on_edit);
+            install_action ("row.duplicate",   null, (Gtk.WidgetActionActivateFunc) on_duplicate);
             install_action ("row.move-up",     null, (Gtk.WidgetActionActivateFunc) on_move_up);
             install_action ("row.move-down",   null, (Gtk.WidgetActionActivateFunc) on_move_down);
             install_action ("row.set-default", null, (Gtk.WidgetActionActivateFunc) on_set_deault);
@@ -70,6 +71,10 @@ namespace Haguichi {
 
         public void on_edit () {
             editor.edit_command (this);
+        }
+
+        public void on_duplicate () {
+            editor.duplicate_command (this);
         }
 
         public void on_move_up () {

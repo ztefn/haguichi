@@ -61,6 +61,10 @@
         <attribute name="label" translatable="yes">_Edit…</attribute>
         <attribute name="action">row.edit</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Du_plicate…</attribute>
+        <attribute name="action">row.duplicate</attribute>
+      </item>
     </section>
     <section>
       <item>
