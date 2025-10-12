@@ -15,10 +15,12 @@ namespace Haguichi {
     public class CommandsEditor : Adw.PreferencesGroup {
         private Settings settings;
         private string[] default_commands;
+        private string[] undo_remove_commands_string;
         private List<CommandsEditorRow> rows;
         private CommandsEditorRow selected_row;
         private ConfirmDialog dialog;
         private int insert_position;
+        private Adw.Toast toast;
 
         [GtkChild]
         unowned Gtk.Button restore_button;
@@ -60,10 +62,18 @@ namespace Haguichi {
                                         _("_Restore"),
                                         Adw.ResponseAppearance.DESTRUCTIVE);
             dialog.confirm.connect (() => {
-                settings.set_strv ("customizable", default_commands);
-                populate ();
-                update_commands ();
+                refill (default_commands);
             });
+        }
+
+        private void undo_remove () {
+            refill (undo_remove_commands_string);
+        }
+
+        private void refill (string[] commands_string) {
+            settings.set_strv ("customizable", commands_string);
+            populate ();
+            update_commands ();
         }
 
         public void set_default (CommandsEditorRow default_row) {
@@ -85,10 +95,21 @@ namespace Haguichi {
         }
 
         public void remove_command (CommandsEditorRow row) {
+            undo_remove_commands_string = compose_commands_string ();
+
             rows.remove (row);
             list_box.remove (row);
 
             update_commands ();
+
+            toast = new Adw.Toast (_("Removed command “%s”").printf (Utils.remove_mnemonics (_(row.label))));
+            toast.button_label = _("_Undo");
+            toast.button_clicked.connect (() => {
+                undo_remove ();
+            });
+
+            var dialog = (Adw.PreferencesDialog) get_ancestor (typeof (Adw.PreferencesDialog));
+            dialog.add_toast (toast);
         }
 
         public void update_selected_command (string label, string command_ipv4, string command_ipv6, string priority) {
@@ -155,6 +176,10 @@ namespace Haguichi {
         }
 
         public void update_commands () {
+            if (toast != null) {
+                toast.dismiss ();
+            }
+
             var commands_string = compose_commands_string ();
             set_button_sensitivity (commands_string);
             settings.set_strv ("customizable", commands_string);
