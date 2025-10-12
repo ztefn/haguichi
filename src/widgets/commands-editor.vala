@@ -18,6 +18,7 @@ namespace Haguichi {
         private List<CommandsEditorRow> rows;
         private CommandsEditorRow selected_row;
         private ConfirmDialog dialog;
+        private int insert_position;
 
         [GtkChild]
         unowned Gtk.Button restore_button;
@@ -45,6 +46,8 @@ namespace Haguichi {
 
         [GtkCallback]
         private void on_add_command () {
+            // Insert new command at the end of the list
+            insert_position = (int) rows.length ();
             new Haguichi.AddEditCommandDialog ("Add", this, "", "", "", "IPv4");
         }
 
@@ -98,7 +101,7 @@ namespace Haguichi {
             var row = new CommandsEditorRow (this, true, false, label, command_ipv4, command_ipv6, priority);
 
             rows.append (row);
-            list_box.insert (row, (int) rows.length () - 1);
+            list_box.insert (row, insert_position);
 
             update_commands ();
         }
@@ -109,6 +112,8 @@ namespace Haguichi {
         }
 
         public void duplicate_command (CommandsEditorRow row) {
+            // Insert duplicated command after the original
+            insert_position = row.get_index () + 1;
             new Haguichi.AddEditCommandDialog ("Add", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
         }
 
