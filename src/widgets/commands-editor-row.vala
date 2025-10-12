@@ -109,7 +109,7 @@ namespace Haguichi {
             // Property 'use_underline' with value 'true' triggers a segmentation fault here,
             // so turn it off and remove underscores manually
             drag_row.use_underline = false;
-            drag_row.title = label.replace ("_", "");
+            drag_row.title = _(label).replace ("_", "");
 
             var drag_widget = new Gtk.ListBox ();
             drag_widget.set_size_request (get_width (), get_height ());
