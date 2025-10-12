@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2024-07-01 04:25+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
@@ -127,7 +127,7 @@ msgstr "_Guardar"
 
 #: data/ui/dialogs/attach.ui:6
 msgid "Attach to Account"
-msgstr "Adjuntar a la cuenta"
+msgstr "Vincular a la cuenta"
 
 #: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:23 src/sidebar.vala:192
 msgid "Account"
@@ -139,7 +139,7 @@ msgstr "Incluir todas las redes creadas por este cliente"
 
 #: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
-msgstr "_Adjuntar"
+msgstr "_Vincular"
 
 #: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:135
 msgid "Change Access"
@@ -458,7 +458,7 @@ msgstr "Información"
 
 #: data/ui/sidebar.ui:29
 msgid "Attach"
-msgstr "Adjuntar"
+msgstr "Vincular"
 
 #: data/ui/sidebar.ui:41
 msgid "Cancel"
@@ -784,7 +784,7 @@ msgstr "Añadir una orden"
 
 #: src/dialogs/attach.vala:55
 msgid "Attach request sent"
-msgstr ""
+msgstr "Solicitud de vinculación enviada"
 
 #: src/dialogs/attach.vala:64
 msgid "Account not found"
@@ -940,7 +940,7 @@ msgstr "Guardar una copia de seguridad"
 msgid "Restore from Backup"
 msgstr "Restaurar desde la copia de seguridad"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "_Restaurar"
 
@@ -972,7 +972,7 @@ msgstr "pendiente"
 
 #: src/sidebar.vala:193
 msgid "Not attached"
-msgstr ""
+msgstr "No vinculado"
 
 #: src/sidebar.vala:211
 msgid "{0} online, {1} total"
@@ -1014,13 +1014,22 @@ msgstr "Dirección en conflicto"
 msgid "Direct"
 msgstr "Directa"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "¿Quiere restaurar las órdenes predeterminadas?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "Se perderán todas las personalizaciones."
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "Comando eliminado «%s»"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "_Deshacer"
 
 #: src/window.vala:198
 msgid "Configuring"

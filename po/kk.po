@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2017-07-30 17:21+0000\n"
 "Last-Translator: jmb_kz <Unknown>\n"
 "Language-Team: Kazakh <kk@li.org>\n"
@@ -954,7 +954,7 @@ msgstr "Резервті көшірмені сақтау"
 msgid "Restore from Backup"
 msgstr "Резерті көшірмеден қайта орнына қайтару"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "Қайта орнына қай_тару"
 
@@ -1029,12 +1029,21 @@ msgstr "Жанжал (конфликтующие) бар адрестер"
 msgid "Direct"
 msgstr "Тікелей"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
+msgstr ""
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr ""
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
 msgstr ""
 
 #: src/window.vala:198

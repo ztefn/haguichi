@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2024-07-16 22:56+0000\n"
 "Last-Translator: Ryo Nakano <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -564,7 +564,7 @@ msgstr "編集(_E)…"
 
 #: data/ui/widgets/commands-editor-row.ui:65
 msgid "Du_plicate…"
-msgstr "複製…(_P)"
+msgstr "複製(_P)…"
 
 #: data/ui/widgets/commands-editor-row.ui:71
 msgid "Move _Up"
@@ -936,7 +936,7 @@ msgstr "バックアップを保存"
 msgid "Restore from Backup"
 msgstr "バックアップから復元"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "復元(_R)"
 
@@ -1008,13 +1008,22 @@ msgstr "アドレスが重複しています"
 msgid "Direct"
 msgstr "直接接続"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "デフォルトのコマンドを復元しますか?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "すべての個人設定が破棄されます。"
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "コマンド “%s” 削除"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "元に戻す(_U)"
 
 #: src/window.vala:198
 msgid "Configuring"

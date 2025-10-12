@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2025-04-18 20:16+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/haguichi/"
@@ -942,7 +942,7 @@ msgstr "Gravar uma Cópia de Segurança"
 msgid "Restore from Backup"
 msgstr "Restaurar de uma Cópia de Segurança"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "_Restaurar"
 
@@ -1016,13 +1016,22 @@ msgstr "Conflito de endereço"
 msgid "Direct"
 msgstr "Direto"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "Restaurar comandos padrão?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "Todas as customizações serão perdidas."
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "Comando “%s” removido"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "_Desfazer"
 
 #: src/window.vala:198
 msgid "Configuring"

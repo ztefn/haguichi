@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2024-06-15 18:01+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -578,7 +578,7 @@ msgstr "В_становити як типова дія"
 
 #: data/ui/widgets/commands-editor-row.ui:87
 msgid "_Remove"
-msgstr "_Видалити"
+msgstr "_Вилучити"
 
 #: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
@@ -940,7 +940,7 @@ msgstr "Зберегти резервну копію"
 msgid "Restore from Backup"
 msgstr "Відновити з резервної копії"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "_Відновити"
 
@@ -1016,13 +1016,22 @@ msgstr "Конфліктуючі адреси"
 msgid "Direct"
 msgstr "Безпосередній"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "Відновити типові команди?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "Всі налаштування буде втрачено"
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "Вилучено команду «%s»"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "_Скасувати"
 
 #: src/window.vala:198
 msgid "Configuring"

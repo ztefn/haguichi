@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2018-03-07 17:01+0000\n"
 "Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
@@ -934,7 +934,7 @@ msgstr "Yedek Al"
 msgid "Restore from Backup"
 msgstr "Yedekten Geri Yükle"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "Ge_ri Yükle"
 
@@ -1008,12 +1008,21 @@ msgstr "Konfigrasyon adresi"
 msgid "Direct"
 msgstr "Direk"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
+msgstr ""
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr ""
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
 msgstr ""
 
 #: src/window.vala:198

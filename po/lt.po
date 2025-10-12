@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2024-07-05 22:37+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
@@ -949,7 +949,7 @@ msgstr "Įrašyti atsarginę kopiją"
 msgid "Restore from Backup"
 msgstr "Atkurti iš atsarginės kopijos"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "Atku_rti"
 
@@ -1025,13 +1025,22 @@ msgstr "Konfliktuojantis adresas"
 msgid "Direct"
 msgstr "Tiesioginis"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "Atkurti numatytąsias komandas?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "Visi tinkinimai bus prarasti."
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr ""
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr ""
 
 #: src/window.vala:198
 msgid "Configuring"

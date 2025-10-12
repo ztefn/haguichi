@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2024-06-16 12:53+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -942,7 +942,7 @@ msgstr "Reservekopie maken"
 msgid "Restore from Backup"
 msgstr "Reservekopie terugzetten"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "_Herstellen"
 
@@ -1016,13 +1016,22 @@ msgstr "Conflicterend adres"
 msgid "Direct"
 msgstr "Direct"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr "Standaardopdrachten herstellen?"
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr "Alle aanpassingen zullen verloren gaan."
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "Opdracht ‘%s’ verwijderd"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "O_ngedaan maken"
 
 #: src/window.vala:198
 msgid "Configuring"

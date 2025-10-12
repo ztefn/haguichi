@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-11 15:19+0200\n"
+"POT-Creation-Date: 2025-10-12 18:53+0200\n"
 "PO-Revision-Date: 2022-08-28 16:08+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: French <fr@li.org>\n"
@@ -588,7 +588,7 @@ msgstr "_Définir comme action par défaut"
 
 #: data/ui/widgets/commands-editor-row.ui:87
 msgid "_Remove"
-msgstr "_Enlever"
+msgstr "_Supprimer"
 
 #: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
@@ -956,7 +956,7 @@ msgstr "Enregistrer une sauvegarde"
 msgid "Restore from Backup"
 msgstr "Restaurer depuis une sauvegarde"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:57
+#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "_Restaurer"
 
@@ -1031,13 +1031,22 @@ msgstr "Conflit d'adresse"
 msgid "Direct"
 msgstr "Direct"
 
-#: src/widgets/commands-editor.vala:55
+#: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
 msgstr ""
 
-#: src/widgets/commands-editor.vala:56
+#: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
 msgstr ""
+
+#: src/widgets/commands-editor.vala:103
+#, c-format
+msgid "Removed command “%s”"
+msgstr "Commande « %s » supprimée"
+
+#: src/widgets/commands-editor.vala:104
+msgid "_Undo"
+msgstr "_Annuler"
 
 #: src/window.vala:198
 msgid "Configuring"
