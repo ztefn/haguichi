@@ -1,8 +1,9 @@
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
+[![Translation status](https://hosted.weblate.org/widget/haguichi/svg-badge.svg)](https://hosted.weblate.org/engage/haguichi/)
 
 <div align="center">
   <h1>
-    <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi" width="192" /><br />
+    <img src="data/icons/hicolor/scalable/apps/com.github.ztefn.haguichi.svg?raw=true" alt="Haguichi logo" width="128" /><br />
     Haguichi
   </h1>
   <h4>Provides a graphical frontend for Hamachi on Linux</h4>
@@ -32,7 +33,7 @@
   Translations
   ------------
 
-  You can help translate Haguichi via [Launchpad](https://translations.launchpad.net/haguichi) or [Weblate](https://hosted.weblate.org/projects/haguichi/haguichi/).
+  You can help translate Haguichi via [Weblate](https://hosted.weblate.org/engage/haguichi/) or by using your favorite PO file editor and then opening a [pull request](https://github.com/ztefn/haguichi/pulls) to merge your changes.
 
 
   Donations
