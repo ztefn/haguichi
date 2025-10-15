@@ -270,11 +270,11 @@ namespace Haguichi {
         }
 
         public static string replace_variables (owned string command, string address, string nick, string id) {
-            try {
-                command = command.replace ("%A",  address);
-                command = command.replace ("%N",  nick   );
-                command = command.replace ("%ID", id     );
+            command = command.replace ("%A",  address);
+            command = command.replace ("%N",  nick   );
+            command = command.replace ("%ID", id     );
 
+            if (command.contains ("%TERMINAL")) {
                 bool use_double_dash = strv_contains ({
                     "gnome-terminal",
                     "ptyxis",
@@ -282,16 +282,26 @@ namespace Haguichi {
                     "cosmic-term"
                 }, terminal);
 
-                string option = use_double_dash ? "--" : "-e";
-                string quote  = use_double_dash || terminal == "ghostty" ? "" : "\"";
+                bool use_quotes = !use_double_dash && terminal != "ghostty";
 
-                command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
-                command = command.replace ("%FILEMANAGER",   file_manager);
-                command = command.replace ("%REMOTEDESKTOP", remote_desktop);
-                command = command.replace ("{COLON}",        ";");
-            } catch (RegexError e) {
-                critical ("replace_variables: %s", e.message);
+                string option = use_double_dash ? "--" : "-e";
+                string quote  = use_quotes      ? "\"" : "";
+
+                try {
+                    // For terminals that use quotes for the command argument escape any quotes in the command itself
+                    // unless already preceded by a backslash
+                    if (use_quotes) {
+                        Regex regex = new Regex ("(?<!\\\\)\"");
+                        command = regex.replace (command, -1, 0, "\\\\\"");
+                    }
+                    command = new Regex ("%TERMINAL(.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
+                } catch (RegexError e) {
+                    critical ("replace_variables: %s", e.message);
+                }
             }
+            command = command.replace ("%FILEMANAGER",   file_manager);
+            command = command.replace ("%REMOTEDESKTOP", remote_desktop);
+            command = command.replace ("{COLON}",        ";");
 
             return (command != null) ? command : "";
         }
