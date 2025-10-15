@@ -283,7 +283,7 @@ namespace Haguichi {
                 }, terminal);
 
                 string option = use_double_dash ? "--" : "-e";
-                string quote  = use_double_dash ? ""   : "\"";
+                string quote  = use_double_dash || terminal == "ghostty" ? "" : "\"";
 
                 command = new Regex ("%TERMINAL (.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
                 command = command.replace ("%FILEMANAGER",   file_manager);
