@@ -121,7 +121,7 @@ namespace Haguichi {
         public void insert_command (string label, string command_ipv4, string command_ipv6, string priority) {
             var row = new CommandsEditorRow (this, true, false, label, command_ipv4, command_ipv6, priority);
 
-            rows.append (row);
+            rows.insert (row, insert_position);
             list_box.insert (row, insert_position);
 
             update_commands ();
