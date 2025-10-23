@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2022-08-28 16:08+0000\n"
-"Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2025-10-23 10:52+0000\n"
+"Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
+"Language-Team: Swedish <https://hosted.weblate.org/projects/haguichi/"
+"haguichi/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.14.1-dev\n"
 "X-Launchpad-Export-Date: 2022-08-28 16:08+0000\n"
-"X-Generator: Launchpad (build 813bec7783fe35df624c0e68cd38fcaa442fb8d1)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -33,17 +34,21 @@ msgstr "Hamachi nätverkshanterare"
 #: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Hantera dina Hamachi-nätverk"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
+"LogMeIn Hamachi;VPN;LAN;Nätverk;Internet;P2P;Peer;Klient;grafiskt "
+"gränssnitt;Frontend;"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
 msgstr ""
+"Haguichi gör det enkelt att ansluta sig till, skapa och administrera Hamachi-"
+"nätverk."
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
@@ -59,49 +64,47 @@ msgstr "Sidorad för enkel åtkomst till information och åtgärder"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
-msgstr ""
+msgstr "Indikatorstöd för snabb åtkomst till primära åtgärder"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
-msgstr ""
+msgstr "Skrivbordsmeddelanden för att hålla dig uppdaterad om nätverkshändelser"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "Kommandon som kan anpassas helt och hållet"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
-#, fuzzy
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr "Säkerhetskopiera och återskapa din konfigurationsmapp för Hamachi"
+msgstr "Säkerhetskopiering och återställning av din Hamachi-konfigurationsmapp"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
 "<em>Please note: Requires installation of Hamachi on the system in order to "
 "use.</em>"
 msgstr ""
+"<em>Observera: Kräver installation av Hamachi på systemet för att kunna "
+"användas.</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
-#, fuzzy
 msgid "View your network list and client information"
-msgstr "Visa klientinformation"
+msgstr "Visa din nätverkslista och klientinformation"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "Visa valda medlemsuppgifter"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "Visa valda nätverksdetaljer"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
-#, fuzzy
 msgid "Search your network list"
-msgstr "Sökbar, sorterbar och utfällbar nätverkslista"
+msgstr "Sök i din nätverkslista"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
-#, fuzzy
 msgid "Join or create networks"
-msgstr "Gå med i ett nätverk"
+msgstr "Gå med i eller skapa nätverk"
 
 #: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
@@ -140,9 +143,8 @@ msgid "_Attach"
 msgstr "K_oppla"
 
 #: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:135
-#, fuzzy
 msgid "Change Access"
-msgstr "Byt smeknamn"
+msgstr "Byt åtkomst"
 
 #: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
@@ -150,7 +152,7 @@ msgstr "Låst"
 
 #: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Acceptera inte nya nätverksmedlemmar"
 
 #: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
@@ -211,7 +213,7 @@ msgstr "_Kasta ut"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "_Detaljer"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:570
 #: src/indicator.vala:112
@@ -237,12 +239,11 @@ msgstr "_Lämna"
 
 #: data/ui/menus/network-menu.ui:28 src/network.vala:377
 msgid "_Delete"
-msgstr "_Ta bort"
+msgstr "_Radera"
 
 #: data/ui/menus/network-menu.ui:36
-#, fuzzy
 msgid "Change _Access…"
-msgstr "_Byt smeknamn…"
+msgstr "Byt å_tkomst…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
@@ -262,9 +263,8 @@ msgid "Configuration"
 msgstr "Konfiguration"
 
 #: data/ui/preferences.ui:20
-#, fuzzy
 msgid "Backup"
-msgstr "Spara en säkerhetskopia"
+msgstr "Säkerhetskopiera"
 
 #: data/ui/preferences.ui:31
 msgid "Open Folder"
@@ -296,7 +296,7 @@ msgstr "Beteende"
 
 #: data/ui/preferences.ui:72
 msgid "_Network list update interval"
-msgstr ""
+msgstr "_Uppdateringsintervall för nätverkslista"
 
 #: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
@@ -326,19 +326,19 @@ msgstr "Utseende"
 
 #: data/ui/preferences.ui:114
 msgid "_Style"
-msgstr ""
+msgstr "_Stil"
 
 #: data/ui/preferences.ui:131
 msgid "Follow System"
-msgstr ""
+msgstr "Följ systemet"
 
 #: data/ui/preferences.ui:142
 msgid "Light"
-msgstr ""
+msgstr "Ljust"
 
 #: data/ui/preferences.ui:154
 msgid "Dark"
-msgstr ""
+msgstr "Mörkt"
 
 #: data/ui/preferences.ui:164
 msgid "Show _indicator"
@@ -479,23 +479,20 @@ msgid "IPv6 Address"
 msgstr "IPv6-adress"
 
 #: data/ui/sidebar.ui:68
-#, fuzzy
 msgid "Hamachi Version"
-msgstr "Hamachi version %s är för gammal"
+msgstr "Hamachi version"
 
 #: data/ui/sidebar.ui:82 data/ui/sidebar.ui:187
 msgid "Status"
 msgstr "Status"
 
 #: data/ui/sidebar.ui:87
-#, fuzzy
 msgid "Leave Network"
-msgstr "Skapa nätverk"
+msgstr "Lämna nätverk"
 
 #: data/ui/sidebar.ui:98
-#, fuzzy
 msgid "Delete Network"
-msgstr "Skapa nätverk"
+msgstr "Ta bort nätverk"
 
 #: data/ui/sidebar.ui:115
 msgid "Owner"
@@ -515,9 +512,8 @@ msgstr "Tunnel"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
-#, fuzzy
 msgid "Command Variables"
-msgstr "Kommandon"
+msgstr "Kommandovariabler"
 
 #: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
@@ -525,21 +521,19 @@ msgstr "Adress"
 
 #: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "Terminalemulator"
 
 #: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
-msgstr ""
+msgstr "Filhanterare"
 
 #: data/ui/widgets/command-entry-row.ui:75
-#, fuzzy
 msgid "Remote Desktop Viewer"
-msgstr "_Visa fjärrskrivbord"
+msgstr "Fjärrskrivbordsvisare"
 
 #: data/ui/widgets/commands-editor.ui:12
-#, fuzzy
 msgid "_Restore Default"
-msgstr "Åte_rställ"
+msgstr "Åte_rställ till standard"
 
 #: data/ui/widgets/commands-editor.ui:35
 msgid "_Add Command"
@@ -558,13 +552,12 @@ msgid "_Ping"
 msgstr "_Pinga"
 
 #: data/ui/widgets/commands-editor-row.ui:17
-#, fuzzy
 msgid "Default Action"
-msgstr "_Ställ in som standardåtgärd"
+msgstr "Standardåtgärd"
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "Alternativ"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -592,7 +585,7 @@ msgstr "_Ta bort"
 
 #: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
-msgstr ""
+msgstr "Kopiera"
 
 #: data/ui/window.ui:195 src/window.vala:542
 msgid "Initializing"
@@ -600,17 +593,15 @@ msgstr "Initierar"
 
 #: data/ui/window.ui:247
 msgid "Main Menu"
-msgstr ""
+msgstr "Huvudmeny"
 
 #: data/ui/window.ui:265
-#, fuzzy
 msgid "Search networks and members"
-msgstr "Hamachi nätverkshanterare"
+msgstr "Sök efter nätverk och medlemmar"
 
 #: data/ui/window.ui:299
-#, fuzzy
 msgid "Add Network"
-msgstr "Gå med i nätverk"
+msgstr "Lägg till nätverk"
 
 #: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
@@ -630,11 +621,11 @@ msgstr "Använd + knappen för att lägga till ett nätverk"
 
 #: data/ui/window.ui:408
 msgid "No Results Found"
-msgstr ""
+msgstr "Inga resultat hittades"
 
 #: data/ui/window.ui:409
 msgid "Try a different search"
-msgstr ""
+msgstr "Prova en annan sökning"
 
 #: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
@@ -793,7 +784,6 @@ msgid "Add Command"
 msgstr "Lägg till kommando"
 
 #: src/dialogs/attach.vala:55
-#, fuzzy
 msgid "Attach request sent"
 msgstr "Ansökningsbegäran skickad"
 
@@ -819,7 +809,7 @@ msgstr "S_kapa"
 
 #: src/dialogs/join-create-network.vala:73
 msgid "Join request sent"
-msgstr "Ansökningsbegäran skickad"
+msgstr "Begäran att gå med skickad"
 
 #: src/dialogs/join-create-network.vala:98
 msgid "Network not found"
@@ -854,35 +844,32 @@ msgid "Anonymous"
 msgstr "Anonym"
 
 #: src/hamachi.vala:699 src/hamachi.vala:702
-#, fuzzy
 msgid "Password changed"
-msgstr "Lösenord"
+msgstr "Lösenord ändrades"
 
 #: src/hamachi.vala:723
-#, fuzzy
 msgid "Saving backup…"
-msgstr "_Spara en säkerhetskopia…"
+msgstr "Sparar säkerhetskopia…"
 
 #: src/hamachi.vala:740
 msgid "Backup saved"
-msgstr ""
+msgstr "Säkerhetskopia sparad"
 
 #: src/hamachi.vala:740
 msgid "Failed to save backup"
-msgstr ""
+msgstr "Misslyckades med att spara säkerhetskopia"
 
 #: src/hamachi.vala:754
-#, fuzzy
 msgid "Restoring backup…"
-msgstr "Åt_erställ från säkerhetskopia…"
+msgstr "Återställer säkerhetskopia…"
 
 #: src/hamachi.vala:795
 msgid "Backup restored"
-msgstr ""
+msgstr "Säkerhetskopia återställd"
 
 #: src/hamachi.vala:795
 msgid "Failed to restore backup"
-msgstr ""
+msgstr "Misslyckades med att återställa säkerhetskopia"
 
 #: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
@@ -938,7 +925,7 @@ msgstr "Om du tar bort ett nätverk så är det permanent borta."
 
 #: src/preferences.vala:107
 msgid "Not present"
-msgstr ""
+msgstr "Finns inte"
 
 #: src/preferences.vala:285
 msgid "All supported archives"
@@ -957,23 +944,22 @@ msgid "_Restore"
 msgstr "Åte_rställ"
 
 #: src/preferences.vala:372
-#, fuzzy
 msgid "Never"
-msgstr "_Återställ"
+msgstr "Aldrig"
 
 #: src/preferences.vala:395
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S sekund"
+msgstr[1] "%S sekunder"
 
 #: src/preferences.vala:399
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S minut"
+msgstr[1] "%S minuter"
 
 #: src/sidebar.vala:174
 msgid "Unavailable"
@@ -985,7 +971,7 @@ msgstr "väntar"
 
 #: src/sidebar.vala:193
 msgid "Not attached"
-msgstr ""
+msgstr "Inte bifogad"
 
 #: src/sidebar.vala:211
 msgid "{0} online, {1} total"
@@ -1029,20 +1015,20 @@ msgstr "Direkt"
 
 #: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
-msgstr ""
+msgstr "Återställ standardkommandon?"
 
 #: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
-msgstr ""
+msgstr "Alla anpassningar kommer att förloras."
 
 #: src/widgets/commands-editor.vala:103
 #, c-format
 msgid "Removed command “%s”"
-msgstr ""
+msgstr "Tog bort kommandot \"%s\""
 
 #: src/widgets/commands-editor.vala:104
 msgid "_Undo"
-msgstr ""
+msgstr "Å_ngra"
 
 #: src/window.vala:198
 msgid "Configuring"
@@ -1058,7 +1044,7 @@ msgstr ""
 
 #: src/window.vala:444
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Kopierades till urklipp"
 
 #: src/window.vala:479
 msgid "Reconnecting in {0} second"
@@ -1080,3 +1066,5 @@ msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
 msgstr ""
+"Haguichi fortsätter att köras när fönstret stängs så att det kan övervaka "
+"anslutningen och skicka aviseringar."
