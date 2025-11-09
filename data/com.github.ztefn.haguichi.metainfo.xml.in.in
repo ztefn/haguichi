@@ -75,7 +75,7 @@
           <li>Added debug information to about dialog.</li>
           <li>Updated Yaru icons for Ubuntu builds to use a smaller square for optical compensation (thanks again to ubuntujaggers).</li>
           <li>Updated Polish and Portuguese translations.</li>
-          <li>Bumped minimum required versions of GLib (2.80) and GTK (4.14) and libadwaita (1.5).</li>
+          <li>Bumped minimum required versions of GLib (2.80), GTK (4.14) and libadwaita (1.5).</li>
           <li>Other minor fixes, improvements and optimizations.</li>
         </ul>
       </description>
