@@ -58,6 +58,27 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.5.3" date="2025-11-09">
+      <url>https://haguichi.net/news/release153/</url>
+      <description translate="no">
+        <p>Haguichi 1.5.3 knocks at the door with a handful of treats and tweaks:</p>
+        <ul>
+          <li>Replaced deprecated Gtk.ShortcutsWindow with Adw.ShortcutsDialog when libadwaita 1.8 is available.</li>
+          <li>Sidebar title is now shown in the headerbar when scrolled down.</li>
+          <li>Enabled automatic row selection in the network list when searching or after a row is collapsed or removed.</li>
+          <li>Return and Delete key presses are now passed on to the selected row when search entry is focused.</li>
+          <li>Search entry can now be refocused by pressing Ctrl+F while search mode is already active.</li>
+          <li>When using drag and drop to reorder a command the dragged row is now anchored to the point where the drag started.</li>
+          <li>Added option to duplicate existing commands.</li>
+          <li>Added Adw.Toast with button to undo removal when removing a command.</li>
+          <li>Added support for COSMIC Terminal and Files.</li>
+          <li>Added Hungarian translation (thanks to therealmate).</li>
+          <li>Updated Swedish translation.</li>
+          <li>All bundled resource files are now compressed.</li>
+          <li>Other minor fixes, improvements and optimizations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.2" date="2025-04-30">
       <url>https://haguichi.net/news/release152/</url>
       <description translate="no">
