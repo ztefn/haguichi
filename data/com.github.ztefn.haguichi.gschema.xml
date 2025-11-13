@@ -11,7 +11,8 @@
   <enum id="com.github.ztefn.haguichi.commands.super-user">
     <value value="0" nick="auto"/>
     <value value="1" nick="pkexec"/>
-    <value value="2" nick="sudo"/>
+    <value value="2" nick="kdesu"/>
+    <value value="3" nick="sudo"/>
   </enum>
 
   <enum id="com.github.ztefn.haguichi.config.protocol">
