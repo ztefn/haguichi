@@ -436,7 +436,8 @@ namespace Haguichi {
 
         public void show_toast (string title, uint timeout = 5) {
             toast_overlay.add_toast (new Adw.Toast (title) {
-                timeout = timeout
+                timeout    = timeout,
+                use_markup = false
             });
         }
 

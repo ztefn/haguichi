@@ -3,6 +3,7 @@
   <template class="HaguichiCommandsEditorRow" parent="AdwActionRow">
     <property name="title-lines">1</property>
     <property name="subtitle-lines">1</property>
+    <property name="use-markup">false</property>
     <property name="use-underline">true</property>
     <property name="activatable">true</property>
     <child type="prefix">

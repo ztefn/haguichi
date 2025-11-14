@@ -102,7 +102,9 @@ namespace Haguichi {
 
             update_commands ();
 
-            toast = new Adw.Toast (_("Removed command “%s”").printf (Utils.remove_mnemonics (_(row.label))));
+            toast = new Adw.Toast (_("Removed command “%s”").printf (Utils.remove_mnemonics (_(row.label)))) {
+                use_markup = false
+            };
             toast.button_label = _("_Undo");
             toast.button_clicked.connect (() => {
                 undo_remove ();

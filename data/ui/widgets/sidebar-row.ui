@@ -2,6 +2,7 @@
 <interface>
   <template class="HaguichiSidebarRow" parent="AdwActionRow">
     <property name="subtitle-selectable">true</property>
+    <property name="use-markup">false</property>
     <property name="focusable">false</property>
     <child>
       <object class="GtkButton" id="copy_button">
