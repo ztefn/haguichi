@@ -92,6 +92,9 @@ namespace Haguichi {
 
             app.set_color_scheme ((int) ui.get_enum ("color-scheme"));
 
+#if ADW_1_7
+            add_css_class ("adw-1-7");
+#endif
             if (strv_contains (Intl.get_language_names (), "ru")) {
                 add_css_class ("custom");
             }

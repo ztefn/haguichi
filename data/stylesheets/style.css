@@ -16,6 +16,9 @@ window.custom .suggested-action {
   margin: 0 6px 2px;
   padding: 6px;
 }
+window.adw-1-7 #network-list > scrolledwindow > listview > row {
+  border-radius: 9px;
+}
 
 #network-list > scrolledwindow > listview > row:last-child {
   margin-bottom: 6px;
