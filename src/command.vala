@@ -295,7 +295,7 @@ namespace Haguichi {
                         Regex regex = new Regex ("(?<!\\\\)\"");
                         command = regex.replace (command, -1, 0, "\\\\\"");
                     }
-                    command = new Regex ("%TERMINAL(.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
+                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
                 } catch (RegexError e) {
                     critical ("replace_variables: %s", e.message);
                 }
