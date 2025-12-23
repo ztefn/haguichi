@@ -73,12 +73,11 @@ namespace Haguichi {
                 Environment.set_variable ("G_MESSAGES_DEBUG", APP_NAME, true);
             }
 
+            app = new Application ();
 #if FOR_ELEMENTARY
             Gtk.init ();
             Granite.init ();
 #endif
-
-            app = new Application ();
             return app.run (args);
         }
 
