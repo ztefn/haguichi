@@ -187,7 +187,7 @@ namespace Haguichi {
                 provider = new Gtk.CssProvider ();
             }
             provider.load_from_resource ("/com/github/ztefn/haguichi/elementary" + (Adw.StyleManager.get_default ().dark ? "-dark" : "") + ".css");
-            get_style_context ().add_provider_for_display (Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
 #endif
 
