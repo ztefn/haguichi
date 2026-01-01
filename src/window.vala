@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -357,7 +357,7 @@ namespace Haguichi {
             var about = new Adw.AboutDialog () {
                 application_name    = APP_NAME,
                 application_icon    = APP_ID,
-                copyright           = "© 2007-2025 " + developer_name,
+                copyright           = "© 2007-2026 " + developer_name,
                 debug_info_filename = "haguichi-debug-info_" + new DateTime.now_local ().format ("%Y-%m-%dT%H:%M") + ".txt",
                 developer_name      = developer_name,
                 issue_url           = "https://github.com/ztefn/haguichi/issues",
