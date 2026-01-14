@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2025-06-05 15:01+0000\n"
+"PO-Revision-Date: 2026-01-14 04:53+0000\n"
 "Last-Translator: therealmate <hellogaming91@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.12-dev\n"
+"X-Generator: Weblate 5.15.2-dev\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -100,7 +100,7 @@ msgstr "Keresés a hálózatlistában"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
 msgid "Join or create networks"
-msgstr "Csatlakozz egy hálózathoz vagy készíts egyet"
+msgstr "Csatlakozzon egy hálózathoz vagy készítsen egyet"
 
 #: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
@@ -625,7 +625,7 @@ msgstr "Próbáljon meg más keresést"
 
 #: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
-msgstr "Kérjük, töltse le a Hamachit, és kövesse a telepítési utasításokat"
+msgstr "Töltse le a Hamachit, és kövesse a telepítési utasításokat"
 
 #: data/ui/window.ui:432
 msgid "_Download"
