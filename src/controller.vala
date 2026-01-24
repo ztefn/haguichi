@@ -118,12 +118,13 @@ namespace Haguichi {
 
                 if (Hamachi.version.has_prefix ("0.9.9.") ||
                     Hamachi.version.has_prefix ("2.0.") ||
-                    Hamachi.version == "2.1.0.17" ||
-                    Hamachi.version == "2.1.0.18" ||
+                    Hamachi.version.has_prefix ("2.1.0.1") ||
                     Hamachi.version == "2.1.0.68" ||
                     Hamachi.version == "2.1.0.76" ||
                     Hamachi.version == "2.1.0.80" ||
-                    Hamachi.version == "2.1.0.81") {
+                    Hamachi.version == "2.1.0.81" ||
+                    Hamachi.version == "2.1.0.84" ||
+                    Hamachi.version == "2.1.0.86") {
                     debug ("status_check: Obsolete version %s installed", Hamachi.version);
                     return 0;
                 }
