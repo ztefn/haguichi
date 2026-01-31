@@ -21,7 +21,7 @@ namespace Haguichi {
 #endif
 
         public void set_value (string? value) {
-            subtitle = value;
+            subtitle = value == null ? "" : value;
             visible = (value != null && value != "");
         }
 
