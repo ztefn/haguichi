@@ -1,6 +1,6 @@
  /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -32,8 +32,8 @@ namespace Haguichi {
         public static void init () {
             settings = new Settings (Config.APP_ID + ".commands");
 
-            if (Command.exists ("flatpak")) {
-                flatpak_list = Command.return_output ("flatpak list --app");
+            if (exists ("flatpak")) {
+                flatpak_list = return_output ("flatpak list --app");
                 debug ("flatpak_list:\n%s", flatpak_list);
             }
 
