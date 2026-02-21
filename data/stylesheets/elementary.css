@@ -184,6 +184,15 @@ overlay-split-view .rich-list row {
 
 
 /*
+ * Use regular icon style for sidebar row buttons
+ */
+
+overlay-split-view .rich-list row button {
+  -gtk-icon-style: regular;
+}
+
+
+/*
  * Modify the color of the lock icon depending on its state
  */
 

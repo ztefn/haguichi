@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -100,15 +100,11 @@ namespace Haguichi {
                 }
             });
 
-#if FOR_ELEMENTARY
-            network_leave_button.icon_name = "system-log-out";
-#else
             // Use different leave icon for Yaru and elementary themes
             var theme_name = Utils.get_icon_theme ().theme_name;
             if (theme_name.has_prefix ("Yaru") || theme_name == "elementary") {
                 network_leave_button.icon_name = "system-log-out-symbolic";
             }
-#endif
         }
 
         [GtkCallback]
