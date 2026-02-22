@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2018-03-07 17:01+0000\n"
-"Last-Translator: Kudret EMRE <kudretemre@hotmail.com>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"PO-Revision-Date: 2026-02-22 21:44+0000\n"
+"Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
+"Language-Team: Turkish <https://hosted.weblate.org/projects/haguichi/"
+"haguichi/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.16.1-dev\n"
 "X-Launchpad-Export-Date: 2018-03-07 18:20+0000\n"
-"X-Generator: Launchpad (build 18566)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -27,77 +28,82 @@ msgstr "Haguichi"
 #. Generic name used for display in some application launchers like Kickoff in KDE Plasma.
 #: data/com.github.ztefn.haguichi.desktop.in.in:6
 msgid "Hamachi Network Manager"
-msgstr ""
+msgstr "Hamachi Ağ Yöneticisi"
 
 #. Description used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr ""
+msgstr "Hamachi ağlarınızı yönetin"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:14
 msgid "LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;"
 msgstr ""
+"LogMeIn "
+"Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;Ağ;Sanal Özel "
+"Ağ;İnternet;Eş;İStemci;Arayüz;"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:9
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
 msgstr ""
+"Haguichi, Hamachi ağlarına katılmayı, oluşturmayı ve yönetmeyi kolaylaştırır."
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Özellikler:"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
-msgstr ""
+msgstr "Aranabilir, sıralanabilir ve daraltılabilir ağ listesi"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Ayrıntılara ve eylemlere kolay erişim için kenar çubuğu"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
-msgstr ""
+msgstr "Birincil eylemlere hızlı erişim için gösterge desteği"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
-msgstr ""
+msgstr "Ağ olaylarından haberdar olmak için masaüstü bildirimleri"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
-msgstr ""
+msgstr "Tamamen özelleştirilebilen komutlar"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr ""
+msgstr "Hamachi yapılandırma klasörünüzün yedeklenmesi ve geri yüklenmesi"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
 "<em>Please note: Requires installation of Hamachi on the system in order to "
 "use.</em>"
 msgstr ""
+"<em>Lütfen dikkat: Kullanmak için sisteme Hamachiʼnin kurulması gerekir.</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
 msgid "View your network list and client information"
-msgstr ""
+msgstr "Ağ listenizi ve istemci bilgilerinizi görüntüleyin"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:27
 msgid "View selected member details"
-msgstr ""
+msgstr "Seçilen üye ayrıntılarını görüntüleyin"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:31
 msgid "View selected network details"
-msgstr ""
+msgstr "Seçilen ağ ayrıntılarını görüntüleyin"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
 msgid "Search your network list"
-msgstr ""
+msgstr "Ağ listenizi arayın"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
 msgid "Join or create networks"
-msgstr ""
+msgstr "Ağlara katılın ya da ağ oluşturun"
 
 #: data/ui/dialogs/add-edit-command.ui:30
 msgid "Label"
@@ -105,11 +111,11 @@ msgstr "Etiket"
 
 #: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
-msgstr "IPv4 komutu"
+msgstr "IPv4 Komutu"
 
 #: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
-msgstr "IPv6 komutu"
+msgstr "IPv6 Komutu"
 
 #: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
@@ -129,7 +135,7 @@ msgstr "Hesap"
 
 #: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
-msgstr "Kapsanan tüm bağlantılar bu istemci tarafından oluşturuldu."
+msgstr "Bu istemci tarafından oluşturulan tüm bağlantıları kapsa"
 
 #: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
@@ -137,7 +143,7 @@ msgstr "_Ekle"
 
 #: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:135
 msgid "Change Access"
-msgstr ""
+msgstr "Erişimi Değiştir"
 
 #: data/ui/dialogs/change-access.ui:31
 msgid "Locked"
@@ -145,7 +151,7 @@ msgstr "Kilitli"
 
 #: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Yeni ağ üyelerii kabul etme"
 
 #: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
@@ -153,7 +159,7 @@ msgstr "Onay"
 
 #: data/ui/dialogs/change-access.ui:42
 msgid "Automatically"
-msgstr "Otomatik"
+msgstr "Kendiliğinden"
 
 #: data/ui/dialogs/change-access.ui:43
 msgid "Manually"
@@ -165,11 +171,11 @@ msgstr "D_eğiştir"
 
 #: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:119
 msgid "Change Password"
-msgstr "Şifreyi Değiştir"
+msgstr "Parolayı Değiştir"
 
 #: data/ui/dialogs/change-password.ui:31
 msgid "New Password"
-msgstr "Yeni parola"
+msgstr "Yeni Parola"
 
 #: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:110
 msgid "Network ID"
@@ -181,7 +187,7 @@ msgstr "Parola"
 
 #: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:229 src/bubble.vala:58
 msgid "_Approve"
-msgstr "_Onay"
+msgstr "_Onayla"
 
 #: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:242 src/bubble.vala:59
 msgid "_Reject"
@@ -189,11 +195,11 @@ msgstr "_Reddet"
 
 #: data/ui/menus/member-menu.ui:22
 msgid "Copy IPv_4 Address"
-msgstr "IPv_4 adresini kopyala"
+msgstr "IPv_4 Adresini Kopyala"
 
 #: data/ui/menus/member-menu.ui:27
 msgid "Copy IPv_6 Address"
-msgstr "IPv_6 adresini kopyala"
+msgstr "IPv_6 Adresini Kopyala"
 
 #: data/ui/menus/member-menu.ui:32
 msgid "_Copy Client ID"
@@ -206,25 +212,25 @@ msgstr "_At"
 
 #: data/ui/menus/member-menu.ui:46 data/ui/menus/network-menu.ui:54
 msgid "_Details"
-msgstr ""
+msgstr "_Ayrıntılar"
 
 #: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:570
 #: src/indicator.vala:112
 msgid "_Join Network…"
-msgstr "_Ağa katıl…"
+msgstr "_Ağa Katıl…"
 
 #: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:574
 #: src/indicator.vala:117
 msgid "_Create Network…"
-msgstr "_Ağ Kur…"
+msgstr "Ağ _Oluştur…"
 
 #: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:153
 msgid "_Go Online"
-msgstr "_Çevrimiçi Ol"
+msgstr "Ç_evrim İçi Ol"
 
 #: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:166
 msgid "_Go Offline"
-msgstr "_Çevrimdışı Ol"
+msgstr "Çevrim _Dışı Ol"
 
 #: data/ui/menus/network-menu.ui:22 src/network.vala:348
 msgid "_Leave"
@@ -236,11 +242,11 @@ msgstr "_Sil"
 
 #: data/ui/menus/network-menu.ui:36
 msgid "Change _Access…"
-msgstr ""
+msgstr "_Erişimi Değiştir…"
 
 #: data/ui/menus/network-menu.ui:41
 msgid "Change _Password…"
-msgstr "Şifreyi _Değiştir…"
+msgstr "Parolayı _Değiştir…"
 
 #: data/ui/menus/network-menu.ui:48
 msgid "_Copy Network ID"
@@ -257,7 +263,7 @@ msgstr "Yapılandırma"
 
 #: data/ui/preferences.ui:20
 msgid "Backup"
-msgstr ""
+msgstr "Yedekle"
 
 #: data/ui/preferences.ui:31
 msgid "Open Folder"
@@ -269,7 +275,7 @@ msgstr "Takma ad"
 
 #: data/ui/preferences.ui:52
 msgid "_Protocol"
-msgstr "_Protokol"
+msgstr "_Bağlantı Kuralı"
 
 #: data/ui/preferences.ui:57
 msgid "Both IPv4 and IPv6"
@@ -289,19 +295,19 @@ msgstr "İşleyiş"
 
 #: data/ui/preferences.ui:72
 msgid "_Network list update interval"
-msgstr ""
+msgstr "_Ağ listesi güncelleme aralığı"
 
 #: data/ui/preferences.ui:78
 msgid "_Connect automatically on startup"
-msgstr "A_çılışta otomatik bağlan"
+msgstr "Başlangıçta _kendiliğinden bağlan"
 
 #: data/ui/preferences.ui:84
 msgid "_Reconnect automatically when the connection is lost"
-msgstr "_Bağlantı koptuğunda otomatik olarak yeniden bağlan"
+msgstr "_Bağlantı koptuğunda kendiliğinden yeniden bağlan"
 
 #: data/ui/preferences.ui:90
 msgid "_Disconnect on quit"
-msgstr "_Çıkışta bağlantıyı kopar"
+msgstr "_Çıkışta bağlantıyı kes"
 
 #: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
 #: data/ui/sidebar.ui:192
@@ -319,23 +325,23 @@ msgstr "Gürünüm"
 
 #: data/ui/preferences.ui:114
 msgid "_Style"
-msgstr ""
+msgstr "_Biçem"
 
 #: data/ui/preferences.ui:131
 msgid "Follow System"
-msgstr ""
+msgstr "Sistemi İzle"
 
 #: data/ui/preferences.ui:142
 msgid "Light"
-msgstr ""
+msgstr "Açık"
 
 #: data/ui/preferences.ui:154
 msgid "Dark"
-msgstr ""
+msgstr "Koyu"
 
 #: data/ui/preferences.ui:164
 msgid "Show _indicator"
-msgstr "Göstergeyi göster"
+msgstr "_Göstergeyi göster"
 
 #: data/ui/preferences.ui:173
 msgid "Notifications"
@@ -355,19 +361,19 @@ msgstr "Üyeler _ayrıldığında bildir"
 
 #: data/ui/preferences.ui:194
 msgid "Display notification when a member comes o_nline"
-msgstr "Üyeler ç_evrimiçi olduğunda bildir"
+msgstr "Üyeler ç_evrim içi olduğunda bildir"
 
 #: data/ui/preferences.ui:200
 msgid "Display notification when a member goes o_ffline"
-msgstr "Üyeler çe_vrimdışı olduğunda bildir"
+msgstr "Üyeler çe_vrim dışı olduğunda bildir"
 
 #: data/ui/preferences.ui:212
 msgid "_Save a Backup…"
-msgstr "_Yedek al…"
+msgstr "_Yedek Kaydet…"
 
 #: data/ui/preferences.ui:216
 msgid "_Restore from Backup…"
-msgstr "Yedekten ge_ri yükle…"
+msgstr "Yedekten Ge_ri Yükle…"
 
 #: data/ui/shortcuts-dialog.ui:10 data/ui/shortcuts-window.ui:14
 msgid "Show help"
@@ -414,25 +420,25 @@ msgstr "Ağ Listesi"
 
 #: data/ui/shortcuts-dialog.ui:68 data/ui/shortcuts-window.ui:67
 msgid "Join a network"
-msgstr "Bir ağa katıl"
+msgstr "Ağa katıl"
 
 #: data/ui/shortcuts-dialog.ui:74 data/ui/shortcuts-window.ui:73
 msgid "Create a network"
-msgstr "Bit ağ oluştur"
+msgstr "Ağ oluştur"
 
 #: data/ui/shortcuts-dialog.ui:80 data/ui/shortcuts-window.ui:79
 #: data/ui/window.ui:202 data/ui/window.ui:287
 msgid "Refresh"
-msgstr "Tazele"
+msgstr "Yenile"
 
 #: data/ui/shortcuts-dialog.ui:86 data/ui/shortcuts-window.ui:85
 #: data/ui/window.ui:237
 msgid "Search"
-msgstr "Arama"
+msgstr "Ara"
 
 #: data/ui/shortcuts-dialog.ui:92 data/ui/shortcuts-window.ui:91
 msgid "Show/hide offline members"
-msgstr "Çevrimdışı üyeleri göster/gizle"
+msgstr "Çevrim dışı üyeleri göster/gizle"
 
 #: data/ui/shortcuts-dialog.ui:98 data/ui/shortcuts-window.ui:97
 msgid "Expand all networks"
@@ -465,15 +471,15 @@ msgstr "İstemci Kimliği"
 
 #: data/ui/sidebar.ui:58 data/ui/sidebar.ui:208
 msgid "IPv4 Address"
-msgstr "IPv4 adresi"
+msgstr "IPv4 Adresi"
 
 #: data/ui/sidebar.ui:63 data/ui/sidebar.ui:213
 msgid "IPv6 Address"
-msgstr "IPv6 adresi"
+msgstr "IPv6 Adresi"
 
 #: data/ui/sidebar.ui:68
 msgid "Hamachi Version"
-msgstr ""
+msgstr "Hamachi Sürümü"
 
 #: data/ui/sidebar.ui:82 data/ui/sidebar.ui:187
 msgid "Status"
@@ -481,11 +487,11 @@ msgstr "Durum"
 
 #: data/ui/sidebar.ui:87
 msgid "Leave Network"
-msgstr ""
+msgstr "Ağdan Ayrıl"
 
 #: data/ui/sidebar.ui:98
 msgid "Delete Network"
-msgstr ""
+msgstr "Ağı Sil"
 
 #: data/ui/sidebar.ui:115
 msgid "Owner"
@@ -501,32 +507,32 @@ msgstr "Kapasite"
 
 #: data/ui/sidebar.ui:218
 msgid "Tunnel"
-msgstr "Geçiş"
+msgstr "Tünel"
 
 #: data/ui/widgets/command-entry-row.ui:7
 #: data/ui/widgets/command-entry-row.ui:15
 msgid "Command Variables"
-msgstr ""
+msgstr "Komut Değişkenleri"
 
 #: data/ui/widgets/command-entry-row.ui:36
 msgid "Address"
-msgstr "Adresi"
+msgstr "Adres"
 
 #: data/ui/widgets/command-entry-row.ui:63
 msgid "Terminal Emulator"
-msgstr ""
+msgstr "Uçbirim Öykünücü"
 
 #: data/ui/widgets/command-entry-row.ui:69
 msgid "File Manager"
-msgstr ""
+msgstr "Dosya Yöneticisi"
 
 #: data/ui/widgets/command-entry-row.ui:75
 msgid "Remote Desktop Viewer"
-msgstr ""
+msgstr "Uzak Masaüstü Görüntüleyici"
 
 #: data/ui/widgets/commands-editor.ui:12
 msgid "_Restore Default"
-msgstr ""
+msgstr "Ö_ntanımlıyı Geri Yükle"
 
 #: data/ui/widgets/commands-editor.ui:35
 msgid "_Add Command"
@@ -534,11 +540,11 @@ msgstr "Komut _Ekle"
 
 #: data/ui/widgets/commands-editor.ui:56
 msgid "_Browse Shares"
-msgstr "_Paylaşımları Gözden Geçir"
+msgstr "_Paylaşımlara Göz At"
 
 #: data/ui/widgets/commands-editor.ui:59
 msgid "_View Remote Desktop"
-msgstr "_Uzak Masaüstüne Bak"
+msgstr "_Uzak Masaüstünü Gör"
 
 #: data/ui/widgets/commands-editor.ui:62
 msgid "_Ping"
@@ -546,11 +552,11 @@ msgstr "_Ping"
 
 #: data/ui/widgets/commands-editor-row.ui:17
 msgid "Default Action"
-msgstr ""
+msgstr "Öntanımlı Eyle"
 
 #: data/ui/widgets/commands-editor-row.ui:34
 msgid "Options"
-msgstr ""
+msgstr "Seçenekler"
 
 #: data/ui/widgets/commands-editor-row.ui:61
 msgid "_Edit…"
@@ -570,7 +576,7 @@ msgstr "_Aşağı Taşı"
 
 #: data/ui/widgets/commands-editor-row.ui:81
 msgid "_Set As Default Action"
-msgstr "_Varsayılan Eylem Olarak Ayarla"
+msgstr "Ö_ntanımlı Eylem Olarak Ayarla"
 
 #: data/ui/widgets/commands-editor-row.ui:87
 msgid "_Remove"
@@ -578,27 +584,27 @@ msgstr "_Kaldır"
 
 #: data/ui/widgets/sidebar-row.ui:9
 msgid "Copy"
-msgstr ""
+msgstr "Kopyala"
 
 #: data/ui/window.ui:195 src/window.vala:542
 msgid "Initializing"
-msgstr ""
+msgstr "Başlatılıyor"
 
 #: data/ui/window.ui:247
 msgid "Main Menu"
-msgstr ""
+msgstr "Ana Menü"
 
 #: data/ui/window.ui:265
 msgid "Search networks and members"
-msgstr ""
+msgstr "Ağları ve üyeleri ara"
 
 #: data/ui/window.ui:299
 msgid "Add Network"
-msgstr ""
+msgstr "Ağ Ekle"
 
 #: data/ui/window.ui:340 src/controller.vala:711
 msgid "Hamachi Lost Connection"
-msgstr "Hamachi bağlantısı koptu"
+msgstr "Hamachi Bağlantısı Koptu"
 
 #: data/ui/window.ui:347 src/dialogs/confirm.vala:25
 msgid "_Cancel"
@@ -610,31 +616,31 @@ msgstr "Bağlandınız!"
 
 #: data/ui/window.ui:387
 msgid "Use the + button to add a network"
-msgstr "Bir ağ eklemek için + düğmesini kullanın"
+msgstr "Ağ eklemek için + düğmesini kullanın"
 
 #: data/ui/window.ui:408
 msgid "No Results Found"
-msgstr ""
+msgstr "Hiçbir Sonuç Bulunamadı"
 
 #: data/ui/window.ui:409
 msgid "Try a different search"
-msgstr ""
+msgstr "Başka arama dene"
 
 #: data/ui/window.ui:426
 msgid "Please download Hamachi and follow the installation instructions"
-msgstr "Lütfen Hamachi'yi indirin ve kurulum yönergelerini takip edin"
+msgstr "Lütfen Hamachiʼyi indirin ve kurulum yönergelerini takip edin"
 
 #: data/ui/window.ui:432
 msgid "_Download"
-msgstr "_İndir"
+msgstr "İ_ndir"
 
 #: data/ui/window.ui:451
 msgid "Hamachi Is Not Configured"
-msgstr "Hamachi yapılandırılmamış"
+msgstr "Hamachi Yapılandırılmamış"
 
 #: data/ui/window.ui:452
 msgid "You need to configure Hamachi before you can connect"
-msgstr "Bağlanmadan önce Hamachi'yi yapılandırmalısınız"
+msgstr "Bağlanmadan önce Hamachiʼyi yapılandırmalısınız"
 
 #: data/ui/window.ui:458
 msgid "C_onfigure"
@@ -654,7 +660,7 @@ msgstr "_Duruma Göre Sırala"
 
 #: data/ui/window.ui:537
 msgid "Show _Offline Members"
-msgstr "_Çevrimdışı üyeler"
+msgstr "_Çevrim Dışı Üyeler"
 
 #: data/ui/window.ui:544
 msgid "_Preferences"
@@ -678,7 +684,7 @@ msgstr "Çı_k"
 
 #: src/bubble.vala:44
 msgid "Reconnect"
-msgstr "Yeniden bağlan"
+msgstr "Yeniden Bağlan"
 
 #: src/controller.vala:283
 msgid "No internet connection"
@@ -686,15 +692,15 @@ msgstr "İnternet bağlantısı yok"
 
 #: src/controller.vala:288 src/controller.vala:321
 msgid "Logging in"
-msgstr "Giriş yapılıyor"
+msgstr "Oturum açılıyor"
 
 #: src/controller.vala:348
 msgid "Error connecting"
-msgstr "Bağlanma hatası"
+msgstr "Bağlanırken hata oluştu"
 
 #: src/controller.vala:378
 msgid "Hamachi login failed"
-msgstr "Hamachi girişi başarısız oldu"
+msgstr "Hamachi oturumu açılamadı"
 
 #: src/controller.vala:459
 msgid "Updating"
@@ -706,23 +712,23 @@ msgstr "Bağlandı"
 
 #: src/controller.vala:730
 msgid "Member Joined"
-msgstr "Üye bağlandı"
+msgstr "Üye Katıldı"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
 #: src/controller.vala:732
 msgid "{0} joined the network {1}"
-msgstr "{0}, {1} ağına bağlandı"
+msgstr "{0}, {1} ağına katıldı"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
 #: src/controller.vala:734
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağa katıldı"
-msgstr[1] "{0}, {1} ve {2} başka ağa katıldı"
+msgstr[1] "{0}, {1} ve {2} başka ağlara katıldı"
 
 #: src/controller.vala:760
 msgid "Member Left"
-msgstr "Üye ayrıldı"
+msgstr "Üye Ayrıldı"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
 #: src/controller.vala:762
@@ -734,39 +740,39 @@ msgstr "{0}, {1} ağından ayrıldı"
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0}, {1} ve {2} başka ağdan ayrıldı"
-msgstr[1] "{0}, {1} ve {2} başka ağdan ayrıldı"
+msgstr[1] "{0}, {1} ve {2} başka ağlardan ayrıldı"
 
 #: src/controller.vala:786
 msgid "Member Online"
-msgstr "Üye çevrimiçi"
+msgstr "Üye Çevrim İçi"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
 #: src/controller.vala:788
 msgid "{0} came online in the network {1}"
-msgstr "{0}, {1} ağında çevrimiçi oldu"
+msgstr "{0}, {1} ağında çevrim içi oldu"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
 #: src/controller.vala:790
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
-msgstr[0] "{0}, {1} ve {2} başka ağda çevrimiçi oldu"
-msgstr[1] "{0}, {1} ve {2} başka ağda çevrimiçi oldu"
+msgstr[0] "{0}, {1} ve {2} başka ağda çevrim içi oldu"
+msgstr[1] "{0}, {1} ve {2} başka ağlarda çevrim içi oldu"
 
 #: src/controller.vala:812
 msgid "Member Offline"
-msgstr "Üye çevrimdışı"
+msgstr "Üye Çevrim Dışı"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
 #: src/controller.vala:814
 msgid "{0} went offline in the network {1}"
-msgstr "{0}, {1} ağında çevrimdışı oldu"
+msgstr "{0}, {1} ağında çevrim dışı oldu"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
 #: src/controller.vala:816
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
-msgstr[0] "{0}, {1} ve {2} başka ağda çevrimdışı oldu"
-msgstr[1] "{0}, {1} ve {2} başka ağda çevrimdışı oldu"
+msgstr[0] "{0}, {1} ve {2} başka ağda çevrim dışı oldu"
+msgstr[1] "{0}, {1} ve {2} başka ağlarda çevrim dışı oldu"
 
 #: src/dialogs/add-edit-command.vala:77
 msgid "Edit Command"
@@ -778,7 +784,7 @@ msgstr "Komut Ekle"
 
 #: src/dialogs/attach.vala:55
 msgid "Attach request sent"
-msgstr ""
+msgstr "Ek isteği gönderildi"
 
 #: src/dialogs/attach.vala:64
 msgid "Account not found"
@@ -786,15 +792,15 @@ msgstr "Hesap bulunamadı"
 
 #: src/dialogs/join-create-network.vala:33
 msgid "Join Network"
-msgstr "Ağa Bağlan"
+msgstr "Ağa Katıl"
 
 #: src/dialogs/join-create-network.vala:33
 msgid "Create Network"
-msgstr "Ağ Kur"
+msgstr "Ağ Oluştur"
 
 #: src/dialogs/join-create-network.vala:35
 msgid "_Join"
-msgstr "_Bağlan"
+msgstr "_Katıl"
 
 #: src/dialogs/join-create-network.vala:35
 msgid "C_reate"
@@ -810,7 +816,7 @@ msgstr "Ağ bulunamadı"
 
 #: src/dialogs/join-create-network.vala:102
 msgid "Invalid password"
-msgstr "Geçersiz şifre"
+msgstr "Geçersiz parola"
 
 #: src/dialogs/join-create-network.vala:104
 msgid "Network is full"
@@ -822,7 +828,7 @@ msgstr "Ağ kilitli"
 
 #: src/dialogs/join-create-network.vala:109
 msgid "Network already joined"
-msgstr "Zaten ağa bağlanılmış."
+msgstr "Zaten bu ağa katılındı"
 
 #: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
@@ -830,7 +836,7 @@ msgstr "Ağ kimliği zaten alınmış"
 
 #: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
 msgid "Unknown"
-msgstr "Bilinmeyen"
+msgstr "Bilinmiyor"
 
 #: src/hamachi.vala:578 src/window.vala:467
 msgid "Anonymous"
@@ -838,31 +844,31 @@ msgstr "Anonim"
 
 #: src/hamachi.vala:699 src/hamachi.vala:702
 msgid "Password changed"
-msgstr ""
+msgstr "Parola değişti"
 
 #: src/hamachi.vala:723
 msgid "Saving backup…"
-msgstr ""
+msgstr "Yedek kaydediliyor…"
 
 #: src/hamachi.vala:740
 msgid "Backup saved"
-msgstr ""
+msgstr "Yedek kaydedildi"
 
 #: src/hamachi.vala:740
 msgid "Failed to save backup"
-msgstr ""
+msgstr "Yedek kaydedilemedi"
 
 #: src/hamachi.vala:754
 msgid "Restoring backup…"
-msgstr ""
+msgstr "Yedek geri yükleniyor…"
 
 #: src/hamachi.vala:795
 msgid "Backup restored"
-msgstr ""
+msgstr "Yedek geri yüklendi"
 
 #: src/hamachi.vala:795
 msgid "Failed to restore backup"
-msgstr ""
+msgstr "Yedek geri yüklenemedi"
 
 #: src/hamachi.vala:802
 msgid "Archive does not contain expected files"
@@ -878,7 +884,7 @@ msgstr "Bağlantı Kesildi"
 
 #: src/indicator.vala:93
 msgid "_Show Haguichi"
-msgstr "Haguichi'yi _Göster"
+msgstr "Haguichiʼyi _Göster"
 
 #: src/indicator.vala:104
 msgid "_Disconnect"
@@ -908,7 +914,7 @@ msgstr "“{0}” ağından ayrılmak istediğinize emin misiniz?"
 
 #: src/network.vala:346
 msgid "If admitted, you can rejoin the network at any later time."
-msgstr "Kabul edildiyseniz, ağa başka bir zamanda tekrar bağlanabilirsiniz."
+msgstr "Kabul edilirseniz, ağa başka bir zamanda tekrar bağlanabilirsiniz."
 
 #: src/network.vala:374
 msgid "Are you sure you want to delete the network “{0}”?"
@@ -920,7 +926,7 @@ msgstr "Eğer bir ağı silerseniz tamamen kaybedilir."
 
 #: src/preferences.vala:107
 msgid "Not present"
-msgstr ""
+msgstr "Mevcut değil"
 
 #: src/preferences.vala:285
 msgid "All supported archives"
@@ -940,25 +946,25 @@ msgstr "Ge_ri Yükle"
 
 #: src/preferences.vala:372
 msgid "Never"
-msgstr ""
+msgstr "Asla"
 
 #: src/preferences.vala:395
 #, c-format
 msgid "%S second"
 msgid_plural "%S seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S saniye"
+msgstr[1] "%S saniye"
 
 #: src/preferences.vala:399
 #, c-format
 msgid "%S minute"
 msgid_plural "%S minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%S dakika"
+msgstr[1] "%S dakika"
 
 #: src/sidebar.vala:174
 msgid "Unavailable"
-msgstr "Geçerli değil"
+msgstr "Kullanılamıyor"
 
 #: src/sidebar.vala:192
 msgid "pending"
@@ -966,19 +972,19 @@ msgstr "beklemede"
 
 #: src/sidebar.vala:193
 msgid "Not attached"
-msgstr ""
+msgstr "Eklenmemiş"
 
 #: src/sidebar.vala:211
 msgid "{0} online, {1} total"
-msgstr "{0} çevrimiçi, {1} toplam"
+msgstr "{0} çevrim içi, {1} toplam"
 
 #: src/status.vala:35
 msgid "Offline"
-msgstr "Çevrimdışı"
+msgstr "Çevrim dışı"
 
 #: src/status.vala:39
 msgid "Online"
-msgstr "Çevirimiçi"
+msgstr "Çevirim içi"
 
 #: src/status.vala:41 src/status.vala:75 src/status.vala:85
 msgid "Relayed"
@@ -986,7 +992,7 @@ msgstr "Aktarılan"
 
 #: src/status.vala:48
 msgid "Unreachable"
-msgstr "Erişilemez"
+msgstr "Erişilemiyor"
 
 #: src/status.vala:52
 msgid "Awaiting approval"
@@ -998,65 +1004,68 @@ msgstr "Bilinmeyen hata"
 
 #: src/status.vala:60
 msgid "Protocol mismatch"
-msgstr "Protokol Uygun değil"
+msgstr "İletişim kuralı uyumsuz"
 
 #: src/status.vala:62
 msgid "Conflicting address"
-msgstr "Konfigrasyon adresi"
+msgstr "Çakışan adres"
 
 #: src/status.vala:73
 msgid "Direct"
-msgstr "Direk"
+msgstr "Doğrudan"
 
 #: src/widgets/commands-editor.vala:60
 msgid "Restore default commands?"
-msgstr ""
+msgstr "Öntanımlı komutları geri yüklemek ister misiniz?"
 
 #: src/widgets/commands-editor.vala:61
 msgid "All customizations will be lost."
-msgstr ""
+msgstr "Tüm özelleştirmeler kaybolacak."
 
 #: src/widgets/commands-editor.vala:103
 #, c-format
 msgid "Removed command “%s”"
-msgstr ""
+msgstr "“%s” komutu kaldırıldı"
 
 #: src/widgets/commands-editor.vala:104
 msgid "_Undo"
-msgstr ""
+msgstr "_Geri Al"
 
 #: src/window.vala:198
 msgid "Configuring"
-msgstr ""
+msgstr "Yapılandırılıyor"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
 #: src/window.vala:363
 msgid "translator-credits"
 msgstr ""
 "Aytunç Yeni https://launchpad.net/~aytuncyeni\n"
-"Kudret Emre https://launchpad.net/~kudretemre"
+"Kudret Emre https://launchpad.net/~kudretemre\n"
+"Sabri Ünal <yakushabb@gmail.com>"
 
 #: src/window.vala:444
 msgid "Copied to clipboard"
-msgstr ""
+msgstr "Panoya kopyalandı"
 
 #: src/window.vala:479
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
-msgstr[0] "Tekrar bağlanılıyor {0} saniye"
-msgstr[1] "Tekrar bağlanılıyor {0} saniye"
+msgstr[0] "{0} saniye içinde yeniden bağlanacak"
+msgstr[1] "{0} saniye içinde yeniden bağlanacak"
 
 #: src/window.vala:510
 msgid "Hamachi Is Not Installed"
-msgstr "Hamachi kurulmamış."
+msgstr "Hamachi Kurulmamış"
 
 #: src/window.vala:512
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
-msgstr "Hamachi sürümü %s uygun değil"
+msgstr "Hamachi Sürümü %s Eski"
 
 #: src/window.vala:611
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
 msgstr ""
+"Haguichi, bağlantıyı izleyebilmek ve bildirimler gönderebilmek için "
+"penceresi kapatıldığında da çalışmaya devam edecek."
