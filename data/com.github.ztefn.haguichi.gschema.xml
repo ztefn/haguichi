@@ -12,7 +12,8 @@
     <value value="0" nick="auto"/>
     <value value="1" nick="pkexec"/>
     <value value="2" nick="kdesu"/>
-    <value value="3" nick="sudo"/>
+    <value value="3" nick="run0"/>
+    <value value="4" nick="sudo"/>
   </enum>
 
   <enum id="com.github.ztefn.haguichi.config.protocol">

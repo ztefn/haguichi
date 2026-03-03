@@ -131,6 +131,7 @@ namespace Haguichi {
                 sudo = get_available ({
                     "pkexec",
                     "kdesu",
+                    "run0",
                     "sudo"
                 }, "");
             }
