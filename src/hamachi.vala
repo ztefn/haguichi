@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -165,7 +165,7 @@ namespace Haguichi {
                                                        service.printf ("start") + "\"");
                 debug ("configure: %s", output);
 
-                // Wait a second to let hamachi settle
+                // Wait a second to let Hamachi settle
                 Thread.usleep (1000000);
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
@@ -181,7 +181,7 @@ namespace Haguichi {
             string output = Command.return_output (Command.sudo + " " + Command.sudo_start + service.printf ("restart"));
             debug ("start: %s", output);
 
-            // Wait a second to let hamachi settle
+            // Wait a second to let Hamachi settle
             Thread.usleep (1000000);
 
             return output;
@@ -763,7 +763,7 @@ namespace Haguichi {
 
                     string working_path = path;
 
-                    // When running inside Flatpak sanbox we create temporary copy of the file within the home directory so it's accessible as super user,
+                    // When running inside Flatpak sandbox we create temporary copy of the file within the home directory so it's accessible as super user,
                     // otherwise we get a permission error when trying to access /run/user/1000/doc/xxxxxxxx/etc
                     if (Xdp.Portal.running_under_flatpak ()) {
                         working_path = "/home/%s/.hamachi-config-restore".printf (Environment.get_user_name ());
@@ -786,7 +786,7 @@ namespace Haguichi {
                         Command.return_output ("rm " + working_path);
                     }
 
-                    // Wait a second to let hamachi settle
+                    // Wait a second to let Hamachi settle
                     Thread.usleep (1000000);
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {

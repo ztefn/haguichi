@@ -80,7 +80,7 @@ namespace Haguichi {
                 stdout = "";
             }
 
-            // When hamachi is busy try again after a little while
+            // When Hamachi is busy try again after a little while
             if (stdout.contains (".. failed, busy")) {
                 debug ("Hamachi is busy, waiting to try again...");
                 Thread.usleep (100000);

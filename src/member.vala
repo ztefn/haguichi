@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -113,7 +113,7 @@ namespace Haguichi {
             new_nick = _nick;
 
             if (_init == false && new_nick.length >= 25 && nick.length >= 25 && nick.has_prefix (new_nick.replace ("�", ""))) {
-                // Long nick has already been retreived and is probably not altered, since the first 25 characters are identical
+                // Long nick has already been retrieved and is probably not altered, since the first 25 characters are identical
             }
             else if (new_nick.length >= 25) {
                 string cached_nick = get_long_nick_from_cache ();
@@ -122,7 +122,7 @@ namespace Haguichi {
                     // If we got a long nick from cache then use it
                     nick = cached_nick;
                 } else {
-                    // If not then get long nick from hamachi
+                    // If not then get long nick from Hamachi
                     try {
                         member_threads.add (this);
                     } catch (ThreadError e) {
@@ -139,13 +139,13 @@ namespace Haguichi {
         }
 
         public void get_long_nick_thread () {
-            // First try the cache again, because an other thread might have retreived it already for the same member in a different network
+            // First try the cache again, because an other thread might have retrieved it already for the same member in a different network
             string cached_nick = get_long_nick_from_cache ();
 
             if (cached_nick != null) {
                 nick = cached_nick;
             } else {
-                // Okay, really retreive it from hamachi now
+                // Okay, really retrieve it from Hamachi now
                 string output = Command.return_output ("hamachi peer %s".printf (id));
                 debug ("get_long_nick_thread: %s", output);
 
@@ -154,7 +154,7 @@ namespace Haguichi {
                     nick = _nick;
                 }
 
-                // Add retreived long nick to the cache
+                // Add retrieved long nick to the cache
                 connection.add_long_nick (id, nick);
             }
 

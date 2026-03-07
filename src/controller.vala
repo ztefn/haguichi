@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -239,7 +239,7 @@ namespace Haguichi {
             win.set_mode ("Connecting");
 
             new Thread<void*> (null, () => {
-                // Wait a second before starting hamachi again
+                // Wait a second before starting Hamachi again
                 Thread.usleep (1000000);
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
@@ -316,7 +316,7 @@ namespace Haguichi {
                 status_check ();
 
                 if (last_status >= 4) {
-                    debug ("go_start: Hamachi is succesfully started, now go login");
+                    debug ("go_start: Hamachi is successfully started, now go login");
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
                         win.window_title.subtitle = _("Logging in");
@@ -324,7 +324,7 @@ namespace Haguichi {
                     });
                     go_login_thread ();
                 } else if (last_status == 1) {
-                    debug ("go_start: Hamachi is succesfully started, but not configured");
+                    debug ("go_start: Hamachi is successfully started, but not configured");
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
                         connection_stopped ();
@@ -341,7 +341,7 @@ namespace Haguichi {
                         return false;
                     });
                 } else {
-                    debug ("go_start: Failed to start Hamachi, no output to show - user might have cancelled sudo dialog");
+                    debug ("go_start: Failed to start Hamachi, no output to show - user might have canceled sudo dialog");
                     restore = false;
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {

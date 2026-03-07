@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -21,7 +21,7 @@ namespace Haguichi {
             networks = new List<Network> ();
             long_nicks_hash = new HashTable<string, string> (str_hash, str_equal);
 
-            // Retreive saved long nicks from GSettings
+            // Retrieve saved long nicks from GSettings
             settings = new Settings (Config.APP_ID + ".network-list");
             string[] long_nicks = settings.get_strv ("long-nicks");
 
