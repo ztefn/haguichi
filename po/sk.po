@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2018-04-03 19:12+0000\n"
-"Last-Translator: Zdeněk Kopš <zdenekkops@gmail.com>\n"
-"Language-Team: Slovak <sk@li.org>\n"
+"PO-Revision-Date: 2026-03-19 22:36+0000\n"
+"Last-Translator: Parrot HatOSS <parrothat.oss@gmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/haguichi/haguichi/"
+"sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Launchpad-Export-Date: 2018-04-04 17:28+0000\n"
-"X-Generator: Launchpad (build 18599)\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -47,7 +48,7 @@ msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
 msgid "Features:"
-msgstr ""
+msgstr "Vlastnosti:"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:12
 msgid "Searchable, sortable and collapsible network list"
@@ -55,7 +56,7 @@ msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:13
 msgid "Sidebar for easy access to details and actions"
-msgstr ""
+msgstr "Ľavý panel pre ľahkú prístupnosť na detaily a akcie"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
@@ -79,6 +80,7 @@ msgid ""
 "<em>Please note: Requires installation of Hamachi on the system in order to "
 "use.</em>"
 msgstr ""
+"<em>Poznámka: Potrebuje inštaláciu Hamachi na systéme pre používanie.</em>"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:23
 #, fuzzy
@@ -95,7 +97,7 @@ msgstr ""
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:35
 msgid "Search your network list"
-msgstr ""
+msgstr "Vyhladať svoj sieťový list"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:39
 #, fuzzy
@@ -149,7 +151,7 @@ msgstr "Uzamknuté"
 
 #: data/ui/dialogs/change-access.ui:32
 msgid "Do not accept new network members"
-msgstr ""
+msgstr "Neakceptovať nových sieťových členov"
 
 #: data/ui/dialogs/change-access.ui:38
 msgid "Approval"
