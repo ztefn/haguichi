@@ -6,6 +6,7 @@
     <value value="1" nick="systemctl"/>
     <value value="2" nick="init.d"/>
     <value value="3" nick="rc.d"/>
+    <value value="4" nick="none"/>
   </enum>
 
   <enum id="com.github.ztefn.haguichi.commands.super-user">

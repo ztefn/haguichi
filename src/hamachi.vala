@@ -12,6 +12,7 @@
 
 namespace Haguichi {
     public class Hamachi : Object {
+        public  const  string DAEMON_PATH = "/opt/logmein-hamachi/bin/hamachid";
         public  const  string DATA_PATH   = "/var/lib/logmein-hamachi";
         public  const  string CONFIG_PATH = DATA_PATH + "/h2-engine-override.cfg";
 
@@ -111,6 +112,12 @@ namespace Haguichi {
                       Utils.path_exists ("f", "/etc/rc.d/logmein-hamachi"))) {
                 // BSD style init
                 service = "/etc/rc.d/logmein-hamachi %s";
+            }
+            else if (init_system == "none" ||
+                     (init_system == "auto" &&
+                      Utils.path_exists ("f", DAEMON_PATH))) {
+                // Run Hamachi daemon directly
+                service = DAEMON_PATH;
             }
 
             debug ("determine_service %s: %s", init_system, service);
