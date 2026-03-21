@@ -31,7 +31,7 @@ namespace Haguichi {
             determine_service ();
         }
 
-        public static void determine_version () {
+        private static void determine_version () {
             version = "";
 
             if (demo_mode) {
@@ -86,7 +86,7 @@ namespace Haguichi {
             debug ("determine_version: Unknown version");
         }
 
-        public static void determine_service () {
+        private static void determine_service () {
             service = "";
 
             var settings = new Settings (Config.APP_ID + ".commands");
@@ -116,7 +116,7 @@ namespace Haguichi {
             debug ("determine_service %s: %s", init_system, service);
         }
 
-        public static bool systemctl_unit_found () {
+        private static bool systemctl_unit_found () {
             bool found = true;
 
             string output = Command.return_output ("systemctl status logmein-hamachi.service");
