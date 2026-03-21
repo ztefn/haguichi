@@ -12,6 +12,9 @@
 
 namespace Haguichi {
     public class Command : Object {
+        public static bool hamachi_binary_exists;
+        public static bool hamachi_use_daemon;
+
         public static string spawn_wrap;
 
         public static string sudo;
@@ -31,6 +34,13 @@ namespace Haguichi {
 
         public static void init () {
             settings = new Settings (Config.APP_ID + ".commands");
+
+            hamachi_binary_exists = exists ("hamachi");
+            hamachi_use_daemon = !hamachi_binary_exists && Utils.path_exists ("f", Hamachi.DAEMON_PATH);
+
+            if (!hamachi_binary_exists) {
+                warning ("Hamachi binary not found%s", hamachi_use_daemon ? ", using daemon instead" : "");
+            }
 
             if (exists ("flatpak")) {
                 flatpak_list = return_output ("flatpak list --app");
@@ -65,8 +75,10 @@ namespace Haguichi {
             string stderr;
             int    exit_status;
 
+            string cmd = parse_hamachi_command (command);
+
             try {
-                Process.spawn_command_line_sync (spawn_wrap + command, out stdout, out stderr, out exit_status);
+                Process.spawn_command_line_sync (spawn_wrap + cmd, out stdout, out stderr, out exit_status);
 
                 if (stderr != "") {
                     warning ("return_output stderr: %s", stderr);
@@ -85,7 +97,7 @@ namespace Haguichi {
                 debug ("Hamachi is busy, waiting to try again...");
                 Thread.usleep (100000);
 
-                stdout = return_output (command);
+                stdout = return_output (cmd);
             }
 
             // When there's no regular output we'd want to return the error if available
@@ -93,7 +105,18 @@ namespace Haguichi {
         }
 
         public static string return_output_with_timeout (int timeout, string command) {
-            return return_output ("timeout %d %s".printf (timeout, command));
+            return return_output ("timeout %d %s".printf (timeout, parse_hamachi_command (command)));
+        }
+
+        private static string parse_hamachi_command (string command) {
+            string cmd = command;
+
+            if (hamachi_use_daemon && command.has_prefix ("hamachi")) {
+                // Call daemon with process name set to `hamachi` so that it acts as command line interface
+                cmd = "bash -c 'exec -a hamachi %s%s'".printf (Hamachi.DAEMON_PATH, command.substring (7).replace ("'", "'\\''"));
+            }
+
+            return cmd;
         }
 
         public static bool exists (string? command) {

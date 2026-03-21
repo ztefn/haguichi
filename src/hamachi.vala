@@ -40,7 +40,7 @@ namespace Haguichi {
                 return;
             }
 
-            if (!Command.exists ("hamachi")) {
+            if (!(Command.hamachi_binary_exists || Command.hamachi_use_daemon)) {
                 return;
             }
 
@@ -276,7 +276,7 @@ namespace Haguichi {
         }
 
         public static string get_info () {
-            if (!demo_mode && Command.exists ("hamachi")) {
+            if (!demo_mode && (Command.hamachi_binary_exists || Command.hamachi_use_daemon)) {
                 last_info = Command.return_output ("hamachi");
                 debug ("get_info: %s", last_info);
             }
