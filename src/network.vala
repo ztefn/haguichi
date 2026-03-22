@@ -163,69 +163,75 @@ namespace Haguichi {
 
         private void determine_ownership () {
             try {
+                this.ref ();
                 network_threads.add (this);
             } catch (ThreadError e) {
+                this.unref ();
                 critical ("determine_ownership: %s", e.message);
             }
         }
 
         public void determine_ownership_thread () {
-            if (owner == "This computer") {
-                is_owner = 1;
+            try {
+                if (owner == "This computer") {
+                    is_owner = 1;
 
-                string output;
+                    string output;
 
-                if (demo_mode) {
-                    output = """
+                    if (demo_mode) {
+                        output = """
 id       : %s
 name     : %s
 type     : Mesh
 owner    : This computer
 status   : unlocked
 approve  : auto""".printf (id, name);
+                    } else {
+                        output = Command.return_output ("hamachi network \"%s\"".printf (Utils.clean_string (id)));
+                    }
+                    debug ("determine_ownership_thread: %s", output);
+
+                    lock_state = Hamachi.retrieve (output, "status");
+                    approve = Hamachi.retrieve (output, "approve");
                 } else {
-                    output = Command.return_output ("hamachi network \"%s\"".printf (Utils.clean_string (id)));
-                }
-                debug ("determine_ownership_thread: %s", output);
+                    is_owner = 0;
 
-                lock_state = Hamachi.retrieve (output, "status");
-                approve = Hamachi.retrieve (output, "approve");
-            } else {
-                is_owner = 0;
+                    try {
+                        MatchInfo mi;
+                        new Regex ("""^.*? \((?<id>[0-9-]{11})\)$""").match (owner, 0, out mi);
 
-                try {
-                    MatchInfo mi;
-                    new Regex ("""^.*? \((?<id>[0-9-]{11})\)$""").match (owner, 0, out mi);
+                        string id = mi.fetch_named ("id");
 
-                    string id = mi.fetch_named ("id");
-
-                    if (id != null) {
-                        owner = id;
-                        foreach (Member member in members) {
-                            if (member.id == owner) {
-                                Idle.add_full (Priority.HIGH_IDLE, () => {
-                                    member.is_owner = true;
-                                    member.set_label_markup ();
-                                    return false;
-                                });
+                        if (id != null) {
+                            owner = id;
+                            foreach (Member member in members) {
+                                if (member.id == owner) {
+                                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                                        member.is_owner = true;
+                                        member.set_label_markup ();
+                                        return false;
+                                    });
+                                }
                             }
                         }
+                    } catch (RegexError e) {
+                        critical ("determine_ownership_thread: %s", e.message);
                     }
-                } catch (RegexError e) {
-                    critical ("determine_ownership_thread: %s", e.message);
                 }
+                debug ("determine_ownership_thread: Owner for network %s: %s", id, owner);
+
+                Idle.add_full (Priority.HIGH_IDLE, () => {
+                    set_label_markup ();
+
+                    // Update sidebar with new ownership info when selected
+                    if (win.network_list.get_selected_item () == this) {
+                        win.sidebar.set_network (this);
+                    }
+                    return false;
+                });
+            } finally {
+                this.unref ();
             }
-            debug ("determine_ownership_thread: Owner for network %s: %s", id, owner);
-
-            Idle.add_full (Priority.HIGH_IDLE, () => {
-                set_label_markup ();
-
-                // Update sidebar with new ownership info when selected
-                if (win.network_list.get_selected_item () == this) {
-                    win.sidebar.set_network (this);
-                }
-                return false;
-            });
         }
 
         public void add_member (Member member) {

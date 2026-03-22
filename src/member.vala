@@ -124,8 +124,10 @@ namespace Haguichi {
                 } else {
                     // If not then get long nick from Hamachi
                     try {
+                        this.ref ();
                         member_threads.add (this);
                     } catch (ThreadError e) {
+                        this.unref ();
                         critical ("get_long_nick: %s", e.message);
                     }
                 }
@@ -139,35 +141,39 @@ namespace Haguichi {
         }
 
         public void get_long_nick_thread () {
-            // First try the cache again, because an other thread might have retrieved it already for the same member in a different network
-            string cached_nick = get_long_nick_from_cache ();
+            try {
+                // First try the cache again, because an other thread might have retrieved it already for the same member in a different network
+                string cached_nick = get_long_nick_from_cache ();
 
-            if (cached_nick != null) {
-                nick = cached_nick;
-            } else {
-                // Okay, really retrieve it from Hamachi now
-                string output = Command.return_output ("hamachi peer %s".printf (id));
-                debug ("get_long_nick_thread: %s", output);
+                if (cached_nick != null) {
+                    nick = cached_nick;
+                } else {
+                    // Okay, really retrieve it from Hamachi now
+                    string output = Command.return_output ("hamachi peer %s".printf (id));
+                    debug ("get_long_nick_thread: %s", output);
 
-                string _nick = Hamachi.retrieve (output, "nickname");
-                if (_nick != "") {
-                    nick = _nick;
+                    string _nick = Hamachi.retrieve (output, "nickname");
+                    if (_nick != "") {
+                        nick = _nick;
+                    }
+
+                    // Add retrieved long nick to the cache
+                    connection.add_long_nick (id, nick);
                 }
 
-                // Add retrieved long nick to the cache
-                connection.add_long_nick (id, nick);
+                Idle.add_full (Priority.HIGH_IDLE, () => {
+                    set_label_markup ();
+                    set_sort_strings ();
+
+                    // Update sidebar with new nick when selected
+                    if (win.network_list.get_selected_item () == this) {
+                        win.sidebar.set_member (this);
+                    }
+                    return false;
+                });
+            } finally {
+                this.unref ();
             }
-
-            Idle.add_full (Priority.HIGH_IDLE, () => {
-                set_label_markup ();
-                set_sort_strings ();
-
-                // Update sidebar with new nick when selected
-                if (win.network_list.get_selected_item () == this) {
-                    win.sidebar.set_member (this);
-                }
-                return false;
-            });
         }
 
         private string get_long_nick_from_cache () {
