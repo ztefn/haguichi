@@ -282,9 +282,9 @@ approve  : auto""".printf (id, name);
                     });
                 } else {
                     status = new Status (" ");
-                    set_row_css_classes ();
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
+                        set_row_css_classes ();
                         win.sidebar.set_network (this);
                         return false;
                     });
@@ -324,9 +324,9 @@ approve  : auto""".printf (id, name);
                     });
                 } else {
                     status = new Status ("*");
-                    set_row_css_classes ();
 
                     Idle.add_full (Priority.HIGH_IDLE, () => {
+                        set_row_css_classes ();
                         win.sidebar.set_network (this);
                         return false;
                     });
