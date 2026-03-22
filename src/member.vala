@@ -94,9 +94,7 @@ namespace Haguichi {
                 template = template.replace ("%*_", "");
             }
 
-            lock (label) {
-                label = template.replace ("{PERCENTSIGN}", "%");
-            }
+            label = template.replace ("{PERCENTSIGN}", "%");
         }
 
         public void set_row_css_classes () {
