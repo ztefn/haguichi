@@ -158,16 +158,16 @@ namespace Haguichi {
                 connection.add_long_nick (id, nick);
             }
 
-            set_label_markup ();
-            set_sort_strings ();
+            Idle.add_full (Priority.HIGH_IDLE, () => {
+                set_label_markup ();
+                set_sort_strings ();
 
-            // Update sidebar with new nick when selected
-            if (win.network_list.get_selected_item () == this) {
-                Idle.add_full (Priority.HIGH_IDLE, () => {
+                // Update sidebar with new nick when selected
+                if (win.network_list.get_selected_item () == this) {
                     win.sidebar.set_member (this);
-                    return false;
-                });
-            }
+                }
+                return false;
+            });
         }
 
         private string get_long_nick_from_cache () {

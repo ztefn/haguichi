@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -217,15 +217,15 @@ approve  : auto""".printf (id, name);
             }
             debug ("determine_ownership_thread: Owner for network %s: %s", id, owner);
 
-            set_label_markup ();
+            Idle.add_full (Priority.HIGH_IDLE, () => {
+                set_label_markup ();
 
-            // Update sidebar with new ownership info when selected
-            if (win.network_list.get_selected_item () == this) {
-                Idle.add_full (Priority.HIGH_IDLE, () => {
+                // Update sidebar with new ownership info when selected
+                if (win.network_list.get_selected_item () == this) {
                     win.sidebar.set_network (this);
-                    return false;
-                });
-            }
+                }
+                return false;
+            });
         }
 
         public void add_member (Member member) {
