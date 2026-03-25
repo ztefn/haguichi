@@ -18,6 +18,12 @@ namespace Haguichi {
         private Settings notifications;
         private Settings ui;
 
+        private enum ColorScheme {
+            SYSTEM,
+            LIGHT,
+            DARK,
+        }
+
         private enum UpdateInterval {
             15_SECONDS = 15,
             30_SECONDS = 30,
@@ -219,14 +225,15 @@ namespace Haguichi {
             behavior.bind ("reconnect-on-connection-loss", reconnect_on_connection_loss, "active", DEFAULT);
             behavior.bind ("disconnect-on-quit",           disconnect_on_quit,           "active", DEFAULT);
 
-            var scheme = (int) ui.get_enum ("color-scheme");
-            if (scheme == 1) {
-                light.active = true;
-            } else if (scheme == 2) {
-                dark.active = true;
-            } else {
-                system.active = true;
-            }
+            var scheme = (ColorScheme) ui.get_enum ("color-scheme");
+
+            system.active = scheme == ColorScheme.SYSTEM;
+            light.active  = scheme == ColorScheme.LIGHT;
+            dark.active   = scheme == ColorScheme.DARK;
+
+            system.toggled.connect (on_style_selection);
+            light.toggled.connect  (on_style_selection);
+            dark.toggled.connect   (on_style_selection);
 
             ui.bind ("show-indicator", show_indicator, "active", DEFAULT);
 
@@ -264,13 +271,14 @@ namespace Haguichi {
             }
         }
 
-        [GtkCallback]
-        private void on_style_selection () {
-            int scheme = 0;
-            if (light.active) {
-                scheme = 1;
-            } else if (dark.active) {
-                scheme = 2;
+        private void on_style_selection (Gtk.CheckButton btn) {
+            if (!btn.active) return;
+
+            int scheme = ColorScheme.SYSTEM;
+            if (btn == light) {
+                scheme = ColorScheme.LIGHT;
+            } else if (btn == dark) {
+                scheme = ColorScheme.DARK;
             }
             ui.set_enum ("color-scheme", scheme);
             app.set_color_scheme (scheme);

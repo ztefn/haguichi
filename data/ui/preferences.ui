@@ -127,9 +127,7 @@
                         </style>
                         <property name="hexpand">true</property>
                         <property name="halign">center</property>
-                        <property name="group">light</property>
                         <property name="tooltip-text" translatable="yes">Follow System</property>
-                        <signal name="notify::active" handler="on_style_selection"/>
                       </object>
                     </child>
                     <child>
@@ -139,8 +137,8 @@
                         </style>
                         <property name="hexpand">true</property>
                         <property name="halign">center</property>
+                        <property name="group">system</property>
                         <property name="tooltip-text" translatable="yes">Light</property>
-                        <signal name="notify::active" handler="on_style_selection"/>
                       </object>
                     </child>
                     <child>
@@ -150,9 +148,8 @@
                         </style>
                         <property name="hexpand">true</property>
                         <property name="halign">center</property>
-                        <property name="group">light</property>
+                        <property name="group">system</property>
                         <property name="tooltip-text" translatable="yes">Dark</property>
-                        <signal name="notify::active" handler="on_style_selection"/>
                       </object>
                     </child>
                   </object>
