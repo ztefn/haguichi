@@ -366,7 +366,8 @@ namespace Haguichi {
                 translator_credits  = _("translator-credits"),
                 version             = VERSION,
                 website             = "https://haguichi.net",
-                width_request       = 320
+                // Lower minimum width request to match window
+                width_request       = width_request
             };
 #if FOR_UBUNTU
             if (Utils.get_icon_theme ().theme_name.has_prefix ("Yaru")) {

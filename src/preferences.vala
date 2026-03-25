@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -83,7 +83,8 @@ namespace Haguichi {
         unowned Adw.SwitchRow notify_on_member_offline;
 
         construct {
-            ((Adw.BreakpointBin) general_page.get_ancestor (typeof (Adw.BreakpointBin))).width_request = 320;
+            // Lower minimum width request to match window
+            ((Adw.BreakpointBin) general_page.get_ancestor (typeof (Adw.BreakpointBin))).width_request = win.width_request;
 
             general_page.icon_name = Utils.get_available_theme_icon ({
                 "applications-system-symbolic",
