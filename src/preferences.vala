@@ -312,7 +312,7 @@ namespace Haguichi {
 
             var dialog = new Gtk.FileDialog () {
                 title        = _("Save a Backup"),
-                initial_name = "logmein-hamachi-config_" + now.format ("%Y-%m-%d") + ".tar.gz",
+                initial_name = "logmein-hamachi-config_%s.tar.gz".printf (now.format ("%Y-%m-%d")),
                 modal        = true,
                 filters      = get_file_filters ()
             };
