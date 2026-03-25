@@ -192,7 +192,7 @@ namespace Haguichi {
 #endif
 
             protocol.selected = (int) config.get_enum ("protocol");
-            protocol.notify["selected-item"].connect ((sender, property) => {
+            protocol.notify["selected-item"].connect (() => {
                 var i = (int) protocol.selected;
                 config.set_enum ("protocol", i);
 
@@ -215,7 +215,7 @@ namespace Haguichi {
             update_interval.expression = expression;
             update_interval.model      = model;
             update_interval.selected   = get_update_interval_row_index ();
-            update_interval.notify["selected-item"].connect ((sender, property) => {
+            update_interval.notify["selected-item"].connect (() => {
                 var item = (Adw.EnumListItem) update_interval.selected_item;
                 var val  = (UpdateInterval) item.get_value ();
                 config.set_int ("update-interval", val);
@@ -241,7 +241,7 @@ namespace Haguichi {
             indicator.item.notify["host-registered"].connect (() => {
                 show_indicator.visible = indicator.item.host_registered;
             });
-            show_indicator.notify["active"].connect ((sender, property) => {
+            show_indicator.notify["active"].connect (() => {
                 indicator.active = ui.get_boolean ("show-indicator");
                 win.update_indicator_status ();
             });
@@ -253,19 +253,19 @@ namespace Haguichi {
             notifications.bind ("member-offline",  notify_on_member_offline,  "active", DEFAULT);
 
             if (demo_mode) {
-                notify_on_connection_loss.notify["active"].connect ((sender, property) => {
+                notify_on_connection_loss.notify["active"].connect (() => {
                     Controller.notify_connection_lost ();
                 });
-                notify_on_member_join.notify["active"].connect ((sender, property) => {
+                notify_on_member_join.notify["active"].connect (() => {
                     Controller.notify_member_joined  ("T-800", "Skynet", 0, "000-000-000", {"000-000-000"});
                 });
-                notify_on_member_leave.notify["active"].connect ((sender, property) => {
+                notify_on_member_leave.notify["active"].connect (() => {
                     Controller.notify_member_left    ("T-800", "Skynet", 0);
                 });
-                notify_on_member_online.notify["active"].connect ((sender, property) => {
+                notify_on_member_online.notify["active"].connect (() => {
                     Controller.notify_member_online  ("T-800", "Skynet", 1);
                 });
-                notify_on_member_offline.notify["active"].connect ((sender, property) => {
+                notify_on_member_offline.notify["active"].connect (() => {
                     Controller.notify_member_offline ("T-800", "Skynet", 2);
                 });
             }
