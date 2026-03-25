@@ -178,7 +178,7 @@ namespace Haguichi {
             debug ("has_internet_connection: Trying to ping %s...", config.get_string ("check-internet-ip"));
 
             try {
-                Process.spawn_command_line_sync (Command.spawn_wrap + "ping -c1 -W1 " + config.get_string ("check-internet-ip"), out stdout, out stderr, out status);
+                Process.spawn_command_line_sync ("%sping -c1 -W1 %s".printf (Command.spawn_wrap, config.get_string ("check-internet-ip")), out stdout, out stderr, out status);
 
                 success = (status == 0);
 
@@ -196,7 +196,7 @@ namespace Haguichi {
                 debug ("has_internet_connection: Ping failed. Trying to resolve hostname %s using dig...", config.get_string ("check-internet-hostname"));
 
                 try {
-                    Process.spawn_command_line_sync (Command.spawn_wrap + "dig +short +tries=1 +time=1 " + config.get_string ("check-internet-hostname"), out stdout, out stderr, out status);
+                    Process.spawn_command_line_sync ("%sdig +short +tries=1 +time=1 %s".printf (Command.spawn_wrap, config.get_string ("check-internet-hostname")), out stdout, out stderr, out status);
 
                     success = (status == 0 && stdout != "");
 

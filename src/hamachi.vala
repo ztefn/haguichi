@@ -163,13 +163,14 @@ namespace Haguichi {
 
         public static void configure () {
             new Thread<void*> (null, () => {
-                string output = Command.return_output (Command.sudo + " " + Command.sudo_start + "bash -c \"" +
-                                                       service.printf ("start") + "; " +
-                                                       service.printf ("stop") + "; " +
-                                                       "killall -9 hamachid &> /dev/null; " +
-                                                       "echo \'Ipc.User      " + Environment.get_user_name () +
-                                                       "\' >> " + CONFIG_PATH + "; " +
-                                                       service.printf ("start") + "\"");
+                string output = Command.return_output ("%s %sbash -c \"%s; %s; killall -9 hamachid &> /dev/null; echo \'Ipc.User      %s\' >> %s; %s\"".printf (
+                                                       Command.sudo,
+                                                       Command.sudo_start,
+                                                       service.printf ("start"),
+                                                       service.printf ("stop"),
+                                                       Environment.get_user_name (),
+                                                       CONFIG_PATH,
+                                                       service.printf ("start")));
                 debug ("configure: %s", output);
 
                 // Wait a second to let Hamachi settle
@@ -185,7 +186,7 @@ namespace Haguichi {
         }
 
         public static string start () {
-            string output = Command.return_output (Command.sudo + " " + Command.sudo_start + service.printf ("restart"));
+            string output = Command.return_output ("%s %s%s".printf (Command.sudo, Command.sudo_start, service.printf ("restart")));
             debug ("start: %s", output);
 
             // Wait a second to let Hamachi settle
@@ -776,15 +777,17 @@ namespace Haguichi {
                         working_path = "/home/%s/.hamachi-config-restore".printf (Environment.get_user_name ());
 
                         debug ("restore_config: Creating temporary file at %s...", working_path);
-                        Command.return_output ("cp " + path + " " + working_path);
+                        Command.return_output ("cp %s %s".printf (path, working_path));
                     }
 
-                    output = Command.return_output (Command.sudo + " " + Command.sudo_start + "bash -c \"" +
-                                                    service.printf ("start") + "; " +
-                                                    service.printf ("stop") + "; " +
-                                                    "killall -9 hamachid &> /dev/null; rm " + DATA_PATH +
-                                                    "/*; tar -xavf '" + working_path + "' -C /; " +
-                                                    service.printf ("start") + "\"");
+                    output = Command.return_output ("%s %sbash -c \"%s; %s; killall -9 hamachid &> /dev/null; rm %s/*; tar -xavf '%s' -C /; %s\"".printf (
+                                                    Command.sudo,
+                                                    Command.sudo_start,
+                                                    service.printf ("start"),
+                                                    service.printf ("stop"),
+                                                    DATA_PATH,
+                                                    working_path,
+                                                    service.printf ("start")));
                     debug ("restore_config: %s", output);
 
                     // Remove temporary copy of the file

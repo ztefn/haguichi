@@ -186,7 +186,7 @@ namespace Haguichi {
             if (provider == null) {
                 provider = new Gtk.CssProvider ();
             }
-            provider.load_from_resource ("/com/github/ztefn/haguichi/elementary" + (Adw.StyleManager.get_default ().dark ? "-dark" : "") + ".css");
+            provider.load_from_resource ("/com/github/ztefn/haguichi/elementary%s.css".printf (Adw.StyleManager.get_default ().dark ? "-dark" : ""));
             Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (), provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
 #endif
@@ -357,8 +357,8 @@ namespace Haguichi {
             var about = new Adw.AboutDialog () {
                 application_name    = APP_NAME,
                 application_icon    = APP_ID,
-                copyright           = "© 2007-2026 " + developer_name,
-                debug_info_filename = "haguichi-debug-info_" + new DateTime.now_local ().format ("%Y-%m-%dT%H:%M") + ".txt",
+                copyright           = "© 2007-2026 %s".printf (developer_name),
+                debug_info_filename = "haguichi-debug-info_%s.txt".printf (new DateTime.now_local ().format ("%Y-%m-%dT%H:%M")),
                 developer_name      = developer_name,
                 issue_url           = "https://github.com/ztefn/haguichi/issues",
                 license_type        = Gtk.License.GPL_3_0,

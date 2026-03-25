@@ -138,7 +138,7 @@ namespace Haguichi {
                     return false;
                 }
             } else {
-                string stdout = return_output ("bash -c \"command -v " + command.split (" ", 0)[0] + " &>/dev/null || echo 'command not found'\"");
+                string stdout = return_output ("bash -c \"command -v %s &>/dev/null || echo 'command not found'\"".printf (command.split (" ", 0)[0]));
                 result = !stdout.contains ("command not found");
             }
 
@@ -319,7 +319,7 @@ namespace Haguichi {
                         Regex regex = new Regex ("(?<!\\\\)\"");
                         command = regex.replace (command, -1, 0, "\\\\\"");
                     }
-                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, terminal + " " + option + " " + quote + "\\1" + quote);
+                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, "%s %s %s\\1%s".printf (terminal, option, quote, quote));
                 } catch (RegexError e) {
                     critical ("replace_variables: %s", e.message);
                 }
@@ -353,7 +353,7 @@ namespace Haguichi {
         }
 
         public static void open_redirect_uri (string action) {
-            open_uri ("https://haguichi.net/redirect/?action=" + action + "&version=" + Config.VERSION + "&language=" + Intl.get_language_names ()[1]);
+            open_uri ("https://haguichi.net/redirect/?action=%s&version=%s&language=%s".printf (action, Config.VERSION, Intl.get_language_names ()[1]));
         }
 
         private static void open_uri (string uri) {
