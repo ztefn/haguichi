@@ -229,7 +229,7 @@ namespace Haguichi {
             Graphene.Rect out_bounds;
             var focus_widget = list_view.get_focus_child ();
             focus_widget.compute_bounds (list_view, out out_bounds);
-            show_context_menu (get_selected_item (), 30, (int) out_bounds.get_y () + focus_widget.get_height () + 12);
+            show_context_menu (get_selected_item (), 6, (int) out_bounds.get_y () + focus_widget.get_height () + 11);
         }
 
         private void show_context_menu (Object? item, int x, int y) {
