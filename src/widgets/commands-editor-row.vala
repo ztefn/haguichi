@@ -31,8 +31,11 @@ namespace Haguichi {
         unowned Gtk.Image default_emblem;
         [GtkChild]
         unowned Gtk.Switch command_switch;
+        [GtkChild]
+        unowned Gtk.MenuButton command_menu_button;
 
         construct {
+            install_action ("row.open-menu",   null, (Gtk.WidgetActionActivateFunc) on_open_menu);
             install_action ("row.edit",        null, (Gtk.WidgetActionActivateFunc) on_edit);
             install_action ("row.duplicate",   null, (Gtk.WidgetActionActivateFunc) on_duplicate);
             install_action ("row.move-up",     null, (Gtk.WidgetActionActivateFunc) on_move_up);
@@ -67,6 +70,10 @@ namespace Haguichi {
 
             update (_label, _command_ipv4, _command_ipv6, _priority);
             set_default (is_default);
+        }
+
+        public void on_open_menu () {
+            command_menu_button.popup ();
         }
 
         public void on_edit () {

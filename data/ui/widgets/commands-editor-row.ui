@@ -55,6 +55,22 @@
         <signal name="drop" handler="on_drop"/>
       </object>
     </child>
+    <child>
+      <object class="GtkShortcutController">
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">Menu</property>
+            <property name="action">action(row.open-menu)</property>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcut">
+            <property name="trigger">&lt;Shift&gt;F10</property>
+            <property name="action">action(row.open-menu)</property>
+          </object>
+        </child>
+      </object>
+    </child>
   </template>
   <menu id="command_row_menu">
     <section>
