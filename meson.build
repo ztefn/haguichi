@@ -18,6 +18,13 @@ add_project_arguments(
   language: 'c'
 )
 
+if vala_version.version_compare('>= 0.56.19')
+  add_project_arguments(
+    ['-D', 'VALA_0_56_19'],
+    language: 'vala'
+  )
+endif
+
 conf = configuration_data()
 conf.set('APP_ID',          app_id)
 conf.set('APP_NAME',        app_name)

@@ -127,7 +127,11 @@ namespace Haguichi {
             drag_widget.append (drag_row);
             drag_widget.drag_highlight_row (drag_row);
 
-            var icon = Gtk.DragIcon.get_for_drag (drag) as Gtk.DragIcon;
+            var icon = (Gtk.DragIcon)
+#if VALA_0_56_19
+                new
+#endif
+                Gtk.DragIcon.get_for_drag (drag);
             icon.child = drag_widget;
         }
 
