@@ -5,4 +5,5 @@ namespace Config
     public const string VERSION         = "@VERSION@";
     public const string GETTEXT_PACKAGE = "@GETTEXT_PACKAGE@";
     public const string LOCALEDIR       = "@LOCALEDIR@";
+    public const string VALA_VERSION    = "@VALA_VERSION@";
 }

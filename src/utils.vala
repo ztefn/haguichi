@@ -95,6 +95,7 @@ namespace Haguichi {
 Haguichi: %s
 Distribution: %s
 Kernel: %s
+Vala: %s
 GLib: %s.%s.%s
 GTK: %s.%s.%s
 Adwaita: %s
@@ -122,6 +123,7 @@ Engine override:
                 Config.VERSION,
                 distro,
                 kernel,
+                Config.VALA_VERSION,
                 Version.MAJOR.to_string (),
                 Version.MINOR.to_string (),
                 Version.MICRO.to_string (),
