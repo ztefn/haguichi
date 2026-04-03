@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2025-12-23 21:45+0000\n"
+"PO-Revision-Date: 2026-04-03 18:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.1\n"
+"X-Generator: Weblate 5.17-dev\n"
 "X-Launchpad-Export-Date: 2024-07-16 23:04+0000\n"
 
 #. Name used for display in application launchers.
@@ -256,7 +256,7 @@ msgstr "ネットワーク ID をコピー(_C)"
 #: data/ui/preferences.ui:7 data/ui/shortcuts-dialog.ui:6
 #: data/ui/shortcuts-window.ui:10
 msgid "General"
-msgstr "一般"
+msgstr "全般"
 
 #: data/ui/preferences.ui:13
 msgid "Configuration"
