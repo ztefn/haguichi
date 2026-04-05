@@ -175,15 +175,6 @@
         <setter object="split_view" property="collapsed">true</setter>
       </object>
     </child>
-    <child>
-      <object class="GtkSizeGroup">
-        <property name="mode">vertical</property>
-        <widgets>
-          <widget name="window_title"/>
-          <widget name="sidebar_title"/>
-        </widgets>
-      </object>
-    </child>
     <property name="content">
       <object class="AdwToastOverlay" id="toast_overlay">
         <child>
@@ -519,6 +510,13 @@
       </object>
     </property>
   </template>
+  <object class="GtkSizeGroup">
+    <property name="mode">vertical</property>
+    <widgets>
+      <widget name="window_title"/>
+      <widget name="sidebar_title"/>
+    </widgets>
+  </object>
   <menu id="primary_menu">
     <section>
       <item>
