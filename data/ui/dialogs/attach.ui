@@ -3,6 +3,7 @@
   <template class="HaguichiAttachDialog" parent="AdwDialog">
     <property name="content-width">400</property>
     <property name="default-widget">attach_button</property>
+    <property name="focus-widget">account_entry</property>
     <property name="title" translatable="yes">Attach to Account</property>
     <child>
       <object class="AdwToolbarView">

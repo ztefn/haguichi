@@ -3,6 +3,7 @@
   <template class="HaguichiAddEditCommandDialog" parent="AdwDialog">
     <property name="content-width">440</property>
     <property name="default-widget">save_button</property>
+    <property name="focus-widget">label_entry</property>
     <child>
       <object class="AdwToolbarView">
         <child type="top">
