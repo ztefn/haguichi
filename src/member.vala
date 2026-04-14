@@ -193,7 +193,7 @@ namespace Haguichi {
                     // Wait a second to get an updated list
                     Thread.usleep (1000000);
 
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                    Idle.add_full (Priority.DEFAULT_IDLE, () => {
                         if (demo_mode) {
                             update (new Status ("*"), "192.168.155.23", null, "Nick", null);
                             win.sidebar.set_member (this);
@@ -221,7 +221,7 @@ namespace Haguichi {
                     // Wait a second to get an updated list
                     Thread.usleep (1000000);
 
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                    Idle.add_full (Priority.DEFAULT_IDLE, () => {
                         Controller.update_connection ();
                         return false;
                     });
@@ -251,7 +251,7 @@ namespace Haguichi {
                         // Wait a second to get an updated list
                         Thread.usleep (1000000);
 
-                        Idle.add_full (Priority.HIGH_IDLE, () => {
+                        Idle.add_full (Priority.DEFAULT_IDLE, () => {
                             Controller.update_connection ();
                             return false;
                         });

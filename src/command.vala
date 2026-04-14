@@ -52,7 +52,7 @@ namespace Haguichi {
             determine_file_manager ();
             determine_remote_desktop ();
 
-            Idle.add_full (Priority.HIGH_IDLE, () => {
+            Idle.add_full (Priority.DEFAULT_IDLE, () => {
                 fill_custom_commands ();
                 return false;
             });

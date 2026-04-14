@@ -266,7 +266,7 @@ approve  : auto""".printf (id, name);
                     // Wait a second to get an updated list
                     Thread.usleep (1000000);
 
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                    Idle.add_full (Priority.DEFAULT_IDLE, () => {
                         if (demo_mode) {
                             set_sort_strings ();
                             foreach (Member member in members) {
@@ -308,7 +308,7 @@ approve  : auto""".printf (id, name);
                     // Wait a second to get an updated list
                     Thread.usleep (1000000);
 
-                    Idle.add_full (Priority.HIGH_IDLE, () => {
+                    Idle.add_full (Priority.DEFAULT_IDLE, () => {
                         if (demo_mode) {
                             set_sort_strings ();
                             foreach (Member member in members) {
@@ -363,7 +363,7 @@ approve  : auto""".printf (id, name);
                         // Wait a second to get an updated list
                         Thread.usleep (1000000);
 
-                        Idle.add_full (Priority.HIGH_IDLE, () => {
+                        Idle.add_full (Priority.DEFAULT_IDLE, () => {
                             Controller.update_connection ();
                             return false;
                         });
@@ -392,7 +392,7 @@ approve  : auto""".printf (id, name);
                         // Wait a second to get an updated list
                         Thread.usleep (1000000);
 
-                        Idle.add_full (Priority.HIGH_IDLE, () => {
+                        Idle.add_full (Priority.DEFAULT_IDLE, () => {
                             Controller.update_connection ();
                             return false;
                         });
