@@ -58,6 +58,28 @@
   <content_rating type="oars-1.1" />
   <launchable type="desktop-id">@APP_ID@.desktop</launchable>
   <releases>
+    <release version="1.5.4" date="2026-04-18">
+      <url>https://haguichi.net/news/release154/</url>
+      <description translate="no">
+        <p>Haguichi 1.5.4 has tightened its bolts and rolls out the following changes:</p>
+        <ul>
+          <li>Increased border radius of network list rows for libadwaita 1.7 and later.</li>
+          <li>Now using static light and dark colors for the style selector to prevent issues with custom themes.</li>
+          <li>Added Menu and Shift+F10 keyboard shortcuts to open the menu of commands editor rows.</li>
+          <li>Added support for starting the Hamachi daemon directly without using any init system.</li>
+          <li>Added support for using the Hamachi daemon directly as command line interface.</li>
+          <li>Added support for run0 to gain super user privileges.</li>
+          <li>Reinstated support for kdesu to gain super user privileges.</li>
+          <li>Dropped support for all Hamachi versions older than 2.1.0.203.</li>
+          <li>Improved memory safety for background threads that determine network ownership or retrieve long nicks.</li>
+          <li>Disabled markup parsing in action row labels and toasts that may contain user input.</li>
+          <li>Removed extra initial space in parsed %TERMINAL commands.</li>
+          <li>Fixed issue on GTK versions before 4.18 where a long network or member name could mess up the sidebar layout.</li>
+          <li>Updated Hungarian, Japanese, Slovak and Turkish translations.</li>
+          <li>Other minor fixes, improvements and optimizations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.3" date="2025-11-09">
       <url>https://haguichi.net/news/release153/</url>
       <description translate="no">
