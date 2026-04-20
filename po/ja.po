@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2026-04-03 18:06+0000\n"
+"PO-Revision-Date: 2026-04-20 18:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.17-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 "X-Launchpad-Export-Date: 2024-07-16 23:04+0000\n"
 
 #. Name used for display in application launchers.
@@ -334,11 +334,11 @@ msgstr "システムに従う"
 
 #: data/ui/preferences.ui:142
 msgid "Light"
-msgstr "明るい"
+msgstr "ライト"
 
 #: data/ui/preferences.ui:154
 msgid "Dark"
-msgstr "暗い"
+msgstr "ダーク"
 
 #: data/ui/preferences.ui:164
 msgid "Show _indicator"
