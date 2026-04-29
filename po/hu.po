@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2026-01-14 04:53+0000\n"
+"PO-Revision-Date: 2026-04-29 19:09+0000\n"
 "Last-Translator: therealmate <hellogaming91@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.15.2-dev\n"
+"X-Generator: Weblate 5.17.1-dev\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -33,7 +33,7 @@ msgstr "Hamachi hálózatkezelő"
 #: data/com.github.ztefn.haguichi.desktop.in.in:10
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:7
 msgid "Manage your Hamachi networks"
-msgstr "Kezelje Hamachi-hálózatait"
+msgstr "Hamachi-hálózatok kezelése"
 
 #. Keywords used for search in application launchers and software centers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:14
@@ -45,7 +45,7 @@ msgstr ""
 msgid ""
 "Haguichi makes it a breeze to join, create and administer Hamachi networks."
 msgstr ""
-"A Haguichi leegyszerűsíti a Hamachi hálózatokhoz való csatlakozást, "
+"A Haguichi leegyszerűsíti a Hamachi-hálózatokhoz való csatlakozást, "
 "létrehozást és kezelést."
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:10
@@ -62,7 +62,7 @@ msgstr "Oldalsáv a részletekhez és műveletekhez való gyors hozzáféréshez
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:14
 msgid "Indicator support for quick access to primary actions"
-msgstr "Indikátor támogatás az elsődleges műveletek gyors eléréséhez"
+msgstr "Indikátortámogatás az elsődleges műveletek gyors eléréséhez"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
@@ -74,7 +74,7 @@ msgstr "Teljesen testreszabható parancsok"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:17
 msgid "Backup and restore of your Hamachi configuration folder"
-msgstr "A Hamachi konfigurációs mappa biztonsági mentése és visszaállítása"
+msgstr "A Hamachi beállítási mappa biztonsági mentése és visszaállítása"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:19
 msgid ""
@@ -108,11 +108,11 @@ msgstr "Címke"
 
 #: data/ui/dialogs/add-edit-command.ui:37
 msgid "IPv4 Command"
-msgstr "IPv4 parancs"
+msgstr "IPv4-parancs"
 
 #: data/ui/dialogs/add-edit-command.ui:44
 msgid "IPv6 Command"
-msgstr "IPv6 parancs"
+msgstr "IPv6-parancs"
 
 #: data/ui/dialogs/add-edit-command.ui:51
 msgid "Priority"
@@ -132,7 +132,7 @@ msgstr "Fiók"
 
 #: data/ui/dialogs/attach.ui:38
 msgid "Include all networks created by this client"
-msgstr "Ezzel a klienssel létrehozott összes hálózat megjelenítése"
+msgstr "Az ezzel a klienssel létrehozott összes hálózat megjelenítése"
 
 #: data/ui/dialogs/attach.ui:61
 msgid "_Attach"
@@ -176,7 +176,7 @@ msgstr "Új jelszó"
 
 #: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:110
 msgid "Network ID"
-msgstr "Hálózat azonosító"
+msgstr "Hálózatazonosító"
 
 #: data/ui/dialogs/join-create-network.ui:37
 msgid "Password"
@@ -468,15 +468,15 @@ msgstr "Kliens azonosító"
 
 #: data/ui/sidebar.ui:58 data/ui/sidebar.ui:208
 msgid "IPv4 Address"
-msgstr "IPv4 cím"
+msgstr "IPv4-cím"
 
 #: data/ui/sidebar.ui:63 data/ui/sidebar.ui:213
 msgid "IPv6 Address"
-msgstr "IPv6 cím"
+msgstr "IPv6-cím"
 
 #: data/ui/sidebar.ui:68
 msgid "Hamachi Version"
-msgstr "Hamachi verzió"
+msgstr "Hamachi-verzió"
 
 #: data/ui/sidebar.ui:82 data/ui/sidebar.ui:187
 msgid "Status"
@@ -829,7 +829,7 @@ msgstr "Már csatlakozott ehhez a hálózathoz"
 
 #: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
-msgstr "A hálózat azonosítója már foglalt"
+msgstr "A hálózatazonosítója már foglalt"
 
 #: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
 msgid "Unknown"
@@ -905,7 +905,7 @@ msgstr ""
 
 #: src/network.vala:148
 msgid "You"
-msgstr "Te"
+msgstr "Ön"
 
 #: src/network.vala:345
 msgid "Are you sure you want to leave the network “{0}”?"
