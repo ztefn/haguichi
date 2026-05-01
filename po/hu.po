@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-12 18:53+0200\n"
-"PO-Revision-Date: 2026-04-29 19:09+0000\n"
+"PO-Revision-Date: 2026-05-01 10:09+0000\n"
 "Last-Translator: therealmate <hellogaming91@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/haguichi/"
 "haguichi/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.17.1-dev\n"
+"X-Generator: Weblate 5.17.1\n"
 
 #. Name used for display in application launchers.
 #: data/com.github.ztefn.haguichi.desktop.in.in:4
@@ -829,7 +829,7 @@ msgstr "Már csatlakozott ehhez a hálózathoz"
 
 #: src/dialogs/join-create-network.vala:171
 msgid "Network ID is already taken"
-msgstr "A hálózatazonosítója már foglalt"
+msgstr "A hálózat azonosítója már foglalt"
 
 #: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
 msgid "Unknown"
