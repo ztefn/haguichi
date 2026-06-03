@@ -12,7 +12,7 @@
 
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/widgets/sidebar-row.ui")]
-    public class SidebarRow : Adw.ActionRow, Gtk.Buildable {
+    public class SidebarRow : Adw.ActionRow {
         [GtkChild]
         unowned Gtk.Button copy_button;
 
