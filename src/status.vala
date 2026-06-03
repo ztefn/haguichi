@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -30,37 +30,34 @@ public class Status : Object {
     }
 
     public void set_status (string status) {
-        if (status == " ") {
-            status_int = 0;
-            status_text = _("Offline");
-            status_sortable = "f";
-        } else if (status == "*") {
-            status_int = 1;
-            status_text = _("Online");
-
-            if (connection_type == _("Relayed")) {
-                status_sortable = "b";
-            } else {
-                status_sortable = "a";
-            }
-        } else if (status == "x") {
-            status_int = 2;
-            status_text = _("Unreachable");
-            status_sortable = "d";
-        } else if (status == "?") {
-            status_int = 3;
-            status_text = _("Awaiting approval");
-            status_sortable = "c";
-        } else if (status == "!") {
-            status_int = 4;
-            status_text = _("Unknown error");
-            status_sortable = "e";
-
-            if (message == "IP protocol mismatch between you and peer") {
-                status_text = _("Protocol mismatch");
-            } else if (message == "This address is also used by another peer") {
-                status_text = _("Conflicting address");
-            }
+        switch (status) {
+            case " ":
+                status_int = 0;
+                status_text = _("Offline");
+                status_sortable = "f";
+                break;
+            case "*":
+                status_int = 1;
+                status_text = _("Online");
+                status_sortable = connection_type == _("Relayed") ? "b" : "a";
+                break;
+            case "x":
+                status_int = 2;
+                status_text = _("Unreachable");
+                status_sortable = "d";
+                break;
+            case "?":
+                status_int = 3;
+                status_text = _("Awaiting approval");
+                status_sortable = "c";
+                break;
+            case "!":
+                status_int = 4;
+                status_text = message == "IP protocol mismatch between you and peer" ? _("Protocol mismatch") :
+                              message == "This address is also used by another peer" ? _("Conflicting address") :
+                              _("Unknown error");
+                status_sortable = "e";
+                break;
         }
     }
 
@@ -77,24 +74,19 @@ public class Status : Object {
     }
 
     public string get_css_classes () {
-        string icon_name = "";
+        string icon_name = "network-node-";
 
-        if (status_int == 0) {
-            icon_name = "network-node-offline";
-        } if (status_int == 1) {
-            if (connection_type == _("Relayed")) {
-                icon_name = "network-node-online-relayed";
-            } else {
-                icon_name = "network-node-online";
-            }
-        } else if (status_int == 2) {
-            icon_name = "network-node-unreachable";
-        } else if (status_int == 3) {
-            icon_name = "network-node-unapproved";
-        } else if (status_int == 4) {
-            icon_name = "network-node-error";
+        switch (status_int) {
+            case 0:
+                return icon_name + "offline";
+            case 1:
+                return icon_name + "online" + (connection_type == _("Relayed") ? "-relayed" : "");
+            case 2:
+                return icon_name + "unreachable";
+            case 3:
+                return icon_name + "unapproved";
+            default:
+                return icon_name + "error";
         }
-
-        return icon_name;
     }
 }
