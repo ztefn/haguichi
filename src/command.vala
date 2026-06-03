@@ -267,13 +267,14 @@ namespace Haguichi {
 
                         var custom_command = new CustomCommand (is_active, is_default, label, cmd_ipv4, cmd_ipv6, priority);
                         if (custom_command.exists ()) {
-                            if (command[0] == "true") {
-                                win.install_action ("win.run-command-%d".printf (number), null, (Gtk.WidgetActionActivateFunc) run_command_action);
+                            if (is_active == "true") {
+                                string action_name = "win.run-command-%d".printf (number);
+                                win.install_action (action_name, null, (Gtk.WidgetActionActivateFunc) run_command_action);
                                 active_commands.append_val (custom_command);
-                                commands_menu.append (_(label), "win.run-command-%d".printf (number));
+                                commands_menu.append (_(label), action_name);
                                 number ++;
                             }
-                            if (command[1] == "true") {
+                            if (is_default == "true") {
                                 default_command = custom_command;
                             }
                         }
