@@ -178,6 +178,7 @@ namespace Haguichi {
             install_action ("win.help",                  null, (Gtk.WidgetActionActivateFunc) help_action);
             install_action ("win.info",                  null, (Gtk.WidgetActionActivateFunc) info_action);
             install_action ("win.about",                 null, (Gtk.WidgetActionActivateFunc) about_action);
+            install_action ("win.close",                 null, (Gtk.WidgetActionActivateFunc) close_action);
             install_action ("win.quit",                  null, (Gtk.WidgetActionActivateFunc) quit_action);
         }
 
@@ -384,6 +385,10 @@ namespace Haguichi {
                 about.debug_info = Utils.get_debug_info ();
                 return null;
             });
+        }
+
+        private void close_action () {
+            close_request ();
         }
 
         private void quit_action () {
