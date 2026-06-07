@@ -532,7 +532,7 @@ namespace Haguichi {
             select_network_id   = null;
         }
 
-        public void selection_changed () {
+        private void selection_changed () {
             Idle.add_full (Priority.HIGH_IDLE, () => {
                 autoselect (false);
                 return false;
