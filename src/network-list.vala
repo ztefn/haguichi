@@ -425,8 +425,12 @@ namespace Haguichi {
             });
 
             if (select) {
-                select_item ();
-                clear_state ();
+                // The list view may require additional time to update its scrollable area after model changes
+                // so delaying selection avoids scroll_to() stopping short when selecting a newly added item at the very end
+                Timeout.add_once (100, () => {
+                    select_item ();
+                    clear_state ();
+                });
             }
         }
 
