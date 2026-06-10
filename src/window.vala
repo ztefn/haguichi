@@ -495,7 +495,7 @@ namespace Haguichi {
             return stack.visible_child_name;
         }
 
-        public void set_mode (string mode) {
+        public void set_mode (string mode, bool announce_change = true) {
             session.mode_changed (mode);
 
             stack.visible_child_name = mode;
@@ -557,6 +557,11 @@ namespace Haguichi {
             } else {
                 window_title.subtitle = _("Disconnected");
                 sidebar.show_page ("Information");
+            }
+
+            if (announce_change) {
+                // Announce new mode to screen reader
+                announce (window_title.subtitle, Gtk.AccessibleAnnouncementPriority.HIGH);
             }
 
             // Only sandboxed applications can set background status

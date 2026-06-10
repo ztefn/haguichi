@@ -414,7 +414,7 @@ namespace Haguichi {
                 win.network_list.save_state ();
             }
             win.set_disconnected_stack_page ("empty");
-            win.set_mode ("Disconnected");
+            win.set_mode ("Disconnected", !restore);
 
             // Stop update interval
             continue_update = false;
@@ -424,6 +424,7 @@ namespace Haguichi {
                     wait_for_internet_cycle ();
                 } else {
                     restore_connection_cycle ();
+                    win.announce (win.restore_status_page.description, Gtk.AccessibleAnnouncementPriority.HIGH);
                 }
             }
 
@@ -500,7 +501,9 @@ namespace Haguichi {
             } else if (last_status < 6) {
                 debug ("update_list: Hamachi connection lost");
                 // Display connection lost notification only if window is not currently focused
-                if (!(win.visible && win.is_active)) {
+                if (win.visible && win.is_active) {
+                    win.announce (win.restore_status_page.title, Gtk.AccessibleAnnouncementPriority.HIGH);
+                } else {
                     notify_connection_lost ();
                 }
                 connection_stopped ();

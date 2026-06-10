@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -52,8 +52,8 @@ namespace Haguichi {
                 Idle.add_full (Priority.HIGH_IDLE, () => {
                     if (output.contains (".. ok")) {
                         win.sidebar.set_account (account + " (pending)");
-                        win.show_toast (_("Attach request sent"));
                         close ();
+                        win.show_toast (_("Attach request sent"));
                     } else {
                         set_buttons_sensitivity (true);
 
@@ -89,6 +89,7 @@ namespace Haguichi {
             if (message != "") {
                 revealer.reveal_child = true;
                 message_label.label = message;
+                announce (message, Gtk.AccessibleAnnouncementPriority.HIGH);
             }
         }
 
