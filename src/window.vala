@@ -131,7 +131,7 @@ namespace Haguichi {
             key_controller.propagation_phase = Gtk.PropagationPhase.CAPTURE;
             key_controller.key_pressed.connect ((keyval, keycode, state) => {
                 if (keyval == Gdk.Key.Delete) {
-                    if (search_entry.cursor_position == search_entry.text.length) {
+                    if (search_entry.cursor_position == search_entry.text.length && !search_entry.get_selection_bounds (null, null)) {
                         network_list.on_delete_row ();
                         // Stop propagation
                         return true;
