@@ -22,19 +22,19 @@
                 </child>
                 <child>
                   <object class="GtkShortcut">
-                    <property name="trigger">Right</property>
+                    <property name="trigger">Right|KP_Right</property>
                     <property name="action">action(row.expand)</property>
                   </object>
                 </child>
                 <child>
                   <object class="GtkShortcut">
-                    <property name="trigger">Left</property>
+                    <property name="trigger">Left|KP_Left</property>
                     <property name="action">action(row.collapse)</property>
                   </object>
                 </child>
                 <child>
                   <object class="GtkShortcut">
-                    <property name="trigger">Delete</property>
+                    <property name="trigger">Delete|KP_Delete</property>
                     <property name="action">action(row.delete)</property>
                   </object>
                 </child>
