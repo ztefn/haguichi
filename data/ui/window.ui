@@ -37,13 +37,7 @@
         </child>
         <child>
           <object class="GtkShortcut">
-            <property name="trigger">&lt;Primary&gt;R</property>
-            <property name="action">action(win.refresh)</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkShortcut">
-            <property name="trigger">F5</property>
+            <property name="trigger">&lt;Primary&gt;R|F5</property>
             <property name="action">action(win.refresh)</property>
           </object>
         </child>

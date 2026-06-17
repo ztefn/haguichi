@@ -16,13 +16,7 @@
               <object class="GtkShortcutController">
                 <child>
                   <object class="GtkShortcut">
-                    <property name="trigger">Menu</property>
-                    <property name="action">action(row.context-menu)</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkShortcut">
-                    <property name="trigger">&lt;Shift&gt;F10</property>
+                    <property name="trigger">Menu|&lt;Shift&gt;F10</property>
                     <property name="action">action(row.context-menu)</property>
                   </object>
                 </child>
