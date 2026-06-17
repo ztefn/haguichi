@@ -16,7 +16,9 @@ desktop_file = i18n.merge_file(
 )
 
 desktop_utils = find_program('desktop-file-validate', required: false, disabler: true)
-test('Validate desktop file', desktop_utils, args: [desktop_file])
+test('Validate desktop file', desktop_utils,
+  args: [desktop_file]
+)
 
 appstream = app_id + '.metainfo.xml'
 
