@@ -37,7 +37,8 @@ namespace Haguichi {
 
         [GtkCallback]
         private void add_network () {
-            set_buttons_sensitivity (false);
+            set_button_sensitivity (false);
+
             if (mode == "Join") {
                 new Thread<void*> (null, go_join_thread);
             } else {
@@ -90,15 +91,13 @@ namespace Haguichi {
                 });
             } else {
                 Idle.add_full (Priority.HIGH_IDLE, () => {
-                    set_buttons_sensitivity (true);
+                    set_button_sensitivity (true);
 
                     if (output.contains (".. failed, network not found")) {
-                        id_entry.add_css_class ("error");
-                        id_entry.grab_focus_without_selecting ();
+                        set_entry_error (id_entry, true);
                         show_message (_("Network not found"));
                     } else if (output.contains (".. failed, invalid password")) {
-                        password_entry.add_css_class ("error");
-                        password_entry.grab_focus_without_selecting ();
+                        set_entry_error (password_entry, true);
                         show_message (_("Invalid password"));
                     } else if (output.contains (".. failed, the network is full")) {
                         show_message (_("Network is full"));
@@ -163,11 +162,10 @@ namespace Haguichi {
                 });
             } else {
                 Idle.add_full (Priority.HIGH_IDLE, () => {
-                    set_buttons_sensitivity (true);
+                    set_button_sensitivity (true);
 
                     if (output.contains (".. failed, network name is already taken")) {
-                        id_entry.add_css_class ("error");
-                        id_entry.grab_focus_without_selecting ();
+                        set_entry_error (id_entry, true);
                         show_message (_("Network ID is already taken"));
                     } else {
                         show_message (output.strip ());
@@ -184,15 +182,26 @@ namespace Haguichi {
         private void entry_changed () {
             dismiss_message ();
 
-            id_entry.remove_css_class ("error");
-            password_entry.remove_css_class ("error");
+            set_entry_error (id_entry, false);
+            set_entry_error (password_entry, false);
 
             // Network name must be between 4 and 64 characters long
-            add_button.sensitive = (id_entry.text.length >= 4 && id_entry.text.length <= 64);
+            set_button_sensitivity (id_entry.text.length >= 4 && id_entry.text.length <= 64);
         }
 
-        private void set_buttons_sensitivity (bool sensitive) {
+        private void set_button_sensitivity (bool sensitive) {
             add_button.sensitive = sensitive;
+        }
+
+        public static void set_entry_error (Adw.EntryRow entry, bool has_error) {
+            entry.update_state (Gtk.AccessibleState.INVALID, has_error);
+
+            if (has_error) {
+                entry.add_css_class ("error");
+                entry.grab_focus_without_selecting ();
+            } else {
+                entry.remove_css_class ("error");
+            }
         }
 
         private void show_message (string message) {

@@ -28,7 +28,7 @@ namespace Haguichi {
 
         [GtkCallback]
         private void attach () {
-            set_buttons_sensitivity (false);
+            set_button_sensitivity (false);
 
             new Thread<void*> (null, () => {
                 string account = account_entry.text;
@@ -55,12 +55,11 @@ namespace Haguichi {
                         close ();
                         win.show_toast (_("Attach request sent"));
                     } else {
-                        set_buttons_sensitivity (true);
+                        set_button_sensitivity (true);
 
                         if (output.contains (".. failed, not found") ||
                             output.contains (".. failed, [248]")) {
-                            account_entry.add_css_class ("error");
-                            account_entry.grab_focus_without_selecting ();
+                            set_entry_error (account_entry, true);
                             show_message (_("Account not found"));
                         } else {
                             show_message (output.strip ());
@@ -77,12 +76,23 @@ namespace Haguichi {
         [GtkCallback]
         private void entry_changed () {
             dismiss_message ();
-            account_entry.remove_css_class ("error");
-            attach_button.sensitive = account_entry.text.length > 0;
+            set_entry_error (account_entry, false);
+            set_button_sensitivity (account_entry.text.length > 0);
         }
 
-        private void set_buttons_sensitivity (bool sensitive) {
+        private void set_button_sensitivity (bool sensitive) {
             attach_button.sensitive = sensitive;
+        }
+
+        public static void set_entry_error (Adw.EntryRow entry, bool has_error) {
+            entry.update_state (Gtk.AccessibleState.INVALID, has_error);
+
+            if (has_error) {
+                entry.add_css_class ("error");
+                entry.grab_focus_without_selecting ();
+            } else {
+                entry.remove_css_class ("error");
+            }
         }
 
         private void show_message (string message) {
