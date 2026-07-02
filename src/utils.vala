@@ -84,6 +84,17 @@ namespace Utils {
         return false;
     }
 
+    public static void set_entry_error (Adw.EntryRow entry, bool has_error) {
+        entry.update_state (Gtk.AccessibleState.INVALID, has_error);
+
+        if (has_error) {
+            entry.add_css_class ("error");
+            entry.grab_focus_without_selecting ();
+        } else {
+            entry.remove_css_class ("error");
+        }
+    }
+
     public static string get_debug_info () {
         var gtk_settings = Gtk.Settings.get_default ();
 

@@ -10,6 +10,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+using Utils;
+
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/dialogs/attach.ui")]
     public class AttachDialog : Adw.Dialog {
@@ -82,17 +84,6 @@ namespace Haguichi {
 
         private void set_button_sensitivity (bool sensitive) {
             attach_button.sensitive = sensitive;
-        }
-
-        public static void set_entry_error (Adw.EntryRow entry, bool has_error) {
-            entry.update_state (Gtk.AccessibleState.INVALID, has_error);
-
-            if (has_error) {
-                entry.add_css_class ("error");
-                entry.grab_focus_without_selecting ();
-            } else {
-                entry.remove_css_class ("error");
-            }
         }
 
         private void show_message (string message) {
