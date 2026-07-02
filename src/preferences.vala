@@ -10,6 +10,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+using Utils;
+
 namespace Haguichi {
     [GtkTemplate (ui = "/com/github/ztefn/haguichi/ui/preferences.ui")]
     public class Preferences : Adw.PreferencesDialog {
@@ -86,16 +88,16 @@ namespace Haguichi {
             // Lower minimum width request to match window
             ((Adw.BreakpointBin) general_page.get_ancestor (typeof (Adw.BreakpointBin))).width_request = win.width_request;
 
-            general_page.icon_name = Utils.get_available_theme_icon ({
+            general_page.icon_name = get_available_theme_icon ({
                 "applications-system-symbolic",
                 "emblem-system-symbolic",
                 "preferences-system-symbolic"
             });
-            commands_page.icon_name = Utils.get_available_theme_icon ({
+            commands_page.icon_name = get_available_theme_icon ({
                 "utilities-terminal-symbolic",
                 "system-run-symbolic"
             });
-            desktop_page.icon_name = Utils.get_available_theme_icon ({
+            desktop_page.icon_name = get_available_theme_icon ({
                 "preferences-desktop-appearance-symbolic",
                 "user-desktop-symbolic"
             });
@@ -109,16 +111,16 @@ namespace Haguichi {
             install_action ("config.save",    null, (Gtk.WidgetActionActivateFunc) save_config);
             install_action ("config.restore", null, (Gtk.WidgetActionActivateFunc) restore_config);
 
-            var config_exists = Utils.path_exists ("d", Hamachi.DATA_PATH);
+            var config_exists = path_exists ("d", Hamachi.DATA_PATH);
 
             configuration.subtitle = config_exists ? Hamachi.DATA_PATH : _("Not present");
             action_set_enabled ("config.open", config_exists);
             action_set_enabled ("config.save", config_exists);
 
-            nickname.text = Utils.parse_nick (config.get_string ("nickname"));
+            nickname.text = parse_nick (config.get_string ("nickname"));
             nickname.apply.connect (() => {
                 var nick = nickname.text;
-                var parsed_nick = Utils.parse_nick (nick);
+                var parsed_nick = parse_nick (nick);
                 debug ("nickname changed to: %s (parsed: %s)", nick, parsed_nick);
 
                 nickname.editable  = false;
@@ -167,7 +169,7 @@ namespace Haguichi {
 
             // Workaround for missing adw-entry-apply-symbolic icon in elementary icon theme
             // https://github.com/elementary/icons/issues/1333
-            if (!Utils.get_icon_theme ().has_icon ("adw-entry-apply-symbolic")) {
+            if (!get_icon_theme ().has_icon ("adw-entry-apply-symbolic")) {
                 var button = (Gtk.Widget) nickname
                     .get_first_child () // GtkBox header
                         .get_first_child () // GtkBox prefixes

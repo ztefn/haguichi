@@ -10,6 +10,8 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+using Utils;
+
 namespace Haguichi {
     public class Hamachi : Object {
         public  const  string DAEMON_PATH = "/opt/logmein-hamachi/bin/hamachid";
@@ -95,7 +97,7 @@ namespace Haguichi {
 
             if (init_system == "systemctl" ||
                 (init_system == "auto" &&
-                 Utils.path_exists ("d", "/run/systemd/system") &&
+                 path_exists ("d", "/run/systemd/system") &&
                  Command.exists ("systemctl") &&
                  systemctl_unit_found ())) {
                 // Systemd
@@ -103,19 +105,19 @@ namespace Haguichi {
             }
             else if (init_system == "init.d" ||
                      (init_system == "auto" &&
-                      Utils.path_exists ("f", "/etc/init.d/logmein-hamachi"))) {
+                      path_exists ("f", "/etc/init.d/logmein-hamachi"))) {
                 // Sysvinit
                 service = "/etc/init.d/logmein-hamachi %s";
             }
             else if (init_system == "rc.d" ||
                      (init_system == "auto" &&
-                      Utils.path_exists ("f", "/etc/rc.d/logmein-hamachi"))) {
+                      path_exists ("f", "/etc/rc.d/logmein-hamachi"))) {
                 // BSD style init
                 service = "/etc/rc.d/logmein-hamachi %s";
             }
             else if (init_system == "none" ||
                      (init_system == "auto" &&
-                      Utils.path_exists ("f", DAEMON_PATH))) {
+                      path_exists ("f", DAEMON_PATH))) {
                 // Run Hamachi daemon directly
                 service = DAEMON_PATH;
             }
@@ -289,7 +291,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi go-online \"%s\"".printf (Utils.clean_string (network.id)));
+                string output = Command.return_output ("hamachi go-online \"%s\"".printf (clean_string (network.id)));
                 debug ("go_online: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -309,7 +311,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi go-offline \"%s\"".printf (Utils.clean_string (network.id)));
+                string output = Command.return_output ("hamachi go-offline \"%s\"".printf (clean_string (network.id)));
                 debug ("go_offline: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -329,7 +331,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi delete \"%s\"".printf (Utils.clean_string (network.id)));
+                string output = Command.return_output ("hamachi delete \"%s\"".printf (clean_string (network.id)));
                 debug ("delete: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -349,7 +351,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi leave \"%s\"".printf (Utils.clean_string (network.id)));
+                string output = Command.return_output ("hamachi leave \"%s\"".printf (clean_string (network.id)));
                 debug ("leave: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -369,7 +371,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi approve \"%s\" %s".printf (Utils.clean_string (member.network.id), member.id));
+                string output = Command.return_output ("hamachi approve \"%s\" %s".printf (clean_string (member.network.id), member.id));
                 debug ("approve: %s", output);
 
                 if (output.contains (".. failed")) {
@@ -384,7 +386,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi reject \"%s\" %s".printf (Utils.clean_string (member.network.id), member.id));
+                string output = Command.return_output ("hamachi reject \"%s\" %s".printf (clean_string (member.network.id), member.id));
                 debug ("reject: %s", output);
 
                 if (output.contains (".. failed")) {
@@ -399,7 +401,7 @@ namespace Haguichi {
             bool success = true;
 
             if (!demo_mode) {
-                string output = Command.return_output ("hamachi evict \"%s\" %s".printf (Utils.clean_string (member.network.id), member.id));
+                string output = Command.return_output ("hamachi evict \"%s\" %s".printf (clean_string (member.network.id), member.id));
                 debug ("evict: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -622,7 +624,7 @@ namespace Haguichi {
             string output = "";
 
             if (!demo_mode) {
-                output = Command.return_output ("hamachi set-nick \"%s\"".printf (Utils.clean_string (nick)));
+                output = Command.return_output ("hamachi set-nick \"%s\"".printf (clean_string (nick)));
                 debug ("set_nick: %s", output);
             }
 
@@ -648,7 +650,7 @@ namespace Haguichi {
                 command += "-net";
             }
 
-            output = Command.return_output ("hamachi %s \"%s\"".printf (command, Utils.clean_string (account_id)));
+            output = Command.return_output ("hamachi %s \"%s\"".printf (command, clean_string (account_id)));
             debug ("attach: %s", output);
 
             return output;
@@ -668,7 +670,7 @@ namespace Haguichi {
         }
 
         public static string join_network (string name, string password) {
-            string output = Command.return_output ("hamachi do-join \"%s\" \"%s\"".printf (Utils.clean_string (name), Utils.clean_string (password)));
+            string output = Command.return_output ("hamachi do-join \"%s\" \"%s\"".printf (clean_string (name), clean_string (password)));
             debug ("join_network: %s", output);
 
             return output;
@@ -678,7 +680,7 @@ namespace Haguichi {
             string output = "";
 
             if (!demo_mode) {
-                output = Command.return_output ("hamachi set-access \"%s\" %s %s".printf (Utils.clean_string (network_id), locking, approve));
+                output = Command.return_output ("hamachi set-access \"%s\" %s %s".printf (clean_string (network_id), locking, approve));
                 debug ("set_access: %s", output);
 
                 if (!output.contains (".. ok")) {
@@ -697,7 +699,7 @@ namespace Haguichi {
 
             if (!demo_mode) {
                 // Call with timeout because this command frequently hangs
-                output = Command.return_output_with_timeout (1, "hamachi set-pass \"%s\" \"%s\"".printf (Utils.clean_string (network_id), Utils.clean_string (password)));
+                output = Command.return_output_with_timeout (1, "hamachi set-pass \"%s\" \"%s\"".printf (clean_string (network_id), clean_string (password)));
                 debug ("set_password: %s", output);
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
@@ -720,7 +722,7 @@ namespace Haguichi {
         }
 
         public static string create_network (string name, string password) {
-            string output = Command.return_output ("hamachi create \"%s\" \"%s\"".printf (Utils.clean_string (name), Utils.clean_string (password)));
+            string output = Command.return_output ("hamachi create \"%s\" \"%s\"".printf (clean_string (name), clean_string (password)));
             debug ("create_network: %s", output);
 
             return output;
