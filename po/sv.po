@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-12 18:53+0200\n"
+"POT-Creation-Date: 2026-08-09 01:04+0200\n"
 "PO-Revision-Date: 2025-10-23 10:52+0000\n"
 "Last-Translator: Daniel Nylander <daniel@danielnylander.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/haguichi/"
@@ -68,7 +68,8 @@ msgstr "Indikatorstöd för snabb åtkomst till primära åtgärder"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:15
 msgid "Desktop notifications to stay up to date of network events"
-msgstr "Skrivbordsmeddelanden för att hålla dig uppdaterad om nätverkshändelser"
+msgstr ""
+"Skrivbordsmeddelanden för att hålla dig uppdaterad om nätverkshändelser"
 
 #: data/com.github.ztefn.haguichi.metainfo.xml.in.in:16
 msgid "Commands that can be completely customized"
@@ -106,91 +107,91 @@ msgstr "Sök i din nätverkslista"
 msgid "Join or create networks"
 msgstr "Gå med i eller skapa nätverk"
 
-#: data/ui/dialogs/add-edit-command.ui:30
+#: data/ui/dialogs/add-edit-command.ui:31
 msgid "Label"
 msgstr "Etikett"
 
-#: data/ui/dialogs/add-edit-command.ui:37
+#: data/ui/dialogs/add-edit-command.ui:38
 msgid "IPv4 Command"
 msgstr "IPv4-kommando"
 
-#: data/ui/dialogs/add-edit-command.ui:44
+#: data/ui/dialogs/add-edit-command.ui:45
 msgid "IPv6 Command"
 msgstr "IPv6-kommando"
 
-#: data/ui/dialogs/add-edit-command.ui:51
+#: data/ui/dialogs/add-edit-command.ui:52
 msgid "Priority"
 msgstr "Prioritet"
 
-#: data/ui/dialogs/add-edit-command.ui:58
+#: data/ui/dialogs/add-edit-command.ui:59
 msgid "_Save"
 msgstr "_Spara"
 
-#: data/ui/dialogs/attach.ui:6
+#: data/ui/dialogs/attach.ui:7
 msgid "Attach to Account"
 msgstr "Koppla till konto"
 
-#: data/ui/dialogs/attach.ui:31 data/ui/sidebar.ui:23 src/sidebar.vala:192
+#: data/ui/dialogs/attach.ui:32 data/ui/sidebar.ui:24 src/sidebar.vala:188
 msgid "Account"
 msgstr "Konto"
 
-#: data/ui/dialogs/attach.ui:38
+#: data/ui/dialogs/attach.ui:39
 msgid "Include all networks created by this client"
 msgstr "Inkludera alla nätverk som skapats av denna klient"
 
-#: data/ui/dialogs/attach.ui:61
+#: data/ui/dialogs/attach.ui:62
 msgid "_Attach"
 msgstr "K_oppla"
 
-#: data/ui/dialogs/change-access.ui:6 data/ui/sidebar.ui:135
+#: data/ui/dialogs/change-access.ui:7 data/ui/sidebar.ui:136
 msgid "Change Access"
 msgstr "Byt åtkomst"
 
-#: data/ui/dialogs/change-access.ui:31
+#: data/ui/dialogs/change-access.ui:32
 msgid "Locked"
 msgstr "Låst"
 
-#: data/ui/dialogs/change-access.ui:32
+#: data/ui/dialogs/change-access.ui:33
 msgid "Do not accept new network members"
 msgstr "Acceptera inte nya nätverksmedlemmar"
 
-#: data/ui/dialogs/change-access.ui:38
+#: data/ui/dialogs/change-access.ui:39
 msgid "Approval"
 msgstr "Godkännande"
 
-#: data/ui/dialogs/change-access.ui:42
+#: data/ui/dialogs/change-access.ui:43
 msgid "Automatically"
 msgstr "Automatiskt"
 
-#: data/ui/dialogs/change-access.ui:43
+#: data/ui/dialogs/change-access.ui:44
 msgid "Manually"
 msgstr "Manuellt"
 
-#: data/ui/dialogs/change-access.ui:53 data/ui/dialogs/change-password.ui:39
+#: data/ui/dialogs/change-access.ui:54 data/ui/dialogs/change-password.ui:40
 msgid "C_hange"
 msgstr "Ä_ndra"
 
-#: data/ui/dialogs/change-password.ui:6 data/ui/sidebar.ui:119
+#: data/ui/dialogs/change-password.ui:7 data/ui/sidebar.ui:120
 msgid "Change Password"
 msgstr "Ändra lösenord"
 
-#: data/ui/dialogs/change-password.ui:31
+#: data/ui/dialogs/change-password.ui:32
 msgid "New Password"
 msgstr "Nytt lösenord"
 
-#: data/ui/dialogs/join-create-network.ui:30 data/ui/sidebar.ui:110
+#: data/ui/dialogs/join-create-network.ui:31 data/ui/sidebar.ui:111
 msgid "Network ID"
 msgstr "Nätverks-id"
 
-#: data/ui/dialogs/join-create-network.ui:37
+#: data/ui/dialogs/join-create-network.ui:38
 msgid "Password"
 msgstr "Lösenord"
 
-#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:229 src/bubble.vala:58
+#: data/ui/menus/member-menu.ui:10 data/ui/sidebar.ui:230 src/bubble.vala:58
 msgid "_Approve"
 msgstr "_Godkänn"
 
-#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:242 src/bubble.vala:59
+#: data/ui/menus/member-menu.ui:15 data/ui/sidebar.ui:243 src/bubble.vala:59
 msgid "_Reject"
 msgstr "Avv_isa"
 
@@ -207,7 +208,7 @@ msgid "_Copy Client ID"
 msgstr "_Kopiera klient-id"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:255 src/member.vala:234
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:238
 msgid "_Evict"
 msgstr "_Kasta ut"
 
@@ -215,29 +216,29 @@ msgstr "_Kasta ut"
 msgid "_Details"
 msgstr "_Detaljer"
 
-#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:570
+#: data/ui/menus/network-list-menu.ui:10 data/ui/window.ui:577
 #: src/indicator.vala:112
 msgid "_Join Network…"
 msgstr "_Gå med i nätverk…"
 
-#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:574
+#: data/ui/menus/network-list-menu.ui:14 data/ui/window.ui:581
 #: src/indicator.vala:117
 msgid "_Create Network…"
 msgstr "_Skapa nätverk…"
 
-#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:153
+#: data/ui/menus/network-menu.ui:10 data/ui/sidebar.ui:154
 msgid "_Go Online"
 msgstr "Koppla _upp"
 
-#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:166
+#: data/ui/menus/network-menu.ui:16 data/ui/sidebar.ui:167
 msgid "_Go Offline"
 msgstr "Koppla _ner"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:348
+#: data/ui/menus/network-menu.ui:22 src/network.vala:352
 msgid "_Leave"
 msgstr "_Lämna"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:377
+#: data/ui/menus/network-menu.ui:28 src/network.vala:381
 msgid "_Delete"
 msgstr "_Radera"
 
@@ -311,7 +312,7 @@ msgid "_Disconnect on quit"
 msgstr "_Koppla från vid stängning"
 
 #: data/ui/preferences.ui:100 data/ui/shortcuts-dialog.ui:111
-#: data/ui/sidebar.ui:192
+#: data/ui/sidebar.ui:193
 msgid "Commands"
 msgstr "Kommandon"
 
@@ -328,51 +329,51 @@ msgstr "Utseende"
 msgid "_Style"
 msgstr "_Stil"
 
-#: data/ui/preferences.ui:131
+#: data/ui/preferences.ui:130
 msgid "Follow System"
 msgstr "Följ systemet"
 
-#: data/ui/preferences.ui:142
+#: data/ui/preferences.ui:141
 msgid "Light"
 msgstr "Ljust"
 
-#: data/ui/preferences.ui:154
+#: data/ui/preferences.ui:152
 msgid "Dark"
 msgstr "Mörkt"
 
-#: data/ui/preferences.ui:164
+#: data/ui/preferences.ui:161
 msgid "Show _indicator"
 msgstr "Visa _indikator"
 
-#: data/ui/preferences.ui:173
+#: data/ui/preferences.ui:170
 msgid "Notifications"
 msgstr "Notifieringar"
 
-#: data/ui/preferences.ui:176
+#: data/ui/preferences.ui:173
 msgid "Display notification when the connection is l_ost"
 msgstr "Visa notifiering när anslutningen för_loras"
 
-#: data/ui/preferences.ui:182
+#: data/ui/preferences.ui:179
 msgid "Display notification when a member _joins"
 msgstr "Visa notifiering när en användare _går in"
 
-#: data/ui/preferences.ui:188
+#: data/ui/preferences.ui:185
 msgid "Display notification when a member _leaves"
 msgstr "Visa notifiering när en användare _lämnar"
 
-#: data/ui/preferences.ui:194
+#: data/ui/preferences.ui:191
 msgid "Display notification when a member comes o_nline"
 msgstr "Visa notifiering när en användare _ansluter"
 
-#: data/ui/preferences.ui:200
+#: data/ui/preferences.ui:197
 msgid "Display notification when a member goes o_ffline"
 msgstr "Visa notifiering när en användare kopplar _från"
 
-#: data/ui/preferences.ui:212
+#: data/ui/preferences.ui:209
 msgid "_Save a Backup…"
 msgstr "_Spara en säkerhetskopia…"
 
-#: data/ui/preferences.ui:216
+#: data/ui/preferences.ui:213
 msgid "_Restore from Backup…"
 msgstr "Åt_erställ från säkerhetskopia…"
 
@@ -400,7 +401,7 @@ msgstr "Tangentbordsgenvägar"
 msgid "Quit"
 msgstr "Avsluta"
 
-#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:223
+#: data/ui/shortcuts-dialog.ui:47 data/ui/sidebar.ui:224
 msgid "Connection"
 msgstr "Anslutning"
 
@@ -453,60 +454,60 @@ msgstr "Fäll in alla nätverk"
 msgid "Execute command"
 msgstr "Kör kommando"
 
-#: data/ui/sidebar.ui:19 data/ui/window.ui:487 src/sidebar.vala:272
+#: data/ui/sidebar.ui:20 data/ui/window.ui:487 src/sidebar.vala:268
 msgid "Information"
 msgstr "Information"
 
-#: data/ui/sidebar.ui:29
+#: data/ui/sidebar.ui:30
 msgid "Attach"
 msgstr "Koppla"
 
-#: data/ui/sidebar.ui:41
+#: data/ui/sidebar.ui:42
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: data/ui/sidebar.ui:53 data/ui/sidebar.ui:203
+#: data/ui/sidebar.ui:54 data/ui/sidebar.ui:204
 #: data/ui/widgets/command-entry-row.ui:48
 msgid "Client ID"
 msgstr "Klient-id"
 
-#: data/ui/sidebar.ui:58 data/ui/sidebar.ui:208
+#: data/ui/sidebar.ui:59 data/ui/sidebar.ui:209
 msgid "IPv4 Address"
 msgstr "IPv4-adress"
 
-#: data/ui/sidebar.ui:63 data/ui/sidebar.ui:213
+#: data/ui/sidebar.ui:64 data/ui/sidebar.ui:214
 msgid "IPv6 Address"
 msgstr "IPv6-adress"
 
-#: data/ui/sidebar.ui:68
+#: data/ui/sidebar.ui:69
 msgid "Hamachi Version"
 msgstr "Hamachi version"
 
-#: data/ui/sidebar.ui:82 data/ui/sidebar.ui:187
+#: data/ui/sidebar.ui:83 data/ui/sidebar.ui:188
 msgid "Status"
 msgstr "Status"
 
-#: data/ui/sidebar.ui:87
+#: data/ui/sidebar.ui:88
 msgid "Leave Network"
 msgstr "Lämna nätverk"
 
-#: data/ui/sidebar.ui:98
+#: data/ui/sidebar.ui:99
 msgid "Delete Network"
 msgstr "Ta bort nätverk"
 
-#: data/ui/sidebar.ui:115
+#: data/ui/sidebar.ui:116
 msgid "Owner"
 msgstr "Ägare"
 
-#: data/ui/sidebar.ui:131
+#: data/ui/sidebar.ui:132
 msgid "Members"
 msgstr "Medlemmar"
 
-#: data/ui/sidebar.ui:147
+#: data/ui/sidebar.ui:148
 msgid "Capacity"
 msgstr "Kapacitet"
 
-#: data/ui/sidebar.ui:218
+#: data/ui/sidebar.ui:219
 msgid "Tunnel"
 msgstr "Tunnel"
 
@@ -551,35 +552,35 @@ msgstr "_Visa fjärrskrivbord"
 msgid "_Ping"
 msgstr "_Pinga"
 
-#: data/ui/widgets/commands-editor-row.ui:17
+#: data/ui/widgets/commands-editor-row.ui:18
 msgid "Default Action"
 msgstr "Standardåtgärd"
 
-#: data/ui/widgets/commands-editor-row.ui:34
+#: data/ui/widgets/commands-editor-row.ui:35
 msgid "Options"
 msgstr "Alternativ"
 
-#: data/ui/widgets/commands-editor-row.ui:61
+#: data/ui/widgets/commands-editor-row.ui:72
 msgid "_Edit…"
 msgstr "_Redigera…"
 
-#: data/ui/widgets/commands-editor-row.ui:65
+#: data/ui/widgets/commands-editor-row.ui:76
 msgid "Du_plicate…"
 msgstr "_Duplicera…"
 
-#: data/ui/widgets/commands-editor-row.ui:71
+#: data/ui/widgets/commands-editor-row.ui:82
 msgid "Move _Up"
 msgstr "Flytta _uppåt"
 
-#: data/ui/widgets/commands-editor-row.ui:75
+#: data/ui/widgets/commands-editor-row.ui:86
 msgid "Move _Down"
 msgstr "Flytta _nedåt"
 
-#: data/ui/widgets/commands-editor-row.ui:81
+#: data/ui/widgets/commands-editor-row.ui:92
 msgid "_Set As Default Action"
 msgstr "_Ställ in som standardåtgärd"
 
-#: data/ui/widgets/commands-editor-row.ui:87
+#: data/ui/widgets/commands-editor-row.ui:98
 msgid "_Remove"
 msgstr "_Ta bort"
 
@@ -587,7 +588,7 @@ msgstr "_Ta bort"
 msgid "Copy"
 msgstr "Kopiera"
 
-#: data/ui/window.ui:195 src/window.vala:542
+#: data/ui/window.ui:195 src/window.vala:552
 msgid "Initializing"
 msgstr "Initierar"
 
@@ -603,7 +604,7 @@ msgstr "Sök efter nätverk och medlemmar"
 msgid "Add Network"
 msgstr "Lägg till nätverk"
 
-#: data/ui/window.ui:340 src/controller.vala:711
+#: data/ui/window.ui:340 src/controller.vala:715
 msgid "Hamachi Lost Connection"
 msgstr "Hamachi förlorade anslutningen"
 
@@ -647,39 +648,39 @@ msgstr "Du behöver konfiguera Hamachi innan du kan ansluta"
 msgid "C_onfigure"
 msgstr "K_onfigurera"
 
-#: data/ui/window.ui:516 src/indicator.vala:124
+#: data/ui/window.ui:523 src/indicator.vala:124
 msgid "_Information"
 msgstr "_Information"
 
-#: data/ui/window.ui:523
+#: data/ui/window.ui:530
 msgid "Sort by _Name"
 msgstr "Sortera efter _namn"
 
-#: data/ui/window.ui:529
+#: data/ui/window.ui:536
 msgid "Sort by _Status"
 msgstr "Sortera efter _status"
 
-#: data/ui/window.ui:537
+#: data/ui/window.ui:544
 msgid "Show _Offline Members"
 msgstr "_Frånkopplade användare"
 
-#: data/ui/window.ui:544
+#: data/ui/window.ui:551
 msgid "_Preferences"
 msgstr "_Inställningar"
 
-#: data/ui/window.ui:548
+#: data/ui/window.ui:555
 msgid "_Keyboard Shortcuts"
 msgstr "_Tangentbordsgenvägar"
 
-#: data/ui/window.ui:552
+#: data/ui/window.ui:559
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: data/ui/window.ui:556
+#: data/ui/window.ui:563
 msgid "_About Haguichi"
 msgstr "_Om Haguichi"
 
-#: data/ui/window.ui:562 src/indicator.vala:132
+#: data/ui/window.ui:569 src/indicator.vala:132
 msgid "_Quit"
 msgstr "A_vsluta"
 
@@ -687,89 +688,89 @@ msgstr "A_vsluta"
 msgid "Reconnect"
 msgstr "Återanslut"
 
-#: src/controller.vala:283
+#: src/controller.vala:284
 msgid "No internet connection"
 msgstr "Ingen internetanslutning"
 
-#: src/controller.vala:288 src/controller.vala:321
+#: src/controller.vala:289 src/controller.vala:322
 msgid "Logging in"
 msgstr "Loggar in"
 
-#: src/controller.vala:348
+#: src/controller.vala:349
 msgid "Error connecting"
 msgstr "Fel vid uppkoppling"
 
-#: src/controller.vala:378
+#: src/controller.vala:379
 msgid "Hamachi login failed"
 msgstr "Fel vid Hamachi-inloggning"
 
-#: src/controller.vala:459
+#: src/controller.vala:461
 msgid "Updating"
 msgstr "Uppdaterar"
 
-#: src/controller.vala:622 src/indicator.vala:85 src/window.vala:546
+#: src/controller.vala:626 src/indicator.vala:85 src/window.vala:556
 msgid "Connected"
 msgstr "Ansluten"
 
-#: src/controller.vala:730
+#: src/controller.vala:734
 msgid "Member Joined"
 msgstr "Medlem gick in"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet".
-#: src/controller.vala:732
+#: src/controller.vala:736
 msgid "{0} joined the network {1}"
 msgstr "{0} har gått in i nätverket {1}"
 
 #. Notification bubble. For example: "T-800 joined the network Skynet and 1 other network".
-#: src/controller.vala:734
+#: src/controller.vala:738
 msgid "{0} joined the network {1} and {2} other network"
 msgid_plural "{0} joined the network {1} and {2} other networks"
 msgstr[0] "{0} gick in i nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} gick in i nätverket {1} och {2} andra nätverk"
 
-#: src/controller.vala:760
+#: src/controller.vala:764
 msgid "Member Left"
 msgstr "Medlem lämnade"
 
 #. Notification bubble. For example: "T-800 left the network Skynet".
-#: src/controller.vala:762
+#: src/controller.vala:766
 msgid "{0} left the network {1}"
 msgstr "{0} lämnade nätverket {1}"
 
 #. Notification bubble. For example: "T-800 left the network Skynet and 1 other network".
-#: src/controller.vala:764
+#: src/controller.vala:768
 msgid "{0} left the network {1} and {2} other network"
 msgid_plural "{0} left the network {1} and {2} other networks"
 msgstr[0] "{0} lämnade nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} lämnade nätverket {1} och {2} andra nätverk"
 
-#: src/controller.vala:786
+#: src/controller.vala:790
 msgid "Member Online"
 msgstr "Medlem ansluten"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet".
-#: src/controller.vala:788
+#: src/controller.vala:792
 msgid "{0} came online in the network {1}"
 msgstr "{0} anslöt till nätverket {1}"
 
 #. Notification bubble. For example: "T-800 came online in the network Skynet and 1 other network".
-#: src/controller.vala:790
+#: src/controller.vala:794
 msgid "{0} came online in the network {1} and {2} other network"
 msgid_plural "{0} came online in the network {1} and {2} other networks"
 msgstr[0] "{0} anslöt till nätverket {1} och {2} annat nätverk"
 msgstr[1] "{0} anslöt till nätverket {1} och {2} andra nätverk"
 
-#: src/controller.vala:812
+#: src/controller.vala:816
 msgid "Member Offline"
 msgstr "Medlem frånkopplad"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet".
-#: src/controller.vala:814
+#: src/controller.vala:818
 msgid "{0} went offline in the network {1}"
 msgstr "{0} kopplade från nätverket {1}"
 
 #. Notification bubble. For example: "T-800 went offline in the network Skynet and 1 other network".
-#: src/controller.vala:816
+#: src/controller.vala:820
 msgid "{0} went offline in the network {1} and {2} other network"
 msgid_plural "{0} went offline in the network {1} and {2} other networks"
 msgstr[0] "{0} kopplade från nätverket {1} och {2} annat nätverk"
@@ -783,51 +784,51 @@ msgstr "Redigera kommando"
 msgid "Add Command"
 msgstr "Lägg till kommando"
 
-#: src/dialogs/attach.vala:55
+#: src/dialogs/attach.vala:58
 msgid "Attach request sent"
 msgstr "Ansökningsbegäran skickad"
 
-#: src/dialogs/attach.vala:64
+#: src/dialogs/attach.vala:65
 msgid "Account not found"
 msgstr "Kontot hittades inte"
 
-#: src/dialogs/join-create-network.vala:33
+#: src/dialogs/join-create-network.vala:35
 msgid "Join Network"
 msgstr "Gå med i nätverk"
 
-#: src/dialogs/join-create-network.vala:33
+#: src/dialogs/join-create-network.vala:35
 msgid "Create Network"
 msgstr "Skapa nätverk"
 
-#: src/dialogs/join-create-network.vala:35
+#: src/dialogs/join-create-network.vala:37
 msgid "_Join"
 msgstr "_Gå med i"
 
-#: src/dialogs/join-create-network.vala:35
+#: src/dialogs/join-create-network.vala:37
 msgid "C_reate"
 msgstr "S_kapa"
 
-#: src/dialogs/join-create-network.vala:73
+#: src/dialogs/join-create-network.vala:77
 msgid "Join request sent"
 msgstr "Begäran att gå med skickad"
 
-#: src/dialogs/join-create-network.vala:98
+#: src/dialogs/join-create-network.vala:100
 msgid "Network not found"
 msgstr "Nätverket hittades inte"
 
-#: src/dialogs/join-create-network.vala:102
+#: src/dialogs/join-create-network.vala:103
 msgid "Invalid password"
 msgstr "Ogiltigt lösenord"
 
-#: src/dialogs/join-create-network.vala:104
+#: src/dialogs/join-create-network.vala:105
 msgid "Network is full"
 msgstr "Nätverket är fullt"
 
-#: src/dialogs/join-create-network.vala:106
+#: src/dialogs/join-create-network.vala:107
 msgid "Network is locked"
 msgstr "Nätverket är låst"
 
-#: src/dialogs/join-create-network.vala:109
+#: src/dialogs/join-create-network.vala:110
 msgid "Network already joined"
 msgstr "Har redan gått med i nätverket"
 
@@ -835,51 +836,51 @@ msgstr "Har redan gått med i nätverket"
 msgid "Network ID is already taken"
 msgstr "Nätverks-id används redan"
 
-#: src/hamachi.vala:550 src/member.vala:69 src/network.vala:158
+#: src/hamachi.vala:560 src/member.vala:69 src/network.vala:156
 msgid "Unknown"
 msgstr "Okänt"
 
-#: src/hamachi.vala:578 src/window.vala:467
+#: src/hamachi.vala:588 src/window.vala:477
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: src/hamachi.vala:699 src/hamachi.vala:702
+#: src/hamachi.vala:709 src/hamachi.vala:712
 msgid "Password changed"
 msgstr "Lösenord ändrades"
 
-#: src/hamachi.vala:723
+#: src/hamachi.vala:733
 msgid "Saving backup…"
 msgstr "Sparar säkerhetskopia…"
 
-#: src/hamachi.vala:740
+#: src/hamachi.vala:750
 msgid "Backup saved"
 msgstr "Säkerhetskopia sparad"
 
-#: src/hamachi.vala:740
+#: src/hamachi.vala:750
 msgid "Failed to save backup"
 msgstr "Misslyckades med att spara säkerhetskopia"
 
-#: src/hamachi.vala:754
+#: src/hamachi.vala:764
 msgid "Restoring backup…"
 msgstr "Återställer säkerhetskopia…"
 
-#: src/hamachi.vala:795
+#: src/hamachi.vala:807
 msgid "Backup restored"
 msgstr "Säkerhetskopia återställd"
 
-#: src/hamachi.vala:795
+#: src/hamachi.vala:807
 msgid "Failed to restore backup"
 msgstr "Misslyckades med att återställa säkerhetskopia"
 
-#: src/hamachi.vala:802
+#: src/hamachi.vala:814
 msgid "Archive does not contain expected files"
 msgstr "Arkivet innehåller inte de filer som förväntades"
 
-#: src/indicator.vala:85 src/window.vala:544
+#: src/indicator.vala:85 src/window.vala:554
 msgid "Connecting"
 msgstr "Ansluter"
 
-#: src/indicator.vala:85 src/window.vala:548
+#: src/indicator.vala:85 src/window.vala:558
 msgid "Disconnected"
 msgstr "Frånkopplad"
 
@@ -895,121 +896,121 @@ msgstr "_Koppla från"
 msgid "C_onnect"
 msgstr "A_nslut"
 
-#: src/member.vala:231
+#: src/member.vala:235
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Vill du verkligen kasta ut medlemmen “{0}” från nätverket “{1}”?"
 
-#: src/member.vala:232
+#: src/member.vala:236
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Om godkänd så kan utslängda medlemmar gå med i nätverket senare."
 
-#: src/network.vala:148
+#: src/network.vala:146
 msgid "You"
 msgstr "Du"
 
-#: src/network.vala:345
+#: src/network.vala:349
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Vill du verkligen lämna nätverket “{0}”?"
 
-#: src/network.vala:346
+#: src/network.vala:350
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Om godkänd så kan du gå med i nätverket igen senare."
 
-#: src/network.vala:374
+#: src/network.vala:378
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Vill du verkligen ta bort nätverket “{0}”?"
 
-#: src/network.vala:375
+#: src/network.vala:379
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Om du tar bort ett nätverk så är det permanent borta."
 
-#: src/preferences.vala:107
+#: src/preferences.vala:116
 msgid "Not present"
 msgstr "Finns inte"
 
-#: src/preferences.vala:285
+#: src/preferences.vala:296
 msgid "All supported archives"
 msgstr "Alla arkiv som stöds"
 
-#: src/preferences.vala:305
+#: src/preferences.vala:316
 msgid "Save a Backup"
 msgstr "Spara en säkerhetskopia"
 
-#: src/preferences.vala:327
+#: src/preferences.vala:338
 msgid "Restore from Backup"
 msgstr "Återställ från säkerhetskopia"
 
-#: src/preferences.vala:328 src/widgets/commands-editor.vala:62
+#: src/preferences.vala:339 src/widgets/commands-editor.vala:62
 msgid "_Restore"
 msgstr "Åte_rställ"
 
-#: src/preferences.vala:372
+#: src/preferences.vala:383
 msgid "Never"
 msgstr "Aldrig"
 
-#: src/preferences.vala:395
+#: src/preferences.vala:406
 #, c-format
-msgid "%S second"
-msgid_plural "%S seconds"
-msgstr[0] "%S sekund"
-msgstr[1] "%S sekunder"
+msgid "%d second"
+msgid_plural "%d seconds"
+msgstr[0] "%d sekund"
+msgstr[1] "%d sekunder"
 
-#: src/preferences.vala:399
+#: src/preferences.vala:410
 #, c-format
-msgid "%S minute"
-msgid_plural "%S minutes"
-msgstr[0] "%S minut"
-msgstr[1] "%S minuter"
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minut"
+msgstr[1] "%d minuter"
 
-#: src/sidebar.vala:174
+#: src/sidebar.vala:170
 msgid "Unavailable"
 msgstr "Ej tillgänglig"
 
-#: src/sidebar.vala:192
+#: src/sidebar.vala:188
 msgid "pending"
 msgstr "väntar"
 
-#: src/sidebar.vala:193
+#: src/sidebar.vala:189
 msgid "Not attached"
 msgstr "Inte bifogad"
 
-#: src/sidebar.vala:211
+#: src/sidebar.vala:207
 msgid "{0} online, {1} total"
 msgstr "{0} anslutna, {1} totalt"
 
-#: src/status.vala:35
+#: src/status.vala:36
 msgid "Offline"
 msgstr "Frånkopplad"
 
-#: src/status.vala:39
+#: src/status.vala:41
 msgid "Online"
 msgstr "Ansluten"
 
-#: src/status.vala:41 src/status.vala:75 src/status.vala:85
+#: src/status.vala:42 src/status.vala:72 src/status.vala:83
 msgid "Relayed"
 msgstr "Omdirigerad"
 
-#: src/status.vala:48
+#: src/status.vala:46
 msgid "Unreachable"
 msgstr "Kan inte nås"
 
-#: src/status.vala:52
+#: src/status.vala:51
 msgid "Awaiting approval"
 msgstr "Väntar på godkännande"
 
 #: src/status.vala:56
-msgid "Unknown error"
-msgstr "Okänt fel"
-
-#: src/status.vala:60
 msgid "Protocol mismatch"
 msgstr "Protokollet stämmer inte"
 
-#: src/status.vala:62
+#: src/status.vala:57
 msgid "Conflicting address"
 msgstr "Konflikt i adress"
 
-#: src/status.vala:73
+#: src/status.vala:58
+msgid "Unknown error"
+msgstr "Okänt fel"
+
+#: src/status.vala:70
 msgid "Direct"
 msgstr "Direkt"
 
@@ -1021,47 +1022,47 @@ msgstr "Återställ standardkommandon?"
 msgid "All customizations will be lost."
 msgstr "Alla anpassningar kommer att förloras."
 
-#: src/widgets/commands-editor.vala:103
+#: src/widgets/commands-editor.vala:105
 #, c-format
 msgid "Removed command “%s”"
 msgstr "Tog bort kommandot \"%s\""
 
-#: src/widgets/commands-editor.vala:104
+#: src/widgets/commands-editor.vala:108
 msgid "_Undo"
 msgstr "Å_ngra"
 
-#: src/window.vala:198
+#: src/window.vala:202
 msgid "Configuring"
 msgstr "Konfigurerar"
 
 #. Translator credits. Put one translator per line, in the form of "NAME URL".
-#: src/window.vala:363
+#: src/window.vala:367
 msgid "translator-credits"
 msgstr ""
 "Daniel Holm https://launchpad.net/~danielholm\n"
 "Daniel Nylander https://launchpad.net/~yeager\n"
 "David Bengtsson https://launchpad.net/~jstfaking"
 
-#: src/window.vala:444
+#: src/window.vala:454
 msgid "Copied to clipboard"
 msgstr "Kopierades till urklipp"
 
-#: src/window.vala:479
+#: src/window.vala:489
 msgid "Reconnecting in {0} second"
 msgid_plural "Reconnecting in {0} seconds"
 msgstr[0] "Återansluter om {0} sekund"
 msgstr[1] "Återansluter om {0} sekunder"
 
-#: src/window.vala:510
+#: src/window.vala:520
 msgid "Hamachi Is Not Installed"
 msgstr "Hamachi är inte installerat"
 
-#: src/window.vala:512
+#: src/window.vala:522
 #, c-format
 msgid "Hamachi Version %s Is Obsolete"
 msgstr "Hamachi version %s är för gammal"
 
-#: src/window.vala:611
+#: src/window.vala:626
 msgid ""
 "Haguichi will continue to run when its window is closed so that it can "
 "monitor the connection and send notifications."
