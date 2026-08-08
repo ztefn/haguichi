@@ -403,11 +403,11 @@ namespace Haguichi {
         }
 
         private static string get_seconds_interval_label (int interval) {
-            return ngettext ("%S second", "%S seconds", interval).replace ("%S", interval.to_string ());
+            return ngettext ("%d second", "%d seconds", interval).printf (interval);
         }
 
         private static string get_minutes_interval_label (int interval) {
-            return ngettext ("%S minute", "%S minutes", interval).replace ("%S", interval.to_string ());
+            return ngettext ("%d minute", "%d minutes", interval).printf (interval);
         }
     }
 }
