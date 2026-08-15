@@ -426,11 +426,9 @@ namespace Haguichi {
 
             if (select) {
                 // The list view may require additional time to update its scrollable area after model changes
-                // so delaying selection avoids scroll_to() stopping short when selecting a newly added item at the very end
-                Timeout.add_once (100, () => {
-                    select_item ();
-                    clear_state ();
-                });
+                // so applying a short delay avoids scroll_to() stopping short when jumping to a newly added item at the very end
+                select_item (100);
+                clear_state ();
             }
         }
 
@@ -479,7 +477,7 @@ namespace Haguichi {
             return null;
         }
 
-        private void select_item () {
+        private void select_item (int delay = 0) {
             if (select_network_id != null) {
                 foreach (Network network in connection.networks) {
                     if (select_network_id == network.id) {
@@ -495,8 +493,11 @@ namespace Haguichi {
 
                         // Only continue if selection is visible
                         if (pos < selection_model.n_items) {
-                            list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
                             selection_model.selected = pos;
+
+                            Timeout.add_once (delay, () => {
+                                list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
+                            });
                         }
                     }
                 }
