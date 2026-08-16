@@ -37,6 +37,7 @@ namespace Haguichi {
         private bool   skip_save_collapsed_networks;
         private bool   show_offline_members;
         private string sort_by;
+        private uint   scroll_to_pos;
 
         public string  network_label_template;
         public string  member_label_template;
@@ -491,16 +492,21 @@ namespace Haguichi {
                             pos = find_selection_model_position (network);
                         }
 
-                        // Only continue if selection is visible
+                        // Only continue if item is visible
                         if (pos < selection_model.n_items) {
                             selection_model.selected = pos;
-
-                            Timeout.add_once (delay, () => {
-                                list_view.scroll_to (pos, ListScrollFlags.FOCUS, null);
-                            });
+                            scroll_to_pos = pos;
+                            Timeout.add_once (delay, scroll_to_position);
                         }
                     }
                 }
+            }
+        }
+
+        private void scroll_to_position () {
+            // Only continue if item is visible
+            if (scroll_to_pos < selection_model.n_items) {
+                list_view.scroll_to (scroll_to_pos, ListScrollFlags.FOCUS, null);
             }
         }
 
