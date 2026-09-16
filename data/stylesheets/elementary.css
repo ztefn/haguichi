@@ -308,7 +308,16 @@ overlay-split-view .rich-list row button.error image {
 
 
 /*
- * Remove padding on empty bottom action bar
+ * Remove padding from box inside linked switch buttons to prevent labels getting cut off too quickly
+ */
+
+#preferences viewswitcher.linked > button > stack > box {
+  padding: 0;
+}
+
+
+/*
+ * Remove padding from empty bottom action bar
  */
 
 #preferences viewswitcherbar actionbar {
@@ -317,7 +326,7 @@ overlay-split-view .rich-list row button.error image {
 
 
 /*
- * Remove background of restore button in disabled state
+ * Remove background from restore button in disabled state
  */
 
 #restore-commands-button:disabled {
