@@ -303,6 +303,7 @@ namespace Haguichi {
             if (command.contains ("%TERMINAL")) {
                 bool use_double_dash = strv_contains ({
                     "gnome-terminal",
+                    "io.elementary.terminal",
                     "ptyxis",
                     "flatpak run app.devsuite.Ptyxis",
                     "cosmic-term"
