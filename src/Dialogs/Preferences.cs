@@ -88,7 +88,7 @@ namespace Dialogs
             
             Label schemeLabel = new Label ();
             schemeLabel.TextWithMnemonic = TextStrings.schemeLabel + "  ";
-            schemeLabel.MnemonicWidget = ipCombo;
+            schemeLabel.MnemonicWidget = schemeCombo;
             
             HBox schemeBox = new HBox ();
             schemeBox.Add ( schemeLabel );
