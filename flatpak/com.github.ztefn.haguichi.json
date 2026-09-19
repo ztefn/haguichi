@@ -2,7 +2,10 @@
     "app-id": "com.github.ztefn.haguichi",
     "sdk": "org.freedesktop.Sdk",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "26.08",
+    "sdk-extensions": [
+        "org.freedesktop.Sdk.Extension.mono6"
+    ],
     "command": "haguichi",
     "finish-args": [
         "--filesystem=home",
@@ -21,6 +24,14 @@
     "rename-icon": "haguichi",
     "rename-desktop-file": "haguichi.desktop",
     "rename-appdata-file": "haguichi.metainfo.xml",
+    "build-options": {
+        "append-path": "/usr/lib/sdk/mono6/bin",
+        "append-ld-library-path": "/usr/lib/sdk/mono6/lib",
+        "cflags": "-std=gnu17",
+        "env": {
+            "PKG_CONFIG_PATH": "/app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig:/usr/lib/sdk/mono6/lib/pkgconfig"
+        }
+    },
     "cleanup": [
        "*.la",
         "/include",
@@ -37,32 +48,27 @@
     ],
     "modules": [
         {
-            "name": "mono",
-            "config-opts": [
-                "--disable-boehm",
-                "--disable-libraries",
-                "--with-ikvm-native=no",
-                "--with-mcs-docs=no",
-                "--with-profile4=no"
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "http://download.mono-project.com/sources/mono/mono-4.8.1.0.tar.bz2",
-                    "sha256": "18cb38a670e51609c36c687ed90ad42cfedabeffd0a2dc5f7f0c46249eb8dbef"
-                },
-                /* Mono 4 TermInfo not compatible with ncurses6.1... */
-                {
-                    "type": "patch",
-                    "paths": [
-                      "mono-terminfo-ncurses6.patch",
-                      "mono-terminfo-integer-fix.patch",
-                      "mono-sysmacros-header.patch"
-                    ]
-                }
+            "name": "mono-runtime",
+            "buildsystem": "simple",
+            "build-options": {
+                "no-debuginfo": true,
+                "strip": true
+            },
+            "build-commands": [
+                "/usr/lib/sdk/mono6/install.sh"
             ]
         },
         "shared-modules/gtk2/gtk2.json",
+        {
+            "name": "gtk-doc",
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.gnome.org/sources/gtk-doc/1.25/gtk-doc-1.25.tar.xz",
+                    "sha256": "1ea46ed400e6501f975acaafea31479cea8f32f911dca4dff036f59e6464fd42"
+                }
+            ]
+        },
         {
             "name": "libglade",
             "config-opts": [
@@ -91,6 +97,14 @@
                     "type": "archive",
                     "url": "https://download.mono-project.com/sources/gtk-sharp212/gtk-sharp-2.12.45.tar.gz",
                     "sha256": "02680578e4535441064aac21d33315daa009d742cab8098ac8b2749d86fffb6a"
+                },
+                {
+                    "type": "patch",
+                    "path": "gtk-sharp-windowmanager.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "gtk-sharp-range.patch"
                 }
             ]
         },
@@ -109,9 +123,9 @@
             "cleanup": [ "/bin/gconf-merge-tree" ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "http://ftp.gnome.org/pub/GNOME/sources/GConf/3.2/GConf-3.2.6.tar.xz",
-                    "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/Archive/gconf.git",
+                    "commit": "0780809731c8ab1c364202b1900d3df106b28626"
                 },
                 {
                     "type": "patch",
@@ -144,6 +158,10 @@
                     "type": "git",
                     "url": "https://github.com/mono/dbus-sharp",
                     "commit": "2686c4f15d56de301ef506047840814874c8e74f"
+                },
+                {
+                    "type": "patch",
+                    "path": "dbus-sharp-sign-dll.patch"
                 }
             ]
         },
@@ -163,6 +181,9 @@
         },
         {
             "name": "notify-sharp",
+            "config-opts": [
+                "--disable-docs"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -400,7 +421,7 @@
             ],
             "build-options": {
                 "env": {
-                    "CSC": "/app/bin/mcs",
+                    "CSC": "/usr/lib/sdk/mono6/bin/mcs",
                     "PERL5LIB": "/app/lib/perl5"
                 }
             },
