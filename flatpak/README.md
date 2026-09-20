@@ -3,10 +3,16 @@
   =======
 
 
+  Initialize or update shared modules
+  -----------------------------------
+
+    $ git submodule update --init
+
+
   Install runtime and SDK
   -----------------------
 
-    $ flatpak install org.freedesktop.Platform org.freedesktop.Sdk
+    $ flatpak install org.freedesktop.Platform org.freedesktop.Sdk org.freedesktop.Sdk.Extension.mono6
 
   > [!IMPORTANT]
   > Choose the version specified in the manifest.
