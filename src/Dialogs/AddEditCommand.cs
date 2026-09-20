@@ -70,7 +70,8 @@ namespace Dialogs
             this.BorderWidth     = 8;
             this.DeleteEvent    += OnDeleteEvent;
             
-            this.ActionArea.Destroy ();
+            this.ActionArea.Hide ();
+            this.ActionArea.NoShowAll = true;
             
             
             if ( Mode == "Add" )

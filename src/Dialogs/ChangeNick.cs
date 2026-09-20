@@ -55,7 +55,8 @@ namespace Dialogs
             this.BorderWidth     = 4;
             this.DeleteEvent    += OnDeleteEvent;
             
-            this.ActionArea.Destroy ();
+            this.ActionArea.Hide ();
+            this.ActionArea.NoShowAll = true;
             
             
             heading = new Label ();

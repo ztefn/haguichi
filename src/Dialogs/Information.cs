@@ -63,7 +63,8 @@ namespace Dialogs
             this.BorderWidth     = 3;
             this.DeleteEvent    += OnDeleteEvent;
             
-            this.ActionArea.Destroy ();
+            this.ActionArea.Hide ();
+            this.ActionArea.NoShowAll = true;
             
             
             image = new Image ( Stock.DialogInfo, IconSize.Dialog );

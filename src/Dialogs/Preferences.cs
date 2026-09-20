@@ -69,7 +69,7 @@ namespace Dialogs
             this.BorderWidth    = 10;
             this.DeleteEvent   += OnWinDelete;
             
-            this.ActionArea.Destroy ();
+            this.ActionArea.Hide ();
             
             
             closeBut = new Button ( Stock.Close );

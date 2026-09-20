@@ -66,7 +66,7 @@ namespace Dialogs
             this.SkipTaskbarHint = true;
             this.DeleteEvent    += OnDeleteEvent;
             
-            this.ActionArea.Destroy ();
+            this.ActionArea.Hide ();
             
             
             heading = new Label ();
