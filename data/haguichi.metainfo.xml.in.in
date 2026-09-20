@@ -18,37 +18,69 @@
     <p><em>Please note: Requires installation of Hamachi on the system in order to use.</em></p>
   </description>
   <screenshots>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>Disconnected Main Window</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-disconnected.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/main-window-disconnected.png</image>
     </screenshot>
-    <screenshot type="default">
+    <screenshot environment="gnome" type="default">
       <caption>Connected Main Window</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-connected.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/main-window-connected.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>Search Network List</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/main-window-search.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/main-window-search.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>Information Dialog</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/information-dialog.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/information-dialog.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>General Preferences</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-general.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/preferences-general.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>Commands Preferences</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-commands.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/preferences-commands.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>Desktop Preferences</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/preferences-desktop.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/preferences-desktop.png</image>
     </screenshot>
-    <screenshot>
+    <screenshot environment="gnome">
       <caption>About Dialog</caption>
-      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/about-dialog.png</image>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/light/about-dialog.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Disconnected Main Window</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/main-window-disconnected.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Connected Main Window</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/main-window-connected.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Search Network List</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/main-window-search.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Information Dialog</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/information-dialog.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>General Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/preferences-general.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Commands Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/preferences-commands.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>Desktop Preferences</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/preferences-desktop.png</image>
+    </screenshot>
+    <screenshot environment="gnome:dark">
+      <caption>About Dialog</caption>
+      <image scale="1">https://raw.githubusercontent.com/ztefn/haguichi/1.0-series/data/screenshots/dark/about-dialog.png</image>
     </screenshot>
   </screenshots>
   <supports>
