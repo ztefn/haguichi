@@ -1,2 +1,3 @@
+option('profile',        type: 'combo',   choices: ['default', 'development'], value: 'default')
 option('for-elementary', type: 'boolean', value: false)
 option('for-ubuntu',     type: 'boolean', value: false)

@@ -11,6 +11,14 @@ binary_name  = app_name.to_lower()
 gettext_pkg  = app_name.to_lower()
 vala_version = meson.get_compiler('vala').version()
 
+if get_option('profile') == 'development'
+  git = find_program('git', required: false, disabler: true)
+  rev = run_command(git, 'rev-parse', '--short', 'HEAD', check: false).stdout().strip()
+  if rev != ''
+    app_version += '-' + rev
+  endif
+endif
+
 add_project_arguments(
   '-DG_LOG_DOMAIN="' + app_name + '"',
   '-DGETTEXT_PACKAGE="' + gettext_pkg + '"',
