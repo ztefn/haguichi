@@ -52,7 +52,7 @@ window.shortcuts shortcut .keycap {
 
 /*
  * Increase contrast for accent labels
- * https://gitlab.gnome.org/GNOME/libadwaita/-/blob/1.10.0/src/stylesheet/_colors.scss?ref_type=tags#L25
+ * https://gitlab.gnome.org/GNOME/libadwaita/-/blob/1.10.0/src/stylesheet/_colors.scss#L25
  */
 
 .accent {
