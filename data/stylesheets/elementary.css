@@ -56,7 +56,7 @@ window.shortcuts shortcut .keycap {
  */
 
 .accent {
-  color: oklab(from @accent_color min(l, 0.5) a b)
+  color: oklab(from @accent_color min(l, 0.5) a b);
 }
 
 
