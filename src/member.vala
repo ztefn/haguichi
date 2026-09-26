@@ -95,6 +95,7 @@ namespace Haguichi {
             }
 
             label = template.replace ("{PERCENTSIGN}", "%");
+            label = Utils.highlight_search_terms (label);
         }
 
         public void set_row_css_classes () {

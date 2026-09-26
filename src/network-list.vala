@@ -665,6 +665,7 @@ namespace Haguichi {
 
             if (item is Network) {
                 Network network = (Network) item;
+                network.set_label_markup ();
 
                 // If there is no search text then network is shown
                 if (search_text == "") return true;
@@ -678,6 +679,7 @@ namespace Haguichi {
                 }
             } else if (item is Member) {
                 Member member = (Member) item;
+                member.set_label_markup ();
 
                 // If offline members should be hidden then check status first
                 if (!show_offline_members && member.status.status_int == 0) return false;

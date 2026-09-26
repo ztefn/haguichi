@@ -95,6 +95,59 @@ namespace Utils {
         }
     }
 
+    public static string highlight_search_terms (string label) {
+        string result_label = label;
+
+        string[] terms = win.search_entry.text.casefold ().split_set (" +,");
+        string[] patterns = {};
+
+        // Escape all search terms for use as literal regex patterns
+        foreach (string term in terms) {
+            if (term != "")
+                patterns += Regex.escape_string (term);
+        }
+
+        if (patterns.length > 0) {
+            try {
+                // Match any search term case-insensitive
+                var regex = new Regex (string.joinv ("|", patterns), RegexCompileFlags.CASELESS);
+
+                // Replace all matched search terms in one pass to avoid matching inside the inserted markup
+                result_label = regex.replace_eval (label, -1, 0, 0, (match_info, result) => {
+                    string match = match_info.fetch (0);
+                    result.append ("<span color=\"%s\" weight=\"bold\">%s</span>".printf (get_accent_color_hex (), match));
+                    return false;
+                });
+            } catch (RegexError e) {
+                critical ("highlight_search_terms: %s", e.message);
+            }
+        }
+
+        return result_label;
+    }
+
+    public string get_accent_color_hex () {
+        var label = new Gtk.Label (null) {
+            css_classes = {"accent"}
+        };
+
+        Gdk.RGBA color = label.get_color ();
+
+        Pango.Color pango_color = {
+            to_pango_channel (color.red),
+            to_pango_channel (color.green),
+            to_pango_channel (color.blue)
+        };
+
+        return pango_color.to_string ();
+    }
+
+    public uint16 to_pango_channel (double value) {
+        // Clamp colors outside of sRGB gamut and convert to 16-bit
+        // https://gnome.pages.gitlab.gnome.org/libadwaita/doc/main/css-variables.html#out-of-gamut-colors
+        return (uint16) ((value < 0 ? 0 : value > 1 ? 1 : value) * 65535);
+    }
+
     public static string get_debug_info () {
         var gtk_settings = Gtk.Settings.get_default ();
 
