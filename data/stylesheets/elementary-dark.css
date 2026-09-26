@@ -2,6 +2,16 @@
 
 
 /*
+ * Increase contrast for accent labels
+ * https://gitlab.gnome.org/GNOME/libadwaita/-/blob/1.10.0/src/stylesheet/_colors.scss?ref_type=tags#L88
+ */
+
+.accent {
+  color: oklab(from @accent_color max(l, 0.85) a b);
+}
+
+
+/*
  * Override background colors for overlay split view
  */
 

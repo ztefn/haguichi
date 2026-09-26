@@ -51,6 +51,16 @@ window.shortcuts shortcut .keycap {
 
 
 /*
+ * Increase contrast for accent labels
+ * https://gitlab.gnome.org/GNOME/libadwaita/-/blob/1.10.0/src/stylesheet/_colors.scss?ref_type=tags#L25
+ */
+
+.accent {
+  color: oklab(from @accent_color min(l, 0.5) a b)
+}
+
+
+/*
  * Add missing styles for pill buttons
  * https://gnome.pages.gitlab.gnome.org/libadwaita/doc/1-latest/style-classes.html#pill
  */
