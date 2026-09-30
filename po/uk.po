@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-09 01:04+0200\n"
+"POT-Creation-Date: 2026-09-30 15:18+0200\n"
 "PO-Revision-Date: 2024-06-15 18:01+0000\n"
 "Last-Translator: Fedik <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -204,7 +204,7 @@ msgid "_Copy Client ID"
 msgstr "_Копіювати ІД клієнта"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:238
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
 msgid "_Evict"
 msgstr "_Виселити"
 
@@ -230,11 +230,11 @@ msgstr "_Статус в мережі"
 msgid "_Go Offline"
 msgstr "_Статус поза мережею"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:352
+#: data/ui/menus/network-menu.ui:22 src/network.vala:362
 msgid "_Leave"
 msgstr "_Залишити"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:381
+#: data/ui/menus/network-menu.ui:28 src/network.vala:391
 msgid "_Delete"
 msgstr "В_идалити"
 
@@ -491,7 +491,7 @@ msgstr "Покинути мережу"
 msgid "Delete Network"
 msgstr "Вилучити мережу"
 
-#: data/ui/sidebar.ui:116
+#: data/ui/sidebar.ui:116 src/member.vala:105
 msgid "Owner"
 msgstr "Власник"
 
@@ -836,7 +836,7 @@ msgstr "Мережа вже приєднана"
 msgid "Network ID is already taken"
 msgstr "Ідентифікатор мережі вже використовуються"
 
-#: src/hamachi.vala:560 src/member.vala:69 src/network.vala:156
+#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
 msgid "Unknown"
 msgstr "Невідомо"
 
@@ -896,31 +896,39 @@ msgstr "_Відключити"
 msgid "C_onnect"
 msgstr "П_ідключити"
 
-#: src/member.vala:235
+#: src/member.vala:103
+msgid "Member"
+msgstr "Учасник"
+
+#: src/member.vala:246
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Впевнені, що бажаєте виселити користувача”{0}” з мережі “{1}”?"
 
-#: src/member.vala:236
+#: src/member.vala:247
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Якщо обрано, то користувач може приєднатись до мережі пізніше знову."
 
-#: src/network.vala:146
+#: src/network.vala:112
+msgid "Network"
+msgstr "Мережу"
+
+#: src/network.vala:156
 msgid "You"
 msgstr "Ви"
 
-#: src/network.vala:349
+#: src/network.vala:359
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Впевнені, що бажаєте покинути мережу “{0}”?"
 
-#: src/network.vala:350
+#: src/network.vala:360
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Якщо обрано, то ви можете приєднатись до мережі пізніше знову."
 
-#: src/network.vala:378
+#: src/network.vala:388
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Впевнені, що бажаєте вилучити мережу “{0}”?"
 
-#: src/network.vala:379
+#: src/network.vala:389
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Після вилучення, мережу буде втрачено."
 
