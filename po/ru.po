@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 15:18+0200\n"
+"POT-Creation-Date: 2026-09-30 18:00+0200\n"
 "PO-Revision-Date: 2024-08-30 16:46+0000\n"
 "Last-Translator: Alexey Fedorov <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -203,7 +203,7 @@ msgid "_Copy Client ID"
 msgstr "_Скопировать идентификационный номер клиента"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:244
 msgid "_Evict"
 msgstr "_Выгнать"
 
@@ -229,11 +229,11 @@ msgstr "_Статус “в сети”"
 msgid "_Go Offline"
 msgstr "_Статус “не в сети”"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:362
+#: data/ui/menus/network-menu.ui:22 src/network.vala:358
 msgid "_Leave"
 msgstr "_Выйти"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:391
+#: data/ui/menus/network-menu.ui:28 src/network.vala:387
 msgid "_Delete"
 msgstr "_Удалить"
 
@@ -490,7 +490,7 @@ msgstr "Покинуть сеть"
 msgid "Delete Network"
 msgstr "Удалить сеть"
 
-#: data/ui/sidebar.ui:116 src/member.vala:105
+#: data/ui/sidebar.ui:116 src/member.vala:100
 msgid "Owner"
 msgstr "Владелец"
 
@@ -835,7 +835,7 @@ msgstr "Вы уже подключены к этой сети"
 msgid "Network ID is already taken"
 msgstr "Сеть с данным ID уже существует"
 
-#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
+#: src/hamachi.vala:560 src/member.vala:65 src/network.vala:162
 msgid "Unknown"
 msgstr "Неизвестный"
 
@@ -895,40 +895,40 @@ msgstr "_Отключиться"
 msgid "C_onnect"
 msgstr "П_одключиться"
 
-#: src/member.vala:103
+#: src/member.vala:98
 msgid "Member"
 msgstr "Пользователь"
 
-#: src/member.vala:246
+#: src/member.vala:241
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Вы уверены, что хотите выгнать «{0}» из сети «{1}»?"
 
-#: src/member.vala:247
+#: src/member.vala:242
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Выгнанные участники всегда смогут заново подключиться к выбранной сети."
 
-#: src/network.vala:112
+#: src/network.vala:108
 msgid "Network"
 msgstr "Сеть"
 
-#: src/network.vala:156
+#: src/network.vala:152
 msgid "You"
 msgstr "Вы"
 
-#: src/network.vala:359
+#: src/network.vala:355
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Вы уверены что хотите покинуть сеть «{0}»?"
 
-#: src/network.vala:360
+#: src/network.vala:356
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Вы всегда сможете заново подключиться к выбранной сети."
 
-#: src/network.vala:388
+#: src/network.vala:384
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Вы уверены что хотите удалить сеть «{0}»?"
 
-#: src/network.vala:389
+#: src/network.vala:385
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Если вы удалите сеть, она удалиться без возможности восстановления."
 

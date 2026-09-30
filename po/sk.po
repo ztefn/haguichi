@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 15:18+0200\n"
+"POT-Creation-Date: 2026-09-30 18:00+0200\n"
 "PO-Revision-Date: 2026-03-19 22:36+0000\n"
 "Last-Translator: Parrot HatOSS <parrothat.oss@gmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/haguichi/haguichi/"
@@ -206,7 +206,7 @@ msgid "_Copy Client ID"
 msgstr "_Kopírovať ID klienta"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:244
 msgid "_Evict"
 msgstr "_Vyhodiť"
 
@@ -232,11 +232,11 @@ msgstr "Ísť o_nline"
 msgid "_Go Offline"
 msgstr "Ísť o_ffline"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:362
+#: data/ui/menus/network-menu.ui:22 src/network.vala:358
 msgid "_Leave"
 msgstr "_Odísť"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:391
+#: data/ui/menus/network-menu.ui:28 src/network.vala:387
 msgid "_Delete"
 msgstr "O_dstrániť"
 
@@ -498,7 +498,7 @@ msgstr "Vytvoriť sieť"
 msgid "Delete Network"
 msgstr "Vytvoriť sieť"
 
-#: data/ui/sidebar.ui:116 src/member.vala:105
+#: data/ui/sidebar.ui:116 src/member.vala:100
 msgid "Owner"
 msgstr "Vlastník"
 
@@ -849,7 +849,7 @@ msgstr "Sieť je už pripojená"
 msgid "Network ID is already taken"
 msgstr "ID siete je už používané"
 
-#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
+#: src/hamachi.vala:560 src/member.vala:65 src/network.vala:162
 msgid "Unknown"
 msgstr "Neznámy"
 
@@ -912,39 +912,39 @@ msgstr "O_dpojiť"
 msgid "C_onnect"
 msgstr "Prip_ojiť"
 
-#: src/member.vala:103
+#: src/member.vala:98
 msgid "Member"
 msgstr "Člen"
 
-#: src/member.vala:246
+#: src/member.vala:241
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Naozaj chcete vyhodiť člena „{0}“ zo siete „{1}“?"
 
-#: src/member.vala:247
+#: src/member.vala:242
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "Ak potvrdíte, môžu sa vylúčenie členi neskôr opäť pripojiť."
 
-#: src/network.vala:112
+#: src/network.vala:108
 msgid "Network"
 msgstr "Siete"
 
-#: src/network.vala:156
+#: src/network.vala:152
 msgid "You"
 msgstr "Vy"
 
-#: src/network.vala:359
+#: src/network.vala:355
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Naozaj chcete opustiť sieť „{0}“?"
 
-#: src/network.vala:360
+#: src/network.vala:356
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "Ak potvrdíte, môžete sa opäť pripojiť kedykoľvek neskôr."
 
-#: src/network.vala:388
+#: src/network.vala:384
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Naozaj chcete zmazať sieť „{0}“?"
 
-#: src/network.vala:389
+#: src/network.vala:385
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Ak sieť odstránite, bude nenávratne stratená."
 

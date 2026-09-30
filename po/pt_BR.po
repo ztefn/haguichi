@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 15:18+0200\n"
+"POT-Creation-Date: 2026-09-30 18:00+0200\n"
 "PO-Revision-Date: 2024-06-17 13:17+0000\n"
 "Last-Translator: Rodrigo de Avila <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -205,7 +205,7 @@ msgid "_Copy Client ID"
 msgstr "_Copiar ID do Cliente"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:244
 msgid "_Evict"
 msgstr "_Expulsar"
 
@@ -231,11 +231,11 @@ msgstr "_Ficar Online"
 msgid "_Go Offline"
 msgstr "_Ficar Offline"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:362
+#: data/ui/menus/network-menu.ui:22 src/network.vala:358
 msgid "_Leave"
 msgstr "_Sair"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:391
+#: data/ui/menus/network-menu.ui:28 src/network.vala:387
 msgid "_Delete"
 msgstr "E_xcluir"
 
@@ -492,7 +492,7 @@ msgstr "Sair da Rede"
 msgid "Delete Network"
 msgstr "Excluir Rede"
 
-#: data/ui/sidebar.ui:116 src/member.vala:105
+#: data/ui/sidebar.ui:116 src/member.vala:100
 msgid "Owner"
 msgstr "Proprietário"
 
@@ -834,7 +834,7 @@ msgstr "Você já juntou-se a esta Rede antes"
 msgid "Network ID is already taken"
 msgstr "Este ID de rede já está em uso"
 
-#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
+#: src/hamachi.vala:560 src/member.vala:65 src/network.vala:162
 msgid "Unknown"
 msgstr "Desconhecido"
 
@@ -894,42 +894,42 @@ msgstr "_Desconectar"
 msgid "C_onnect"
 msgstr "C_onectar"
 
-#: src/member.vala:103
+#: src/member.vala:98
 msgid "Member"
 msgstr "Membro"
 
-#: src/member.vala:246
+#: src/member.vala:241
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Tem certeza que quer expulsar o membro “{0}” da rede “{1}”?"
 
-#: src/member.vala:247
+#: src/member.vala:242
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Se permitido, os membros expulsos podem se juntar novamente a esta rede a "
 "qualquer momento."
 
-#: src/network.vala:112
+#: src/network.vala:108
 msgid "Network"
 msgstr "Rede"
 
-#: src/network.vala:156
+#: src/network.vala:152
 msgid "You"
 msgstr "Você"
 
-#: src/network.vala:359
+#: src/network.vala:355
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Tem certeza que quer sair da rede “{0}”?"
 
-#: src/network.vala:360
+#: src/network.vala:356
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
 "Se permitido, você poderá se juntar novamente a esta rede a qualquer momento."
 
-#: src/network.vala:388
+#: src/network.vala:384
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Tem certeza que quer remover a rede “{0}”?"
 
-#: src/network.vala:389
+#: src/network.vala:385
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Se você remover a rede, ela será permanentemente perdida."
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 15:18+0200\n"
+"POT-Creation-Date: 2026-09-30 18:00+0200\n"
 "PO-Revision-Date: 2026-04-20 18:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/haguichi/"
@@ -207,7 +207,7 @@ msgid "_Copy Client ID"
 msgstr "クライアント ID をコピー(_C)"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:244
 msgid "_Evict"
 msgstr "登録抹消(_E)"
 
@@ -233,11 +233,11 @@ msgstr "オンラインにする(_G)"
 msgid "_Go Offline"
 msgstr "オフラインにする(_G)"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:362
+#: data/ui/menus/network-menu.ui:22 src/network.vala:358
 msgid "_Leave"
 msgstr "離脱する(_L)"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:391
+#: data/ui/menus/network-menu.ui:28 src/network.vala:387
 msgid "_Delete"
 msgstr "削除(_D)"
 
@@ -494,7 +494,7 @@ msgstr "ネットワークを離脱"
 msgid "Delete Network"
 msgstr "ネットワークを削除"
 
-#: data/ui/sidebar.ui:116 src/member.vala:105
+#: data/ui/sidebar.ui:116 src/member.vala:100
 msgid "Owner"
 msgstr "所有者"
 
@@ -833,7 +833,7 @@ msgstr "すでにネットワークに参加しています"
 msgid "Network ID is already taken"
 msgstr "Network ID はすでに存在します"
 
-#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
+#: src/hamachi.vala:560 src/member.vala:65 src/network.vala:162
 msgid "Unknown"
 msgstr "不明"
 
@@ -893,39 +893,39 @@ msgstr "切断(_D)"
 msgid "C_onnect"
 msgstr "接続(_O)"
 
-#: src/member.vala:103
+#: src/member.vala:98
 msgid "Member"
 msgstr "メンバー"
 
-#: src/member.vala:246
+#: src/member.vala:241
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "ネットワーク “{1}” からメンバー “{0}” を登録抹消してもよろしいですか?"
 
-#: src/member.vala:247
+#: src/member.vala:242
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr "承認されれば、そのメンバーは後でいつでもネットワークに再参加できます。"
 
-#: src/network.vala:112
+#: src/network.vala:108
 msgid "Network"
 msgstr "ネットワーク"
 
-#: src/network.vala:156
+#: src/network.vala:152
 msgid "You"
 msgstr "あなた"
 
-#: src/network.vala:359
+#: src/network.vala:355
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "ネットワーク “{0}” から離脱してもよろしいですか?"
 
-#: src/network.vala:360
+#: src/network.vala:356
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr "承認されれば、後でいつでもネットワークに再参加できます。"
 
-#: src/network.vala:388
+#: src/network.vala:384
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "ネットワーク “{0}” を削除してもよろしいですか?"
 
-#: src/network.vala:389
+#: src/network.vala:385
 msgid "If you delete a network, it will be permanently lost."
 msgstr "ネットワークを削除すると、そのネットワークは元に戻せなくなります。"
 

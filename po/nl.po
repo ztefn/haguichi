@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haguichi\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 15:18+0200\n"
+"POT-Creation-Date: 2026-09-30 18:00+0200\n"
 "PO-Revision-Date: 2024-06-16 12:53+0000\n"
 "Last-Translator: Stephen Brandt <stephen@stephenbrandt.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -206,7 +206,7 @@ msgid "_Copy Client ID"
 msgstr "_Client-ID kopiëren"
 
 #. This action removes the selected member from the network.
-#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:249
+#: data/ui/menus/member-menu.ui:38 data/ui/sidebar.ui:256 src/member.vala:244
 msgid "_Evict"
 msgstr "_Verwijderen"
 
@@ -232,11 +232,11 @@ msgstr "_Online gaan"
 msgid "_Go Offline"
 msgstr "_Offline gaan"
 
-#: data/ui/menus/network-menu.ui:22 src/network.vala:362
+#: data/ui/menus/network-menu.ui:22 src/network.vala:358
 msgid "_Leave"
 msgstr "_Verlaten"
 
-#: data/ui/menus/network-menu.ui:28 src/network.vala:391
+#: data/ui/menus/network-menu.ui:28 src/network.vala:387
 msgid "_Delete"
 msgstr "_Verwijderen"
 
@@ -493,7 +493,7 @@ msgstr "Netwerk verlaten"
 msgid "Delete Network"
 msgstr "Netwerk verwijderen"
 
-#: data/ui/sidebar.ui:116 src/member.vala:105
+#: data/ui/sidebar.ui:116 src/member.vala:100
 msgid "Owner"
 msgstr "Eigenaar"
 
@@ -834,7 +834,7 @@ msgstr "U bent al toegetreden tot dit netwerk"
 msgid "Network ID is already taken"
 msgstr "Dit netwerk-ID is al in gebruik"
 
-#: src/hamachi.vala:560 src/member.vala:70 src/network.vala:166
+#: src/hamachi.vala:560 src/member.vala:65 src/network.vala:162
 msgid "Unknown"
 msgstr "Onbekend"
 
@@ -894,43 +894,43 @@ msgstr "_Verbinding verbreken"
 msgid "C_onnect"
 msgstr "_Verbinding maken"
 
-#: src/member.vala:103
+#: src/member.vala:98
 msgid "Member"
 msgstr "Lid"
 
-#: src/member.vala:246
+#: src/member.vala:241
 msgid "Are you sure you want to evict member “{0}” from network “{1}”?"
 msgstr "Weet u zeker dat u lid ‘{0}’ uit het netwerk ‘{1}’ wilt verwijderen?"
 
-#: src/member.vala:247
+#: src/member.vala:242
 msgid "If admitted, evicted members can rejoin the network at any later time."
 msgstr ""
 "Indien toegestaan kunnen verwijderde leden op een later moment opnieuw tot "
 "dit netwerk toetreden."
 
-#: src/network.vala:112
+#: src/network.vala:108
 msgid "Network"
 msgstr "Netwerk"
 
-#: src/network.vala:156
+#: src/network.vala:152
 msgid "You"
 msgstr "Uzelf"
 
-#: src/network.vala:359
+#: src/network.vala:355
 msgid "Are you sure you want to leave the network “{0}”?"
 msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verlaten?"
 
-#: src/network.vala:360
+#: src/network.vala:356
 msgid "If admitted, you can rejoin the network at any later time."
 msgstr ""
 "Indien toegestaan kunt u op een later moment opnieuw tot dit netwerk "
 "toetreden."
 
-#: src/network.vala:388
+#: src/network.vala:384
 msgid "Are you sure you want to delete the network “{0}”?"
 msgstr "Weet u zeker dat u het netwerk ‘{0}’ wilt verwijderen?"
 
-#: src/network.vala:389
+#: src/network.vala:385
 msgid "If you delete a network, it will be permanently lost."
 msgstr "Als u een netwerk verwijderd kan dit niet meer worden hersteld."
 
