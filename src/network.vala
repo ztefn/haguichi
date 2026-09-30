@@ -28,6 +28,7 @@ namespace Haguichi {
 
         public bool     hide_expander     { get; private set; }
         public string   label             { get; private set; }
+        public string   accessible_label  { get; private set; }
         public string[] node_css_classes  { get; private set; }
         public string[] label_css_classes { get; private set; }
 
@@ -104,6 +105,14 @@ namespace Haguichi {
             }
 
             label = template.replace ("{PERCENTSIGN}", "%");
+
+            // Set accessible label now before adding any markup for search terms
+            accessible_label = "%s. %s %s".printf (
+                label,
+                _("Network"),
+                status.status_text
+            );
+
             label = Utils.highlight_search_terms (label);
         }
 

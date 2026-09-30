@@ -20,6 +20,9 @@
                 <property name="margin-end">6</property>
                 <property name="pixel-size">10</property>
                 <property name="valign">center</property>
+                <accessibility>
+                  <property name="label"/>
+                </accessibility>
                 <binding name="css-classes">
                   <lookup name="node-css-classes" type="HaguichiNetwork">
                     <lookup name="item">expander</lookup>
@@ -36,6 +39,9 @@
               <object class="GtkLabel">
                 <property name="ellipsize">end</property>
                 <property name="use-markup">true</property>
+                <accessibility>
+                  <relation name="labelled-by">accessible_label</relation>
+                </accessibility>
                 <binding name="label">
                   <lookup name="label" type="HaguichiNetwork">
                     <lookup name="item">expander</lookup>
@@ -53,6 +59,21 @@
                 </binding>
                 <binding name="css-classes">
                   <lookup name="label-css-classes" type="HaguichiMember">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="accessible_label">
+                <property name="visible">false</property>
+                <binding name="label">
+                  <lookup name="accessible_label" type="HaguichiNetwork">
+                    <lookup name="item">expander</lookup>
+                  </lookup>
+                </binding>
+                <binding name="label">
+                  <lookup name="accessible_label" type="HaguichiMember">
                     <lookup name="item">expander</lookup>
                   </lookup>
                 </binding>

@@ -24,6 +24,7 @@ namespace Haguichi {
         public string   tunnel;
  
         public string   label             { get; private set; }
+        public string   accessible_label  { get; private set; }
         public string[] node_css_classes  { get; private set; }
         public string[] label_css_classes { get; private set; }
  
@@ -95,6 +96,15 @@ namespace Haguichi {
             }
 
             label = template.replace ("{PERCENTSIGN}", "%");
+
+            // Set accessible label now before adding any markup for search terms
+            accessible_label = "%s. %s %s. %s".printf (
+                label,
+                _("Member"),
+                status.status_text,
+                is_owner ? _("Owner") : ""
+            );
+
             label = Utils.highlight_search_terms (label);
         }
 
