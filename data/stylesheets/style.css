@@ -14,7 +14,6 @@ window.custom .suggested-action {
 #network-list > scrolledwindow > listview > row {
   border-radius: 6px;
   margin: 0 6px 2px;
-  padding: 6px;
 }
 window.adw-1-7 #network-list > scrolledwindow > listview > row {
   border-radius: 9px;

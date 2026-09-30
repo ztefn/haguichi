@@ -3,6 +3,15 @@ statuspage > scrolledwindow > viewport > box {
 }
 
 
+#network-list > scrolledwindow > listview > row {
+  padding: 3px 6px;
+}
+
+#network-list > scrolledwindow > listview > row label {
+  padding: 3px 0;
+}
+
+
 #restore-commands-button image {
   transform: scaleX(-1);
 }

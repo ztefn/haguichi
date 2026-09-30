@@ -261,15 +261,6 @@ overlay-split-view .rich-list row button.error image {
 
 
 /*
- * Set padding for rows in network list
- */
-
-#network-list > scrolledwindow > listview > row {
-  padding: 6px;
-}
-
-
-/*
  * Increase font weight for network labels
  */
 
