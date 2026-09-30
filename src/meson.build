@@ -34,6 +34,7 @@ sources = [
   'widgets/command-variable-button.vala',
   'widgets/commands-editor.vala',
   'widgets/commands-editor-row.vala',
+  'widgets/network-list-item.vala',
   'widgets/sidebar-row.vala',
   'widgets/sidebar-page.vala',
   'widgets/throbber.vala',

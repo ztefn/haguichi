@@ -50,6 +50,7 @@ src/widgets/command-entry-row.vala
 src/widgets/command-variable-button.vala
 src/widgets/commands-editor.vala
 src/widgets/commands-editor-row.vala
+src/widgets/network-list-item.vala
 src/widgets/sidebar-row.vala
 src/widgets/sidebar-page.vala
 src/window.vala

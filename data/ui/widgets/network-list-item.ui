@@ -24,12 +24,7 @@
                   <property name="label"/>
                 </accessibility>
                 <binding name="css-classes">
-                  <lookup name="node-css-classes" type="HaguichiNetwork">
-                    <lookup name="item">expander</lookup>
-                  </lookup>
-                </binding>
-                <binding name="css-classes">
-                  <lookup name="node-css-classes" type="HaguichiMember">
+                  <lookup name="node-css-classes" type="HaguichiNetworkListItem">
                     <lookup name="item">expander</lookup>
                   </lookup>
                 </binding>
@@ -43,22 +38,12 @@
                   <relation name="labelled-by">accessible_label</relation>
                 </accessibility>
                 <binding name="label">
-                  <lookup name="label" type="HaguichiNetwork">
-                    <lookup name="item">expander</lookup>
-                  </lookup>
-                </binding>
-                <binding name="label">
-                  <lookup name="label" type="HaguichiMember">
+                  <lookup name="label" type="HaguichiNetworkListItem">
                     <lookup name="item">expander</lookup>
                   </lookup>
                 </binding>
                 <binding name="css-classes">
-                  <lookup name="label-css-classes" type="HaguichiNetwork">
-                    <lookup name="item">expander</lookup>
-                  </lookup>
-                </binding>
-                <binding name="css-classes">
-                  <lookup name="label-css-classes" type="HaguichiMember">
+                  <lookup name="label-css-classes" type="HaguichiNetworkListItem">
                     <lookup name="item">expander</lookup>
                   </lookup>
                 </binding>
@@ -68,12 +53,7 @@
               <object class="GtkLabel" id="accessible_label">
                 <property name="visible">false</property>
                 <binding name="label">
-                  <lookup name="accessible_label" type="HaguichiNetwork">
-                    <lookup name="item">expander</lookup>
-                  </lookup>
-                </binding>
-                <binding name="label">
-                  <lookup name="accessible_label" type="HaguichiMember">
+                  <lookup name="accessible_label" type="HaguichiNetworkListItem">
                     <lookup name="item">expander</lookup>
                   </lookup>
                 </binding>

@@ -11,7 +11,7 @@
  */
 
 namespace Haguichi {
-    public class Network : Object {
+    public class Network : NetworkListItem {
         private ConfirmDialog dialog;
 
         public List<Member> members;
@@ -27,10 +27,6 @@ namespace Haguichi {
         public int      capacity;
 
         public bool     hide_expander     { get; private set; }
-        public string   label             { get; private set; }
-        public string   accessible_label  { get; private set; }
-        public string[] node_css_classes  { get; private set; }
-        public string[] label_css_classes { get; private set; }
 
         public string   name_sort_string;
         public string   status_sort_string;

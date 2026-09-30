@@ -11,7 +11,7 @@
  */
 
 namespace Haguichi {
-    public class Member : Object {
+    public class Member : NetworkListItem {
         private ConfirmDialog dialog;
         private string new_nick;
 
@@ -22,11 +22,6 @@ namespace Haguichi {
         public string   nick;
         public string   id;
         public string   tunnel;
- 
-        public string   label             { get; private set; }
-        public string   accessible_label  { get; private set; }
-        public string[] node_css_classes  { get; private set; }
-        public string[] label_css_classes { get; private set; }
  
         public string   name_sort_string;
         public string   status_sort_string;
