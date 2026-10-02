@@ -4,11 +4,26 @@ statuspage > scrolledwindow > viewport > box {
 
 
 #network-list > scrolledwindow > listview > row {
-  padding: 3px 6px;
+  padding: 0;
 }
 
-#network-list > scrolledwindow > listview > row label {
-  padding: 3px 0;
+#network-list > scrolledwindow > listview > row > treeexpander {
+  border-spacing: 0;
+}
+
+#network-list > scrolledwindow > listview > row > treeexpander > expander {
+  padding: 0 6px;
+}
+
+#network-list > scrolledwindow > listview > row > treeexpander > indent {
+  padding-right: 1px;
+}
+#network-list > scrolledwindow > listview > row > treeexpander > indent:first-child {
+  padding-right: 12px;
+}
+
+#network-list > scrolledwindow > listview > row > treeexpander > box > label {
+  padding: 6px;
 }
 
 

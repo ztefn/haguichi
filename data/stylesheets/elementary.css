@@ -276,12 +276,6 @@ overlay-split-view .rich-list row button.error image {
 #network-list > scrolledwindow > listview > row .network-node {
   border-radius: 50%;
 }
-#network-list > scrolledwindow > listview > row .network-node:dir(ltr) {
-  margin-left: 6px;
-}
-#network-list > scrolledwindow > listview > row .network-node:dir(rtl) {
-  margin-right: 6px;
-}
 
 #network-list > scrolledwindow > listview > row .network-node-online {
   background: @LIME_300;
