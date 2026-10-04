@@ -12,5 +12,6 @@ Icon=@APP_ID@
 Categories=GNOME;GTK;Network;P2P;
 # Keywords used for search in application launchers and software centers.
 Keywords=LogMeIn Hamachi;VPN;LAN;Network;Internet;P2P;Peer;Client;GUI;Frontend;
+SingleMainWindow=true
 StartupNotify=true
 X-GNOME-UsesNotifications=true
