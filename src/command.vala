@@ -189,6 +189,7 @@ namespace Haguichi {
                 "kgx",
                 "ptyxis",
                 "ghostty",
+                "velocitty",
                 "tilix",
                 "xfce4-terminal",
                 "konsole",
@@ -306,6 +307,7 @@ namespace Haguichi {
                     "io.elementary.terminal",
                     "ptyxis",
                     "flatpak run app.devsuite.Ptyxis",
+                    "velocitty",
                     "cosmic-term"
                 }, terminal);
 
