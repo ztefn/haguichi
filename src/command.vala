@@ -187,6 +187,7 @@ namespace Haguichi {
                 "kgx",
                 "konsole",
                 "io.elementary.terminal",
+                "alacritty",
                 "ghostty",
                 "velocitty",
                 "cosmic-term",
@@ -313,7 +314,10 @@ namespace Haguichi {
                     "gnome-terminal"
                 }, terminal);
 
-                bool use_quotes = !use_double_dash && terminal != "ghostty";
+                bool use_quotes = !use_double_dash && !strv_contains ({
+                    "alacritty",
+                    "ghostty"
+                }, terminal);
 
                 string option = use_double_dash ? "--" : "-e";
                 string quote  = use_quotes      ? "\"" : "";
