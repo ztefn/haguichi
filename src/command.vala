@@ -303,12 +303,14 @@ namespace Haguichi {
 
             if (command.contains ("%TERMINAL")) {
                 bool use_double_dash = strv_contains ({
-                    "gnome-terminal",
-                    "io.elementary.terminal",
-                    "ptyxis",
                     "flatpak run app.devsuite.Ptyxis",
+                    "flatpak run org.gnome.Console",
+                    "ptyxis",
+                    "kgx",
+                    "io.elementary.terminal",
                     "velocitty",
-                    "cosmic-term"
+                    "cosmic-term",
+                    "gnome-terminal"
                 }, terminal);
 
                 bool use_quotes = !use_double_dash && terminal != "ghostty";
