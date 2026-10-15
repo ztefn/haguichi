@@ -589,12 +589,6 @@ namespace Haguichi {
             }
         }
 
-        public override void hide () {
-            if (modal_dialog == null) {
-                base.hide ();
-            }
-        }
-
         public override bool close_request () {
             // If connecting or connected request to run in background
             var mode = get_mode ();

@@ -40,12 +40,17 @@ namespace Haguichi {
             };
             item.scroll.connect ((delta, orientation) => {
                 debug ("scroll delta %d, orientation %s", delta, orientation);
+
+                // Only respond to vertical scroll events
                 if (orientation.down () != "vertical") return;
 
+                // Don't change window visibility while a modal dialog is open
+                if (win.modal_dialog != null) return;
+
                 // Show window when scrolling up and hide it when scrolling down
-                if (delta < 0) {
+                if (delta < 0 && !win.visible) {
                     win.present ();
-                } else {
+                } else if (delta >= 0 && win.visible) {
                     win.hide ();
                 }
             });
