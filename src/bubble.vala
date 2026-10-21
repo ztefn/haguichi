@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2024 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -13,9 +13,11 @@
 namespace Haguichi {
     public class Bubble : Object {
         private Notification notification;
+        private string id;
 
-        public Bubble (string summary, string? body) {
+        public Bubble (string? _id, string summary, string? body) {
             notification = new Notification (summary);
+            id = _id;
 
             if (body != null) {
                 notification.set_body (body);
@@ -30,7 +32,7 @@ namespace Haguichi {
         }
 
         public void show () {
-            Haguichi.app.send_notification (null, notification);
+            Haguichi.app.send_notification (id, notification);
         }
 
         public bool server_supports_actions () {

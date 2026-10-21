@@ -230,6 +230,7 @@ namespace Haguichi {
         }
 
         public static void start_hamachi () {
+            app.withdraw_notification ("hamachi-lost-connection");
             restore_countdown = 0;
             go_connect ();
         }
@@ -712,7 +713,7 @@ namespace Haguichi {
 
         public static void notify_connection_lost () {
             if (notifications.get_boolean ("connection-loss")) {
-                Bubble bubble = new Bubble (_("Hamachi Lost Connection"), null);
+                Bubble bubble = new Bubble ("hamachi-lost-connection", _("Hamachi Lost Connection"), null);
                 bubble.add_reconnect_action ();
                 bubble.show ();
             }
@@ -841,7 +842,7 @@ namespace Haguichi {
                 message = message.replace ("{1}", network);
                 message = message.replace ("{2}", more.to_string ());
 
-            return new Bubble (heading, message);
+            return new Bubble (null, heading, message);
         }
 
         public static void quit () {
