@@ -196,6 +196,8 @@ namespace Haguichi {
                 bool success = Hamachi.approve (this);
 
                 if (success) {
+                    app.withdraw_notification ("member-joined-%s-%s".printf (id, network.id));
+
                     // Wait a second to get an updated list
                     Thread.usleep (1000000);
 
@@ -219,6 +221,8 @@ namespace Haguichi {
                 bool success = Hamachi.reject (this);
 
                 if (success) {
+                    app.withdraw_notification ("member-joined-%s-%s".printf (id, network.id));
+
                     Idle.add_full (Priority.HIGH_IDLE, () => {
                         network.remove_member (this);
                         return false;

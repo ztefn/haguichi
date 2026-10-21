@@ -731,7 +731,9 @@ namespace Haguichi {
 
         public static void notify_member_joined (string nick, string network, int more, string client_id, string[] network_approval_ids) {
             if (notifications.get_boolean ("member-join")) {
+                bool needs_approval = network_approval_ids.length > 0;
                 var bubble = compose_bubble (
+                    needs_approval ? "member-joined-%s-%s".printf (client_id, string.joinv ("-", network_approval_ids)) : null,
                     _("Member Joined"),
                     // Notification bubble. For example: "T-800 joined the network Skynet".
                     _("{0} joined the network {1}"),
@@ -743,7 +745,7 @@ namespace Haguichi {
                     network,
                     more);
 
-                if (network_approval_ids.length > 0) {
+                if (needs_approval) {
                     bubble.add_approve_reject_actions (client_id, network_approval_ids);
                 }
 
@@ -762,6 +764,7 @@ namespace Haguichi {
         public static void notify_member_left (string nick, string network, int more) {
             if (notifications.get_boolean ("member-leave")) {
                 var bubble = compose_bubble (
+                    null,
                     _("Member Left"),
                     // Notification bubble. For example: "T-800 left the network Skynet".
                     _("{0} left the network {1}"),
@@ -788,6 +791,7 @@ namespace Haguichi {
         public static void notify_member_online (string nick, string network, int more) {
             if (notifications.get_boolean ("member-online")) {
                 var bubble = compose_bubble (
+                    null,
                     _("Member Online"),
                     // Notification bubble. For example: "T-800 came online in the network Skynet".
                     _("{0} came online in the network {1}"),
@@ -814,6 +818,7 @@ namespace Haguichi {
         public static void notify_member_offline (string nick, string network, int more) {
             if (notifications.get_boolean ("member-offline")) {
                 var bubble = compose_bubble (
+                    null,
                     _("Member Offline"),
                     // Notification bubble. For example: "T-800 went offline in the network Skynet".
                     _("{0} went offline in the network {1}"),
@@ -830,6 +835,7 @@ namespace Haguichi {
         }
 
         public static Bubble compose_bubble (
+            string? id,
             string heading,
             string message_one,
             string message_more,
@@ -842,7 +848,7 @@ namespace Haguichi {
                 message = message.replace ("{1}", network);
                 message = message.replace ("{2}", more.to_string ());
 
-            return new Bubble (null, heading, message);
+            return new Bubble (id, heading, message);
         }
 
         public static void quit () {

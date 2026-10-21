@@ -260,7 +260,7 @@ namespace Haguichi {
                     Controller.notify_connection_lost ();
                 });
                 notify_on_member_join.notify["active"].connect (() => {
-                    Controller.notify_member_joined  ("T-800", "Skynet", 0, "000-000-000", {"000-000-000"});
+                    Controller.notify_member_joined  ("T-800", "Skynet", 0, "094-139-744", {"Bug Hunters"});
                 });
                 notify_on_member_leave.notify["active"].connect (() => {
                     Controller.notify_member_left    ("T-800", "Skynet", 0);
