@@ -33,6 +33,7 @@ namespace Haguichi {
 
         public void show () {
             app.send_notification (id, notification);
+            sent_notification_ids.append (id);
         }
 
         public bool server_supports_actions () {

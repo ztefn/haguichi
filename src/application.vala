@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -16,6 +16,8 @@ namespace Haguichi {
     public Application app;
     public Window      win;
     public Indicator   indicator;
+
+    public List<string> sent_notification_ids;
 
     public static Connection connection;
     public static Session    session;
@@ -106,6 +108,8 @@ namespace Haguichi {
             connection = new Connection ();
             inhibitor  = new Inhibitor ();
 
+            sent_notification_ids = new List<string> ();
+
             try {
                 member_threads = new ThreadPool<Member>.with_owned_data ((member) => {
                     member.get_long_nick_thread ();
@@ -159,6 +163,12 @@ namespace Haguichi {
 
             debug ("set_color_scheme: setting color scheme to %s", color_scheme.to_string ());
             style_manager.set_color_scheme (color_scheme);
+        }
+
+        public void withdraw_all_notifications () {
+            sent_notification_ids.foreach ((id) => {
+                app.withdraw_notification (id);
+            });
         }
 
         public void toggle_window_action () {

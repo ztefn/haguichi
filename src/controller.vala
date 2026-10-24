@@ -835,13 +835,15 @@ namespace Haguichi {
         }
 
         public static Bubble compose_bubble (
-            string? id,
+            string? _id,
             string heading,
             string message_one,
             string message_more,
             string nick,
             string network,
             int more) {
+
+            var id = (_id == null) ? get_real_time ().to_string () : _id;
 
             var message = more > 0 ? message_more : message_one;
                 message = message.replace ("{0}", nick);

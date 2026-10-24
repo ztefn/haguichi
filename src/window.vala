@@ -403,7 +403,7 @@ namespace Haguichi {
             connection.save_long_nicks ();
             session.quitted ();
 
-            app.withdraw_notification ("hamachi-lost-connection");
+            app.withdraw_all_notifications ();
 
             debug ("quit_action: Bye!");
             app.quit ();
