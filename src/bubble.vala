@@ -26,19 +26,19 @@ namespace Haguichi {
             // On elementary OS set_icon is only used to set a badge icon,
             // the app icon itself is automatically set based on application ID
             // https://docs.elementary.io/develop/apis/notifications#badge-icons
-            if (Haguichi.current_desktop != "Pantheon") {
+            if (current_desktop != "Pantheon") {
                 notification.set_icon (new ThemedIcon (Config.APP_ID));
             }
         }
 
         public void show () {
-            Haguichi.app.send_notification (id, notification);
+            app.send_notification (id, notification);
         }
 
         public bool server_supports_actions () {
             // Unity desktop running NotifyOSD server doesn't support actions
             // https://wiki.ubuntu.com/NotifyOSD
-            return Haguichi.current_desktop.has_prefix ("Unity") ? false : true;
+            return current_desktop.has_prefix ("Unity") ? false : true;
         }
 
         public void add_reconnect_action () {

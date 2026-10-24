@@ -1,6 +1,6 @@
 /*
  * This file is part of Haguichi, a graphical frontend for Hamachi.
- * Copyright (C) 2007-2025 Stephen Brandt <stephen@stephenbrandt.com>
+ * Copyright (C) 2007-2026 Stephen Brandt <stephen@stephenbrandt.com>
  *
  * Haguichi is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published
@@ -50,7 +50,7 @@ namespace Haguichi {
         private void on_add_command () {
             // Insert new command at the end of the list
             insert_position = (int) rows.length ();
-            new Haguichi.AddEditCommandDialog ("Add", this, "", "", "", "IPv4");
+            new AddEditCommandDialog ("Add", this, "", "", "", "IPv4");
         }
 
         [GtkCallback]
@@ -131,13 +131,13 @@ namespace Haguichi {
 
         public void edit_command (CommandsEditorRow row) {
             selected_row = row;
-            new Haguichi.AddEditCommandDialog ("Edit", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
+            new AddEditCommandDialog ("Edit", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
         }
 
         public void duplicate_command (CommandsEditorRow row) {
             // Insert duplicated command after the original
             insert_position = row.get_index () + 1;
-            new Haguichi.AddEditCommandDialog ("Add", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
+            new AddEditCommandDialog ("Add", this, _(row.label), row.command_ipv4, row.command_ipv6, row.priority);
         }
 
         private void clear () {
