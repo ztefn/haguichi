@@ -599,11 +599,11 @@ namespace Haguichi {
                     if (request_background.end (res)) {
                         hide ();
                     } else {
-                        destroy ();
+                        quit_action ();
                     }
                 });
             } else {
-                destroy ();
+                quit_action ();
             }
 
             return true;
