@@ -625,9 +625,15 @@ namespace Haguichi {
                     null
                 );
             } catch (Error e) {
-                critical ("request_background: %s", e.message);
-                // If background portal is not available then return true to hide window
-                return true;
+                if (e is IOError.CANCELLED) {
+                    warning ("request_background: %s", e.message);
+                    // If background request is denied then return false to quit
+                    return false;
+                } else {
+                    critical ("request_background: %s", e.message);
+                    // If background portal is not available then return true to hide window
+                    return true;
+                }
             }
         }
     }
