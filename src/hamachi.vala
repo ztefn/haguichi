@@ -461,14 +461,14 @@ namespace Haguichi {
                 } else {
                     output += " * [Artwork]  capacity: 3/5, subscription type: Free, owner: ztefn (090-736-821)\n";
                     output += "       " + random_client_id () + "   Lapo                       " + random_address () + "  alias: not set                             direct\n";
-                    output += "     * 090-736-821   ztefn                                      " + random_address () + "  alias: not set        2146:0d::987:a654    direct\n";
+                    output += "     * 090-736-821   ztefn                                      25.113.172.193  alias: not set        2146:0d::987:a654    direct\n";
                     output += "   [Bug Hunters]  capacity: 4/5,   [192.168.155.24/24]  subscription type: Free, owner: This computer\n";
                     output += "     x " + random_client_id () + "   Eduardo                    192.168.155.21\n";
                     output += "     * " + random_client_id () + "   freijon                    192.168.155.22  alias: not set                             direct\n";
                     output += "     ? 094-139-744 \n";
                     output += "       You are approaching your member limit and may soon have to upgrade your network.\n";
                     output += " * [" + random_network_id () + "]  Development  capacity: 2/32, subscription type: Standard, owner: ztefn (090-736-821)\n";
-                    output += "     * 090-736-821   ztefn                                      " + random_address () + "  alias: not set        2146:0d::987:a654    direct\n";
+                    output += "     * 090-736-821   ztefn                                      25.113.172.193  alias: not set        2146:0d::987:a654    direct\n";
                     output += "   [" + random_network_id () + "]Packaging  capacity: 4/256, subscription type: Premium, owner: Andrew (094-409-761)\n";
                     output += "     * 094-409-761   Andrew                                     " + random_address () + "  alias: not set                             via relay\n";
                     output += "     * " + random_client_id () + "   carstene1ns                " + random_address () + "  alias: not set                             direct\n";
@@ -494,7 +494,7 @@ namespace Haguichi {
                     output += "       " + random_client_id () + "   Sergey                     " + random_address () + "\n";
                     output += "     x " + random_client_id () + "   Soker                      " + random_address () + "\n";
                     output += "     * " + random_client_id () + "   Zdeněk                     " + random_address () + "  alias: not set                             direct\n";
-                    output += "     * " + random_client_id () + "   ztefn                      " + random_address () + "  alias: not set        2146:0d::987:a654    direct\n";
+                    output += "     * 090-736-821   ztefn                                      25.113.172.193  alias: not set        2146:0d::987:a654    direct\n";
                 }
             } else {
                 output = Command.return_output ("hamachi list");
