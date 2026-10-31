@@ -87,7 +87,7 @@ namespace Haguichi {
                 Thread.usleep (1000000);
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
-                    win.network_list.select_network_id = id;
+                    win.network_list.select_item_by_id (id);
                     Controller.update_connection ();
                     return false;
                 });
@@ -135,7 +135,7 @@ namespace Haguichi {
 
                         Network new_network = new Network (new Status ("*"), id, id, "This computer", 5);
 
-                        win.network_list.select_network_id = id;
+                        win.network_list.select_item_by_id (id);
                         connection.add_network (new_network);
                         Controller.update_connection ();
 
@@ -158,7 +158,7 @@ namespace Haguichi {
                 Thread.usleep (1000000);
 
                 Idle.add_full (Priority.HIGH_IDLE, () => {
-                    win.network_list.select_network_id = id;
+                    win.network_list.select_item_by_id (id);
                     Controller.update_connection ();
                     return false;
                 });

@@ -250,6 +250,11 @@ namespace Haguichi {
                             }
                         }
                     }
+                    // Show window and select the approved member
+                    if (network_ids.length > 0) {
+                        win.present ();
+                        win.network_list.select_item_by_id (network_ids[0], client_id, true);
+                    }
                 } else {
                     debug ("approve_reject: Not connected");
                 }

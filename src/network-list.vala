@@ -37,13 +37,13 @@ namespace Haguichi {
         private bool   skip_save_collapsed_networks;
         private bool   show_offline_members;
         private string sort_by;
+        private string restore_search_text;
+        private string select_member_id;
+        private string select_network_id;
         private uint   scroll_to_pos;
 
         public string  network_label_template;
         public string  member_label_template;
-        public string  restore_search_text;
-        public string  select_member_id;
-        public string  select_network_id;
 
         construct {
             install_action ("row.context-menu",        null, (WidgetActionActivateFunc) on_context_menu);
@@ -478,6 +478,15 @@ namespace Haguichi {
             return null;
         }
 
+        public void select_item_by_id (string? network_id, string? member_id = null, bool immediate = false) {
+            select_member_id  = member_id;
+            select_network_id = network_id;
+
+            if (immediate == true) {
+                select_item ();
+            }
+        }
+
         private void select_item (int delay = 0) {
             if (select_network_id != null) {
                 foreach (Network network in connection.networks) {
@@ -486,6 +495,10 @@ namespace Haguichi {
                         if (select_member_id != null) {
                             Member member = network.return_member_by_id (select_member_id);
                             if (member != null) {
+                                // We need to make sure the network is expanded in order to select member
+                                if (is_collapsed (network)) {
+                                    set_row_expanded (network, true);
+                                }
                                 pos = find_selection_model_position (member);
                             }
                         } else {
