@@ -41,8 +41,14 @@ test('Validate appstream file', appstreamcli,
   args: ['validate', '--no-net', '--explain', appstream_file]
 )
 
-install_data(app_id + '.gschema.xml',
-  install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
+schema = app_id + '.gschema.xml'
+
+configure_file(
+          input: schema + '.in',
+         output: schema,
+  configuration: conf,
+        install: true,
+    install_dir: get_option('datadir') / 'glib-2.0' / 'schemas'
 )
 
 compile_schemas = find_program('glib-compile-schemas', required: false, disabler: true)
