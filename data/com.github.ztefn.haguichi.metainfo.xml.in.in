@@ -21,23 +21,23 @@
   <screenshots>
     <screenshot type="default">
       <caption>View your network list and client information</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-1.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/master/data/screenshots/@THEME@/1.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected member details</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-2.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/master/data/screenshots/@THEME@/2.png</image>
     </screenshot>
     <screenshot>
       <caption>View selected network details</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-3.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/master/data/screenshots/@THEME@/3.png</image>
     </screenshot>
     <screenshot>
       <caption>Search your network list</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-4.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/master/data/screenshots/@THEME@/4.png</image>
     </screenshot>
     <screenshot>
       <caption>Join or create networks</caption>
-      <image scale="2">https://haguichi.net/appdata/screenshot-5.png</image>
+      <image scale="2">https://raw.githubusercontent.com/ztefn/haguichi/master/data/screenshots/@THEME@/5.png</image>
     </screenshot>
   </screenshots>
   <supports>
