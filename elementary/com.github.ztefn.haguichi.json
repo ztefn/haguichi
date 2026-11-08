@@ -1,0 +1,37 @@
+{
+    "app-id": "com.github.ztefn.haguichi",
+    "runtime": "io.elementary.Platform",
+    "runtime-version": "8.2",
+    "sdk": "io.elementary.Sdk",
+    "command": "haguichi",
+    "finish-args": [
+        "--device=dri",
+
+        "--filesystem=/var/lib/logmein-hamachi:ro",
+
+        "--system-talk-name=org.freedesktop.login1",
+
+        "--talk-name=org.freedesktop.Flatpak",
+
+        "--share=network",
+        "--share=ipc",
+
+        "--socket=fallback-x11",
+        "--socket=wayland"
+    ],
+    "modules": [
+        {
+            "name": "haguichi",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dfor-elementary=true"
+            ],
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".."
+                }
+            ]
+        }
+    ]
+}
