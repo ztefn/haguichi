@@ -6,7 +6,7 @@ project('Haguichi', ['c', 'vala'],
 
 app_name     = meson.project_name()
 app_id       = 'com.github.ztefn.' + app_name.to_lower()
-app_version  = meson.project_version()
+app_version  = get_option('for-elementary') ? '1.155.0' : meson.project_version()
 binary_name  = app_name.to_lower()
 gettext_pkg  = app_name.to_lower()
 schema_base  = '/' + app_id.replace('.', '/')
@@ -34,6 +34,8 @@ if vala_version.version_compare('>= 0.56.19')
   )
 endif
 
+fs = import('fs')
+
 conf = configuration_data()
 conf.set('APP_ID',          app_id)
 conf.set('APP_NAME',        app_name)
@@ -46,6 +48,7 @@ conf.set('SCHEMA_BASE',     schema_base)
 conf.set('DEFAULT_WIDTH',   get_option('for-elementary') ? 540 : 582)
 conf.set('DEFAULT_HEIGHT',  get_option('for-elementary') ? 396 : 466)
 conf.set('VALA_VERSION',    vala_version)
+conf.set('RELEASES',        fs.read('data/releases/@0@.xml'.format(get_option('for-elementary') ? 'elementary' : 'regular')))
 
 i18n  = import('i18n')
 gnome = import('gnome')
