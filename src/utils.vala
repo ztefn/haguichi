@@ -158,6 +158,7 @@ namespace Utils {
 
         return """
 Haguichi: %s
+Build option: %s
 Distribution: %s
 Kernel: %s
 Vala: %s
@@ -186,6 +187,13 @@ Remote desktop: %s
 Engine override:
 %s""".printf (
             Config.VERSION,
+#if FOR_ELEMENTARY
+            "for-elementary",
+#elif FOR_UBUNTU
+            "for-ubuntu",
+#else
+            "none",
+#endif
             distro,
             kernel,
             Config.VALA_VERSION,
