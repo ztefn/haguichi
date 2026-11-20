@@ -183,9 +183,11 @@ namespace Haguichi {
                 "flatpak run app.devsuite.Ptyxis",
                 "flatpak run org.gnome.Console",
                 "flatpak run org.kde.konsole",
+                "flatpak run org.kde.kwi",
                 "ptyxis",
                 "kgx",
                 "konsole",
+                "kwi",
                 "io.elementary.terminal",
                 "alacritty",
                 "ghostty",
@@ -314,12 +316,17 @@ namespace Haguichi {
                     "gnome-terminal"
                 }, terminal);
 
-                bool use_quotes = !use_double_dash && !strv_contains ({
+                bool use_no_option = strv_contains ({
+                    "flatpak run org.kde.kwi",
+                    "kwi"
+                }, terminal);
+
+                bool use_quotes = !use_double_dash && !use_no_option && !strv_contains ({
                     "alacritty",
                     "ghostty"
                 }, terminal);
 
-                string option = use_double_dash ? "--" : "-e";
+                string option = use_double_dash ? "-- " : use_no_option ? "" : "-e ";
                 string quote  = use_quotes      ? "\"" : "";
 
                 try {
@@ -329,7 +336,7 @@ namespace Haguichi {
                         Regex regex = new Regex ("(?<!\\\\)\"");
                         command = regex.replace (command, -1, 0, "\\\\\"");
                     }
-                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, "%s %s %s\\1%s".printf (terminal, option, quote, quote));
+                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, "%s %s%s\\1%s".printf (terminal, option, quote, quote));
                 } catch (RegexError e) {
                     critical ("replace_variables: %s", e.message);
                 }
