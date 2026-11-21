@@ -224,7 +224,7 @@ Engine override:
             Hamachi.service,
             initsys,
             Command.sudo,
-            Command.exists (Command.terminal)       ? Command.terminal       : null,
+            Command.exists (Command.terminal.cmd)   ? Command.terminal.cmd   : null,
             Command.exists (Command.file_manager)   ? Command.file_manager   : null,
             Command.exists (Command.remote_desktop) ? Command.remote_desktop : null,
             engine

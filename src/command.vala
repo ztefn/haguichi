@@ -20,7 +20,9 @@ namespace Haguichi {
         public static string sudo;
         public static string sudo_start;
 
-        public static string terminal;
+        public struct Terminal { string cmd; string option; }
+
+        public static Terminal terminal;
         public static string file_manager;
         public static string remote_desktop;
 
@@ -179,32 +181,48 @@ namespace Haguichi {
         }
 
         private static void determine_terminal () {
-            terminal = get_available ({
-                "flatpak run app.devsuite.Ptyxis",
-                "flatpak run org.gnome.Console",
-                "flatpak run org.kde.konsole",
-                "flatpak run org.kde.kwi",
-                "ptyxis",
-                "kgx",
-                "konsole",
-                "kwi",
-                "io.elementary.terminal",
-                "alacritty",
-                "ghostty",
-                "velocitty",
-                "cosmic-term",
-                "gnome-terminal",
-                "mate-terminal",
-                "xfce4-terminal",
-                "qterminal",
-                "lxterminal",
-                "deepin-terminal",
-                "tilix",
-                "uxterm",
-                "xterm"
-            }, "gnome-terminal");
+            Terminal[] terminals = {
+                { "flatpak run app.devsuite.Ptyxis", "--" },
+                { "flatpak run org.gnome.Console", "--" },
+                { "flatpak run org.kde.konsole", "-e" },
+                { "flatpak run org.kde.kwi", null },
+                { "ptyxis", "--" },
+                { "kgx", "--" },
+                { "konsole", "-e" },
+                { "kwi", null },
+                { "io.elementary.terminal", "--" },
+                { "alacritty", "-e" },
+                { "ghostty", "-e" },
+                { "velocitty", "--" },
+                { "cosmic-term", "--" },
+                { "gnome-terminal", "--" },
+                { "mate-terminal", "-x" },
+                { "xfce4-terminal", "-x" },
+                { "qterminal", "-e" },
+                { "lxterminal", "-e" },
+                { "deepin-terminal", "-e" },
+                { "tilix", "-e" },
+                { "uxterm", "-e" },
+                { "xterm", "-e" }
+            };
 
-            debug ("determine_terminal: %s", terminal);
+            // Create string array with only the terminal commands
+            string[] commands = {};
+            foreach (Terminal t in terminals) {
+                commands += t.cmd;
+            }
+
+            string command = get_available (commands, "gnome-terminal");
+
+            // Match available terminal command back to the struct
+            foreach (Terminal t in terminals) {
+                if (t.cmd == command) {
+                    terminal = t;
+                    break;
+                }
+            }
+
+            debug ("determine_terminal: %s", terminal.cmd);
         }
 
         private static void determine_file_manager () {
@@ -305,38 +323,10 @@ namespace Haguichi {
             command = command.replace ("%ID", id     );
 
             if (command.contains ("%TERMINAL")) {
-                bool use_double_dash = strv_contains ({
-                    "flatpak run app.devsuite.Ptyxis",
-                    "flatpak run org.gnome.Console",
-                    "ptyxis",
-                    "kgx",
-                    "io.elementary.terminal",
-                    "velocitty",
-                    "cosmic-term",
-                    "gnome-terminal"
-                }, terminal);
-
-                bool use_no_option = strv_contains ({
-                    "flatpak run org.kde.kwi",
-                    "kwi"
-                }, terminal);
-
-                bool use_quotes = !use_double_dash && !use_no_option && !strv_contains ({
-                    "alacritty",
-                    "ghostty"
-                }, terminal);
-
-                string option = use_double_dash ? "-- " : use_no_option ? "" : "-e ";
-                string quote  = use_quotes      ? "\"" : "";
+                string option = terminal.option != null ? (terminal.option + " ") : "";
 
                 try {
-                    // For terminals that use quotes for the command argument escape any quotes in the command itself
-                    // unless already preceded by a backslash
-                    if (use_quotes) {
-                        Regex regex = new Regex ("(?<!\\\\)\"");
-                        command = regex.replace (command, -1, 0, "\\\\\"");
-                    }
-                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, "%s %s%s\\1%s".printf (terminal, option, quote, quote));
+                    command = new Regex ("%TERMINAL ?(.*)").replace (command, -1, 0, "%s %s\\1".printf (terminal.cmd, option));
                 } catch (RegexError e) {
                     critical ("replace_variables: %s", e.message);
                 }
