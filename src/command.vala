@@ -194,6 +194,7 @@ namespace Haguichi {
                 { "alacritty", "-e" },
                 { "ghostty", "-e" },
                 { "velocitty", "--" },
+                { "kitty", null },
                 { "cosmic-term", "-e" },
                 { "gnome-terminal", "--" },
                 { "mate-terminal", "-x" },
