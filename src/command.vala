@@ -193,7 +193,7 @@ namespace Haguichi {
                 { "io.elementary.terminal", "--" },
                 { "alacritty", "-e" },
                 { "ghostty", "-e" },
-                { "velocitty", "--" },
+                { "velocitty", "-e" },
                 { "kitty", null },
                 { "cosmic-term", "-e" },
                 { "gnome-terminal", "--" },
