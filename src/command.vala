@@ -353,7 +353,9 @@ namespace Haguichi {
         }
 
         public static void execute_default_command (Member member) {
-            if (default_command.enabled_for_member (member)) {
+            if (default_command == null) {
+                warning ("execute_default_command: No default command set");
+            } else if (default_command.enabled_for_member (member)) {
                 var cmd = default_command.return_for_member (member);
                 debug ("execute_default_command: %s", cmd);
                 execute (cmd);
