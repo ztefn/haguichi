@@ -1,4 +1,29 @@
   <releases>
+    <release version="1.5.5" date="2026-11-28">
+      <url>https://haguichi.net/news/release155/</url>
+      <description translate="no">
+        <p>Haguichi 1.5.5 unwraps a more accessible experience this holiday season:</p>
+        <ul>
+          <li>Implemented highlight of search terms using the accent color.</li>
+          <li>Increased clickable area of expanders in the network list and improved node alignment.</li>
+          <li>Enhanced screen reader announcements of messages and events.</li>
+          <li>Made sidebar rows focusable, enabling screen readers to read out the title.</li>
+          <li>Added accessible label to all network list rows, enabling screen readers to read out the name, type and status.</li>
+          <li>Added support for using Left, Right and Delete keypad shortcuts in the network list.</li>
+          <li>Added Ctrl+W keyboard shortcut to close the window.</li>
+          <li>Added line "SingleMainWindow=true" to .desktop file to signal desktop environments not to offer an option to launch another window.</li>
+          <li>Added support for Alacritty, Kitty, Kwi and Velocitty.</li>
+          <li>Updated %TERMINAL command detection to prioritize popular and modern terminal applications.</li>
+          <li>Now only using execute options that don't require quotes for all %TERMINAL commands.</li>
+          <li>When approving newly joined members using notification actions, the window is now presented and the member selected.</li>
+          <li>Notifications with actions are now automatically dismissed when no longer relevant.</li>
+          <li>Any remaining notifications are now automatically dismissed on quit.</li>
+          <li>Fixed automatic scrolling to newly added networks at the very end of the list.</li>
+          <li>Updated Hungarian, Indonesian, Japanese and Lithuanian translations.</li>
+          <li>Other minor fixes, improvements and optimizations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.5.4" date="2026-04-18">
       <url>https://haguichi.net/news/release154/</url>
       <description translate="no">

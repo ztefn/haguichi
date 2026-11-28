@@ -1,4 +1,23 @@
   <releases>
+    <release version="1.155.0" date="2026-11-28">
+      <description>
+        <ul>
+          <li>Implemented highlight of search terms using the accent color.</li>
+          <li>Increased clickable area of expanders in the network list and improved node alignment.</li>
+          <li>Enhanced screen reader announcements of messages and events.</li>
+          <li>Made sidebar rows focusable, enabling screen readers to read out the title.</li>
+          <li>Added accessible label to all network list rows, enabling screen readers to read out the name, type and status.</li>
+          <li>Added support for using Left, Right and Delete keypad shortcuts in the network list.</li>
+          <li>Added Ctrl+W keyboard shortcut to close the window.</li>
+          <li>Now using -- instead of -e option for Terminal commands.</li>
+          <li>When approving newly joined members using notification actions, the window is now presented and the member selected.</li>
+          <li>Notifications with actions are now automatically dismissed when no longer relevant.</li>
+          <li>Any remaining notifications are now automatically dismissed on quit.</li>
+          <li>Fixed automatic scrolling to newly added networks at the very end of the list.</li>
+          <li>Updated Hungarian, Indonesian, Japanese and Lithuanian translations.</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.154.0" date="2026-04-18">
       <description>
         <ul>
